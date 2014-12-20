@@ -3,21 +3,25 @@ basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
 source(file.path(basedir,"scripts","csv-to-html.R"))
 
 feat.raw <- file.path(basedir,"raw","Feats-raw.csv")
-feat.pre <- file.path(basedir,"raw","Feats-pre.csv")
-feat.post <- file.path(basedir,"raw","Feats-post.csv")
+feat.tag <- file.path(basedir,"raw","Feats-tags.csv")
+#feat.post <- file.path(basedir,"raw","Feats-post.csv")
 feat.htm.file <- file.path(basedir,"html","Feats.html")
 feat.table.htm.file <- file.path(basedir,"html","Feats-table.html")
  
-feat.raw.table <- read.csv(feat.raw, sep=";")
-feat.pre.table <- read.csv(feat.pre, sep=";")
-feat.post.table <- read.csv(feat.post, sep=";")
+feat.raw.df <- read.csv(feat.raw, sep=";")
+feat.tag.df <- read.csv(feat.tag, sep=";")
+feat.tag.pre<- feat.tag.df[1,]
+feat.tag.post<- feat.tag.df[2,]
 
-#quickStr(feat.raw.table)
-paste(feat.pre.table$Name, feat.raw.table$Name[1], feat.post.table$Name, sep="")
 
-#TODO: change data frame from factors to characters
+#quickStr(feat.raw.df)
+#paste(feat.tag.pre$Name, feat.raw.df$Name[1], feat.tag.post$Name, sep="")
+
+#Use these lines to test scripts
 #tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
-feat.htm<-buildElementApply(feat.raw.table, feat.pre.table, feat.post.table, df.names=setdiff(names(feat.raw.table),"Summary"))
+#feat.raw.df<-feat.raw.df[1:3,]
+
+feat.htm<-buildElementApply(feat.raw.df, feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
 write(feat.htm,feat.htm.file)
 
 
