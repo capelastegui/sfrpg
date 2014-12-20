@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <title>Feat-test</title>
+    <style type="text/css">
+.Feat {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  width: 290px;  
+  margin-bottom: 25px;  
+  page-break-inside: avoid;
+}
+
+.Feat-Title {  
+  font-weight: bold;  
+  margin-bottom: 0px;
+}
+
+.Feat-Keywords, .Feat-Categories {  
+  font-style: italic;  
+  color: #333333;  
+  margin-bottom: 0px;
+}
+
+.Feat-Requires {  
+  font-style: italic;  
+  color: #666666;  
+  margin-bottom: 3px;
+}
+
+p {  
+  margin-top: 0px;  
+  margin-bottom: 3px;
+}
+
+.Feat-List {  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;  -moz-column-rule-style: none;
+  -webkit-column-rule-style: none;
+  column-rule-style: none;  
+  width: 900px;
+}
+
+.Feat-Categories {  
+  font-weight: bold;  
+  display: inline;
+}
+
+.Feat-Keywords {  
+  display: inline;
+}
+
+.Feat-table {  
+  font-size: 11px;  
+  font-family: Verdana;  
+  padding-top: 0px;  
+  padding-right: 0px;  
+  padding-bottom: 0px;  
+  padding-left: 0px;  
+  color: #663300;  
+  width: 1000px;  
+  background-color: #ffcc99;
+}
+      
+    tr:nth-child(even) {
+    background-color: #ffefbf;
+}      
+      
+</style></head>
+  <body>
+    <ol id="mozToc">
+      <!--mozToc h3 1-->
+      <li><a href="#mozTocId665389">Focus: Caster's Weapon</a></li>
+      <li><a href="#mozTocId195084">Focus: Parrying Staff</a></li>
+      <li><a href="#mozTocId121643">Focus: Pushing Staff</a></li>
+      <li><a href="#mozTocId957827">Focus: Unerring Staff</a></li>
+      <li><a href="#mozTocId731912">Energy Focus</a></li>
+      <li><a href="#mozTocId994846">Flexible Focus</a></li>
+      <li><a href="#mozTocId123194">Focus: Pushing Hammer</a></li>
+      <li><a href="#mozTocId493120">Focus: Unstoppable Hammer</a></li>
+      <li><a href="#mozTocId49839">Focus: Critical Light Blade</a></li>
+      <li><a href="#mozTocId673706">Focus: Ambush Light Blade</a></li>
+      <li><a href="#mozTocId347378">Focus: Opportunist Heavy Blade</a></li>
+      <li><a href="#mozTocId744521">Focus: Duelist's Heavy Blade</a></li>
+      <li><a href="#mozTocId55970">Focus: Critical Axe</a></li>
+      <li><a href="#mozTocId217466">Focus: Piercing Axe</a></li>
+      <li><a href="#mozTocId632509">Focus: Reaching Spear</a></li>
+      <li><a href="#mozTocId349203">Focus: Opportunist Spear</a></li>
+      <li><a href="#mozTocId276977">Focus: Reaching Flail</a></li>
+      <li><a href="#mozTocId395781">Focus: Flurrying Flail</a></li>
+      <li><a href="#mozTocId279160">Focus: Close Bow</a></li>
+      <li><a href="#mozTocId977115">Focus: Far Bow</a></li>
+      <li><a href="#mozTocId689522">Focus: Precision Crossbow</a></li>
+      <li><a href="#mozTocId660155">Focus: Mobile Crossbow</a></li>
+      <li><a href="#mozTocId916641">Focus: Critical Sling</a></li>
+      <li><a href="#mozTocId687427">Focus: Cautious Sling</a></li>
+      <li><a href="#mozTocId327605">Focus: Dual Wield Parry</a></li>
+      <li><a href="#mozTocId913852">Focus: Twin Weapon Focus</a></li>
+      <li><a href="#mozTocId992095">Focus: Weapon Master</a></li>
+      <li><a href="#mozTocId548491">Focus: Far Wand</a></li>
+      <li><a href="#mozTocId171354">Focus: Piercing Wand</a></li>
+      <li><a href="#mozTocId323900">Focus: Prescient Orb</a></li>
+      <li><a href="#mozTocId455959">Focus: Perceptive Orb</a></li>
+      <li><a href="#mozTocId594351">Focus: Sage's Tome</a></li>
+      <li><a href="#mozTocId938379">Focus: Reliable Tome</a></li>
+      <li><a href="#mozTocId471374">Focus: Critical Rod</a></li>
+      <li><a href="#mozTocId945110">Focus: Ambush Rod</a></li>
+      <li><a href="#mozTocId82440">Focus: Healing Symbol</a></li>
+      <li><a href="#mozTocId516984">Focus: Shielding Symbol</a></li>
+      <li><a href="#mozTocId43347">Focus: Surging Ki</a></li>
+      <li><a href="#mozTocId523769">Focus: Fast Ki</a></li>
+      <li><a href="#mozTocId189924">Focus: Opportunist Totem</a></li>
+      <li><a href="#mozTocId429932">Focus: Tough Totem</a></li>
+      <li><a href="#mozTocId958388">Wind Robes</a></li>
+      <li><a href="#mozTocId832293">Elemental Robes</a></li>
+      <li><a href="#mozTocId740303">Divine Robes</a></li>
+      <li><a href="#mozTocId898137">Mind Robes</a></li>
+      <li><a href="#mozTocId287222">Robes of Willpower</a></li>
+      <li><a href="#mozTocId315278">Courtier's Outfit</a></li>
+      <li><a href="#mozTocId287180">Catsuit Leather</a></li>
+      <li><a href="#mozTocId785554">Shadow Leather</a></li>
+      <li><a href="#mozTocId581109">Reflexive Leather</a></li>
+      <li><a href="#mozTocId52932">Dodging Leather</a></li>
+      <li><a href="#mozTocId898755">Stout Hide</a></li>
+      <li><a href="#mozTocId949723">Isolating Hide</a></li>
+      <li><a href="#mozTocId252767">Hiking Hide</a></li>
+      <li><a href="#mozTocId603451">Caster's Chain</a></li>
+      <li><a href="#mozTocId284412">Mobile Scale</a></li>
+      <li><a href="#mozTocId296817">Juggernaut Plate</a></li>
+      <li><a href="#mozTocId468110">Blast Shield</a></li>
+      <li><a href="#mozTocId179192">Wind Shield</a></li>
+      <li><a href="#mozTocId483908">Bashing Shield</a></li>
+      <li><a href="#mozTocId145720">Ambush Armor</a></li>
+      <li><a href="#mozTocId601823">Nimble Armor</a></li>
+      <li><a href="#mozTocId425715">Initiative Armor</a></li>
+      <li><a href="#mozTocId199986">Strong Armor</a></li>
+      <li><a href="#mozTocId342571">Toughness</a></li>
+      <li><a href="#mozTocId685739">Surging Toughness</a></li>
+      <li><a href="#mozTocId50303">Undying Toughness</a></li>
+      <li><a href="#mozTocId996874">Toughness in Numbers</a></li>
+      <li><a href="#mozTocId935376">Taunting Mark</a></li>
+      <li><a href="#mozTocId436251">Deadly Mark</a></li>
+      <li><a href="#mozTocId555369">Meat Shield</a></li>
+      <li><a href="#mozTocId9948">Imposing Presence</a></li>
+      <li><a href="#mozTocId117703">Hamstring Opportunity</a></li>
+      <li><a href="#mozTocId385436">Mighty Blow</a></li>
+      <li><a href="#mozTocId372184">Ground Holder</a></li>
+      <li><a href="#mozTocId515961">Constant Vigilance</a></li>
+      <li><a href="#mozTocId581134">Unstoppable Defender</a></li>
+      <li><a href="#mozTocId360312">Cunning Duelist</a></li>
+      <li><a href="#mozTocId761651">Dirty Fighting</a></li>
+      <li><a href="#mozTocId698590">Lethal Weapon</a></li>
+      <li><a href="#mozTocId378075">Fancy Footwork</a></li>
+      <li><a href="#mozTocId55608">Sure Feet</a></li>
+      <li><a href="#mozTocId951414">Escape Artist</a></li>
+      <li><a href="#mozTocId210638">Low Profile</a></li>
+      <li><a href="#mozTocId889677">Blind Spot</a></li>
+      <li><a href="#mozTocId727688">Deterring Strike</a></li>
+      <li><a href="#mozTocId112329">Hole in the Fire</a></li>
+      <li><a href="#mozTocId682112">Controlled Explosion</a></li>
+      <li><a href="#mozTocId518036">Eye of the Storm</a></li>
+      <li><a href="#mozTocId100700">Chain Reaction</a></li>
+      <li><a href="#mozTocId942432">Ground Zero</a></li>
+      <li><a href="#mozTocId152445">Crowd Control</a></li>
+      <li><a href="#mozTocId277515">Gone with the Wind</a></li>
+      <li><a href="#mozTocId420787">Strength in Numbers</a></li>
+      <li><a href="#mozTocId822749">Slow Motion</a></li>
+      <li><a href="#mozTocId515561">Stable Affliction</a></li>
+      <li><a href="#mozTocId546928">Confusion in the Ranks</a></li>
+      <li><a href="#mozTocId220149">Weakening Blow</a></li>
+      <li><a href="#mozTocId736905">Master Healer</a></li>
+      <li><a href="#mozTocId457991">Saving Grace</a></li>
+      <li><a href="#mozTocId862508">Shield Mate</a></li>
+      <li><a href="#mozTocId759991">Adrenaline Rush</a></li>
+      <li><a href="#mozTocId405234">Point Flank</a></li>
+      <li><a href="#mozTocId43183">Constructive Criticism</a></li>
+      <li><a href="#mozTocId780978">Word of Caution</a></li>
+      <li><a href="#mozTocId309846">Fast Healing</a></li>
+      <li><a href="#mozTocId374138">Rallying Cry</a></li>
+      <li><a href="#mozTocId49198">Martial Weapon Training</a></li>
+      <li><a href="#mozTocId522730">Superior Weapon Training</a></li>
+      <li><a href="#mozTocId390508">Paragon Ability</a></li>
+      <li><a href="#mozTocId122746">Leather Armor Proficiency</a></li>
+      <li><a href="#mozTocId402350">Hide Armor Proficiency</a></li>
+      <li><a href="#mozTocId316994">Chain Armor Proficiency</a></li>
+      <li><a href="#mozTocId858782">Scale Armor Proficiency</a></li>
+      <li><a href="#mozTocId601456">Plate Armor Proficiency</a></li>
+      <li><a href="#mozTocId565959">Light Shield Proficiency</a></li>
+      <li><a href="#mozTocId114098">Heavy Shield Proficiency</a></li>
+      <li><a href="#mozTocId244473">Larger than life</a></li>
+      <li><a href="#mozTocId711">Epic Specialization</a></li>
+      <li><a href="#mozTocId541227">Skill Training</a></li>
+      <li><a href="#mozTocId604268">Unnatural Ability</a></li>
+      <li><a href="#mozTocId63531">Skill Focus</a></li>
+      <li><a href="#mozTocId963454">Ritual Training</a></li>
+      <li><a href="#mozTocId216347">Paragon Ritual Training</a></li>
+      <li><a href="#mozTocId288148">Epic Ritual Training</a></li>
+      <li><a href="#mozTocId925974">Linguist</a></li>
+    </ol>
+    <table style="height: 3986px;" class="Feat-table">
+      <tbody>
+        <tr>
+          <td style="width: 150px;">Focus: Caster's Weapon</td>
+          <td style="width: 100px;">Focus</td>
+          <td style="width: 75px;">Flexible</td>
+          <td style="width: 225px;">Proficiency with a weapon that can be used
+            as implement</td>
+          <td style="width: 450px;">With Implement Weapon, +1 damage per W/die,
+            no opportunity attacks for ranged and area attacks.</td>
+        </tr>
+        <tr>
+          <td>Focus: Parrying Staff</td>
+          <td>Focus</td>
+          <td>Flexible</td>
+          <td>Weapon Proficiency with Staff</td>
+          <td>With Staff, +1 damage per W/die, +1 AC vs melee.</td>
+        </tr>
+        <tr>
+          <td>Focus: Pushing Staff</td>
+          <td>Focus</td>
+          <td>Flexible</td>
+          <td>Implement Proficiency with a Staff</td>
+          <td>With Staff, +1 damage per W/die, +1 forced movement.</td>
+        </tr>
+        <tr>
+          <td>Focus: Unerring Staff</td>
+          <td>Focus</td>
+          <td>Flexible</td>
+          <td>Implement Proficiency with a Staff</td>
+          <td>With Staff, +1 damage and Miss Damage per W/die.</td>
+        </tr>
+        <tr>
+          <td>Energy Focus</td>
+          <td>Focus</td>
+          <td>Flexible</td>
+          <td>Attack power with the chosen energy type.</td>
+          <td>Choose an energy type. With that type, +1 damage and +2 Miss
+            Damage per W/die, and Pierce Resistance.</td>
+        </tr>
+        <tr>
+          <td>Flexible Focus</td>
+          <td>Lesser Feat</td>
+          <td>Flexible</td>
+          <td>Proficiency with an implement. A weapon attack power. An implement
+            attack power. A Weapon Focus feat.</td>
+          <td>Gain extra Implement Focus feat if you have Weapon Focus.</td>
+        </tr>
+        <tr>
+          <td>Focus: Pushing Hammer</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Hammer</td>
+          <td>With Hammer, +1 damage per W, +1 push.</td>
+        </tr>
+        <tr>
+          <td>Focus: Unstoppable Hammer</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Hammer</td>
+          <td>With Hammer, +3 Miss Damage per W.</td>
+        </tr>
+        <tr>
+          <td>Focus: Critical Light Blade</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Light Blade</td>
+          <td>With Light Blade, +1 Miss Damage per W, +1 Crit Range</td>
+        </tr>
+        <tr>
+          <td>Focus: Ambush Light Blade</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Light Blade</td>
+          <td>With Light Blade, +1 damage per W and +1 hit when flanking/hiding.</td>
+        </tr>
+        <tr>
+          <td>Focus: Opportunist Heavy Blade</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Heavy Blade</td>
+          <td>With Heavy Blade, +1 damage per W and +2 to Opportunity Attacks.</td>
+        </tr>
+        <tr>
+          <td>Focus: Duelist's Heavy Blade</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Heavy Blade</td>
+          <td>With Heavy Blade, +1 Miss Damage per W, +1 AC vs melee.</td>
+        </tr>
+        <tr>
+          <td>Focus: Critical Axe</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with an Axe</td>
+          <td>With Axe, +1 damage per W, High Crit.</td>
+        </tr>
+        <tr>
+          <td>Focus: Piercing Axe</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with an Axe</td>
+          <td>With Axe, +1 damage per W, Pierce Resistance.</td>
+        </tr>
+        <tr>
+          <td>Focus: Reaching Spear</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Spear</td>
+          <td>With Spear, +1 Miss Damage per W, extra Range, Reach.</td>
+        </tr>
+        <tr>
+          <td>Focus: Opportunist Spear</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Spear</td>
+          <td>With Spear, +1 damage and +5 Opportunity Attack damage per W.</td>
+        </tr>
+        <tr>
+          <td>Focus: Reaching Flail</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Flail</td>
+          <td>With Flail, +1 Miss Damage per W, extra Reach.</td>
+        </tr>
+        <tr>
+          <td>Focus: Flurrying Flail</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Flail</td>
+          <td>With Flail, +2 damage per W against multiple targets.</td>
+        </tr>
+        <tr>
+          <td>Focus: Close Bow</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Bow</td>
+          <td>With Bow, +1 damage per W and no opportunity attacks for ranged
+            and area attacks.</td>
+        </tr>
+        <tr>
+          <td>Focus: Far Bow</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Bow</td>
+          <td>With Bow, +1 damage per W and extra Range.</td>
+        </tr>
+        <tr>
+          <td>Focus: Precision Crossbow</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Crossbow</td>
+          <td>With Crossbow, +1 damage per W and -1 to Cover/Concealment
+            penalty.</td>
+        </tr>
+        <tr>
+          <td>Focus: Mobile Crossbow</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Crossbow</td>
+          <td>With Crossbow, +1 damage per W and extra movement on Recharge.</td>
+        </tr>
+        <tr>
+          <td>Focus: Critical Sling</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Sling</td>
+          <td>With Sling, +1 damage per W, +1 Crit Range.</td>
+        </tr>
+        <tr>
+          <td>Focus: Cautious Sling</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td>Weapon Proficiency with a Sling</td>
+          <td>With Sling, +1 damage per W, +2 to defenses on Recharge.</td>
+        </tr>
+        <tr>
+          <td>Focus: Dual Wield Parry</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td><br>
+          </td>
+          <td>When dual wielding, +1 damage per W, +1 AC vs melee.</td>
+        </tr>
+        <tr>
+          <td>Focus: Twin Weapon Focus</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td><br>
+          </td>
+          <td>When dual wielding, +2 damage per W.</td>
+        </tr>
+        <tr>
+          <td>Focus: Weapon Master</td>
+          <td>Focus</td>
+          <td>Weapon</td>
+          <td><br>
+          </td>
+          <td>With weapons, +1 damage per W. Extra move on Draw, no penalty on
+            Quick Draw.</td>
+        </tr>
+        <tr>
+          <td>Focus: Far Wand</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Wand</td>
+          <td>With Wand, +1 damage per die and +3 Range.</td>
+        </tr>
+        <tr>
+          <td>Focus: Piercing Wand</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Wand</td>
+          <td>With Wand, +1 damage per die and Pierce Resistance.</td>
+        </tr>
+        <tr>
+          <td>Focus: Prescient Orb</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with an Orb</td>
+          <td>With Orb, +1 damage per die and +2 Initiative.</td>
+        </tr>
+        <tr>
+          <td>Focus: Perceptive Orb</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with an Orb</td>
+          <td>With Orb, +1 damage per die and -2 penalty from Concealment.</td>
+        </tr>
+        <tr>
+          <td>Focus: Sage's Tome</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Tome</td>
+          <td>With tome, +1 damage per die, +1 Arcana, Religion, History. Free
+            Sustain Minor, extra HP on summons.</td>
+        </tr>
+        <tr>
+          <td>Focus: Reliable Tome</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Tome</td>
+          <td>With Tome, +1 damage per die, no fatigue on missed encounter
+            attack.</td>
+        </tr>
+        <tr>
+          <td>Focus: Critical Rod</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Rod</td>
+          <td>With Rod, +1 damage per die, High Crit.</td>
+        </tr>
+        <tr>
+          <td>Focus: Ambush Rod</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Rod</td>
+          <td>With Rod and Combat Advantage, +1 Miss Damage per die, +1 Crit
+            Range</td>
+        </tr>
+        <tr>
+          <td>Focus: Healing Symbol</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Holy Symbol</td>
+          <td>With Holy Symbol, +1 damage per die and +3 per tier to Healing.</td>
+        </tr>
+        <tr>
+          <td>Focus: Shielding Symbol</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Holy Symbol</td>
+          <td>With Holy Symbol, +1 damage per die and +2 per die to THP.</td>
+        </tr>
+        <tr>
+          <td>Focus: Surging Ki</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Ki Focus</td>
+          <td>With Ki Focus, +1 damage per die, +3 Surge Value per tier.</td>
+        </tr>
+        <tr>
+          <td>Focus: Fast Ki</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Ki Focus</td>
+          <td>With Ki Focus, +1 damage per die, +1 Speed.</td>
+        </tr>
+        <tr>
+          <td>Focus: Opportunist Totem</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Totem</td>
+          <td>With Totem, +1 damage per die, +2 to Opportunity Attacks.</td>
+        </tr>
+        <tr>
+          <td>Focus: Tough Totem</td>
+          <td>Focus</td>
+          <td>Implement</td>
+          <td>Implement Proficiency with a Totem</td>
+          <td>With Totem, +1 damage per die, +2 HP per tier.</td>
+        </tr>
+        <tr>
+          <td>Wind Robes</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>With Cloth, +1 AC, and +1 to all defenses vs ranged</td>
+        </tr>
+        <tr>
+          <td>Elemental Robes</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>With Cloth, +1 AC, +1 Arcane, Resist an elemental damage type.</td>
+        </tr>
+        <tr>
+          <td>Divine Robes</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>With Cloth, +1 AC, +1 Religion, Resist Radiant or Necrotic</td>
+        </tr>
+        <tr>
+          <td>Mind Robes</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>With Cloth, +1 AC, +1 Insight, Resist Psychic or Force</td>
+        </tr>
+        <tr>
+          <td>Robes of Willpower</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>With Cloth, +1 AC, +1 Will.</td>
+        </tr>
+        <tr>
+          <td>Courtier's Outfit</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>With Cloth, +1 AC, +2 Diplomacy, +2 Bluff, +1 Intimidate</td>
+        </tr>
+        <tr>
+          <td>Catsuit Leather</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Leather Armor Proficiency</td>
+          <td>With Leather, +1 AC, +2 Stealth, +2 Acrobatics, +1 Thievery</td>
+        </tr>
+        <tr>
+          <td>Shadow Leather</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Leather Armor Proficiency</td>
+          <td>With Leather, +1 AC, +1 to cover/concealment bonus</td>
+        </tr>
+        <tr>
+          <td>Reflexive Leather</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Leather Armor Proficiency</td>
+          <td>With Leather, +1 AC, +1 Reflex</td>
+        </tr>
+        <tr>
+          <td>Dodging Leather</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Leather Armor Proficiency</td>
+          <td>With Leather, +1 AC, +2 all defenses vs Opportunity Attacks</td>
+        </tr>
+        <tr>
+          <td>Stout Hide</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Hide Armor Proficiency</td>
+          <td>With Hide, +1 AC, +1 Fortitude</td>
+        </tr>
+        <tr>
+          <td>Isolating Hide</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Hide Armor Proficiency</td>
+          <td>With Hide, +1 AC, +1 Nature, Resist Cold or Fire</td>
+        </tr>
+        <tr>
+          <td>Hiking Hide</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Hide Armor Proficiency</td>
+          <td>With Hide, +1 AC, +1 Dungeoneering, ignore first Difficult Terrain
+            square.</td>
+        </tr>
+        <tr>
+          <td>Caster's Chain</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Chain Armor Proficiency</td>
+          <td>With Chain, +1 AC, +4 all defenses vs Opportunity Attacks provoked
+            by attack.</td>
+        </tr>
+        <tr>
+          <td>Mobile Scale</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Scale Armor Proficiency</td>
+          <td>With Scale, +1 AC, reduce movement penalty by 1.</td>
+        </tr>
+        <tr>
+          <td>Juggernaut Plate</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Plate Armor Proficiency</td>
+          <td>With Plate, +1 AC, save to reduce forced movement by 1.</td>
+        </tr>
+        <tr>
+          <td>Blast Shield</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Shield Proficiency</td>
+          <td>With Shield, +1 AC, +1 to all defenses vs blast, burst</td>
+        </tr>
+        <tr>
+          <td>Wind Shield</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Shield Proficiency</td>
+          <td>With Shield, +1 AC, +1 to all defenses vs ranged</td>
+        </tr>
+        <tr>
+          <td>Bashing Shield</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Shield Proficiency</td>
+          <td>With Shield, +1 AC, increase forced movement by 1 on failed save.</td>
+        </tr>
+        <tr>
+          <td>Ambush Armor</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Hide Armor Proficiency</td>
+          <td>With any Armor, +1 AC, Armor Penalty to Initiative, Stealth,
+            Acrobatics reduced by 1.</td>
+        </tr>
+        <tr>
+          <td>Nimble Armor</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Hide Armor Proficiency</td>
+          <td>+1 AC, Armor Penalty to Stealth, Thievery, Acrobatics, Athletics,
+            Endurance reduced by 1</td>
+        </tr>
+        <tr>
+          <td>Initiative Armor</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Scale Armor Proficiency</td>
+          <td>+1 AC, and Armor Penalty to Initiative reduced by 2</td>
+        </tr>
+        <tr>
+          <td>Strong Armor</td>
+          <td>Defense Focus</td>
+          <td>Armor</td>
+          <td>Scale Armor Proficiency</td>
+          <td>+1 AC, and Armor Penalty to Athletics, Endurance reduced by 3</td>
+        </tr>
+        <tr>
+          <td>Toughness</td>
+          <td>Toughness</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td>+5 HP per tier.</td>
+        </tr>
+        <tr>
+          <td>Surging Toughness</td>
+          <td>Toughness</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td>+3 HP per tier, and +3 Surge Value per tier.</td>
+        </tr>
+        <tr>
+          <td>Undying Toughness</td>
+          <td>Toughness</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td>+3 HP per tier, and +3 to Death Saving Throws.</td>
+        </tr>
+        <tr>
+          <td>Toughness in Numbers</td>
+          <td>Toughness</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Taunting Mark</td>
+          <td>Defender Mark</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>Marked enemies attacking allies gain -1 hit with melee attacks, -2
+            with non-melee attacks.</td>
+        </tr>
+        <tr>
+          <td>Deadly Mark</td>
+          <td>Defender Mark</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>Marked enemies gain vulnerable against your reaction attacks</td>
+        </tr>
+        <tr>
+          <td>Meat Shield</td>
+          <td>Defender Mark</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>Adjacent allies gain cover, resist (burst, blast)</td>
+        </tr>
+        <tr>
+          <td>Imposing Presence</td>
+          <td>Defender Position</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>Adjacent squares count as Difficult Terrain for enemies</td>
+        </tr>
+        <tr>
+          <td>Hamstring Opportunity</td>
+          <td>Defender Position</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>Opportunity attacks and reaction attacks slow enemies. Combat
+            advantage against slowed enemies.</td>
+        </tr>
+        <tr>
+          <td>Mighty Blow</td>
+          <td>Defender Position</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>Forced movement from attacks increased by 1. -4 to enemy forced
+            movement saves.</td>
+        </tr>
+        <tr>
+          <td>Ground Holder</td>
+          <td>Defender Grit</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>+1 Fortitude. Forced movement reduced by 1. No melee attack
+            penalty while prone.</td>
+        </tr>
+        <tr>
+          <td>Constant Vigilance</td>
+          <td>Defender Grit</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>+1 Will. Can use Reactions, Opportunity attacks while dazed,
+            stunned.</td>
+        </tr>
+        <tr>
+          <td>Unstoppable Defender</td>
+          <td>Defender Grit</td>
+          <td>Role</td>
+          <td>Defender role</td>
+          <td>+1 Reflex. Can move an extra square while Slowed, Immobilized,
+            Restrained, Prone.</td>
+        </tr>
+        <tr>
+          <td>Cunning Duelist</td>
+          <td>Striker Deadliness</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>Combat Advantage when you and target have no other creatures
+            adjacent.</td>
+        </tr>
+        <tr>
+          <td>Dirty Fighting</td>
+          <td>Striker Deadliness</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>+1 hit with Combat Advantage.</td>
+        </tr>
+        <tr>
+          <td>Lethal Weapon</td>
+          <td>Striker Deadliness</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>+1 damage and +1 Miss Damage per W or die.</td>
+        </tr>
+        <tr>
+          <td>Fancy Footwork</td>
+          <td>Striker Agility</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>+1 Shift. Shift attack penalty reduced by 1.</td>
+        </tr>
+        <tr>
+          <td>Sure Feet</td>
+          <td>Striker Agility</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>+1 Move Speed. Ignore Difficult Terrain.</td>
+        </tr>
+        <tr>
+          <td>Escape Artist</td>
+          <td>Striker Agility</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>Save to avoid Slow, Immobilize, Restrain, Grab</td>
+        </tr>
+        <tr>
+          <td>Low Profile</td>
+          <td>Striker Defense</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>+1 to all defenses vs enemies marked by your allies, and +2 to all
+            defenses vs their Opportunity Attacks.</td>
+        </tr>
+        <tr>
+          <td>Blind Spot</td>
+          <td>Striker Defense</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>+2 to all defenses vs enemies you flank.</td>
+        </tr>
+        <tr>
+          <td>Deterring Strike</td>
+          <td>Striker Defense</td>
+          <td>Role</td>
+          <td>Striker role</td>
+          <td>The first enemy hit by you each turn gains -2 to hit you next
+            turn.</td>
+        </tr>
+        <tr>
+          <td>Hole in the Fire</td>
+          <td>Blaster Finesse</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>On blast or burst attack, take a -2 penalty to hit to exclude an
+            ally in the area from getting targeted by the attack.</td>
+        </tr>
+        <tr>
+          <td>Controlled Explosion</td>
+          <td>Blaster Finesse</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>You take no hit penalty for centering area attacks on squares with
+            cover or concealment. You can center a close attack in a square
+            adjacent to you.</td>
+        </tr>
+        <tr>
+          <td>Eye of the Storm</td>
+          <td>Blaster Finesse</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>In your area burst attacks, -5 to hit targets in the origin, and
+            +1 to hit other targets. In your close blast attacks, -5 to hit
+            targets adjacent to you, and+1 to hit other targets.</td>
+        </tr>
+        <tr>
+          <td>Chain Reaction</td>
+          <td>Blaster Explosion</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>On crit, 5 damage per tier to all targets of the attack.</td>
+        </tr>
+        <tr>
+          <td>Ground Zero</td>
+          <td>Blaster Explosion</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>+2 hit vs target in origin space of burst or blast.</td>
+        </tr>
+        <tr>
+          <td>Crowd Control</td>
+          <td>Blaster Explosion</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>+1 hit on attacks with multiple targets.</td>
+        </tr>
+        <tr>
+          <td>Gone with the Wind</td>
+          <td>Controller Terrain</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>Forced movement from attacks increased by 1, or by 2 with Combat
+            Advantage.</td>
+        </tr>
+        <tr>
+          <td>Strength in Numbers</td>
+          <td>Controller Terrain</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>+5 Summon HP per tier. Sustain Minor and Minor Action commands as
+            free.</td>
+        </tr>
+        <tr>
+          <td>Slow Motion</td>
+          <td>Controller Terrain</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>Slow on single target attack hit. Combat Advantage vs Slowed.</td>
+        </tr>
+        <tr>
+          <td>Stable Affliction</td>
+          <td>Controller Weakening</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>-3 to Saving Throws.</td>
+        </tr>
+        <tr>
+          <td>Confusion in the Ranks</td>
+          <td>Controller Weakening</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>On first hit each turn, have ally mark target.</td>
+        </tr>
+        <tr>
+          <td>Weakening Blow</td>
+          <td>Controller Weakening</td>
+          <td>Role</td>
+          <td>Controller role</td>
+          <td>On single target attack hit, target gains -3 damage per W/die of
+            your attack.</td>
+        </tr>
+        <tr>
+          <td>Master Healer</td>
+          <td>Leader Heal</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Healing grants +5 Surge Value per tier.</td>
+        </tr>
+        <tr>
+          <td>Saving Grace</td>
+          <td>Leader Heal</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Healing grants free Saving Throw.</td>
+        </tr>
+        <tr>
+          <td>Shield Mate</td>
+          <td>Leader Heal</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Temporary Hit Points granted to allies increased by 2 per tier.</td>
+        </tr>
+        <tr>
+          <td>Adrenaline Rush</td>
+          <td>Leader Offense</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Healing grants +2 hit, +1 to Action Point Rolls.</td>
+        </tr>
+        <tr>
+          <td>Point Flank</td>
+          <td>Leader Offense</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Flanking grants +1 hit, +1 damage per tier to allies.</td>
+        </tr>
+        <tr>
+          <td>Constructive Criticism</td>
+          <td>Leader Offense</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>With power bonus to hit or damage, allies gain +1 Crit Range.</td>
+        </tr>
+        <tr>
+          <td>Word of Caution</td>
+          <td>Leader Maneuver</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Healing grants +1 to defenses. Power bonuses to a defense
+            increased by 1 on allies.</td>
+        </tr>
+        <tr>
+          <td>Fast Healing</td>
+          <td>Leader Maneuver</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Healing grants +3 Movement Speed. On actions granted to allies, +1
+            Movement Speed and +1 Shift. Forced movement to allies increased by
+            1.</td>
+        </tr>
+        <tr>
+          <td>Rallying Cry</td>
+          <td>Leader Maneuver</td>
+          <td>Role</td>
+          <td>Leader role</td>
+          <td>Allies gain +1 Initiative, +1 to defenses on first combat round.</td>
+        </tr>
+        <tr>
+          <td>Martial Weapon Training</td>
+          <td><br>
+          </td>
+          <td>Weapon</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Superior Weapon Training</td>
+          <td><br>
+          </td>
+          <td>Weapon</td>
+          <td>Proficiency with a martial weapon</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Paragon Ability</td>
+          <td><br>
+          </td>
+          <td>Ability</td>
+          <td>Level 11</td>
+          <td>Increase a tertiary ability by 1.</td>
+        </tr>
+        <tr>
+          <td>Leather Armor Proficiency</td>
+          <td><br>
+          </td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>Proficiency with Leather</td>
+        </tr>
+        <tr>
+          <td>Hide Armor Proficiency</td>
+          <td><br>
+          </td>
+          <td>Armor</td>
+          <td>Leather Armor Proficiency</td>
+          <td>Proficiency with Hide</td>
+        </tr>
+        <tr>
+          <td>Chain Armor Proficiency</td>
+          <td><br>
+          </td>
+          <td>Armor</td>
+          <td>Hide Armor Proficiency</td>
+          <td>Proficiency with Chain</td>
+        </tr>
+        <tr>
+          <td>Scale Armor Proficiency</td>
+          <td><br>
+          </td>
+          <td>Armor</td>
+          <td>Chain Armor Proficiency</td>
+          <td>Proficiency with Scale</td>
+        </tr>
+        <tr>
+          <td>Plate Armor Proficiency</td>
+          <td><br>
+          </td>
+          <td>Armor</td>
+          <td>Scale Armor Proficiency</td>
+          <td>Proficiency with Plate</td>
+        </tr>
+        <tr>
+          <td>Light Shield Proficiency</td>
+          <td><br>
+          </td>
+          <td>Armor</td>
+          <td><br>
+          </td>
+          <td>Proficiency with Light Shield</td>
+        </tr>
+        <tr>
+          <td>Heavy Shield Proficiency</td>
+          <td><br>
+          </td>
+          <td>Armor</td>
+          <td>Light Shield Proficiency</td>
+          <td>Proficiency with Heavy Shield</td>
+        </tr>
+        <tr>
+          <td>Larger than life</td>
+          <td><br>
+          </td>
+          <td>Epic</td>
+          <td>Level 21, Medium Size</td>
+          <td>Increase size to Large, +1 reach.</td>
+        </tr>
+        <tr>
+          <td>Epic Specialization</td>
+          <td><br>
+          </td>
+          <td>Epic</td>
+          <td>Level 21</td>
+          <td>Gain additional feat from a category you already have.</td>
+        </tr>
+        <tr>
+          <td>Skill Training</td>
+          <td>Lesser Feat (Unlimited)</td>
+          <td>Skill, Ability</td>
+          <td><br>
+          </td>
+          <td>Gain training in a skill.</td>
+        </tr>
+        <tr>
+          <td>Unnatural Ability</td>
+          <td>Lesser Feat</td>
+          <td>Ability</td>
+          <td><br>
+          </td>
+          <td>Ability bonus for two trained skills becomes +3.</td>
+        </tr>
+        <tr>
+          <td>Skill Focus</td>
+          <td>Lesser Feat (Unlimited)</td>
+          <td>Skill</td>
+          <td><br>
+          </td>
+          <td>With a trained skill, automatically succeed Easy and Normal
+            checks, allow Very Hard checks.</td>
+        </tr>
+        <tr>
+          <td>Ritual Training</td>
+          <td>Lesser Feat</td>
+          <td>Ritual</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Paragon Ritual Training</td>
+          <td>Lesser Feat</td>
+          <td>Ritual, Paragon</td>
+          <td>Level 11, Ritual Training</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Epic Ritual Training</td>
+          <td>Lesser Feat</td>
+          <td>Ritual, Epic</td>
+          <td>Level 21, Paragon Ritual Training</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <td>Linguist</td>
+          <td>Lesser Feat</td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+    <br>
+    <div class="Feat-List">
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Caster's Weapon</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Flexible</p>
+        <p class="Feat-Requires">Proficiency with a weapon that can be used as
+          implement</p>
+        <p>On weapon attacks with the chosen weapon, +1 damage per W. On
+          implement attacks with the chosen weapon, +1 damage per damage die.
+          When making a ranged or area implement attack with the chosen weapon,
+          choose an adjacent enemy; the attack does not provoke Opportunity
+          Attacks from that enemy.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Parrying Staff</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Flexible</p>
+        <p class="Feat-Requires">Weapon Proficiency with Staff</p>
+        <p>On weapon attacks with a Staff, +1 damage per W. On implement atacks
+          with a Staff, +1 damage per damage die. Your Staff gains Parry (+1 AC
+          vs melee attacks)</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Pushing Staff</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Flexible</p>
+        <p class="Feat-Requires">Implement Proficiency with a Staff</p>
+        <p>On weapon attacks with a staff, +1 damage per W. On implement attacks
+          with a staff, +1 damage per die. When you make an implement attack
+          that causes forced movement while wielding a staff, choose a targeted
+          enemy. The forced movement for that enemy is increased by 1 square.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Unerring Staff</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Flexible</p>
+        <p class="Feat-Requires">Implement Proficiency with a Staff</p>
+        <p>On weapon attacks with a staff, +1 damage per W On implement attacks
+          with a staff, +1 damage per die. On implement attacks with a staff, +1
+          Miss Damage per die.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Energy Focus</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Flexible</p>
+        <p class="Feat-Requires">Attack power with the chosen energy type.</p>
+        <p>Special: When you take this feat, choose an energy type. On weapon
+          attacks with the chosen energy type, +1 damage per W, and +2 Miss
+          Damage per W. On implement attacks with the chosen energy type, +1
+          damage per die, and +2 Miss Damage per die. Your attacks gain Pierce
+          Resist (chosen energy type).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Flexible Focus</h3>
+        <p class="Feat-Categories">Lesser Feat </p>
+        <p class="Feat-Keywords">Flexible</p>
+        <p class="Feat-Requires">Proficiency with an implement. A weapon attack
+          power. An implement attack power. A Weapon Focus feat.</p>
+        <p>Choose an Implement Focus feat. You gain that feat. (Ignore the usual
+          restrictions about only having a single Focus feat).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Pushing Hammer</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Hammer</p>
+        <p>On weapon attacks with a hammer, +1 damage per W. When you push an
+          enemy with a weapon attack with a hammer, the forced movement is
+          increased by 1 square.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Unstoppable Hammer</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Hammer</p>
+        <p>On weapon attacks with a hammer, +3 Miss Damage per W.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Critical Light Blade</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Light Blade</p>
+        <p>On weapon attacks with a Light Blade, +1 Miss Damage per W. On weapon
+          attacks with a Light Blade, +1 Crit Range.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Ambush Light Blade</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Light Blade</p>
+        <p>On weapon attacks with a light blade against targets you are flanking
+          or hidden from, gain +1 damage per W and +1 to hit.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Opportunist Heavy Blade</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Heavy Blade</p>
+        <p>On weapon attacks with a Heavy Blade, +1 damage per W. +2 to
+          Opportunity Attack modifier.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Duelist's Heavy Blade</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Heavy Blade</p>
+        <p>On weapon attacks with a Heavy Blade, +1 Miss Damage per W. Your
+          Heavy Blades gain Parry (+1 AC against melee attacks).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Critical Axe</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with an Axe</p>
+        <p>On weapon attacks with an Axe, +1 damage per W. On weapon attacks
+          with an Axe, gain High Crit (+5 damage per W on a crit).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Piercing Axe</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with an Axe</p>
+        <p>On weapon attacks with an Axe, +1 damage per W. On weapon attacks
+          with an Axe gain Pierce Resistance (all).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Reaching Spear</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Spear</p>
+        <p>On weapon attacks with an Spear, +1 Miss Damage per W. Your Javelins
+          gain Throw 7/14. Your Halfspears gain Reach 2. Your Longspears gain
+          Reach 3.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Opportunist Spear</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Spear</p>
+        <p>On weapon attacks with an Spear, +1 damage per W. On Opportunity
+          attacks with a Spear, +5 damage per W.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Reaching Flail</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Flail</p>
+        <p>On weapon attacks with a Flail, +1 Miss Damage per W. Your Light
+          Flails, Heavy Flails gain Reach 2. Your Whips gain Reach 3.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Flurrying Flail</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Flail</p>
+        <p>On weapon attacks with a Flail and multiple targets, +2 damage per W.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Close Bow</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Bow</p>
+        <p>On weapon attacks with a Bow, +1 damage per W. When making a ranged
+          or area weapon attack with a bow, choose an adjacent enemy. The attack
+          does not provoke Opportunity Attacks from that enemy.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Far Bow</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Bow</p>
+        <p>On weapon attacks with a Bow, +1 damage per W. Your Shortbows gain
+          Range 9/18. Your Longbows gain Range 12/24.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Precision Crossbow</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Crossbow</p>
+        <p>On weapon attacks with a Crossbow, +1 damage per W. On weapon attacks
+          with a Crossbow, hit penalty for Cover, Superior Cover, Concealment
+          and Total Concealment is reduced by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Mobile Crossbow</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Crossbow</p>
+        <p>On weapon attacks with a Crossbow, +1 damage per W. When using a
+          Recharge action, increase the distance moved to half your speed.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Critical Sling</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Sling</p>
+        <p>On weapon attacks with a Sling, +1 damage per W. On weapon attacks
+          with a Sling, +1 Crit Range.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Cautious Sling</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Weapon Proficiency with a Sling</p>
+        <p>On weapon attacks with a Sling, +1 damage per W. When using a
+          Recharge action, gain a +2 Defense bonus to all defenses until your
+          next turn.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Dual Wield Parry</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p>On weapon attacks while wielding a melee weapon in each hand, +1
+          damage per W. While wielding a melee weapon in each hand, your melee
+          weapons gain Parry (+1 AC against melee attacks).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Twin Weapon Focus</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p>On weapon attacks while wielding a melee weapon of the same type in
+          each hand, +2 damage per W.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Weapon Master</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p>On weapon attacks, +1 damage per W. When using the Draw action, the
+          move distance is increased to half your move speed. When using the
+          Quick Draw action, you do not gain the penalty to attack rolls.</p>
+      </div>
+      <div class="Feat">
+        <p class="Feat-Categories"> </p>
+      </div>
+      <div class="Feat">
+        <p class="Feat-Categories"> </p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Far Wand</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Wand</p>
+        <p>On implement attacks with a Wand, +1 damage per die. On ranged
+          implement attacks with a Wand, +3 range.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Piercing Wand</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Wand</p>
+        <p>On implement attacks with a Wand, +1 damage per die. On implement
+          attacks with a Wand, gain Pierce Resistance (all).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Prescient Orb</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with an Orb</p>
+        <p>On implement attacks with an Orb, +1 damage per die. While wielding
+          an Orb, gain +2 Initiative.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Perceptive Orb</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with an Orb</p>
+        <p>On implement attacks with an Orb, +1 damage per die. On Implement
+          attacks with an Orb, reduce hit penalty from Concealment, Total
+          Concealment by 2. +1 Perception.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Sage's Tome</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Tome</p>
+        <p>On implement attacks with a Tome , +1 damage per die. +1 Arcana,
+          Religion, History. Once per encounter, you may Sustain Minor as a Free
+          Action. Summoned creatures gain +5 Hit Points per tier.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Reliable Tome</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Tome</p>
+        <p>On implement attacks with a Tome , +1 damage per die. When you miss
+          all targets of an encounter attack power for the first time in an
+          encounter, you do not become fatigued from using the power.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Critical Rod</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Rod</p>
+        <p>On implement attacks with a Rod , +1 damage per die. On implement
+          attacks with a Rod, gain High Crit (+5 damage per W on a crit).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Ambush Rod</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Rod</p>
+        <p>On implement attacks with a Rod and Combat Advantage, +1 damage per
+          die and +1 Crit Range.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Healing Symbol</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Holy Symbol</p>
+        <p>On implement attacks with a Symbol, +1 damage per die. Targets of
+          your Healing powers gain +3 per tier to Surge Value.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Shielding Symbol</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Holy Symbol</p>
+        <p>On implement attacks with a Symbol , +1 damage per die. On implement
+          attacks with a Symbol that grant Temporary Hit Points, increase the
+          granted Temporary Hit Points by 2 per die.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Surging Ki</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Ki Focus</p>
+        <p>On implement attacks with a Ki Focus, +1 damage per die. +3 Surge
+          Value per tier.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Fast Ki</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Ki Focus</p>
+        <p>On implement attacks with a Ki Focus , +1 damage per die. +1 Speed.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Opportunist Totem</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Totem</p>
+        <p>On implement attacks with a Totem , +1 damage per die. +2 Opportunity
+          Attack Modifier. On Reaction attacks other than Opportunity Attacks,
+          +2 hit.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Focus: Tough Totem</h3>
+        <p class="Feat-Categories">Focus </p>
+        <p class="Feat-Keywords">Implement</p>
+        <p class="Feat-Requires">Implement Proficiency with a Totem</p>
+        <p>On implement attacks with a Totem , +1 damage per die. +2 Hit Points
+          per tier.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Wind Robes</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>While wearing Cloth Armor, +1 AC, and +1 to all defenses against
+          ranged attacks.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Elemental Robes</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>When taking this feat, choose one of the following damage types:
+          Fire, Cold, Lightning, Thunder, Acid. While wearing Cloth Armor, +1
+          AC, +1 Arcane skill, and Resist (chosen damage type).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Divine Robes</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>When taking this feat, choose one of the following damage types:
+          Radiant, Necrotic. While wearing Cloth Armor, +1 AC,+1 Religion skill,
+          and Resist (chosen damage type).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Mind Robes</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>When taking this feat, choose one of the following damage types:
+          Psychic, Force. While wearing Cloth Armor, +1 AC,+1 Insight skill, and
+          Resist (chosen damage type).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Robes of Willpower</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>While wearing Cloth Armor, +1 AC, +1 Will.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Courtier's Outfit</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>While wearing Cloth Armor, +1 AC, +2 Diplomacy skill, +2 Bluff skill,
+          +1 Intimidate skill.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Catsuit Leather</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Leather Armor Proficiency</p>
+        <p>While wearing Leather Armor, +1 AC, +2 Stealth skill, +2 Acrobatics
+          skill, +1 Thievery skill.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Shadow Leather</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Leather Armor Proficiency</p>
+        <p>While wearing Leather Armor, +1 AC. When you have any cover or
+          concealment against a melee or ranged attack, gain +1 to all defenses
+          for that attack.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Reflexive Leather</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Leather Armor Proficiency</p>
+        <p>While wearing Leather Armor, +1 AC, +1 Reflex.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Dodging Leather</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Leather Armor Proficiency</p>
+        <p>While wearing Leather Armor, +1 AC, and +2 to all defenses against
+          Opportunity attacks.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Stout Hide</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Hide Armor Proficiency</p>
+        <p>While wearing Hide Armor, +1 AC, +1 Fortitude.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Isolating Hide</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Hide Armor Proficiency</p>
+        <p>When taking this feat, choose one of the following damage types:
+          Cold. Fire While wearing Hide Armor, +1 AC,+1 Nature skill, and Resist
+          (chosen damage type).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Hiking Hide</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Hide Armor Proficiency</p>
+        <p>While wearing Hide Armor, +1 AC, and the first time you enter a
+          square of Difficult Terrain each turn, you treat it as if it wasn't
+          Difficult Terrain.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Caster's Chain</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Chain Armor Proficiency</p>
+        <p>While wearing Chain Armor, +1 AC, and +2 to all defenses against
+          Opportunity attacks provoked by attacking.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Mobile Scale</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Scale Armor Proficiency</p>
+        <p>While wearing Scale Armor, +1 AC, and the Armor Movement Penalty is
+          reduced by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Juggernaut Plate</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Plate Armor Proficiency</p>
+        <p>While wearing Plate Armor, +1 AC, and whenever an enemy attack
+          inflicts forced movement on you, you take a saving throw to reduce the
+          forced movement by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Blast Shield</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Shield Proficiency</p>
+        <p>While wearing a Shield, +1 AC, and +1 to all defenses against Blast
+          and Burst attacks.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Wind Shield</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Shield Proficiency</p>
+        <p>While wearing a Shield, +1 AC, and +1 to all defenses against Ranged
+          attacks.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Bashing Shield</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Shield Proficiency</p>
+        <p>While wearing a Shield, +1 AC, and when you push an enemy with a
+          melee or close attack, the forced movement is increased by 1 square
+          unless the enemy makes a save.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Ambush Armor</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Hide Armor Proficiency</p>
+        <p>+1 AC, and your Armor Penalty to Initiative, and Stealth and
+          Acrobatics skills is reduced by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Nimble Armor</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Hide Armor Proficiency</p>
+        <p>+1 AC, and your Armor Penalty to Stealth, Thievery, Acrobatics,
+          Athletics and Endurance skills is reduced by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Initiative Armor</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Scale Armor Proficiency</p>
+        <p>+1 AC, and your Armor Penalty to Initiative is reduced by 2.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Strong Armor</h3>
+        <p class="Feat-Categories">Defense Focus </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Scale Armor Proficiency</p>
+        <p>+1 AC, and your Armor Penalty to Athletics and Endurance skills is
+          reduced by 3.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Toughness</h3>
+        <p class="Feat-Categories">Toughness </p>
+        <p>+5 HP per tier.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Surging Toughness</h3>
+        <p class="Feat-Categories">Toughness </p>
+        <p>+3 HP per tier, and +3 Surge Value per tier.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Undying Toughness</h3>
+        <p class="Feat-Categories">Toughness </p>
+        <p>+3 HP per tier, and +3 to Death Saving Throws.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Toughness in Numbers</h3>
+        <p class="Feat-Categories">Toughness </p>
+        <p>+3 HP per tier, and +5 HP per tier to Animal Companions, Familiars,
+          and Summoned Creatures</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Taunting Mark</h3>
+        <p class="Feat-Categories">Defender Mark </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>Enemies marked by you that are attacking allies not marking them gain
+          -1 to hit with melee attacks and -2 to hit with non-melee attacks.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Deadly Mark</h3>
+        <p class="Feat-Categories">Defender Mark </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>Enemies marked by you gain Vulnerable All (Your attacks) during their
+          turn.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Meat Shield</h3>
+        <p class="Feat-Categories">Defender Mark </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>Allies adjacent to you gain Cover, and Resist All (Burst or Blast).</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Imposing Presence</h3>
+        <p class="Feat-Categories">Defender Position </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>Squares adjacent to you count as Difficult Terrain for your enemies.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Hamstring Opportunity</h3>
+        <p class="Feat-Categories">Defender Position </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>Enemies hit by your Opportunity Attacks and Reaction attacks are
+          Slowed until the end of their next turn. Gain Combat Advantage against
+          Slowed enemies.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Mighty Blow</h3>
+        <p class="Feat-Categories">Defender Position </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>When you inflict forced movement on an enemy with an attack, the
+          forced movement is increased by 1, and the enemy gains -4 to any saves
+          against the forced movement.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Ground Holder</h3>
+        <p class="Feat-Categories">Defender Grit </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>+1 Fortitude. Enemy Forced Movement on you is reduced by 1. Your
+          melee attacks ignore the hit penalty from being prone.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Constant Vigilance</h3>
+        <p class="Feat-Categories">Defender Grit </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>+1 Will. You can use Reactions and make Opportunity Attacks while
+          Dazed or Stunned.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Unstoppable Defender</h3>
+        <p class="Feat-Categories">Defender Grit </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Defender role</p>
+        <p>+1 Reflex. While Slowed, the first square you enter each turn does
+          not cost any additional movement. While Immobilized or Restrained, you
+          can spend a Move Action to move 1 square. When you use a Crawl action
+          to move while prone, you move an extra square.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Cunning Duelist</h3>
+        <p class="Feat-Categories">Striker Deadliness </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>When attacking, gain Combat Advantage if your and the target have no
+          adjacent creatures other than each other.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Dirty Fighting</h3>
+        <p class="Feat-Categories">Striker Deadliness </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>When attacking with Combat Advantage, +1 hit.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Lethal Weapon</h3>
+        <p class="Feat-Categories">Striker Deadliness </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>Your weapon attacks gain +1 damage per W, +1 Miss Damage per W. Your
+          implement attacks gain +1 damage per die, +1 Miss Damage per die.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Fancy Footwork</h3>
+        <p class="Feat-Categories">Striker Agility </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>When you shift, the shift distance is increased by 1 square. When you
+          use the Shifting Maneuver, the penalty to attack rolls is reduced by
+          1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Sure Feet</h3>
+        <p class="Feat-Categories">Striker Agility </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>+1 to Movement Speed. You ignore Difficult Terrain.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Escape Artist</h3>
+        <p class="Feat-Categories">Striker Agility </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>When you are Slowed, Immobilized, Restrained or Grabbed, make a
+          Saving Throw to avoid that condition.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Low Profile</h3>
+        <p class="Feat-Categories">Striker Defense </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>Against enemies marked by your allies and not marked by you, +1 to
+          all defenses, and +2 to all defenses against Opportunity Attacks.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Blind Spot</h3>
+        <p class="Feat-Categories">Striker Defense </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>+2 to all defenses against enemies you flank.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Deterring Strike</h3>
+        <p class="Feat-Categories">Striker Defense </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Striker role</p>
+        <p>The first time you hit an enemy each turn, that enemy gains -2 to hit
+          you until the end of your next turn.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Hole in the Fire</h3>
+        <p class="Feat-Categories">Blaster Finesse </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When making a blast or burst attack, you can take a -2 penalty to hit
+          with the attack and choose an ally in the blast or burst. That ally is
+          not affected by the attack.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Controlled Explosion</h3>
+        <p class="Feat-Categories">Blaster Finesse </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When making an area attack, you ignore the hit penalty from centering
+          the burst on a square with Cover or Concealment. When making a close
+          attack, you can choose a square adjacent to you, and place the origin
+          of the attack as if you were in that square. You are still unaffected
+          by that attack.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Eye of the Storm</h3>
+        <p class="Feat-Categories">Blaster Finesse </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When making an area attack, -5 to hit targets in the origin square,
+          and +1 to hit other targets. When making a close blast attack, -5 to
+          hit targets adjacent to you, and +1 to hit other targets.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Chain Reaction</h3>
+        <p class="Feat-Categories">Blaster Explosion </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When you score a critical hit, all creatures targeted by the attack
+          take 5 damage per tier. This damaged is not multiplied by the crit.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Ground Zero</h3>
+        <p class="Feat-Categories">Blaster Explosion </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When you make an area attack or a close Blast attack, +2 to hit
+          targets in the origin square.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Crowd Control</h3>
+        <p class="Feat-Categories">Blaster Explosion </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>+1 to hit on attacks with multiple targets and Secondary Attacks.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Gone with the Wind</h3>
+        <p class="Feat-Categories">Controller Terrain </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When you inflict forced movement on an enemy with an attack, the
+          forced movement is increased by 1, or by 2 if you have Combat
+          Advantage for the attack.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Strength in Numbers</h3>
+        <p class="Feat-Categories">Controller Terrain </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>HP for your summoned creatures is increased by 5 per tier. Once per
+          turn, as a Free Action, you can Sustain Minor, or give a Minor Action
+          command to a summoned creature.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Slow Motion</h3>
+        <p class="Feat-Categories">Controller Terrain </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When hitting with an attack with a single target, the target is
+          Slowed until the end of your next turn. Gain Combat advantage against
+          Slowed enemies.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Stable Affliction</h3>
+        <p class="Feat-Categories">Controller Weakening </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>Enemies gain -3 to Saving Throws against your effects.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Confusion in the Ranks</h3>
+        <p class="Feat-Categories">Controller Weakening </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>The first time you hit a non-marked enemy each turn, that enemy is
+          marked by an ally of your choice until the end of your next turn.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Weakening Blow</h3>
+        <p class="Feat-Categories">Controller Weakening </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Controller role</p>
+        <p>When hitting with a weapon attack with a single target, the target
+          gains -3 damage per W of your attack on its next attack before the end
+          of your next turn. When hitting with an implement attack with a single
+          target, the target gains -3 damage per damage die of your attack on
+          its next attack before the end of your next turn.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Master Healer</h3>
+        <p class="Feat-Categories">Leader Heal </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>When you use a Healing power, creatures spending a Surge due to that
+          power gain +5 per tier to their Surge Value.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Saving Grace</h3>
+        <p class="Feat-Categories">Leader Heal </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>When you use a Healing power, creatures spending a Surge due to that
+          power can make a Saving Throw to end an effect that a save can end or
+          to ignore a condition during their next turn.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Shield Mate</h3>
+        <p class="Feat-Categories">Leader Heal </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>When you grant Temporary Hit Points to an ally, increase the THP by 2
+          per tier.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Adrenaline Rush</h3>
+        <p class="Feat-Categories">Leader Offense </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>When you use a Healing power, creatures spending a Surge due to that
+          power gain +2 to hit and +1 to Action Point rolls until the end of
+          your next turn.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Point Flank</h3>
+        <p class="Feat-Categories">Leader Offense </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>Allies gain +1 to hit and +1 damage per tier against enemies you
+          flank.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Constructive Criticism</h3>
+        <p class="Feat-Categories">Leader Offense </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>While you grant a power bonus to hit or damage to an ally, that ally
+          gains +1 Crit Range.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Word of Caution</h3>
+        <p class="Feat-Categories">Leader Maneuver </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>When you use a Healing power, creatures spending a Surge due to that
+          power gain +1 to all defenses until the end of your next turn. When
+          you grant a power bonus to a defense to an ally, that bonus is
+          increased by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Fast Healing</h3>
+        <p class="Feat-Categories">Leader Maneuver </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>When you use a Healing power, creatures spending a Surge due to that
+          power gain +3 Movement Speed until the end of your next turn. When you
+          grant an action to an ally, any movement or shift in that action is
+          increased by 1. When you grant forced movement to an ally, the forced
+          movement is increased by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Rallying Cry</h3>
+        <p class="Feat-Categories">Leader Maneuver </p>
+        <p class="Feat-Keywords">Role</p>
+        <p class="Feat-Requires">Leader role</p>
+        <p>When rolling for Initiative, allies that can see you gain +1 to all
+          defenses until the end of the first combat round, and +1 to
+          Initiative.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Martial Weapon Training</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p>Gain Training in all Simple and One-Hand Martial weapons.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Superior Weapon Training</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Weapon</p>
+        <p class="Feat-Requires">Proficiency with a martial weapon</p>
+        <p>Gain Training in all Two-Hand Martial weapons</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Paragon Ability</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Ability</p>
+        <p class="Feat-Requires">Level 11</p>
+        <p>Choose a tertiary ability. Increase that ability by 1.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Leather Armor Proficiency</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>Gain proficiency with Leather Armor</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Hide Armor Proficiency</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Leather Armor Proficiency</p>
+        <p>Gain proficiency with Hide Armor</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Chain Armor Proficiency</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Hide Armor Proficiency</p>
+        <p>Gain proficiency with Chain Armor</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Scale Armor Proficiency</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Chain Armor Proficiency</p>
+        <p>Gain proficiency with Scale Armor</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Plate Armor Proficiency</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Scale Armor Proficiency</p>
+        <p>Gain proficiency with Plate Armor</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Light Shield Proficiency</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p>Gain proficiency with Light Shield</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Heavy Shield Proficiency</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Armor</p>
+        <p class="Feat-Requires">Light Shield Proficiency</p>
+        <p>Gain proficiency with Heavy Shield</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Larger than life</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Epic</p>
+        <p class="Feat-Requires">Level 21, Medium Size</p>
+        <p>In combat, you occupy space as a Large creature (2x2 squares). Your
+          reach with all melee and touch attacks is increased by 1. (Note: Your
+          actual height and size is not changed)</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Epic Specialization</h3>
+        <p class="Feat-Categories"> </p>
+        <p class="Feat-Keywords">Epic</p>
+        <p class="Feat-Requires">Level 21</p>
+        <p>Choose one of your feats with a limited feat category. You gain an
+          additional feat from that category.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Skill Training</h3>
+        <p class="Feat-Categories">Lesser Feat (Unlimited) </p>
+        <p class="Feat-Keywords">Skill, Ability</p>
+        <p>Choose a skill in which you are untrained. You gain training in that
+          skill.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Unnatural Ability</h3>
+        <p class="Feat-Categories">Lesser Feat </p>
+        <p class="Feat-Keywords">Ability</p>
+        <p>Choose up to two skills in which you are trained and have an Ability
+          Bonus lower than 3. Your Ability Bonus for these skills becomes 3.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Skill Focus</h3>
+        <p class="Feat-Categories">Lesser Feat (Unlimited) </p>
+        <p class="Feat-Keywords">Skill</p>
+        <p>Choose a trained skill. Automatically succeed in Easy and Normal
+          checks for that skill. You gain access to Very Hard checks for that
+          skill. Note: If you take multiple instances of this feat, you must
+          choose different skills each time.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Ritual Training</h3>
+        <p class="Feat-Categories">Lesser Feat </p>
+        <p class="Feat-Keywords">Ritual</p>
+        <p>Choose a Heroic Ritual. You learn that ritual. You can learn 2
+          additional Heroic Rituals through ritual scrolls.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Paragon Ritual Training</h3>
+        <p class="Feat-Categories">Lesser Feat </p>
+        <p class="Feat-Keywords">Ritual, Paragon</p>
+        <p class="Feat-Requires">Level 11, Ritual Training</p>
+        <p>Choose a Paragon Ritual. You learn that ritual. You can learn 2
+          additional Paragon Rituals through ritual scrolls.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Epic Ritual Training</h3>
+        <p class="Feat-Categories">Lesser Feat </p>
+        <p class="Feat-Keywords">Ritual, Epic</p>
+        <p class="Feat-Requires">Level 21, Paragon Ritual Training</p>
+        <p>Choose an Epic Ritual. You learn that ritual. You can learn 2
+          additional Epic Rituals through ritual scrolls.</p>
+      </div>
+      <div class="Feat">
+        <h3 class="Feat-Title">Linguist</h3>
+        <p class="Feat-Categories">Lesser Feat </p>
+        <p>Choose a language you don't know. You learn that language.</p>
+      </div>
+    </div>
+  </body>
+</html>
