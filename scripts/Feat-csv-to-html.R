@@ -25,5 +25,7 @@ feat.htm<-buildElementApply(feat.raw.df, feat.tag.pre, feat.tag.post, df.names=s
 write(feat.htm,feat.htm.file)
 
 
-feat.table.htm<-buildTableApply(feat.raw.table, df.names=setdiff(names(feat.raw.table),"Text"))
+feat.table.htm<-buildTableApply(feat.raw.table, 
+                                df.names=setdiff(names(feat.raw.table),"Text"),
+                                tableClass="Feat-table")
 write(feat.table.htm,feat.table.htm.file)

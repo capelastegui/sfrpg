@@ -16,12 +16,14 @@ buildElementApply <- function (df,pre,post, df.names=names(df))
 #tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
 
 
-buildTableApply <- function (df, df.names=names(df))
+buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
 {
   tmp<-ldply(df.names,df,.fun=function(n,df){buildElement(df[[n]],"<td>","</td>")})
   tmp<-laply(tmp,paste0, collapse="")
   tmp<-paste0("<tr>",tmp,"</tr>", "\n",collapse="")
-  tmp<-paste0("<table>",tmp,"</table>", "\n",collapse="")
+  tableTag<-"<table>"
+  if(!is.null(tableClass)) {tableTag<-paste0("<table class=",tableClass,">")}
+  tmp<-paste0(tableTag,tmp,"</table>", "\n",collapse="")
   #paste0(tmp,collapse="\r\n")
 }
 
