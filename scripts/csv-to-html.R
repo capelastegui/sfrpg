@@ -9,12 +9,8 @@ buildElementApply <- function (df,pre,post, df.names=names(df))
 {
   tmp<-ldply(df.names,df,pre,post,.fun=function(n,df,pre,post){buildElement(df[[n]],pre[[n]],post[[n]])})
   tmp<-laply(tmp,paste0, collapse="")
-  paste0(pre$Body,tmp,post$Body, "\n",collapse="")
-  #paste0(tmp,collapse="\r\n")
+  paste(pre$Body,tmp,post$Body, "\n",collapse="")
 }
-#TODO: change data frame from factors to characters
-#tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
-
 
 buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
 {
@@ -23,7 +19,6 @@ buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
   tmp<-paste0("<tr>",tmp,"</tr>", "\n",collapse="")
   tableTag<-"<table>"
   if(!is.null(tableClass)) {tableTag<-paste0("<table class=",tableClass,">")}
-  tmp<-paste0(tableTag,tmp,"</table>", "\n",collapse="")
-  #paste0(tmp,collapse="\r\n")
+  tmp<-paste(tableTag,tmp,"</table>", "\n",collapse="")
 }
 
