@@ -1,0 +1,58 @@
+Name,Role,HP,Ar,For,Ref,Will,OA,Init,Basic Attack,Standard Attack,Class Power,Class Trait,Class Skills
+Runner,Skirmisher,Mid,13,11,15,13,-2,0,"Melee, H vs AC
+Hit: D+F","Melee, H vs AC
+Hit: D+F, and dazed this turn.","Burst of Speed (Recharge 4+)
+Minor Action: Shift half your speed.","Runner's Momentum
+ +2 Speed.
+ +half F damage if moves 4 or more squares away from original position.",Athletics
+Flanker,Skirmisher,Mid,13,11,15,13,-2,0,"Melee, H vs AC
+Hit: D+ Half F","Melee, H vs AC
+Hit: D+ Half F, and you and an ally within 3 squares shift 1.","Flanking Maneuver
+Move Action - You and an ally within 3 squares shift 1.","Flanker's Sneakiness
+ +D damage with Combat Advantage",Acrobatics
+Terrifier,Controller,Mid,13,13,11,15,-2,-2,"Melee, H vs AC, Hit: D+Half F.","Ranged 7, H vs Will
+Hit: D+F, and dazed (save ends).","Area Burst 1, targets enemies, H vs Will
+Hit: D, and Slowed (save ends).","Lasting Terror
+-3 to enemy saves against your attacks.",Intimidate
+Trasher,Controller,Mid,13,13,11,15,-2,-2,"Melee, H vs AC, Hit: D+F, and push 1 and knock prone.","Close Burst 1, targets enemies, H vs Ref
+Hit: D+ Half F, and Slide 1.",,"Trasher's Aura
+Aura 1 - Difficult terrain for enemies, and enemies ending turn in aura take D damage.",Nature
+Hugger,Brute,Hi,11,15,11,13,0,-2,"Melee, H-2 vs AC
+Hit: D+F+Half F, and Grabbed.","Melee, targets Grabbed enemy, H-2 vs Ref
+Hit: 2D+F, and Restrained until end of next turn.",,"Cover Hug
+ +3 to all defenses while grabbing an enemy.",Athletics
+Pusher,Brute,Hi,11,15,11,13,0,-2,"Melee, H-2 vs AC
+Hit: D+F+Half F, and push 1.",,"Bowling Strike (Recharge 2+)
+Minor Action - Close burst 5, targets enemy pushed this turn, H vs For.
+Hit: Enemies adjacent to the target take D damage.",,Athletics
+Protector,Soldier,Mid,15,15,13,13,0,0,"Melee, H vs AC, Hit: F+D, and -2 hit until end of your next turn.",,"Protector's Reaction
+Reaction, Interrupt (enemy violates mark) - Melee, targets triggering enemy H vs Will
+Hit: F, and Weakened this turn.","Defender Aura
+Aura 1 - Enemies are marked",Insight
+Punisher,Soldier,Mid,15,15,13,13,0,0,"Melee, H vs AC, Hit: D+F, and Slowed (save ends).",,"Crippling Strike
+Recharge 4+
+Melee - Target slowed enemy - H vs For.
+Hit: 2D+F, and Immobilized (save ends).","Punisher's Aura
+Aura 1 - Enemies are marked. You can make opportunity attacks against enemies violating your mark.",Intimidate
+Blocker,Lurker,Low,13,13,15,11,-4,2,"Melee, H vs AC
+Hit: D+F",,"Blocker's Instinct
+Reaction (roll initiative): Use Total Defense.","Blocker's Riposte
+When using Total Defense, until end of next turn you are Slowed, gain Resist (All) and deal double damage.
+",Endurance
+Ambusher,Lurker,Low,13,13,15,11,-4,2,"Melee, H vs AC
+Hit: D+F","Melee, H vs Will
+Hit: D+Half F, and shift half your speed and make a Stealth check.","Quick Ambush
+Minor Action: Move 1 and make a Stealth check.","Ambusher's Cunning
++10 Stealth skill.
+If Hidden at the start of a turn, deal double damage that turn.",Stealth
+Bowman,Artillery,Low,11,11,13,13,-4,2,"Melee, H-2 vs AC
+Hit: D+Half F","Ranged 8/16, H vs AC
+Hit: D+F
+Miss: D","Bullseye (Recharge 6+)
+Ranged 8/16, H+4 vs AC
+Hit: 2D+F",,Perception
+Blaster,Artillery,Low,11,11,13,13,-4,2,"Melee, H-2 vs AC
+Hit: D+Half F","Ranged 10, H vs For
+Hit: D+F, and push 1","Volley
+Area 10 Burst 1, H vs Ref
+Hit: D+Half F",,Arcana

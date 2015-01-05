@@ -98,7 +98,7 @@ Focus: Tough Totem;Focus;Implement;Implement Proficiency with a Totem;"On implem
 Wind Robes;Defense Focus;Armor;;While wearing Cloth Armor, +1 AC, and +1 to all defenses against ranged attacks.;With Cloth, +1 AC, and +1 to all defenses vs ranged
 Elemental Robes;Defense Focus;Armor;;"When taking this feat, choose one of the following damage types: Fire, Cold, Lightning, Thunder, Acid.
 While wearing Cloth Armor, +1 AC, +1 Arcane skill, and Resist (chosen damage type).";With Cloth, +1 AC, +1 Arcane, Resist an elemental damage type.
-Divine Robes;Defense Focus;Armor;;"When taking this feat, choose one of the following damage types: Radiant, Necrotic.
+Holy Robes;Defense Focus;Armor;;"When taking this feat, choose one of the following damage types: Radiant, Necrotic.
 While wearing Cloth Armor, +1 AC,+1 Religion skill, and Resist (chosen damage type).";With Cloth, +1 AC, +1 Religion, Resist Radiant or Necrotic
 Mind Robes;Defense Focus;Armor;;"When taking this feat, choose one of the following damage types: Psychic, Force.
 While wearing Cloth Armor, +1 AC,+1 Insight skill, and Resist (chosen damage type).";With Cloth, +1 AC, +1 Insight, Resist Psychic or Force
@@ -197,6 +197,22 @@ Larger than life;;Epic;Level 21, Medium Size;"In combat, you occupy space as a L
 Your reach with all melee and touch attacks is increased by 1.
 (Note: Your actual height and size is not changed)";Increase size to Large, +1 reach.
 Epic Specialization;;Epic;Level 21;Choose one of your feats with a limited feat category. You gain an additional feat from that category.;Gain additional feat from a category you already have.
+Martial Prowess;Power Source;Martial;; +1 Fortitude, +1 Reflex, +2 Initiative;
+Divine Resolve;Power Source;Divine;; +1 Fortitude, +1 Will, +5 Surge value per tier;
+Arcane Preparation;Power Source;Arcane;; +1 Will, +1 Reflex, +2 to saves;
+Primal Growth;Power Source;Primal;;;
+Psionic Swiftness;Power Source;Psionic ;;;
+Shadow Slumber;Power Source;Shadow;;;
+;Power Source;Martial;;;
+;Power Source;Divine;;;
+;Power Source;Arcane;;;
+;Power Source;Primal;;;
+;Power Source;Psionic ;;;
+;Power Source;Shadow;;;
+;;;;;
+;;;;;
+;;;;;
+;;;;;
 Skill Training;Lesser Feat (Unlimited);Skill, Ability;;Choose a skill in which you are untrained. You gain training in that skill.;Gain training in a skill.
 Unnatural Ability;Lesser Feat;Ability;;Choose up to two skills in which you are trained and have an Ability Bonus lower than 3. Your Ability Bonus for these skills becomes 3.;Ability bonus for two trained skills becomes +3.
 Skill Focus;Lesser Feat (Unlimited);Skill;;"Choose a trained skill. 
