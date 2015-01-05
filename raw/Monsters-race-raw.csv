@@ -1,4 +1,4 @@
-Level,Name,Size,Type,Movement,H,F,D,HP Hi,HP Mid,HP Low,Resistances,Str,Con,Dex,Wis,Cha,Int,Race Power Name,Race Power,Race Trait Name,Race Trait,Race Skills
+Level,Name,Size,Type,Movement,H,F,D,HPHi,HPMid,HPLow,Resistances,Str,Con,Dex,Wis,Cha,Int,RacePowerName,RacePower,RaceTraitName,RaceTrait,RaceSkills
 1,Kobold,Small,Humanoid,6,5,5,1d8,30,25,20,,-1,0,2,0,1,0,Shifty,Minor Action: Shift 1,Mob Attack,"-1 hit.
 +3 hit with 2 or more allies adjacent to target.","Thievery, Bluff"
 1,Goblin,Small,Humanoid,6,5,5,1d8,30,25,20,,0,0,2,0,-1,1,Dirty Fight,"Reaction (missed by enemy) - Melee 1, targets triggering enemy, H vs Ref

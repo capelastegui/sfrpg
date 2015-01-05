@@ -1,0 +1,131 @@
+Name;Role;HP;Ar;For;Ref;Will;OA;Init;BasicAttack;StandardAttack;ClassPowerName;ClassPower;ClassTraitName;ClassTrait;ClassSkills
+"    <div class=""monsterClass""><br>
+      <br>
+      <table class=""monsterName fullwidth"">
+        <tbody>
+          <tr>
+            <td class=""title large"" colspan=""2"">";"
+          <tr>
+            <td class=""subtitle"">";"
+          <table class=""tableMonsterHP2"">
+        <tbody>
+          <tr>
+            <td><br>
+            </td>
+            <td class=""title"" rowspan=""3"">HP</td>
+          </tr>
+          <tr>
+            <td class=""subtitle"">";"
+      
+
+      <p> </p>
+      <table class=""monsterDef"">
+        <tbody>
+          <tr>
+            <td class=""title"" colspan=""4"">Defense Stats</td>
+          </tr>
+          <tr>
+            <td class=""subtitle"">Ar</td>
+            <td class=""subtitle"">For</td>
+            <td class=""subtitle"">Ref</td>
+            <td class=""subtitle"">Will</td>
+          </tr>
+          <tr>
+            <td>";"
+            <td>";"
+            <td>";"
+            <td>";"
+   <table class=""monsterMisc"">
+        <tbody>
+          <tr>
+            <td id=""t1"" class=""title"" colspan=""2"">Misc. Stats</td>
+          </tr>
+          <tr>
+            <td class=""subtitle"">OA</td>
+            <td class=""subtitle"">Init</td>
+          </tr>
+          <tr>
+            <td>";"
+            <td>";"
+      <div class=""space2""></div>
+      <div class=""space2""></div>
+      <table class=""fullwidth"">
+        <tbody>
+          <tr>
+            <td class=""title"" colspan=""3"">Class Attacks<br>
+            </td>
+          </tr>
+          <tr>
+            <td class=""subtitle"">Melee Basic<br>
+            </td>
+            <td class=""subtitle"">Standard Attack<br>
+            </td>
+          </tr>
+          <tr>
+            <td class=""attackText"">";"
+            <td class=""attackText"">";"
+      <br>
+   
+      <table class=""fullwidth"">
+        <tbody>
+          <tr>
+            <td class=""title"" colspan=""2"">Class Power</td>
+          </tr>
+          <tr>
+            <td class=""subtitle"">";"
+          <tr>
+            <td class=""attackText"">";"
+        <table class=""fullwidth"">
+        <tbody>
+          <tr>
+            <td class=""title"" colspan=""2"">Class Trait</td>
+          </tr>
+          <tr>
+            <td class=""subtitle"">";"
+          <tr>
+            <td>";"
+    <tr>
+            <td class=""subtitle"">Class Skills</td>
+          </tr>
+          <tr>
+            <td class=""attackText"">"
+"</td>
+          </tr>";"</td>
+          </tr>
+        </tbody>
+      </table>";"</td>
+          </tr>
+          <tr>
+            <td><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>";<br>;"<br>
+            </td>";"<br>
+            </td>";"<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>";"<br>
+            </td>";"<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>";</td>;"<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>";"</td>
+          </tr>";"</td>
+          </tr>
+        </tbody>
+      </table>";"</td>
+          </tr>";"<br>
+            </td>
+          </tr>";"<br>
+            </td></tr>
+        </tbody>
+      </table>
+      
+    </div>"
+;;;            </td>;;;;;;;;;;;;

@@ -1,0 +1,70 @@
+basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
+
+source(file.path(basedir,"scripts","csv-to-html.R"))
+
+monster.race.raw <- file.path(basedir,"raw","Monsters-race-raw.csv")
+monster.race.tag <- file.path(basedir,"raw","Monsters-race-tags.csv")
+monster.class.raw <- file.path(basedir,"raw","Monsters-class-raw.csv")
+monster.class.tag <- file.path(basedir,"raw","Monsters-class-tags.csv")
+monster.css.file <- file.path(basedir,"raw","SFRPG-monsters.css")
+monster.race.htm.file <- file.path(basedir,"html","Monsters.race.html")
+monster.class.htm.file <- file.path(basedir,"html","Monsters.class.html")
+monster.htm.file <- file.path(basedir,"html","Monsters.html")
+
+ 
+monster.race.df <- read.csv(monster.race.raw, sep=",")
+monster.race.tag.df <- read.csv(monster.race.tag, sep=";")
+monster.race.tag.pre<- monster.race.tag.df[1,]
+monster.race.tag.post<-monster.race.tag.df[2,]
+
+monster.class.df <- read.csv(monster.class.raw, sep=",")
+monster.class.tag.df <- read.csv(monster.class.tag, sep=";")
+monster.class.tag.pre<- monster.class.tag.df[1,]
+monster.class.tag.post<- monster.class.tag.df[2,]
+
+monster.css <- readChar(monster.css.file, file.info(monster.css.file)$size)
+
+#quickStr(feat.raw.df)
+#paste(feat.tag.pre$Name, feat.raw.df$Name[1], feat.tag.post$Name, sep="")
+
+#Use these lines to test scripts
+#tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
+monster.race.df<-monster.race.df[1:40,]
+#monster.class.df<-monster.class.df[1,]
+
+monster.race.htm<-buildElementApply(monster.race.df, monster.race.tag.pre, monster.race.tag.post, df.names=names(monster.race.df))
+monster.class.htm<-buildElementApply(monster.class.df, monster.class.tag.pre, monster.class.tag.post, df.names=names(monster.class.df))
+
+#write(feat.htm,feat.htm.file)
+
+monster.race.full <- paste("<!DOCTYPE html>",
+                      "<html>\r\n<head>\r\n<title>Monster stats</title>\r\n<style type=\"text/css\">",
+                      monster.css,
+                      "</style></head>\r\n<body>",
+                      monster.race.htm,
+                      "</body></html>",
+                      sep="\r\n",
+                      collapse="<p><br></p>")
+
+monster.class.full <- paste("<!DOCTYPE html>",
+                      "<html>\r\n<head>\r\n<title>Monster stats</title>\r\n<style type=\"text/css\">",
+                      monster.css,
+                      "</style></head>\r\n<body>",
+                      monster.class.htm,
+                      "</body></html>",
+                      sep="\r\n",
+                      collapse="<p><br></p>")
+
+monster.full <- paste("<!DOCTYPE html>",
+                      "<html>\r\n<head>\r\n<title>Monster stats</title>\r\n<style type=\"text/css\">",
+                      monster.css,
+                      "</style></head>\r\n<body>",
+                      monster.race.htm,
+                      monster.class.htm,
+                      "</body></html>",
+                      sep="\r\n",
+                      collapse="<p><br></p>")
+
+writeChar(monster.full,monster.htm.file)
+writeChar(monster.race.full,monster.race.htm.file)
+writeChar(monster.class.full,monster.class.htm.file)

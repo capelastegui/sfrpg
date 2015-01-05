@@ -1,0 +1,165 @@
+table, td, th {  
+  border: 1px solid black;
+  border-collapse: collapse;  
+  border-color: #003300;  
+  text-align: center;
+}
+
+
+
+td.title {  
+  font-weight: bold;  
+  background-color: #003300;  
+  color: white;  
+
+}
+
+td.subtitle {  
+  background-color: #73c173;  
+  font-weight: bold;
+height: 12px;  
+}
+
+
+.attackText {  
+  text-align: left;  
+  vertical-align: 0px;
+}
+
+
+
+.large {  
+  font-size: 14px;  
+ }
+ 
+ .huge {  
+  font-size: 18px;
+}
+
+
+div.monsterClass, div.monsterRace {  
+  font-family: Verdana;  
+  font-size: 9px;
+  width: 280px;  
+  height: 305px;  
+  position: relative;  
+  background-color: #dbffdb;
+}
+
+div .fullwidth {
+width: 277px;
+    float: left;
+}
+
+div .namewidth {
+width: 230px;
+  left: 47px;
+}
+
+div .monsterLevel {  
+  position: absolute; 
+  left: 0px;  
+  top: 0px;  
+  width: 40px;
+}
+
+div .monsterName {  
+  position: absolute;  
+  top: 0px;  
+
+}
+
+
+div .monsterMov {  
+  position: absolute;  
+  top: 50px;  
+  left: 2px;
+  width: 100px;
+  height: 36px;
+}
+
+div .tableMonsterAttack {  
+  position: absolute;  
+  left: 105px;  
+  top: 40px;  
+  width: 99px; 
+}
+
+
+div .tableMonsterHP {  
+  position: absolute;  
+  top: 40px;  
+  left: 207px;  
+  width: 70px;
+}
+
+div .monsterResist {  
+  position: absolute;  
+  top: 89px;  
+  left: 2px;
+  width: 100px;
+  height: 46px;
+}
+
+div .monsterAbilities {  
+  position: absolute;  
+  top: 89px;  
+  left: 105px;
+  width: 172px;
+}
+
+div .space1 
+{
+width: 275px;
+height: 117px;
+    float: left;
+}
+
+div .tableMonsterHP2 {  
+
+  position: absolute;  
+  top: 40px;  
+  width: 57px;
+  height: 44px;
+}
+
+div .monsterDef {  
+  position: absolute;  
+  left: 60px;  
+  top: 40px;
+  width: 145px;
+
+}
+
+div .monsterMisc {  
+  position: absolute;  
+  left: 208px;  
+  top: 40px;
+  width: 69px; 
+  height: 46px;
+}
+
+div .space2 
+{
+width: 275px;
+height: 28px;
+    float: left;
+}
+
+
+
+div .classAttacks {  
+  top: 90px;  
+  position: absolute;
+}
+
+div .classPower {  
+  position: absolute;  
+  top: 162px;
+}
+
+div .classTrait {  
+  position: absolute;  
+  top: 222px;  
+
+}

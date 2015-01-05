@@ -1,0 +1,6792 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Monster stats</title>
+<style type="text/css">
+table, td, th {  
+  border: 1px solid black;
+  border-collapse: collapse;  
+  border-color: #003300;  
+  text-align: center;
+}
+
+
+
+td.title {  
+  font-weight: bold;  
+  background-color: #003300;  
+  color: white;  
+
+}
+
+td.subtitle {  
+  background-color: #73c173;  
+  font-weight: bold;
+height: 12px;  
+}
+
+
+.attackText {  
+  text-align: left;  
+  vertical-align: 0px;
+}
+
+
+
+.large {  
+  font-size: 14px;  
+ }
+ 
+ .huge {  
+  font-size: 18px;
+}
+
+
+div.monsterClass, div.monsterRace {  
+  font-family: Verdana;  
+  font-size: 9px;
+  width: 280px;  
+  height: 305px;  
+  position: relative;  
+  background-color: #dbffdb;
+}
+
+div .fullwidth {
+width: 277px;
+    float: left;
+}
+
+div .namewidth {
+width: 230px;
+  left: 47px;
+}
+
+div .monsterLevel {  
+  position: absolute; 
+  left: 0px;  
+  top: 0px;  
+  width: 40px;
+}
+
+div .monsterName {  
+  position: absolute;  
+  top: 0px;  
+
+}
+
+
+div .monsterMov {  
+  position: absolute;  
+  top: 50px;  
+  left: 2px;
+  width: 100px;
+  height: 36px;
+}
+
+div .tableMonsterAttack {  
+  position: absolute;  
+  left: 105px;  
+  top: 40px;  
+  width: 99px; 
+}
+
+
+div .tableMonsterHP {  
+  position: absolute;  
+  top: 40px;  
+  left: 207px;  
+  width: 70px;
+}
+
+div .monsterResist {  
+  position: absolute;  
+  top: 89px;  
+  left: 2px;
+  width: 100px;
+  height: 46px;
+}
+
+div .monsterAbilities {  
+  position: absolute;  
+  top: 89px;  
+  left: 105px;
+  width: 172px;
+}
+
+div .space1 
+{
+width: 275px;
+height: 117px;
+    float: left;
+}
+
+div .tableMonsterHP2 {  
+
+  position: absolute;  
+  top: 40px;  
+  width: 57px;
+  height: 44px;
+}
+
+div .monsterDef {  
+  position: absolute;  
+  left: 60px;  
+  top: 40px;
+  width: 145px;
+
+}
+
+div .monsterMisc {  
+  position: absolute;  
+  left: 208px;  
+  top: 40px;
+  width: 69px; 
+  height: 46px;
+}
+
+div .space2 
+{
+width: 275px;
+height: 28px;
+    float: left;
+}
+
+
+
+div .classAttacks {  
+  top: 90px;  
+  position: absolute;
+}
+
+div .classPower {  
+  position: absolute;  
+  top: 162px;
+}
+
+div .classTrait {  
+  position: absolute;  
+  top: 222px;  
+
+}
+</style></head>
+<body>
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">1</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Kobold</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Small
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>25</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>-1          </td>
+  
+            <td>0            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Shifty</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action: Shift 1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Mob Attack</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-1 hit.
++3 hit with 2 or more allies adjacent to target.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Thievery, Bluff</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">1</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Goblin</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Small
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>25</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Dirty Fight</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction (missed by enemy) - Melee 1, targets triggering enemy, H vs Ref
+Hit: Push 1 and knock Prone.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Sneaky</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-1 hit without Combat Advantabe.
++1 hit with Combat Advantage.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Stealth, Acrobatics</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">1</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Mud Dwarf</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Small
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >5          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>25</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>2            </td>
+
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Pathetic Plea</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Close Burst 5, creature hit this turn, H vs Will
+Hit: Marked by an ally you can see until end of next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Stinky</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Aura 1 - You and enemies in aura take -1 hit.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Bluff, Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">1</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Zombie</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid, Undead</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >4          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>25</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>20</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>2            </td>
+
+            <td>-1            </td>
+
+            <td>-2            </td>
+
+            <td>-2            </td>
+
+
+            <td>-2            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Bite (Recharge 5+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Melee 1, H vs Ref
+Hit: F, and Grabbed.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Wall of Flesh</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Start encounter with F THP
++1 Crit Range to enemy attacks</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">2</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Halfling</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Small
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>33</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>27</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>22</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>-1          </td>
+  
+            <td>0            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Luck (Recharge 6+)
+</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction, Interrupt (is  hit)
+Reroll the attack, with -2 Crit Chance.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Evasion</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-4 hit with Opportunity Attacks
++4 to defenses vs Opportunity Attacks</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Stealth, Thievery</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">2</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Gnome</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Small
+Humanoid, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >5          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>33</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>27</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>22</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>-1          </td>
+  
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>1            </td>
+
+
+            <td>2            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Minor Illusion (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Close Burst 5, square in burst
+Summon a medium Illusionary Soldier with 1 HP, no movement, and no attack.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Gnome Cautiousness</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-3 Initiative
+On Initiative roll, Invisible until end of first round or until attack.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Arcana, Bluff</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">2</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Hobgoblin</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>33</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>27</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>22</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Resiliency (Recharge 5+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action: Roll a saving throw.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Phalanx</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +2 AC while adjacent to an ally</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Intimidate, History</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">2</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Skeleton</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid, Undead</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >5          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>5</td>
+
+            <td>1d10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>33</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>27</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>22</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Resist Poison
+Vulnerable Radiant</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>0            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Crumble</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction (Take damage and bloodied) - You are knocked Prone            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Bag of Bones</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +2 AC vs Ranged.
+Resist (All) while Prone.
+Can't Lie Down.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">3</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Human</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>36</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>24</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>1            </td>
+
+
+            <td>1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Resolve (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - +5 to hit on next attack or save.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Adaptable</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +1 to For, Ref, Will</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Streetwise, Diplomacy</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">3</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Orc</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>36</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>24</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>2          </td>
+  
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Furious Charge (Recharge 5+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Charge with +2 hit. On hit, knock Prone.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Fury</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +F Miss Damage while Bloodied</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Intimidate, Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">3</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Deep One</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid, Aquatic</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6
+Swim 6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d10</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>36</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>30</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>24</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Resist Radiant
+Vulnerable Psychic</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>1            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Gurgle (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Close Burst 5, targets an enemy hit this turn, H vs Will
+Hit: Dazed until end of next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Slippery
+</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">When hit by enemy, enemy must push 1 you.
+</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Acrobatics, Dungeoneering</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">4</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Gnoll</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>39</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>32</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>26</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>2          </td>
+  
+            <td>0            </td>
+
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>-1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Feed (Recharge 5+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Melee, creature hit this turn, H+2 vs Ref
+Hit: Gain F THP.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Mad Dog</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +Half F damage against Marking enemies
+When hit by enemy, Marked by that enemy until end of next turn.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Intimidate, Athletics</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">4</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Elf</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >7          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>39</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>32</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>26</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Vulnerable Poison</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>-1            </td>
+
+            <td>2            </td>
+
+            <td>1            </td>
+
+            <td>0            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Precision (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction, Interrupt (misses an attack)
+Reroll the attack.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Wild Step</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Ignore Difficult Terrain.
+Cannot be Slowed.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Nature, Perception</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">4</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Dwarf</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>39</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>32</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>26</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Resist Poison</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>2            </td>
+
+            <td>-1            </td>
+
+            <td>1            </td>
+
+            <td>0            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Defensive Stance</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Move Action (only while Bloodied) - +3 to all defenses until end of next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Stand Firm</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reduce Forced Movement by 1.
+When knocked prone, save to avoid.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Endurance, Dungeoneering</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">4</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Lizardfolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >5          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>39</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>32</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>26</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>2            </td>
+
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Poisoned Strike (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Close Burst 10 - targets an enemy hit this turn, H vs For
+Hit: Ongoing 5 poison and slowed (save ends both)            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Lizard Metabolism</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> -2 hit with Opportunity Attacks
+Regeneration (Half F).</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Nature, Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">4</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Ghoul</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>6</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>39</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>32</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>26</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>1            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Paralyzing Touch (Recharge 3+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Melee, creature hit this turn, H vs For
+Hit: Slowed (save ends) or, if Slowed, Immobilized (save ends).            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Prey on the Weak</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Combat Advantage vs Slowed or Immobilized creatures.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Perception</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">5</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Doppelganger</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>35</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>28</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>-1          </td>
+  
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>1            </td>
+
+            <td>2            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Copycat (Recharge 3+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Melee, creature hit this turn, H vs Will
+Hit: Until you attack, allies of the target can't attack you until they pass a Hard Insight check.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Role Swap</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">When hitting adjacent enemy with Advantage, you may slide 2 you and the enemy to switch spaces.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Insight, Bluff</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">5</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Wildling</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Medium
+Humanoid, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>35</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>28</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>2            </td>
+
+            <td>1            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Rampage (Recharge 4+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Special: Must have hit an enemy this turn.
+Minor Action - Melee, targets enemy not hit this turn, H vs Ref
+Hit: F            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Rage</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">When Bloodied, +2 hit and -2 defenses.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Nature, Heal</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">5</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Ogre</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Large
+Humanoid, Giant</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>35</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>28</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>2          </td>
+  
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>-1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Mighty Blow</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action: Melee 2, target an enemy hit this turn, H vs For
+Hit: Push 3.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Thick Skull</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-1 Crit Range.
+-2 Crit Range to enemy attacks.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Athletics, Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">5</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Darkling</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Shadow</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>35</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>28</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>1            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Fade Away (Encounter)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction (becomes Bloodied) - Invisible until end of the attacker's next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Evasion</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-4 hit with Opportunity Attacks
++4 to defenses vs Opportunity Attacks</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Stealth, Thievery</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">5</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Pixie</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Tiny
+Humanoid, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6
+Fly 6 (H1)          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>35</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>28</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>-1          </td>
+  
+            <td>0            </td>
+
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>2            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Eyebite (Recharge 3+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Ranged 10, H vs Will
+Hit: You are Invisible to target until end of next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Wee Fighter</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-1 hit.
++1 defenses.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Arcana, Bluff</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">5</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Vampire Spawn</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Undead</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>1d12</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>35</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>28</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>1            </td>
+
+            <td>2            </td>
+
+            <td>-1            </td>
+
+            <td>0            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Grab</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Melee, target enemy hit this turn, H vs Ref
+Hit: Grabbed.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Blood Thirst</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">After damaging an enemy, if it is bloodied, gain F Shield Points</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Intimidate, Athletics</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">6</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Demonfolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Demon</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>2d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>45</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>37</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Resist Fire</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+            <td>2            </td>
+
+
+            <td>1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Fiery Vengeance (Recharge 5+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction (are hit) - Close Burst 5, targets triggering enemy, H+4 vs Ref
+Hit: D Fire.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Demonic Ferocity</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +1 hit while Bloodied.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Arcana, Intimidate</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">6</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Dragonfolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Dragon</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>2d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>45</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>37</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>2          </td>
+  
+            <td>0            </td>
+
+            <td>-1            </td>
+
+            <td>0            </td>
+
+            <td>1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Dragon Breath (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Close Burst 3, 5 vs Ref
+Hit: D Fire.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Draconic Courage</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +1 to defenses while Bloodied.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">History, Intimidate</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">6</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Shadowfolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Shadow</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>7</td>
+
+            <td>2d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>45</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>37</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>30</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>-1            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Vanish (Recharge 5+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Move Action - Insubstantial until end of next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Born in Shadow</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +1 defenses when in Concealment, Total Concealment
++1 hit vs enemies with Concealment, Total Concealment</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Stealth, Perception</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">7</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Dark Dwarf</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>8</td>
+
+            <td>2d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>48</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>40</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>32</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>2            </td>
+
+            <td>-1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Fire Shield</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Move Action (only while Bloodied) - Enemies hitting you take F Fire damage.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Stand Firm</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reduce Forced Movement by 1.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Endurance, Dungeoneering</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">7</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Satyr</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>8</td>
+
+            <td>2d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>48</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>40</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>32</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Vulnerable Poison</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>1            </td>
+
+            <td>-1            </td>
+
+            <td>2            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Luring Song</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Close Burst 10, H vs Will
+Hit: Pull 1.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Aura of Attraction</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Aura 1 - Exiting the aura costs 1 extra movement for enemies.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Nature, Bluff</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">7</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Minotaur</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>8</td>
+
+            <td>2d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>48</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>40</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>32</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>2          </td>
+  
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Gore</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Charge with +1 hit. On hit, push 1.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Blood Craze</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-1 hit vs non-Bloodied enemies.
++2 hit vs Bloodied enemies.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Athletics, Intimidate</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">7</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Black Lizardfolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>8</td>
+
+            <td>2d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>48</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>40</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>32</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>-1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Devour (Recharge 4+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Melee, target enemy hit this turn, H-2 vs Ref
+Hit: F, and Grabbed.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Lizard Metabolism</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-3 hit with Opportunity Attacks
+Regeneration +Half F.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Endurance, Nature</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">8</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Golemfolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Construct</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>8</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>51</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>2            </td>
+
+            <td>-1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Withstand (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action (only while Bloodied) - Resist (all) until end of next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Ward</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +3 to saves.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Endurance, Arcana</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">8</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Dryad</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Plant, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>8</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>51</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Vulnerable Fire, Poison</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>-1          </td>
+  
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>2            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Charming Song</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Close Burst 10, H vs Will
+Hit: -2 hit until end of next turn.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Barkskin</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> Resist All (missed attacks)</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Arcana, Nature</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">8</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Black Orc</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>8</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>51</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>42</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>34</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>2          </td>
+  
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Power Attack</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - On next attack, -4 hit and +5 damage.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Fury</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +F Miss Damage while Bloodied</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Intimidate, Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">9</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Snakefolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>9</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>54</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>45</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>36</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+
+            <td>1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Poison Spit (Recharge 3+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action Attack - Close Burst 5, creature hit this turn, H vs For.
+Hit: The target is Slowed (save ends)            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Master Poisoner</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> +F damage vs Slowed enemies.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Bluff, Thievery</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">9</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Troll</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Giant</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>9</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>54</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>45</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>36</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Vulnerable Fire, Acid</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>-2            </td>
+
+            <td>-2            </td>
+
+
+            <td>-2            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Savage Blow (Recharge 5+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action - Melee, target enemy hit this turn, H vs Ar.
+Hit: D.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Troll Regeneration</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> Regeneration +F
+Vulnerable (Fire, Acid)
+Damage Trigger (Fire, Acid): Can't regenerate next turn.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Athletics, Endurance</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">9</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">High Elf</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>9</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>54</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>45</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>36</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Vulnerable Poison
+Resist Psychic</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>-1            </td>
+
+            <td>1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>2            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Precision (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction, Interrupt (misses an attack)
+Reroll the attack.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Arcane Gate</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> When shifting, teleport that many squares +1 instead.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Arcana, Religion</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">10</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Oni</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Giant</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6
+Fly 6 (H2)          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>9</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>57</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>47</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>38</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>0            </td>
+
+            <td>0            </td>
+
+            <td>-1            </td>
+
+            <td>0            </td>
+
+
+            <td>2            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Mighty Blow</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action: Melee 2, target an enemy hit this turn, H vs For
+Hit: Push 3.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Shroud of Shadows.</td>
+          </tr>
+
+          <tr>
+            <td class="attackText"> -1 Hit
+On Initiative roll, Invisible until end of first round or until attack.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Intimidate, Arcana</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">10</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Vampire  </td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Undead</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>9</td>
+
+            <td>2d8</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>57</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>47</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>38</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>1            </td>
+
+            <td>-1            </td>
+
+            <td>2            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Dominating Gaze (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Close Burst 5, targets enemy in burst, H vs Will.
+Hit: Dominated (save ends)            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Blood Thirst</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">After damaging an enemy, if it is bloodied, gain F Shield Points</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Intimidate, History</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">11</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Winged Kobold</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Dragon</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >6
+Fly 6 (H2)          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>10</td>
+
+            <td>3d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>60</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>50</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>40</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> </td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>2            </td>
+
+            <td>0            </td>
+
+            <td>1            </td>
+
+
+            <td>-1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Shifty</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Minor Action: Shift 1            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Reborn in Flame</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">-1 hit.
++3 to all defenses vs Burst, Blast.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Thievery, Bluff</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">11</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Treefolk</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Plant, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>10</td>
+
+            <td>3d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>60</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>50</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>40</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Vulnerable Fire</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>1          </td>
+  
+            <td>2            </td>
+
+            <td>-1            </td>
+
+            <td>0            </td>
+
+            <td>0            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle"></td>
+          </tr>
+
+          <tr>
+            <td class="attackText">            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle"></td>
+          </tr>
+
+          <tr>
+            <td class="attackText"></td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Nature, History</td>
+          </tr>
+        </tbody>
+      </table></div>  
+ <div class="monsterRace">
+ 
+       <table class="monsterLevel">
+      <tbody>
+        <tr>
+          <td class="title large" colspan="2">Level</td>
+        </tr>
+        <tr>
+          <td class="subtitle huge">11</td>
+        </tr>
+      </tbody>
+    </table>
+
+      <table class="monsterName namewidth">
+        <tbody>
+          <tr>
+            <td class="title large" colspan="2">Dark Elf</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">
+Humanoid, Fey</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="monsterMov" >
+        <tbody>
+        <tr>
+          <td class="subtitle">Movement</td>
+        </tr>
+        <tr>
+          <td >          </td>
+        </tr>
+      </tbody>
+ 
+      </table>
+
+   
+      <table class="tableMonsterAttack" style="width: 99px;" border="1">
+        <tbody>
+          <tr>
+            <td class="title" style="width: 155.65px; justify-content: center;"
+
+              colspan="3">Attack Stats</td>
+          </tr>
+          <tr>
+            <td class="subtitle">H</td>
+            <td class="subtitle">F</td>
+            <td class="subtitle">D</td>
+          </tr>
+          <tr>
+            <td>5</td>
+
+            <td>10</td>
+
+            <td>3d6</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table class="tableMonsterHP" >
+        <tbody>
+          <tr>
+            <td class="title" rowspan="3">HP</td>
+            <td class="subtitle">Hi</td>
+            <td>60</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Mid</td>
+            <td>50</td>
+          </tr>
+
+          <tr>
+            <td class="subtitle">Low</td>
+            <td>40</td>
+          </tr>
+        </tbody>
+      </table>
+
+
+       <table class="monsterResist" >
+        <tbody>
+        <tr>
+          <td class="subtitle" >Resistances</td>
+        </tr>
+        <tr>
+          <td class="attackText"> Vulnerable Poison</td>
+        </tr>
+      </tbody>
+      </table>
+
+         <table class="monsterAbilities">
+        <tbody>
+          <tr>
+            <td class="title" colspan="6">Abilities</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Str</td>
+            <td class="subtitle">For</td>
+            <td class="subtitle">Dex</td>
+            <td class="subtitle">Wis</td>
+            <td class="subtitle">Cha</td>
+            <td class="subtitle">Int</td>
+          </tr>
+          <tr>
+            <td>0          </td>
+  
+            <td>0            </td>
+
+            <td>1            </td>
+
+            <td>-1            </td>
+
+            <td>2            </td>
+
+
+            <td>0            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <p><br></p>
+   <div class="space1"></div>
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Power</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Precision (Recharge 6+)</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">Reaction, Interrupt (misses an attack)
+Reroll the attack.            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><br></p>
+
+      <table class="fullwidth" >
+        <tbody>
+          <tr>
+            <td class="title" colspan="2">Race Trait</td>
+          </tr>
+          <tr>
+            <td class="subtitle">Poisoned Weapons</td>
+          </tr>
+
+          <tr>
+            <td class="attackText">On a hit with Combat Advantage, target is Slowed until end of next turn.</td>
+          </tr>
+
+    <tr>
+            <td class="subtitle">Race Skills</td>
+          </tr>
+          <tr>
+            <td class="attackText">Perception, Dungeoneering</td>
+          </tr>
+        </tbody>
+      </table></div>  
+
+</body></html> 
