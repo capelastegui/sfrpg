@@ -1,4 +1,4 @@
-Level;Name;Size;Type;Movement;H;F;D;HPHi;HPMid;HPLow;Resistances;Str;Con;Dex;Wis;Cha;Int;RacePowerName;RacePower;RaceTraitName;RaceTrait;RaceSkills
+Level;Name;Size;Type;Movement;H;D;F;HPHi;HPMid;HPLow;Resistances;Str;Con;Dex;Wis;Cha;Int;RacePowerName;RacePower;RaceTraitName;RaceTrait;RaceSkills
 "<div class=""monsterRace"">
  
        <table class=""monsterLevel"">
@@ -31,8 +31,8 @@ Level;Name;Size;Type;Movement;H;F;D;HPHi;HPMid;HPLow;Resistances;Str;Con;Dex;Wis
           </tr>
           <tr>
             <td class=""subtitle"">H</td>
-            <td class=""subtitle"">F</td>
             <td class=""subtitle"">D</td>
+            <td class=""subtitle"">F</td>
           </tr>
           <tr>
             <td>";"

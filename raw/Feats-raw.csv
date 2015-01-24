@@ -125,7 +125,7 @@ Strong Armor;Defense Focus;Armor;Scale Armor Proficiency;+1 AC, and your Armor P
 Toughness;Toughness;;;+5 HP per tier.;+5 HP per tier.
 Surging Toughness;Toughness;;;+3 HP per tier, and +3 Surge Value per tier.;+3 HP per tier, and +3 Surge Value per tier.
 Undying Toughness;Toughness;;;+3 HP per tier, and +3 to Death Saving Throws.;+3 HP per tier, and +3 to Death Saving Throws.
-Toughness in Numbers;Toughness;;;+3 HP per tier, and +5 HP per tier to Animal Companions, Familiars, and Summoned Creatures;
+Toughness in Numbers;Toughness;;;+3 HP per tier, and +5 HP per tier to Animal Companions, Familiars, and Summoned Creatures; +3 HP per tier, and +5 HP per tier to pets.
 Taunting Mark;Defender Mark;Role;Defender role;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
 Deadly Mark;Defender Mark;Role;Defender role;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
 Meat Shield;Defender Mark;Role;Defender role;Allies adjacent to you gain Cover, and Resist All (Burst or Blast).;Adjacent allies gain cover, resist (burst, blast)
@@ -183,9 +183,8 @@ Fast Healing;Leader Maneuver;Role;Leader role;"When you use a Healing power, cre
 When you grant an action to an ally, any movement or shift in that action is increased by 1.
 When you grant forced movement to an ally, the forced movement is increased by 1.";Healing grants +3 Movement Speed. On actions granted to allies, +1 Movement Speed and +1 Shift. Forced movement to allies increased by 1.
 Rallying Cry;Leader Maneuver;Role;Leader role;When rolling for Initiative, allies that can see you gain +1 to all defenses until the end of the first combat round, and +1 to Initiative.;Allies gain +1 Initiative, +1 to defenses on first combat round.
-Martial Weapon Training;;Weapon;;Gain Training in all Simple and One-Hand Martial weapons.;
-Superior Weapon Training;;Weapon;Proficiency with a martial weapon;Gain Training in all Two-Hand Martial weapons;
-Paragon Ability;;Ability;Level 11;Choose a tertiary ability. Increase that ability by 1.;Increase a tertiary ability by 1.
+Martial Weapon Training;;Weapon;;Gain Training in all Simple and One-Hand Martial weapons.;Training in Simple and One-Hand Martial weapons.
+Superior Weapon Training;;Weapon;Proficiency with a martial weapon;Gain Training in all Two-Hand Martial weapons;Training in all Two-Hand Martial weapons
 Leather Armor Proficiency;;Armor;;Gain proficiency with Leather Armor;Proficiency with Leather
 Hide Armor Proficiency;;Armor;Leather Armor Proficiency;Gain proficiency with Hide Armor;Proficiency with Hide
 Chain Armor Proficiency;;Armor;Hide Armor Proficiency;Gain proficiency with Chain Armor;Proficiency with Chain
@@ -193,36 +192,43 @@ Scale Armor Proficiency;;Armor;Chain Armor Proficiency;Gain proficiency with Sca
 Plate Armor Proficiency;;Armor;Scale Armor Proficiency;Gain proficiency with Plate Armor;Proficiency with Plate
 Light Shield Proficiency;;Armor;;Gain proficiency with Light Shield;Proficiency with Light Shield
 Heavy Shield Proficiency;;Armor;Light Shield Proficiency;Gain proficiency with Heavy Shield;Proficiency with Heavy Shield
+Paragon Ability;;Paragon, Ability;Level 11;Choose a Tertiary ability. Gain +1 to that ability and to your Weak ability.;Increase a tertiary ability by 1.
+Larger than life;;Epic;Level 21, Medium Size;"In combat, you occupy space as a Large creature (2x2 squares).
+Your reach with all melee and touch attacks is increased by 1.
+(Note: Your actual height and size is not changed)";Increase size to Large, +1 reach.
+Epic Perfection;;Epic, Ability;Level 21; Gain +1 to your Tertiary and Weak abilities.;Increase size to Large, +1 reach.
 Larger than life;;Epic;Level 21, Medium Size;"In combat, you occupy space as a Large creature (2x2 squares).
 Your reach with all melee and touch attacks is increased by 1.
 (Note: Your actual height and size is not changed)";Increase size to Large, +1 reach.
 Epic Specialization;;Epic;Level 21;Choose one of your feats with a limited feat category. You gain an additional feat from that category.;Gain additional feat from a category you already have.
-Martial Prowess;Power Source;Martial;; +1 Fortitude, +1 Reflex, +2 Initiative;
-Divine Resolve;Power Source;Divine;; +1 Fortitude, +1 Will, +5 Surge value per tier;
-Arcane Preparation;Power Source;Arcane;; +1 Will, +1 Reflex, +2 to saves;
-Primal Growth;Power Source;Primal;;;
-Psionic Swiftness;Power Source;Psionic ;;;
-Shadow Slumber;Power Source;Shadow;;;
-;Power Source;Martial;;;
-;Power Source;Divine;;;
-;Power Source;Arcane;;;
-;Power Source;Primal;;;
-;Power Source;Psionic ;;;
-;Power Source;Shadow;;;
+Martial Prowess;Power Source;Martial;Martial power source; +1 Fortitude, +1 Reflex, +3 Initiative; +1 Fortitude, +1 Reflex, +3 Initiative
+Divine Resolve;Power Source;Divine;Divine power source; +1 Fortitude, +1 Will, +5 Surge value per tier; +1 Fortitude, +1 Will, +5 Surge value per tier
+Arcane Preparation;Power Source;Arcane;Arcane power source; +1 Will, +1 Reflex, +2 to saves; +1 Will, +1 Reflex, +2 to saves
+Primal Growth;Power Source;Primal;Primal power source; +2 Fortitude, +2 Surges; +2 Fortitude, +2 Surges
+Psionic Swiftness;Power Source;Psionic ;Psionic power source; +2 Will, +1 Movement Speed; +2 Will, +1 Movement Speed
+Shadow Slumber;Power Source;Shadow;Shadow power source; +2 Reflex, +5 Death Saves; +2 Reflex, +5 Death Saves
+Martial Grit;Power Source;Martial;Martial power source;When using Second Wind, gain +4 hit and +1 to Action Point rolls until end of next turn, and roll a save to recover the spent surge.;On Second Wind, +4 hit and +1 to Action Point rolls until end of next turn, and save to recover  surge.
+Divine Hope;Power Source;Divine;Divine power source;When using Second Wind, you double the healed HP, gain +2 to defenses until end of next turn, and roll a save.;On Second Wind, heal double HP, +2 to defenses until end of next turn, and roll a save.
+Arcane Recovery;Power Source;Arcane;Arcane power source;When using an Encounter or Daily arcane power, roll 1d20. On a 17+, the power is not spent.;When using an Encounter or Daily arcane power, roll 1d20. On a 17+, the power is not spent.
+Primal Ferocity;Power Source;Primal;Primal power source;While bloodied, +1 to hit, +2 to saves, +1 to Action Point rolls;While bloodied, +1 to hit, +2 to saves, +1 to Action Point rolls
+Psionic Versatility;Power Source;Psionic ;Psionic power source;"When using a psionic At-Will attack power for the first time in an encounter, gain +1 hit with that power.
+You gain an additional Level 1 At-will attack power.";"On first use of psionic At-Will attack power+1 hit with that power.
+You gain an additional Level 1 At-will attack power."
+Shadow Hunger;Power Source;Shadow;Shadow power source;When killing an enemy, gain 5 HP per tier, and +1 to Action Point rolls until end of next turn.;On kill, +5 HP per tier, and +1 to Action Point rolls until end of next turn.
 ;;;;;
 ;;;;;
 ;;;;;
 ;;;;;
 Skill Training;Lesser Feat (Unlimited);Skill, Ability;;Choose a skill in which you are untrained. You gain training in that skill.;Gain training in a skill.
 Unnatural Ability;Lesser Feat;Ability;;Choose up to two skills in which you are trained and have an Ability Bonus lower than 3. Your Ability Bonus for these skills becomes 3.;Ability bonus for two trained skills becomes +3.
-Skill Focus;Lesser Feat (Unlimited);Skill;;"Choose a trained skill. 
-Automatically succeed in Easy and Normal checks for that skill.
+Skill Focus;Lesser Feat (Unlimited);Skill;;"Choose a trained skill. You gain +3 on checks for that skill.
+You automatically succeed in Easy checks for that skill.
 You gain access to Very Hard checks for that skill.
-Note: If you take multiple instances of this feat, you must choose different skills each time.";With a trained skill, automatically succeed Easy and Normal checks, allow Very Hard checks.
+Note: If you take multiple instances of this feat, you must choose different skills each time.";With a trained skill, +3 on checks, automatically succeed Easy checks, allow Very Hard checks.
 Ritual Training;Lesser Feat;Ritual;;"Choose a Heroic Ritual. You learn that ritual.
-You can learn 2 additional Heroic Rituals through ritual scrolls.";
+You can learn 2 additional Heroic Rituals through ritual scrolls.";Learn 1 Heroic Ritual, can learn 2 more from scrolls.
 Paragon Ritual Training;Lesser Feat;Ritual, Paragon;Level 11, Ritual Training;"Choose a Paragon Ritual. You learn that ritual.
-You can learn 2 additional Paragon Rituals through ritual scrolls.";
+You can learn 2 additional Paragon Rituals through ritual scrolls.";Learn 1 Paragon Ritual, can learn 2 more from scrolls.
 Epic Ritual Training;Lesser Feat;Ritual, Epic;Level 21, Paragon Ritual Training;"Choose an Epic Ritual. You learn that ritual.
-You can learn 2 additional Epic Rituals through ritual scrolls.";
-Linguist;Lesser Feat;;;Choose a language you don't know. You learn that language.;
+You can learn 2 additional Epic Rituals through ritual scrolls.";Learn 1 Epic Ritual, can learn 2 more from scrolls.
+Linguist;Lesser Feat;;;Choose a language you don't know. You learn that language.;Learn 1 language.

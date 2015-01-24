@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+    <style type="text/css">
+body {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  font-weight: lighter;
+}
+
+.ascii {  
+  font-family: "Lucida Console";  
+  padding-left: 50px;  
+  font-size: 14px;
+}
+
+</style></head>
+  <body>Grid rules<br>
+    <br>
+    <ul>
+      <li>Movement as before: 1 square = 1 movement point, including diagonals</li>
+      <li>bursts/blasts as before</li>
+      <li>Cover: cover bonus is only granted to creatures ADJACENT to cover.
+        Cover has a 90º cone, or more with larger obstacles.</li>
+      <ul>
+        <li>cover is NOT symmetrical</li>
+      </ul>
+      <li>LOS blocking: Line of Sight is defined as a pseudo-straight (please
+        rename) line</li>
+      <ul>
+        <li>pseudo-straight line: a line composed of two segments</li>
+        <ul>
+          <li>A segment that is horizontal/vertical in a top-down grid view</li>
+          <li>A segment that is diagonal in a top-down grid view</li>
+          <li>The segments can be arranged in any order. This means that there
+            are usually 2 pseudo-straight lines between any two points in the
+            grid</li>
+          <li>line is symmetrical, so is LOS.</li>
+        </ul>
+      </ul>
+    </ul>
+    <ul>
+      <li>TODO: Clarify cover/LOS blocking for</li>
+      <ul>
+        <li>full squares</li>
+        <li>square edges</li>
+        <li>creatures larger than 1 square</li>
+      </ul>
+    </ul>
+    <br>
+    <div class="ascii">
+      <div>Line of Sight Examples<br>
+        <br>
+        Legend<br>
+        A, B - Characters<br>
+        X - Line of Sight blocking square<br>
+        -,/ - Pseudo-straight lines of sight between a, b<br>
+        <br>
+        Pseudo-straight line</div>
+      <div><br>
+        .....--B</div>
+      <div>...././.</div>
+      <div>..././..</div>
+      <div>.././...</div>
+      <div>././....</div>
+      <div>A--.....</div>
+      <div><br>
+        Obstacle not blocking LOS</div>
+      <div>.....--B</div>
+      <div>..../XX.</div>
+      <div>..././..</div>
+      <div>.././...</div>
+      <div>././....</div>
+      <div>A--.....</div>
+      <div><br>
+        Obstacle blocking LOS</div>
+      <div><br>
+        .....--B</div>
+      <div>....XXX.</div>
+      <div>..././..</div>
+      <div>.././...</div>
+      <div>././....</div>
+      <div>A--.....</div>
+    </div>
+    <br>
+    <br>
+    Rule of thumb for cover definition:
+    <ul>
+      <li>An attacked creature has cover if</li>
+      <li>it is adjacent to one or more cover-granting squares</li>
+      <li>one or more of the cover-granting squares could be moved to the space
+        of the attacker by Pushing from the attacked creature's space.</li>
+      <ul>
+        <li>(Ignoring whether the cover can actually be moved, or whether there
+          are movement-blocking obstacles in the way).</li>
+      </ul>
+    </ul>
+    <br>
+    http://www.asciidraw.com/#Draw<br>
+    <br>
+    <br>
+    <div class="ascii"><br>
+      <div>Cover Examples<br>
+        <br>
+        Legend:<br>
+        A, B - Characters<br>
+        x - cover-granting square<br>
+        : - square where B would gain cover from an attacker<br>
+        . - square where B would not gain cover from an attacker<br>
+        <br>
+        B has cover from A, A has no cover from B, diagonal cover</div>
+      <div><br>
+        .......B</div>
+      <div>::::::x.</div>
+      <div>:::::::.</div>
+      <div>:::::::.</div>
+      <div>:::::::.</div>
+      <div>A::::::.</div>
+      <div><br>
+        B has cover from A, A has no cover from B, h/v cover</div>
+      <div>....B...</div>
+      <div>....x...</div>
+      <div>...:::..</div>
+      <div>..:::::.</div>
+      <div>.::::::.</div>
+      <div>A::::::.</div>
+      <div><br>
+        B has cover from A, A has no cover from B, diagonal + h/v cover</div>
+      <div><br>
+        ....B...</div>
+      <div>....xx::</div>
+      <div>...:::::</div>
+      <div>..::::::</div>
+      <div>.:::::::</div>
+      <div>A:::::::</div>
+    </div>
+    <br>
+    <br>
+    More on cover:<br>
+    Adjacent creatures count as cover<br>
+    A creature adjacent to its allies has cover<br>
+    A creature adjacent to your allies (in melee) also has cover<br>
+    Cover counts against burst/blast, except for creature in origin of
+    burst/blast<br>
+    Area burst attack has <br>
+    -2 penalty if origin of burst/blast is in cover from attacker (treat it as
+    a&nbsp; creature in that square<br>
+    forbidden if origin of burst/blast is out of LOS from attacker (this
+    includes blind, total concealment.<br>
+    Relative sizes<br>
+    A creature needs an obstacle its size or greater to gain cover (check!)<br>
+    Exception: hunker down, become smaller action to gain cover, check
+    vocabulary, other penalties, ends with movement, action<br>
+    Another way to look at it: height<br>
+    small/medium are height 1<br>
+    large is height 2, huge is height 3<br>
+    covering obstacle needs equal or greater height<br>
+    <br>
+    <br>
+    <br>
+    On light, concealment<br>
+    On daylight, no concealment due to low light<br>
+    On darkness<br>
+    If no light sources, total concealment<br>
+    If light sources,<br>
+    no concealment for creatures/objects within 5 squares and LOS from source<br>
+    concealment for creatures within 6-10 squares and LOS from source<br>
+    total concealment otherwise<br>
+    low-light vision: on darkness, no concealment within 10 squares and LOS from
+    source.<br>
+    darkvision: on darkness, no concealment within 10 squares and LOS from
+    source, concealment otherwise<br>
+    darkvision with defined range. By default, dv range is 10. consider other
+    possible ranges<br>
+    better yet, ignore that rule<br>
+    tremorsense (range): On ground squares within range, no concealment, even
+    without LOS (though still need LOS for attacks, powers)<br>
+    also: underwater squares always count as ground for purposes of this ability<br>
+    blindsight (range): <br>
+    ignore the range<br>
+    same as darkvision, ignores invisibility within 10 squares<br>
+    consider removing this altogether!<br>
+    Directed light: Some types of lanterns include LOS blocking for the light
+    source, effectively generating a cone of light.<br>
+    <br>
+    .<br>
+    <br>
+    On LOS-blocking zones (e.g. smoke, cloud)<br>
+    These behave as regular LOS blocking obstacles, except that<br>
+    A creature in the same square as the blocking zone <br>
+    <br>
+    Non-light concealment<br>
+    some zones grant concealment, total concealment (i.e. LOS blocking)<br>
+    A creature in the same square as the concealing zone does not gain benefit -
+    it needs to stand behind one row of squares at least!<br>
+    A functional smoke bomb needs to be a burst 1<br>
+    Check 3d: would a large creature (height 2) be concealed by a burst 1 smoke
+    bomb? Not from certain heights<br>
+    <br>
+    TODO: check perception math on hidden targets<br>
+    <br>
+    On 3d<br>
+    area burst attack has<br>
+    -2 penalty if origin of burst/blast is not in same horizontal or vertical
+    plane as attacker (i.e. at same height, or directly above or below)<br>
+    This is intended to penalize smart blasts when fighting creatures of
+    different sizes, as well as high blasts to avoid penalty for origin in cover
+  </body>
+</html>

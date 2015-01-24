@@ -25,3 +25,21 @@ buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
   tmp<-paste(tableTag,"\r\n<tbody>" ,tmp,"</tbody>\r\n</table>", "\n",collapse="")
 }
 
+
+gsub.dataframe <- function(df,pattern,replacement)
+{
+
+  df2<-df
+  gsubColwise <-  colwise(.fun=(function(df, pattern,replacement){gsub(pattern,replacement,df)}))
+
+  
+  factorIndices<-laply(df,is.factor)
+  df2[,factorIndices]<-colwise(as.factor) (gsubColwise(df2[,factorIndices],pattern, replacement))
+
+
+  charIndices<-laply(df,is.character)
+  df2[,charIndices]<-gsubColwise(df2[,charIndices],pattern,replacement)
+  
+  df2
+}
+

@@ -83,7 +83,7 @@ Name;Role;HP;Ar;For;Ref;Will;OA;Init;BasicAttack;StandardAttack;ClassPowerName;C
           <tr>
             <td class=""subtitle"">";"
           <tr>
-            <td>";"
+            <td class=""attackText"">";"
     <tr>
             <td class=""subtitle"">Class Skills</td>
           </tr>
@@ -120,9 +120,8 @@ Name;Role;HP;Ar;For;Ref;Will;OA;Init;BasicAttack;StandardAttack;ClassPowerName;C
           </tr>
         </tbody>
       </table>";"</td>
-          </tr>";"<br>
-            </td>
-          </tr>";"<br>
+          </tr>";"            </td>
+          </tr>";"
             </td></tr>
         </tbody>
       </table>

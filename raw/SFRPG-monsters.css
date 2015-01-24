@@ -42,8 +42,11 @@ div.monsterClass, div.monsterRace {
   font-size: 9px;
   width: 280px;  
   height: 305px;  
+
   position: relative;  
   background-color: #dbffdb;
+  margin-bottom: 60px;
+
 }
 
 div .fullwidth {

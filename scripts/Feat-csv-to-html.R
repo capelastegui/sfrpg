@@ -20,7 +20,7 @@ css <- readChar(css.file, file.info(css.file)$size)
 
 #Use these lines to test scripts
 #tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
-feat.raw.df<-feat.raw.df[1:3,]
+#feat.raw.df<-feat.raw.df[1:3,]
 
 feat.htm<-buildElementApply(feat.raw.df, feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
 #write(feat.htm,feat.htm.file)
