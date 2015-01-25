@@ -6,7 +6,7 @@ feat.raw <- file.path(basedir,"raw","Feats-raw.csv")
 feat.tag <- file.path(basedir,"raw","Feats-tags.csv")
 css.file <- file.path(basedir,"raw","SFRPG.css")
 feat.htm.file <- file.path(basedir,"html","Feats.html")
-feat.table.htm.file <- file.path(basedir,"html","Feats-table.html")
+feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
  
 feat.raw.df <- read.csv(feat.raw, sep=";")
 feat.tag.df <- read.csv(feat.tag, sep=";")

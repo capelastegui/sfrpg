@@ -1,1 +1,33 @@
-
+Name	Type	Damage	Keywords	Category
+Unarmed	Unarmed	1d4		Improvised, Melee, 1 hand
+Improvised, Light	Improvised	1d4		Improvised, Melee, 1 hand
+Improvised, Heavy	Improvised	1d6		Improvised, Melee, 2 hands
+Dagger	Light Blade	1d4	Off-hand, Throw 4/8	Basic, Melee, 1 hand
+Javelin	Spear	1d6	Throw 5/10	Basic, Melee, 1 hand
+Morningstar	Hammer	1d6	Versatile	Basic, Melee, 1 hand
+Halfspear	Spear	1d8		Basic, Melee, 2 hands
+Scythe	Heavy Blade	1d8		Basic, Melee, 2 hands
+Quarterstaff	Staff	1d8		Basic, Melee, 2 hands
+Sling	Sling	1d6	Ranged 6/12, Recharge	Basic, Ranged, 1 hand
+Shortbow	Bow	1d6	Ranged 7/14	Basic, Ranged, 2 hands
+Light Crossbow	Crossbow	1d8	Ranged 6/12, Recharge	Basic, Ranged, 2 hands
+Hand Axe	Axe	1d4	Off-hand, Throw 5/10	Martial, Melee, 1 hand
+Light Hammer	Hammer	1d4	Off-hand, Throw 5/10	Martial, Melee, 1 hand
+Short Sword	Light Blade	1d6	Off-hand	Martial, Melee, 1 hand
+Nunchaku	Flail	1d6	Off-hand	Martial, Melee, 1 hand
+Whip	Flail	1d4	Reach +1	Martial, Melee, 1 hand
+Long Sword	Heavy Blade	1d8	Versatile	Martial, Melee, 1 hand
+Battle Axe	Axe	1d8	Versatile	Martial, Melee, 1 hand
+Warhammer	Hammer	1d8	Versatile	Martial, Melee, 1 hand
+Rapier	Light Blade	1d8	Versatile	Martial, Melee, 1 hand
+Light Flail	Flail	1d8	Versatile	Martial, Melee, 1 hand
+Longspear	Spear	1d8	Reach +1	Martial, Melee, 2 hands
+Halberd	Axe	1d8	Reach +1	Martial, Melee, 2 hands
+Glaive	Heavy Blade	1d8	Reach +1	Martial, Melee, 2 hands
+Heavy Flail	Flail	1d12		Martial, Melee, 2 hands
+Greatsword	Heavy Blade	1d12		Martial, Melee, 2 hands
+Greataxe	Axe	1d12		Martial, Melee, 2 hands
+Maul	Hammer	1d12		Martial, Melee, 2 hands
+Hand Crossbow	Crossbow	1d6	Ranged 6/12, Off-hand, Recharge	Martial, Ranged, 1 hand
+Longbow	Bow	1d8	Ranged 10/20	Martial, Ranged, 2 hands
+Heavy Crossbow	Crossbow	1d12	Ranged 7/14, Recharge	Martial, Ranged, 2 hands
