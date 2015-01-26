@@ -47,9 +47,9 @@ Focus: Close Bow;Focus;Weapon;Weapon Proficiency with a Bow;"On weapon attacks w
 When making a ranged or area weapon attack with a bow, choose an adjacent enemy. The attack does not provoke Opportunity Attacks from that enemy.";With Bow, +1 damage per W and no opportunity attacks for ranged and area attacks.
 Focus: Far Bow;Focus;Weapon;Weapon Proficiency with a Bow;"On weapon attacks with a Bow, +1 damage per W.
 Your Shortbows gain Range 9/18.
-Your Longbows gain Range 12/24.";With Bow, +1 damage per W and extra Range.
+Your Longbows gain Range 12/24.";With Bow, +1 damage per W and +2/+4 Range.
 Focus: Precision Crossbow;Focus;Weapon;Weapon Proficiency with a Crossbow;"On weapon attacks with a Crossbow, +1 damage per W.
-On weapon attacks with a Crossbow, hit penalty for Cover, Superior Cover, Concealment and Total Concealment is reduced by 1.";With Crossbow, +1 damage per W and -1 to Cover/Concealment penalty.
+On weapon attacks with a Crossbow, hit penalty for Cover, Superior Cover, Concealment and Total Concealment is reduced by 1.";With Crossbow, +1 damage per W and reduce Cover/Concealment penalty by 1.
 Focus: Mobile Crossbow;Focus;Weapon;Weapon Proficiency with a Crossbow;"On weapon attacks with a Crossbow, +1 damage per W.
 When using a Recharge action, increase the distance moved to half your speed.";With Crossbow, +1 damage per W and extra movement on Recharge.
 Focus: Critical Sling;Focus;Weapon;Weapon Proficiency with a Sling;"On weapon attacks with a Sling, +1 damage per W.
@@ -95,24 +95,19 @@ Focus: Opportunist Totem;Focus;Implement;Implement Proficiency with a Totem;"On 
 On Reaction attacks other than Opportunity Attacks, +2 hit.";With Totem, +1 damage per die, +2 to Opportunity Attacks.
 Focus: Tough Totem;Focus;Implement;Implement Proficiency with a Totem;"On implement attacks with a Totem , +1 damage per die.
 +2 Hit Points per tier.";With Totem, +1 damage per die, +2 HP per tier.
-Wind Robes;Defense Focus;Armor;;While wearing Cloth Armor, +1 AC, and +1 to all defenses against ranged attacks.;With Cloth, +1 AC, and +1 to all defenses vs ranged
-Elemental Robes;Defense Focus;Armor;;"When taking this feat, choose one of the following damage types: Fire, Cold, Lightning, Thunder, Acid.
-While wearing Cloth Armor, +1 AC, +1 Arcane skill, and Resist (chosen damage type).";With Cloth, +1 AC, +1 Arcane, Resist an elemental damage type.
-Holy Robes;Defense Focus;Armor;;"When taking this feat, choose one of the following damage types: Radiant, Necrotic.
-While wearing Cloth Armor, +1 AC,+1 Religion skill, and Resist (chosen damage type).";With Cloth, +1 AC, +1 Religion, Resist Radiant or Necrotic
-Mind Robes;Defense Focus;Armor;;"When taking this feat, choose one of the following damage types: Psychic, Force.
-While wearing Cloth Armor, +1 AC,+1 Insight skill, and Resist (chosen damage type).";With Cloth, +1 AC, +1 Insight, Resist Psychic or Force
-Robes of Willpower;Defense Focus;Armor;;While wearing Cloth Armor, +1 AC, +1 Will.;With Cloth, +1 AC, +1 Will.
-Courtier's Outfit;Defense Focus;Armor;;While wearing Cloth Armor, +1 AC, +2 Diplomacy skill, +2 Bluff skill, +1 Intimidate skill.;With Cloth, +1 AC, +2 Diplomacy, +2 Bluff, +1 Intimidate
-Catsuit Leather;Defense Focus;Armor;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, +2 Stealth skill, +2 Acrobatics skill, +1 Thievery skill.;With Leather, +1 AC, +2 Stealth, +2 Acrobatics, +1 Thievery
+Wind Robes;Defense Focus;Armor;;While wearing Cloth Armor, +1 AC, and +2 AC vs ranged;With Cloth, +1 AC, and +2 AC vs ranged
+Elemental Robes;Defense Focus;Armor;;"When taking this feat, choose two of the following damage types: Fire, Cold, Lightning, Radiant, Necrotic, Psychic.
+While wearing Cloth Armor, +1 AC,  and Resist (chosen damage types).";With Cloth, +1 AC, Resist two damage types.
+Courtier's Outfit;Defense Focus;Armor;;While wearing Cloth Armor, +1 AC, +1 Will, +1 Diplomacy skill, +1 Bluff skill, +1 Intimidate skill.;With Cloth, +1 AC, +1 Will,  +1 Diplomacy, +1 Bluff, +1 Intimidate
+Catsuit Leather;Defense Focus;Armor;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, +2 Stealth skill, +2 Acrobatics skill, +2 Thievery skill.;With Leather, +1 AC, +2 Stealth, +2 Acrobatics, +2 Thievery
 Shadow Leather;Defense Focus;Armor;Leather Armor Proficiency;While wearing Leather Armor, +1 AC. When you have any cover or concealment against a melee or ranged attack, gain +1 to all defenses for that attack.;With Leather, +1 AC, +1 to cover/concealment bonus
 Reflexive Leather;Defense Focus;Armor;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, +1 Reflex.;With Leather, +1 AC, +1 Reflex
 Dodging Leather;Defense Focus;Armor;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, and +2 to all defenses against Opportunity attacks.;With Leather, +1 AC, +2 all defenses vs Opportunity Attacks
 Stout Hide;Defense Focus;Armor;Hide Armor Proficiency;While wearing Hide Armor, +1 AC, +1 Fortitude.;With Hide, +1 AC, +1 Fortitude
 Isolating Hide;Defense Focus;Armor;Hide Armor Proficiency;"When taking this feat, choose one of the following damage types: Cold. Fire
 While wearing Hide Armor, +1 AC,+1 Nature skill, and Resist (chosen damage type).";With Hide, +1 AC, +1 Nature, Resist Cold or Fire
-Hiking Hide;Defense Focus;Armor;Hide Armor Proficiency;While wearing Hide Armor, +1 AC, and the first time you enter a square of Difficult Terrain each turn, you treat it as if it wasn't Difficult Terrain.;With Hide, +1 AC, +1 Dungeoneering, ignore first Difficult Terrain square.
-Caster's Chain;Defense Focus;Armor;Chain Armor Proficiency;While wearing Chain Armor, +1 AC, and +2 to all defenses against Opportunity attacks provoked by attacking.;With Chain, +1 AC, +4 all defenses vs Opportunity Attacks provoked by attack.
+Hiking Hide;Defense Focus;Armor;Hide Armor Proficiency;While wearing Hide Armor, +1 AC, and the first time you enter a square of Difficult Terrain each turn, you treat it as if it wasn't Difficult Terrain.;With Hide, +1 AC, ignore first Difficult Terrain square.
+Caster's Chain;Defense Focus;Armor;Chain Armor Proficiency;While wearing Chain Armor, +1 AC, and +4 to all defenses against Opportunity attacks provoked by attacking.;With Chain, +1 AC, +4 all defenses vs Opportunity Attacks provoked by attack.
 Mobile Scale;Defense Focus;Armor;Scale Armor Proficiency;While wearing Scale Armor, +1 AC, and the Armor Movement Penalty is reduced by 1.;With Scale, +1 AC, reduce movement penalty by 1.
 Juggernaut Plate;Defense Focus;Armor;Plate Armor Proficiency;While wearing Plate Armor, +1 AC, and whenever an enemy attack inflicts forced movement on you, you take a saving throw to reduce the forced movement by 1.;With Plate, +1 AC, save to reduce forced movement by 1.
 Blast Shield;Defense Focus;Armor;Shield Proficiency;While wearing a Shield, +1 AC, and +1 to all defenses against Blast and Burst attacks.;With Shield, +1 AC, +1 to all defenses vs blast, burst
@@ -128,7 +123,8 @@ Undying Toughness;Toughness;;;+3 HP per tier, and +3 to Death Saving Throws.;+3 
 Toughness in Numbers;Toughness;;;+3 HP per tier, and +5 HP per tier to Animal Companions, Familiars, and Summoned Creatures; +3 HP per tier, and +5 HP per tier to pets.
 Taunting Mark;Defender Mark;Role;Defender role;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
 Deadly Mark;Defender Mark;Role;Defender role;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
-Meat Shield;Defender Mark;Role;Defender role;Allies adjacent to you gain Cover, and Resist All (Burst or Blast).;Adjacent allies gain cover, resist (burst, blast)
+Meat Shield;Defender Mark;Role;Defender role;"You grant cover to all allies adjacent to you.
+Allies adjacent to you gain Resist All (Burst or Blast).";Adjacent allies gain cover, resist (burst, blast)
 Imposing Presence;Defender Position;Role;Defender role;Squares adjacent to you count as Difficult Terrain for your enemies.;Adjacent squares count as Difficult Terrain for enemies
 Hamstring Opportunity;Defender Position;Role;Defender role;"Enemies hit by your Opportunity Attacks and Reaction attacks are Slowed until the end of their next turn.
 Gain Combat Advantage against Slowed enemies.";Opportunity attacks and reaction attacks slow enemies. Combat advantage against slowed enemies.
@@ -148,10 +144,11 @@ Lethal Weapon;Striker Deadliness;Role;Striker role;"Your weapon attacks gain +1 
 Your implement attacks gain +1 damage per die, +1 Miss Damage per die.";+1 damage and +1 Miss Damage per W or die.
 Fancy Footwork;Striker Agility;Role;Striker role;"When you shift, the shift distance is increased by 1 square.
 When you use the Shifting Maneuver, the penalty to attack rolls is reduced by 1.";+1 Shift. Shift attack penalty reduced by 1.
-Sure Feet;Striker Agility;Role;Striker role;"+1 to Movement Speed.
-You ignore Difficult Terrain.";+1 Move Speed. Ignore Difficult Terrain.
-Escape Artist;Striker Agility;Role;Striker role;When you are Slowed, Immobilized, Restrained or Grabbed, make a Saving Throw to avoid that condition.;Save to avoid Slow, Immobilize, Restrain, Grab
-Low Profile;Striker Defense;Role;Striker role;Against enemies marked by your allies and not marked by you, +1 to all defenses, and +2 to all defenses against Opportunity Attacks.;+1 to all defenses vs enemies marked by your allies, and +2 to all defenses vs their Opportunity Attacks.
+Quick Feet;Striker Agility;Role;Striker role;You can move 1 square as a Minor Action.;Move 1 as Minor Action.
+Escape Artist;Striker Agility;Role;Striker role;" +2 to all defenses against Opportunity Attacks.
+At the start of turn, you can make a save to ignore one of the following conditions until end of turn: Slowed, Immobilized, Restrained, Grabbed.";" +2 to all defenses vs Opportunity Attacks.
+Save to ignore Slow, Immobilize, Restrain, Grab"
+Low Profile;Striker Defense;Role;Striker role;Against enemies marked by your allies and not marked by you, +1 to all defenses, and Lesser Resist all (Critical Hits).; +1 to all defenses vs enemies marked by your allies, and Lesser Resist All (Critical Hits)
 Blind Spot;Striker Defense;Role;Striker role;+2 to all defenses against enemies you flank.;+2 to all defenses vs enemies you flank.
 Deterring Strike;Striker Defense;Role;Striker role;The first time you hit an enemy each turn, that enemy gains -2 to hit you until the end of your next turn.;The first enemy hit by you each turn gains -2 to hit you next turn.
 Hole in the Fire;Blaster Finesse;Role;Controller role;When making a blast or burst attack, you can take a -2 penalty to hit with the attack and choose an ally in the blast or burst. That ally is not affected by the attack.;On blast or burst attack, take a -2 penalty to hit to exclude an ally in the area from getting targeted by the attack.
@@ -161,10 +158,10 @@ Eye of the Storm;Blaster Finesse;Role;Controller role;"When making an area attac
 When making a close blast attack, -5 to hit targets adjacent to you, and +1 to hit other targets.";In your area burst attacks, -5 to hit targets in the origin, and +1 to hit other targets. In your close blast attacks, -5 to hit targets adjacent to you, and+1 to hit other targets.
 Chain Reaction;Blaster Explosion;Role;Controller role;When you score a critical hit, all creatures targeted by the attack take 5 damage per tier. This damaged is not multiplied by the crit.;On crit, 5 damage per tier to all targets of the attack.
 Ground Zero;Blaster Explosion;Role;Controller role;When you make an area attack or a close Blast attack, +2 to hit targets in the origin square.;+2 hit vs target in origin space of burst or blast.
-Crowd Control;Blaster Explosion;Role;Controller role;+1 to hit on attacks with multiple targets and Secondary Attacks.;+1 hit on attacks with multiple targets.
+Crowd Control;Blaster Explosion;Role;Controller role; +1 hit on attacks with multiple targets and on Secondary Attacks.;+1 hit on attacks with multiple targets.
 Gone with the Wind;Controller Terrain;Role;Controller role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, or by 2 if you have Combat Advantage for the attack.;Forced movement from attacks increased by 1, or by 2 with Combat Advantage.
-Strength in Numbers;Controller Terrain;Role;Controller role;"HP for your summoned creatures is increased by 5 per tier.
-Once per turn, as a Free Action, you can Sustain Minor, or give a Minor Action command to a summoned creature.";+5 Summon HP per tier. Sustain Minor and Minor Action commands as free.
+Sustained Assault;Controller Terrain;Role;Controller role;"HP for your summoned creatures is increased by 5 per tier.
+Whenever you sustain a power or give a command to a summoned creature, you gain +1 hit and +1 to defenses until the start of your next turn."; +5 Summon HP per tier. +1 hit and defenses when you sustain or command.
 Slow Motion;Controller Terrain;Role;Controller role;"When hitting with an attack with a single target, the target is Slowed until the end of your next turn.
 Gain Combat advantage against Slowed enemies.";Slow on single target attack hit. Combat Advantage vs Slowed.
 Stable Affliction;Controller Weakening;Role;Controller role;Enemies gain -3 to Saving Throws against your effects.;-3 to Saving Throws.
@@ -193,10 +190,8 @@ Plate Armor Proficiency;;Armor;Scale Armor Proficiency;Gain proficiency with Pla
 Light Shield Proficiency;;Armor;;Gain proficiency with Light Shield;Proficiency with Light Shield
 Heavy Shield Proficiency;;Armor;Light Shield Proficiency;Gain proficiency with Heavy Shield;Proficiency with Heavy Shield
 Paragon Ability;;Paragon, Ability;Level 11;Choose a Tertiary ability. Gain +1 to that ability and to your Weak ability.;Increase a tertiary ability by 1.
-Larger than life;;Epic;Level 21, Medium Size;"In combat, you occupy space as a Large creature (2x2 squares).
-Your reach with all melee and touch attacks is increased by 1.
-(Note: Your actual height and size is not changed)";Increase size to Large, +1 reach.
-Epic Perfection;;Epic, Ability;Level 21; Gain +1 to your Tertiary and Weak abilities.;Increase size to Large, +1 reach.
+;;;;;
+Epic Perfection;;Epic, Ability;Level 21; Gain +1 to your Tertiary and Weak abilities.; +1 to Tertiary and Weak Abilities
 Larger than life;;Epic;Level 21, Medium Size;"In combat, you occupy space as a Large creature (2x2 squares).
 Your reach with all melee and touch attacks is increased by 1.
 (Note: Your actual height and size is not changed)";Increase size to Large, +1 reach.

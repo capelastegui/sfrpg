@@ -5,11 +5,13 @@ source(file.path(basedir,"scripts","csv-to-html.R"))
 feat.raw <- file.path(basedir,"raw","Feats-raw.csv")
 feat.tag <- file.path(basedir,"raw","Feats-tags.csv")
 css.file <- file.path(basedir,"raw","SFRPG.css")
-feat.htm.file <- file.path(basedir,"html","Feats.html")
+feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
 feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
  
 feat.raw.df <- read.csv(feat.raw, sep=";")
 feat.tag.df <- read.csv(feat.tag, sep=";")
+feat.raw.df <- gsub.dataframe(feat.raw.df,"\\n","<br>")
+
 feat.tag.pre<- feat.tag.df[1,]
 feat.tag.post<- feat.tag.df[2,]
 

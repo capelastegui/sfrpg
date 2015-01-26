@@ -1,0 +1,44 @@
+Class;Light Armor Bonus;Expected AC;Expected Move;Notes
+Cleric;0;13;-1;
+Fighter;1;14-16;-1;
+Paladin;0;15-17;-1;
+Ranger;0;12;0;
+Rogue;2;13;0;
+Warlock;0;11(+2);0;
+Warlord;0;13-14;-1;
+Wizard;0;10;0;
+Avenger;3;13;0;Remove Feature: Armor of Faith
+Barbarian;1;13;0;Remove Feature: Barbarian Agility
+Bard;0;13-14;-1;
+Druid;1;13;0;
+Invoker;0;13;-1;
+Shaman;0;11;0;
+Sorcerer;0;10;0;
+Warden;1;13-15;0;
+Ardent;0;13;-1;
+Battlemind;0;14-16;-1;
+Monk;3;13;0;RemoveFeature: Unarmored Defense
+Psion;0;10;0;
+Runepriest;0;14-15;-1;
+Seeker;0;11;0;
+;;;;
+Swordmage;2;13+3;0;
+Bladesinger;0;11+2;0;
+Assassin;;;;
+Other;;;;
+;;;;
+Assassin - Executioner;2;14;;
+Paladin - Blackguard;0;15-17;;
+Vampire;2;13;;Remove Feature: Vampiric Reflexes
+Warlock - Binder;0;11(+2);;
+Cleric- Warpriest;0;13-15;;
+Fighter-Knight;0;15-17;;
+Fighter-Slayer;1;14;-1;
+Rogue-Thief;2;13;;
+Druid-Sentinel;0; 12-13;;
+Paladin - Cavalier;0;15-17;;
+Ranger - Hunter;0;11;;
+Ranger - Scout;0;12;;
+Warlock - Hexblade;0;13;-1;
+;;;;
+Assassin - TODO;;;;
