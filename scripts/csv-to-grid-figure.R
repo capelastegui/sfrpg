@@ -9,25 +9,65 @@ meltGridCsv <- function (gridfile)
   
   tmp.matrix <- as.matrix(read.csv(gridfile, sep=";",header=FALSE))
   colnames(tmp.matrix)<-NULL
-  tmp.melt <-melt(tmp.matrix,varnames=c("y","x")) %.% 
+  melt(tmp.matrix,varnames=c("y","x")) %.% 
     mutate(character=(value=="A"|value=="B")) %.%
     mutate(hline=(value=="-")) %.%
     mutate(dline=(value=="/")) %.% 
-    select(x,y,value,character,hline,dline)  #reorder columns
+    mutate(block=(value=="X")) %.% 
+    mutate(cover=(value=="x")) %.% 
+    mutate(shade=(value==".")) %.% 
+    mutate(shade2=(value==":")) %.% 
+    select(x,y,value,character,hline,dline,block,cover,shade,shade2)  #reorder columns
   
 }
 
-
 plotGrid <- function(grid.df)
-{
-  
-  grid.line.df <-grid.df %.% filter (hline|dline) %.% group_by(x) %.% mutate(z=y==max(y)) %.% arrange(z)
+{ 
   
   ggplot(grid.df)+aes(y=-y,x=x)+
     geom_tile(color="black",fill="white")+
-    geom_tile(color="black",fill="brown",alpha=grid.df$character)+
+    geom_tile(color="black",fill="pink",alpha=grid.df$character)+
+    geom_tile(color="black",fill="grey18",alpha=grid.df$block)+
+    geom_tile(color="black",fill="grey",alpha=grid.df$cover)+
+    geom_tile(color="black",fill="lightskyblue",alpha=0.5*grid.df$shade)+
+    geom_tile(color="black",fill="royalblue4",alpha=0.5*grid.df$shade2)+
     geom_text(aes(label=value, alpha=character))+
-    geom_path(data=grid.line.df%.% filter(z))+
-    geom_path(data=grid.line.df%.% filter(!z))+
-    scale_alpha_discrete(range = c(0, 1),guide=FALSE)
+    scale_alpha_discrete(range = c(0, 1),guide=FALSE)+
+    scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
+}
+
+
+#TODO: function to plot single line. Avoid artefacts.
+
+plotGridLOS <- function(grid.df, grid.line.plot=NULL)
+{ 
+  if (is.null(grid.line.plot)){
+  # to plot without line, have grid.line.plot=list(null,null)
+    grid.line.plot <- plotLOS(grid.df)
+        }
+
+  ggplot(grid.df)+aes(y=-y,x=x)+
+    geom_tile(color="black",fill="white")+
+    geom_tile(color="black",fill="pink",alpha=grid.df$character)+
+    geom_tile(color="black",fill="grey18",alpha=grid.df$block)+
+    geom_tile(color="black",fill="grey",alpha=grid.df$cover)+
+    geom_tile(color="black",fill="lightskyblue",alpha=0.5*grid.df$shade)+
+    geom_tile(color="black",fill="royalblue4",alpha=0.5*grid.df$shade2)+
+    geom_text(aes(label=value, alpha=character))+
+    grid.line.plot[1]+grid.line.plot[2]+
+    scale_alpha_discrete(range = c(0, 1),guide=FALSE)+
+    scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
+}
+
+plotLOS <-  function(grid.df,color1="green",color2="green")
+{
+  grid.line.df <-grid.df %.% 
+    filter (hline|dline) %.% 
+    group_by(x) %.% 
+    mutate(upperLine=y==min(y)) %.% # upper line has lower y because of inverted axis
+    arrange(upperLine)
+    list(geom_path(data=grid.line.df%.% filter(upperLine),color=color1),
+         geom_path(data=grid.line.df%.% filter(!upperLine),color=color2)  
+    )
+  
 }

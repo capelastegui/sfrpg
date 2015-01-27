@@ -121,9 +121,9 @@ Toughness;Toughness;;;+5 HP per tier.;+5 HP per tier.
 Surging Toughness;Toughness;;;+3 HP per tier, and +3 Surge Value per tier.;+3 HP per tier, and +3 Surge Value per tier.
 Undying Toughness;Toughness;;;+3 HP per tier, and +3 to Death Saving Throws.;+3 HP per tier, and +3 to Death Saving Throws.
 Toughness in Numbers;Toughness;;;+3 HP per tier, and +5 HP per tier to Animal Companions, Familiars, and Summoned Creatures; +3 HP per tier, and +5 HP per tier to pets.
-Taunting Mark;Defender Mark;Role;Defender role;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
-Deadly Mark;Defender Mark;Role;Defender role;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
-Meat Shield;Defender Mark;Role;Defender role;"You grant cover to all allies adjacent to you.
+Taunting Mark;Defender Mark;Role, Paragon;Defender role, Level 11;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
+Deadly Mark;Defender Mark;Role, Paragon;Defender role, Level 11;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
+Meat Shield;Defender Mark;Role, Paragon;Defender role, Level 11;"You grant cover to all allies adjacent to you.
 Allies adjacent to you gain Resist All (Burst or Blast).";Adjacent allies gain cover, resist (burst, blast)
 Imposing Presence;Defender Position;Role;Defender role;Squares adjacent to you count as Difficult Terrain for your enemies.;Adjacent squares count as Difficult Terrain for enemies
 Hamstring Opportunity;Defender Position;Role;Defender role;"Enemies hit by your Opportunity Attacks and Reaction attacks are Slowed until the end of their next turn.
@@ -138,9 +138,9 @@ Unstoppable Defender;Defender Grit;Role;Defender role;"+1 Reflex.
 While Slowed, the first square you enter each turn does not cost any additional movement.
 While Immobilized or Restrained, you can spend a Move Action to move 1 square.
 When you use a Crawl action to move while prone, you move an extra square.";+1 Reflex. Can move an extra square while Slowed, Immobilized, Restrained, Prone.
-Cunning Duelist;Striker Deadliness;Role;Striker role;When attacking, gain Combat Advantage if your and the target have no adjacent creatures other than each other.;Combat Advantage when you and target have no other creatures adjacent.
-Dirty Fighting;Striker Deadliness;Role;Striker role;When attacking with Combat Advantage, +1 hit.;+1 hit with Combat Advantage.
-Lethal Weapon;Striker Deadliness;Role;Striker role;"Your weapon attacks gain +1 damage per W, +1 Miss Damage per W.
+Cunning Duelist;Striker Deadliness;Role;Striker role, Level 11;When attacking, gain Combat Advantage if your and the target have no adjacent creatures other than each other.;Combat Advantage when you and target have no other creatures adjacent.
+Dirty Fighting;Striker Deadliness;Role;Striker role, Level 11;When attacking with Combat Advantage, +1 hit.;+1 hit with Combat Advantage.
+Lethal Weapon;Striker Deadliness;Role;Striker role, Level 11;"Your weapon attacks gain +1 damage per W, +1 Miss Damage per W.
 Your implement attacks gain +1 damage per die, +1 Miss Damage per die.";+1 damage and +1 Miss Damage per W or die.
 Fancy Footwork;Striker Agility;Role;Striker role;"When you shift, the shift distance is increased by 1 square.
 When you use the Shifting Maneuver, the penalty to attack rolls is reduced by 1.";+1 Shift. Shift attack penalty reduced by 1.
@@ -156,9 +156,9 @@ Controlled Explosion;Blaster Finesse;Role;Controller role;"When making an area a
 When making a close attack, you can choose a square adjacent to you, and place the origin of the attack as if you were in that square. You are still unaffected by that attack.";You take no hit penalty for centering area attacks on squares with cover or concealment. You can center a close attack in a square adjacent to you.
 Eye of the Storm;Blaster Finesse;Role;Controller role;"When making an area attack, -5 to hit targets in the origin square, and +1 to hit other targets.
 When making a close blast attack, -5 to hit targets adjacent to you, and +1 to hit other targets.";In your area burst attacks, -5 to hit targets in the origin, and +1 to hit other targets. In your close blast attacks, -5 to hit targets adjacent to you, and+1 to hit other targets.
-Chain Reaction;Blaster Explosion;Role;Controller role;When you score a critical hit, all creatures targeted by the attack take 5 damage per tier. This damaged is not multiplied by the crit.;On crit, 5 damage per tier to all targets of the attack.
-Ground Zero;Blaster Explosion;Role;Controller role;When you make an area attack or a close Blast attack, +2 to hit targets in the origin square.;+2 hit vs target in origin space of burst or blast.
-Crowd Control;Blaster Explosion;Role;Controller role; +1 hit on attacks with multiple targets and on Secondary Attacks.;+1 hit on attacks with multiple targets.
+Chain Reaction;Blaster Explosion;Role, Paragon;Controller role, Level 11;When you score a critical hit, all creatures targeted by the attack take 5 damage per tier. This damaged is not multiplied by the crit.;On crit, 5 damage per tier to all targets of the attack.
+Ground Zero;Blaster Explosion;Role, Paragon;Controller role, Level 11;When you make an area attack or a close Blast attack, +2 to hit targets in the origin square.;+2 hit vs target in origin space of burst or blast.
+Crowd Control;Blaster Explosion;Role, Paragon;Controller role, Level 11; +1 hit on attacks with multiple targets and on Secondary Attacks.;+1 hit on attacks with multiple targets.
 Gone with the Wind;Controller Terrain;Role;Controller role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, or by 2 if you have Combat Advantage for the attack.;Forced movement from attacks increased by 1, or by 2 with Combat Advantage.
 Sustained Assault;Controller Terrain;Role;Controller role;"HP for your summoned creatures is increased by 5 per tier.
 Whenever you sustain a power or give a command to a summoned creature, you gain +1 hit and +1 to defenses until the start of your next turn."; +5 Summon HP per tier. +1 hit and defenses when you sustain or command.
@@ -171,16 +171,16 @@ When hitting with an implement attack with a single target, the target gains -3 
 Master Healer;Leader Heal;Role;Leader role;When you use a Healing power, creatures spending a Surge due to that power gain +5 per tier to their Surge Value.;Healing grants +5 Surge Value per tier.
 Saving Grace;Leader Heal;Role;Leader role;When you use a Healing power, creatures spending a Surge due to that power can make a Saving Throw to end an effect that a save can end or to ignore a condition during their next turn.;Healing grants free Saving Throw.
 Shield Mate;Leader Heal;Role;Leader role;When you grant Temporary Hit Points to an ally, increase the THP by 2 per tier.;Temporary Hit Points granted to allies increased by 2 per tier.
-Adrenaline Rush;Leader Offense;Role;Leader role;When you use a Healing power, creatures spending a Surge due to that power gain +2 to hit and +1 to Action Point rolls until the end of your next turn.;Healing grants +2 hit, +1 to Action Point Rolls.
-Point Flank;Leader Offense;Role;Leader role;Allies gain +1 to hit and +1 damage per tier against enemies you flank.;Flanking grants +1 hit, +1 damage per tier to allies.
-Constructive Criticism;Leader Offense;Role;Leader role;While you grant a power bonus to hit or damage to an ally, that ally gains +1 Crit Range.;With power bonus to hit or damage, allies gain +1 Crit Range.
+Adrenaline Rush;Leader Offense;Role, Paragon;Leader role, Level 11;When you use a Healing power, creatures spending a Surge due to that power gain +2 to hit and +1 to Action Point rolls until the end of your next turn.;Healing grants +2 hit, +1 to Action Point Rolls.
+Point Flank;Leader Offense;Role, Paragon;Leader role, Level 11;Allies gain +1 to hit and +1 damage per tier against enemies you flank.;Flanking grants +1 hit, +1 damage per tier to allies.
+Constructive Criticism;Leader Offense;Role, Paragon;Leader role, Level 11;While you grant a power bonus to hit or damage to an ally, that ally gains +1 Crit Range.;With power bonus to hit or damage, allies gain +1 Crit Range.
 Word of Caution;Leader Maneuver;Role;Leader role;"When you use a Healing power, creatures spending a Surge due to that power gain +1 to all defenses until the end of your next turn.
 When you grant a power bonus to a defense to an ally, that bonus is increased by 1.";Healing grants +1 to defenses. Power bonuses to a defense increased by 1 on allies.
 Fast Healing;Leader Maneuver;Role;Leader role;"When you use a Healing power, creatures spending a Surge due to that power gain +3 Movement Speed until the end of your next turn.
 When you grant an action to an ally, any movement or shift in that action is increased by 1.
 When you grant forced movement to an ally, the forced movement is increased by 1.";Healing grants +3 Movement Speed. On actions granted to allies, +1 Movement Speed and +1 Shift. Forced movement to allies increased by 1.
 Rallying Cry;Leader Maneuver;Role;Leader role;When rolling for Initiative, allies that can see you gain +1 to all defenses until the end of the first combat round, and +1 to Initiative.;Allies gain +1 Initiative, +1 to defenses on first combat round.
-Martial Weapon Training;;Weapon;;Gain Training in all Simple and One-Hand Martial weapons.;Training in Simple and One-Hand Martial weapons.
+Martial Weapon Training;;Weapon;;Gain Training in all Simple weapons and One-Hand Martial weapons.;Training in Simple and One-Hand Martial weapons.
 Superior Weapon Training;;Weapon;Proficiency with a martial weapon;Gain Training in all Two-Hand Martial weapons;Training in all Two-Hand Martial weapons
 Leather Armor Proficiency;;Armor;;Gain proficiency with Leather Armor;Proficiency with Leather
 Hide Armor Proficiency;;Armor;Leather Armor Proficiency;Gain proficiency with Hide Armor;Proficiency with Hide
@@ -226,4 +226,4 @@ Paragon Ritual Training;Lesser Feat;Ritual, Paragon;Level 11, Ritual Training;"C
 You can learn 2 additional Paragon Rituals through ritual scrolls.";Learn 1 Paragon Ritual, can learn 2 more from scrolls.
 Epic Ritual Training;Lesser Feat;Ritual, Epic;Level 21, Paragon Ritual Training;"Choose an Epic Ritual. You learn that ritual.
 You can learn 2 additional Epic Rituals through ritual scrolls.";Learn 1 Epic Ritual, can learn 2 more from scrolls.
-Linguist;Lesser Feat;;;Choose a language you don't know. You learn that language.;Learn 1 language.
+Linguist;Lesser Feat (Unlimited);;;Choose a language you don't know. You learn that language.;Learn 1 language.
