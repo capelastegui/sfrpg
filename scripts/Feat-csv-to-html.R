@@ -8,7 +8,24 @@ css.file <- file.path(basedir,"raw","SFRPG.css")
 feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
 feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
  
-feat.raw.df <- read.csv(feat.raw, sep=";")
+pasteRequirements <-function(req, level)
+{
+  if (level==1) {req}  else
+  if (req=="") {paste("Level",level)}else
+  {paste (req,", Level", level)}
+}
+
+feat.raw.df <- read.csv(feat.raw, sep=";")%.% tbl_df() %.% group_by(Category) %.% arrange(Level,Category,Keywords, Name)
+feat.raw.df <- feat.raw.df %.% mutate(Requirements=pasteRequirements(as.character(Requirements),Level)) %.% select(-Level)
+feat.raw.df$Requirements <-as.character (feat.raw.df$Requirements)
+emptyReqIndex <-feat.raw.df$Level>1 & feat.raw.df$Requirements == ""
+nonemptyReqIndex <-feat.raw.df$Level>1 & feat.raw.df$Requirements != ""
+feat.raw.df$Requirements[feat.raw.df$Level>1 & feat.raw.df$Requirements != ""]<-
+  paste(feat.raw.df$Requirements[feat.raw.df$Level>1 & feat.raw.df$Requirements != ""], ", Level ",
+        feat.raw.df$Level[feat.raw.df$Level>1 & feat.raw.df$Requirements != ""], sep="")
+feat.raw.df$Requirements[feat.raw.df$Level>1 & feat.raw.df$Requirements == ""]<-
+  paste("Level ",feat.raw.df$Level[feat.raw.df$Level>1 & feat.raw.df$Requirements == ""], sep="")
+
 feat.tag.df <- read.csv(feat.tag, sep=";")
 feat.raw.df <- gsub.dataframe(feat.raw.df,"\\n","<br>")
 

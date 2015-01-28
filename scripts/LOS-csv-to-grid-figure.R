@@ -5,6 +5,7 @@ example2.df <- meltGridCsv(file.path(basedir,"raw","Grid-LOS-example-2-no-blocki
 example3.df <- meltGridCsv(file.path(basedir,"raw","Grid-LOS-example-3-blocking.csv"))
 example4.df <- meltGridCsv(file.path(basedir,"raw","Grid-LOS-example-4-wall.csv"))
 example4b.df <- meltGridCsv(file.path(basedir,"raw","Grid-LOS-example-4b-wall.csv"))
+example4c.df <- meltGridCsv(file.path(basedir,"raw","Grid-LOS-example-4c-wall.csv"))
 
 plot1.file <- file.path(basedir,"raw","Grid-LOS-example-1-no-blocking.csv")
 
@@ -12,8 +13,10 @@ LOS1 <-plotLOS(example1.df)
 plotGridLOS(example1.df)
 plotGridLOS(example2.df,plotLOS(example1.df,color2="darkred"))
 plotGridLOS(example3.df,plotLOS(example1.df,color1="darkred",color2="darkred"))
+plotGridLOS(example4.df)
 plotGridLOS(example4b.df)
-plotGridLOS(example1.df)
+plotGridLOS(example4c.df %.% arrange (y))
+plotGridLOS(example4.df, c(plotLOS(example4b.df)[2], plotLOS(example4c.df %.% arrange(y))[2]))
 
 
 example.cover1.df <- meltGridCsv(file.path(basedir,"raw","Grid-cover-example-1-diag.csv"))

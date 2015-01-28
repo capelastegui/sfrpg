@@ -26,11 +26,11 @@ buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
 }
 
 
-gsub.dataframe <- function(df,pattern,replacement)
+gsub.dataframe <- function(dataframe,pattern,replacement)
 {
 
-  df2<-df
-  gsubColwise <-  colwise(.fun=(function(df, pattern,replacement){gsub(pattern,replacement,df)}))
+  df2<-dataframe
+  gsubColwise <-  colwise(.fun=(function(df1, pattern,replacement){gsub(pattern,replacement,df1)}))
 
   
   factorIndices<-laply(df,is.factor)

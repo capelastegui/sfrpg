@@ -11,13 +11,13 @@ meltGridCsv <- function (gridfile)
   colnames(tmp.matrix)<-NULL
   melt(tmp.matrix,varnames=c("y","x")) %.% 
     mutate(character=(value=="A"|value=="B")) %.%
-    mutate(hline=(value=="-")) %.%
-    mutate(dline=(value=="/")) %.% 
+    mutate(line1=(value=="/")) %.%
+    mutate(line2=(value=="-")) %.%
     mutate(block=(value=="X")) %.% 
     mutate(cover=(value=="x")) %.% 
     mutate(shade=(value==".")) %.% 
     mutate(shade2=(value==":")) %.% 
-    select(x,y,value,character,hline,dline,block,cover,shade,shade2)  #reorder columns
+    select(x,y,value,character,line1,line2,block,cover,shade,shade2)  #reorder columns
   
 }
 
@@ -55,19 +55,16 @@ plotGridLOS <- function(grid.df, grid.line.plot=NULL)
     geom_tile(color="black",fill="royalblue4",alpha=0.5*grid.df$shade2)+
     geom_text(aes(label=value, alpha=character))+
     grid.line.plot[1]+grid.line.plot[2]+
+    grid.line.plot[3]+grid.line.plot[4]+
     scale_alpha_discrete(range = c(0, 1),guide=FALSE)+
     scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
 }
 
 plotLOS <-  function(grid.df,color1="green",color2="green")
 {
-  grid.line.df <-grid.df %.% 
-    filter (hline|dline) %.% 
-    group_by(x) %.% 
-    mutate(upperLine=y==min(y)) %.% # upper line has lower y because of inverted axis
-    arrange(upperLine)
-    list(geom_path(data=grid.line.df%.% filter(upperLine),color=color1),
-         geom_path(data=grid.line.df%.% filter(!upperLine),color=color2)  
+
+    list(geom_path(data=grid.df%.% filter(line1),color=color1),
+         geom_path(data=grid.df%.% filter(line2),color=color2)  
     )
   
 }
