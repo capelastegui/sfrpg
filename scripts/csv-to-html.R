@@ -23,8 +23,11 @@ buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
   tableTag<-"<table>"
   if(!is.null(tableClass)) {tableTag<-paste0("<table class=\"",tableClass,"\">")}
   tmp<-paste(tableTag,"\r\n<tbody>" ,tmp,"</tbody>\r\n</table>", "\n",collapse="")
+  tmp
 }
 
+
+gsubColwise <-  colwise(.fun=(function(df1, pattern,replacement){gsub(pattern,replacement,df1)}))
 
 gsub.dataframe <- function(dataframe,pattern,replacement)
 {
@@ -39,7 +42,7 @@ gsub.dataframe <- function(dataframe,pattern,replacement)
 
   charIndices<-laply(df,is.character)
   df2[,charIndices]<-gsubColwise(df2[,charIndices],pattern,replacement)
-  
+  #todo: maybe i have mixed up what should get cast to factor?
   df2
 }
 

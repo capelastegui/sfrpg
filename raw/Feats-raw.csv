@@ -24,93 +24,93 @@ When you push an enemy with a weapon attack with a hammer, the forced movement i
 Focus: Unstoppable Hammer;Focus;Weapon, Hammer;1;Weapon Proficiency with a Hammer;On weapon attacks with a hammer, +3 Miss Damage per W.;With Hammer, +3 Miss Damage per W.
 Focus: Critical Light Blade;Focus;Weapon,Light Blade;1;Weapon Proficiency with a Light Blade;"On weapon attacks with a Light Blade, +1 Miss Damage per W.
 On weapon attacks with a Light Blade, +1 Crit Range.";With Light Blade, +1 Miss Damage per W, +1 Crit Range
-Focus: Ambush Light Blade;Focus;Weapon;1;Weapon Proficiency with a Light Blade;On weapon attacks with a light blade against targets you are flanking or hidden from, gain +1 damage per W and +1 to hit.;With Light Blade, +1 damage per W and +1 hit when flanking/hiding.
-Focus: Opportunist Heavy Blade;Focus;Weapon;1;Weapon Proficiency with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 damage per W.
+Focus: Ambush Light Blade;Focus;Weapon, Light Blade;1;Weapon Proficiency with a Light Blade;On weapon attacks with a light blade against targets you are flanking or hidden from, gain +1 damage per W and +1 to hit.;With Light Blade, +1 damage per W and +1 hit when flanking/hiding.
+Focus: Opportunist Heavy Blade;Focus;Weapon, Heavy Blade;1;Weapon Proficiency with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 damage per W.
 +2 to Opportunity Attack modifier.";With Heavy Blade, +1 damage per W and +2 to Opportunity Attacks.
-Focus: Duelist's Heavy Blade;Focus;Weapon;1;Weapon Proficiency with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 Miss Damage per W.
+Focus: Duelist's Heavy Blade;Focus;Weapon, Heavy Blade;1;Weapon Proficiency with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 Miss Damage per W.
 Your Heavy Blades gain Parry (+1 AC against melee attacks).";With Heavy Blade, +1 Miss Damage per W, +1 AC vs melee.
-Focus: Critical Axe;Focus;Weapon;1;Weapon Proficiency with an Axe;"On weapon attacks with an Axe, +1 damage per W.
+Focus: Critical Axe;Focus;Weapon, Axe;1;Weapon Proficiency with an Axe;"On weapon attacks with an Axe, +1 damage per W.
 On weapon attacks with an Axe, gain High Crit (+5 damage per W on a crit).";With Axe, +1 damage per W, High Crit.
-Focus: Piercing Axe;Focus;Weapon;1;Weapon Proficiency with an Axe;"On weapon attacks with an Axe, +1 damage per W.
+Focus: Piercing Axe;Focus;Weapon, Axe;1;Weapon Proficiency with an Axe;"On weapon attacks with an Axe, +1 damage per W.
 On weapon attacks with an Axe gain Pierce Resistance (all).";With Axe, +1 damage per W, Pierce Resistance.
-Focus: Reaching Spear;Focus;Weapon;1;Weapon Proficiency with a Spear;"On weapon attacks with an Spear, +1 Miss Damage per W.
+Focus: Reaching Spear;Focus;Weapon, Spear;1;Weapon Proficiency with a Spear;"On weapon attacks with an Spear, +1 Miss Damage per W.
 Your Javelins gain Throw 7/14.
 Your Halfspears gain Reach 2.
 Your Longspears gain Reach 3.";With Spear, +1 Miss Damage per W, extra Range, Reach.
-Focus: Opportunist Spear;Focus;Weapon;1;Weapon Proficiency with a Spear;"On weapon attacks with an Spear, +1 damage per W.
+Focus: Opportunist Spear;Focus;Weapon, Spear;1;Weapon Proficiency with a Spear;"On weapon attacks with an Spear, +1 damage per W.
 On Opportunity attacks with a Spear, +5 damage per W.";With Spear, +1 damage and +5 Opportunity Attack damage per W.
-Focus: Reaching Flail;Focus;Weapon;1;Weapon Proficiency with a Flail;"On weapon attacks with a Flail, +1 Miss Damage per W.
+Focus: Reaching Flail;Focus;Weapon, Flail;1;Weapon Proficiency with a Flail;"On weapon attacks with a Flail, +1 Miss Damage per W.
 Your Light Flails, Heavy Flails gain Reach 2.
 Your Whips gain Reach 3.";With Flail, +1 Miss Damage per W, extra Reach.
-Focus: Flurrying Flail;Focus;Weapon;1;Weapon Proficiency with a Flail;On weapon attacks with a Flail and multiple targets, +2 damage per W.;With Flail, +2 damage per W against multiple targets.
-Focus: Close Bow;Focus;Weapon;1;Weapon Proficiency with a Bow;"On weapon attacks with a Bow, +1 damage per W.
+Focus: Flurrying Flail;Focus;Weapon, Flail;1;Weapon Proficiency with a Flail;On weapon attacks with a Flail and multiple targets, +2 damage per W.;With Flail, +2 damage per W against multiple targets.
+Focus: Close Bow;Focus;Weapon, Crossbow;1;Weapon Proficiency with a Bow;"On weapon attacks with a Bow, +1 damage per W.
 When making a ranged or area weapon attack with a bow, choose an adjacent enemy. The attack does not provoke Opportunity Attacks from that enemy.";With Bow, +1 damage per W and no opportunity attacks for ranged and area attacks.
-Focus: Far Bow;Focus;Weapon;1;Weapon Proficiency with a Bow;"On weapon attacks with a Bow, +1 damage per W.
+Focus: Far Bow;Focus;Weapon, Bow;1;Weapon Proficiency with a Bow;"On weapon attacks with a Bow, +1 damage per W.
 Your Shortbows gain Range 9/18.
 Your Longbows gain Range 12/24.";With Bow, +1 damage per W and +2/+4 Range.
-Focus: Precision Crossbow;Focus;Weapon;1;Weapon Proficiency with a Crossbow;"On weapon attacks with a Crossbow, +1 damage per W.
+Focus: Precision Crossbow;Focus;Weapon, Crossbow;1;Weapon Proficiency with a Crossbow;"On weapon attacks with a Crossbow, +1 damage per W.
 On weapon attacks with a Crossbow, hit penalty for Cover, Superior Cover, Concealment and Total Concealment is reduced by 1.";With Crossbow, +1 damage per W and reduce Cover/Concealment penalty by 1.
-Focus: Mobile Crossbow;Focus;Weapon;1;Weapon Proficiency with a Crossbow;"On weapon attacks with a Crossbow, +1 damage per W.
+Focus: Mobile Crossbow;Focus;Weapon, Crossbow;1;Weapon Proficiency with a Crossbow;"On weapon attacks with a Crossbow, +1 damage per W.
 When using a Recharge action, increase the distance moved to half your speed.";With Crossbow, +1 damage per W and extra movement on Recharge.
-Focus: Critical Sling;Focus;Weapon;1;Weapon Proficiency with a Sling;"On weapon attacks with a Sling, +1 damage per W.
+Focus: Critical Sling;Focus;Weapon, Sling;1;Weapon Proficiency with a Sling;"On weapon attacks with a Sling, +1 damage per W.
 On weapon attacks with a Sling, +1 Crit Range.";With Sling, +1 damage per W, +1 Crit Range.
-Focus: Cautious Sling;Focus;Weapon;1;Weapon Proficiency with a Sling;"On weapon attacks with a Sling, +1 damage per W.
+Focus: Cautious Sling;Focus;Weapon, Sling;1;Weapon Proficiency with a Sling;"On weapon attacks with a Sling, +1 damage per W.
 When using a Recharge action, gain a +2 Defense bonus to all defenses until your next turn.";With Sling, +1 damage per W, +2 to defenses on Recharge.
-Focus: Dual Wield Parry;Focus;Weapon;1;;"On weapon attacks while wielding a melee weapon in each hand, +1 damage per W.
+Focus: Dual Wield Parry;Focus;Weapon, Dual Wield;1;;"On weapon attacks while wielding a melee weapon in each hand, +1 damage per W.
 While wielding a melee weapon in each hand, your melee weapons gain Parry (+1 AC against melee attacks).";When dual wielding, +1 damage per W, +1 AC vs melee.
-Focus: Twin Weapon Focus;Focus;Weapon;1;;On weapon attacks while wielding a melee weapon of the same type in each hand, +2 damage per W.;When dual wielding, +2 damage per W.
+Focus: Twin Weapon Focus;Focus;Weapon, Dual Wield;1;;On weapon attacks while wielding a melee weapon of the same type in each hand, +2 damage per W.;When dual wielding, +2 damage per W.
 Focus: Weapon Master;Focus;Weapon;1;;"On weapon attacks, +1 damage per W.
 When using the Draw action, the move distance is increased to half your move speed.
 When using the Quick Draw action, you do not gain the penalty to attack rolls.";With weapons, +1 damage per W. Extra move on Draw, no penalty on Quick Draw.
-Focus: Far Wand;Focus;Implement;1;Implement Proficiency with a Wand;"On implement attacks with a Wand, +1 damage per die.
+Focus: Far Wand;Focus;Implement, Wand;1;Implement Proficiency with a Wand;"On implement attacks with a Wand, +1 damage per die.
 On ranged implement attacks with a Wand, +3 range.";With Wand, +1 damage per die and +3 Range.
-Focus: Piercing Wand;Focus;Implement;1;Implement Proficiency with a Wand;"On implement attacks with a Wand, +1 damage per die.
+Focus: Piercing Wand;Focus;Implement, Wand;1;Implement Proficiency with a Wand;"On implement attacks with a Wand, +1 damage per die.
 On implement attacks with a Wand, gain Pierce Resistance (all).";With Wand, +1 damage per die and Pierce Resistance.
-Focus: Prescient Orb;Focus;Implement;1;Implement Proficiency with an Orb;"On implement attacks with an Orb, +1 damage per die.
+Focus: Prescient Orb;Focus;Implement, Orb;1;Implement Proficiency with an Orb;"On implement attacks with an Orb, +1 damage per die.
 While wielding an Orb, gain +2 Initiative.";With Orb, +1 damage per die and +2 Initiative.
-Focus: Perceptive Orb;Focus;Implement;1;Implement Proficiency with an Orb;"On implement attacks with an Orb, +1 damage per die.
+Focus: Perceptive Orb;Focus;Implement, Orb;1;Implement Proficiency with an Orb;"On implement attacks with an Orb, +1 damage per die.
 On Implement attacks with an Orb, reduce hit penalty from Concealment, Total Concealment by 2.
 +1 Perception.";With Orb, +1 damage per die and -2 penalty from Concealment.
-Focus: Sage's Tome;Focus;Implement;1;Implement Proficiency with a Tome;"On implement attacks with a Tome , +1 damage per die.
+Focus: Sage's Tome;Focus;Implement, Tome;1;Implement Proficiency with a Tome;"On implement attacks with a Tome , +1 damage per die.
 +1 Arcana, Religion, History.
-Once per encounter, you may Sustain Minor as a Free Action.
+You may Sustain Minor as a Free Action.
 Summoned creatures gain +5 Hit Points per tier.";With tome, +1 damage per die, +1 Arcana, Religion, History. Free Sustain Minor, extra HP on summons.
-Focus: Reliable Tome;Focus;Implement;1;Implement Proficiency with a Tome;"On implement attacks with a Tome , +1 damage per die.
+Focus: Reliable Tome;Focus;Implement, Tome;1;Implement Proficiency with a Tome;"On implement attacks with a Tome , +1 damage per die.
 When you miss all targets of an encounter attack power for the first time in an encounter, you do not become fatigued from using the power.";With Tome, +1 damage per die, no fatigue on missed encounter attack.
-Focus: Critical Rod;Focus;Implement;1;Implement Proficiency with a Rod;"On implement attacks with a Rod , +1 damage per die.
+Focus: Critical Rod;Focus;Implement, Rod;1;Implement Proficiency with a Rod;"On implement attacks with a Rod , +1 damage per die.
 On implement attacks with a Rod, gain High Crit (+5 damage per W on a crit).";With Rod, +1 damage per die, High Crit.
-Focus: Ambush Rod;Focus;Implement;1;Implement Proficiency with a Rod;On implement attacks with a Rod and Combat Advantage, +1 damage per die and +1 Crit Range.;With Rod and Combat Advantage, +1 Miss Damage per die, +1 Crit Range
-Focus: Healing Symbol;Focus;Implement;1;Implement Proficiency with a Holy Symbol;"On implement attacks with a Symbol, +1 damage per die.
+Focus: Ambush Rod;Focus;Implement, Rod;1;Implement Proficiency with a Rod;On implement attacks with a Rod and Combat Advantage, +1 damage per die and +1 Crit Range.;With Rod and Combat Advantage, +1 Miss Damage per die, +1 Crit Range
+Focus: Healing Symbol;Focus;Implement, Holy Symbol;1;Implement Proficiency with a Holy Symbol;"On implement attacks with a Symbol, +1 damage per die.
 Targets of your Healing powers gain +3 per tier to Surge Value.";With Holy Symbol, +1 damage per die and +3 per tier to Healing.
-Focus: Shielding Symbol;Focus;Implement;1;Implement Proficiency with a Holy Symbol;"On implement attacks with a Symbol , +1 damage per die.
+Focus: Shielding Symbol;Focus;Implement, Holy Symbol;1;Implement Proficiency with a Holy Symbol;"On implement attacks with a Symbol , +1 damage per die.
 On implement attacks with a Symbol that grant Temporary Hit Points, increase the granted Temporary Hit Points by 2 per die.";With Holy Symbol, +1 damage per die and +2 per die to THP.
-Focus: Surging Ki;Focus;Implement;1;Implement Proficiency with a Ki Focus;"On implement attacks with a Ki Focus, +1 damage per die.
+Focus: Surging Ki;Focus;Implement, Ki Focus;1;Implement Proficiency with a Ki Focus;"On implement attacks with a Ki Focus, +1 damage per die.
 +3 Surge Value per tier.";With Ki Focus, +1 damage per die, +3 Surge Value per tier.
-Focus: Fast Ki;Focus;Implement;1;Implement Proficiency with a Ki Focus;"On implement attacks with a Ki Focus , +1 damage per die.
+Focus: Fast Ki;Focus;Implement, Ki Focus;1;Implement Proficiency with a Ki Focus;"On implement attacks with a Ki Focus , +1 damage per die.
 +1 Speed.";With Ki Focus, +1 damage per die, +1 Speed.
-Focus: Opportunist Totem;Focus;Implement;1;Implement Proficiency with a Totem;"On implement attacks with a Totem , +1 damage per die.
+Focus: Opportunist Totem;Focus;Implement, Totem;1;Implement Proficiency with a Totem;"On implement attacks with a Totem , +1 damage per die.
 +2 Opportunity Attack Modifier.
 On Reaction attacks other than Opportunity Attacks, +2 hit.";With Totem, +1 damage per die, +2 to Opportunity Attacks.
-Focus: Tough Totem;Focus;Implement;1;Implement Proficiency with a Totem;"On implement attacks with a Totem , +1 damage per die.
+Focus: Tough Totem;Focus;Implement, Totem;1;Implement Proficiency with a Totem;"On implement attacks with a Totem , +1 damage per die.
 +2 Hit Points per tier.";With Totem, +1 damage per die, +2 HP per tier.
-Wind Robes;Defense Focus;Armor;1;;While wearing Cloth Armor, +1 AC, and +2 AC vs ranged;With Cloth, +1 AC, and +2 AC vs ranged
-Elemental Robes;Defense Focus;Armor;1;;"When taking this feat, choose two of the following damage types: Fire, Cold, Lightning, Radiant, Necrotic, Psychic.
+Wind Robes;Defense Focus;Armor, Cloth;1;;While wearing Cloth Armor, +1 AC, and +2 AC vs ranged;With Cloth, +1 AC, and +2 AC vs ranged
+Elemental Robes;Defense Focus;Armor, Cloth;1;;"When taking this feat, choose two of the following damage types: Fire, Cold, Lightning, Radiant, Necrotic, Psychic.
 While wearing Cloth Armor, +1 AC,  and Resist (chosen damage types).";With Cloth, +1 AC, Resist two damage types.
-Courtier's Outfit;Defense Focus;Armor;1;;While wearing Cloth Armor, +1 AC, +1 Will, +1 Diplomacy skill, +1 Bluff skill, +1 Intimidate skill.;With Cloth, +1 AC, +1 Will,  +1 Diplomacy, +1 Bluff, +1 Intimidate
-Catsuit Leather;Defense Focus;Armor;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, +2 Stealth skill, +2 Acrobatics skill, +2 Thievery skill.;With Leather, +1 AC, +2 Stealth, +2 Acrobatics, +2 Thievery
-Shadow Leather;Defense Focus;Armor;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC. When you have any cover or concealment against a melee or ranged attack, gain +1 to all defenses for that attack.;With Leather, +1 AC, +1 to cover/concealment bonus
-Reflexive Leather;Defense Focus;Armor;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, +1 Reflex.;With Leather, +1 AC, +1 Reflex
-Dodging Leather;Defense Focus;Armor;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, and +2 to all defenses against Opportunity attacks.;With Leather, +1 AC, +2 all defenses vs Opportunity Attacks
-Stout Hide;Defense Focus;Armor;1;Hide Armor Proficiency;While wearing Hide Armor, +1 AC, +1 Fortitude.;With Hide, +1 AC, +1 Fortitude
-Isolating Hide;Defense Focus;Armor;1;Hide Armor Proficiency;"When taking this feat, choose one of the following damage types: Cold. Fire
+Courtier's Outfit;Defense Focus;Armor, Cloth;1;;While wearing Cloth Armor, +1 AC, +1 Will, +1 Diplomacy skill, +1 Bluff skill, +1 Intimidate skill.;With Cloth, +1 AC, +1 Will,  +1 Diplomacy, +1 Bluff, +1 Intimidate
+Catsuit Leather;Defense Focus;Armor, Leather;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, +2 Stealth skill, +2 Acrobatics skill, +2 Thievery skill.;With Leather, +1 AC, +2 Stealth, +2 Acrobatics, +2 Thievery
+Shadow Leather;Defense Focus;Armor, Leather;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC. When you have any cover or concealment against a melee or ranged attack, gain +1 to all defenses for that attack.;With Leather, +1 AC, +1 to cover/concealment bonus
+Reflexive Leather;Defense Focus;Armor, Leather;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, +1 Reflex.;With Leather, +1 AC, +1 Reflex
+Dodging Leather;Defense Focus;Armor, Leather;1;Leather Armor Proficiency;While wearing Leather Armor, +1 AC, and +2 to all defenses against Opportunity attacks.;With Leather, +1 AC, +2 all defenses vs Opportunity Attacks
+Stout Hide;Defense Focus;Armor, Hide;1;Hide Armor Proficiency;While wearing Hide Armor, +1 AC, +1 Fortitude.;With Hide, +1 AC, +1 Fortitude
+Isolating Hide;Defense Focus;Armor, Hide;1;Hide Armor Proficiency;"When taking this feat, choose one of the following damage types: Cold. Fire
 While wearing Hide Armor, +1 AC,+1 Nature skill, and Resist (chosen damage type).";With Hide, +1 AC, +1 Nature, Resist Cold or Fire
-Hiking Hide;Defense Focus;Armor;1;Hide Armor Proficiency;While wearing Hide Armor, +1 AC, and the first time you enter a square of Difficult Terrain each turn, you treat it as if it wasn't Difficult Terrain.;With Hide, +1 AC, ignore first Difficult Terrain square.
-Caster's Chain;Defense Focus;Armor;1;Chain Armor Proficiency;While wearing Chain Armor, +1 AC, and +4 to all defenses against Opportunity attacks provoked by attacking.;With Chain, +1 AC, +4 all defenses vs Opportunity Attacks provoked by attack.
-Mobile Scale;Defense Focus;Armor;1;Scale Armor Proficiency;While wearing Scale Armor, +1 AC, and the Armor Movement Penalty is reduced by 1.;With Scale, +1 AC, reduce movement penalty by 1.
-Juggernaut Plate;Defense Focus;Armor;1;Plate Armor Proficiency;While wearing Plate Armor, +1 AC, and whenever an enemy attack inflicts forced movement on you, you take a saving throw to reduce the forced movement by 1.;With Plate, +1 AC, save to reduce forced movement by 1.
-Blast Shield;Defense Focus;Armor;1;Shield Proficiency;While wearing a Shield, +1 AC, and +1 to all defenses against Blast and Burst attacks.;With Shield, +1 AC, +1 to all defenses vs blast, burst
-Wind Shield;Defense Focus;Armor;1;Shield Proficiency;While wearing a Shield, +1 AC, and +1 to all defenses against Ranged attacks.;With Shield, +1 AC, +1 to all defenses vs ranged
-Bashing Shield;Defense Focus;Armor;1;Shield Proficiency;While wearing a Shield, +1 AC, and when you push an enemy with a melee or close attack, the forced movement is increased by 1 square unless the enemy makes a save.;With Shield, +1 AC, increase forced movement by 1 on failed save.
+Hiking Hide;Defense Focus;Armor, Hide;1;Hide Armor Proficiency;While wearing Hide Armor, +1 AC, and the first time you enter a square of Difficult Terrain each turn, you treat it as if it wasn't Difficult Terrain.;With Hide, +1 AC, ignore first Difficult Terrain square.
+Caster's Chain;Defense Focus;Armor, Chain;1;Chain Armor Proficiency;While wearing Chain Armor, +1 AC, and +4 to all defenses against Opportunity attacks provoked by attacking.;With Chain, +1 AC, +4 all defenses vs Opportunity Attacks provoked by attack.
+Mobile Scale;Defense Focus;Armor, Scale;1;Scale Armor Proficiency;While wearing Scale Armor, +1 AC, and the Armor Movement Penalty is reduced by 1.;With Scale, +1 AC, reduce movement penalty by 1.
+Juggernaut Plate;Defense Focus;Armor, Plate;1;Plate Armor Proficiency;While wearing Plate Armor, +1 AC, and whenever an enemy attack inflicts forced movement on you, you take a saving throw to reduce the forced movement by 1.;With Plate, +1 AC, save to reduce forced movement by 1.
+Blast Shield;Defense Focus;Armor, Shield;1;Shield Proficiency;While wearing a Shield, +1 AC, and +1 to all defenses against Blast and Burst attacks.;With Shield, +1 AC, +1 to all defenses vs blast, burst
+Wind Shield;Defense Focus;Armor, Shield;1;Shield Proficiency;While wearing a Shield, +1 AC, and +1 to all defenses against Ranged attacks.;With Shield, +1 AC, +1 to all defenses vs ranged
+Bashing Shield;Defense Focus;Armor, Shield;1;Shield Proficiency;While wearing a Shield, +1 AC, and when you push an enemy with a melee or close attack, the forced movement is increased by 1 square unless the enemy makes a save.;With Shield, +1 AC, increase forced movement by 1 on failed save.
 Ambush Armor;Defense Focus;Armor;1;Hide Armor Proficiency;+1 AC, and your Armor Penalty to Initiative, and Stealth and Acrobatics skills is reduced by 1.;With any Armor, +1 AC, Armor Penalty to Initiative, Stealth, Acrobatics reduced by 1.
 Nimble Armor;Defense Focus;Armor;1;Hide Armor Proficiency;+1 AC, and your Armor Penalty to Stealth, Thievery, Acrobatics, Athletics and Endurance skills is reduced by 1.;+1 AC, Armor Penalty to Stealth, Thievery, Acrobatics, Athletics, Endurance reduced by 1
 Initiative Armor;Defense Focus;Armor;1;Scale Armor Proficiency;+1 AC, and your Armor Penalty to Initiative is reduced by 2.;+1 AC, and Armor Penalty to Initiative reduced by 2
@@ -128,65 +128,65 @@ Scale Armor Proficiency;;Armor;1;Chain Armor Proficiency;Gain proficiency with S
 Plate Armor Proficiency;;Armor;1;Scale Armor Proficiency;Gain proficiency with Plate Armor;Proficiency with Plate
 Light Shield Proficiency;;Armor;1;;Gain proficiency with Light Shield;Proficiency with Light Shield
 Heavy Shield Proficiency;;Armor;1;Light Shield Proficiency;Gain proficiency with Heavy Shield;Proficiency with Heavy Shield
-Imposing Presence;Defender Position;Role;4;Defender role;Squares adjacent to you count as Difficult Terrain for your enemies.;Adjacent squares count as Difficult Terrain for enemies
-Hamstring Opportunity;Defender Position;Role;4;Defender role;"Enemies hit by your Opportunity Attacks and Reaction attacks are Slowed until the end of their next turn.
+Imposing Presence;Defender Position;Role, Defender;4;Defender role;Squares adjacent to you count as Difficult Terrain for your enemies.;Adjacent squares count as Difficult Terrain for enemies
+Hamstring Opportunity;Defender Position;Role, Defender;4;Defender role;"Enemies hit by your Opportunity Attacks and Reaction attacks are Slowed until the end of their next turn.
 Gain Combat Advantage against Slowed enemies.";Opportunity attacks and reaction attacks slow enemies. Combat advantage against slowed enemies.
-Mighty Blow;Defender Position;Role;4;Defender role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, and the enemy gains -4 to any saves against the forced movement.;Forced movement from attacks increased by 1. -4 to enemy forced movement saves.
-Ground Holder;Defender Grit;Role;4;Defender role;"+1 Fortitude.
+Mighty Blow;Defender Position;Role, Defender;4;Defender role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, and the enemy gains -4 to any saves against the forced movement.;Forced movement from attacks increased by 1. -4 to enemy forced movement saves.
+Ground Holder;Defender Grit;Role, Defender;4;Defender role;"+1 Fortitude.
 Enemy Forced Movement on you is reduced by 1.
 Your melee attacks ignore the hit penalty from being prone.";+1 Fortitude. Forced movement reduced by 1. No melee attack penalty while prone.
-Constant Vigilance;Defender Grit;Role;4;Defender role;"+1 Will.
+Constant Vigilance;Defender Grit;Role, Defender;4;Defender role;"+1 Will.
 You can use Reactions and make Opportunity Attacks while Dazed or Stunned.";+1 Will. Can use Reactions, Opportunity attacks while dazed, stunned.
-Unstoppable Defender;Defender Grit;Role;4;Defender role;"+1 Reflex.
+Unstoppable Defender;Defender Grit;Role, Defender;4;Defender role;"+1 Reflex.
 While Slowed, the first square you enter each turn does not cost any additional movement.
 While Immobilized or Restrained, you can spend a Move Action to move 1 square.
 When you use a Crawl action to move while prone, you move an extra square.";+1 Reflex. Can move an extra square while Slowed, Immobilized, Restrained, Prone.
-Taunting Mark;Defender Mark;Role, Paragon;11;Defender role;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
-Deadly Mark;Defender Mark;Role, Paragon;11;Defender role;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
-Meat Shield;Defender Mark;Role, Paragon;11;Defender role;"You grant cover to all allies adjacent to you.
+Taunting Mark;Defender Mark;Role, Defender, Paragon;11;Defender role;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
+Deadly Mark;Defender Mark;Role, Defender, Paragon;11;Defender role;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
+Meat Shield;Defender Mark;Role, Defender, Paragon;11;Defender role;"You grant cover to all allies adjacent to you.
 Allies adjacent to you gain Resist All (Burst or Blast).";Adjacent allies gain cover, resist (burst, blast)
-Fancy Footwork;Striker Agility;Role;4;Striker role;"When you shift, the shift distance is increased by 1 square.
+Fancy Footwork;Striker Agility;Role, Striker;4;Striker role;"When you shift, the shift distance is increased by 1 square.
 When you use the Shifting Maneuver, the penalty to attack rolls is reduced by 1.";+1 Shift. Shift attack penalty reduced by 1.
 Quick Feet;Striker Agility;Role;4;Striker role;You can move 1 square as a Minor Action.;Move 1 as Minor Action.
-Escape Artist;Striker Agility;Role;4;Striker role;" +2 to all defenses against Opportunity Attacks.
+Escape Artist;Striker Agility;Role, Striker;4;Striker role;" +2 to all defenses against Opportunity Attacks.
 At the start of turn, you can make a save to ignore one of the following conditions until end of turn: Slowed, Immobilized, Restrained, Grabbed.";" +2 to all defenses vs Opportunity Attacks.
 Save to ignore Slow, Immobilize, Restrain, Grab"
-Low Profile;Striker Defense;Role;4;Striker role;Against enemies marked by your allies and not marked by you, +1 to all defenses, and Lesser Resist all (Critical Hits).; +1 to all defenses vs enemies marked by your allies, and Lesser Resist All (Critical Hits)
-Blind Spot;Striker Defense;Role;4;Striker role;+2 to all defenses against enemies you flank.;+2 to all defenses vs enemies you flank.
-Deterring Strike;Striker Defense;Role;4;Striker role;The first time you hit an enemy each turn, that enemy gains -2 to hit you until the end of your next turn.;The first enemy hit by you each turn gains -2 to hit you next turn.
-Cunning Duelist;Striker Deadliness;Role;11;Striker role;When attacking, gain Combat Advantage if your and the target have no adjacent creatures other than each other.;Combat Advantage when you and target have no other creatures adjacent.
-Dirty Fighting;Striker Deadliness;Role;11;Striker role;When attacking with Combat Advantage, +1 hit.;+1 hit with Combat Advantage.
-Lethal Weapon;Striker Deadliness;Role;11;Striker role;"Your weapon attacks gain +1 damage per W, +1 Miss Damage per W.
+Low Profile;Striker Defense;Role, Striker;4;Striker role;Against enemies marked by your allies and not marked by you, +1 to all defenses, and Lesser Resist all (Critical Hits).; +1 to all defenses vs enemies marked by your allies, and Lesser Resist All (Critical Hits)
+Blind Spot;Striker Defense;Role, Striker;4;Striker role;+2 to all defenses against enemies you flank.;+2 to all defenses vs enemies you flank.
+Deterring Strike;Striker Defense;Role, Striker;4;Striker role;The first time you hit an enemy each turn, that enemy gains -2 to hit you until the end of your next turn.;The first enemy hit by you each turn gains -2 to hit you next turn.
+Cunning Duelist;Striker Deadliness;Role, Striker, Paragon;11;Striker role;When attacking, gain Combat Advantage if your and the target have no adjacent creatures other than each other.;Combat Advantage when you and target have no other creatures adjacent.
+Dirty Fighting;Striker Deadliness;Role, Striker, Paragon;11;Striker role;When attacking with Combat Advantage, +1 hit.;+1 hit with Combat Advantage.
+Lethal Weapon;Striker Deadliness;Role, Striker, Paragon;11;Striker role;"Your weapon attacks gain +1 damage per W, +1 Miss Damage per W.
 Your implement attacks gain +1 damage per die, +1 Miss Damage per die.";+1 damage and +1 Miss Damage per W or die.
-Hole in the Fire;Blaster Finesse;Role;4;Controller role;When making a blast or burst attack, you can take a -2 penalty to hit with the attack and choose an ally in the blast or burst. That ally is not affected by the attack.;On blast or burst attack, take a -2 penalty to hit to exclude an ally in the area from getting targeted by the attack.
-Controlled Explosion;Blaster Finesse;Role;4;Controller role;"When making an area attack, you ignore the hit penalty from centering the burst on a square with Cover or Concealment.
+Hole in the Fire;Blaster Finesse;Role, Controller;4;Controller role;When making a blast or burst attack, you can take a -2 penalty to hit with the attack and choose an ally in the blast or burst. That ally is not affected by the attack.;On blast or burst attack, take a -2 penalty to hit to exclude an ally in the area from getting targeted by the attack.
+Controlled Explosion;Blaster Finesse;Role, Controller;4;Controller role;"When making an area attack, you ignore the hit penalty from centering the burst on a square with Cover or Concealment.
 When making a close attack, you can choose a square adjacent to you, and place the origin of the attack as if you were in that square. You are still unaffected by that attack.";You take no hit penalty for centering area attacks on squares with cover or concealment. You can center a close attack in a square adjacent to you.
-Eye of the Storm;Blaster Finesse;Role;4;Controller role;"When making an area attack, -5 to hit targets in the origin square, and +1 to hit other targets.
+Eye of the Storm;Blaster Finesse;Role, Controller;4;Controller role;"When making an area attack, -5 to hit targets in the origin square, and +1 to hit other targets.
 When making a close blast attack, -5 to hit targets adjacent to you, and +1 to hit other targets.";In your area burst attacks, -5 to hit targets in the origin, and +1 to hit other targets. In your close blast attacks, -5 to hit targets adjacent to you, and+1 to hit other targets.
-Gone with the Wind;Controller Terrain;Role;4;Controller role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, or by 2 if you have Combat Advantage for the attack.;Forced movement from attacks increased by 1, or by 2 with Combat Advantage.
-Sustained Assault;Controller Terrain;Role;4;Controller role;"HP for your summoned creatures is increased by 5 per tier.
+Gone with the Wind;Controller Terrain;Role, Controller;4;Controller role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, or by 2 if you have Combat Advantage for the attack.;Forced movement from attacks increased by 1, or by 2 with Combat Advantage.
+Sustained Assault;Controller Terrain;Role, Controller;4;Controller role;"HP for your summoned creatures is increased by 5 per tier.
 Whenever you sustain a power or give a command to a summoned creature, you gain +1 hit and +1 to defenses until the start of your next turn."; +5 Summon HP per tier. +1 hit and defenses when you sustain or command.
-Slow Motion;Controller Terrain;Role;4;Controller role;"When hitting with an attack with a single target, the target is Slowed until the end of your next turn.
+Slow Motion;Controller Terrain;Role, Controller;4;Controller role;"When hitting with an attack with a single target, the target is Slowed until the end of your next turn.
 Gain Combat advantage against Slowed enemies.";Slow on single target attack hit. Combat Advantage vs Slowed.
-Stable Affliction;Controller Weakening;Role;4;Controller role;Enemies gain -3 to Saving Throws against your effects.;-3 to Saving Throws.
-Confusion in the Ranks;Controller Weakening;Role;4;Controller role;The first time you hit a non-marked enemy each turn, that enemy is marked by an ally of your choice until the end of your next turn.;On first hit each turn, have ally mark target.
-Weakening Blow;Controller Weakening;Role;4;Controller role;"When hitting with a weapon attack with a single target, the target gains -3 damage per W of your attack on its next attack before the end of your next turn.
+Stable Affliction;Controller Weakening;Role, Controller;4;Controller role;Enemies gain -3 to Saving Throws against your effects.;-3 to Saving Throws.
+Confusion in the Ranks;Controller Weakening;Role, Controller;4;Controller role;The first time you hit a non-marked enemy each turn, that enemy is marked by an ally of your choice until the end of your next turn.;On first hit each turn, have ally mark target.
+Weakening Blow;Controller Weakening;Role, Controller;4;Controller role;"When hitting with a weapon attack with a single target, the target gains -3 damage per W of your attack on its next attack before the end of your next turn.
 When hitting with an implement attack with a single target, the target gains -3 damage per damage die of your attack on its next attack before the end of your next turn.";On single target attack hit, target gains -3 damage per W/die of your attack.
-Chain Reaction;Blaster Explosion;Role, Paragon;11;Controller role;When you score a critical hit, all creatures targeted by the attack take 5 damage per tier. This damaged is not multiplied by the crit.;On crit, 5 damage per tier to all targets of the attack.
-Ground Zero;Blaster Explosion;Role, Paragon;11;Controller role;When you make an area attack or a close Blast attack, +2 to hit targets in the origin square.;+2 hit vs target in origin space of burst or blast.
-Crowd Control;Blaster Explosion;Role, Paragon;11;Controller role; +1 hit on attacks with multiple targets and on Secondary Attacks.;+1 hit on attacks with multiple targets.
-Master Healer;Leader Heal;Role;4;Leader role;When you use a Healing power, creatures spending a Surge due to that power gain +5 per tier to their Surge Value.;Healing grants +5 Surge Value per tier.
-Saving Grace;Leader Heal;Role;4;Leader role;When you use a Healing power, creatures spending a Surge due to that power can make a Saving Throw to end an effect that a save can end or to ignore a condition during their next turn.;Healing grants free Saving Throw.
-Shield Mate;Leader Heal;Role;4;Leader role;When you grant Temporary Hit Points to an ally, increase the THP by 2 per tier.;Temporary Hit Points granted to allies increased by 2 per tier.
-Word of Caution;Leader Maneuver;Role;4;Leader role;"When you use a Healing power, creatures spending a Surge due to that power gain +1 to all defenses until the end of your next turn.
+Chain Reaction;Blaster Explosion;Role, Controller, Paragon;11;Controller role;When you score a critical hit, all creatures targeted by the attack take 5 damage per tier. This damaged is not multiplied by the crit.;On crit, 5 damage per tier to all targets of the attack.
+Ground Zero;Blaster Explosion;Role, Controller, Paragon;11;Controller role;When you make an area attack or a close Blast attack, +2 to hit targets in the origin square.;+2 hit vs target in origin space of burst or blast.
+Crowd Control;Blaster Explosion;Role, Controller, Paragon;11;Controller role; +1 hit on attacks with multiple targets and on Secondary Attacks.;+1 hit on attacks with multiple targets.
+Master Healer;Leader Heal;Role, Leader;4;Leader role;When you use a Healing power, creatures spending a Surge due to that power gain +5 per tier to their Surge Value.;Healing grants +5 Surge Value per tier.
+Saving Grace;Leader Heal;Role, Leader;4;Leader role;When you use a Healing power, creatures spending a Surge due to that power can make a Saving Throw to end an effect that a save can end or to ignore a condition during their next turn.;Healing grants free Saving Throw.
+Shield Mate;Leader Heal;Role, Leader;4;Leader role;When you grant Temporary Hit Points to an ally, increase the THP by 2 per tier.;Temporary Hit Points granted to allies increased by 2 per tier.
+Word of Caution;Leader Maneuver;Role, Leader;4;Leader role;"When you use a Healing power, creatures spending a Surge due to that power gain +1 to all defenses until the end of your next turn.
 When you grant a power bonus to a defense to an ally, that bonus is increased by 1.";Healing grants +1 to defenses. Power bonuses to a defense increased by 1 on allies.
-Fast Healing;Leader Maneuver;Role;4;Leader role;"When you use a Healing power, creatures spending a Surge due to that power gain +3 Movement Speed until the end of your next turn.
+Fast Healing;Leader Maneuver;Role, Leader;4;Leader role;"When you use a Healing power, creatures spending a Surge due to that power gain +3 Movement Speed until the end of your next turn.
 When you grant an action to an ally, any movement or shift in that action is increased by 1.
 When you grant forced movement to an ally, the forced movement is increased by 1.";Healing grants +3 Movement Speed. On actions granted to allies, +1 Movement Speed and +1 Shift. Forced movement to allies increased by 1.
-Rallying Cry;Leader Maneuver;Role;4;Leader role;When rolling for Initiative, allies that can see you gain +1 to all defenses until the end of the first combat round, and +1 to Initiative.;Allies gain +1 Initiative, +1 to defenses on first combat round.
-Adrenaline Rush;Leader Offense;Role, Paragon;11;Leader role;When you use a Healing power, creatures spending a Surge due to that power gain +2 to hit and +1 to Action Point rolls until the end of your next turn.;Healing grants +2 hit, +1 to Action Point Rolls.
-Point Flank;Leader Offense;Role, Paragon;11;Leader role;Allies gain +1 to hit and +1 damage per tier against enemies you flank.;Flanking grants +1 hit, +1 damage per tier to allies.
-Constructive Criticism;Leader Offense;Role, Paragon;11;Leader role;While you grant a power bonus to hit or damage to an ally, that ally gains +1 Crit Range.;With power bonus to hit or damage, allies gain +1 Crit Range.
+Rallying Cry;Leader Maneuver;Role, Leader;4;Leader role;When rolling for Initiative, allies that can see you gain +1 to all defenses until the end of the first combat round, and +1 to Initiative.;Allies gain +1 Initiative, +1 to defenses on first combat round.
+Adrenaline Rush;Leader Offense;Role, Leader, Paragon;11;Leader role;When you use a Healing power, creatures spending a Surge due to that power gain +2 to hit and +1 to Action Point rolls until the end of your next turn.;Healing grants +2 hit, +1 to Action Point Rolls.
+Point Flank;Leader Offense;Role, Leader, Paragon;11;Leader role;Allies gain +1 to hit and +1 damage per tier against enemies you flank.;Flanking grants +1 hit, +1 damage per tier to allies.
+Constructive Criticism;Leader Offense;Role, Leader, Paragon;11;Leader role;While you grant a power bonus to hit or damage to an ally, that ally gains +1 Crit Range.;With power bonus to hit or damage, allies gain +1 Crit Range.
 Paragon Ability;;Paragon, Ability;11;;Choose a Tertiary ability. Gain +1 to that ability and to your Weak ability.;Increase a tertiary ability by 1.
 Martial Prowess;Power Source;Martial;11;Martial power source; +1 Fortitude, +1 Reflex, +3 Initiative; +1 Fortitude, +1 Reflex, +3 Initiative
 Divine Resolve;Power Source;Divine;11;Divine power source; +1 Fortitude, +1 Will, +5 Surge value per tier; +1 Fortitude, +1 Will, +5 Surge value per tier

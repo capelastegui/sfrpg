@@ -9,25 +9,32 @@ feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
 feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
  
 pasteRequirements <-function(req, level)
-{
-  if (level==1) {req}  else
-  if (req=="") {paste("Level",level)}else
-  {paste (req,", Level", level)}
+{#TODO: VECTORIZE!
+  
+  if (level==1) {tmp <-req}  else
+  if (req=="") {tmp<-paste("Level",level)}else
+  {tmp<-paste (req,", Level", level)}
+  tmp
 }
 
-feat.raw.df <- read.csv(feat.raw, sep=";")%.% tbl_df() %.% group_by(Category) %.% arrange(Level,Category,Keywords, Name)
+pasteRequirements <-function(req, level)
+{#TODO: VECTORIZE!
+  tmp <- req
+  emptyReqIndex <- level>1 & req==""
+  fullReqIndex  <- level>1 & req!=""
+  tmp[emptyReqIndex] <- paste("Level",level[emptyReqIndex])
+  tmp[fullReqIndex] <- paste(req[fullReqIndex],", Level",level[fullReqIndex])
+  tmp                            
+}
+
+
+
+feat.raw.df <- read.csv(feat.raw, sep=";")%.% tbl_df() %.% group_by(Category) %.% arrange(Level,Category, Keywords, Name) %.% filter(Name!="")
+feat.raw.df <- gsubColwise(feat.raw.df,"\\n","<br>")
 feat.raw.df <- feat.raw.df %.% mutate(Requirements=pasteRequirements(as.character(Requirements),Level)) %.% select(-Level)
-feat.raw.df$Requirements <-as.character (feat.raw.df$Requirements)
-emptyReqIndex <-feat.raw.df$Level>1 & feat.raw.df$Requirements == ""
-nonemptyReqIndex <-feat.raw.df$Level>1 & feat.raw.df$Requirements != ""
-feat.raw.df$Requirements[feat.raw.df$Level>1 & feat.raw.df$Requirements != ""]<-
-  paste(feat.raw.df$Requirements[feat.raw.df$Level>1 & feat.raw.df$Requirements != ""], ", Level ",
-        feat.raw.df$Level[feat.raw.df$Level>1 & feat.raw.df$Requirements != ""], sep="")
-feat.raw.df$Requirements[feat.raw.df$Level>1 & feat.raw.df$Requirements == ""]<-
-  paste("Level ",feat.raw.df$Level[feat.raw.df$Level>1 & feat.raw.df$Requirements == ""], sep="")
 
 feat.tag.df <- read.csv(feat.tag, sep=";")
-feat.raw.df <- gsub.dataframe(feat.raw.df,"\\n","<br>")
+
 
 feat.tag.pre<- feat.tag.df[1,]
 feat.tag.post<- feat.tag.df[2,]
