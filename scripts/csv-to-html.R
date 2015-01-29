@@ -27,7 +27,16 @@ buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
 }
 
 
-gsubColwise <-  colwise(.fun=(function(df1, pattern,replacement){gsub(pattern,replacement,df1)}))
+#gsubColwise <-  colwise(.fun=(function(df1, pattern,replacement){gsub(pattern,replacement,df1)}))
+
+gsubColwise <-  colwise(.fun=(function(df1, pattern,replacement)
+  {
+  tmp <-df1
+  #if(is.character(df1)|is.factor(df1))   {tmp<- gsub(pattern,replacement,df1)}
+  if(is.character(df1)|is.factor(df1))   {tmp<- as.factor(gsub(pattern,replacement,df1))}
+  #if(is.factor(df1))  {tmp<-as.factor(gsub(pattern,replacement,df1))}
+  tmp  
+  }))
 
 gsub.dataframe <- function(dataframe,pattern,replacement)
 {
@@ -46,3 +55,7 @@ gsub.dataframe <- function(dataframe,pattern,replacement)
   df2
 }
 
+
+refactor<-function(data)
+{colwise(function(col) {if (is.factor(col)) factor(col)  else col }) (data)
+}
