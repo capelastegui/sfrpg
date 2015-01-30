@@ -7,7 +7,8 @@ feat.tag <- file.path(basedir,"raw","Feats-tags.csv")
 css.file <- file.path(basedir,"raw","SFRPG.css")
 feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
 feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
- 
+
+# No longer used
 pasteRequirements <-function(req, level)
 {#TODO: VECTORIZE!
   tmp <- as.character(req)
@@ -18,29 +19,23 @@ pasteRequirements <-function(req, level)
   as.factor(tmp)
 }
 
-
-
 feat.raw.df <- read.csv(feat.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
 feat.raw.df <- gsubColwise(feat.raw.df,"\\n","<br>")
-#feat.raw.df <- feat.raw.df %>% mutate(Requirements=pasteRequirements(as.character(Requirements),Level)) %>% select(-Level)
-feat.raw.df <- feat.raw.df %>% mutate(Requirements=pasteRequirements((Requirements),Level)) %>% select(-Level)
+
+#Changed, level is now showed in column.
+#feat.raw.df <- feat.raw.df %>% mutate(Requirements=pasteRequirements((Requirements),Level)) %>% select(-Level)
 
 
 feat.tag.df <- read.csv(feat.tag, sep=";")
-
-
 feat.tag.pre<- feat.tag.df[1,]
 feat.tag.post<- feat.tag.df[2,]
 
 css <- readChar(css.file, file.info(css.file)$size)
 
 
-feat.htm<-buildElementApply(feat.raw.df, feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
-#write(feat.htm,feat.htm.file)
-
+#Build feat tables
 rolesIndices <-grepl("Role",feat.raw.df$Keywords)
 lesserIndices <-grepl("Lesser",feat.raw.df$Category)
-
 
 feat.table.roles <- feat.raw.df %>% filter (rolesIndices)
 feat.table.lesser <- feat.raw.df %>% filter (lesserIndices)
@@ -73,6 +68,10 @@ feat.table.htm <- c(feat.table.rest.htm, Roles=feat.table.roles.htm, Lesser=feat
 feat.table.htm<-paste(feat.table.htm,collapse="<br> ")
 
 write(feat.table.htm,feat.table.htm.file)
+
+#Build full text descriptions
+feat.htm<-buildElementApply(feat.raw.df %>% arrange(Name), feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
+
 
 feat.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
                    css,

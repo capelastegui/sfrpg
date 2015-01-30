@@ -2,15 +2,14 @@ Name;Category;Keywords;Level;Requirements;Text;Summary
 Focus: Caster's Weapon;Focus;Flexible;1;Proficiency with a weapon that can be used as implement;"On weapon attacks with the chosen weapon, +1 damage per W. 
 On implement attacks with the chosen weapon, +1 damage per damage die. 
 When making a ranged or area implement attack with the chosen weapon, choose an adjacent enemy; the attack does not provoke Opportunity Attacks from that enemy.";With Implement Weapon, +1 damage per W/die, no opportunity attacks for ranged and area attacks.
-Focus: Parrying Staff;Focus;Flexible, Staff;1;Weapon Proficiency with Staff;"On weapon attacks with a Staff, +1 damage per W.
-On implement atacks with a Staff, +1 damage per damage die.
-Your Staff gains Parry (+1 AC vs melee attacks)";With Staff, +1 damage per W/die, +1 AC vs melee.
+Focus: Parrying Staff;Focus;Flexible, Staff;1;Weapon Proficiency with Staff;"On weapon attacks with a Staff, +1 Miss Damage per W.
+On implement atacks with a Staff, +1 Miss Damage per damage die.
+Your Staff gains Parry (+1 AC vs melee attacks)";With Staff, +1 Miss Damage per W/die, +1 AC vs melee.
 Focus: Pushing Staff;Focus;Flexible, Staff;1;Implement Proficiency with a Staff;"On weapon attacks with a staff, +1 damage per W.
 On implement attacks with a staff, +1 damage per die.
 When you make an implement attack that causes forced movement while wielding a staff, choose a targeted enemy. The forced movement for that enemy is increased by 1 square.";With Staff, +1 damage per W/die, +1 forced movement.
-Focus: Unerring Staff;Focus;Flexible, Staff;1;Implement Proficiency with a Staff;"On weapon attacks with a staff, +1 damage per W
-On implement attacks with a staff, +1 damage per die.
-On implement attacks with a staff, +1 Miss Damage per die.";With Staff, +1 damage and Miss Damage per W/die.
+Focus: Unerring Staff;Focus;Flexible, Staff;1;Implement Proficiency with a Staff;"On weapon attacks with a staff, +1 damage per W and +1 Miss Damage per W
+On implement attacks with a staff, +1 damage per die and +1 Miss Damage per W.";With Staff, +1 damage and Miss Damage per W/die.
 Dual Focus;Focus;Flexible;1;"Proficiency with an implement. 
 A weapon attack power.
 An implement attack power.";"On weapon attacks, +1 damage per W.
@@ -118,16 +117,15 @@ Juggernaut Plate;Defense Focus;Armor, Plate;1;Plate Armor Proficiency;While wear
 Blast Shield;Defense Focus;Armor, Shield;1;Shield Proficiency;While wearing a Shield, +1 AC, and +1 to all defenses against Blast and Burst attacks.;With Shield, +1 AC, +1 to all defenses vs blast, burst
 Wind Shield;Defense Focus;Armor, Shield;1;Shield Proficiency;While wearing a Shield, +1 AC, and +1 to all defenses against Ranged attacks.;With Shield, +1 AC, +1 to all defenses vs ranged
 Bashing Shield;Defense Focus;Armor, Shield;1;Shield Proficiency;While wearing a Shield, +1 AC, and when you push an enemy with a melee or close attack, the forced movement is increased by 1 square unless the enemy makes a save.;With Shield, +1 AC, increase forced movement by 1 on failed save.
-Ambush Armor;Defense Focus;Armor;1;Hide Armor Proficiency or Heavy Shield Proficiency;+1 AC, and your Armor Penalty to Initiative, and Stealth and Acrobatics skills is reduced by 1.;With any Armor, +1 AC, Armor Penalty to Initiative, Stealth, Acrobatics reduced by 1.
-Nimble Armor;Defense Focus;Armor;1;Hide Armor Proficiency or Heavy Shield Proficiency;+1 AC, and your Armor Penalty to Stealth, Thievery, Acrobatics, Athletics and Endurance skills is reduced by 1.;+1 AC, Armor Penalty to Stealth, Thievery, Acrobatics, Athletics, Endurance reduced by 1
-Initiative Armor;Defense Focus;Armor;1;Hide Armor Proficiency or Heavy Shield Proficiency;+1 AC, and your Armor Penalty to Initiative is reduced by 2.;+1 AC, and Armor Penalty to Initiative reduced by 2
-Strong Armor;Defense Focus;Armor;1;Hide Armor Proficiency or Heavy Shield Proficiency;+1 AC, and your Armor Penalty to Athletics and Endurance skills is reduced by 3.;+1 AC, and Armor Penalty to Athletics, Endurance reduced by 3
+Ambush Armor;Defense Focus;Armor;1;Hide Armor Proficiency or Heavy Shield Proficiency; +1 AC, and your Armor Penalty to Initiative, and skills is reduced by 1.; +1 AC, Armor Penalty to Initiative and skills reduced by 1
+Nimble Armor;Defense Focus;Armor;1;Hide Armor Proficiency or Heavy Shield Proficiency; +1 AC, and your Armor Penalty to skills is reduced by 3.; +1 AC, Armor Penalty to skills reduced by 3
+Initiative Armor;Defense Focus;Armor;1;Hide Armor Proficiency or Heavy Shield Proficiency;+1 AC, and your Armor Penalty to Initiative is reduced by 2.; +1 AC, Armor Penalty to Initiative reduced by 2
 Toughness;Toughness;;1;;+5 HP per tier.;+5 HP per tier.
-Surging Toughness;Toughness;;1;;+3 HP per tier, and +3 Surge Value per tier.;+3 HP per tier, and +3 Surge Value per tier.
-Undying Toughness;Toughness;;1;;+3 HP per tier, and +3 to Death Saving Throws.;+3 HP per tier, and +3 to Death Saving Throws.
+Surging Toughness;Toughness;;1;; +3 HP per tier, and +4 Surge Value per tier.; +3 HP per tier, and +4 Surge Value per tier.
+Die Hard;Toughness;;1;;+3 HP per tier, and +3 to Death Saving Throws.;+3 HP per tier, and +3 to Death Saving Throws.
 Toughness in Numbers;Toughness;;1;;+3 HP per tier, and +5 HP per tier to Animal Companions, Familiars, and Summoned Creatures; +3 HP per tier, and +5 HP per tier to pets.
 Martial Weapon Training;;Weapon;1;;Gain Training in all Simple weapons and One-Hand Martial weapons.;Training in Simple and One-Hand Martial weapons.
-Superior Weapon Training;;Weapon;1;Proficiency with a martial weapon;Gain Training in all Two-Hand Martial weapons;Training in all Two-Hand Martial weapons
+Superior Weapon Training;;Weapon;1;Proficiency with a martial weapon;Gain Training in all Two-Hand Martial weapons;Training in Two-Hand Martial weapons
 Leather Armor Proficiency;;Armor;1;;Gain proficiency with Leather Armor;Proficiency with Leather
 Hide Armor Proficiency;;Armor;1;Leather Armor Proficiency;Gain proficiency with Hide Armor;Proficiency with Hide
 Chain Armor Proficiency;;Armor;1;Hide Armor Proficiency;Gain proficiency with Chain Armor;Proficiency with Chain
@@ -139,22 +137,19 @@ Imposing Presence;Defender Position;Role, Defender;4;Defender role;Squares adjac
 Hamstring Opportunity;Defender Position;Role, Defender;4;Defender role;"Enemies hit by your Opportunity Attacks and Reaction attacks are Slowed until the end of their next turn.
 Gain Combat Advantage against Slowed enemies.";Opportunity attacks and reaction attacks slow enemies. Combat advantage against slowed enemies.
 Mighty Blow;Defender Position;Role, Defender;4;Defender role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, and the enemy gains -4 to any saves against the forced movement.;Forced movement from attacks increased by 1. -4 to enemy forced movement saves.
-Ground Holder;Defender Grit;Role, Defender;4;Defender role;" +1 Fortitude.
-Enemy Forced Movement on you is reduced by 1.
-Your melee attacks ignore the hit penalty from being prone or standing up.";+1 Fortitude. Forced movement reduced by 1. No melee attack penalty while prone.
+Pain Insensitivity;Defender Grit;Role, Defender;4;Defender role;" +1 Fortitude. +3 Surge Value per tier. 
+When you gain Shield Points, increase the amount by 2 per tier.";+1 Fortitude. Forced movement reduced by 1. No melee attack penalty while prone.
 Constant Vigilance;Defender Grit;Role, Defender;4;Defender role;"+1 Will.
 You can use Reactions and make Opportunity Attacks while Dazed or Stunned.";+1 Will. Can use Reactions, Opportunity attacks while dazed, stunned.
-Unstoppable Defender;Defender Grit;Role, Defender;4;Defender role;"+1 Reflex.
-While Slowed, the first square you enter each turn does not cost any additional movement.
-While Immobilized or Restrained, you can spend a Move Action to move 1 square.
-When you use a Crawl action to move while prone, you move an extra square.";+1 Reflex. Can move an extra square while Slowed, Immobilized, Restrained, Prone.
+Unstoppable Defender;Defender Grit;Role, Defender;4;Defender role;" +1 Reflex.
+Whenever you are subject to any of the following effects, as a Spontaneous Reaction you can make a save to prevent the effect: Slowed, Immobilized, Restrained, Grabbed, Prone, Forced Movement."; +1 Reflex. Save to prevent Slowed, Immobilized, Restrained, Grabbed, Prone, Forced Movement.
 Taunting Mark;Defender Mark;Role, Defender, Paragon;11;Defender role;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
 Deadly Mark;Defender Mark;Role, Defender, Paragon;11;Defender role;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
 Meat Shield;Defender Mark;Role, Defender, Paragon;11;Defender role;"You grant cover to all allies adjacent to you.
 Allies adjacent to you gain Resist All (Burst or Blast).";Adjacent allies gain cover, resist (burst, blast)
 Fancy Footwork;Striker Agility;Role, Striker;4;Striker role;"When you shift, the shift distance is increased by 1 square.
 When you use the Shifting Maneuver, the penalty to attack rolls is reduced by 1.";+1 Shift. Shift attack penalty reduced by 1.
-Quick Feet;Striker Agility;Role;4;Striker role;You can move 1 square as a Minor Action.;Move 1 as Minor Action.
+Quick Feet;Striker Agility;Role, Striker;4;Striker role;You can move 1 square as a Minor Action.;Move 1 as Minor Action.
 Escape Artist;Striker Agility;Role, Striker;4;Striker role;" +2 to all defenses against Opportunity Attacks.
 At the start of turn, you can make a save to ignore one of the following conditions until end of turn: Slowed, Immobilized, Restrained, Grabbed.";" +2 to all defenses vs Opportunity Attacks.
 Save to ignore Slow, Immobilize, Restrain, Grab"
