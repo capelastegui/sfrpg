@@ -50,21 +50,30 @@ plotGrid <- function(grid.df)
 
 plotGrid <- function(grid.df)
 { 
-  grid.df$label  <- grid.df$value
-  grid.df$value<-revalue(grid.df$value, 
-                                 c("0"="Ground","X"="Block", "x"="Cover", 
-                                   "."="Cover Zone", ":"="Blocked Zone",
-                                   "A"="Character A","B"="Character B"))
-  grid.df$label<-revalue(grid.df$label, 
+  grid.df$label<-revalue(grid.df$value, 
                          c("0"="","X"="", "x"="", 
                            "."="", ":"="",
                            "A"="A","B"="B"))
-  
-  
+    
   ggplot(grid.df)+aes(y=-y,x=x,fill=value)+
     geom_tile(color="black")+
     geom_text(aes(label=label))+
-    scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
+    scale_x_continuous(breaks=NULL)+
+    scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL) + 
+    scale_fill_manual(
+      values = c("0"="lightgreen","X"="grey20", 
+                 "x"="tan4", 
+                 "."="tan", ":"="grey60",
+                 "A"="red3","B"="brown3"),
+      labels=c("0"="Ground","X"="Block", "x"="Cover", 
+               "."="Cover Zone", ":"="Blocked Zone",
+               "A"="Character A","B"="Character B"))
+  
+    
+#   grid.df$label<-revalue(grid.df$label, 
+#                          c("0"="","X"="", "x"="", 
+#                            "."="", ":"="",
+#                            "A"="A","B"="B"))
 }
 
 
