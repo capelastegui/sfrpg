@@ -31,21 +31,21 @@ meltGridCsv <- function (gridfile)
 }
 
 
-plotGrid <- function(grid.df)
-{ 
-  grid.df.characters <-grid.df %>% filter (value %in% c("A","B"))
-  grid.df.squares    <- grid.df
-  grid.df.squares$value<-revalue(grid.df.squares$value, 
-                        c("0"="Ground","X"="Block", "x"="Cover", 
-                          "."="Cover Zone", ":"="Blocked Zone",
-                          "A"="Character A","B"="Character B"))
-  
-  
-  ggplot(grid.df.squares)+aes(y=-y,x=x,fill=value)+
-    geom_tile(color="black")+
-    geom_text(aes(label=value),data=grid.df.characters)+
-    scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
-}
+# plotGrid <- function(grid.df)
+# { 
+#   grid.df.characters <-grid.df %>% filter (value %in% c("A","B"))
+#   grid.df.squares    <- grid.df
+#   grid.df.squares$value<-revalue(grid.df.squares$value, 
+#                         c("0"="Ground","X"="Block", "x"="Cover", 
+#                           "."="Cover Zone", ":"="Blocked Zone",
+#                           "A"="Character A","B"="Character B"))
+#   
+#   
+#   ggplot(grid.df.squares)+aes(y=-y,x=x,fill=value)+
+#     geom_tile(color="black")+
+#     geom_text(aes(label=value),data=grid.df.characters)+
+#     scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
+# }
 
 
 plotGrid <- function(grid.df)
@@ -55,8 +55,8 @@ plotGrid <- function(grid.df)
                            "."="", ":"="",
                            "A"="A","B"="B"))
     
-  ggplot(grid.df)+aes(y=-y,x=x,fill=value)+
-    geom_tile(color="black")+
+  ggplot(grid.df)+aes(y=-y,x=x)+
+    geom_tile(color="black", aes(fill=value))+
     geom_text(aes(label=label))+
     scale_x_continuous(breaks=NULL)+
     scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL) + 
@@ -64,10 +64,12 @@ plotGrid <- function(grid.df)
       values = c("0"="lightgreen","X"="grey20", 
                  "x"="tan4", 
                  "."="tan", ":"="grey60",
-                 "A"="red3","B"="brown3"),
+                 "A"="red3","B"="brown3",
+                 "-"=NULL, "/"=NULL),
       labels=c("0"="Ground","X"="Block", "x"="Cover", 
                "."="Cover Zone", ":"="Blocked Zone",
-               "A"="Character A","B"="Character B"))
+               "A"="Character A","B"="Character B",
+               "-"="", "/"=""))
   
     
 #   grid.df$label<-revalue(grid.df$label, 
@@ -95,7 +97,7 @@ plotGrid <- function(grid.df)
 
 #TODO: function to plot single line. Avoid artefacts.
 
-
+#TODO: make this work with a list of n line plots. How to do ggplot.+  with lists?
 plotGridLOS <- function(grid.df, grid.line.plot=NULL)
 { 
   if (is.null(grid.line.plot)){
@@ -106,8 +108,18 @@ plotGridLOS <- function(grid.df, grid.line.plot=NULL)
     plotGrid(grid.df)+
     grid.line.plot[1]+grid.line.plot[2]+
     grid.line.plot[3]+grid.line.plot[4]+
-    scale_alpha_discrete(range = c(0, 1),guide=FALSE)+
-    scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
+    scale_fill_manual(
+      values = c("0"="lightgreen","X"="grey20", 
+                 "x"="tan4", 
+                 "."="tan", ":"="grey60",
+                 "A"="red3","B"="brown3",
+                 "-"=NULL, "/"=NULL),
+      labels=c("0"="Ground","X"="Block", "x"="Cover", 
+               "."="Cover Zone", ":"="Blocked Zone",
+               "A"="Character A","B"="Character B",
+               "-"="", "/"=""))
+    #scale_alpha_discrete(range = c(0, 1),guide=FALSE)+
+    #scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
 }
 
 
@@ -132,11 +144,10 @@ plotGridLOS <- function(grid.df, grid.line.plot=NULL)
 #     scale_x_continuous(breaks=NULL)+scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL)
 # }
 
-plotLOS <-  function(grid.df,color1="green",color2="green")
+plotLOS <-  function(grid.df,color1="darkgreen",color2="darkgreen")
 {
-
-    list(geom_path(data=grid.df%.% filter(line1),color=color1),
-         geom_path(data=grid.df%.% filter(line2),color=color2)  
+    list(geom_path(data=grid.df%.% filter(value=="/"), size=1.5,color=color1),
+         geom_path(data=grid.df%.% filter(value=="-"), size=1.5, color=color2)  
     )
   
 }
