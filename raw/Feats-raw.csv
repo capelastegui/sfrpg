@@ -62,9 +62,6 @@ Focus: Critical Sling;Focus;Weapon, Sling;1;Weapon Proficiency with a Sling;"On 
 On weapon attacks with a Sling, +1 Crit Range.";With Sling, +1 damage per W, +1 Crit Range.
 Focus: Cautious Sling;Focus;Weapon, Sling;1;Weapon Proficiency with a Sling;"On weapon attacks with a Sling, +1 damage per W.
 When using a Recharge action, gain a +2 Defense bonus to all defenses until your next turn.";With Sling, +1 damage per W, +2 to defenses on Recharge.
-Focus: Dual Wield Parry;Focus;Weapon, Dual Wield;1;;"On weapon attacks while wielding a melee weapon in each hand, +1 damage per W.
-While wielding a melee weapon in each hand, your melee weapons gain Parry (+1 AC against melee attacks).";When dual wielding, +1 damage per W, +1 AC vs melee.
-Focus: Twin Weapon Focus;Focus;Weapon, Dual Wield;1;;On weapon attacks while wielding a melee weapon of the same type in each hand, +2 damage per W.;When dual wielding, +2 damage per W.
 Focus: Weapon Master;Focus;Weapon;1;;"On weapon attacks, +1 damage per W.
 When using the Draw action, the move distance is increased to half your move speed.
 When using the Quick Draw action, you do not gain the penalty to attack rolls.";With weapons, +1 damage per W. Extra move on Draw, no penalty on Quick Draw.
@@ -137,22 +134,25 @@ Imposing Presence;Defender Position;Role, Defender;4;Defender role;Squares adjac
 Hamstring Opportunity;Defender Position;Role, Defender;4;Defender role;"Enemies hit by your Opportunity Attacks and Reaction attacks are Slowed until the end of their next turn.
 Gain Combat Advantage against Slowed enemies.";Opportunity attacks and reaction attacks slow enemies. Combat advantage against slowed enemies.
 Mighty Blow;Defender Position;Role, Defender;4;Defender role;When you inflict forced movement on an enemy with an attack, the forced movement is increased by 1, and the enemy gains -4 to any saves against the forced movement.;Forced movement from attacks increased by 1. -4 to enemy forced movement saves.
-Pain Insensitivity;Defender Grit;Role, Defender;4;Defender role;" +1 Fortitude. +3 Surge Value per tier. 
-When you gain Shield Points, increase the amount by 2 per tier.";+1 Fortitude. Forced movement reduced by 1. No melee attack penalty while prone.
-Constant Vigilance;Defender Grit;Role, Defender;4;Defender role;"+1 Will.
-You can use Reactions and make Opportunity Attacks while Dazed or Stunned.";+1 Will. Can use Reactions, Opportunity attacks while dazed, stunned.
+Pain Insensitivity;Defender Grit;Role, Defender;4;Defender role;" +1 Fortitude. +4 Surge Value per tier. 
+When you gain Shield Points, increase the amount by 2 per tier."; +1 Fortitude. +4 Surge Value per tier. +2 Shield Points per tier.
+Constant Vigilance;Defender Grit;Role, Defender;4;Defender role;" +1 Will.
+You can use Reactions and make Opportunity Attacks while Dazed,  Stunned or Dominated.
+Your Reaction Attacks ignore any penalties from Weakened, Blinded, Marked."; +1 Will. Can use Reactions, Opportunity attacks while dazed, stunned. Your Reactions ignore penalties from Weakened, Blinded, Marked.
 Unstoppable Defender;Defender Grit;Role, Defender;4;Defender role;" +1 Reflex.
-Whenever you are subject to any of the following effects, as a Spontaneous Reaction you can make a save to prevent the effect: Slowed, Immobilized, Restrained, Grabbed, Prone, Forced Movement."; +1 Reflex. Save to prevent Slowed, Immobilized, Restrained, Grabbed, Prone, Forced Movement.
-Taunting Mark;Defender Mark;Role, Defender, Paragon;11;Defender role;Enemies marked by you that are attacking allies not marking them gain -1 to hit with melee attacks and -2 to hit with non-melee attacks.;Marked enemies attacking allies gain -1 hit with melee attacks, -2 with non-melee attacks.
+Whenever you are subject to any of the following effects, as a Spontaneous Reaction you can make a save to prevent the effect: Slowed, Immobilized, Restrained, Grabbed, Prone, Forced Movement.
+Note: Any effect from the attack other than the prevented Condition or Forced Movement remains unaffected."; +1 Reflex. Save to prevent Slowed, Immobilized, Restrained, Grabbed, Prone, Forced Movement.
+Taunting Mark;Defender Mark;Role, Defender, Paragon;11;Defender role;When violating marks, enemies marked by you gain -1 to hit, and an additional -2 to hit with Opportunity Attacks.;Enemies violating your mark gain -1 hit, -2 hit with Opportunity Attacks.
 Deadly Mark;Defender Mark;Role, Defender, Paragon;11;Defender role;Enemies marked by you gain Vulnerable All (Your attacks) during their turn.;Marked enemies gain vulnerable against your reaction attacks
 Meat Shield;Defender Mark;Role, Defender, Paragon;11;Defender role;"You grant cover to all allies adjacent to you.
 Allies adjacent to you gain Resist All (Burst or Blast).";Adjacent allies gain cover, resist (burst, blast)
 Fancy Footwork;Striker Agility;Role, Striker;4;Striker role;"When you shift, the shift distance is increased by 1 square.
-When you use the Shifting Maneuver, the penalty to attack rolls is reduced by 1.";+1 Shift. Shift attack penalty reduced by 1.
-Quick Feet;Striker Agility;Role, Striker;4;Striker role;You can move 1 square as a Minor Action.;Move 1 as Minor Action.
-Escape Artist;Striker Agility;Role, Striker;4;Striker role;" +2 to all defenses against Opportunity Attacks.
-At the start of turn, you can make a save to ignore one of the following conditions until end of turn: Slowed, Immobilized, Restrained, Grabbed.";" +2 to all defenses vs Opportunity Attacks.
-Save to ignore Slow, Immobilize, Restrain, Grab"
+When you use the Shifting Maneuver, you have no hit penalty."; +1 Shift. No hit penalty from Shifting Maneuver.
+Quick Feet;Striker Agility;Role, Striker;4;Striker role;" +1 Movement Speed.
+You can move 1 square as a Minor Action."; +1 Speed. Move 1 as Minor Action.
+Escape Artist;Striker Agility;Role, Striker;4;Striker role;" +3 to all defenses against Opportunity Attacks.
+At the start of turn, you can make a save to ignore one of the following conditions until end of turn: Marked, Slowed, Immobilized, Restrained, Grabbed.";" +3 to all defenses vs Opportunity Attacks.
+Save to ignore Marked, Slow, Immobilize, Restrain, Grab"
 Low Profile;Striker Defense;Role, Striker;4;Striker role;Against enemies marked by your allies and not marked by you, +1 to all defenses, and Lesser Resist all (Critical Hits).; +1 to all defenses vs enemies marked by your allies, and Lesser Resist All (Critical Hits)
 Blind Spot;Striker Defense;Role, Striker;4;Striker role;+2 to all defenses against enemies you flank.;+2 to all defenses vs enemies you flank.
 Deterring Strike;Striker Defense;Role, Striker;4;Striker role;The first time you hit an enemy each turn, that enemy gains -2 to hit you until the end of your next turn.;The first enemy hit by you each turn gains -2 to hit you next turn.
