@@ -32,3 +32,6 @@ plotGrid(example.cover3.df)
 ggsave(file.path(basedir,"figures","Grid-cover-example-3-vert.png"))
 plotGrid(example.cover4.df)
 ggsave(file.path(basedir,"figures","Grid-cover-example-4-combi.png"))
+
+
+

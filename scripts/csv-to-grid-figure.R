@@ -23,8 +23,8 @@ plotGrid <- function(grid.df)
   ggplot(grid.df)+aes(y=-y,x=x)+
     geom_tile(color="black", aes(fill=value))+
     geom_text(aes(label=label))+
-    scale_x_continuous(breaks=NULL)+
-    scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL) + 
+    #scale_x_continuous(breaks=NULL)+
+    #scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL) + 
     scale_fill_manual(
       values = c("0"="lightgreen","X"="grey20", 
                  "x"="tan4", 
@@ -36,6 +36,12 @@ plotGrid <- function(grid.df)
                "A"="Character A","B"="Character B",
                "-"="", "/"=""))
 }
+
+#todo: adapt this
+p+geom_segment(data=example.cover1.df,aes(x=x-0.5, xend=x+0.5, y =-y+0.5, yend=-y+0.5),size=1.5,color="grey30")
+p+geom_segment(data=example.cover1.df,aes(x=x-0.5, xend=x+0.5, y =-y+0.5, yend=-y+0.5),size=1.5,color="brown60")
+
+
 
 #TODO: function to generate single line. Avoid artefacts.
 
