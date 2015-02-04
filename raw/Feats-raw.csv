@@ -159,7 +159,7 @@ On Daily Implement attack powers, gain +2 damage per die.
 Once per day, when you reach a Milestone, you can choose to regain one of your spent Daily attack powers at random instead of gaining an Action Point.";"On Daily attack powers, gain +2 damage per W/Die, +2 hit, and +2 Crit Range. Once per day, regain random Daily attack power instead of gaining an Action Point.
 "
 Surge Striker;Striker Resource;Role, Striker, Paragon;11;Striker role;" +2 Surges.
-When you spend a Surge, gain +2 hit on your next attack, and you can save to remove a Combat Condition on you."; +2 Surges. On surge spent, +2 hit and save to remove Condition.
+When you spend a Surge, gain +2 hit until end of your next turn, and you can save to remove a Combat Condition on you."; +2 Surges. On surge spent, +2 hit and save to remove Condition.
 Cunning Duelist;Striker Deadliness;Role, Striker;4;Striker role;When attacking, gain Combat Advantage if you and the target are within 3 squares of each other and have no adjacent creatures other than each other.;Combat Advantage when you and target are within 3 squares and have no other creatures adjacent.
 Dirty Fighting;Striker Deadliness;Role, Striker;4;Striker role;When attacking with Combat Advantage, +1 hit.;+1 hit with Combat Advantage.
 Lethal Weapon;Striker Deadliness;Role, Striker;4;Striker role;"Your weapon attacks gain +1 damage per W, +1 Miss Damage per W.

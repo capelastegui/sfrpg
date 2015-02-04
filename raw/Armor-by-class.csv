@@ -1,44 +1,39 @@
-Class;Light Armor Bonus;Expected AC;Expected Move;Notes
-Cleric;0;13;-1;
-Fighter;1;14-16;-1;
-Paladin;0;15-17;-1;
-Ranger;0;12;0;
-Rogue;2;13;0;
-Warlock;0;11(+2);0;
-Warlord;0;13-14;-1;
-Wizard;0;10;0;
-Avenger;3;13;0;Remove Feature: Armor of Faith
-Barbarian;2;14;0;"Change Feature: Barbarian Agility to ""+1 Reflex""."
-Bard;0;13-14;-1;
-Druid;1;13;0;
-Invoker;0;13;-1;
-Shaman;0;11;0;
-Sorcerer;0;10;0;
-Warden;1;13-15;0;
-Ardent;0;13;-1;
-Battlemind;0;14-16;-1;
-Monk;3;13;0;Remove Feature: Unarmored Defense
-Psion;0;10;0;
-Runepriest;0;14-15;-1;
-Seeker;0;11;0;
-;;;;
-Swordmage;2;13+3;0;
-Bladesinger;0;11+2;0;
-Assassin;;;;
-Other;;;;
-;;;;
-Assassin - Executioner;2;14;;
-Paladin - Blackguard;0;15-17;;
-Vampire;2;13;;Remove Feature: Vampiric Reflexes
-Warlock - Binder;0;11(+2);;
-Cleric- Warpriest;0;13-15;;
-Fighter-Knight;0;15-17;;
-Fighter-Slayer;1;14;-1;
-Rogue-Thief;2;13;;
-Druid-Sentinel;0; 12-13;;
-Paladin - Cavalier;0;15-17;;
-Ranger - Hunter;0;11;;
-Ranger - Scout;0;12;;
-Warlock - Hexblade;0;13;-1;
-;;;;
-Assassin - TODO;;;;
+Class;Light Armor Bonus;Expected AC;Role;Armor Type;Notes
+Cleric;0;13;Leader;Heavy;
+Fighter;1;16;Defender;Heavy;
+Paladin;0;17;Defender;Heavy;
+Ranger;0;12;Striker;Light;
+Rogue;2;13;Striker;Light;
+Warlock;0;11;Striker;Light;Can gain Concealment from feature
+Warlord;0;13;Leader;Heavy;
+Wizard;0;10;Controller;Light;
+Avenger;3;13;Striker;Light;Remove Feature: Armor of Faith
+Barbarian;2;14;Striker;Light;"Change Feature: Barbarian Agility to ""+1 Reflex""."
+Bard;0;13;Leader;Heavy;
+Druid;1;13;Controller;Light;
+Invoker;0;13;Controller;Heavy;
+Shaman;0;11;Leader;Light;
+Sorcerer;0;10;Striker;Light;
+Warden;1;15;Defender;Light;
+Ardent;0;13;Leader;Heavy;
+Battlemind;0;16;Defender;Heavy;
+Monk;3;13;Striker;Light;Remove Feature: Unarmored Defense
+Psion;0;10;Controller;Light;
+Runepriest;0;15;Leader;Heavy;
+Seeker;0;11;Controller;Light;
+Swordmage;2;16;Defender;Light;Includes +3 bonus from Aegis feature
+Bladesinger;0;13;Striker;Light;
+Assassin;2;13;Striker;Light;
+Assassin - Executioner;2;14;Striker;Light;
+Paladin - Blackguard;0;17;Striker;Heavy;
+Vampire;2;13;Striker;Light;Remove Feature: Vampiric Reflexes
+Warlock - Binder;0;11;Controller;Light;Can gain Concealment from feature
+Cleric- Warpriest;0;13;Leader;Heavy;
+Fighter-Knight;0;17;Defender;Heavy;
+Fighter-Slayer;1;14;Striker;Heavy;
+Rogue-Thief;2;13;Striker;Light;
+Druid-Sentinel;0;13;Leader;Light;
+Paladin - Cavalier;0;17;Defender;Heavy;
+Ranger - Hunter;0;11;Controller;Light;
+Ranger - Scout;0;12;Striker;Light;
+Warlock - Hexblade;0;13;Striker;Heavy;
