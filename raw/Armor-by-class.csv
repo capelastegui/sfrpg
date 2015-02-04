@@ -8,7 +8,7 @@ Warlock;0;11(+2);0;
 Warlord;0;13-14;-1;
 Wizard;0;10;0;
 Avenger;3;13;0;Remove Feature: Armor of Faith
-Barbarian;1;13;0;Remove Feature: Barbarian Agility
+Barbarian;2;14;0;"Change Feature: Barbarian Agility to ""+1 Reflex""."
 Bard;0;13-14;-1;
 Druid;1;13;0;
 Invoker;0;13;-1;
@@ -17,7 +17,7 @@ Sorcerer;0;10;0;
 Warden;1;13-15;0;
 Ardent;0;13;-1;
 Battlemind;0;14-16;-1;
-Monk;3;13;0;RemoveFeature: Unarmored Defense
+Monk;3;13;0;Remove Feature: Unarmored Defense
 Psion;0;10;0;
 Runepriest;0;14-15;-1;
 Seeker;0;11;0;

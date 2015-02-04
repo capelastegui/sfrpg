@@ -28,9 +28,8 @@ A Weapon Focus feat.";Choose an Implement Focus feat. You gain that feat. (Ignor
 Focus: Pushing Hammer;Focus;Weapon, Hammer;1;Weapon Proficiency with a Hammer;"On weapon attacks with a hammer, +1 damage per W.
 When you push an enemy with a weapon attack with a hammer, the forced movement is increased by 1 square.";With Hammer, +1 damage per W, +1 push.
 Focus: Unstoppable Hammer;Focus;Weapon, Hammer;1;Weapon Proficiency with a Hammer;On weapon attacks with a hammer, +3 Miss Damage per W.;With Hammer, +3 Miss Damage per W.
-Focus: Critical Light Blade;Focus;Weapon, Light Blade;1;Weapon Proficiency with a Light Blade;"On weapon attacks with a Light Blade, +1 Miss Damage per W.
-On weapon attacks with a Light Blade, +1 Crit Range.";With Light Blade, +1 Miss Damage per W, +1 Crit Range
-Focus: Ambush Light Blade;Focus;Weapon, Light Blade;1;Weapon Proficiency with a Light Blade;On weapon attacks with a light blade against targets you are flanking or hidden from, gain +1 damage per W and +1 to hit.;With Light Blade, +1 damage per W and +1 hit when flanking/hiding.
+Focus: Critical Light Blade;Focus;Weapon, Light Blade;1;Weapon Proficiency with a Light Blade;On weapon attacks with a Light Blade, +1 Crit Range.;With Light Blade, +1 Crit Range
+Focus: Ambush Light Blade;Focus;Weapon, Light Blade;1;Weapon Proficiency with a Light Blade;On weapon attacks with a light blade against targets you are flanking or hidden from, gain +1 damage per W and +1 to hit.;With Light Blade, when flanking or hiding +1 damage per W and +1 hit.
 Focus: Opportunist Heavy Blade;Focus;Weapon, Heavy Blade;1;Weapon Proficiency with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 damage per W.
 +2 to Opportunity Attack modifier.";With Heavy Blade, +1 damage per W and +2 to Opportunity Attacks.
 Focus: Duelist's Heavy Blade;Focus;Weapon, Heavy Blade;1;Weapon Proficiency with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 Miss Damage per W.
@@ -152,18 +151,24 @@ You can move 1 square as a Minor Action."; +1 Speed. Move 1 as Minor Action.
 Escape Artist;Striker Agility;Role, Striker;4;Striker role;" +3 to all defenses against Opportunity Attacks.
 At the start of turn, you can make a save to ignore one of the following conditions until end of turn: Marked, Slowed, Immobilized, Restrained, Grabbed.";" +3 to all defenses vs Opportunity Attacks.
 Save to ignore Marked, Slow, Immobilize, Restrain, Grab"
-Low Profile;Striker Defense;Role, Striker;4;Striker role;Against enemies marked by your allies and not marked by you, +1 to all defenses, and Lesser Resist all (Critical Hits).; +1 to all defenses vs enemies marked by your allies, and Lesser Resist All (Critical Hits)
-Blind Spot;Striker Defense;Role, Striker;4;Striker role;+2 to all defenses against enemies you flank.;+2 to all defenses vs enemies you flank.
-Deterring Strike;Striker Defense;Role, Striker;4;Striker role;The first time you hit an enemy each turn, that enemy gains -2 to hit you until the end of your next turn.;The first enemy hit by you each turn gains -2 to hit you next turn.
-Cunning Duelist;Striker Deadliness;Role, Striker, Paragon;11;Striker role;When attacking, gain Combat Advantage if your and the target have no adjacent creatures other than each other.;Combat Advantage when you and target have no other creatures adjacent.
-Dirty Fighting;Striker Deadliness;Role, Striker, Paragon;11;Striker role;When attacking with Combat Advantage, +1 hit.;+1 hit with Combat Advantage.
-Lethal Weapon;Striker Deadliness;Role, Striker, Paragon;11;Striker role;"Your weapon attacks gain +1 damage per W, +1 Miss Damage per W.
+Action Striker;Striker Resource;Role, Striker, Paragon;11;Striker role;"On each Extended Rest, gain 1 additional Action Point. 
++1 to Action Point rolls."; +1 Action Point, +1 to Action Point rolls.
+Daily Striker;Striker Resource;Role, Striker, Paragon;11;Striker role;"On Daily attack powers, gain +2 hit and +2 Crit Range.
+On Daily Weapon attack powers, gain +2 damage per W.
+On Daily Implement attack powers, gain +2 damage per die.
+Once per day, when you reach a Milestone, you can choose to regain one of your spent Daily attack powers at random instead of gaining an Action Point.";"On Daily attack powers, gain +2 damage per W/Die, +2 hit, and +2 Crit Range. Once per day, regain random Daily attack power instead of gaining an Action Point.
+"
+Surge Striker;Striker Resource;Role, Striker, Paragon;11;Striker role;" +2 Surges.
+When you spend a Surge, gain +2 hit on your next attack, and you can save to remove a Combat Condition on you."; +2 Surges. On surge spent, +2 hit and save to remove Condition.
+Cunning Duelist;Striker Deadliness;Role, Striker;4;Striker role;When attacking, gain Combat Advantage if you and the target are within 3 squares of each other and have no adjacent creatures other than each other.;Combat Advantage when you and target are within 3 squares and have no other creatures adjacent.
+Dirty Fighting;Striker Deadliness;Role, Striker;4;Striker role;When attacking with Combat Advantage, +1 hit.;+1 hit with Combat Advantage.
+Lethal Weapon;Striker Deadliness;Role, Striker;4;Striker role;"Your weapon attacks gain +1 damage per W, +1 Miss Damage per W.
 Your implement attacks gain +1 damage per die, +1 Miss Damage per die.";+1 damage and +1 Miss Damage per W or die.
 Undivided Attention;Controller Bonus Feat;Role, Controller;1;Controller role;Gain +2 hit on non-Secondary attacks with a single target.; +2 hit vs single target.
 Trapmaster;Controller Bonus Feat;Role, Controller;1;Controller role;"Gain lay trap power
 Lay Trap (At-will) - Minor Action, Area 5 Blast 2. Effect: Create a zone of difficult terrain in blast until the end of the encounter or until you use this power again.  When a character enters the zone or ends their turn in it, you deal one half your Primary Ability damage to them, and the zone ends at the end of that turn.";As Minor Action, create Area 5 Blast 2 zone of damaging difficult terrain.
 Puppeteer;Controller Bonus Feat;Role, Controller;1;Controller role;"Gain Control Puppet power
-Control Puppet (At-Will) - Minor Action, Ranged 7, targets a character. Effect: Slide 1.";As Minor Action, slide 1 a character within 7.
+Control Puppet (At-Will) - Minor Action, Ranged 10, targets a character. Effect: Push 1.";As Minor Action, push 1 a character within 10.
 Hole in the Fire;Explosive Control;Role, Controller;4;Controller role;"When making an Area attack, you may take a -1 hit penalty to avoid targeting an ally in the origin square.
 When making a Close attack, you may take a -1 hit penalty to avoid targeting an ally adjacent to you.";On Area or Close attack, take a -1 penalty to hit to avoid targeting an ally.
 Indirect Fire;Explosive Control;Role, Controller;4;Controller role;"When making an area attack, you ignore the hit penalty from choosing an origin square with Cover, Concealment, or different elevation.
@@ -195,7 +200,7 @@ Arcane Abjuration;Power Source;Arcane;11;Arcane power source; +1 Will, +1 Reflex
 Primal Regeneration;Power Source;Primal;11;Primal power source; +2 Fortitude, +2 Surges; +2 Fortitude, +2 Surges
 Psionic Prescience;Power Source;Psionic ;11;Psionic power source; +2 Will, +3 Initiative; +2 Will, +3 Initiative
 Shadow Slumber;Power Source;Shadow;11;Shadow power source; +2 Reflex, +6 Death Saves; +2 Reflex, +6 Death Saves
-Martial Grit;Power Source;Martial;11;Martial power source;When using Second Wind, gain +4 hit on next attack, +2 to Action Point rolls until end of next turn, and roll a save to recover the spent surge.;On Second Wind, +4 hit  on next attack, +2 to Action Point rolls until next turn, and save to recover  surge.
+Martial Grit;Power Source;Martial;11;Martial power source;When using Second Wind, gain +4 hit on next attack, +2 to Action Point rolls until end of next turn, and roll a save to recover the spent surge.;On Second Wind, +4 hit  on next attack, +2 to Action Point rolls until end of next turn, and save to recover  surge.
 Divine Hope;Power Source;Divine;11;Divine power source;When using Second Wind, you double the healed HP, gain +2 to defenses until end of next turn, and roll a save.;On Second Wind, heal double HP, +2 to defenses until end of next turn, and roll a save.
 Arcane Recovery;Power Source;Arcane;11;Arcane power source;When using an Encounter or Daily arcane power, roll 1d20. On a 17+, the power is not spent.;When using an Encounter or Daily arcane power, roll 1d20. On a 17+, the power is not spent.
 Primal Ferocity;Power Source;Primal;11;Primal power source;While bloodied, +1 to hit, +2 to saves, +1 to Action Point rolls;While bloodied, +1 to hit, +2 to saves, +1 to Action Point rolls
