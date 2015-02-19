@@ -1,0 +1,11 @@
+Name;Hands;Range;Keywords
+Staff;2 hands;12;
+Wand;1 hand;10;
+Rod;1 hand;10;
+Orb;1 hand;10;
+Tome;1 hand;10;
+Holy Symbol;No hand;5;
+Ki Focus;No hand;5;
+Totem;1 hand;10;
+Weapon Implement;As weapon;5;
+No Implement;1 hand;5;Very Unwieldy
