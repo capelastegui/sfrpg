@@ -2,7 +2,7 @@ Name;Repeatable;Keywords;Level;Requirements;Text;Summary
 Flexible Focus;No;Flexible;2;"Proficiency with an implement. 
 A weapon attack power.
 An implement attack power.
-A Weapon Focus feat.";Choose an Implement Focus feat. You gain that feat. (Ignore the usual restrictions about only having a single Focus feat).;Gain extra Implement Focus feat if you have Weapon Focus.
+An Offense Focus feat with the Weapon keyword.";Choose an Offense Focus Feat with the Implement keyword. You gain that feat. (Ignore the usual restrictions about only having a single Feat of that category).;Gain extra Implement Focus feat if you have Weapon Focus.
 Skill Training;Yes;Skill;2;;Choose a skill in which you are untrained. You gain training in that skill.;Gain Training in a Skill.
 Unnatural Ability;Yes;Skill;2;;Choose two skills in which you are trained and have an Ability Modifier lower than 3. Your Ability Modifier for these skills becomes 3.;Ability Modifier for two Trained Skills becomes +3.
 Heroic Skill Focus;No;Skill;2;;Choose a Trained Skill in your Class Skill list or your Racial Skill list. You gain Focus with that Skill (+3 on checks, automatically succeed Easy checks, allow Very Hard checks.);Gain Focus in a Trained Skill from your class or race.

@@ -45,15 +45,12 @@ css <- readChar(css.file, file.info(css.file)$size)
 
 
 #Build feat tables
-rolesIndices <-grepl("Role",feat.raw.df$Keywords)
-lesserIndices <-grepl("Lesser",feat.raw.df$Category)
 
-feat.table.roles <- feat.raw.df %>% filter (rolesIndices)
 # feat.table.lesser <- feat.raw.df %>% filter (lesserIndices)
 
-feat.table.rest <- feat.raw.df %>% filter (!rolesIndices & !lesserIndices) %>%   refactor()
 
-feat.table.roles.htm<-buildTableApply(feat.table.roles, 
+
+feat.table.htm<-buildTableApply(feat.raw.df, 
                       df.names=setdiff(names(feat.raw.df),"Text"),
                       tableClass="Feat-table")
 
@@ -67,11 +64,11 @@ feat.lesser.table.htm<-buildTableApply(feat.lesser.raw.df,
                                        tableClass="Feat-table")
 
 
-feat.table.rest.htm<-llply(feat.table.rest %>%  
-                        group_by(Category) %>% 
-                        split(feat.table.rest$Category)  ,
+feat.table.htm<-llply(feat.raw.df %>%  
+                        group_by(Level) %>% arrange(Level,Category) %>%
+                        split(paste(feat.raw.df$Level/100,feat.raw.df$Category))  ,
                       .fun=buildTableApply,
-                      df.names=setdiff(names(feat.table.rest),"Text"),
+                      df.names=setdiff(names(feat.raw.df),"Text"),
                       tableClass="Feat-table")
 
 feat.lesser.table.htm<-llply(feat.lesser.raw.df %>%  
@@ -81,12 +78,6 @@ feat.lesser.table.htm<-llply(feat.lesser.raw.df %>%
                            df.names=setdiff(names(feat.lesser.raw.df),"Text"),
                            tableClass="Feat-table")
 
-
-feat.table.rest.htm<-c(feat.table.rest.htm[-which(names(feat.table.rest.htm)=="Epic Might")],feat.table.rest.htm["Epic Might"])
-feat.table.rest.htm<-c(feat.table.rest.htm["Toughness"],feat.table.rest.htm[-which(names(feat.table.rest.htm)=="Toughness")])
-
-
-feat.table.htm <- c(feat.table.rest.htm, Roles=feat.table.roles.htm)
 
 
 feat.table.htm<-paste(feat.table.htm,collapse="<br> ")
