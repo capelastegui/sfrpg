@@ -1,0 +1,49 @@
+Name;Repeatable;Keywords;Level;Requirements;Text;Summary
+Flexible Focus;No;Flexible;2;"Proficiency with an implement. 
+A weapon attack power.
+An implement attack power.
+A Weapon Focus feat.";Choose an Implement Focus feat. You gain that feat. (Ignore the usual restrictions about only having a single Focus feat).;Gain extra Implement Focus feat if you have Weapon Focus.
+Skill Training;Yes;Skill;2;;Choose a skill in which you are untrained. You gain training in that skill.;Gain Training in a Skill.
+Unnatural Ability;Yes;Skill;2;;Choose two skills in which you are trained and have an Ability Modifier lower than 3. Your Ability Modifier for these skills becomes 3.;Ability Modifier for two Trained Skills becomes +3.
+Heroic Skill Focus;No;Skill;2;;Choose a Trained Skill in your Class Skill list or your Racial Skill list. You gain Focus with that Skill (+3 on checks, automatically succeed Easy checks, allow Very Hard checks.);Gain Focus in a Trained Skill from your class or race.
+Ritual Training;Yes;Ritual;2;;"Choose a Heroic Ritual. You learn that ritual.
+You can learn 2 additional Heroic Rituals through ritual scrolls.";Learn 1 Heroic Ritual, can learn 2 more from scrolls.
+Linguist;Yes;Language;2;;Choose a language you don't know. You learn that language.;Learn 1 language.
+Paragon Skill Focus;No;Skill;12;;Choose a Trained Skill in your Class Skill list or your Racial Skill list. You gain Focus with that Skill (+3 on checks, automatically succeed Easy checks, allow Very Hard checks.);Gain Focus in a Trained Skill from your class or race.
+Paragon Ritual Training;Yes;Ritual;12;Ritual Training;"Choose a Paragon Ritual. You learn that ritual.
+You can learn 2 additional Paragon Rituals through ritual scrolls.";Learn 1 Paragon Ritual, can learn 2 more from scrolls.
+Epic Skill Focus;Yes;Skill;22;;"Choose any Trained Skill. You gain Focus with that Skill (+3 on checks, automatically succeed Easy checks, allow Very Hard checks.)
+Note: If you take multiple instances of this feat, you must choose different skills each time.";Gain Focus in any Trained Skill.
+Epic Ritual Training;Yes;Ritual;22;Paragon Ritual Training;"Choose an Epic Ritual. You learn that ritual.
+You can learn 2 additional Epic Rituals through ritual scrolls.";Learn 1 Epic Ritual, can learn 2 more from scrolls.
+Epic Linguist;No;Language;22;Know 3 or more languages.;You learn all languages.;Learn all languages.
+Multiclass Learning: At-Will;No;Multiclass;1;A Multiclass Feat;"Choose a Level 1 At-Will Attack Power from your Multiclass. You can use that power once per encounter.
+If the Primary Ability for that power does not match yours, use an ability value of 4 instead.
+If the Secondary Ability for that power does not match yours, use an ability value of 2 instead.";Gain Multiclass At-Will attack 1/encounter.
+Multiclass Learning: Encounter;No;Multiclass;1;A Multiclass Feat;"Choose an Encounter Attack Power from your Class. You lose that power, and gain an Encounter Attack Power of the same level or lower from your Multiclass.
+If the Primary Ability for that power does not match yours, use an ability value of 4 instead.
+If the Secondary Ability for that power does not match yours, use an ability value of 2 instead.";Trade Class Encounter attack for Multiclass Encounter attack
+Multiclass Learning: Daily;No;Multiclass;1;A Multiclass Feat;"Choose a Daily Attack Power from your Class. You lose that power, and gain a Daily Attack Power of the same level or lower from your Multiclass.
+If the Primary Ability for that power does not match yours, use an ability value of 4 instead.
+If the Secondary Ability for that power does not match yours, use an ability value of 2 instead.";Trade Class Daily attack for Multiclass Daily attack
+Multiclass Learning: Utility;No;Multiclass;1;A Multiclass Feat;Choose a Utility Power from your Class. You lose that power, and gain a Utility Power of the same level or lower from your Multiclass.;Trade Class Utility power for Multiclass Utility power
+Multiclass Learning: Augmentable;No;Multiclass, Psi;1;"A Multiclass Feat. 
+Class with Augmentable At-Will attacks.
+Multiclass to a class with Augmentable At-Will attacks.";"Choose an Augmentable At-Will Attack Power from your Class. You lose that power, and gain an Augmentable At-Will Attack Power of the same level or lower from your Multiclass.
+If the Primary Ability for that power does not match yours, use an ability value of 4 instead.
+If the Secondary Ability for that power does not match yours, use an ability value of 2 instead.";Trade Class Augmentable At-Will attack for Multiclass Augmentable At-Will attack
+Multiclass Learning: Encounter to Augmentable;No;Multiclass, Psi;1;"A Multiclass Feat. 
+Class without Augmentable At-Will attacks.
+Multiclass to a class with Augmentable At-Will attacks.";"Choose an Encounter Attack Power from your Class. You lose that power, and gain an Augmentable At-Will Attack Power of the same level or lower from your Multiclass.
+If the Primary Ability for that power does not match yours, use an ability value of 4 instead.
+If the Secondary Ability for that power does not match yours, use an ability value of 2 instead.
+You gain 2 Power Points per Tier of the power.";Trade Class Encounter attack for Multiclass Augmentable At-Will attack. Gain 2 Power Points per power tier.
+Multiclass Learning: Augmentable to Encounter;No;Multiclass, Psi;1;"A Multiclass Feat. 
+Class with Augmentable At-Will attacks.
+Multiclass to a class without Augmentable At-Will attacks.";"Choose an Augmentable At-Will Attack Power from your Class. You lose that power, and gain an Encounter Attack Power of the same level or lower from your Multiclass.
+If the Primary Ability for that power does not match yours, use an ability value of 4 instead.
+If the Secondary Ability for that power does not match yours, use an ability value of 2 instead.
+You lose 2 Power Points per Tier of the power.";Trade Class Augmentable At-Will attack for Multiclass Encounter attack. Lose 2 Power Points per power tier.
+Multiclass Implement;No;Multiclass;1;"A Multiclass Feat.
+Multiclass to a class with Implement attacks.";"Choose an Implement that your Multiclass has Training with. Gain Training with that Implement.
+Choose a skill from your Multiclass class skill list in which you are untrained. You gain training in that skill.";Gain Training in Multiclass Implement. Gain Training in Multiclass Skill.
