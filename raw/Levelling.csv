@@ -1,0 +1,41 @@
+Level;Powers;Encounter Attacks;Daily Attacks;Utilities;Features;Feat;Lesser Feat;Ability Damage Modifier;Damage Die;HP-Normal;HP-High;HP-Very High
+1;"2x Level 1 At-Will Attacks
+Level 1 Encounter Attack
+Level 1 Daily Attack";1;1;;Class Features;1;;;;30;35;40
+2;Level 2 Utility;1;1;2;;;;;;33;38;44
+3;Level 3 Encounter Attack;1, 3;1;2;;;;;;36;42;48
+4;;1, 3;1;2;;1, 4;;;;39;45;52
+5;Level 5 Daily Attack;1, 3;1, 5;2;;;;;;42;49;54
+6;Level 6 Utility;1, 3;1, 5;2, 6;;;;;;45;52;60
+7;Level 7 Encounter Attack;1, 3, 7;1, 5;2, 6;;;;;;48;56;64
+8;;1, 3, 7;1, 5;2, 6;;1, 4, 8;;;;51;59;68
+9;Level 9 Daily Attack;1, 3, 7;1, 5, 9;2, 6;;;;;;54;63;72
+10;Level 10 Utility;1, 3, 7;1, 5, 9;2, 6, 10;;;;;;57;66;76
+11;Paragon Path: Level 11 Encounter Attack;1, 3, 7, pp11;1, 5, 9;2, 6, 10;Paragon Path Features 11;1, 4, 8, 11;;;;60;70;80
+12;Paragon Path: Level 12 Utility;1, 3, 7, pp11;1, 5, 9;2, 6, 10, pp12;;;;;;66;77;88
+13;"Level 13 Encounter Attack
+(replaces Level 1 Encounter Attack)";3, 7, 13, pp11;1, 5, 9;2, 6, 10, pp12;;;;;;72;84;96
+14;;3, 7, 13, pp11;1, 5, 9;2, 6, 10, pp12;;1, 4, 8, 14;;;;78;91;104
+15;"Level 15 Daily Attack
+(replaces Level 1 Daily Attack)";3, 7, 13, pp11;5, 9, 15;2, 6, 10, pp12;;;;;;84;98;112
+16;Level 16 Utility;3, 7, 13, pp11;5, 9, 15;2, 6, 10, 16, pp12;Paragon Path Feature 16;;;;;90;105;120
+17;"Level 17 Encounter Attack
+(replaces Level 3 Encounter Attack)";7, 13, 17, pp11;5, 9, 15;2, 6, 10, 16, pp12;;;;;;96;112;128
+18;;7, 13, 17, pp11;5, 9, 15;2, 6, 10, 16, pp12;;1, 4, 8, 14, 18;;;;102;119;136
+19;"Level 19 Daily Attack
+(replaces Level 5 Daily Attack)";7, 13, 17, pp11;9, 15, 19;2, 6, 10, 16, pp12;;;;;;108;126;144
+20;Paragon Path: Level 20 Daily Attack;7, 13, 17, pp11;9, 15, 19, pp20;2, 6, 10, 16, pp12;;;;;;114;133;152
+21;;7, 13, 17, pp11;9, 15, 19, pp20;2, 6, 10, 16, pp12;Epic Destiny Feature 21;1, 4, 8, 14, 18, 21;;;;120;140;160
+22;Level 22 Utility;7, 13, 17, pp11;9, 15, 19, pp20;2, 6, 10, 16, 22, pp12;;;;;;126;147;168
+23;"Level 23 Encounter Attack
+(replaces Level 7 Encounter Attack)";13, 17, 23, pp11;9, 15, 19, pp20;2, 6, 10, 16, 22, pp12;;;;;;132;154;176
+24;;13, 17, 23, pp11;9, 15, 19, pp20;2, 6, 10, 16, 22, pp12;Epic Destiny Feature 24;1, 4, 8, 14, 18, 21, 24;;;;138;161;184
+25;"Level 25 Daily Attack
+(replaces Level 9 Daily Attack)";13, 17, 23, pp11;15, 19, 25, pp20;2, 6, 10, 16, 22, pp12;;;;;;144;168;192
+26;Epic Destiny Utility 26;13, 17, 23, pp11;15, 19, 25, pp20;2, 6, 10, 16, 22, pp12, ed26;;;;;;150;175;200
+27;"Level 27 Encounter Attack
+(replaces Level 13 Encounter Attack)";17, 23, 27, pp11;15, 19, 25, pp20;2, 6, 10, 16, 22, pp12, ed26;;;;;;156;182;208
+28;;17, 23, 27, pp11;15, 19, 25, pp20;2, 6, 10, 16, 22, pp12, ed26;;1, 4, 8, 14, 18, 21, 24, 28;;;;162;189;216
+29;"Level 29 Daily Attack
+(replaces Level 15 Daily Attack)";17, 23, 27, pp11;19, 25, 29, pp20;2, 6, 10, 16, 22, pp12, ed26;;;;;;168;196;224
+30;;17, 23, 27, pp11;19, 25, 29, pp20;2, 6, 10, 16, 22, pp12, ed26;Epic Destiny Feature 30;;;;;180;210;240

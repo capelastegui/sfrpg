@@ -16,7 +16,7 @@ An implement attack power.";"On weapon attacks, +1 damage per W.
 On implement attacks, +1 damage per die.
 When you make a weapon attack, you gain +1 hit with implement attacks until your next turn. When you make an implement attack, you gain +1 hit with implement attacks until your next turn.";"With Weapon, +1 damage per W. 
 With Implement, +1 damage per die. 
-When attacking with weapon, +1 to implement attack. When attacking with implement, +1 to weapon attack."
+When attacking with weapon, +1 to next implement attack. When attacking with implement, +1 to next weapon attack."
 Energy Focus;Offense Focus;Flexible, Energy;1;Attack power with the chosen energy type.;"Special: When you take this feat, choose an energy type.
 On weapon attacks with the chosen energy type, +1 damage per W, and +2 Miss Damage per W.
 On implement attacks with the chosen energy type, +1 damage per die, and +2 Miss Damage per die.
