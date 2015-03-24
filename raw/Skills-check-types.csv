@@ -1,0 +1,29 @@
+Skill;Check Name;Action;Difficulty;Prepare;Assist;Pre-effect;Success;Failure;Augment
+Acrobatics;;;;;;;;;
+Arcana;;;;;;;;;
+Athletics;;;;;;;;;
+Bluff;;;;;;;;;
+Diplomacy;;;;;;;;;
+Dungeoneering;;;;;;;;;
+Endurance;;;;;;;;;
+Heal;;;;;;;;;
+History;;;;;;;;;
+Insight;;;;;;;;;
+Intimidate;;;;;;;;;
+Nature;;;;;;;;;
+Perception;;;;;;;;;
+Religion;;;;;;;;;
+Stealth;;;;;;;;;
+Streetwise;;;;;;;;;
+Thievery;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+;;;;;;;;;
+Various;;;;;;;;;
+Various;Navigate Terrain;Minor;Medium;Various;Various;;This turn, you can move to Difficult Terrain squares of the chosen Terrain Type within 1 square of your current position as if they were normal terrain.;This turn, entering these squares costs 1 extra square of movement.;" +1: squares within 2 squares of your current position.
++2:  squares within 5 squares of your current position.
++1: ignore terrain damage from these squares this turn."
+Various;;;;;;;;;

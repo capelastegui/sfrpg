@@ -1,0 +1,21 @@
+Maneuver Name;Action;Effect
+Walk;Move;Move your Speed.
+Shift;Move;Shift 1. Gain -2 to hit this turn.
+Run;Standard;Move your Speed + 4. You are Dazed until the start of your next turn.
+Charge;Standard;Move your Speed to a square within your melee reach of an enemy. Make a Melee Basic Attack targeting that enemy, with -1 hit. You cannot use Move Actions this turn.
+Total Defense;Standard;Gain +4 to all defenses until your next turn.
+Second Wind;Standard (1/encounter);Spend a Surge. Gain +2 to all defenses until your next turn.
+Stand Up;Move;Stand up from prone. Move 1.
+Draw;Move;Move 1. Sheathe or store any number of weapons or objects from your hands. Draw, or pick up from the ground, up to one weapon or object per hand. 
+Quick Draw;Minor;Drop any number of weapons or objects from your hands. Draw up to one weapon or object per hand. Gain -2 to hit this turn.
+Recharge;Move;Move 1. Choose one Recharge weapon you are wielding. You ignore the Recharge hit penalty for your next attack with that weapon.
+Climb;Move;Climb 1.
+Swim;Move;Swim 1.
+Jump;Move;Move half your Speed and, if you are 2 or more squares away from your starting position, Jump 2.
+High Jump;Move;Move half your Speed and, if you are 2 or more squares away from your starting position, High Jump 1. If you make an attack this turn before making any further movement, you can use the peak of the High Jump as the origin of the attack.
+Hide;Standard;If you have Cover (not counting cover granted by other creatures) or Concealment from all enemies within 10 squares, you become Hidden.
+Sneak;Move;Use only while Hidden. Move half your Speed. At the end of the movement, if you have Cover (not counting cover granted by other creatures) or Concealment from all enemies within 10 squares, you remain Hidden.
+Seek;Standard;The closest Hidden enemy within 5 squares becomes Located.
+Reveal;Standard;Choose a Hidden and Located enemy within 5 squares. The enemy stops being Hidden.
+Escape;Standard;Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy.
+First Aid;Standard;An adjacent Dying ally rolls a save to stop being Dying.
