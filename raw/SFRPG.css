@@ -26,7 +26,7 @@
   margin-bottom: 3px;
 }
 
-p {  
+.Feat p {  
   margin-top: 0px;  
   margin-bottom: 3px;
   -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
@@ -79,4 +79,46 @@ p {
     background-color: #ffefbf;
 } 
 
-     
+ .Power {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  width: 290px;  
+  margin-bottom: 25px;  
+  page-break-inside: avoid;
+}
+
+.Power-Title {  
+  font-weight: bold;  
+  margin-bottom: 0px;
+}
+
+
+
+.Power-Requires {  
+  font-style: italic;  
+  color: #666666;  
+  margin-bottom: 3px;
+}
+
+.Green {
+        color:green  
+}
+      
+      .Gray {
+        color:gray
+}
+  
+      
+    .Power  p {  
+  margin-top: 0px;  
+  margin-bottom: 2px;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+}
+      
+.Power-Keywords {  
+  font-style: italic;  
+  
+}    

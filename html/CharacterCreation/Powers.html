@@ -1,10 +1,89 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta content="text/html; charset=windows-1252" http-equiv="content-type">
-    <title>Powers</title>
-    <style type="text/css">
-.Power {  
+<head>
+<title>power-test</title>
+<style type="text/css">
+.Feat {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  width: 290px;  
+  margin-bottom: 25px;  
+-webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+}
+
+.Feat-Title {  
+  font-weight: bold;  
+  margin-bottom: 0px;
+}
+
+.Feat-Keywords, .Feat-Categories {  
+  font-style: italic;  
+  color: #333333;  
+  margin-bottom: 0px;
+}
+
+.Feat-Requires {  
+  font-style: italic;  
+  color: #666666;  
+  margin-bottom: 3px;
+}
+
+.Feat p {  
+  margin-top: 0px;  
+  margin-bottom: 3px;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+}
+
+.Feat-List {  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;  -moz-column-rule-style: none;
+  -webkit-column-rule-style: none;
+  column-rule-style: none;  
+  width: 900px;
+}
+
+.Feat-Categories {  
+  font-weight: bold;  
+  display: inline;
+}
+
+.Feat-Keywords {  
+  display: inline;
+}
+
+.Feat-table {  
+  font-size: 11px;  
+  font-family: Verdana;  
+  padding-top: 0px;  
+  padding-right: 0px;  
+  padding-bottom: 0px;  
+  padding-left: 0px;  
+  color: #663300;  
+  width: 1000px;  
+  background-color: #ffcc99;
+}
+
+.General-table {  
+  font-size: 11px;  
+  font-family: Verdana;  
+  padding-top: 0px;  
+  padding-right: 0px;  
+  padding-bottom: 0px;  
+  padding-left: 0px;  
+  color: #663300;  
+  width: 640px;  
+  background-color: #ffcc99;
+}
+      
+    tr:nth-child(even) {
+    background-color: #ffefbf;
+} 
+
+ .Power {  
   font-family: Verdana;  
   font-size: 11px;  
   line-height: normal;  
@@ -43,29 +122,338 @@
                break-inside: avoid; /* IE 10+ */
 }
       
-      .Power-Keywords {  
+.Power-Keywords {  
   font-style: italic;  
   
-}
+}    
+</style></head>
+<body>
+<table class="power-table"> 
+<tbody> <tr><td>Name</td><td>Class</td><td>Level</td><td>UsageLimit</td><td>isAttack</td><td>Range</td><td>Action</td><td>Summary</td></tr>
+<tr><td>Power Attack</td><td>Universal</td><td>1</td><td>Encounter</td><td>1</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
+<tr><td>Empower Spell</td><td>Universal</td><td>1</td><td>Encounter</td><td>1</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
+<tr><td>Offensive Training</td><td>Universal</td><td>1</td><td>Daily</td><td>1</td><td>Personal</td><td></td><td>Small damage bonus all day</td></tr>
+<tr><td>Defensive Training</td><td>Universal</td><td>1</td><td>Daily</td><td>1</td><td>Personal</td><td></td><td>Small HP bonus all day</td></tr>
+<tr><td>Shield Bash</td><td>Fighter</td><td>1</td><td></td><td>1</td><td>Melee</td><td></td><td>Push and follow up</td></tr>
+<tr><td>Cleave</td><td>Fighter</td><td>1</td><td></td><td>1</td><td>Melee</td><td></td><td>Damage an additional enemy</td></tr>
+<tr><td>Hamstring</td><td>Fighter</td><td>1</td><td>Encounter</td><td>1</td><td>Melee</td><td></td><td>Slow and save penalty</td></tr>
+<tr><td>Stunning Strike</td><td>Fighter</td><td>1</td><td>Encounter</td><td>1</td><td>Melee</td><td></td><td>Low damage and stun</td></tr>
+<tr><td>Storm of blades</td><td>Fighter</td><td>1</td><td>Encounter</td><td>1</td><td>Close Burst 1</td><td></td><td>Low damage and slide burst</td></tr>
+<tr><td>Brutal Strike</td><td>Fighter</td><td>1</td><td>Daily</td><td>1</td><td>Melee</td><td></td><td>High damage, push, prone</td></tr>
+<tr><td>Comeback Strike</td><td>Fighter</td><td>1</td><td>Daily</td><td>1</td><td>Melee</td><td></td><td>Heal yourself</td></tr>
+<tr><td>Blade Dance</td><td>Fighter</td><td>1</td><td>Daily</td><td>1</td><td>Personal</td><td></td><td>All encounter, damage adjacent enemies</td></tr>
+<tr><td>Shield Wall</td><td>Fighter</td><td>2</td><td>Encounter</td><td>0</td><td>Personal</td><td>Minor Action</td><td>Gain Cover, can't be flanked</td></tr>
+<tr><td>Grit</td><td>Fighter</td><td>2</td><td>Encounter</td><td>0</td><td>Personal</td><td>Minor Action</td><td>Save against condition</td></tr>
+<tr><td>Find Opening</td><td>Fighter</td><td>2</td><td>Encounter</td><td>0</td><td>Melee</td><td>Minor Action</td><td>Gain Advantage</td></tr>
+<tr><td>Arcane Missiles</td><td>Wizard</td><td>1</td><td></td><td>NA</td><td>Ranged 20</td><td></td><td>Low damage and push to 3 targets</td></tr>
+ </tbody>
+</table> 
 
-</style> </head>
-  <body>
-    <p><br>
-    </p>
-    <div class="Power">Shield Bash <br>
-      Attack, Weapon, Shield<br>
-      Melee, Str vs AC<br>
-      Hit: 1W+Str. Push 1, and you may shift that distance to a square adjacent
-      to the target.<br>
-      Level 21: Increase Hit damage to 2W+Str<br>
-    </div>
-    <div class="Power">
-      <h3 class="Power-Title Green">Shield Bash</h3>
-      <p class="Power-Keywords">Attack, Weapon, Shield</p>
-      <p>Melee, Str vs AC</p>
-      <p>Hit: 1W+Str. Push 1, and you may shift that distance to a square
-        adjacent to the target.</p>
-      <p class="Power-Keywords Gray">Level 21: Increase Hit damage to 2W+Str</p>
-    </div>
-  </body>
-</html>
+<div class="power-List">
+ NAArcane MissilesNA
+NAWizardNA
+NA1NA
+NANA
+NANANA
+NANANA
+NAImplementNA
+NANANA
+NANA
+
+NARanged 20NA
+NAtargets up to 3 enemies within 2 of each otherNA
+NANANA
+NAInt vs RefNA
+NA2d4, and Push 1NA
+NANA
+NANA
+NANA
+NALevel 21: Increase Hit damage to 4d4NA  
+ NABlade DanceNA
+NAFighterNA
+NA1NA
+NADailyNA
+NA0NA
+NA1NA
+NAWeapon, StanceNA
+NANANA
+NANA
+
+NAPersonalNA
+NANA
+NANANA
+NANA
+NANA
+NANA
+NAUse Total Defense. Stance: At the start of your turn, deal 1(W) and Slide 1 to one adjacent enemy.NA
+NANA
+NAUpgrade 15: Effect Deal 1W and Slide 1 to each adjacent enemy.<br>Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.NA  
+ NABrutal StrikeNA
+NAFighterNA
+NA1NA
+NADailyNA
+NA0NA
+NA1NA
+NAWeapon, ReliableNA
+NANANA
+NANA
+
+NAMeleeNA
+NANA
+NANANA
+NAStr vs ACNA
+NA3W+Str, and Push 3 and knock prone.NA
+NANA
+NANA
+NANA
+NAUpgrade 15: Increase Hit damage to 5W+Str<br>Upgrade 25: Increase Hit damage to 7W+Str<br>NA  
+ NACleaveNA
+NAFighterNA
+NA1NA
+NANA
+NA0NA
+NA1NA
+NAWeaponNA
+NANANA
+NANA
+
+NAMeleeNA
+NANA
+NANANA
+NAStr vs ACNA
+NA1W+Str. Make a secondary attack.NA
+NANA
+NANA
+NAMelee, targets another enemy, Str vs AC<br>Hit: Str.NA
+NALevel 21: Increase Hit damage to 2W+Str.NA  
+ NAComeback StrikeNA
+NAFighterNA
+NA1NA
+NADailyNA
+NA0NA
+NA1NA
+NAWeaponNA
+NANANA
+NANA
+
+NAMeleeNA
+NANA
+NANANA
+NAStr vs ACNA
+NA2W+Str.NA
+NAHalf DamageNA
+NASpend a surge and double the amount healed. NA
+NANA
+NAUpgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+StrNA  
+ NADefensive TrainingNA
+NAUniversalNA
+NA1NA
+NADailyNA
+NA0NA
+NA1NA
+NANA
+NANANA
+NANA
+
+NAPersonalNA
+NANA
+NANANA
+NANA
+NANA
+NANA
+NAUntil you recharge or retrain this power, you gain +3 HP.NA
+NANA
+NAUpgrade 5: +4 HP<br>Upgrade 15: +6 HP<br>Upgrade 25: +9 HPNA  
+ NAEmpower SpellNA
+NAUniversalNA
+NA1NA
+NAEncounterNA
+NA0NA
+NA1NA
+NAImplementNA
+NANANA
+NAPersonal Reaction, Interrupt NA
+you hit with an Implement attack
+NANA
+NAtargets an enemy hit by the triggering attackNA
+NANANA
+NANA
+NANA
+NANA
+NAAgainst the target, the triggering attack deals an extra 1d10 and gains Push 1.NA
+NANA
+NAUpgrade 13: Increase extra damage to 2d10<br>Upgrade 23: Increase extra damage to 3d10NA  
+ NAFind OpeningNA
+NAFighterNA
+NA2NA
+NAEncounterNA
+NA0NA
+NA0NA
+NANA
+NANANA
+NAMinor ActionNA
+
+NAMeleeNA
+NANA
+NANANA
+NANA
+NANA
+NANA
+NAUntil end of your next turn, your attacks against the target gain Advantage and Pierce ResistNA
+NANA
+NANA  
+ NAGritNA
+NAFighterNA
+NA2NA
+NAEncounterNA
+NA0NA
+NA0NA
+NANA
+NANANA
+NAMinor ActionNA
+
+NAPersonalNA
+NANA
+NANANA
+NANA
+NANA
+NANA
+NARoll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.NA
+NANA
+NANA  
+ NAHamstringNA
+NAFighterNA
+NA1NA
+NAEncounterNA
+NA0NA
+NA1NA
+NAWeaponNA
+NANANA
+NANA
+
+NAMeleeNA
+NANA
+NANANA
+NAStr vs ACNA
+NA2W + Str, and Slowed (save ends). Until your next turn, the target has -4 to saves while adjacent to you.NA
+NANA
+NANA
+NANA
+NAUpgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str<br>NA  
+ NAOffensive TrainingNA
+NAUniversalNA
+NA1NA
+NADailyNA
+NA0NA
+NA1NA
+NANA
+NANANA
+NANA
+
+NAPersonalNA
+NANA
+NANANA
+NANA
+NANA
+NANA
+NAUntil you recharge or retrain this power, your attacks gain +1 Miss Damage.NA
+NANA
+NAUpgrade 5: Your attacks gain +1 damage and +1 Miss Damage.<br>Upgrade 15: Your attacks gain +1 damage and +2 Miss Damage.<br>Upgrade 25: Your attacks gain +2 damage and +2 Miss Damage.NA  
+ NAPower AttackNA
+NAUniversalNA
+NA1NA
+NAEncounterNA
+NA0NA
+NA1NA
+NAWeaponNA
+NANANA
+NAPersonal Reaction, Interrupt NA
+you hit with a Weapon attack
+NANA
+NAtargets an enemy hit by the triggering attackNA
+NANANA
+NANA
+NANA
+NANA
+NAAgainst the target, the triggering attack deals an extra 1W and gains Push 1.NA
+NANA
+NAUpgrade 13: Increase extra damage to 2W<br>Upgrade 23: Increase extra damage to 3WNA  
+ NAShield BashNA
+NAFighterNA
+NA1NA
+NANA
+NA0NA
+NA1NA
+NAWeapon, ShieldNA
+NANANA
+NANA
+
+NAMeleeNA
+NANA
+NANANA
+NAStr vs ACNA
+NA1W+Str. Push 1, and you may shift that distance to a square adjacent to the target.NA
+NANA
+NANA
+NANA
+NALevel 21: Increase Hit damage to 2W+Str.NA  
+ NAShield WallNA
+NAFighterNA
+NA2NA
+NAEncounterNA
+NA0NA
+NA0NA
+NAShieldNA
+NANANA
+NAMinor ActionNA
+
+NAPersonalNA
+NANA
+NANANA
+NANA
+NANA
+NANA
+NAUntil your next turn, you gain Cover against enemy attacks and cannot be flanked.NA
+NANA
+NANA  
+ NAStorm of bladesNA
+NAFighterNA
+NA1NA
+NAEncounterNA
+NA0NA
+NA1NA
+NAWeaponNA
+NANANA
+NANA
+
+NAClose Burst 1NA
+NANA
+NANANA
+NAStr vs ACNA
+NAHit: 1W, and Slide 1.NA
+NANA
+NANA
+NANA
+NAUpgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3WNA  
+ NAStunning StrikeNA
+NAFighterNA
+NA1NA
+NAEncounterNA
+NA0NA
+NA1NA
+NAWeaponNA
+NANANA
+NANA
+
+NAMeleeNA
+NANA
+NANANA
+NAStr vs ForNA
+NAHit: 1W, and Stunned until your next turn.NA
+NANA
+NANA
+NANA
+NAUpgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3WNA  
+
+</div>
+</body></html> 
