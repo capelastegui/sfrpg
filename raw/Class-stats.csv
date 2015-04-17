@@ -13,3 +13,6 @@ Paladin;Protector;Divine;Defender;Standard;35;3,5;10;0; +1 For, +1 Ref, +1 Wil;L
 Monk;Wind;Inner;Striker;Standard;30;3;6;3; +1 For, +1 Ref, +1 Wil;-;All Inner;Focus;Dexterity;Wisdom;Insight;2;
 Brawler;Tough;Inner;Defender;Standard;50;5;9;0; +2 For;Leather;All Inner; - ;Strength;Constitution;Endurance;2;
 Ninja;Sneak;Martial;Striker;Standard;25;2,5;6;2; +2 Ref; -;Dagger, Short Sword, Light Flail, Flail, Longsword, Glaive, Hand Crossbow, Light Crossbow; -;Dexterity;Intelligence;Stealth;2;
+Universal;Universal;Martial;Defender;Standard;35;3,5;9;1; +2 For;Light Shield, Heavy Shield, Leather, Hide, Chain, Scale;All Basic, 1-hand Martial;-;Strength;Wisdom;Athletics;2;-
+;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;

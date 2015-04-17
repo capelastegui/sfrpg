@@ -15,69 +15,51 @@ power.lesser.table.htm.file <- file.path(basedir,"html","CharacterCreation","Pow
 class.stat.raw <- file.path(basedir,"raw","Class-stats.csv")
 class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
 
-# No longer used
-pasteRequirements <-function(req, level)
-{#TODO: VECTORIZE!
-  tmp <- as.character(req)
-  emptyReqIndex <- level>1 & req==""
-  fullReqIndex  <- level>1 & req!=""
-  tmp[emptyReqIndex] <- paste("Level",level[emptyReqIndex])
-  tmp[fullReqIndex] <- paste(req[fullReqIndex],", Level",level[fullReqIndex])
-  as.factor(tmp)
-}
-
-class.stat.df  <- read.csv(class.stat.raw, sep=";", header=FALSE)#%>% tbl_df()  
-class.stat.tmp  <- class.stat.df
-#NOTE: using tbl_df() has weird interactions with stuff like as.character(class.stat.df[,1])
-#names(class.stat.df)  <- paste(class.stat.df[,1],class.stat.df[,2],sep=".")
-class.stat.df  <- cbind(V0=paste(class.stat.df[,1],class.stat.df[,2],sep="."),class.stat.df)
-class.stat.df <- trans_df(class.stat.df) %>% tbl_df()
-
-#TODO: CHANGE THE FOLLOWING TO RETURN A LEVEL 2 NESTED LIST (CLASS,BUILD) instead of a list(class.build)
-class.stat.list <- llply(class.stat.df[2:length(class.stat.df)],
-                         class.stat.df[,1],.fun=function(a,b)
-                         {buildTableApply(cbind(b,a),tableClass="Class-table",skipHeader = TRUE)})
-
-class.stat.list <- llply(class.stat.df[2:length(class.stat.df)],
-                         class.stat.df[,1],.fun=function(a,b)
-                         {buildTableApply(cbind(b,a),tableClass="Class-table",skipHeader = TRUE)})
-
-#TODO: FIND CODE THAT RESULTS IN LABELED LIST
 
 
-# alt processing for class.stat.df
-class.stat.tmp  <- read.csv(class.stat.raw, sep=";", header=TRUE)
+class.stat.df  <- read.csv(class.stat.raw, sep=";", header=TRUE)
 
-tmp1 <- split(class.stat.tmp,class.stat.tmp$Class)
-tmp1.list  <- llply(tmp1, .fun=function(a){a <- refactor(a);split(a,a$Build)})
-tmp1.list.2 <- llply.n(tmp1.list,2,
+class.stat.list  <- split(class.stat.df,class.stat.df$Class)
+class.stat.list <- llply(class.stat.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
+class.stat.list <- llply.n(class.stat.list,2,
                        .fun2=function(df){
                          table <- cbind(names(df),trans_df(df))
                          htm <- buildTableApply(table,tableClass="Class-table")
                          list(stats=table,stats.htm=htm)
                               })
 
-class.stat.nlist  <- llply(class.stat.tmp$Build,class.stat.tmp,.fun=function(a,b){b})
-
-buildTableApply(class.stat.df[])
-
-power.raw.df <- read.csv(power.raw, sep=";")%>% tbl_df()  #%>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
-power.raw.df <- gsubColwise(power.raw.df,"\\n","<br>")
 usageOrder  <- c("","At-Will","Encounter","Daily")
-power.raw.df$UsageLimit  <- factor(power.raw.df$UsageLimit, 
-                                   levels=c(usageOrder,setdiff(power.raw.df$UsageLimit,usageOrder)))
-power.raw.df  <- power.raw.df %>%  arrange(Class, isFeature!="Feature", Type, UsageLimit, Level, Name)
 
-usageColors <- revalue(power.raw.df$UsageLimit,replace=c(Daily="Gray", Encounter="Red","AtWill"="Green"))
-levels(usageColors)[levels(usageColors)==""] <- "Green"
+power.raw.df <- read.csv(power.raw, sep=";") %>% 
+  gsubColwise("\\n","<br>")%>% 
+  tbl_df() %>% 
+  mutate(UsageLimit=factor(UsageLimit, 
+                           levels=c(usageOrder,setdiff(UsageLimit,usageOrder)))) %>%  
+  arrange(Class, isFeature!="Feature", Type, UsageLimit, Level, Name) %>% 
+  mutate(usageColors=revalue(UsageLimit,replace=c(Daily="Gray", Encounter="Red","At-Will"="Green")))
 
-power.raw.df.colored <- power.raw.df
+levels(power.raw.df$usageColors)[levels(power.raw.df$usageColors)==""] <- "Green"
 
-power.raw.df$Name  <- paste("<div class=\"",usageColors,"\">",power.raw.df$Name, sep="")
-power.raw.df$Level  <-paste(power.raw.df$Level,"</div>",sep="")
+power.raw.df  <- power.raw.df %>% 
+  mutate(Name=paste("<div class=\"",usageColors,"\">",Name, sep="")) %>%
+  mutate(Level=paste(Level,"</div>",sep=""))
 
-class.power.list  <- power.raw.df  %>%   split(power.raw.df$Class)
 
+class.power.list  <- split(power.raw.df,power.raw.df$Class) 
+class.power.list <- llply(class.power.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
+class.power.list <- llply.n(class.power.list,2,
+                           .fun2=function(df){
+                             htm <- buildTableApply(table,tableClass="Class-table")
+                             list(powers=df,powers.htm=htm)
+                           })
+
+#join all class nested lists
+class.list  <- llply.parallel.multilist(class.power.list, 
+                                        list(class.power.list,class.stat.list),
+                                        n=2,
+                                        .fun=function(...){unlist(c(...),recursive=FALSE)})
+
+llply.parallel.multilist(mylist1,list(mylist1,mylist2),1,.fun=function(...){unlist(c(...),recursive=FALSE)})
 
 #power.tag.df <- read.csv(power.tag, sep=";")
 power.tag.df <- read.csv(power.tag, sep=";", colClasses="character")

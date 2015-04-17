@@ -1,12 +1,12 @@
 Name;Class;Build;isFeature;Level;Type;UsageLimit;UsageNumber;Keywords;Action;Trigger;Range;Target;AttackRoll;EffectPre;Hit;Miss;EffectPost;SecondaryAttack;Upgrades;Summary
-Power Attack;Universal;;;1;Attack;Encounter; ;Weapon;Personal Reaction, Interrupt ;you hit with a Weapon attack;;targets an enemy hit by the triggering attack;;-;;;Against the target, the triggering attack deals an extra 1W and gains Push 1.;;"Upgrade 13: Increase extra damage to 2W
+Power Attack;Universal;Universal;;1;Attack;Encounter; ;Weapon;Personal Reaction, Interrupt ;you hit with a Weapon attack;;targets an enemy hit by the triggering attack;;-;;;Against the target, the triggering attack deals an extra 1W and gains Push 1.;;"Upgrade 13: Increase extra damage to 2W
 Upgrade 23: Increase extra damage to 3W";Deal extra damage and push
-Empower Spell;Universal;;;1;Attack;Encounter; ;Implement;Personal Reaction, Interrupt ;you hit with an Implement attack;;targets an enemy hit by the triggering attack;;;;;Against the target, the triggering attack deals an extra 1d10 and gains Push 1.;;"Upgrade 13: Increase extra damage to 2d10
+Empower Spell;Universal;Universal;;1;Attack;Encounter; ;Implement;Personal Reaction, Interrupt ;you hit with an Implement attack;;targets an enemy hit by the triggering attack;;;;;Against the target, the triggering attack deals an extra 1d10 and gains Push 1.;;"Upgrade 13: Increase extra damage to 2d10
 Upgrade 23: Increase extra damage to 3d10";Deal extra damage and push
-Offensive Training;Universal;;;1;Attack;Daily; ;;;;Personal;;;;;;Until you recharge or retrain this power, your attacks gain +1 Miss Damage.;;"Upgrade 5: Your attacks gain +1 damage and +1 Miss Damage.
+Offensive Training;Universal;Universal;;1;Attack;Daily; ;;;;Personal;;;;;;Until you recharge or retrain this power, your attacks gain +1 Miss Damage.;;"Upgrade 5: Your attacks gain +1 damage and +1 Miss Damage.
 Upgrade 15: Your attacks gain +1 damage and +2 Miss Damage.
 Upgrade 25: Your attacks gain +2 damage and +2 Miss Damage.";Small damage bonus all day
-Defensive Training;Universal;;;1;Attack;Daily;;;;;Personal;;;;;;Until you recharge or retrain this power, you gain +3 HP.;;"Upgrade 5: +4 HP
+Defensive Training;Universal;Universal;;1;Attack;Daily;;;;;Personal;;;;;;Until you recharge or retrain this power, you gain +3 HP.;;"Upgrade 5: +4 HP
 Upgrade 15: +6 HP
 Upgrade 25: +9 HP";Small HP bonus all day
 Shield Bash;Fighter;Guardian;;1;Attack;;;Weapon, Shield;;;Melee;;Str vs AC;;1W+Str. Push 1, and you may shift that distance to a square adjacent to the target.;;;;Level 21: Increase Hit damage to 2W+Str.;Push and follow up
@@ -29,7 +29,7 @@ Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.";All encounter, damage a
 Shield Wall;Fighter;Guardian;;2;Utility;Encounter;;Shield;Minor Action;;Personal;;;;;;Until your next turn, you gain Cover against enemy attacks and cannot be flanked.;;;Gain Cover, can't be flanked
 Grit;Fighter;Guardian;;2;Utility;Encounter;;;Minor Action;;Personal;;;;;;Roll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.;;;Save against condition
 Find Opening;Fighter;Guardian;;2;Utility;Encounter;;;Minor Action;;Melee;;;;;;Until end of your next turn, your attacks against the target gain Advantage and Pierce Resist;;;Gain Advantage
-Arcane Missiles;Wizard;Elementalist;;1;Attack;;;Implement;;;Ranged 20;targets up to 3 enemies within 2 of each other;Int vs Ref; ;2d4, and Push 1;;;;Level 21: Increase Hit damage to 4d4;Low damage and push to 3 targets
+Arcane Missiles;Wizard;Abjurer;;1;Attack;;;Implement;;;Ranged 20;targets up to 3 enemies within 2 of each other;Int vs Ref; ;2d4, and Push 1;;;;Level 21: Increase Hit damage to 4d4;Low damage and push to 3 targets
 Healing Word;Priest;Light;Feature;1;Utility;Encounter;x2;Healing, Safe;Minor Action;;Ranged 5;targets an ally;;;;;The target spends a Surge, and heals +1d6;;"Level 11: heals +2d6
 Level 21: heals +3d6";Heal surge+1d6
 Healing Light;Priest;Light;;1;Attack;;;Implement;;;Ranged 7;;Wis vs Ref;;1d8 Radiant, and you or an ally within 2 of you heal Wis;;;;;
