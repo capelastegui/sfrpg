@@ -34,7 +34,7 @@
                break-inside: avoid; /* IE 10+ */
 }
 
-.Feat-List {  -moz-column-count: 3;
+.Feat-List, .Power-List {  -moz-column-count: 3;
   -webkit-column-count: 3;
   column-count: 3;  -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
@@ -51,7 +51,7 @@
   display: inline;
 }
 
-.Feat-table {  
+.Feat-table, .Power-table {  
   font-size: 11px;  
   font-family: Verdana;  
   padding-top: 0px;  
@@ -60,6 +60,18 @@
   padding-left: 0px;  
   color: #663300;  
   width: 1000px;  
+  background-color: #ffcc99;
+}
+
+.Class-table {  
+  font-size: 11px;  
+  font-family: Verdana;  
+  padding-top: 0px;  
+  padding-right: 0px;  
+  padding-bottom: 0px;  
+  padding-left: 0px;  
+  color: #663300;  
+  width: 500px;  
   background-color: #ffcc99;
 }
 
@@ -86,7 +98,12 @@
   width: 290px;  
   margin-bottom: 25px;  
   page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
 }
+
+
 
 .Power-Title {  
   font-weight: bold;  
@@ -109,6 +126,9 @@
         color:gray
 }
   
+  .Red {
+        color:darkred  
+}
       
     .Power  p {  
   margin-top: 0px;  
@@ -122,3 +142,8 @@
   font-style: italic;  
   
 }    
+
+.Power-Upgrade {  
+  font-style: italic;  
+  color:gray
+}

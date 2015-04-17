@@ -33,3 +33,5 @@ Maul;Hammer;1d12;;Martial;Melee;2 hands
 Hand Crossbow;Crossbow;1d6;Range 6/12, Off-hand, Recharge;Martial;Ranged;1 hand
 Longbow;Bow;1d8;Range 10/20;Martial;Ranged;2 hands
 Heavy Crossbow;Crossbow;1d12;Range 7/14, Recharge;Martial;Ranged;2 hands
+Unarmed Smash;Unarmed, Hammer;1d8;Versatile;Inner;Melee;1 hand
+Unarmed Chop;Unarmed, Axe;1d8;Versatile;Inner;Melee;1 hand

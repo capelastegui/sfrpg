@@ -12,6 +12,9 @@ power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-tab
 power.lesser.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-lesser.html")
 power.lesser.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-lesser-table.html")
 
+class.stat.raw <- file.path(basedir,"raw","Class-stats.csv")
+class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
+
 # No longer used
 pasteRequirements <-function(req, level)
 {#TODO: VECTORIZE!
@@ -23,8 +26,24 @@ pasteRequirements <-function(req, level)
   as.factor(tmp)
 }
 
+class.stat.df  <- read.csv(class.stat.raw, sep=";", header=FALSE)#%>% tbl_df()  
+#NOTE: using tbl_df() has weird interactions with stuff like as.character(class.stat.df[,1])
+#names(class.stat.df)  <- paste(class.stat.df[,1],class.stat.df[,2],sep=".")
+class.stat.df  <- cbind(V0=paste(class.stat.df[,1],class.stat.df[,2],sep="."),class.stat.df)
+class.stat.df <- trans_df(class.stat.df) %>% tbl_df()
+
+class.stat.list <- llply(class.stat.df[2:length(class.stat.df)],
+                         class.stat.df[,1],.fun=function(a,b)
+                         {buildTableApply(cbind(b,a),tableClass="Class-table",skipHeader = TRUE)})
+
+buildTableApply(class.stat.df[])
+
 power.raw.df <- read.csv(power.raw, sep=";")%>% tbl_df()  #%>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
 power.raw.df <- gsubColwise(power.raw.df,"\\n","<br>")
+usageOrder  <- c("","At-Will","Encounter","Daily")
+power.raw.df$UsageLimit  <- factor(power.raw.df$UsageLimit, 
+                                   levels=c(usageOrder,setdiff(power.raw.df$UsageLimit,usageOrder)))
+power.raw.df  <- power.raw.df %>%  arrange(Class, isFeature!="Feature", Type, UsageLimit, Level, Name)
 
 usageColors <- revalue(power.raw.df$UsageLimit,replace=c(Daily="Gray", Encounter="Red","AtWill"="Green"))
 levels(usageColors)[levels(usageColors)==""] <- "Green"
@@ -34,6 +53,7 @@ power.raw.df.colored <- power.raw.df
 power.raw.df$Name  <- paste("<div class=\"",usageColors,"\">",power.raw.df$Name, sep="")
 power.raw.df$Level  <-paste(power.raw.df$Level,"</div>",sep="")
 
+class.power.list  <- power.raw.df  %>%   split(power.raw.df$Class)
 
 
 #power.tag.df <- read.csv(power.tag, sep=";")
@@ -51,9 +71,10 @@ css <- readChar(css.file, file.info(css.file)$size)
 
 
 
+
 power.table.htm<-buildTableApply(power.raw.df, 
                       df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
-                      tableClass="power-table")
+                      tableClass="Power-table")
 
 
 
@@ -66,18 +87,30 @@ write(power.table.htm,power.table.htm.file)
 
 
 #Build full text descriptions
-power.htm<-buildElementApply(power.raw.df %>%
-                               arrange(Class, Type, UsageLimit, Level, Name),
-                             power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary","isFeature")),skipEmpty = TRUE)
 
+# comment this: power blocks not organized by class
+# power.htm<-buildElementApply(power.raw.df %>%
+#                                arrange(Class, isFeature!="Feature", Type, UsageLimit, Level, Name),
+#                              power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary")),skipEmpty = TRUE)
+
+
+power.htm<-llply(class.power.list   ,
+                      .fun=buildElementApply,
+                 power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary")),skipEmpty = TRUE)
+
+
+power.htm  <- llply.name(power.htm,.fun=function(htm,name){paste("<p><h2>",name,"</h2></p><div class=\"Power-List\">",htm,"</div>" ,collapse="")})
+
+power.htm <-paste(power.htm,collapse="<br> ")
 
 power.full <- paste("<html>\r\n<head>\r\n<title>power-test</title>\r\n<style type=\"text/css\">",
                    css,
                    "</style></head>\r\n<body>",
-                   power.table.htm,
-                   "<div class=\"power-List\">",
+                   power.table.htm,"<p></p>",
+                   #"<div class=\"Power-List\">",
                    power.htm,
-                   "</div>",
+                   #"</div>",
+                   class.stat.list[1],
                    "</body></html>",
                    sep="\r\n",
                    collapse="")

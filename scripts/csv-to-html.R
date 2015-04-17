@@ -2,20 +2,34 @@ require(plyr)
 require(dplyr)
 
 
-buildElement <- function(str, pre, post)
-{laply(str, pre,post, .fun=function(s,pre,post){paste(pre,s,post,sep="")})}
-
-buildElementApply <- function (df,pre,post, df.names=names(df))
+buildElement <- function(str, pre, post,skipEmpty=FALSE)
 {
-  tmp<-ldply(df.names,df,pre,post,.fun=function(n,df,pre,post){buildElement(df[[n]],pre[[n]],post[[n]])})
+  buildElementLoop  <- function(s,pre,post,skipEmpty){
+    if(skipEmpty){
+      emptyIndices <- is.na(s)||s==""
+      pre[emptyIndices] <- ""
+      post[emptyIndices] <- ""
+    }
+    paste(pre,s,post,sep="")
+  }
+  #if(skipempty) pre and post become "" where s =""
+  laply(str, pre,post, skipEmpty, .fun=buildElementLoop)
+}
+
+buildElementApply <- function (df,pre,post, df.names=names(df),skipEmpty=FALSE)
+{
+  tmp<-ldply(df.names,df,pre,post,.fun=function(n,df,pre,post){buildElement(df[[n]],pre[[n]],post[[n]],skipEmpty)})
   tmp<-laply(tmp,paste,sep="\r\n", collapse="\r\n")
   paste(pre$Body,tmp,post$Body, "\r\n",collapse="")
 }
 
-buildTableApply <- function (df, df.names=names(df), tableClass=NULL)
+buildTableApply <- function (df, df.names=names(df), tableClass=NULL,skipHeader=FALSE)
 {
-  tmp1<-paste0(laply(df.names, .fun=function(n){buildElement(n,"<td>","</td>")}),collapse="")
-  tmp1<-paste0("<tr>",tmp1,"</tr>", "\n",collapse="")
+  if(!skipHeader){
+    tmp1<-paste0(laply(df.names, .fun=function(n){buildElement(n,"<td>","</td>")}),collapse="")
+    tmp1<-paste0("<tr>",tmp1,"</tr>", "\n",collapse="")
+  }else{tmp1 <- ""}
+  
   tmp<-ldply(df.names,df,.fun=function(n,df){buildElement(df[[n]],"<td>","</td>")})
   tmp<-laply(tmp,paste0, collapse="")
   tmp<-paste0("<tr>",tmp,"</tr>", "\n",collapse="")

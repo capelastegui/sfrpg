@@ -38,7 +38,7 @@
                break-inside: avoid; /* IE 10+ */
 }
 
-.Feat-List {  -moz-column-count: 3;
+.Feat-List, .Power-List {  -moz-column-count: 3;
   -webkit-column-count: 3;
   column-count: 3;  -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
@@ -55,7 +55,7 @@
   display: inline;
 }
 
-.Feat-table {  
+.Feat-table, .Power-table {  
   font-size: 11px;  
   font-family: Verdana;  
   padding-top: 0px;  
@@ -64,6 +64,18 @@
   padding-left: 0px;  
   color: #663300;  
   width: 1000px;  
+  background-color: #ffcc99;
+}
+
+.Class-table {  
+  font-size: 11px;  
+  font-family: Verdana;  
+  padding-top: 0px;  
+  padding-right: 0px;  
+  padding-bottom: 0px;  
+  padding-left: 0px;  
+  color: #663300;  
+  width: 500px;  
   background-color: #ffcc99;
 }
 
@@ -90,7 +102,12 @@
   width: 290px;  
   margin-bottom: 25px;  
   page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
 }
+
+
 
 .Power-Title {  
   font-weight: bold;  
@@ -113,6 +130,9 @@
         color:gray
 }
   
+  .Red {
+        color:darkred  
+}
       
     .Power  p {  
   margin-top: 0px;  
@@ -126,334 +146,400 @@
   font-style: italic;  
   
 }    
+
+.Power-Upgrade {  
+  font-style: italic;  
+  color:gray
+}
 </style></head>
 <body>
-<table class="power-table"> 
-<tbody> <tr><td>Name</td><td>Class</td><td>Level</td><td>UsageLimit</td><td>isAttack</td><td>Range</td><td>Action</td><td>Summary</td></tr>
-<tr><td>Power Attack</td><td>Universal</td><td>1</td><td>Encounter</td><td>1</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
-<tr><td>Empower Spell</td><td>Universal</td><td>1</td><td>Encounter</td><td>1</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
-<tr><td>Offensive Training</td><td>Universal</td><td>1</td><td>Daily</td><td>1</td><td>Personal</td><td></td><td>Small damage bonus all day</td></tr>
-<tr><td>Defensive Training</td><td>Universal</td><td>1</td><td>Daily</td><td>1</td><td>Personal</td><td></td><td>Small HP bonus all day</td></tr>
-<tr><td>Shield Bash</td><td>Fighter</td><td>1</td><td></td><td>1</td><td>Melee</td><td></td><td>Push and follow up</td></tr>
-<tr><td>Cleave</td><td>Fighter</td><td>1</td><td></td><td>1</td><td>Melee</td><td></td><td>Damage an additional enemy</td></tr>
-<tr><td>Hamstring</td><td>Fighter</td><td>1</td><td>Encounter</td><td>1</td><td>Melee</td><td></td><td>Slow and save penalty</td></tr>
-<tr><td>Stunning Strike</td><td>Fighter</td><td>1</td><td>Encounter</td><td>1</td><td>Melee</td><td></td><td>Low damage and stun</td></tr>
-<tr><td>Storm of blades</td><td>Fighter</td><td>1</td><td>Encounter</td><td>1</td><td>Close Burst 1</td><td></td><td>Low damage and slide burst</td></tr>
-<tr><td>Brutal Strike</td><td>Fighter</td><td>1</td><td>Daily</td><td>1</td><td>Melee</td><td></td><td>High damage, push, prone</td></tr>
-<tr><td>Comeback Strike</td><td>Fighter</td><td>1</td><td>Daily</td><td>1</td><td>Melee</td><td></td><td>Heal yourself</td></tr>
-<tr><td>Blade Dance</td><td>Fighter</td><td>1</td><td>Daily</td><td>1</td><td>Personal</td><td></td><td>All encounter, damage adjacent enemies</td></tr>
-<tr><td>Shield Wall</td><td>Fighter</td><td>2</td><td>Encounter</td><td>0</td><td>Personal</td><td>Minor Action</td><td>Gain Cover, can't be flanked</td></tr>
-<tr><td>Grit</td><td>Fighter</td><td>2</td><td>Encounter</td><td>0</td><td>Personal</td><td>Minor Action</td><td>Save against condition</td></tr>
-<tr><td>Find Opening</td><td>Fighter</td><td>2</td><td>Encounter</td><td>0</td><td>Melee</td><td>Minor Action</td><td>Gain Advantage</td></tr>
-<tr><td>Arcane Missiles</td><td>Wizard</td><td>1</td><td></td><td>NA</td><td>Ranged 20</td><td></td><td>Low damage and push to 3 targets</td></tr>
+<table class="Power-table"> 
+<tbody> <tr><td>Name</td><td>Class</td><td>Level</td><td>Type</td><td>UsageLimit</td><td>Range</td><td>Action</td><td>Summary</td></tr>
+<tr><td><div class="Red">Healing Word</td><td>Cleric</td><td>1</div></td><td>Utility</td><td>Encounter</td><td>Ranged 5</td><td>Minor Action</td><td>Heal surge+1d6</td></tr>
+<tr><td><div class="Green">Healing Light</td><td>Cleric</td><td>1</div></td><td>Attack</td><td></td><td>Ranged 7</td><td></td><td></td></tr>
+<tr><td><div class="Green">Cleave</td><td>Fighter</td><td>1</div></td><td>Attack</td><td></td><td>Melee</td><td></td><td>Damage an additional enemy</td></tr>
+<tr><td><div class="Green">Shield Bash</td><td>Fighter</td><td>1</div></td><td>Attack</td><td></td><td>Melee</td><td></td><td>Push and follow up</td></tr>
+<tr><td><div class="Red">Hamstring</td><td>Fighter</td><td>1</div></td><td>Attack</td><td>Encounter</td><td>Melee</td><td></td><td>Slow and save penalty</td></tr>
+<tr><td><div class="Red">Storm of blades</td><td>Fighter</td><td>1</div></td><td>Attack</td><td>Encounter</td><td>Close Burst 1</td><td></td><td>Low damage and slide burst</td></tr>
+<tr><td><div class="Red">Stunning Strike</td><td>Fighter</td><td>1</div></td><td>Attack</td><td>Encounter</td><td>Melee</td><td></td><td>Low damage and stun</td></tr>
+<tr><td><div class="Gray">Blade Dance</td><td>Fighter</td><td>1</div></td><td>Attack</td><td>Daily</td><td>Personal</td><td></td><td>All encounter, damage adjacent enemies</td></tr>
+<tr><td><div class="Gray">Brutal Strike</td><td>Fighter</td><td>1</div></td><td>Attack</td><td>Daily</td><td>Melee</td><td></td><td>High damage, push, prone</td></tr>
+<tr><td><div class="Gray">Comeback Strike</td><td>Fighter</td><td>1</div></td><td>Attack</td><td>Daily</td><td>Melee</td><td></td><td>Heal yourself</td></tr>
+<tr><td><div class="Red">Find Opening</td><td>Fighter</td><td>2</div></td><td>Utility</td><td>Encounter</td><td>Melee</td><td>Minor Action</td><td>Gain Advantage</td></tr>
+<tr><td><div class="Red">Grit</td><td>Fighter</td><td>2</div></td><td>Utility</td><td>Encounter</td><td>Personal</td><td>Minor Action</td><td>Save against condition</td></tr>
+<tr><td><div class="Red">Shield Wall</td><td>Fighter</td><td>2</div></td><td>Utility</td><td>Encounter</td><td>Personal</td><td>Minor Action</td><td>Gain Cover, can't be flanked</td></tr>
+<tr><td><div class="Red">Empower Spell</td><td>Universal</td><td>1</div></td><td>Attack</td><td>Encounter</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
+<tr><td><div class="Red">Power Attack</td><td>Universal</td><td>1</div></td><td>Attack</td><td>Encounter</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
+<tr><td><div class="Gray">Defensive Training</td><td>Universal</td><td>1</div></td><td>Attack</td><td>Daily</td><td>Personal</td><td></td><td>Small HP bonus all day</td></tr>
+<tr><td><div class="Gray">Offensive Training</td><td>Universal</td><td>1</div></td><td>Attack</td><td>Daily</td><td>Personal</td><td></td><td>Small damage bonus all day</td></tr>
+<tr><td><div class="Green">Arcane Missiles</td><td>Wizard</td><td>1</div></td><td>Attack</td><td></td><td>Ranged 20</td><td></td><td>Low damage and push to 3 targets</td></tr>
  </tbody>
 </table> 
 
-<div class="power-List">
- NAArcane MissilesNA
-NAWizardNA
-NA1NA
-NANA
-NANANA
-NANANA
-NAImplementNA
-NANANA
-NANA
+<p></p>
+<p><h2> Cleric </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Red">Healing Word 
+ -      Cleric 
+Feature
+ 1</div></h3>
+<p>Utility
+ - Encounter
+x2
+ - <i>Healing, Safe</i></p>
+<p><b><i>Minor Action</i></b> -
 
-NARanged 20NA
-NAtargets up to 3 enemies within 2 of each otherNA
-NANANA
-NAInt vs RefNA
-NA2d4, and Push 1NA
-NANA
-NANA
-NANA
-NALevel 21: Increase Hit damage to 4d4NA  
- NABlade DanceNA
-NAFighterNA
-NA1NA
-NADailyNA
-NA0NA
-NA1NA
-NAWeapon, StanceNA
-NANANA
-NANA
+<b>Ranged 5 </b> -
+targets an ally
 
-NAPersonalNA
-NANA
-NANANA
-NANA
-NANA
-NANA
-NAUse Total Defense. Stance: At the start of your turn, deal 1(W) and Slide 1 to one adjacent enemy.NA
-NANA
-NAUpgrade 15: Effect Deal 1W and Slide 1 to each adjacent enemy.<br>Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.NA  
- NABrutal StrikeNA
-NAFighterNA
-NA1NA
-NADailyNA
-NA0NA
-NA1NA
-NAWeapon, ReliableNA
-NANANA
-NANA
 
-NAMeleeNA
-NANA
-NANANA
-NAStr vs ACNA
-NA3W+Str, and Push 3 and knock prone.NA
-NANA
-NANA
-NANA
-NAUpgrade 15: Increase Hit damage to 5W+Str<br>Upgrade 25: Increase Hit damage to 7W+Str<br>NA  
- NACleaveNA
-NAFighterNA
-NA1NA
-NANA
-NA0NA
-NA1NA
-NAWeaponNA
-NANANA
-NANA
 
-NAMeleeNA
-NANA
-NANANA
-NAStr vs ACNA
-NA1W+Str. Make a secondary attack.NA
-NANA
-NANA
-NAMelee, targets another enemy, Str vs AC<br>Hit: Str.NA
-NALevel 21: Increase Hit damage to 2W+Str.NA  
- NAComeback StrikeNA
-NAFighterNA
-NA1NA
-NADailyNA
-NA0NA
-NA1NA
-NAWeaponNA
-NANANA
-NANA
 
-NAMeleeNA
-NANA
-NANANA
-NAStr vs ACNA
-NA2W+Str.NA
-NAHalf DamageNA
-NASpend a surge and double the amount healed. NA
-NANA
-NAUpgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+StrNA  
- NADefensive TrainingNA
-NAUniversalNA
-NA1NA
-NADailyNA
-NA0NA
-NA1NA
-NANA
-NANANA
-NANA
+<p><b>Effect</b>: The target spends a Surge, and heals +1d6</p>
 
-NAPersonalNA
-NANA
-NANANA
-NANA
-NANA
-NANA
-NAUntil you recharge or retrain this power, you gain +3 HP.NA
-NANA
-NAUpgrade 5: +4 HP<br>Upgrade 15: +6 HP<br>Upgrade 25: +9 HPNA  
- NAEmpower SpellNA
-NAUniversalNA
-NA1NA
-NAEncounterNA
-NA0NA
-NA1NA
-NAImplementNA
-NANANA
-NAPersonal Reaction, Interrupt NA
-you hit with an Implement attack
-NANA
-NAtargets an enemy hit by the triggering attackNA
-NANANA
-NANA
-NANA
-NANA
-NAAgainst the target, the triggering attack deals an extra 1d10 and gains Push 1.NA
-NANA
-NAUpgrade 13: Increase extra damage to 2d10<br>Upgrade 23: Increase extra damage to 3d10NA  
- NAFind OpeningNA
-NAFighterNA
-NA2NA
-NAEncounterNA
-NA0NA
-NA0NA
-NANA
-NANANA
-NAMinor ActionNA
+<p class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Green">Healing Light 
+ -      Cleric 
 
-NAMeleeNA
-NANA
-NANANA
-NANA
-NANA
-NANA
-NAUntil end of your next turn, your attacks against the target gain Advantage and Pierce ResistNA
-NANA
-NANA  
- NAGritNA
-NAFighterNA
-NA2NA
-NAEncounterNA
-NA0NA
-NA0NA
-NANA
-NANANA
-NAMinor ActionNA
+ 1</div></h3>
+<p>Attack
 
-NAPersonalNA
-NANA
-NANANA
-NANA
-NANA
-NANA
-NARoll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.NA
-NANA
-NANA  
- NAHamstringNA
-NAFighterNA
-NA1NA
-NAEncounterNA
-NA0NA
-NA1NA
-NAWeaponNA
-NANANA
-NANA
 
-NAMeleeNA
-NANA
-NANANA
-NAStr vs ACNA
-NA2W + Str, and Slowed (save ends). Until your next turn, the target has -4 to saves while adjacent to you.NA
-NANA
-NANA
-NANA
-NAUpgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str<br>NA  
- NAOffensive TrainingNA
-NAUniversalNA
-NA1NA
-NADailyNA
-NA0NA
-NA1NA
-NANA
-NANANA
-NANA
+ - <i>Implement</i></p>
 
-NAPersonalNA
-NANA
-NANANA
-NANA
-NANA
-NANA
-NAUntil you recharge or retrain this power, your attacks gain +1 Miss Damage.NA
-NANA
-NAUpgrade 5: Your attacks gain +1 damage and +1 Miss Damage.<br>Upgrade 15: Your attacks gain +1 damage and +2 Miss Damage.<br>Upgrade 25: Your attacks gain +2 damage and +2 Miss Damage.NA  
- NAPower AttackNA
-NAUniversalNA
-NA1NA
-NAEncounterNA
-NA0NA
-NA1NA
-NAWeaponNA
-NANANA
-NAPersonal Reaction, Interrupt NA
-you hit with a Weapon attack
-NANA
-NAtargets an enemy hit by the triggering attackNA
-NANANA
-NANA
-NANA
-NANA
-NAAgainst the target, the triggering attack deals an extra 1W and gains Push 1.NA
-NANA
-NAUpgrade 13: Increase extra damage to 2W<br>Upgrade 23: Increase extra damage to 3WNA  
- NAShield BashNA
-NAFighterNA
-NA1NA
-NANA
-NA0NA
-NA1NA
-NAWeapon, ShieldNA
-NANANA
-NANA
 
-NAMeleeNA
-NANA
-NANANA
-NAStr vs ACNA
-NA1W+Str. Push 1, and you may shift that distance to a square adjacent to the target.NA
-NANA
-NANA
-NANA
-NALevel 21: Increase Hit damage to 2W+Str.NA  
- NAShield WallNA
-NAFighterNA
-NA2NA
-NAEncounterNA
-NA0NA
-NA0NA
-NAShieldNA
-NANANA
-NAMinor ActionNA
+<b>Ranged 7 </b> -
 
-NAPersonalNA
-NANA
-NANANA
-NANA
-NANA
-NANA
-NAUntil your next turn, you gain Cover against enemy attacks and cannot be flanked.NA
-NANA
-NANA  
- NAStorm of bladesNA
-NAFighterNA
-NA1NA
-NAEncounterNA
-NA0NA
-NA1NA
-NAWeaponNA
-NANANA
-NANA
+Wis vs Ref</p>
 
-NAClose Burst 1NA
-NANA
-NANANA
-NAStr vs ACNA
-NAHit: 1W, and Slide 1.NA
-NANA
-NANA
-NANA
-NAUpgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3WNA  
- NAStunning StrikeNA
-NAFighterNA
-NA1NA
-NAEncounterNA
-NA0NA
-NA1NA
-NAWeaponNA
-NANANA
-NANA
+<p><b>Hit</b>: 1d8 Radiant, and you or an ally within 2 of you heal Wis</p>
 
-NAMeleeNA
-NANA
-NANANA
-NAStr vs ForNA
-NAHit: 1W, and Stunned until your next turn.NA
-NANA
-NANA
-NANA
-NAUpgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3WNA  
 
-</div>
+
+ </div> 
+ </div><br> <p><h2> Fighter </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Green">Cleave 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+
+
+ - <i>Weapon</i></p>
+
+
+<b>Melee </b> -
+
+Str vs AC</p>
+
+<p><b>Hit</b>: 1W+Str. Make a secondary attack.</p>
+
+
+<p><b>Secondary Attack:</b> Melee, targets another enemy, Str vs AC<br>Hit: Str.</p>
+<p class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Green">Shield Bash 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+
+
+ - <i>Weapon, Shield</i></p>
+
+
+<b>Melee </b> -
+
+Str vs AC</p>
+
+<p><b>Hit</b>: 1W+Str. Push 1, and you may shift that distance to a square adjacent to the target.</p>
+
+
+
+<p class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Red">Hamstring 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+ - Encounter
+
+ - <i>Weapon</i></p>
+
+
+<b>Melee </b> -
+
+Str vs AC</p>
+
+<p><b>Hit</b>: 2W + Str, and Slowed (save ends). Until your next turn, the target has -Wis to save while adjacent to you.</p>
+
+
+
+<p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str<br></p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Red">Storm of blades 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+ - Encounter
+
+ - <i>Weapon</i></p>
+
+
+<b>Close Burst 1 </b> -
+
+Str vs AC</p>
+
+<p><b>Hit</b>: Hit: 1W, and Slide 1.</p>
+
+
+
+<p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Red">Stunning Strike 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+ - Encounter
+
+ - <i>Weapon</i></p>
+
+
+<b>Melee </b> -
+
+Str vs For</p>
+
+<p><b>Hit</b>: Hit: 1W, and Stunned until your next turn.</p>
+
+
+
+<p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Gray">Blade Dance 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+ - Daily
+
+ - <i>Weapon, Stance</i></p>
+
+
+<b>Personal </b> -
+
+
+
+
+
+<p><b>Effect</b>: Use Total Defense. Stance: At the start of your turn, deal 1(W) and Slide 1 to one adjacent enemy.</p>
+
+<p class="Power-Upgrade">Upgrade 15: Effect Deal 1W and Slide 1 to each adjacent enemy.<br>Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Gray">Brutal Strike 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+ - Daily
+
+ - <i>Weapon, Reliable</i></p>
+
+
+<b>Melee </b> -
+
+Str vs AC</p>
+
+<p><b>Hit</b>: 3W+Str, and Push 3 and knock prone.</p>
+
+
+
+<p class="Power-Upgrade">Upgrade 15: Increase Hit damage to 5W+Str<br>Upgrade 25: Increase Hit damage to 7W+Str<br></p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Gray">Comeback Strike 
+ -      Fighter 
+
+ 1</div></h3>
+<p>Attack
+ - Daily
+
+ - <i>Weapon</i></p>
+
+
+<b>Melee </b> -
+
+Str vs AC</p>
+
+<p><b>Hit</b>: 2W+Str.</p>
+<p><b>Miss</b>: Half Damage</p>
+<p><b>Effect</b>: Spend a surge and double the amount healed. </p>
+
+<p class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+Str</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Red">Find Opening 
+ -      Fighter 
+
+ 2</div></h3>
+<p>Utility
+ - Encounter
+
+
+<p><b><i>Minor Action</i></b> -
+
+<b>Melee </b> -
+
+
+
+
+
+<p><b>Effect</b>: Until end of your next turn, your attacks against the target gain Advantage and Pierce Resist</p>
+
+ </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Red">Grit 
+ -      Fighter 
+
+ 2</div></h3>
+<p>Utility
+ - Encounter
+
+
+<p><b><i>Minor Action</i></b> -
+
+<b>Personal </b> -
+
+
+
+
+
+<p><b>Effect</b>: Roll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.</p>
+
+ </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Red">Shield Wall 
+ -      Fighter 
+
+ 2</div></h3>
+<p>Utility
+ - Encounter
+
+ - <i>Shield</i></p>
+<p><b><i>Minor Action</i></b> -
+
+<b>Personal </b> -
+
+
+
+
+
+<p><b>Effect</b>: Until your next turn, you gain Cover against enemy attacks and cannot be flanked.</p>
+
+ </div> 
+ </div><br> <p><h2> Universal </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Red">Empower Spell 
+ -      Universal 
+
+ 1</div></h3>
+<p>Attack
+ - Encounter
+ 
+ - <i>Implement</i></p>
+<p><b><i>Personal Reaction, Interrupt </i></b> -
+<i>(Trigger: you hit with an Implement attack)</i> - 
+
+targets an enemy hit by the triggering attack
+
+
+
+
+<p><b>Effect</b>: Against the target, the triggering attack deals an extra 1d10 and gains Push 1.</p>
+
+<p class="Power-Upgrade">Upgrade 13: Increase extra damage to 2d10<br>Upgrade 23: Increase extra damage to 3d10</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Red">Power Attack 
+ -      Universal 
+
+ 1</div></h3>
+<p>Attack
+ - Encounter
+ 
+ - <i>Weapon</i></p>
+<p><b><i>Personal Reaction, Interrupt </i></b> -
+<i>(Trigger: you hit with a Weapon attack)</i> - 
+
+targets an enemy hit by the triggering attack
+
+<p><b>Effect</b>: -</p>
+
+
+<p><b>Effect</b>: Against the target, the triggering attack deals an extra 1W and gains Push 1.</p>
+
+<p class="Power-Upgrade">Upgrade 13: Increase extra damage to 2W<br>Upgrade 23: Increase extra damage to 3W</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Gray">Defensive Training 
+ -      Universal 
+
+ 1</div></h3>
+<p>Attack
+ - Daily
+
+
+
+
+<b>Personal </b> -
+
+
+
+
+
+<p><b>Effect</b>: Until you recharge or retrain this power, you gain +3 HP.</p>
+
+<p class="Power-Upgrade">Upgrade 5: +4 HP<br>Upgrade 15: +6 HP<br>Upgrade 25: +9 HP</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Gray">Offensive Training 
+ -      Universal 
+
+ 1</div></h3>
+<p>Attack
+ - Daily
+ 
+
+
+
+<b>Personal </b> -
+
+
+
+
+
+<p><b>Effect</b>: Until you recharge or retrain this power, your attacks gain +1 Miss Damage.</p>
+
+<p class="Power-Upgrade">Upgrade 5: Your attacks gain +1 damage and +1 Miss Damage.<br>Upgrade 15: Your attacks gain +1 damage and +2 Miss Damage.<br>Upgrade 25: Your attacks gain +2 damage and +2 Miss Damage.</p> </div> 
+ </div><br> <p><h2> Wizard </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Green">Arcane Missiles 
+ -      Wizard 
+
+ 1</div></h3>
+<p>Attack
+
+
+ - <i>Implement</i></p>
+
+
+<b>Ranged 20 </b> -
+targets up to 3 enemies within 2 of each other
+Int vs Ref</p>
+<p><b>Effect</b>:  </p>
+<p><b>Hit</b>: 2d4, and Push 1</p>
+
+
+
+<p class="Power-Upgrade">Level 21: Increase Hit damage to 4d4</p> </div> 
+ </div>
+<table class="Class-table"> 
+<tbody> <tr><td>Class</td><td>Fighter</td></tr>
+<tr><td>Build</td><td>Guardian</td></tr>
+<tr><td>Power Source</td><td>Martial</td></tr>
+<tr><td>Role</td><td>Defender</td></tr>
+<tr><td>Power Progression</td><td>Standard</td></tr>
+<tr><td>Starting HP</td><td>35</td></tr>
+<tr><td>Level HP</td><td>3,5</td></tr>
+<tr><td>Base Surges</td><td>9</td></tr>
+<tr><td>Light Armor Bonus</td><td>1</td></tr>
+<tr><td>Defense Bonuses</td><td> +2 For</td></tr>
+<tr><td>Armor Training</td><td>Light Shield, Heavy Shield, Leather, Hide, Chain, Scale</td></tr>
+<tr><td>Weapon Training</td><td>All Basic, 1-hand Martial</td></tr>
+<tr><td>Implement Training</td><td>-</td></tr>
+<tr><td>Primary Ability</td><td>Strength</td></tr>
+<tr><td>Secondary Ability</td><td>Wisdom</td></tr>
+<tr><td>Fixed Skills</td><td>Athletics</td></tr>
+<tr><td>Base Skills</td><td>2</td></tr>
+<tr><td>Class Skill List</td><td>-</td></tr>
+ </tbody>
+</table> 
+
 </body></html> 

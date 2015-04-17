@@ -1,0 +1,15 @@
+Class;Build;Power Source;Role;Power Progression;Starting HP;Level HP;Base Surges;Light Armor Bonus;Defense Bonuses;Armor Training;Weapon Training;Implement Training;Primary Ability;Secondary Ability;Fixed Skills;Base Skills;Class Skill List
+Fighter;Guardian;Martial;Defender;Standard;35;3,5;9;1; +2 For;Light Shield, Heavy Shield, Leather, Hide, Chain, Scale;All Basic, 1-hand Martial;-;Strength;Wisdom;Athletics;2;-
+Wizard;Abjurer;Arcane;Controller;Standard;30;3;6;0; +2 Wil; -;Dagger, Quarterstaff;Wand, Staff, Orb, Tome;Intelligence;Constitution;Arcana;2;-
+Rogue;Swashbuckler;Martial;Striker;Standard;30;3;6;2; +2 Ref;Leather;Dagger, Short Sword, Sling, Hand Crossbow;-;Dexterity;Charisma;Acrobatics;4;-
+Priest;Light;Divine;Leader;Standard;30;3;7;2; +1 For, +1 Wil; - ;Mace, Sling, Quarterstaff;Symbol;Wisdom;Charisma;Religion;2;-
+Warlord;Tactician;Martial;Leader;Standard;30;3;7;0; +1 For, +1 Wil;Light Shield, Leather, Hide, Chain;All Basic, 1-hand Martial, Longspear, Halberd, Glaive;-;Strength;Intelligence;History;2;-
+Barbarian;Rager;Primal;Striker;Standard;35;3,5;8;0; +2 For;Leather, Hide;All Basic, All Martial;-;Strength;Constitution;Endurance;2;-
+Warlock;Darkness;Arcane;Controller;Standard;30;3;6;1; +1 Ref, +1 Wil;Leather;All Basic;Wand, Rod, Weapon Implement (Dagger);Charisma;Dexterity;Intimidate;2;-
+Bard;Trickster;Arcane;Leader;Standard;30;3;7;0; +1 Ref, +1 Wil;Light Shield, Leather, Hide, Chain;All Basic, 1-hand Martial;Wand, Weapon Implement (Light Blade or Heavy Blade);Charisma;Intelligence;Bluff;4;
+Ranger;Archer;Martial;Striker;Standard;30;3;6;0; +2 Ref;Leather;All Basic, Ranged Martial; -;Dexterity;Wisdom;Perception;2;
+Wizard;Summoner;Arcane;Controller;Standard;30;3;6;0; +2 Wil;-;Dagger, Quarterstaff;Wand, Staff, Orb, Tome;Intelligence;Wisdom;Arcana;2;
+Paladin;Protector;Divine;Defender;Standard;35;3,5;10;0; +1 For, +1 Ref, +1 Wil;Light Shield, Heavy Shield, Leather, Hide, Chain, Scale, Plate;All Basic, 1-hand Martial;Symbol;Charisma;Wisdom;Diplomacy;2;
+Monk;Wind;Inner;Striker;Standard;30;3;6;3; +1 For, +1 Ref, +1 Wil;-;All Inner;Focus;Dexterity;Wisdom;Insight;2;
+Brawler;Tough;Inner;Defender;Standard;50;5;9;0; +2 For;Leather;All Inner; - ;Strength;Constitution;Endurance;2;
+Ninja;Sneak;Martial;Striker;Standard;25;2,5;6;2; +2 Ref; -;Dagger, Short Sword, Light Flail, Flail, Longsword, Glaive, Hand Crossbow, Light Crossbow; -;Dexterity;Intelligence;Stealth;2;
