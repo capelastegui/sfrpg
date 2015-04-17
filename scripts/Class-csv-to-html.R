@@ -27,14 +27,37 @@ pasteRequirements <-function(req, level)
 }
 
 class.stat.df  <- read.csv(class.stat.raw, sep=";", header=FALSE)#%>% tbl_df()  
+class.stat.tmp  <- class.stat.df
 #NOTE: using tbl_df() has weird interactions with stuff like as.character(class.stat.df[,1])
 #names(class.stat.df)  <- paste(class.stat.df[,1],class.stat.df[,2],sep=".")
 class.stat.df  <- cbind(V0=paste(class.stat.df[,1],class.stat.df[,2],sep="."),class.stat.df)
 class.stat.df <- trans_df(class.stat.df) %>% tbl_df()
 
+#TODO: CHANGE THE FOLLOWING TO RETURN A LEVEL 2 NESTED LIST (CLASS,BUILD) instead of a list(class.build)
 class.stat.list <- llply(class.stat.df[2:length(class.stat.df)],
                          class.stat.df[,1],.fun=function(a,b)
                          {buildTableApply(cbind(b,a),tableClass="Class-table",skipHeader = TRUE)})
+
+class.stat.list <- llply(class.stat.df[2:length(class.stat.df)],
+                         class.stat.df[,1],.fun=function(a,b)
+                         {buildTableApply(cbind(b,a),tableClass="Class-table",skipHeader = TRUE)})
+
+#TODO: FIND CODE THAT RESULTS IN LABELED LIST
+
+
+# alt processing for class.stat.df
+class.stat.tmp  <- read.csv(class.stat.raw, sep=";", header=TRUE)
+
+tmp1 <- split(class.stat.tmp,class.stat.tmp$Class)
+tmp1.list  <- llply(tmp1, .fun=function(a){a <- refactor(a);split(a,a$Build)})
+tmp1.list.2 <- llply.n(tmp1.list,2,
+                       .fun2=function(df){
+                         table <- cbind(names(df),trans_df(df))
+                         htm <- buildTableApply(table,tableClass="Class-table")
+                         list(stats=table,stats.htm=htm)
+                              })
+
+class.stat.nlist  <- llply(class.stat.tmp$Build,class.stat.tmp,.fun=function(a,b){b})
 
 buildTableApply(class.stat.df[])
 
@@ -96,7 +119,7 @@ write(power.table.htm,power.table.htm.file)
 
 power.htm<-llply(class.power.list   ,
                       .fun=buildElementApply,
-                 power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary")),skipEmpty = TRUE)
+                 power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary","Build")),skipEmpty = TRUE)
 
 
 power.htm  <- llply.name(power.htm,.fun=function(htm,name){paste("<p><h2>",name,"</h2></p><div class=\"Power-List\">",htm,"</div>" ,collapse="")})

@@ -155,8 +155,6 @@
 <body>
 <table class="Power-table"> 
 <tbody> <tr><td>Name</td><td>Class</td><td>Level</td><td>Type</td><td>UsageLimit</td><td>Range</td><td>Action</td><td>Summary</td></tr>
-<tr><td><div class="Red">Healing Word</td><td>Cleric</td><td>1</div></td><td>Utility</td><td>Encounter</td><td>Ranged 5</td><td>Minor Action</td><td>Heal surge+1d6</td></tr>
-<tr><td><div class="Green">Healing Light</td><td>Cleric</td><td>1</div></td><td>Attack</td><td></td><td>Ranged 7</td><td></td><td></td></tr>
 <tr><td><div class="Green">Cleave</td><td>Fighter</td><td>1</div></td><td>Attack</td><td></td><td>Melee</td><td></td><td>Damage an additional enemy</td></tr>
 <tr><td><div class="Green">Shield Bash</td><td>Fighter</td><td>1</div></td><td>Attack</td><td></td><td>Melee</td><td></td><td>Push and follow up</td></tr>
 <tr><td><div class="Red">Hamstring</td><td>Fighter</td><td>1</div></td><td>Attack</td><td>Encounter</td><td>Melee</td><td></td><td>Slow and save penalty</td></tr>
@@ -168,6 +166,8 @@
 <tr><td><div class="Red">Find Opening</td><td>Fighter</td><td>2</div></td><td>Utility</td><td>Encounter</td><td>Melee</td><td>Minor Action</td><td>Gain Advantage</td></tr>
 <tr><td><div class="Red">Grit</td><td>Fighter</td><td>2</div></td><td>Utility</td><td>Encounter</td><td>Personal</td><td>Minor Action</td><td>Save against condition</td></tr>
 <tr><td><div class="Red">Shield Wall</td><td>Fighter</td><td>2</div></td><td>Utility</td><td>Encounter</td><td>Personal</td><td>Minor Action</td><td>Gain Cover, can't be flanked</td></tr>
+<tr><td><div class="Red">Healing Word</td><td>Priest</td><td>1</div></td><td>Utility</td><td>Encounter</td><td>Ranged 5</td><td>Minor Action</td><td>Heal surge+1d6</td></tr>
+<tr><td><div class="Green">Healing Light</td><td>Priest</td><td>1</div></td><td>Attack</td><td></td><td>Ranged 7</td><td></td><td></td></tr>
 <tr><td><div class="Red">Empower Spell</td><td>Universal</td><td>1</div></td><td>Attack</td><td>Encounter</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
 <tr><td><div class="Red">Power Attack</td><td>Universal</td><td>1</div></td><td>Attack</td><td>Encounter</td><td></td><td>Personal Reaction, Interrupt </td><td>Deal extra damage and push</td></tr>
 <tr><td><div class="Gray">Defensive Training</td><td>Universal</td><td>1</div></td><td>Attack</td><td>Daily</td><td>Personal</td><td></td><td>Small HP bonus all day</td></tr>
@@ -177,45 +177,7 @@
 </table> 
 
 <p></p>
-<p><h2> Cleric </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Red">Healing Word 
- -      Cleric 
-Feature
- 1</div></h3>
-<p>Utility
- - Encounter
-x2
- - <i>Healing, Safe</i></p>
-<p><b><i>Minor Action</i></b> -
-
-<b>Ranged 5 </b> -
-targets an ally
-
-
-
-
-<p><b>Effect</b>: The target spends a Surge, and heals +1d6</p>
-
-<p class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Healing Light 
- -      Cleric 
-
- 1</div></h3>
-<p>Attack
-
-
- - <i>Implement</i></p>
-
-
-<b>Ranged 7 </b> -
-
-Wis vs Ref</p>
-
-<p><b>Hit</b>: 1d8 Radiant, and you or an ally within 2 of you heal Wis</p>
-
-
-
- </div> 
- </div><br> <p><h2> Fighter </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Green">Cleave 
+<p><h2> Fighter </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Green">Cleave 
  -      Fighter 
 
  1</div></h3>
@@ -422,6 +384,44 @@ Str vs AC</p>
 
 
 <p><b>Effect</b>: Until your next turn, you gain Cover against enemy attacks and cannot be flanked.</p>
+
+ </div> 
+ </div><br> <p><h2> Priest </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Red">Healing Word 
+ -      Priest 
+Feature
+ 1</div></h3>
+<p>Utility
+ - Encounter
+x2
+ - <i>Healing, Safe</i></p>
+<p><b><i>Minor Action</i></b> -
+
+<b>Ranged 5 </b> -
+targets an ally
+
+
+
+
+<p><b>Effect</b>: The target spends a Surge, and heals +1d6</p>
+
+<p class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</p> </div> 
+<div class="Power"> <h3 class="Power-Title"><div class="Green">Healing Light 
+ -      Priest 
+
+ 1</div></h3>
+<p>Attack
+
+
+ - <i>Implement</i></p>
+
+
+<b>Ranged 7 </b> -
+
+Wis vs Ref</p>
+
+<p><b>Hit</b>: 1d8 Radiant, and you or an ally within 2 of you heal Wis</p>
+
+
 
  </div> 
  </div><br> <p><h2> Universal </h2></p><div class="Power-List"> <div class="Power"> <h3 class="Power-Title"><div class="Red">Empower Spell 
