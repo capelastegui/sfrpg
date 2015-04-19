@@ -47,11 +47,26 @@ power.raw.df  <- power.raw.df %>%
 
 class.power.list  <- split(power.raw.df,power.raw.df$Class) 
 class.power.list <- llply(class.power.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
-class.power.list <- llply.n(class.power.list,2,
-                           .fun2=function(df){
-                             htm <- buildTableApply(table,tableClass="Class-table")
-                             list(powers=df,powers.htm=htm)
+class.power.list <- llply.n(class.power.list,2,power.tag.pre, power.tag.post,
+                           .fun2=function(df,power.tag.pre, power.tag.post){
+                             htm <- buildElementApply(df,power.tag.pre, power.tag.post,
+                                                      df.names=setdiff(names(df),c("Summary","Build","usageColors")),
+                                                      skipEmpty = TRUE)
+
+                             table <- buildTableApply(df,
+                                                    df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
+                                                    tableClass="Class-table")
+                             list(powers=df,powers.htm=htm,powers.table=table)
                            })
+
+
+class.power.list  <- llply.n(class.power.list,2,
+                             .fun=function(l){
+                               classbuild <- paste(l$powers$Class[1],l$powers$Build[1])
+                               l$powers.htm <- paste("<p><h2>",classbuild,"</h2></p><div class=\"Power-List\">",
+                                                     l$powers.htm,"</div>" ,sep="",collapse="")
+                               l})
+
 
 #join all class nested lists
 class.list  <- llply.parallel.multilist(class.power.list, 
@@ -59,20 +74,18 @@ class.list  <- llply.parallel.multilist(class.power.list,
                                         n=2,
                                         .fun=function(...){unlist(c(...),recursive=FALSE)})
 
-llply.parallel.multilist(mylist1,list(mylist1,mylist2),1,.fun=function(...){unlist(c(...),recursive=FALSE)})
 
-#power.tag.df <- read.csv(power.tag, sep=";")
 power.tag.df <- read.csv(power.tag, sep=";", colClasses="character")
 power.tag.pre<- power.tag.df[1,]
 power.tag.post<- power.tag.df[2,]
 
-
 css <- readChar(css.file, file.info(css.file)$size)
-
 
 #Build power tables
 
 
+#add stuff to nested list
+#class.list  <- llply.n(class.list,2,.fun2 = function(...){c(...,a="A")})
 
 
 
@@ -99,23 +112,16 @@ write(power.table.htm,power.table.htm.file)
 #                              power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary")),skipEmpty = TRUE)
 
 
-power.htm<-llply(class.power.list   ,
-                      .fun=buildElementApply,
-                 power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary","Build")),skipEmpty = TRUE)
 
-
-power.htm  <- llply.name(power.htm,.fun=function(htm,name){paste("<p><h2>",name,"</h2></p><div class=\"Power-List\">",htm,"</div>" ,collapse="")})
-
-power.htm <-paste(power.htm,collapse="<br> ")
 
 power.full <- paste("<html>\r\n<head>\r\n<title>power-test</title>\r\n<style type=\"text/css\">",
                    css,
                    "</style></head>\r\n<body>",
                    power.table.htm,"<p></p>",
                    #"<div class=\"Power-List\">",
-                   power.htm,
+                   get.nested(class.list,c(1,1))$powers.htm,
                    #"</div>",
-                   class.stat.list[1],
+                   class.stat.list[[2]][[1]][[2]],
                    "</body></html>",
                    sep="\r\n",
                    collapse="")
