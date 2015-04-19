@@ -24,11 +24,14 @@ class.stat.list <- llply(class.stat.list, .fun=function(a){a <- refactor(a);spli
 class.stat.list <- llply.n(class.stat.list,2,
                        .fun2=function(df){
                          table <- cbind(names(df),trans_df(df))
-                         htm <- buildTableApply(table,tableClass="Class-table")
+                         htm <- buildTableApply(table,tableClass="Class-table", skipHeader = TRUE)
                          list(stats=table,stats.htm=htm)
                               })
 
 usageOrder  <- c("","At-Will","Encounter","Daily")
+power.tag.df <- read.csv(power.tag, sep=";", colClasses="character")
+power.tag.pre<- power.tag.df[1,]
+power.tag.post<- power.tag.df[2,]
 
 power.raw.df <- read.csv(power.raw, sep=";") %>% 
   gsubColwise("\\n","<br>")%>% 
@@ -52,19 +55,18 @@ class.power.list <- llply.n(class.power.list,2,power.tag.pre, power.tag.post,
                              htm <- buildElementApply(df,power.tag.pre, power.tag.post,
                                                       df.names=setdiff(names(df),c("Summary","Build","usageColors")),
                                                       skipEmpty = TRUE)
+                             htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
 
                              table <- buildTableApply(df,
                                                     df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
-                                                    tableClass="Class-table")
+                                                    tableClass="Power-table")
                              list(powers=df,powers.htm=htm,powers.table=table)
                            })
 
 
 class.power.list  <- llply.n(class.power.list,2,
                              .fun=function(l){
-                               classbuild <- paste(l$powers$Class[1],l$powers$Build[1])
-                               l$powers.htm <- paste("<p><h2>",classbuild,"</h2></p><div class=\"Power-List\">",
-                                                     l$powers.htm,"</div>" ,sep="",collapse="")
+                               l$classbuild  <- paste("<h2>",l$powers$Class[1],l$powers$Build[1],"</h2>",sep=" ")
                                l})
 
 
@@ -75,56 +77,58 @@ class.list  <- llply.parallel.multilist(class.power.list,
                                         .fun=function(...){unlist(c(...),recursive=FALSE)})
 
 
-power.tag.df <- read.csv(power.tag, sep=";", colClasses="character")
-power.tag.pre<- power.tag.df[1,]
-power.tag.post<- power.tag.df[2,]
+
 
 css <- readChar(css.file, file.info(css.file)$size)
 
 #Build power tables
-
-
 #add stuff to nested list
 #class.list  <- llply.n(class.list,2,.fun2 = function(...){c(...,a="A")})
-
-
-
-
-power.table.htm<-buildTableApply(power.raw.df, 
-                      df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
-                      tableClass="Power-table")
-
-
-
-
-
+# No longer used, keep in case we need a global power table
+# power.table.htm<-buildTableApply(power.raw.df, 
+#                       df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
+#                       tableClass="Power-table")
 # power.table.htm<-paste(power.table.htm,collapse="<br> ")
-
-
-write(power.table.htm,power.table.htm.file)
-
+#write(power.table.htm,power.table.htm.file)
 
 #Build full text descriptions
-
-# comment this: power blocks not organized by class
-# power.htm<-buildElementApply(power.raw.df %>%
-#                                arrange(Class, isFeature!="Feature", Type, UsageLimit, Level, Name),
-#                              power.tag.pre, power.tag.post, df.names=setdiff(names(power.raw.df),c("Summary")),skipEmpty = TRUE)
-
-
-
-
 power.full <- paste("<html>\r\n<head>\r\n<title>power-test</title>\r\n<style type=\"text/css\">",
                    css,
                    "</style></head>\r\n<body>",
-                   power.table.htm,"<p></p>",
-                   #"<div class=\"Power-List\">",
-                   get.nested(class.list,c(1,1))$powers.htm,
-                   #"</div>",
-                   class.stat.list[[2]][[1]][[2]],
+                   "<p>",class.list$Fighter$Guardian$stats.htm,"</p>",
+                   "<p>",class.list$Fighter$Guardian$powers.table,"</p>",
+                   class.list$Fighter$Guardian$powers.htm,
                    "</body></html>",
                    sep="\r\n",
                    collapse="")
+
+
+tmp <- llply.n(class.list,2,
+               .fun=function(l){
+                 paste("<p>",l$classbuild,"</p>\r\n",
+                       "<p><h3>Class Stats</h3></p>\r\n",
+                       "<p>",l$stats.htm,"</p>\r\n",
+                       "<p><h3>Class Powers</h3></p>\r\n",
+                       #"<p>",l$powers.table,"</p>\r\n",
+                       "<p>",l$powers.htm,"</p>\r\n",
+                       sep="")
+               })
+
+
+tmp <- paste(llply(tmp,collapse="",.fun=paste),collapse="\r\n")
+
+power.full <- paste("<html>\r\n<head>\r\n<title>power-test</title>\r\n<style type=\"text/css\">",
+                    css,
+                    "</style></head>\r\n<body>",
+                    tmp,
+                    "</body></html>",
+                    sep="",
+                    collapse="")
+
+
+# power.full  <- paste("<html>\r\n<head>\r\n<title>power-test</title>\r\n<style type=\"text/css\">",
+#                      css,
+#                      "</style></head>\r\n<body>",
 
 
 writeChar(power.full,power.htm.file)
