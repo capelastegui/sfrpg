@@ -103,7 +103,17 @@
                break-inside: avoid;
 }
 
-
+ .Feature {  
+  font-family: Verdana;  
+  font-size: 12px;  
+  width: 800px; 
+  line-height: normal;  
+   margin-bottom: 5px;  
+  page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
+}
 
 .Power-Title {  
   font-weight: bold;  

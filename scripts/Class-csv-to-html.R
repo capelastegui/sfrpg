@@ -19,6 +19,7 @@ class.features.tag <- file.path(basedir,"raw","Class-features-tags.csv")
 
 
 class.stat.df  <- read.csv(class.stat.raw, sep=";", header=TRUE)
+class.feature.df  <- read.csv(class.features.raw, sep=";", header=TRUE)
 
 class.stat.list  <- split(class.stat.df,class.stat.df$Class)
 class.stat.list <- llply(class.stat.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
@@ -35,8 +36,8 @@ power.tag.pre<- power.tag.df[1,]
 power.tag.post<- power.tag.df[2,]
 
 feature.tag.df <- read.csv(class.features.tag, sep=";", colClasses="character")
-feature.tag.pre<- power.tag.df[1,]
-feature.tag.post<- power.tag.df[2,]
+feature.tag.pre<- feature.tag.df[1,]
+feature.tag.post<- feature.tag.df[2,]
 
 power.raw.df <- read.csv(power.raw, sep=";") %>% 
   gsubColwise("\\n","<br>")%>% 
@@ -75,9 +76,23 @@ class.power.list  <- llply.n(class.power.list,2,
                                l})
 
 
+class.feature.list  <- split(class.feature.df,class.feature.df$Class) 
+class.feature.list <- llply(class.feature.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
+class.feature.list <- llply.n(class.feature.list,2,feature.tag.pre, feature.tag.post,
+                            .fun2=function(df,feature.tag.pre, feature.tag.post){
+                              htm <- buildElementApply(df,feature.tag.pre, feature.tag.post,
+                                                       df.names=setdiff(names(df),c("Class","Build")),
+                                                       skipEmpty = TRUE)
+                              #htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
+                              
+                              list(features=df,features.htm=htm)
+                            })
+
+
+
 #join all class nested lists
 class.list  <- llply.parallel.multilist(class.power.list, 
-                                        list(class.power.list,class.stat.list),
+                                        list(class.power.list,class.stat.list,class.feature.list),
                                         n=2,
                                         .fun=function(...){unlist(c(...),recursive=FALSE)})
 
@@ -113,6 +128,8 @@ tmp <- llply.n(class.list,2,
                  paste("<p>",l$classbuild,"</p>\r\n",
                        "<p><h3>Class Stats</h3></p>\r\n",
                        "<p>",l$stats.htm,"</p>\r\n",
+                       "<p><h3>Class features</h3></p>\r\n",
+                       "<p>",l$features.htm,"</p>\r\n",
                        "<p><h3>Class Powers</h3></p>\r\n",
                        #"<p>",l$powers.table,"</p>\r\n",
                        "<p>",l$powers.htm,"</p>\r\n",
