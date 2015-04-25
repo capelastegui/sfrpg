@@ -1,7 +1,7 @@
 Class;Build;Power Source;Role;Power Progression;Starting HP;Level HP;Base Surges;Light Armor Bonus;Defense Bonuses;Armor Training;Weapon Training;Implement Training;Primary Ability;Secondary Ability;Fixed Skills;Base Skills;Class Skill List
 Fighter;Guardian;Martial;Defender;Standard;35;3,5;9;1; +2 For;Light Shield, Heavy Shield, Leather, Hide, Chain, Scale;All Basic, 1-hand Martial;-;Strength;Wisdom;Athletics;2;-
 Wizard;Abjurer;Arcane;Controller;Standard;30;3;6;0; +2 Wil; -;Dagger, Quarterstaff;Wand, Staff, Orb, Tome;Intelligence;Constitution;Arcana;2;-
-Rogue;Swashbuckler;Martial;Striker;Standard;30;3;6;2; +2 Ref;Leather;Dagger, Short Sword, Sling, Hand Crossbow;-;Dexterity;Charisma;Acrobatics;4;-
+Rogue;Scoundrel;Martial;Striker;Standard;30;3;6;2; +2 Ref;Leather;Dagger, Short Sword, Rapier, Sling, Hand Crossbow, Light Crossbow;-;Dexterity;Charisma;Acrobatics;4;-
 Priest;Light;Divine;Leader;Standard;30;3;7;2; +1 For, +1 Wil; - ;Mace, Sling, Quarterstaff;Symbol;Wisdom;Charisma;Religion;2;-
 Warlord;Tactician;Martial;Leader;Standard;30;3;7;0; +1 For, +1 Wil;Light Shield, Leather, Hide, Chain;All Basic, 1-hand Martial, Longspear, Halberd, Glaive;-;Strength;Intelligence;History;2;-
 Barbarian;Rager;Primal;Striker;Standard;35;3,5;8;0; +2 For;Leather, Hide;All Basic, All Martial;-;Strength;Constitution;Endurance;2;-

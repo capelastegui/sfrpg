@@ -13,9 +13,10 @@ Climb;Move;Climb 1.
 Swim;Move;Swim 1.
 Jump;Move;Move half your Speed and, if you are 2 or more squares away from your starting position, Jump 2.
 High Jump;Move;Move half your Speed and, if you are 2 or more squares away from your starting position, High Jump 1. If you make an attack this turn before making any further movement, you can use the peak of the High Jump as the origin of the attack.
-Hide;Standard;If you have Cover (not counting cover granted by other creatures) or Concealment from all enemies within 10 squares, you become Hidden.
-Sneak;Move;Use only while Hidden. Move half your Speed. At the end of the movement, if you have Cover (not counting cover granted by other creatures) or Concealment from all enemies within 10 squares, you remain Hidden.
-Seek;Standard;The closest Hidden enemy within 5 squares becomes Located.
-Reveal;Standard;Choose a Hidden and Located enemy within 5 squares. The enemy stops being Hidden.
-Escape;Standard;Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy.
-First Aid;Standard;An adjacent Dying ally rolls a save to stop being Dying.
+Hide;Move;Move 1. If you are in Cover (other than Body Cover) or Concealment from all enemies, you become Shrouded. If you were already Shrouded, you become Hidden instead.
+Vanish;Standard;Move 1. If you are in Superior Cover or Superior Concealment from all enemies, you become Hidden. 
+Sneak;Move;Special: Use only while Shrouded or Hidden. Effect: Move half your Speed. If you are in Cover (other than Body Cover) or Concealment from all enemies, you do not lose the Shrouded or Hidden Condition.
+Search;Move;Move 1. All Hidden enemies within 2 squares become Shrouded instead.
+Escape;Move;Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy.
+First Aid;Standard;An adjacent Dying ally is no longer Dying.
+Administer Potion;Standard;You make an adjacent ally use a Potion you or the ally are carrying.

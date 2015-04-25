@@ -1,0 +1,51 @@
+Class;Build;Name;Description
+Fighter;Guardian;Fighter's Challenge;"When you target an enemy with an attack, that enemy is Marked until end of your next turn.
+Enemies Marked by you trigger Opportunity Attacks from you when Shifting or violating a Mark."
+Fighter;Guardian;Guardian's Opportunity;"You add your Wisdom to your Reaction Modifier.
+Your Reaction attacks deal extra damage equal to your Wisdom."
+Fighter;Guardian;Weapon Mastery;You gain +1 Hit with weapon attacks
+Fighter;Guardian;Heavy Armor Specialist;Your total Armor Penalty to Skills is halved
+Wizard;Evoker;Controller Feat;"You gain a bonus Feat from the Controller Feat category.
+"
+Wizard;Evoker;Evoker's Barrage;"Add your Dexterity to your Miss Damage.
+Add your Dexterity to the range of your Ranged and Area attacks."
+Wizard;Evoker;Wizard Flexibility;You gain an additional At-Will attack power.
+Wizard;Evoker;Master Ritualist;"You gain Ritual Training as a bonus lesser feat.
+You learn an additional Heroic Ritual from each Ritual Training lesser feat.
+You learn an additional Paragon Ritual from each Paragon Ritual Training lesser feat.
+You learn an additional Epic Ritual from each Epic ritual Training lesser feat."
+Wizard;Abjurer;Controller Feat;"You gain a bonus Feat from the Controller Feat category.
+"
+Wizard;Abjurer;Abjurer;"You add double your Constitution to your Hit Points.
+You gain +1 AC."
+Wizard;Abjurer;Wizard Flexibility;You gain an additional At-Will attack power.
+Wizard;Abjurer;Master Ritualist;"You gain Ritual Training as a bonus lesser feat.
+You learn an additional Heroic Ritual from each Ritual Training lesser feat.
+You learn an additional Paragon Ritual from each Paragon Ritual Training lesser feat.
+You learn an additional Epic Ritual from each Epic ritual Training lesser feat."
+Rogue;Scoundrel;Sneak Attack;"While wielding a Light Weapon, when you hit on an attack with Advantage you deal +2d6 damage. If the attack has multiple targets or multiple attack rolls, this extra damage is halved.
+Increase the extra damage to +3d6 at level 11, and to +5d6 at level 21."
+Rogue;Scoundrel;Rogue Ambush;On the first round of combat, gain Advantage against enemies that have not acted yet.
+Rogue;Scoundrel;Scoundrel Move;You gain a bonus to all defenses agains Opportunity Attacks equal to double your Charisma.
+Rogue;Scoundrel;Weapon Finesse; +1 Hit with Off-hand weapons and Slings.
+Rogue;Scoundrel;Light Weapon;You treat the following weapons as Light Weapons: Light Blades, Crossbows, Slings.
+Priest;Light;Healing Word;You gain the Healing Word power.
+Priest;Light;Faith Healing;"When you use a Healing power, add your Charisma to the Surge Value of any character spending a Surge.
+When you use a character to full health, that character gains Shield Points equal to your Charisma."
+Priest;Light;Shield of the Gods;Attacks without Advantage made against you or any ally within 5 squares gain -1 Crit Range.
+Priest;Light;Ritual Training;You gain Ritual Training as a bonus lesser feat.
+Barbarian;Rager;Rage Strike;You gain the Rage Strike power.
+Barbarian;Rager;Savage Attack;Your attacks deal +Constitution damage.
+Barbarian;Rager;Raging Resilience;You add your Constitution to your Surge Value.
+Barbarian;Rager;Barbarian Charge;When you charge an enemy within 4 or more squares, you gain +2 hit, and you can use a Barbarian melee attack instead of a melee Basic attack.
+Barbarian;Rager;Savage Skill;You add your Constitution to your Intimidate skill and your Nature skill.
+Warlord;Tactician;;
+Warlock;Darkness;;
+Bard;Trickster;;
+Ranger;Archer;;
+Wizard;Summoner;;
+Paladin;Protector;;
+Monk;Wind;;
+Brawler;Tough;;
+Ninja;Sneak;;
+Universal;Universal;;

@@ -9,11 +9,12 @@ power.lesser.tag <- file.path(basedir,"raw","Powers-Lesser-tags.csv")
 css.file <- file.path(basedir,"raw","SFRPG.css")
 power.htm.file <- file.path(basedir,"html","CharacterCreation","Powers.html")
 power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-table.html")
-power.lesser.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-lesser.html")
-power.lesser.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-lesser-table.html")
 
 class.stat.raw <- file.path(basedir,"raw","Class-stats.csv")
 class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
+
+class.features.raw <- file.path(basedir,"raw","Class-features.csv")
+class.features.tag <- file.path(basedir,"raw","Class-features-tags.csv")
 
 
 
@@ -23,7 +24,7 @@ class.stat.list  <- split(class.stat.df,class.stat.df$Class)
 class.stat.list <- llply(class.stat.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
 class.stat.list <- llply.n(class.stat.list,2,
                        .fun2=function(df){
-                         table <- cbind(names(df),trans_df(df))
+                         table <- cbind(gsub("\\."," ",names(df)),trans_df(df))
                          htm <- buildTableApply(table,tableClass="Class-table", skipHeader = TRUE)
                          list(stats=table,stats.htm=htm)
                               })
@@ -32,6 +33,10 @@ usageOrder  <- c("","At-Will","Encounter","Daily")
 power.tag.df <- read.csv(power.tag, sep=";", colClasses="character")
 power.tag.pre<- power.tag.df[1,]
 power.tag.post<- power.tag.df[2,]
+
+feature.tag.df <- read.csv(class.features.tag, sep=";", colClasses="character")
+feature.tag.pre<- power.tag.df[1,]
+feature.tag.post<- power.tag.df[2,]
 
 power.raw.df <- read.csv(power.raw, sep=";") %>% 
   gsubColwise("\\n","<br>")%>% 

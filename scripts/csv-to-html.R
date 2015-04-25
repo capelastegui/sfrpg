@@ -7,7 +7,9 @@ buildElement <- function(str, pre, post,skipEmpty=FALSE)
   buildElementLoop  <- function(s,pre,post,skipEmpty){
     if(skipEmpty){
       emptyIndices <- is.na(s)||s==""
+      pre <- as.character(pre)
       pre[emptyIndices] <- ""
+      post  <- as.character(post)
       post[emptyIndices] <- ""
     }
     paste(pre,s,post,sep="")
