@@ -1,0 +1,194 @@
+---
+title: "Introduction"
+output: 
+  html_document:
+    css: SFRPG.css
+---
+
+#Chapter 1 - Introduction
+
+##Introduction to Role Playing Games
+
+
+##A note on text format
+
+Normally formatted, black text is used to describe game rules.
+
+Italics are used to provide non-mechanic related descriptions: flavor, backstory.
+
+Blue text is used to provide advice on how to play the game. It is typically preceded by “Tip” or “Example”.
+
+Gold text is used to provide compatibility instructions to integrate material from older sourcebooks. It is typically preceded by “Compatibility Note”.
+
+Red text is used to provide insight into the designer's ideas regarding a game element. It is typically preceded by "Designer's Note".
+
+##Character Stats
+In this section, we describe the main stats that affect the performance of characters (including both Player Characters and Monsters) in the game.
+
+###Level
+
+The **Level** of a character is a general measure of that character’s relative power. Player Characters start at level 1, and gain levels as they acquire experience, up to a maximum of 30. Monsters have a level that is determined by their race, and is typically between 1 and 30, but can exceptionally go over 30.
+
+The most direct benefit of Level is its impact on character attacks. Attacking a lower level character provides a bonus to hit of +1 per every two levels that the attacker has over the defender. Likewise, attacking a higher level character provides a hit penalty penalty of -1 per every two levels that the attacker has below the defender.
+
+In addition, a character’s Hit Points are derived from character level (and class), and attack damage increases with level. For a detailed view of damage progression for Player Characters, see Levelling in the Character Building chapter. For a detailed view of damage progression for monsters, see Monster Stats in the Monster chapter.
+
+Based on the level of Player Characters, the game is organized in three **tiers**: **Heroic** (levels 1 to 10), **Paragon** (levels 11 to 20) and **Epic** (levels 21 and above). Character tier is sometimes referenced by game elements such as feats, but otherwise has no direct impact on the game. For a detailed discussion of tiers, see Levelling in the Character Building chapter.
+
+###Hit Points
+
+Combat in the game is represented as a succession of attacks where characters deal a certain amount of damage to each other. **Hit Points** (abbreviated as **HP**) are a character stat that determines how much damage the character can take before falling unconscious.
+
+The amount of HP of a Character depends on character Level and Class, for Player Characters, and on character Level, monster Role, and monster Type, in the case of monsters. The HP progression for Player Characters is:
+
+- Classes with normal HP: 30 HP + 3 HP per level.
+- Classes with high HP: 35 HP + 3.5 HP per level.
+- Classes with very high HP: 40 HP + 4 HP per level.
+
+A summary table with the HP and other stats corresponding to each Player Character class is provided in the Classes section of the Character Building chapter.
+
+A character under half of their maximum Hit Points is said to be Bloodied. Many game effects check for the Bloodied condition in characters. For easier reference, a **Bloodied Value** stat is provided for each character, equal to one half of maximum Hit Points. Characters with a current HP total under Bloodied Value are Bloodied.
+
+For Player Characters, another stat derived from Hit Points is the **Surge Value**, which determines the amount of HP that is healed when a character spends a Surge to heal. A character’s Surge Value is equal to one quarter their maximum Hit Points.
+
+###Abilities
+
+All characters have six Abilities, which are used for non-combat interaction such as Skill Checks and Ability Checks, as well as for combat maneuvers. For Player Characters, Abilities are often used to determine the effect of Powers and other attacks. The abilities are:
+
+- **Strength (Str)**: Ability to exert force, perform physical feats
+- **Constitution (Con)**: Ability to endure pain, make long efforts, concentrate.
+- **Dexterity (Dex)**: Ability to move quickly and gracefully. Coordination.
+- **Wisdom (Wis)**: Ability to know the environment, observe and anticipate. Intuition.
+- **Charisma (Cha)**: Ability to communicate and persuade. Self-confidence.
+- **Intelligence (Int)**: Ability to reason, memorize, learn.
+
+Each Ability is a value, typically ranging between -1 and 5, which is applied as a modifier to Skill Checks, Ability Checks, and a variety of Power effects, with the exception of those dealing with damage and healing. For effects related to damage and healing of a Player Character, an Ability is adjusted by a level-dependent multiplier. This is called an Ability Damage Modifier.
+
+For Player Characters, some stats that are derived from Abilities. These are the Secondary Defenses (Fortitude, Reflex, Will) and Secondary Stats (Reaction, Surges, and Initiative). These are the stats that correspond to each Ability:
+
+- Strength: Fortitude, Reaction
+- Constitution: Fortitude, Surges
+- Dexterity: Reflex, Initiative
+- Wisdom: Reflex, Reaction
+- Charisma: Will, Surges
+- Intelligence: Will, Initiative
+
+The process for generating a Player Character’s Abilities is described in the Stat Generation section, in the Character Building chapter.
+
+####Ability Damage Modifier  
+
+As the level of characters increases, so do their Hit Points, the amount of damage they deal, and the amount of healing they require. To keep Ability modifiers relevant when applied to damaging and healing effects of a Player Character, we adjust them by a multiplier that depends on the character’s level. The Ability modifier multiplied by this value is called **Ability Damage Modifier**. There is an Ability Damage Modifier for each character Ability, and there are referred to as Strength Damage Modifier, Dexterity Damage Modifier, and so on.
+
+The multiplier applied for an Ability Damage Modifier varies with the character’s level, from 1 at level 1 to a maximum of 6 at level 30. The progression by level is:
+
+Level  | Multiplier value
+------------- | -------------
+1   | x1
+3	| x1.5
+9	| x2
+11 	| x2.5
+14	| x3
+17 	| x3.5
+19	| x4
+21 	| x4.5
+24	| x5
+27 	| x5.5
+29	| x6
+
+An Ability Damage Modifier is applied instead of a regular Ability score in the following cases:
+
+- Damage roll and extra damage
+- Extra Miss Damage
+- Damage modifier
+- Damage penalty
+- Shield Points (also known as Temporary Hit Points)
+- Bonus to HP
+- Bonus to Surge Value
+- Healing or extra healing
+- Regeneration
+
+Compatibility Note: Some old powers use Ability Modifiers in combination with Resistances or Vulnerabilities. This is no longer supported - to see how this is translated to the current rules, see Resistances and Vulnerabilities in the Combat chapter.
+
+###Defenses
+
+A character’s defenses determine how hard the character is to hit with attacks. Characters have one Primary Defense and three Secondary Defenses.
+
+Tip: Defense values typically range between 10 and 17 for Player Characters, and between 11 and 15 for monsters. For all characters, the average defense value is 13, which corresponds to a 65% chance of being hit on an attack with the typical hit bonus of +5.
+
+**Armor Class** (**AC**), is the Primary Defense, the one most commonly targeted by attacks. For Player Characters, AC is determined by the type of Armor and Shield worn by the character, plus a class-dependent bonus if the character is wearing Light Armor. The following formula is used while wearing Light Armor:
+```
+AC = 10 + Armor bonus + Shield bonus + Class Light Armor bonus
+```
+A Player Character wearing Heavy Armor uses the following AC formula instead:
+```
+AC = 10 + Armor bonus + Shield bonus
+```
+
+A table stating the AC bonuses for each type of Armor and Shield is provided in the Equipment section of the Character Building chapter. A table with the Light Armor bonuses and other class stats is provided in the Class section of the Character Building chapter.
+
+For Monsters, AC is determined by monster class. A table with the typical AC values for each class role is provided in the Monster Stats section of the Monsters chapter.
+
+The Secondary Defenses are **Fortitude** (For), **Reflex** (Ref) and **Will** (Wil). These defenses are used much less frequently than Armor Class: on average, all three Secondary Defenses put together are targeted roughly as much as AC. For Player Characters, each Secondary defense is determined by the character’s Ability scores, plus a bonus based on character class: 
+```
+For = 10 + Class bonus to For + (highest of Str and Con)
+Ref = 10 + Class bonus to Ref + (highest of Dex and Wis)
+Wil = 10 + Class bonus to Wil + (highest of Cha and Int)
+```
+
+A table stating the Secondary Defense bonuses and other stats for classes is provided in the Class section of the Character Building chapter.
+
+For Monsters, Secondary Defenses are determined by monster class. A table with the typical defense values for each class role is provided in the Monster Stats section of the Monsters chapter.
+
+Tip: As a general guideline, each defense is targeted by the following types of attacks:
+AC: Physical attacks, including most melee attacks, some ranged attacks, and a few close and area attacks.
+Fortitude: Physical, Poison, Necrotic and Cold attacks, including some melee attacks, and a few ranged, close and area attacks.
+Reflex: Physical, Fire, Lightning, Radiant and Cold attacks, including most close and area attacks, and a few melee and ranged attacks.
+Will: Physical, Psychic, Radiant and Poison attacks, including some ranged attacks, and a few melee, close, and area attacks.
+Secondary Stats
+
+In addition to their direct application as modifiers to Powers and Skill Checks, a Player Character’s Ability scores are used to generate six important stats: the three Secondary Defenses and three Secondary Stats. The Secondary Stats are Reaction Modifier, Surge Number, and Initiative Modifier.
+
+**Reaction Modifier** is a hit modifier that applies to a character’s Spontaneous Reaction attacks. The most common type of Spontaneous Reaction attack is the Opportunity Attack, which is triggered by moving or making Ranged or Area attacks while adjacent to an enemy. Typical values for a Reaction Modifier range between -5 and +0. For Player Characters, a Reaction Modifier is determined as follows:
+```
+Reaction Modifier = (highest of Str and Wis) - 5
+```
+
+**Surge Number** is the maximum number of Surges that a Player Character can have. Characters can spend surges during an encounter to heal HP, and outside of encounters to have a Short Rest and recover all HP and Encounter powers. Characters regain all of their Surges after a Full Rest. Typical Surge Numbers range between 6 and 14. Each character class has a base value for Surge Number, which is modified by the character’s abilities:
+```
+Surge Number = Character Surges + (highest of Con and Cha)
+```
+**Initiative Modifier** is a value that is added to a character’s Initiative Roll at the start of an encounter, to determine the order in which character turns are taken. Typical values for an Initiative Modifier range between -3 and +5. Characters wearing armor may suffer an Armor Penalty, which is applied to the Initiative Modifier as well as to many Skills:
+```
+Initiative Modifier = (highest of Dex and Int) - Armor Penalty
+```
+Monster characters also have a Reaction Modifier and Initiative Modifier though, lacking Surges, they have no Surge Number. These stats are determined by monster class; a table with typical stat values for each class role is provided in the Monster Stats section of the Monsters chapter.
+
+For a detailed discussion of Reactions, including the use of Spontaneous Reactions and application of Reaction Modifiers, see Reactions in the Combat chapter.
+
+For more information about Surge usage and recovery, see Healing in the Combat chapter, and Resting in the Adventuring chapter.
+
+For a description of Initiative Rolls, see Combat Sequence in the Combat chapter, and for a list of the different types of armor and their associated Armor Penalty, see Equipment in the Character Building chapter.
+
+###Movement Speed
+
+During an encounter, characters are assigned a position in a grid map, and they can take actions to move to new positions. The base movement distance that a character can move, measured in map squares, is called **Movement Speed**. This stat depends on the character’s race, and its value typically ranges between 4 and 7. Player Characters wearing Heavy Armor usually apply an Armor Movement Penalty of -1 to their Movement Speed:
+```
+Movement Speed = Race Speed - Armor Movement Penalty.
+```
+
+A summary table with the Race Speed and other stats corresponding to each Player Character race is provided in the Races section of the Character Building chapter. A table with the properties of different types of Armor and Shields, including Armor Movement Penalty, is provided in the Equipment section of the Character Building chapter.
+
+Movement Speed is used for characters moving on the ground, which in the game world may translate into walking, running, crawling, oozing, rolling, or other exotic means of displacement. Some characters are capable of other forms of movement, such as flying or swimming, which have their own speed stats:
+
+- **Flight Speed**, for creatures capable of flying.
+- **Swimming Speed**, for aquatic creatures capable of swimming without a Skill check.
+- **Burrowing Speed**, for moving by making tunnels in the ground or through walls.
+- **Teleport Speed**, for creatures capable of teleporting between two squares within sight.
+
+Whenever a game element refers to a character’s Speed, this applies to the Speed for any type of movement the character is using at the moment.
+
+An in-depth discussion of different modes of movement is provided in the Movement section of the Combat chapter.
+
+
+##Powers
+(TODO)
