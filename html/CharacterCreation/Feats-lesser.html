@@ -2,6 +2,9 @@
 <head>
 <title>Feat-test</title>
 <style type="text/css">
+
+
+/*Feat format*/
 .Feat {  
   font-family: Verdana;  
   font-size: 11px;  
@@ -11,12 +14,11 @@
 -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
           page-break-inside: avoid; /* Firefox */
                break-inside: avoid; /* IE 10+ */
+			   
+			
 }
 
-.Feat-Title {  
-  font-weight: bold;  
-  margin-bottom: 0px;
-}
+
 
 .Feat-Keywords, .Feat-Categories {  
   font-style: italic;  
@@ -30,7 +32,7 @@
   margin-bottom: 3px;
 }
 
-p {  
+.Feat h3,.Feat h4, .Feat p {  
   margin-top: 0px;  
   margin-bottom: 3px;
   -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
@@ -38,7 +40,7 @@ p {
                break-inside: avoid; /* IE 10+ */
 }
 
-.Feat-List {  -moz-column-count: 3;
+.Feat-List, .Power-List {  -moz-column-count: 3;
   -webkit-column-count: 3;
   column-count: 3;  -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
@@ -55,7 +57,7 @@ p {
   display: inline;
 }
 
-.Feat-table {  
+.Feat-table table, .Power-table {  
   font-size: 11px;  
   font-family: Verdana;  
   padding-top: 0px;  
@@ -64,6 +66,18 @@ p {
   padding-left: 0px;  
   color: #663300;  
   width: 1000px;  
+  background-color: #ffcc99;
+}
+
+.Class-table {  
+  font-size: 11px;  
+  font-family: Verdana;  
+  padding-top: 0px;  
+  padding-right: 0px;  
+  padding-bottom: 0px;  
+  padding-left: 0px;  
+  color: #663300;  
+  width: 500px;  
   background-color: #ffcc99;
 }
 
@@ -83,7 +97,92 @@ p {
     background-color: #ffefbf;
 } 
 
-     
+ .Power {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  width: 290px;  
+  margin-bottom: 25px;  
+  page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
+}
+
+ .Feature {  
+  font-family: Verdana;  
+  font-size: 12px;  
+  width: 800px; 
+  line-height: normal;  
+   margin-bottom: 5px;  
+  page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
+}
+
+.Power-Title {  
+  font-weight: bold;  
+  margin-bottom: 0px;
+}
+
+
+
+.Power-Requires {  
+  font-style: italic;  
+  color: #666666;  
+  margin-bottom: 3px;
+}
+
+/* Color classes */
+.green {color:green}
+      
+.gray {color:DarkGray}
+
+.darkgray {color:DimGray}
+  
+.red {color:darkred}
+
+/* Power format */
+      
+.Power  p {  
+  margin-top: 0px;  
+  margin-bottom: 2px;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+          page-break-inside: avoid; /* Firefox */
+               break-inside: avoid; /* IE 10+ */
+}
+      
+.Power-Keywords {  
+  font-style: italic;  
+  
+}    
+
+.Power-Upgrade {  
+  font-style: italic;  
+  color:gray
+}
+
+.compatibility {  
+  color: DarkGoldenrod;  
+  background-color: BlanchedAlmond;
+        border: 1px solid DarkGoldenrod;
+		 margin: 10px;
+}
+
+.tip {  
+  color: blue;  
+  background-color: LightBlue;
+  border: 1px solid blue;
+  margin: 10px;
+}
+
+.design {  
+  color: red;  
+  background-color: #ffcccc;
+        border: 1px solid red;
+		margin: 10px;
+}
 </style></head>
 <body>
 <table class="Feat-table"> 

@@ -1,3 +1,6 @@
+
+
+/*Feat format*/
 .Feat {  
   font-family: Verdana;  
   font-size: 11px;  
@@ -7,12 +10,11 @@
 -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
           page-break-inside: avoid; /* Firefox */
                break-inside: avoid; /* IE 10+ */
+			   
+			
 }
 
-.Feat-Title {  
-  font-weight: bold;  
-  margin-bottom: 0px;
-}
+
 
 .Feat-Keywords, .Feat-Categories {  
   font-style: italic;  
@@ -26,7 +28,7 @@
   margin-bottom: 3px;
 }
 
-.Feat p {  
+.Feat h3,.Feat h4, .Feat p {  
   margin-top: 0px;  
   margin-bottom: 3px;
   -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
@@ -51,7 +53,7 @@
   display: inline;
 }
 
-.Feat-table, .Power-table {  
+.Feat-table table, .Power-table {  
   font-size: 11px;  
   font-family: Verdana;  
   padding-top: 0px;  
@@ -128,19 +130,18 @@
   margin-bottom: 3px;
 }
 
-.Green {
-        color:green  
-}
+/* Color classes */
+.green {color:green}
       
-      .Gray {
-        color:gray
-}
+.gray {color:DarkGray}
+
+.darkgray {color:DimGray}
   
-  .Red {
-        color:darkred  
-}
+.red {color:darkred}
+
+/* Power format */
       
-    .Power  p {  
+.Power  p {  
   margin-top: 0px;  
   margin-bottom: 2px;
   -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
@@ -156,4 +157,25 @@
 .Power-Upgrade {  
   font-style: italic;  
   color:gray
+}
+
+.compatibility {  
+  color: DarkGoldenrod;  
+  background-color: BlanchedAlmond;
+        border: 1px solid DarkGoldenrod;
+		 margin: 10px;
+}
+
+.tip {  
+  color: blue;  
+  background-color: LightBlue;
+  border: 1px solid blue;
+  margin: 10px;
+}
+
+.design {  
+  color: red;  
+  background-color: #ffcccc;
+        border: 1px solid red;
+		margin: 10px;
 }
