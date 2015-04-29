@@ -47,8 +47,7 @@ feat.lesser.table.htm<-llply(feat.lesser.raw.df %>%
                              group_by(Keywords) %>% 
                              split(feat.lesser.raw.df$Keywords)  ,
                            .fun=buildTableApply,
-                           df.names=setdiff(names(feat.lesser.raw.df),"Text"),
-                           tableClass="Feat-table")
+                           df.names=setdiff(names(feat.lesser.raw.df),"Text"))
 
 feat.table.htm<-paste(feat.table.htm,collapse="<br> ")
 feat.lesser.table.htm <- paste(feat.lesser.table.htm,collapse="<br> ")
@@ -87,7 +86,9 @@ feat.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=
 feat.lesser.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
                    css,
                    "</style></head>\r\n<body>",
+                   "<div class=\"Feat-Table\">",
                    feat.lesser.table.htm,
+                   "</div>",
                    "<div class=\"Feat-List\">",
                    feat.lesser.htm,
                    "</div>",
