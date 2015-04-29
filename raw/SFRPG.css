@@ -15,7 +15,6 @@
 }
 
 
-
 .Feat-Keywords, .Feat-Categories {  
   font-style: italic;  
   color: #333333;  
@@ -133,11 +132,15 @@
 /* Color classes */
 .green {color:green}
       
-.gray {color:DarkGray}
+.gray {color:Gray}
 
 .darkgray {color:DimGray}
   
 .red {color:darkred}
+
+.blue{color: MediumBlue;} 
+
+.darkblue{color: DarkBlue;} 
 
 /* Power format */
       

@@ -2,7 +2,7 @@ require(plyr)
 require(dplyr)
 
 
-buildElement <- function(str, pre, post,skipEmpty=FALSE)
+buildElement <- function(str, pre, post,skipEmpty=TRUE)
 {
   buildElementLoop  <- function(s,pre,post,skipEmpty){
     if(skipEmpty){
@@ -18,7 +18,7 @@ buildElement <- function(str, pre, post,skipEmpty=FALSE)
   laply(str, pre,post, skipEmpty, .fun=buildElementLoop)
 }
 
-buildElementApply <- function (df,pre,post, df.names=names(df),skipEmpty=FALSE)
+buildElementApply <- function (df,pre,post, df.names=names(df),skipEmpty=TRUE)
 {
   tmp<-ldply(df.names,df,pre,post,.fun=function(n,df,pre,post){buildElement(df[[n]],pre[[n]],post[[n]],skipEmpty)})
   tmp<-laply(tmp,paste,sep="\r\n", collapse="\r\n")
