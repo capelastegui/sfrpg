@@ -60,15 +60,38 @@ feat.lesser.list.htm  <- llply.2(feat.lesser.list.raw,.fun=buildElementApply,
 
 
 
+feat.list <- list()
+
+feat.list$feats <- 
+  mapply(FUN=function(a,b)
+    {
+    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
+    },
+         feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
+
+
+feat.list$feats  <- genFeatSection(feat.list$feats)
+
+feat.list$lesserfeats <- 
+  mapply(FUN=function(a,b)
+  {
+    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
+  },
+  feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
+
+
+
+
+
 tmp <- feat.list.htm[4]
 
 tmp2  <- llply.name(tmp,.fun=function(l,...)
-  {
+{
   llply.name(l,.fun=function(l,l.name){paste0("<h4>",l.name,"</h4>",l)})
-  }
-    )
+}
+)
 
-tmp <- feat.list$feats[4]
+tmp <- feat.list$feats[3:4]
 
 tmp2  <- llply.name(tmp,.fun=function(l,l.name)
 {
@@ -100,43 +123,22 @@ genFeatSection  <- function(featlist)
 
 
 
-feat.list$feats <- 
-  mapply(FUN=function(a,b)
-    {
-    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
-    },
-         feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
-
-
-feat.list$feats  <- genFeatSection(feat.list$feats)
-
-feat.list$lesserfeats <- 
-  mapply(FUN=function(a,b)
-  {
-    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
-  },
-  feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
-
-
-
-
-
-paste.list.2  <- function (l,collapse=NULL)
-{
-  l <- llply(l, .fun=paste, collapse=collapse)
-  paste(l,collapse=collapse)
-}
-
-
-feat.table.htm <- paste.list.2(feat.list.table,collapse="<br>")
-feat.lesser.table.htm <- paste.list.2(feat.lesser.list.table,collapse="<br>")
+# paste.list.2  <- function (l,collapse=NULL)
+# {
+#   l <- llply(l, .fun=paste, collapse=collapse)
+#   paste(l,collapse=collapse)
+# }
+# 
+# 
+# feat.table.htm <- paste.list.2(feat.list.table,collapse="<br>")
+# feat.lesser.table.htm <- paste.list.2(feat.lesser.list.table,collapse="<br>")
 
 
 
 # #Now unused, generates feat table files, keep for debug
 #
 # write(feat.table.htm,feat.table.htm.file)
- write(tmp2[[1]],feat.table.htm.file)
+ write(attr(genFeatSection(tmp),"full"),feat.table.htm.file)
 # write(feat.lesser.table.htm,feat.lesser.table.htm.file)
 
 #Build full text descriptions
@@ -145,12 +147,7 @@ feat.lesser.table.htm <- paste.list.2(feat.lesser.list.table,collapse="<br>")
 feat.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
                    css,
                    "</style></head>\r\n<body>",
-                   "<div class=\"Feat-Table\">",
-                   feat.table.htm,
-                   "</div>",
-                   "<div class=\"Feat-List\">",
-                   feat.htm,
-                   "</div>",
+                   attr(genFeatSection(tmp),"full"),
                    "</body></html>",
                    sep="\r\n",
                    collapse="")
