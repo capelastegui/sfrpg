@@ -29,45 +29,97 @@ feat.lesser.tag.post<- feat.lesser.tag.df[2,]
 css <- readChar(css.file, file.info(css.file)$size)
 
 
+#auxiliary functions
+
+refactor<-function(data){colwise(function(col) {if (is.factor(col)) factor(col)  else col }) (data)}
+
+applysplit  <- function (df,splitvar)
+{ 
+  df <- refactor(df)
+  split(df,df[[splitvar]])
+}
+
+
 #Build feat tables
 
-# NO LONGER USEd: GENERATES A SINGLE MEGA-TABLE FOR FEATS
-#feat.table.htm<-buildTableApply(feat.raw.df, df.names=setdiff(names(feat.raw.df),"Text") )
-#feat.lesser.table.htm<-buildTableApply(feat.lesser.raw.df, df.names=setdiff(names(feat.lesser.raw.df),"Text"))
 
-#note: divide by 100 included to fix level order (otherwise orders as string)
+feat.list.raw <- llply(split(feat.raw.df,feat.raw.df$Level),.fun=applysplit, splitvar="Category")
+feat.list.table  <- llply.2(feat.list.raw,.fun=buildTableApply, 
+                            df.names=setdiff(names(feat.raw.df),"Text"))
+feat.list.htm  <- llply.2(feat.list.raw,.fun=buildElementApply, 
+                          feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Text"))
 
-feat.table.htm<-llply(feat.raw.df %>%  
-                        group_by(Level) %>% arrange(Level,Category) %>%
-                        split(paste(feat.raw.df$Level/100,feat.raw.df$Category))  ,
-                      .fun=buildTableApply,
-                      df.names=setdiff(names(feat.raw.df),"Text"))
 
-feat.lesser.table.htm<-llply(feat.lesser.raw.df %>%  
-                             group_by(Keywords) %>% 
-                             split(feat.lesser.raw.df$Keywords)  ,
-                           .fun=buildTableApply,
-                           df.names=setdiff(names(feat.lesser.raw.df),"Text"))
+feat.lesser.list.raw  <- llply(split(feat.lesser.raw.df,feat.lesser.raw.df$Level),.fun=applysplit, splitvar="Keywords")
+feat.lesser.list.table  <- llply.2(feat.lesser.list.raw,.fun=buildTableApply, 
+                            df.names=setdiff(names(feat.lesser.raw.df),"Text"))
+feat.lesser.list.htm  <- llply.2(feat.lesser.list.raw,.fun=buildElementApply, 
+                          feat.lesser.tag.pre, feat.lesser.tag.post, df.names=setdiff(names(feat.lesser.raw.df),"Text"))
 
-feat.table.htm<-paste(feat.table.htm,collapse="<br> ")
-feat.lesser.table.htm <- paste(feat.lesser.table.htm,collapse="<br> ")
+#generates issues due to list names! try similar approach with numeric indices
 
-#Now unused, generates feat table files, keep for debug
-#write(feat.table.htm,feat.table.htm.file)
-#write(feat.lesser.table.htm,feat.lesser.table.htm.file)
+
+
+tmp <- feat.list.htm[4]
+
+tmp2  <- llply.name(tmp,.fun=function(l,...)
+  {
+  llply.name(l,.fun=function(l,l.name){paste0("<h4>",l.name,"</h4>",l)})
+  }
+    )
+
+tmp <- feat.list$feats[4]
+
+tmp2  <- llply.name(tmp,.fun=function(l,l.name)
+{
+  s  <- llply.name(l,.fun=function(l,l.name){paste0("<h3>Category - ",l.name,"</h3>",
+                                                    "<div class=\"Feat-Table\">",l$table,"</div>",
+                                                    "<div class=\"Feat-List\">", l$htm, "</div>")})
+  s <- paste0 (s,collapse="<br/>")
+  paste0 ("<h2>Level ",l.name," feats<h2>",s)
+}
+)
+paste0(tmp2,collapse="<br/>\r\n")
+
+
+
+feat.list$feats <- 
+  mapply(FUN=function(a,b)
+    {
+    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
+    },
+         feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
+
+feat.list$lesserfeats <- 
+  mapply(FUN=function(a,b)
+  {
+    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
+  },
+  feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
+
+
+
+
+
+paste.list.2  <- function (l,collapse=NULL)
+{
+  l <- llply(l, .fun=paste, collapse=collapse)
+  paste(l,collapse=collapse)
+}
+
+
+feat.table.htm <- paste.list.2(feat.list.table,collapse="<br>")
+feat.lesser.table.htm <- paste.list.2(feat.lesser.list.table,collapse="<br>")
+
+
+
+# #Now unused, generates feat table files, keep for debug
+#
+# write(feat.table.htm,feat.table.htm.file)
+ write(tmp2[[1]],feat.table.htm.file)
+# write(feat.lesser.table.htm,feat.lesser.table.htm.file)
 
 #Build full text descriptions
-feat.htm<-buildElementApply(feat.raw.df %>% arrange(Name), feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
-feat.lesser.htm<-buildElementApply(feat.lesser.raw.df %>% arrange(Name), feat.lesser.tag.pre, feat.lesser.tag.post, df.names=setdiff(names(feat.lesser.raw.df),"Summary"))
-
-feat.list  <- llply(feat.raw.df %>%  
-                      group_by(Level) %>% arrange(Level,Name) %>%
-                      split(feat.raw.df$Level)  ,
-                    .fun=buildElementApply,
-                    feat.tag.pre, feat.tag.post,
-                    df.names=setdiff(names(feat.raw.df),"Text"),
-                    skipEmpty=TRUE)
-
 
 
 feat.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
