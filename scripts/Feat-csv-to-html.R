@@ -81,6 +81,23 @@ tmp2  <- llply.name(tmp,.fun=function(l,l.name)
 )
 paste0(tmp2,collapse="<br/>\r\n")
 
+genFeatSection  <- function(featlist)
+{
+  tmp2  <- llply.name(featlist,.fun=function(l,l.name)
+  {
+    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h3>Category - ",l.name,"</h3>",
+                                                      "<div class=\"Feat-Table\">",l$table,"</div>",
+                                                      "<div class=\"Feat-List\">", l$htm, "</div>")})
+    s <- paste0 (s,collapse="<br/>")
+    attr(l,"full") <- paste0 ("<h2>Level ",l.name," feats<h2>",s)
+    l
+  }
+  )
+  attr(tmp2,"full") <- paste0(tmp2,collapse="<br/>\r\n")
+  attr(tmp2,"full") <- paste0(llply(tmp2,.fun=attr,which="full"),collapse="<br/>\r\n")
+  tmp2
+}
+
 
 
 feat.list$feats <- 
@@ -89,6 +106,9 @@ feat.list$feats <-
     mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
     },
          feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
+
+
+feat.list$feats  <- genFeatSection(feat.list$feats)
 
 feat.list$lesserfeats <- 
   mapply(FUN=function(a,b)
