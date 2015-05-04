@@ -63,6 +63,8 @@
   width: 900px;  
   background-color: #ffcc99;
   margin-bottom: 30px;
+  border-collapse: separate;
+  border-spacing: 2px;
 }
 
 .Class-table {  
@@ -75,6 +77,8 @@
   color: #663300;  
   width: 500px;  
   background-color: #ffcc99;
+  border-collapse: separate;
+    border-spacing: 2px;
 }
 
 .General-table {  
@@ -87,6 +91,8 @@
   color: #663300;  
   width: 640px;  
   background-color: #ffcc99;
+  border-collapse: separate;
+    border-spacing: 2px;
 }
       
     tr:nth-child(even) {
@@ -142,6 +148,11 @@
 .blue{color: MediumBlue;} 
 
 .darkblue{color: DarkBlue;} 
+
+/* Font sizes*/
+.large {font-size: 14px;}
+ 
+ .huge {font-size: 18px;}
 
 /* Power format */
       
