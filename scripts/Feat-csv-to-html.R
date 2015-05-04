@@ -47,14 +47,14 @@ feat.list.raw <- llply(split(feat.raw.df,feat.raw.df$Level),.fun=applysplit, spl
 feat.list.table  <- llply.2(feat.list.raw,.fun=buildTableApply, 
                             df.names=setdiff(names(feat.raw.df),"Text"))
 feat.list.htm  <- llply.2(feat.list.raw,.fun=buildElementApply, 
-                          feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Text"))
+                          feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
 
 
 feat.lesser.list.raw  <- llply(split(feat.lesser.raw.df,feat.lesser.raw.df$Level),.fun=applysplit, splitvar="Keywords")
 feat.lesser.list.table  <- llply.2(feat.lesser.list.raw,.fun=buildTableApply, 
                             df.names=setdiff(names(feat.lesser.raw.df),"Text"))
 feat.lesser.list.htm  <- llply.2(feat.lesser.list.raw,.fun=buildElementApply, 
-                          feat.lesser.tag.pre, feat.lesser.tag.post, df.names=setdiff(names(feat.lesser.raw.df),"Text"))
+                          feat.lesser.tag.pre, feat.lesser.tag.post, df.names=setdiff(names(feat.lesser.raw.df),"Summary"))
 
 #generates issues due to list names! try similar approach with numeric indices
 
@@ -70,7 +70,6 @@ feat.list$feats <-
          feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
 
 
-feat.list$feats  <- genFeatSection(feat.list$feats)
 
 feat.list$lesserfeats <- 
   mapply(FUN=function(a,b)
@@ -81,45 +80,22 @@ feat.list$lesserfeats <-
 
 
 
-
-
-tmp <- feat.list.htm[4]
-
-tmp2  <- llply.name(tmp,.fun=function(l,...)
-{
-  llply.name(l,.fun=function(l,l.name){paste0("<h4>",l.name,"</h4>",l)})
-}
-)
-
-tmp <- feat.list$feats[3:4]
-
-tmp2  <- llply.name(tmp,.fun=function(l,l.name)
-{
-  s  <- llply.name(l,.fun=function(l,l.name){paste0("<h3>Category - ",l.name,"</h3>",
-                                                    "<div class=\"Feat-Table\">",l$table,"</div>",
-                                                    "<div class=\"Feat-List\">", l$htm, "</div>")})
-  s <- paste0 (s,collapse="<br/>")
-  paste0 ("<h2>Level ",l.name," feats<h2>",s)
-}
-)
-paste0(tmp2,collapse="<br/>\r\n")
-
-genFeatSection  <- function(featlist)
-{
-  tmp2  <- llply.name(featlist,.fun=function(l,l.name)
-  {
-    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h3>Category - ",l.name,"</h3>",
-                                                      "<div class=\"Feat-Table\">",l$table,"</div>",
-                                                      "<div class=\"Feat-List\">", l$htm, "</div>")})
-    s <- paste0 (s,collapse="<br/>")
-    attr(l,"full") <- paste0 ("<h2>Level ",l.name," feats<h2>",s)
-    l
-  }
-  )
-  attr(tmp2,"full") <- paste0(tmp2,collapse="<br/>\r\n")
-  attr(tmp2,"full") <- paste0(llply(tmp2,.fun=attr,which="full"),collapse="<br/>\r\n")
-  tmp2
-}
+# genFeatSection  <- function(featlist)
+# {
+#   tmp2  <- llply.name(featlist,.fun=function(l,l.name)
+#   {
+#     s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
+#                                                       "<div class=\"Feat-Table\">",l$table,"</div>",
+#                                                       "<div class=\"Feat-List\">", l$htm, "</div>")})
+#     s <- paste0 (s,collapse="<br/>")
+#     attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
+#     l
+#   }
+#   )
+#   attr(tmp2,"full") <- paste0(tmp2,collapse="<br/>\r\n")
+#   attr(tmp2,"full") <- paste0(llply(tmp2,.fun=attr,which="full"),collapse="<br/>\r\n")
+#   tmp2
+# }
 
 
 
@@ -138,32 +114,27 @@ genFeatSection  <- function(featlist)
 # #Now unused, generates feat table files, keep for debug
 #
 # write(feat.table.htm,feat.table.htm.file)
- write(attr(genFeatSection(tmp),"full"),feat.table.htm.file)
+# write(attr(genFeatSection(tmp),"full"),feat.table.htm.file)
 # write(feat.lesser.table.htm,feat.lesser.table.htm.file)
 
 #Build full text descriptions
 
 
-feat.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
-                   css,
-                   "</style></head>\r\n<body>",
-                   attr(genFeatSection(tmp),"full"),
-                   "</body></html>",
-                   sep="\r\n",
-                   collapse="")
-
-feat.lesser.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
-                   css,
-                   "</style></head>\r\n<body>",
-                   "<div class=\"Feat-Table\">",
-                   feat.lesser.table.htm,
-                   "</div>",
-                   "<div class=\"Feat-List\">",
-                   feat.lesser.htm,
-                   "</div>",
-                   "</body></html>",
-                   sep="\r\n",
-                   collapse="")
-
-writeChar(feat.full,feat.htm.file)
-writeChar(feat.lesser.full,feat.lesser.htm.file)
+# feat.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
+#                    css,
+#                    "</style></head>\r\n<body>",
+#                    attr(genFeatSection(feat.list$feats),"full"),
+#                    "</body></html>",
+#                    sep="\r\n",
+#                    collapse="")
+# 
+# feat.lesser.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
+#                    css,
+#                    "</style></head>\r\n<body>",
+#                    attr(genFeatSection(feat.list$lesserfeats),"full"),
+#                    "</body></html>",
+#                    sep="\r\n",
+#                    collapse="")
+# 
+# writeChar(feat.full,feat.htm.file)
+# writeChar(feat.lesser.full,feat.lesser.htm.file)

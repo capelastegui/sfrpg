@@ -28,11 +28,11 @@ buildElementApply <- function (df,pre,post, df.names=names(df),skipEmpty=TRUE)
 buildTableApply <- function (df, df.names=names(df), tableClass=NULL,skipHeader=FALSE)
 {
   if(!skipHeader){
-    tmp1<-paste0(laply(df.names, .fun=function(n){buildElement(n,"<td>","</td>")}),collapse="")
+    tmp1<-paste0(laply(df.names, .fun=function(n){buildElement(n,"<td>","</td>",skipEmpty=FALSE)}),collapse="")
     tmp1<-paste0("<tr>",tmp1,"</tr>", "\n",collapse="")
   }else{tmp1 <- ""}
   
-  tmp<-ldply(df.names,df,.fun=function(n,df){buildElement(df[[n]],"<td>","</td>")})
+  tmp<-ldply(df.names,df,.fun=function(n,df){buildElement(df[[n]],"<td>","</td>",skipEmpty=FALSE)})
   tmp<-laply(tmp,paste0, collapse="")
   tmp<-paste0("<tr>",tmp,"</tr>", "\n",collapse="")
   tmp<-paste0(tmp1,tmp,collapse="\r\n")
