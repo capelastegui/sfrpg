@@ -22,13 +22,20 @@ featlist <- getFeatList()
 ```
 ###Level 1 Feats
 
-Categories:
+Players can choose level 1 feats from the following categories:
 
-- Defense Focus
-- Offense Focus
-- Toughness
+- **Defense Focus**: Feats that improve a character's AC while wearing certain armors, and provide a small additional bonus.
+- **Offense Focus**: Feats that improve a character's attacks with certain weapons or implements, and provide a small additional bonus.
+- **Toughness**: Feats that improve a character's HP, and provide a small additional bonus.
 
-<div class="tip">**Tip**: Toughness is a good level 1 Feat for starting players who don’t want to complicate themselves.</div>
+Note that Offense Focus is the largest feat category in the game and, due to its size, has been split into three parts for the sake of readability: 
+
+- **Offense Focus (Flexible)**: Feats that boost both weapon and implement attacks.
+- **Offense Focus (Weapon)**: Feats that boost weapon attacks.
+- **Offense Focus (Implement)**: Feats that boost implement attacks.
+
+
+<div class="tip">**Tip**: The Toughness feat (from the category of the same name) is a good level 1 Feat for starting players who don’t want to complicate themselves.</div>
 
 <div class="tip">**Tip**: Feats in the Toughness category are generally better than Defense Focus feats at providing raw survivability. Feats in the Defense Focus category are usually better at providing protection against melee attacks, or for characters that are interested in their secondary benefits. When in doubt, take both.</div>
 
@@ -48,44 +55,44 @@ flexible.focus  <- of.focus%>% filter(grepl("Flexible",Keywords))
 weapon.focus  <- of.focus%>% filter(grepl("Weapon",Keywords))
 implement.focus  <- of.focus%>% filter(grepl("Implement",Keywords))
 
-flexible.focus.table  <- buildTableApply(flexible.focus,df.names=setdiff(names(flexible.focus),"Text"))
-weapon.focus.table  <- buildTableApply(weapon.focus,df.names=setdiff(names(weapon.focus),"Text"))
-implement.focus.table  <- buildTableApply(implement.focus,df.names=setdiff(names(implement.focus),"Text"))
+#flexible.focus.table  <- buildTableApply(flexible.focus,df.names=setdiff(names(flexible.focus),"Text"))
+#weapon.focus.table  <- buildTableApply(weapon.focus,df.names=setdiff(names(weapon.focus),"Text"))
+#implement.focus.table  <- buildTableApply(implement.focus,df.names=setdiff(names(implement.focus),"Text"))
 
-flexible.focus  <- buildElementApply(flexible.focus,pre,post,df.names=setdiff(names(flexible.focus),"Summary"))
-weapon.focus  <- buildElementApply(weapon.focus,pre,post,df.names=setdiff(names(weapon.focus),"Summary"))
-implement.focus  <- buildElementApply(implement.focus,pre,post,df.names=setdiff(names(implement.focus),"Summary"))
+#flexible.focus  <- buildElementApply(flexible.focus,pre,post,df.names=setdiff(names(flexible.focus),"Summary"))
+#weapon.focus  <- buildElementApply(weapon.focus,pre,post,df.names=setdiff(names(weapon.focus),"Summary"))
+#implement.focus  <- buildElementApply(implement.focus,pre,post,df.names=setdiff(names(implement.focus),"Summary"))
 
 ```
 #### Category - Offense Focus (Flexible)
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-
-cat(flexible.focus.table)
-cat(flexible.focus)
+cat(getFeatSection(flexible.focus))
+#cat(flexible.focus.table)
+#cat(flexible.focus)*/
 ```
 #### Category - Offense Focus (Weapon)
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(weapon.focus.table)
-cat(weapon.focus)
+cat(getFeatSection(weapon.focus))
+#cat(weapon.focus.table)
+#cat(weapon.focus)
 ```
 #### Category - Offense Focus (Implement)
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(implement.focus.table)
-cat(implement.focus)
+cat(getFeatSection(implement.focus))
+#cat(implement.focus.table)
+#cat(implement.focus)
 
 cat(attr(featlist$feats$"1"$"Toughness","section"))
 
 ```
 
 
-###Level 1 Optional Feats
+###Level 1 Optional Feats: Training
 
-Can be used with GM’s consent
+With the GM's permission, players can choose level 1 feats that expand their weapon and armor training:
 
-Categories:
-
-- Armor Training
-- Weapon Training
+- **Armor Training**: Feats that provide training with new types of armor.
+- **Weapon Training**: Feats that provide training with new types of weapons.
 
 
 <div class="tip">**Tip**: Armor Training is usually not as strong as Defense Focus, but they both stack, and you can take multiple Training feats.</div>
@@ -96,7 +103,9 @@ Categories:
 
 <div class="tip">**GM Tip**: If your player is really interested in getting training with a different Implement, allow them to have it for free if they provide a convincing argument. When in doubt, make it conditional on them taking an Offense Focus Feat that is not specific to that implement, such as Dual Focus.</div>
 
-<div class="design">**Designer Note**: These are not needed from a mechanical standpoint. In terms of game systems, they are redundant, or slightly imbalanced, or cost too much in terms of complexity to be worth it. However, it’s stuff that players often want and, at worst, it won’t break the game too badly. I recommend GMs to leave these off the table for beginning players, and allow them once the group is experienced enough to know what they are doing, or in case someone really wants a Greatsword-wielding wizard or a Fireball-casting rogue.</div>
+<div class="design">**Designer Note**: GMs should feel free to leave these feats out of the game, particularly for beginning players. From a mechanical standpoint, the feats are redundant with Offense Focus and Defense Focus feats, and slightly imbalanced, as they are often clearly weaker or stronger than the alternatives. We have included them as optional categories because they are a cool tool to customize a character's look and feel, and for many game groups that will be worth the slight tradeoff in game balance.</div>
+
+
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=TRUE}
 cat(attr(featlist$feats$"1"$"Armor Training","section"))

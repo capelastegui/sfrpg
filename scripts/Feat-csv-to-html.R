@@ -12,7 +12,7 @@ applysplit  <- function (df,splitvar)
 }
 
 
-getFeatSection  <- function(featlist)
+getFullFeatHtm  <- function(featlist)
 {
   featlist2  <- llply.name(featlist,.fun=function(l,l.name)
   {
@@ -30,6 +30,14 @@ getFeatSection  <- function(featlist)
   featlist2
 }
 
+#Generate feat table and feat list from a single raw feat table
+
+getFeatSection  <- function(featraw)
+{
+  feat.table  <- buildTableApply(featraw,df.names=setdiff(names(featraw),"Text"))
+  feat.htm  <- buildElementApply(featraw,pre,post,df.names=setdiff(names(featraw),"Summary"))
+  paste0 (feat.table,feat.htm,collapse="<br/>\r\n")
+}
 
 
 getFeatList <- function ()
@@ -93,7 +101,7 @@ getFeatList <- function ()
     },
     feat.list.table,feat.list.htm,feat.list.raw, SIMPLIFY=FALSE)
   
-  feat.list$feats  <- getFeatSection(feat.list$feats)
+  feat.list$feats  <- getFullFeatHtm(feat.list$feats)
   
   feat.list$lesserfeats <- 
     mapply(FUN=function(a,b)
@@ -102,7 +110,7 @@ getFeatList <- function ()
     },
     feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
   
-  feat.list$lesserfeats  <- getFeatSection(feat.list$lesserfeats)
+  feat.list$lesserfeats  <- getFullFeatHtm(feat.list$lesserfeats)
   
   feat.list$tag$pre <-feat.tag.pre
   feat.list$tag$post <-feat.tag.post
