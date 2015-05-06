@@ -1,3 +1,4 @@
+body { width: 21cm; }
 
 
 /*Feat format*/
@@ -5,7 +6,7 @@
   font-family: Verdana;  
   font-size: 11px;  
   line-height: normal;  
-  width: 290px;  
+  width: 6.5cm;  
   margin-bottom: 25px; 
   display: inline-block;
 			
@@ -25,7 +26,8 @@
   -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
   column-rule-style: none;  
-  width: 900px;
+  /*width: 900px;*/
+  width: 21cm;
 
 }
 /* Table formats*/
@@ -46,11 +48,11 @@ table {
   
 tr:nth-child(even) {background-color: #ffefbf;} 
 
-.Feat-table table, .Power-table {width: 900px;}
+.Feat-table table, .Power-table {width: 21cm;}
 
-.Class-table {width: 500px;}
+.Class-table {width: 10cm;}
 
-.General-table {width: 640px;}
+.General-table {width: 12cm;}
       
 
 
@@ -59,7 +61,7 @@ tr:nth-child(even) {background-color: #ffefbf;}
  .Feature {  
   font-family: Verdana;  
   font-size: 12px;  
-  width: 800px; 
+  width: 20cm; 
   line-height: normal;  
    margin-bottom: 5px;  
   page-break-inside: avoid;

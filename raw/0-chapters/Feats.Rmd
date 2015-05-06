@@ -1,11 +1,11 @@
 ---
 title: "Feats"
 output:
-  word_document: default
-  pdf_document:
-    css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
   html_document:
     css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
+  pdf_document:
+    css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
+  word_document: default
 ---
 
 
