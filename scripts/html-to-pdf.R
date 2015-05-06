@@ -19,6 +19,6 @@ tmpfile2<- file.path(basedir,"raw","0-chapters","Feats.pdf")
  
 wkhtmltopdf  <- "D:\\Programas\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"
 
-system(paste(wkhtmltopdf, tmpfile, tmpfile2))
+system(paste(wkhtmltopdf,"--zoom 1.25 ", tmpfile, tmpfile2))
 
 

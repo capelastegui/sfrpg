@@ -67,19 +67,19 @@ implement.focus  <- of.focus%>% filter(grepl("Implement",Keywords))
 #implement.focus  <- buildElementApply(implement.focus,pre,post,df.names=setdiff(names(implement.focus),"Summary"))
 
 ```
-#### Category - Offense Focus (Flexible)
+#### Category - Offense Focus (Flexible){.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
 cat(getFeatSection(flexible.focus))
 #cat(flexible.focus.table)
 #cat(flexible.focus)*/
 ```
-#### Category - Offense Focus (Weapon)
+#### Category - Offense Focus (Weapon){.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
 cat(getFeatSection(weapon.focus))
 #cat(weapon.focus.table)
 #cat(weapon.focus)
 ```
-#### Category - Offense Focus (Implement)
+#### Category - Offense Focus (Implement){.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
 cat(getFeatSection(implement.focus))
 #cat(implement.focus.table)
@@ -90,7 +90,7 @@ cat(attr(featlist$feats$"1"$"Toughness","section"))
 ```
 
 
-###Level 1 Optional Feats: Training
+###Level 1 Optional Feats: Training {.newPage}
 
 With the GM's permission, players can choose level 1 feats that expand their weapon and armor training:
 
@@ -112,8 +112,14 @@ With the GM's permission, players can choose level 1 feats that expand their wea
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
 cat(attr(featlist$feats$"1"$"Armor Training","section"))
-cat(attr(featlist$feats$"1"$"Weapon Training","section"))
+```
 
+####Weapon Training (Unlimited)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
+cat(getFeatSection(featlist$feats$"1"$"Weapon Training"$raw))
+cat(attr(featlist$feats$"4","full"))
+cat(attr(featlist$feats$"11","full"))
+cat(attr(featlist$feats$"21","full"))
 
 ```
 

@@ -1,4 +1,7 @@
-body { width: 21cm; }
+body { width: 20cm; }
+
+
+.newPage {page-break-before: always;}
 
 
 /*Feat format*/
@@ -6,8 +9,9 @@ body { width: 21cm; }
   font-family: Verdana;  
   font-size: 11px;  
   line-height: normal;  
-  width: 6.5cm;  
-  margin-bottom: 25px; 
+  width: 6.3cm;  
+  /*margin-bottom: 25px; */
+  margin-bottom: 0.5cm;
   display: inline-block;
 			
 }
@@ -27,7 +31,7 @@ body { width: 21cm; }
   -webkit-column-rule-style: none;
   column-rule-style: none;  
   /*width: 900px;*/
-  width: 21cm;
+  width: 20cm;
 
 }
 /* Table formats*/
@@ -44,11 +48,15 @@ table {
   margin-bottom: 30px;
   border-collapse: separate;
   border-spacing: 2px;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
   }
   
 tr:nth-child(even) {background-color: #ffefbf;} 
 
-.Feat-table table, .Power-table {width: 21cm;}
+.Feat-table table, .Power-table {width: 20cm;}
 
 .Class-table {width: 10cm;}
 
@@ -98,7 +106,8 @@ tr:nth-child(even) {background-color: #ffefbf;}
   font-family: Verdana;  
   font-size: 11px;  
   line-height: normal;  
-  width: 290px;  
+  /*width: 290px;  */
+  width: 6.3cm;
   margin-bottom: 25px;
   display: inline-block;  
 

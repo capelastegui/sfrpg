@@ -16,7 +16,7 @@ getFullFeatHtm  <- function(featlist)
 {
   featlist2  <- llply.name(featlist,.fun=function(l,l.name)
   {
-    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
+    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4 class=\"newPage\">Category - ",l.name,"</h4>",
                                                       "<div class=\"Feat-table\">",l$table,"</div>",
                                                       "<div class=\"Feat-List\">", l$htm, "</div>")})
     l <- mapply(FUN=function(a,b){attr(a,"section") <- b;a},l,s, SIMPLIFY=FALSE)
