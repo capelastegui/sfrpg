@@ -15,7 +15,7 @@ library(dplyr)
 source('~/Perico/Trabajo/COM/Codigo/R/utils/plyr.nested.R')
 source('~/Perico/OCIO/SFRPG-web/scripts/Feat-csv-to-html.R')
 
-genFeatSection  <- function(featlist)
+getFeatSection  <- function(featlist)
 {
   tmp2  <- llply.name(featlist,.fun=function(l,l.name)
   {
@@ -32,7 +32,7 @@ genFeatSection  <- function(featlist)
   tmp2
 }
 
-cat(attr(genFeatSection(feat.list$feats[3:4]),"full"))
+cat(attr(getFeatSection(feat.list$feats),"full"))
 
 ```
 

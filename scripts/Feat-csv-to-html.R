@@ -1,32 +1,4 @@
-basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
 
-source(file.path(basedir,"scripts","csv-to-html.R"))
-
-feat.raw <- file.path(basedir,"raw","charactercreation","Feats-raw.csv")
-feat.tag <- file.path(basedir,"raw","charactercreation","Feats-tags.csv")
-feat.lesser.raw <- file.path(basedir,"raw","charactercreation","Feats-Lesser-raw.csv")
-feat.lesser.tag <- file.path(basedir,"raw","charactercreation","Feats-Lesser-tags.csv")
-css.file <- file.path(basedir,"raw","SFRPG.css")
-feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
-feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
-feat.lesser.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser.html")
-feat.lesser.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser-table.html")
-
-feat.raw.df <- read.csv(feat.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
-feat.raw.df <- gsubColwise(feat.raw.df,"\\n","<br>")
-
-feat.lesser.raw.df <- read.csv(feat.lesser.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Keywords, Name) %>% filter(Name!="")
-feat.lesser.raw.df <- gsubColwise(feat.lesser.raw.df,"\\n","<br>")
-
-feat.tag.df <- read.csv(feat.tag, sep=";")
-feat.tag.pre<- feat.tag.df[1,]
-feat.tag.post<- feat.tag.df[2,]
-
-feat.lesser.tag.df <- read.csv(feat.lesser.tag, sep=";")
-feat.lesser.tag.pre<- feat.lesser.tag.df[1,]
-feat.lesser.tag.post<- feat.lesser.tag.df[2,]
-
-css <- readChar(css.file, file.info(css.file)$size)
 
 
 #auxiliary functions
@@ -40,49 +12,86 @@ applysplit  <- function (df,splitvar)
 }
 
 
-#Build feat tables
 
 
-feat.list.raw <- llply(split(feat.raw.df,feat.raw.df$Level),.fun=applysplit, splitvar="Category")
-feat.list.table  <- llply.2(feat.list.raw,.fun=buildTableApply, 
-                            df.names=setdiff(names(feat.raw.df),"Text"))
-feat.list.htm  <- llply.2(feat.list.raw,.fun=buildElementApply, 
-                          feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
-
-
-feat.lesser.list.raw  <- llply(split(feat.lesser.raw.df,feat.lesser.raw.df$Level),.fun=applysplit, splitvar="Keywords")
-feat.lesser.list.table  <- llply.2(feat.lesser.list.raw,.fun=buildTableApply, 
-                            df.names=setdiff(names(feat.lesser.raw.df),"Text"))
-feat.lesser.list.htm  <- llply.2(feat.lesser.list.raw,.fun=buildElementApply, 
-                          feat.lesser.tag.pre, feat.lesser.tag.post, df.names=setdiff(names(feat.lesser.raw.df),"Summary"))
-
-#generates issues due to list names! try similar approach with numeric indices
-
-
-
-feat.list <- list()
-
-feat.list$feats <- 
-  mapply(FUN=function(a,b)
-    {
-    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
-    },
-         feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
-
-
-
-feat.list$lesserfeats <- 
-  mapply(FUN=function(a,b)
-  {
-    mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
-  },
-  feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
-
-
-
-genFeatSection  <- function(featlist)
+getFeatList <- function ()
 {
-  tmp2  <- llply.name(featlist,.fun=function(l,l.name)
+  basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
+  
+  source(file.path(basedir,"scripts","csv-to-html.R"))
+  
+  feat.raw <- file.path(basedir,"raw","charactercreation","Feats-raw.csv")
+  feat.tag <- file.path(basedir,"raw","charactercreation","Feats-tags.csv")
+  feat.lesser.raw <- file.path(basedir,"raw","charactercreation","Feats-Lesser-raw.csv")
+  feat.lesser.tag <- file.path(basedir,"raw","charactercreation","Feats-Lesser-tags.csv")
+  css.file <- file.path(basedir,"raw","SFRPG.css")
+  feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
+  feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
+  feat.lesser.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser.html")
+  feat.lesser.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser-table.html")
+  
+  feat.raw.df <- read.csv(feat.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
+  feat.raw.df <- gsubColwise(feat.raw.df,"\\n","<br>")
+  
+  feat.lesser.raw.df <- read.csv(feat.lesser.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Keywords, Name) %>% filter(Name!="")
+  feat.lesser.raw.df <- gsubColwise(feat.lesser.raw.df,"\\n","<br>")
+  
+  feat.tag.df <- read.csv(feat.tag, sep=";")
+  feat.tag.pre<- feat.tag.df[1,]
+  feat.tag.post<- feat.tag.df[2,]
+  
+  feat.lesser.tag.df <- read.csv(feat.lesser.tag, sep=";")
+  feat.lesser.tag.pre<- feat.lesser.tag.df[1,]
+  feat.lesser.tag.post<- feat.lesser.tag.df[2,]
+  
+  
+  
+  
+  css <- readChar(css.file, file.info(css.file)$size)
+  
+  #Build feat tables
+  
+  
+  feat.list.raw <- llply(split(feat.raw.df,feat.raw.df$Level),.fun=applysplit, splitvar="Category")
+  feat.list.table  <- llply.2(feat.list.raw,.fun=buildTableApply, 
+                              df.names=setdiff(names(feat.raw.df),"Text"))
+  feat.list.htm  <- llply.2(feat.list.raw,.fun=buildElementApply, 
+                            feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
+  
+  
+  feat.lesser.list.raw  <- llply(split(feat.lesser.raw.df,feat.lesser.raw.df$Level),.fun=applysplit, splitvar="Keywords")
+  feat.lesser.list.table  <- llply.2(feat.lesser.list.raw,.fun=buildTableApply, 
+                                     df.names=setdiff(names(feat.lesser.raw.df),"Text"))
+  feat.lesser.list.htm  <- llply.2(feat.lesser.list.raw,.fun=buildElementApply, 
+                                   feat.lesser.tag.pre, feat.lesser.tag.post, df.names=setdiff(names(feat.lesser.raw.df),"Summary"))
+  
+  
+  feat.list <- list()
+  
+  feat.list$feats <- 
+    mapply(FUN=function(a,b)
+    {
+      mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
+    },
+    feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
+  
+  
+  
+  feat.list$lesserfeats <- 
+    mapply(FUN=function(a,b)
+    {
+      mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
+    },
+    feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
+  
+  feat.list
+}
+
+
+
+getFeatSection  <- function(featlist)
+{
+  featlist2  <- llply.name(featlist,.fun=function(l,l.name)
   {
     s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
                                                       "<div class=\"Feat-Table\">",l$table,"</div>",
@@ -92,9 +101,9 @@ genFeatSection  <- function(featlist)
     l
   }
   )
-  attr(tmp2,"full") <- paste0(tmp2,collapse="<br/>\r\n")
-  attr(tmp2,"full") <- paste0(llply(tmp2,.fun=attr,which="full"),collapse="<br/>\r\n")
-  tmp2
+  attr(featlist2,"full") <- paste0(featlist2,collapse="<br/>\r\n")
+  attr(featlist2,"full") <- paste0(llply(featlist2,.fun=attr,which="full"),collapse="<br/>\r\n")
+  featlist2
 }
 
 
@@ -138,3 +147,6 @@ genFeatSection  <- function(featlist)
 # 
 # writeChar(feat.full,feat.htm.file)
 # writeChar(feat.lesser.full,feat.lesser.htm.file)
+
+
+#writeFeatFile()
