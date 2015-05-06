@@ -2,19 +2,17 @@ basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
 
 source(file.path(basedir,"scripts","csv-to-html.R"))
 
-power.raw <- file.path(basedir,"raw","Powers-raw.csv")
-power.tag <- file.path(basedir,"raw","Powers-tags.csv")
-power.lesser.raw <- file.path(basedir,"raw","Powers-Lesser-raw.csv")
-power.lesser.tag <- file.path(basedir,"raw","Powers-Lesser-tags.csv")
+power.raw <- file.path(basedir,"raw","charactercreation","Powers-raw.csv")
+power.tag <- file.path(basedir,"raw","charactercreation","Powers-tags.csv")
 css.file <- file.path(basedir,"raw","SFRPG.css")
 power.htm.file <- file.path(basedir,"html","CharacterCreation","Powers.html")
 power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-table.html")
 
-class.stat.raw <- file.path(basedir,"raw","Class-stats.csv")
+class.stat.raw <- file.path(basedir,"raw","charactercreation","Class-stats.csv")
 class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
 
-class.features.raw <- file.path(basedir,"raw","Class-features.csv")
-class.features.tag <- file.path(basedir,"raw","Class-features-tags.csv")
+class.features.raw <- file.path(basedir,"raw","charactercreation","Class-features.csv")
+class.features.tag <- file.path(basedir,"raw","charactercreation","Class-features-tags.csv")
 
 
 
@@ -50,8 +48,8 @@ power.raw.df <- read.csv(power.raw, sep=";") %>%
 levels(power.raw.df$usageColors)[levels(power.raw.df$usageColors)==""] <- "Green"
 
 power.raw.df  <- power.raw.df %>% 
-  mutate(Name=paste("<div class=\"",usageColors,"\">",Name, sep="")) %>%
-  mutate(Level=paste(Level,"</div>",sep=""))
+  mutate(Name=paste("<span class=\"",usageColors,"\">",Name, sep="")) %>%
+  mutate(Level=paste(Level,"</span>",sep=""))
 
 
 class.power.list  <- split(power.raw.df,power.raw.df$Class) 

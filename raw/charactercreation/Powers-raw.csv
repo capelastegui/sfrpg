@@ -3,10 +3,10 @@ Power Attack;Universal;Universal;;1;Attack;Encounter; ;Weapon;Personal Reaction,
 Upgrade 23: Increase extra damage to 3W";Deal extra damage and push
 Empower Spell;Universal;Universal;;1;Attack;Encounter; ;Implement;Personal Reaction, Interrupt ;you hit with an Implement attack;;targets an enemy hit by the triggering attack;;;;;Against the target, the triggering attack deals an extra 1d10 and gains Push 1.;;;"Upgrade 13: Increase extra damage to 2d10
 Upgrade 23: Increase extra damage to 3d10";Deal extra damage and push
-Offensive Training;Universal;Universal;;1;Attack;Daily; ;;;;Personal;;;;;;Until you recharge or retrain this power, your attacks gain +1 Miss Damage.;;;"Upgrade 5: Your attacks gain +1 damage and +1 Miss Damage.
+Offensive Training;Universal;Universal;;1;Attack;Daily; ; ;;;Personal;;;;;;Until you recharge or retrain this power, your attacks gain +1 Miss Damage.;;;"Upgrade 5: Your attacks gain +1 damage and +1 Miss Damage.
 Upgrade 15: Your attacks gain +1 damage and +2 Miss Damage.
 Upgrade 25: Your attacks gain +2 damage and +2 Miss Damage.";Small damage bonus all day
-Defensive Training;Universal;Universal;;1;Attack;Daily;;;;;Personal;;;;;;Until you recharge or retrain this power, you gain +3 HP.;;;"Upgrade 5: +4 HP
+Defensive Training;Universal;Universal;;1;Attack;Daily;; ;;;Personal;;;;;;Until you recharge or retrain this power, you gain +3 HP.;;;"Upgrade 5: +4 HP
 Upgrade 15: +6 HP
 Upgrade 25: +9 HP";Small HP bonus all day
 Shield Bash;Fighter;Guardian;;1;Attack;;;Weapon, Shield;;;Melee;;Str vs AC;;1W+Str. Push 1, and you may shift that distance to a square adjacent to the target.;;;;;Level 21: Increase Hit damage to 2W+Str.;Push and follow up
@@ -83,14 +83,14 @@ Sanctuary;Priest;Light;;2;Utility;Encounter;;Safe;;;Ranged 7;targets you and an 
 Saving Grace;Priest;Light;;2;Utility;Encounter;;Safe;;;Ranged 7;targets you or an ally;;;;;Choose one - the target rolls a save, or you lose a Surge and choose a Condition, and the target rolls a save to ignore that Condition until next turn.;;;;
 Bless;Priest;Light;;2;Utility;Daily;;;Minor Action;;Close Burst 5;targets you and allies;;;;;Until end of the encounter, +1 to Hit and +1 to Save.;;;;
 Rage Strike;Barbarian;Rager;Feature;1;Attack;Encounter;;Fatigueless;;;Melee;;Str vs AC;;3W+Str;Half Damage;;Special: Use only while raging.;;;
-Invigorating Strike;Barbarian;Rager;;1;Attack;;;;;;Melee;;Str vs AC;;W+Str, and you gain Con Shield Points. If you already had Shield Points, deal +Con extra damage.;;;;;;
-Mighty Shove;Barbarian;Rager;;1;Attack;;;;;;Melee;;Str vs AC;;W+Str. Push 2, and you move 2 to a square closer to the target.;;;;;;
-All-In;Barbarian;Rager;;1;Attack;Encounter;;;;;Melee;;Str vs AC;;3W+Str, and you gain Lesser Vulnerable All until next turn.;;;;;;
-No Pain;Barbarian;Rager;;1;Attack;Encounter;;;;;Melee;;Str vs AC;;2W+Str. You may lose a Surge and gain Shield Points equal to your Surge Value.;;;;;;
+Invigorating Strike;Barbarian;Rager;;1;Attack;;; ;;;Melee;;Str vs AC;;W+Str, and you gain Con Shield Points. If you already had Shield Points, deal +Con extra damage.;;;;;;
+Mighty Shove;Barbarian;Rager;;1;Attack;;; ;;;Melee;;Str vs AC;;W+Str. Push 2, and you move 2 to a square closer to the target.;;;;;;
+All-In;Barbarian;Rager;;1;Attack;Encounter;; ;;;Melee;;Str vs AC;;3W+Str, and you gain Lesser Vulnerable All until next turn.;;;;;;
+No Pain;Barbarian;Rager;;1;Attack;Encounter;; ;;;Melee;;Str vs AC;;2W+Str. You may lose a Surge and gain Shield Points equal to your Surge Value.;;;;;;
 Blade Whirlwind;Barbarian;Rager;;1;Attack;Encounter;;Weapon;;;Close Burst 1;;Str vs Ref;;W, and Push Con;;;;;;
 Crowd Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Until end of the encounter, you cannot be flanked, and when you hit an enemy, you can deal Con damage to an enemy adjacent to it.;;;;
 Blood Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Until end of the encounter, you gain Lesser Resist All while Bloodied, and Bloodied enemies gain Lesser Vulnerable All against your attacks.;;;;
 Stubborn Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Roll a save to ignore a Condition this turn. Until end of the encounter, at the start of each turn you roll a save to ignore a Condition that turn.;;;;
-Battle Vigor;Barbarian;Rager;;2;Utility;Encounter;;;Minor Action;;Personal;;;;;;Gain Con Shield Points or, if you are Bloodied, gain 2xCon Shield Points.;;;;
-Break Free;Barbarian;Rager;;2;Utility;Encounter;;;Minor Action;;Personal;;;;;;Roll a save to end any of the following Conditions on you: Slowed, Immobilized, Restrained, Grabbed, Prone, Marked.;;;;
-Challenge Accepted;Barbarian;Rager;;2;Utility;Encounter;;;Minor Action;;Melee;targets an enamy Marking you or that has Bloodied you this encounter;;;;;Until end of turn, you gain Advantage and +2 Crit Range against the target.;;;;
+Battle Vigor;Barbarian;Rager;;2;Utility;Encounter;; ;Minor Action;;Personal;;;;;;Gain Con Shield Points or, if you are Bloodied, gain 2xCon Shield Points.;;;;
+Break Free;Barbarian;Rager;;2;Utility;Encounter;; ;Minor Action;;Personal;;;;;;Roll a save to end any of the following Conditions on you: Slowed, Immobilized, Restrained, Grabbed, Prone, Marked.;;;;
+Challenge Accepted;Barbarian;Rager;;2;Utility;Encounter;; ;Minor Action;;Melee;targets an enamy Marking you or that has Bloodied you this encounter;;;;;Until end of turn, you gain Advantage and +2 Crit Range against the target.;;;;

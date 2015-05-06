@@ -1,60 +1,39 @@
 <html>
 <head>
 <title>power-test</title>
-<style type="text/css">.Feat {  
+<style type="text/css">
+
+/*Feat format*/
+.Feat {  
   font-family: Verdana;  
   font-size: 11px;  
   line-height: normal;  
   width: 290px;  
-  margin-bottom: 25px;  
--webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
+  margin-bottom: 25px; 
+  display: inline-block;
+			
 }
 
-.Feat-Title {  
-  font-weight: bold;  
-  margin-bottom: 0px;
-}
-
-.Feat-Keywords, .Feat-Categories {  
-  font-style: italic;  
-  color: #333333;  
-  margin-bottom: 0px;
-}
-
-.Feat-Requires {  
-  font-style: italic;  
-  color: #666666;  
-  margin-bottom: 3px;
-}
 
 .Feat p {  
   margin-top: 0px;  
-  margin-bottom: 3px;
-  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
+  margin-bottom: 6px;
+
 }
 
-.Feat-List, .Power-List {  -moz-column-count: 3;
+.Feat-List, .Power-List {
+  -moz-column-count: 3;
   -webkit-column-count: 3;
-  column-count: 3;  -moz-column-rule-style: none;
+  column-count: 3;  
+  -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
   column-rule-style: none;  
   width: 900px;
-}
 
-.Feat-Categories {  
-  font-weight: bold;  
-  display: inline;
 }
+/* Table formats*/
 
-.Feat-Keywords {  
-  display: inline;
-}
-
-.Feat-table, .Power-table {  
+table {
   font-size: 11px;  
   font-family: Verdana;  
   padding-top: 0px;  
@@ -62,49 +41,23 @@
   padding-bottom: 0px;  
   padding-left: 0px;  
   color: #663300;  
-  width: 1000px;  
   background-color: #ffcc99;
-}
+  margin-bottom: 30px;
+  border-collapse: separate;
+  border-spacing: 2px;
+  }
+  
+tr:nth-child(even) {background-color: #ffefbf;} 
 
-.Class-table {  
-  font-size: 11px;  
-  font-family: Verdana;  
-  padding-top: 0px;  
-  padding-right: 0px;  
-  padding-bottom: 0px;  
-  padding-left: 0px;  
-  color: #663300;  
-  width: 500px;  
-  background-color: #ffcc99;
-}
+.Feat-table table, .Power-table {width: 900px;}
 
-.General-table {  
-  font-size: 11px;  
-  font-family: Verdana;  
-  padding-top: 0px;  
-  padding-right: 0px;  
-  padding-bottom: 0px;  
-  padding-left: 0px;  
-  color: #663300;  
-  width: 640px;  
-  background-color: #ffcc99;
-}
+.Class-table {width: 500px;}
+
+.General-table {width: 640px;}
       
-    tr:nth-child(even) {
-    background-color: #ffefbf;
-} 
 
- .Power {  
-  font-family: Verdana;  
-  font-size: 11px;  
-  line-height: normal;  
-  width: 290px;  
-  margin-bottom: 25px;  
-  page-break-inside: avoid;
-    -webkit-column-break-inside: avoid; 
-          page-break-inside: avoid; 
-               break-inside: avoid;
-}
+
+
 
  .Feature {  
   font-family: Verdana;  
@@ -118,47 +71,73 @@
                break-inside: avoid;
 }
 
-.Power-Title {  
-  font-weight: bold;  
+
+
+/* Color classes */
+.green {color:green}
+      
+.gray {color:Gray}
+
+.darkgray {color:DimGray}
+  
+.red {color:darkred}
+
+.blue{color: MediumBlue;} 
+
+.darkblue{color: DarkBlue;} 
+
+/* Font sizes*/
+.large {font-size: 14px;}
+ 
+ .huge {font-size: 18px;}
+ 
+ 
+
+/* Power format */
+  
+ .Power {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  width: 290px;  
+  margin-bottom: 25px;
+  display: inline-block;  
+
+}
+  
+.Power  p {  
+  margin-top: 3px;  
   margin-bottom: 0px;
 }
 
 
 
-.Power-Requires {  
-  font-style: italic;  
-  color: #666666;  
-  margin-bottom: 3px;
-}
-
-.Green {
-        color:green  
-}
-      
-      .Gray {
-        color:gray
-}
-  
-  .Red {
-        color:darkred  
-}
-      
-    .Power  p {  
-  margin-top: 0px;  
-  margin-bottom: 2px;
-  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
-}
-      
-.Power-Keywords {  
-  font-style: italic;  
-  
-}    
+   
 
 .Power-Upgrade {  
   font-style: italic;  
   color:gray
+}
+
+.compatibility {  
+  color: DarkGoldenrod;  
+  background-color: BlanchedAlmond;
+        border: 1px solid DarkGoldenrod;
+		 margin: 10px;
+}
+
+.tip {  
+  color: blue;  
+  background-color: LightBlue;
+  border: 1px solid blue;
+  margin: 10px;
+}
+
+.design {  
+  color: red;  
+  background-color: #ffcccc;
+        border: 1px solid red;
+		margin: 10px;
 }</style></head>
 <body><p><h2> Barbarian Rager </h2></p>
 <p><h3>Class Stats</h3></p>
@@ -197,10 +176,10 @@
  You add your Constitution to your Intimidate skill and your Nature skill.</p> </div> 
 </p>
 <p><h3>Class Powers</h3></p>
-<p><div class="Power-List"><div class="Power"> <h3 class="Power-Title"><div class="Red">Rage Strike 
+<p><div class="Power-List"><div class="Power"> <p class="large"><strong><span class="Red">Rage Strike 
  -      Barbarian 
 Feature
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -217,14 +196,14 @@ Str vs AC</p>
 <p>Special: Use only while raging.</p>
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Invigorating Strike 
+<div class="Power"> <p class="large"><strong><span class="Green">Invigorating Strike 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
-
+ - <i> </i></p>
 
 
 <b>Melee </b> -
@@ -237,14 +216,14 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Mighty Shove 
+<div class="Power"> <p class="large"><strong><span class="Green">Mighty Shove 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
-
+ - <i> </i></p>
 
 
 <b>Melee </b> -
@@ -257,14 +236,14 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">All-In 
+<div class="Power"> <p class="large"><strong><span class="Red">All-In 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
-
+ - <i> </i></p>
 
 
 <b>Melee </b> -
@@ -277,10 +256,10 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Blade Whirlwind 
+<div class="Power"> <p class="large"><strong><span class="Red">Blade Whirlwind 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -297,14 +276,14 @@ Str vs Ref</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">No Pain 
+<div class="Power"> <p class="large"><strong><span class="Red">No Pain 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
-
+ - <i> </i></p>
 
 
 <b>Melee </b> -
@@ -317,10 +296,10 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Blood Rage 
+<div class="Power"> <p class="large"><strong><span class="Gray">Blood Rage 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -337,10 +316,10 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Crowd Rage 
+<div class="Power"> <p class="large"><strong><span class="Gray">Crowd Rage 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -357,10 +336,10 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Stubborn Rage 
+<div class="Power"> <p class="large"><strong><span class="Gray">Stubborn Rage 
  -      Barbarian 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -377,14 +356,14 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Battle Vigor 
+<div class="Power"> <p class="large"><strong><span class="Red">Battle Vigor 
  -      Barbarian 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
-
+ - <i> </i></p>
 <p><b><i>Minor Action</i></b> -
 
 <b>Personal </b> -
@@ -397,14 +376,14 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Break Free 
+<div class="Power"> <p class="large"><strong><span class="Red">Break Free 
  -      Barbarian 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
-
+ - <i> </i></p>
 <p><b><i>Minor Action</i></b> -
 
 <b>Personal </b> -
@@ -417,14 +396,14 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Challenge Accepted 
+<div class="Power"> <p class="large"><strong><span class="Red">Challenge Accepted 
  -      Barbarian 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
-
+ - <i> </i></p>
 <p><b><i>Minor Action</i></b> -
 
 <b>Melee </b> -
@@ -476,10 +455,10 @@ Your Reaction attacks deal extra damage equal to your Wisdom.</p> </div>
  Your total Armor Penalty to Skills is halved</p> </div> 
 </p>
 <p><h3>Class Powers</h3></p>
-<p><div class="Power-List"><div class="Power"> <h3 class="Power-Title"><div class="Green">Cleave 
+<p><div class="Power-List"><div class="Power"> <p class="large"><strong><span class="Green">Cleave 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -496,10 +475,10 @@ Str vs AC</p>
 
 <p><b>Secondary Attack:</b> Melee, targets another enemy, Str vs AC<br>Hit: Str.</p>
 <p class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Shield Bash 
+<div class="Power"> <p class="large"><strong><span class="Green">Shield Bash 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -516,10 +495,10 @@ Str vs AC</p>
 
 
 <p class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Hamstring 
+<div class="Power"> <p class="large"><strong><span class="Red">Hamstring 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -536,10 +515,10 @@ Str vs AC</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str<br></p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Storm of blades 
+<div class="Power"> <p class="large"><strong><span class="Red">Storm of blades 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -556,10 +535,10 @@ Str vs AC</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Stunning Strike 
+<div class="Power"> <p class="large"><strong><span class="Red">Stunning Strike 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -576,10 +555,10 @@ Str vs For</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Blade Dance 
+<div class="Power"> <p class="large"><strong><span class="Gray">Blade Dance 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -596,10 +575,10 @@ Str vs For</p>
 
 
 <p class="Power-Upgrade">Upgrade 15: Effect Deal 1W and Slide 1 to each adjacent enemy.<br>Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Brutal Strike 
+<div class="Power"> <p class="large"><strong><span class="Gray">Brutal Strike 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -616,10 +595,10 @@ Str vs AC</p>
 
 
 <p class="Power-Upgrade">Upgrade 15: Increase Hit damage to 5W+Str<br>Upgrade 25: Increase Hit damage to 7W+Str<br></p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Comeback Strike 
+<div class="Power"> <p class="large"><strong><span class="Gray">Comeback Strike 
  -      Fighter 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -636,10 +615,10 @@ Str vs AC</p>
 
 
 <p class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+Str</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Find Opening 
+<div class="Power"> <p class="large"><strong><span class="Red">Find Opening 
  -      Fighter 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -656,10 +635,10 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Grit 
+<div class="Power"> <p class="large"><strong><span class="Red">Grit 
  -      Fighter 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -676,10 +655,10 @@ Str vs AC</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Shield Wall 
+<div class="Power"> <p class="large"><strong><span class="Red">Shield Wall 
  -      Fighter 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -734,10 +713,10 @@ When you use a character to full health, that character gains Shield Points equa
  You gain Ritual Training as a bonus lesser feat.</p> </div> 
 </p>
 <p><h3>Class Powers</h3></p>
-<p><div class="Power-List"><div class="Power"> <h3 class="Power-Title"><div class="Red">Healing Word 
+<p><div class="Power-List"><div class="Power"> <p class="large"><strong><span class="Red">Healing Word 
  -      Priest 
 Feature
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Utility
  - Encounter
 x2
@@ -754,10 +733,10 @@ targets an ally
 
 
 <p class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Guiding Light 
+<div class="Power"> <p class="large"><strong><span class="Green">Guiding Light 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -774,10 +753,10 @@ Wis vs Ref</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Healing Light 
+<div class="Power"> <p class="large"><strong><span class="Green">Healing Light 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -794,10 +773,10 @@ Wis vs Ref</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Blinding Light 
+<div class="Power"> <p class="large"><strong><span class="Red">Blinding Light 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -814,10 +793,10 @@ Wis vs Ref</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Dazzling Burst 
+<div class="Power"> <p class="large"><strong><span class="Red">Dazzling Burst 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -834,10 +813,10 @@ Wis vs Wil</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Restoring Beam 
+<div class="Power"> <p class="large"><strong><span class="Red">Restoring Beam 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -854,10 +833,10 @@ Wis vs Ref</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Consecrated Ground 
+<div class="Power"> <p class="large"><strong><span class="Gray">Consecrated Ground 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -874,10 +853,10 @@ Wis vs Ref</p>
 <p>Sustain Minor: The zone persists until end of your next turn. Make a Secondary Attack targeting enemies in the zone.</p>
 <p><b>Secondary Attack:</b> Wis vs For, Hit: 1d8 Radiant.</p>
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Heroism 
+<div class="Power"> <p class="large"><strong><span class="Gray">Heroism 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -894,10 +873,10 @@ targets an ally
 
 
 <p class="Power-Upgrade">Upgrade 15: 4d12 Shield Points<br>Upgrade 25: 6d12 Shield Points</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Pacify 
+<div class="Power"> <p class="large"><strong><span class="Gray">Pacify 
  -      Priest 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -914,10 +893,10 @@ Wis vs Wil</p>
 <p>Special: This attack misses automatically if the target is over 90 HP.</p>
 
 <p class="Power-Upgrade">Upgrade 15: Miss automatically if target is over 180 HP<br>Upgrade 25: Miss automatically if target is over 270 HP</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Sanctuary 
+<div class="Power"> <p class="large"><strong><span class="Red">Sanctuary 
  -      Priest 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -934,10 +913,10 @@ targets you and an ally
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Saving Grace 
+<div class="Power"> <p class="large"><strong><span class="Red">Saving Grace 
  -      Priest 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -954,10 +933,10 @@ targets you or an ally
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Bless 
+<div class="Power"> <p class="large"><strong><span class="Gray">Bless 
  -      Priest 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Daily
 
@@ -1014,10 +993,10 @@ Increase the extra damage to +3d6 at level 11, and to +5d6 at level 21.</p> </di
  You treat the following weapons as Light Weapons: Light Blades, Crossbows, Slings.</p> </div> 
 </p>
 <p><h3>Class Powers</h3></p>
-<p><div class="Power-List"><div class="Power"> <h3 class="Power-Title"><div class="Green">Piercing Strike 
+<p><div class="Power-List"><div class="Power"> <p class="large"><strong><span class="Green">Piercing Strike 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -1034,10 +1013,10 @@ Dex+2 vs Ref</p>
 
 
 <p class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Dex</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Setup Strike 
+<div class="Power"> <p class="large"><strong><span class="Green">Setup Strike 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -1054,10 +1033,10 @@ Dex vs AC</p>
 
 
 <p class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Dex</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Expose Weakness 
+<div class="Power"> <p class="large"><strong><span class="Red">Expose Weakness 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -1074,10 +1053,10 @@ Dex vs AC</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">King's Castle 
+<div class="Power"> <p class="large"><strong><span class="Red">King's Castle 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -1094,10 +1073,10 @@ Dex+2 vs Wil</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Stay Down 
+<div class="Power"> <p class="large"><strong><span class="Red">Stay Down 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -1114,10 +1093,10 @@ Dex vs AC</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Blinding Trick 
+<div class="Power"> <p class="large"><strong><span class="Gray">Blinding Trick 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -1134,10 +1113,10 @@ Dex+2 vs Ref</p>
 
 <p><b>Secondary Attack:</b> Dex vs AC<br>Hit: 3W+Dex, and -5 to save until your next turn.<br>Miss: Half Damage</p>
 <p class="Power-Upgrade">Upgrade 15: Increase Secondary Hit damage to 5W+Dex<br>Upgrade 25: Increase Secondary Hit damage to 7W+Dex</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Open Wounds 
+<div class="Power"> <p class="large"><strong><span class="Gray">Open Wounds 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -1154,10 +1133,10 @@ Dex vs AC</p>
 
 
 <p class="Power-Upgrade">Upgrade 15: Increase  Hit damage to 5W<br>Upgrade 25: Increase Hit damage to 7W</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Stunning Blow 
+<div class="Power"> <p class="large"><strong><span class="Gray">Stunning Blow 
  -      Rogue 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -1174,10 +1153,10 @@ Dex vs For</p>
 
 
 <p class="Power-Upgrade">Upgrade 15: Increase  Hit damage to 3W+Dex<br>Upgrade 25: Increase  Hit damage to 5W+Dex</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Assign Blame 
+<div class="Power"> <p class="large"><strong><span class="Red">Assign Blame 
  -      Rogue 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -1194,10 +1173,10 @@ targets an enemy you  have hit this turn.
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Run to Cover 
+<div class="Power"> <p class="large"><strong><span class="Red">Run to Cover 
  -      Rogue 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -1214,10 +1193,10 @@ targets an enemy you  have hit this turn.
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Tumble 
+<div class="Power"> <p class="large"><strong><span class="Red">Tumble 
  -      Rogue 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -1265,10 +1244,10 @@ targets an enemy you  have hit this turn.
  </div> 
 </p>
 <p><h3>Class Powers</h3></p>
-<p><div class="Power-List"><div class="Power"> <h3 class="Power-Title"><div class="Red">Empower Spell 
+<p><div class="Power-List"><div class="Power"> <p class="large"><strong><span class="Red">Empower Spell 
  -      Universal 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
  
@@ -1285,10 +1264,10 @@ targets an enemy hit by the triggering attack
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase extra damage to 2d10<br>Upgrade 23: Increase extra damage to 3d10</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Power Attack 
+<div class="Power"> <p class="large"><strong><span class="Red">Power Attack 
  -      Universal 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
  
@@ -1305,14 +1284,14 @@ targets an enemy hit by the triggering attack
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase extra damage to 2W<br>Upgrade 23: Increase extra damage to 3W</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Defensive Training 
+<div class="Power"> <p class="large"><strong><span class="Gray">Defensive Training 
  -      Universal 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
-
+ - <i> </i></p>
 
 
 <b>Personal </b> -
@@ -1325,14 +1304,14 @@ targets an enemy hit by the triggering attack
 
 
 <p class="Power-Upgrade">Upgrade 5: +4 HP<br>Upgrade 15: +6 HP<br>Upgrade 25: +9 HP</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Offensive Training 
+<div class="Power"> <p class="large"><strong><span class="Gray">Offensive Training 
  -      Universal 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
  
-
+ - <i> </i></p>
 
 
 <b>Personal </b> -
@@ -1387,10 +1366,10 @@ You learn an additional Paragon Ritual from each Paragon Ritual Training lesser 
 You learn an additional Epic Ritual from each Epic ritual Training lesser feat.</p> </div> 
 </p>
 <p><h3>Class Powers</h3></p>
-<p><div class="Power-List"><div class="Power"> <h3 class="Power-Title"><div class="Green">Arcane Missiles 
+<p><div class="Power-List"><div class="Power"> <p class="large"><strong><span class="Green">Arcane Missiles 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -1407,10 +1386,10 @@ Int vs Ref</p>
 
 
 <p class="Power-Upgrade">Level 21: Increase Hit damage to 2d10</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Fire Burst 
+<div class="Power"> <p class="large"><strong><span class="Green">Fire Burst 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -1427,10 +1406,10 @@ Int vs Ref</p>
 
 
 <p class="Power-Upgrade">Level 21: Increase Hit damage to 2d8+Int</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Green">Frost Bolt 
+<div class="Power"> <p class="large"><strong><span class="Green">Frost Bolt 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
 
 
@@ -1447,10 +1426,10 @@ Int vs For</p>
 
 
 <p class="Power-Upgrade">Level 21: Increase Hit damage to 2d8+Int</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Burning Hands 
+<div class="Power"> <p class="large"><strong><span class="Red">Burning Hands 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -1467,10 +1446,10 @@ Int vs Ref</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 5d6+Int<br>Upgrade 23: Increase Hit damage to 7d6+Int</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Ice Beam 
+<div class="Power"> <p class="large"><strong><span class="Red">Ice Beam 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -1487,10 +1466,10 @@ Int vs For</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2d12<br>Upgrade 23: Increase Hit damage to 3d12</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Shock Sphere 
+<div class="Power"> <p class="large"><strong><span class="Red">Shock Sphere 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Encounter
 
@@ -1507,10 +1486,10 @@ Int vs Ref</p>
 
 
 <p class="Power-Upgrade">Upgrade 13: Increase Hit damage to 4d6<br>Upgrade 23: Increase Hit damage to 6d6</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Crushing Fist 
+<div class="Power"> <p class="large"><strong><span class="Gray">Crushing Fist 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -1527,10 +1506,10 @@ Int vs Ref</p>
 <p>Sustain Minor: If an enemy is Grabbed by this power, that enemy takes Int damage. Otherwise, repeat the attack.</p>
 
 <p class="Power-Upgrade"><br>Upgrade 15: Increase Hit damage to 6d6+Int,<br>Upgrade 25: Increase Hit damage to 9d6+Int</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Fireball 
+<div class="Power"> <p class="large"><strong><span class="Gray">Fireball 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -1547,10 +1526,10 @@ Int vs Ref</p>
 
 
 <p class="Power-Upgrade">Upgrade 15: Increase Hit damage to 7d6+Int<br>Upgrade 25: Increase Hit damage to 9d6+Int</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Ice Storm 
+<div class="Power"> <p class="large"><strong><span class="Gray">Ice Storm 
  -      Wizard 
 
- 1</div></h3>
+ 1</span></strong ></p>
 <p>Attack
  - Daily
 
@@ -1567,10 +1546,10 @@ Int vs For</p>
 <p>Sustain Minor: Int Cold to creatures in the zone. You can move the zone 1 square. Sustain the zone until end of your next turn.</p>
 
 <p class="Power-Upgrade">Upgrade 15: Increase Hit damage to 4d6<br>Upgrade 25: Increase Hit damage to 6d6</p> </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Red">Arcane Shield 
+<div class="Power"> <p class="large"><strong><span class="Red">Arcane Shield 
  -      Wizard 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Encounter
 
@@ -1587,10 +1566,10 @@ Int vs For</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Levitate 
+<div class="Power"> <p class="large"><strong><span class="Gray">Levitate 
  -      Wizard 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Daily
 
@@ -1607,10 +1586,10 @@ Int vs For</p>
 
 
  </div> 
-<div class="Power"> <h3 class="Power-Title"><div class="Gray">Wall of Ice 
+<div class="Power"> <p class="large"><strong><span class="Gray">Wall of Ice 
  -      Wizard 
 
- 2</div></h3>
+ 2</span></strong ></p>
 <p>Utility
  - Daily
 
