@@ -124,15 +124,16 @@ tr:nth-child(even) {background-color: #ffefbf;}
 }
 
 .tip {  
-  color: blue;  
-  background-color: LightBlue;
-  border: 1px solid blue;
+  color: darkblue;  
+  background-color: #DDDDFF;
+  border: 1px solid darkblue;
   margin: 10px;
 }
 
 .design {  
-  color: red;  
-  background-color: #ffcccc;
-        border: 1px solid red;
+  color: #B20000; 
+  /*background-color: #ffcccc;*/
+  background-color: #ffdddd;
+        border: 1px solid darkred;
 		margin: 10px;
 }
