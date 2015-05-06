@@ -15,24 +15,8 @@ library(dplyr)
 source('~/Perico/Trabajo/COM/Codigo/R/utils/plyr.nested.R')
 source('~/Perico/OCIO/SFRPG-web/scripts/Feat-csv-to-html.R')
 
-getFeatSection  <- function(featlist)
-{
-  tmp2  <- llply.name(featlist,.fun=function(l,l.name)
-  {
-    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
-                                                      "<div class=\"Feat-table\">",l$table,"</div>",
-                                                      "<div class=\"Feat-List\">", l$htm, "</div>")})
-    s <- paste0 (s,collapse="<br/>")
-    attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
-    l
-  }
-  )
-  attr(tmp2,"full") <- paste0(tmp2,collapse="<br/>\r\n")
-  attr(tmp2,"full") <- paste0(llply(tmp2,.fun=attr,which="full"),collapse="<br/>\r\n")
-  tmp2
-}
 
-cat(attr(getFeatSection(feat.list$feats),"full"))
+cat(attr(getFeatSection(getFeatList()$feats),"full"))
 
 ```
 

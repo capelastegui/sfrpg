@@ -89,21 +89,39 @@ getFeatList <- function ()
 
 
 
+# getFeatSection  <- function(featlist)
+# {
+#   featlist2  <- llply.name(featlist,.fun=function(l,l.name)
+#   {
+#     s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
+#                                                       "<div class=\"Feat-Table\">",l$table,"</div>",
+#                                                       "<div class=\"Feat-List\">", l$htm, "</div>")})
+#     s <- paste0 (s,collapse="<br/>")
+#     attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
+#     l
+#   }
+#   )
+#   attr(featlist2,"full") <- paste0(featlist2,collapse="<br/>\r\n")
+#   attr(featlist2,"full") <- paste0(llply(featlist2,.fun=attr,which="full"),collapse="<br/>\r\n")
+#   featlist2
+# }
+
+
 getFeatSection  <- function(featlist)
 {
-  featlist2  <- llply.name(featlist,.fun=function(l,l.name)
+  tmp2  <- llply.name(featlist,.fun=function(l,l.name)
   {
     s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
-                                                      "<div class=\"Feat-Table\">",l$table,"</div>",
+                                                      "<div class=\"Feat-table\">",l$table,"</div>",
                                                       "<div class=\"Feat-List\">", l$htm, "</div>")})
     s <- paste0 (s,collapse="<br/>")
     attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
     l
   }
   )
-  attr(featlist2,"full") <- paste0(featlist2,collapse="<br/>\r\n")
-  attr(featlist2,"full") <- paste0(llply(featlist2,.fun=attr,which="full"),collapse="<br/>\r\n")
-  featlist2
+  attr(tmp2,"full") <- paste0(tmp2,collapse="<br/>\r\n")
+  attr(tmp2,"full") <- paste0(llply(tmp2,.fun=attr,which="full"),collapse="<br/>\r\n")
+  tmp2
 }
 
 

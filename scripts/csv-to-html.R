@@ -1,6 +1,7 @@
 require(plyr)
 require(dplyr)
 
+source('~/Perico/Trabajo/COM/Codigo/R/utils/plyr.nested.R')
 
 buildElement <- function(str, pre, post,skipEmpty=TRUE)
 {
