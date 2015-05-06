@@ -38,7 +38,40 @@ Categories:
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
 cat(attr(featlist$feats$"1"$"Defense Focus","section"))
 
-cat(attr(featlist$feats$"1"$"Offense Focus","section"))
+```
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
+pre  <- featlist$tag$pre
+post  <- featlist$tag$post
+of.focus <- featlist$feats$"1"$"Offense Focus"$raw
+flexible.focus  <- of.focus%>% filter(grepl("Flexible",Keywords))
+weapon.focus  <- of.focus%>% filter(grepl("Weapon",Keywords))
+implement.focus  <- of.focus%>% filter(grepl("Implement",Keywords))
+
+flexible.focus.table  <- buildTableApply(flexible.focus,df.names=setdiff(names(flexible.focus),"Text"))
+weapon.focus.table  <- buildTableApply(weapon.focus,df.names=setdiff(names(weapon.focus),"Text"))
+implement.focus.table  <- buildTableApply(implement.focus,df.names=setdiff(names(implement.focus),"Text"))
+
+flexible.focus  <- buildElementApply(flexible.focus,pre,post,df.names=setdiff(names(flexible.focus),"Summary"))
+weapon.focus  <- buildElementApply(weapon.focus,pre,post,df.names=setdiff(names(weapon.focus),"Summary"))
+implement.focus  <- buildElementApply(implement.focus,pre,post,df.names=setdiff(names(implement.focus),"Summary"))
+
+```
+#### Category - Offense Focus (Flexible)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
+
+cat(flexible.focus.table)
+cat(flexible.focus)
+```
+#### Category - Offense Focus (Weapon)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
+cat(weapon.focus.table)
+cat(weapon.focus)
+```
+#### Category - Offense Focus (Implement)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
+cat(implement.focus.table)
+cat(implement.focus)
 
 cat(attr(featlist$feats$"1"$"Toughness","section"))
 

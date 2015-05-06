@@ -87,11 +87,11 @@ getFeatList <- function ()
   feat.list <- list()
   
   feat.list$feats <- 
-    mapply(FUN=function(a,b)
+    mapply(FUN=function(a,b,c)
     {
-      mapply(a,b,SIMPLIFY=FALSE, FUN=function(a,b){list(table=a,htm=b)})
+      mapply(a,b,c,SIMPLIFY=FALSE, FUN=function(a,b,c){list(table=a,htm=b,raw=c)})
     },
-    feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
+    feat.list.table,feat.list.htm,feat.list.raw, SIMPLIFY=FALSE)
   
   feat.list$feats  <- getFeatSection(feat.list$feats)
   
@@ -103,6 +103,9 @@ getFeatList <- function ()
     feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
   
   feat.list$lesserfeats  <- getFeatSection(feat.list$lesserfeats)
+  
+  feat.list$tag$pre <-feat.tag.pre
+  feat.list$tag$post <-feat.tag.post
   
   feat.list
 }
