@@ -1,9 +1,9 @@
 ---
 title: "Character Building"
-output: 
+output:
   html_document:
-    css: "C:\\Users\\acer\\Documents\\Perico\\OCIO\\SFRPG-web\\raw\\SFRPG.css"
-  
+    css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
+  pdf_document: default
 ---
 This chapter provides the rules for creating and levelling Player Characters. The overall character creation process is first described, and then each creation and levelling step is discussed in detail: stat generation, race and class selection, mundane equipment, feat selection, levelling up, and using magic items.
 
