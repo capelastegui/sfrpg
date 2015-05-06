@@ -6,60 +6,31 @@
   font-size: 11px;  
   line-height: normal;  
   width: 290px;  
-  margin-bottom: 25px;  
--webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
-			   
-display: inline-block; width: 100%;
+  margin-bottom: 25px; 
+  display: inline-block;
 			
 }
 
 
-.Feat-Keywords, .Feat-Categories {  
-  font-style: italic;  
-  color: #333333;  
-  margin-bottom: 0px;
-}
-
-.Feat-Requires {  
-  font-style: italic;  
-  color: #666666;  
-  margin-bottom: 3px;
-}
-
-.Feat h3,.Feat h4, .Feat p {  
+.Feat p {  
   margin-top: 0px;  
-  margin-bottom: 3px;
-  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-  page-break-inside: avoid; /* Firefox */
-  break-inside: avoid; /* IE 10+ */
+  margin-bottom: 6px;
+
 }
 
-.Feat-List, .Power-List {  
-	-moz-column-count: 3;
-	-webkit-column-count: 3;
-	column-count: 3;  
-	-moz-column-rule-style: none;
-	-webkit-column-rule-style: none;
-	column-rule-style: none;  
-	width: 900px;
-	  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-  page-break-inside: avoid; /* Firefox */
-  break-inside: avoid; /* IE 10+ */
-   column-break-inside: avoid;
-}
+.Feat-List, .Power-List {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;  
+  -moz-column-rule-style: none;
+  -webkit-column-rule-style: none;
+  column-rule-style: none;  
+  width: 900px;
 
-.Feat-Categories {  
-  font-weight: bold;  
-  display: inline;
 }
+/* Table formats*/
 
-.Feat-Keywords {  
-  display: inline;
-}
-
-.Feat-table table, .Power-table {  
+table {
   font-size: 11px;  
   font-family: Verdana;  
   padding-top: 0px;  
@@ -67,56 +38,23 @@ display: inline-block; width: 100%;
   padding-bottom: 0px;  
   padding-left: 0px;  
   color: #663300;  
-  width: 900px;  
   background-color: #ffcc99;
   margin-bottom: 30px;
   border-collapse: separate;
   border-spacing: 2px;
-}
+  }
+  
+tr:nth-child(even) {background-color: #ffefbf;} 
 
-.Class-table {  
-  font-size: 11px;  
-  font-family: Verdana;  
-  padding-top: 0px;  
-  padding-right: 0px;  
-  padding-bottom: 0px;  
-  padding-left: 0px;  
-  color: #663300;  
-  width: 500px;  
-  background-color: #ffcc99;
-  border-collapse: separate;
-    border-spacing: 2px;
-}
+.Feat-table table, .Power-table {width: 900px;}
 
-.General-table {  
-  font-size: 11px;  
-  font-family: Verdana;  
-  padding-top: 0px;  
-  padding-right: 0px;  
-  padding-bottom: 0px;  
-  padding-left: 0px;  
-  color: #663300;  
-  width: 640px;  
-  background-color: #ffcc99;
-  border-collapse: separate;
-    border-spacing: 2px;
-}
+.Class-table {width: 500px;}
+
+.General-table {width: 640px;}
       
-    tr:nth-child(even) {
-    background-color: #ffefbf;
-} 
 
- .Power {  
-  font-family: Verdana;  
-  font-size: 11px;  
-  line-height: normal;  
-  width: 290px;  
-  margin-bottom: 25px;  
-  page-break-inside: avoid;
-    -webkit-column-break-inside: avoid; 
-          page-break-inside: avoid; 
-               break-inside: avoid;
-}
+
+
 
  .Feature {  
   font-family: Verdana;  
@@ -130,18 +68,7 @@ display: inline-block; width: 100%;
                break-inside: avoid;
 }
 
-.Power-Title {  
-  font-weight: bold;  
-  margin-bottom: 0px;
-}
 
-
-
-.Power-Requires {  
-  font-style: italic;  
-  color: #666666;  
-  margin-bottom: 3px;
-}
 
 /* Color classes */
 .green {color:green}
@@ -161,30 +88,28 @@ display: inline-block; width: 100%;
  
  .huge {font-size: 18px;}
  
- /*tmp*/
- 
- p {  
-
-  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
-}
  
 
 /* Power format */
-      
-.Power  p {  
-  margin-top: 0px;  
-  margin-bottom: 2px;
-  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-          page-break-inside: avoid; /* Firefox */
-               break-inside: avoid; /* IE 10+ */
-}
-      
-.Power-Keywords {  
-  font-style: italic;  
   
-}    
+ .Power {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  width: 290px;  
+  margin-bottom: 25px;
+  display: inline-block;  
+
+}
+  
+.Power  p {  
+  margin-top: 3px;  
+  margin-bottom: 0px;
+}
+
+
+
+   
 
 .Power-Upgrade {  
   font-style: italic;  

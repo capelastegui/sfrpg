@@ -12,6 +12,24 @@ applysplit  <- function (df,splitvar)
 }
 
 
+getFeatSection  <- function(featlist)
+{
+  featlist2  <- llply.name(featlist,.fun=function(l,l.name)
+  {
+    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
+                                                      "<div class=\"Feat-table\">",l$table,"</div>",
+                                                      "<div class=\"Feat-List\">", l$htm, "</div>")})
+    l <- mapply(FUN=function(a,b){attr(a,"section") <- b;a},l,s, SIMPLIFY=FALSE)
+    s <- paste0 (s,collapse="<br/>")
+    attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
+    l
+  }
+  )
+  attr(featlist2,"full") <- paste0(featlist2,collapse="<br/>\r\n")
+  attr(featlist2,"full") <- paste0(llply(featlist2,.fun=attr,which="full"),collapse="<br/>\r\n")
+  featlist2
+}
+
 
 
 getFeatList <- function ()
@@ -75,7 +93,7 @@ getFeatList <- function ()
     },
     feat.list.table,feat.list.htm, SIMPLIFY=FALSE)
   
-  
+  feat.list$feats  <- getFeatSection(feat.list$feats)
   
   feat.list$lesserfeats <- 
     mapply(FUN=function(a,b)
@@ -84,45 +102,16 @@ getFeatList <- function ()
     },
     feat.lesser.list.table,feat.lesser.list.htm, SIMPLIFY=FALSE)
   
+  feat.list$lesserfeats  <- getFeatSection(feat.list$lesserfeats)
+  
   feat.list
 }
 
 
 
-# getFeatSection  <- function(featlist)
-# {
-#   featlist2  <- llply.name(featlist,.fun=function(l,l.name)
-#   {
-#     s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
-#                                                       "<div class=\"Feat-Table\">",l$table,"</div>",
-#                                                       "<div class=\"Feat-List\">", l$htm, "</div>")})
-#     s <- paste0 (s,collapse="<br/>")
-#     attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
-#     l
-#   }
-#   )
-#   attr(featlist2,"full") <- paste0(featlist2,collapse="<br/>\r\n")
-#   attr(featlist2,"full") <- paste0(llply(featlist2,.fun=attr,which="full"),collapse="<br/>\r\n")
-#   featlist2
-# }
 
 
-getFeatSection  <- function(featlist)
-{
-  tmp2  <- llply.name(featlist,.fun=function(l,l.name)
-  {
-    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4>Category - ",l.name,"</h4>",
-                                                      "<div class=\"Feat-table\">",l$table,"</div>",
-                                                      "<div class=\"Feat-List\">", l$htm, "</div>")})
-    s <- paste0 (s,collapse="<br/>")
-    attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
-    l
-  }
-  )
-  attr(tmp2,"full") <- paste0(tmp2,collapse="<br/>\r\n")
-  attr(tmp2,"full") <- paste0(llply(tmp2,.fun=attr,which="full"),collapse="<br/>\r\n")
-  tmp2
-}
+
 
 
 

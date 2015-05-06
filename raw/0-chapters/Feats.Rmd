@@ -17,6 +17,8 @@ source('~/Perico/OCIO/SFRPG-web/scripts/Feat-csv-to-html.R')
 
 
 cat(attr(getFeatSection(getFeatList()$feats),"full"))
+#featlist <- getFeatSection(getFeatList())
+#cat(attr(featlist$feats$"1"$"Armor Training"),"section"))
 
 ```
 
