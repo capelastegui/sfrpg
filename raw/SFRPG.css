@@ -136,6 +136,7 @@ tr:nth-child(even) {background-color: #ffefbf;}
   background-color: BlanchedAlmond;
         border: 1px solid DarkGoldenrod;
 		 margin: 10px;
+		 display: inline-block;
 }
 
 .tip {  
@@ -143,6 +144,7 @@ tr:nth-child(even) {background-color: #ffefbf;}
   background-color: #DDDDFF;
   border: 1px solid darkblue;
   margin: 10px;
+  display: inline-block;
 }
 
 .design {  
@@ -151,4 +153,5 @@ tr:nth-child(even) {background-color: #ffefbf;}
   background-color: #ffdddd;
         border: 1px solid darkred;
 		margin: 10px;
+		display: inline-block;
 }
