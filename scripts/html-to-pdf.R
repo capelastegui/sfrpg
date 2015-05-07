@@ -1,24 +1,28 @@
-
-
 require(knitr)
 
 
 
 
 basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
-tmpfile<- file.path(basedir,"raw","0-chapters","CharacterBuilding.html")
+dir.in  <-  file.path(basedir,"raw","0-chapters")
+htm.a1.intro<- file.path(dir.in,"Introduction.html")
+htm.a2.charbuild<- file.path(dir.in,"CharacterBuilding.html")
+htm.b3.feats<- file.path(dir.in,"Feats.html")
 
-tmpfile2<- file.path(basedir,"raw","0-chapters","CharacterBuilding.pdf")
+dir.out  <- file.path(basedir,"pdf")
+pdf.a1.intro<- file.path(dir.out,"A1-Introduction.pdf")
+pdf.a2.charbuild<- file.path(dir.out,"A2-CharacterBuilding.pdf")
+pdf.b3.feats<- file.path(dir.out,"B3-Feats.pdf")
 
 
-tmpfile<- file.path(basedir,"raw","0-chapters","Feats.html")
-tmpfile2<- file.path(basedir,"raw","0-chapters","Feats.pdf")
-
-
-
- 
 wkhtmltopdf  <- "D:\\Programas\\wkhtmltopdf\\bin\\wkhtmltopdf.exe"
 
-system(paste(wkhtmltopdf,"--zoom 1.25 ", tmpfile, tmpfile2))
+toPdf <- function(f.in,f.out){
+  system(paste(wkhtmltopdf,"--zoom 1.25 ", f.in, f.out))
+}
+
+toPdf(htm.a1.intro,pdf.a1.intro)
+toPdf(htm.a2.charbuild,pdf.a2.charbuild)
+toPdf(htm.b3.feats,pdf.b3.feats)
 
 

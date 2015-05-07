@@ -2,8 +2,11 @@
 title: "Character Building"
 output:
   html_document:
+    highlight: null
+    mathjax: null
     css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
-  pdf_document: default
+
+  
 ---
 This chapter provides the rules for creating and levelling Player Characters. The overall character creation process is first described, and then each creation and levelling step is discussed in detail: stat generation, race and class selection, mundane equipment, feat selection, levelling up, and using magic items.
 
@@ -82,7 +85,7 @@ The next step is to assign scores to each Ability. To this end, there are two **
     - +4 to Primary Ability
     - +3 to Secondary Ability
     - +1 to Tertiary Abilities
-  - +0 to Weak Ability
+    - +0 to Weak Ability
 
 <div class="tip">**Tip**: When deciding over an Ability Array, the Focused Array is a safe default option, whereas the Flexible Array can shine for characters whose Class Features and Powers strongly reward high Secondary Abilities.</div>
 
@@ -142,13 +145,13 @@ In the rest of this section, we list the weapons, armor and implement available 
 
 Each weapon in the game is described by the following elements:
 
-- Name
-- Family: A category of weapons with similar properties. For example, Axes is a weapon family that includes hand axes, battle axes, and greataxes. 
-- Damage: Base damage dealt per weapon damage die.
-- Keywords: Special properties associated with the weapon.
-- Training: How much training is required to wield the weapon, determines which classes can use it.
-- Type: Whether it is a Melee or Ranged weapon.
-- Hands:Whether the weapon requires 1 or 2 hands to be wielded.
+- **Name**
+- **Family**: A category of weapons with similar properties. For example, Axes is a weapon family that includes hand axes, battle axes, and greataxes. 
+- **Damage**: Base damage dealt per weapon damage die.
+- **Keywords**: Special properties associated with the weapon.
+- **Training**: How much training is required to wield the weapon, determines which classes can use it.
+- **Type**: Whether it is a Melee or Ranged weapon.
+- **Hands**:Whether the weapon requires 1 or 2 hands to be wielded.
 
 A character’s class determines which weapons the character is trained to use. A character using a weapon without training does not benefit from any of the weapon’s properties, including damage, keywords, and any magic abilities. Instead, the weapon is treated as an Light Improvised Weapon if it requires one hand to wield, or a Heavy Improvised Weapon if it requires two hands. Improvised weapons can be used without training.
 
@@ -203,10 +206,10 @@ The following weapon keywords are supported in the game:
 
 The hand requirements to use a weapon are as follows:
 
-- One-handed weapons without the Off-Hand keyword can be wielded in the character’s main hand. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the Off-Hand.
-- One-handed weapons with the Off-Hand keyword can be wielded in the character’s main hand or off-hand. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the other hand. When a character wields an Off-Hand weapon in each hand, these weapons gain the Parry keyword (+1 AC vs melee).
-- One-handed weapons with the Versatile keyword can be wielded in one hand like regular one-handed weapons. However, if the other hand is free, the character gains a damage bonus when using the weapon of +1 per weapon damage die (which increases to +2 at level 16). Versatile weapons wielded while leaving a hand free count as two-handed weapons for any Power or Class Feature that references two-handed weapons.
-- Two-handed weapons require both hands to be wielded. A character cannot use a hand to wield any other item while wielding such a weapon.
+- **One-handed weapons without the Off-Hand keyword** can be wielded in the character’s **main hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the Off-Hand.
+- **One-handed weapons with the Off-Hand keyword** can be wielded in the character’s **main hand or off-hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the other hand. When a character wields an Off-Hand weapon in each hand, these weapons gain the Parry keyword (+1 AC vs melee).
+- **One-handed weapons with the Versatile keyword** can be wielded in **one hand** like regular one-handed weapons. However, if the **other hand is free**, the character gains a **damage bonus** when using the weapon of +1 per weapon damage die (which increases to +2 at level 16). Versatile weapons wielded while leaving a hand free count as two-handed weapons for any Power or Class Feature that references two-handed weapons.
+- **Two-handed weapons** require both hands to be wielded. A character cannot use a hand to wield any other item while wielding such a weapon.
 
 <div class="tip">**Tip**: It is usually better to use two-handed weapons, or Versatile weapons with a free hand, if you want your character to focus on the offense, and a one-handed weapon with a shield or two Off-Hand weapons, if you prefer focusing on defense. Wielding a weapon in each hand does not grant additional attacks or any other inherent benefits (aside from the Parry keyword granted when dual wielding Off-Hand weapons), so it is usually not a good idea, unless you have class Powers or Features that require dual wielding or otherwise reward you for it.</div>
 
@@ -225,15 +228,15 @@ Two previously existing weapon families, Picks and Maces, have been discontinued
 
 Some weapons used to have the same name as their weapon family. To remove this ambiguity, they have been renamed:
 
-- Spear is now Halfspear
-- Crossbow is now Light Crossbow
-- Flail is now Light Flail
+- **Spear** is now Halfspear
+- **Crossbow** is now Light Crossbow
+- **Flail** is now Light Flail
 
 Some character classes from older sourcebooks have bonuses associated with obsoleted weapon types. We recommend the following replacements for these weapons:
 
-- Sickle: replace with Dagger
-- Scimitar: replace with Short Sword
-- Club: replace with Mace</div>
+- **Sickle**: replace with Dagger
+- **Scimitar**: replace with Short Sword
+- **Club**: replace with Mace</div>
 
 ####Armor
 
@@ -294,19 +297,19 @@ A character’s class determines which implements the character is trained to us
 
 The following implement types are supported in the game:
 
-- Staff - Long shaft, usually made of wood.
-- Wand - Short, slender stick.
-- Rod - Long, decorated stick.
-- Orb - Sphere made of a transparent or reflective material
-- Tome - Heavy leather-bound book with inscribed spells
-- Symbol - Amulet or necklace bearing the symbol of a deity
-- Focus - Small carried object used to channel inner energy
-- Totem - Carved figure representing an animal, plant, or spirit.
-- Weapon Implement - Weapon that can be used to channel supernatural powers. Some character classes allow specific types of weapons to be used as Weapon Implements. Weapon Implements require the same number of hands to wield as their associated weapons.
-- No Implement - A character using just hand gestures to channel power.
+- **Staff** - Long shaft, usually made of wood.
+- **Wand** - Short, slender stick.
+- **Rod** - Long, decorated stick.
+- **Orb** - Sphere made of a transparent or reflective material
+- **Tome** - Heavy leather-bound book with inscribed spells
+- **Symbol** - Amulet or necklace bearing the symbol of a deity
+- **Focus** - Small carried object used to channel inner energy
+- **Totem** - Carved figure representing an animal, plant, or spirit.
+- **Weapon Implement** - Weapon that can be used to channel supernatural powers. Some character classes allow specific types of weapons to be used as Weapon Implements. Weapon Implements require the same number of hands to wield as their associated weapons.
+- **No Implement** - A character using just hand gestures to channel power.
 
 The following implement keywords are supported in the game:
-- Very Unwieldy: Attacks made with this implement gain a -2 penalty to hit.
+- **Very Unwieldy**: Attacks made with this implement gain a -2 penalty to hit.
 
 The table below provide stats for all implements in the game:
 
@@ -356,49 +359,49 @@ A Feat is a character customization option that lets player specialize their cha
 
 Each Feat is composed of the following elements:
 
-- Name
-- Level: The minimum level at which the Feat can be acquired. Also, the minimum level of the Feat Slot that can be used to learn the Feat.
-- Category: A group of Feats that perform a similar function. A character can only select a single Feat from each Feat Category.
+- **Name**
+- **Level**: The minimum level at which the Feat can be acquired. Also, the minimum level of the Feat Slot that can be used to learn the Feat.
+- **Category**: A group of Feats that perform a similar function. A character can only select a single Feat from each Feat Category.
 Some Feat Categories are labeled as “Unlimited”. A character can select any number of Feats from an Unlimited Category
-- Keywords: A series of labels that describe the Feat. Feat Keywords are purely descriptive and have no associated rules, but are sometimes referenced by other Feats.
-- Requirements: A series of conditions that a character must meet before taking the Feat.
-- Description: The benefits granted by the feat.
-- Summary: An abbreviated version of the Feat Description, used in summary tables. The Summary text does not necessarily provide exact or complete rules, and should only be used as a quick guide for character building decisions, not as a rules reference.
+- **Keywords**: A series of labels that describe the Feat. Feat Keywords are purely descriptive and have no associated rules, but are sometimes referenced by other Feats.
+- **Requirements**: A series of conditions that a character must meet before taking the Feat.
+- **Description**: The benefits granted by the feat.
+- **Summary**: An abbreviated version of the Feat Description, used in summary tables. The Summary text does not necessarily provide exact or complete rules, and should only be used as a quick guide for character building decisions, not as a rules reference.
 
 In addition to regular Feats, characters can also gain Lesser Feats, which are customization options that usually improve a character’s adventuring capabilities but have little or no impact in their combat performance. Through Lesser Feats, characters can expand their knowledge in Skills, Rituals, or languages. Characters start the game with no Lesser Feats but acquire them as they level up, to a maximum of nine. On top of that, characters may gain bonus Lesser Feats from other sources, such as their Race or Class, or other Feats. Depending on the specific case, a character gaining a bonus Lesser Feat may be able of picking any available Lesser Feat of a certain level or lower, or just gain a predetermined Lesser Feat.
 
 Each Lesser Feat is composed of the following elements:
 
-- Name
-- Level: The minimum level at which the Lesser Feat can be acquired. Also, the minimum level of the Lesser Feat Slot that can be used to learn the Lesser Feat.
-- Repeatable: Whether the Lesser Feat can be taken multiple times.
-- Keywords: A series of labels that describe the Feat. Feat Keywords are purely descriptive and have no associated rules, but are sometimes referenced by other Feats.
-- Requirements: A series of conditions that a character must meet before taking the Lesser Feat .
-- Description: The benefits granted by the Lesser Feat .
-- Summary: An abbreviated version of the Lesser Feat Description, used in summary tables. The Summary text does not necessarily provide exact or complete rules, and should only be used as a quick guide for character building decisions, not as a rules reference.
+- **Name**
+- **Level**: The minimum level at which the Lesser Feat can be acquired. Also, the minimum level of the Lesser Feat Slot that can be used to learn the Lesser Feat.
+- **Repeatable**: Whether the Lesser Feat can be taken multiple times.
+- **Keywords**: A series of labels that describe the Feat. Feat Keywords are purely descriptive and have no associated rules, but are sometimes referenced by other Feats.
+- **Requirements**: A series of conditions that a character must meet before taking the Lesser Feat .
+- **Description**: The benefits granted by the Lesser Feat .
+- **Summary**: An abbreviated version of the Lesser Feat Description, used in summary tables. The Summary text does not necessarily provide exact or complete rules, and should only be used as a quick guide for character building decisions, not as a rules reference.
 
-The following table summarizes the acquisition of Slots Feats and Lesser Feats per character level:
+The following table summarizes the acquisition of  Feat Slots and Lesser Feat Slots per character level:
 
-Level | Feats aquired
-------------- | -------------
- 1| Gain a Level 1 Feat Slot
- 2| Gain a Level 2 Lesser Feat Slot
- 4| Gain a Level 4 Feat Slot
- 6| Gain a Level 6 Lesser Feat Slot
- 8| Gain a Level 8 Feat Slot
- 10| Gain a Level 10 Lesser Feat Slot
- 11| Gain a Level 11 Feat  Slot
- 12| Gain a Level 12 Lesser Feat Slot
- 14| Gain a Level 14 Feat Slot
- 16| Gain a Level 16 Lesser Feat Slot
- 18| Gain a Level 18 Feat Slot
- 20| Gain a Level 20 Lesser Feat Slot
- 21| Gain a Level 21 Feat Slot
- 22| Gain a Level 22 Lesser Feat Slot
- 24| Gain a Level 24 Feat  Slot  
- 26| Gain a Level 26 Lesser Feat Slot
- 28| Gain a Level 28 Feat Slot
- 30| Gain a Level 30 Lesser Feat Slot
+Level | Slots aquired | Total Feats  | Total Less. Feats  | Feat levels | Lesser Feat levels
+------------- | -------------|--|-- |--|--
+ 1| Gain a Level 1 Feat Slot | 1 | 0 | 1 | 
+ 2| Gain a Level 2 Lesser Feat Slot | 1 | 1| 1 | 2
+ 4| Gain a Level 4 Feat Slot | 2 | 1| 1,4 | 2
+ 6| Gain a Level 6 Lesser Feat Slot | 2 | 2| 1,4 | 2,6
+ 8| Gain a Level 8 Feat Slot | 3 | 2| 1,4,8 | 2,6
+ 10| Gain a Level 10 Lesser Feat Slot | 3 | 3| 1,4,8 | 2,6,10
+ 11| Gain a Level 11 Feat  Slot | 4 | 3|1,4,8,11  | 2,6,10
+ 12| Gain a Level 12 Lesser Feat Slot | 4 | 4| 1,4,8,11 | 2,6,10,12
+ 14| Gain a Level 14 Feat Slot | 5 | 4| 1,4,8,11,14  | 2,6,10,12
+ 16| Gain a Level 16 Lesser Feat Slot | 5 | 5| 1,4,8,11,14 | 2,6,10,12,16
+ 18| Gain a Level 18 Feat Slot | 6 | 5| 1,4,8,11,14, 18  | 2,6,10,12,16
+ 20| Gain a Level 20 Lesser Feat Slot | 6 | 6| 1,4,8,11,14, 18  | 2,6,10,12,16, 20
+ 21| Gain a Level 21 Feat Slot | 7 | 6| 1,4,8,11,14, 18,21  | 2,6,10,12,16, 20
+ 22| Gain a Level 22 Lesser Feat Slot | 7 | 7| 1,4,8,11,14, 18,21  | 2,6,10,12,16, 20,22
+ 24| Gain a Level 24 Feat  Slot | 8 | 7| 1,4,8,11,14, 18,21,24  | 2,6,10,12,16, 20,22
+ 26| Gain a Level 26 Lesser Feat Slot | 8 | 8| 1,4,8,11,14, 18,21,24  | 2,6,10,12,16, 20,22,26
+ 28| Gain a Level 28 Feat Slot | 9 | 8| 1,4,8,11,14, 18,21,24,28  | 2,6,10,12,16, 20,22,26
+ 30| Gain a Level 30 Lesser Feat Slot | 9 | 9| 1,4,8,11,14, 18,21,24,28  | 2,6,10,12,16, 20,22,26,30
 
 
 
@@ -407,7 +410,7 @@ Each Feat Slot can be used to gain a Feat with a level equal or lower to that of
 <div class="tip">**Tip**: Although the power level of Feats tends to grow with their level, the differences are sometimes very small. Often, a lower level Feat will be just as effective for a given character as the higher level alternatives, if not the best option altogether.</div>
 
 
-<div class="tip">**Tip**: At some levels, a Feat Slot levels can only be filled with lower level Feats.</div>
+<div class="tip">**Tip**: At some levels, a Feat Slot can only be filled with lower level Feats.</div>
 
 
 <div class="tip">**Tip**: If you are lost, or want to experiment, choosing legal Feats at random is still expected to yield competent (if unfocused) characters.</div>
@@ -418,111 +421,14 @@ Each Feat Slot can be used to gain a Feat with a level equal or lower to that of
 
 <div class="design">**Designer Note**: Experienced players may find this Feat system too restrictive compared to those of previous games. However, these restrictions serve an important purpose. Here is the reasoning behind them:
 
-- Separation between combat options and adventuring options: Allowing characters to freely choose between combat and non-combat Feats results in excessive performance variability, to the point that it’s virtually impossible to design high level content that will be moderately difficult and enjoyable to both characters that are completely specialized on combat and characters that only select non-combat Feats. Furthermore, it is usually optimal to ignore either combat or non-combat options (depending on the campaign), resulting in roughly half the Feats in the game seeing little to no play. By splitting customization slots between combat options (Feats) and non-combat options (Lesser Feats), we get much more predictable character outcomes, which allow for a better high level game experience. This also allows players to improve both their combat and non-combat capabilities without feeling that they are hurting their character’s potential.
-- Feat categories: It is a natural thing for players to experiment with spending all of their customization resources in improving a single dimension of their character, such as damage, or defenses, or even mobility. Again, this leads to excessive variability between high level character builds and, as a consequence, high variability in game difficulty, combat length, and overall game experience. By classifying Feats into functional Categories, and restricting players to one Feat per Category, we can, for example, provide dozens of options to increase attack damage while ensuring that a given character will only be able to have two or three of them at once.
-- No support for previous Feats: We wanted every Feat in the game to have a purpose, and to be playable for a significant percentage of character builds. However, older rulebooks had thousands of Feats with wildly inconsistent quality and power level. We decided that starting from scratch and having a compact set of Feats that could realistically be tested and polished was the best option.
-- No class/race requirements: We wanted the total number of feats to be manageable for players, but also to maintain backwards compatibility with previous Races and Classes. Since older rulebooks have dozens of Races and Classes, and including Feats for only a subset of them would be considered unfair and introduce balance issues, we chose to remove racial feats altogether and replace Class Feats with options based on Class Role and Power Source, which fill a similar niche with much less effort and complexity. That said, we might reconsider this for future supplements.</div>
+- **Separation between combat options and adventuring options**: Allowing characters to freely choose between combat and non-combat Feats results in excessive performance variability, to the point that it’s virtually impossible to design high level content that will be moderately difficult and enjoyable to both characters that are completely specialized on combat and characters that only select non-combat Feats. Furthermore, it is usually optimal to ignore either combat or non-combat options (depending on the campaign), resulting in roughly half the Feats in the game seeing little to no play. By splitting customization slots between combat options (Feats) and non-combat options (Lesser Feats), we get much more predictable character outcomes, which allow for a better high level game experience. This also allows players to improve both their combat and non-combat capabilities without feeling that they are hurting their character’s potential.
+- **Feat categories**: It is a natural thing for players to experiment with spending all of their customization resources in improving a single dimension of their character, such as damage, or defenses, or even mobility. Again, this leads to excessive variability between high level character builds and, as a consequence, high variability in game difficulty, combat length, and overall game experience. By classifying Feats into functional Categories, and restricting players to one Feat per Category, we can, for example, provide dozens of options to increase attack damage while ensuring that a given character will only be able to have two or three of them at once.
+- **No support for previous Feats**: We wanted every Feat in the game to have a purpose, and to be playable for a significant percentage of character builds. However, older rulebooks had thousands of Feats with wildly inconsistent quality and power level. We decided that starting from scratch and having a compact set of Feats that could realistically be tested and polished was the best option.
+- **No class/race requirements**: We wanted the total number of feats to be manageable for players, but also to maintain backwards compatibility with previous Races and Classes. Since older rulebooks have dozens of Races and Classes, and including Feats for only a subset of them would be considered unfair and introduce balance issues, we chose to remove racial feats altogether and replace Class Feats with options based on Class Role and Power Source, which fill a similar niche with much less effort and complexity. That said, we might reconsider this for future supplements.</div>
 
 
 TODO: REWORD RACIAL ABILITIES TO DECOUPLE THEM FROM LESSER FEATS. JUST GRANT SKILLS.
 
-
-
-###Level 1 Feats
-
-Categories:
-
-- Defense Focus
-- Offense Focus
-- Toughness
-
-####Defense Focus
-####Offense Focus
-####Toughness
-
-
-<div class="tip">**Tip**: Toughness is a good level 1 Feat for starting players who don’t want to complicate themselves.</div>
-
-<div class="tip">**Tip**: Feats in the Toughness category are generally better than Defense Focus feats at providing raw survivability. Feats in the Defense Focus category are usually better at providing protection against melee attacks, or for characters that are interested in their secondary benefits. When in doubt, take both.</div>
-
-<div class="tip">**Tip**: Offense Focus Feats are the one of the main reasons to choose one Weapon Family over another, or one type of Implement over another. The other reason is the player’s aesthetic preference - some people just like axes a lot. Players who carefully study all options to choose the one that best suits their character build will probably gain a small edge in combat, but the Feats are designed  in power level, so choosing based on personal taste will be almost as effective.</div>
-
-
-<!-- 
-starting character: level 1 feats
-toughness
-focus
-armor focus
-proficiency
-
-higher level feats
-
-level 4 feats
-role 1
-role 2
-multiclass
-TODO: MULTICLASS PSIONICS
-TODO- SEPARATE LESSER FEAT TABLE
-
-level 11 feats
-power source
-role 3
-paragon ability
-
-level 21 feats
-epic versatility
-epic might
-epic ability
-
-Note on ignoring other levels when starting
--->
-feats-1.htm
-
-####Multiclass Feats
-
-Multiclass Overview
-Lesser Feats
-
-feats-multi.htm
-
-####Level 1 Optional Feats
-
-Can be used with GM’s consent
-
-Categories:
-
-- Armor Training
-- Weapon Training
-
-
-<div class="tip">**Tip**: Armor Training is usually not as strong as Defense Focus, but they both stack, and you can take multiple Training feats.</div>
-
-<div class="tip">**Tip**: Weapon Training is usually worse than an Offense Focus up to level 15, and stronger after level 16. They both stack.</div>
-
-<div class="tip">**Tip**: There is no Implement Training Feat. If you are really interested in using a different Implement, go Multiclass and take Multiclass Implement or, alternately, convince your GM that you want it for story reasons and not to optimize your character.</div>
-
-<div class="tip">**GM Tip**: If your player is really interested in getting training with a different Implement, allow them to have it for free if they provide a convincing argument. When in doubt, make it conditional on them taking an Offense Focus Feat that is not specific to that implement, such as Dual Focus.</div>
-
-<div class="design">**Designer Note**: These are not needed from a mechanical standpoint. In terms of game systems, they are redundant, or slightly imbalanced, or cost too much in terms of complexity to be worth it. However, it’s stuff that players often want and, at worst, it won’t break the game too badly. I recommend GMs to leave these off the table for beginning players, and allow them once the group is experienced enough to know what they are doing, or in case someone really wants a Greatsword-wielding wizard or a Fireball-casting rogue.</div>
-
-
-We don’t really need these feats!
-They are too weak
-But may be needed from an aesthetic point of view
-
-
-
-###Level 4 Feats
-feats-4.htm
-
-###Level 11 Feats
-feats-11.htm
-
-###Level 21 Feats
-feats-21.htm
-
-
-###Lesser Feats
 
 
 ##Power selection

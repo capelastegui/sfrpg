@@ -30,9 +30,9 @@ getFullFeatHtm  <- function(featlist)
   featlist2
 }
 
-#Generate feat table and feat list from a single raw feat table
+#Generate feat table and feat list from a single raw feat table, and pre- and -post tags
 
-getFeatSection  <- function(featraw)
+getFeatSection  <- function(featraw, pre, post)
 {
   feat.table  <- buildTableApply(featraw,df.names=setdiff(names(featraw),"Text"))
   feat.htm  <- buildElementApply(featraw,pre,post,df.names=setdiff(names(featraw),"Summary"))

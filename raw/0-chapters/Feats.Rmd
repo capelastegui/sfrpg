@@ -2,18 +2,18 @@
 title: "Feats"
 output:
   html_document:
+    highlight: null
+    mathjax: null
     css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
-  pdf_document:
-    css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
-  word_document: default
+
 ---
 
 
 
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-library(plyr)
-library(reshape2)
-library(dplyr)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+require(plyr)
+require(reshape2)
+require(dplyr)
 
 source('~/Perico/Trabajo/COM/Codigo/R/utils/plyr.nested.R')
 source('~/Perico/OCIO/SFRPG-web/scripts/Feat-csv-to-html.R')
@@ -21,6 +21,8 @@ source('~/Perico/OCIO/SFRPG-web/scripts/Feat-csv-to-html.R')
 
 #cat(attr(getFeatSection(getFeatList()$feats),"full"))
 featlist <- getFeatList()
+pre  <- featlist$tag$pre
+post  <- featlist$tag$post
 
 ```
 ###Level 1 Feats
@@ -45,49 +47,40 @@ Note that Offense Focus is the largest feat category in the game and, due to its
 <div class="tip">**Tip**: Offense Focus Feats are the one of the main reasons to choose one Weapon Family over another, or one type of Implement over another. The other reason is the player’s aesthetic preference - some people just like axes a lot. Players who carefully study all options to choose the one that best suits their character build will probably gain a small edge in combat, but the Feats are designed to be close in power level, so choosing based on personal taste will be almost as effective.</div>
 
 
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(attr(featlist$feats$"1"$"Defense Focus","section"))
-
+#### Category - Defense Focus{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"1"$"Defense Focus"$raw,pre,post))
 ```
 
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-pre  <- featlist$tag$pre
-post  <- featlist$tag$post
+
+#### Category - Offense Focus (Flexible){.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
 of.focus <- featlist$feats$"1"$"Offense Focus"$raw
 flexible.focus  <- of.focus%>% filter(grepl("Flexible",Keywords))
 weapon.focus  <- of.focus%>% filter(grepl("Weapon",Keywords))
 implement.focus  <- of.focus%>% filter(grepl("Implement",Keywords))
 
-#flexible.focus.table  <- buildTableApply(flexible.focus,df.names=setdiff(names(flexible.focus),"Text"))
-#weapon.focus.table  <- buildTableApply(weapon.focus,df.names=setdiff(names(weapon.focus),"Text"))
-#implement.focus.table  <- buildTableApply(implement.focus,df.names=setdiff(names(implement.focus),"Text"))
+cat(getFeatSection(flexible.focus,pre,post))
 
-#flexible.focus  <- buildElementApply(flexible.focus,pre,post,df.names=setdiff(names(flexible.focus),"Summary"))
-#weapon.focus  <- buildElementApply(weapon.focus,pre,post,df.names=setdiff(names(weapon.focus),"Summary"))
-#implement.focus  <- buildElementApply(implement.focus,pre,post,df.names=setdiff(names(implement.focus),"Summary"))
-
-```
-#### Category - Offense Focus (Flexible){.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(getFeatSection(flexible.focus))
-#cat(flexible.focus.table)
-#cat(flexible.focus)*/
 ```
 #### Category - Offense Focus (Weapon){.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(getFeatSection(weapon.focus))
-#cat(weapon.focus.table)
-#cat(weapon.focus)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(weapon.focus, pre, post))
+
 ```
 #### Category - Offense Focus (Implement){.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(getFeatSection(implement.focus))
-#cat(implement.focus.table)
-#cat(implement.focus)
-
-cat(attr(featlist$feats$"1"$"Toughness","section"))
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(implement.focus, pre, post))
 
 ```
+
+####Toughness
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"1"$"Toughness"$raw,pre,post))
+```
+
+
 
 
 ###Level 1 Optional Feats: Training {.newPage}
@@ -110,18 +103,105 @@ With the GM's permission, players can choose level 1 feats that expand their wea
 
 
 
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(attr(featlist$feats$"1"$"Armor Training","section"))
+#### Category - Armor Training (Unlimited)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"1"$"Armor Training"$raw,pre,post))
 ```
 
-####Weapon Training (Unlimited)
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE,cache=FALSE}
-cat(getFeatSection(featlist$feats$"1"$"Weapon Training"$raw))
-cat(attr(featlist$feats$"4","full"))
-cat(attr(featlist$feats$"11","full"))
-cat(attr(featlist$feats$"21","full"))
-
+#### Category - Weapon Training (Unlimited)
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"1"$"Weapon Training"$raw,pre,post))
 ```
+###Level 4 Feats{.newPage}
+
+#### Level 4 Defender Role Feats
+##### Category - Defender Grit
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Defender Grit"$raw,pre,post))
+```
+
+#####Category - Defender Position
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Defender Position"$raw,pre,post))
+```
+#### Level 4 Controller Role Feats{.newPage}
+##### Category - Explosive Control
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Explosive Control"$raw,pre,post))
+```
+
+#####Category - Ground Control
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Ground Control"$raw,pre,post))
+```
+
+#### Level 4 Leader Role Feats{.newPage}
+##### Category - Leader Heal
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Leader Heal"$raw,pre,post))
+```
+
+#####Category - Leader Maneuver
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Leader Maneuver"$raw,pre,post))
+```
+
+#### Level 4 Striker Role Feats{.newPage}
+##### Category - Striker Agility
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Striker Agility"$raw,pre,post))
+```
+
+#####Category - Striker Deadliness
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"4"$"Role: Striker Deadliness"$raw,pre,post))
+```
+
+### Level 11 Feats{.newPage}
+####Category - Paragon Ability
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"11"$"Paragon Ability"$raw,pre,post))
+```
+
+####Category - Power Source
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"11"$"Power Source"$raw,pre,post))
+```
+
+#### Level 11 Role Feats{.newPage}
+##### Category: Defender Mark
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"11"$"Role: Defender Mark"$raw,pre,post))
+```
+##### Category: Debilitating Control
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"11"$"Role: Debilitating Control"$raw,pre,post))
+```
+##### Category: Leader Offense{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"11"$"Role: Leader Offense"$raw,pre,post))
+```
+##### Category: Striker Resource
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"11"$"Role: Striker Resource"$raw,pre,post))
+```
+
+### Level 21 Feats{.newPage}
+####Category - Epic Ability
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"21"$"Epic Ability"$raw,pre,post))
+```
+
+####Category - Epic Might
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"21"$"Epic Might"$raw,pre,post))
+```
+
+####Category - Epic Specialization
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(getFeatSection(featlist$feats$"21"$"Epic Specialization"$raw,pre,post))
+```
+
 
 
 

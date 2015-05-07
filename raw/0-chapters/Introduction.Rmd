@@ -2,7 +2,9 @@
 title: "Introduction"
 output: 
   html_document:
-    css: SFRPG.css
+    highlight: null
+    mathjax: null
+    css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
 ---
 
 #Chapter 1 - Introduction
@@ -14,13 +16,17 @@ output:
 
 Normally formatted, black text is used to describe game rules.
 
-Italics are used to provide non-mechanic related descriptions: flavor, backstory.
+<em>Italics are used to provide non-mechanic related descriptions: flavor, backstory.</em>
 
-Blue text is used to provide advice on how to play the game. It is typically preceded by “Tip” or “Example”.
+```
+Text in white boxes is used to define formulas.
+```
 
-Gold text is used to provide compatibility instructions to integrate material from older sourcebooks. It is typically preceded by “Compatibility Note”.
+<div class="tip">Blue text is used to provide advice on how to play the game. It is typically preceded by **“Tip”** or **“Example”**.</div>
 
-Red text is used to provide insight into the designer's ideas regarding a game element. It is typically preceded by "Designer's Note".
+<div class="compatibility">Gold text is used to provide compatibility instructions to integrate material from older sourcebooks. It is typically preceded by **“Compatibility Note”**.</div>
+
+<div class="design">Red text is used to provide insight into the designer's ideas regarding a game element. It is typically preceded by **"Designer's Note"**.</div>
 
 ##Character Stats
 In this section, we describe the main stats that affect the performance of characters (including both Player Characters and Monsters) in the game.
@@ -66,12 +72,12 @@ Each Ability is a value, typically ranging between -1 and 5, which is applied as
 
 For Player Characters, some stats that are derived from Abilities. These are the Secondary Defenses (Fortitude, Reflex, Will) and Secondary Stats (Reaction, Surges, and Initiative). These are the stats that correspond to each Ability:
 
-- Strength: Fortitude, Reaction
-- Constitution: Fortitude, Surges
-- Dexterity: Reflex, Initiative
-- Wisdom: Reflex, Reaction
-- Charisma: Will, Surges
-- Intelligence: Will, Initiative
+- **Strength**: Fortitude, Reaction
+- **Constitution**: Fortitude, Surges
+- **Dexterity**: Reflex, Initiative
+- **Wisdom**: Reflex, Reaction
+- **Charisma**: Will, Surges
+- **Intelligence**: Will, Initiative
 
 The process for generating a Player Character’s Abilities is described in the Stat Generation section, in the Character Building chapter.
 
@@ -81,6 +87,7 @@ As the level of characters increases, so do their Hit Points, the amount of dama
 
 The multiplier applied for an Ability Damage Modifier varies with the character’s level, from 1 at level 1 to a maximum of 6 at level 30. The progression by level is:
 
+<div class="General-table">
 Level  | Multiplier value
 ------------- | -------------
 1   | x1
@@ -94,6 +101,7 @@ Level  | Multiplier value
 24	| x5
 27 	| x5.5
 29	| x6
+</div>
 
 An Ability Damage Modifier is applied instead of a regular Ability score in the following cases:
 
@@ -107,13 +115,13 @@ An Ability Damage Modifier is applied instead of a regular Ability score in the 
 - Healing or extra healing
 - Regeneration
 
-Compatibility Note: Some old powers use Ability Modifiers in combination with Resistances or Vulnerabilities. This is no longer supported - to see how this is translated to the current rules, see Resistances and Vulnerabilities in the Combat chapter.
+<div class="compatibility">**Compatibility Note**: Some old powers use Ability Modifiers in combination with Resistances or Vulnerabilities. This is no longer supported - to see how this is translated to the current rules, see Resistances and Vulnerabilities in the Combat chapter.</div>
 
 ###Defenses
 
 A character’s defenses determine how hard the character is to hit with attacks. Characters have one Primary Defense and three Secondary Defenses.
 
-Tip: Defense values typically range between 10 and 17 for Player Characters, and between 11 and 15 for monsters. For all characters, the average defense value is 13, which corresponds to a 65% chance of being hit on an attack with the typical hit bonus of +5.
+<div class="tip">**Tip**: Defense values typically range between 10 and 17 for Player Characters, and between 11 and 15 for monsters. For all characters, the average defense value is 13, which corresponds to a 65% chance of being hit on an attack with the typical hit bonus of +5.</div>
 
 **Armor Class** (**AC**), is the Primary Defense, the one most commonly targeted by attacks. For Player Characters, AC is determined by the type of Armor and Shield worn by the character, plus a class-dependent bonus if the character is wearing Light Armor. The following formula is used while wearing Light Armor:
 ```
@@ -139,14 +147,17 @@ A table stating the Secondary Defense bonuses and other stats for classes is pro
 
 For Monsters, Secondary Defenses are determined by monster class. A table with the typical defense values for each class role is provided in the Monster Stats section of the Monsters chapter.
 
-Tip: As a general guideline, each defense is targeted by the following types of attacks:
-AC: Physical attacks, including most melee attacks, some ranged attacks, and a few close and area attacks.
-Fortitude: Physical, Poison, Necrotic and Cold attacks, including some melee attacks, and a few ranged, close and area attacks.
-Reflex: Physical, Fire, Lightning, Radiant and Cold attacks, including most close and area attacks, and a few melee and ranged attacks.
-Will: Physical, Psychic, Radiant and Poison attacks, including some ranged attacks, and a few melee, close, and area attacks.
-Secondary Stats
+<div class="tip">**Tip**:As a general guideline, each defense is targeted by the following types of attacks:
 
-In addition to their direct application as modifiers to Powers and Skill Checks, a Player Character’s Ability scores are used to generate six important stats: the three Secondary Defenses and three Secondary Stats. The Secondary Stats are Reaction Modifier, Surge Number, and Initiative Modifier.
+- AC: Physical attacks, including most melee attacks, some ranged attacks, and a few close and area attacks.
+- Fortitude: Physical, Poison, Necrotic and Cold attacks, including some melee attacks, and a few ranged, close and area attacks.
+- Reflex: Physical, Fire, Lightning, Radiant and Cold attacks, including most close and area attacks, and a few melee and ranged attacks.
+- Will: Physical, Psychic, Radiant and Poison attacks, including some ranged attacks, and a few melee, close, and area attacks.
+Secondary Stats</div>
+
+###Secondary Stats
+
+In addition to their direct application as modifiers to Powers and Skill Checks, a Player Character’s Ability scores are used to generate six important stats: the three Secondary Defenses and three **Secondary Stats**. The Secondary Stats are **Reaction Modifier**, **Surge Number**, and **Initiative Modifier**.
 
 **Reaction Modifier** is a hit modifier that applies to a character’s Spontaneous Reaction attacks. The most common type of Spontaneous Reaction attack is the Opportunity Attack, which is triggered by moving or making Ranged or Area attacks while adjacent to an enemy. Typical values for a Reaction Modifier range between -5 and +0. For Player Characters, a Reaction Modifier is determined as follows:
 ```
