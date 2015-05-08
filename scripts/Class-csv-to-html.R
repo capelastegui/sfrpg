@@ -2,7 +2,7 @@ source(file.path(getwd(),"scripts","csv-to-html.R"))
 
 power.raw <- file.path(getwd(),"raw","charactercreation","Powers-raw.csv")
 power.tag <- file.path(getwd(),"raw","charactercreation","Powers-tags.csv")
-css.file <- file.path(getwd(),"raw","SFRPG.css")
+css.file <- file.path(getwd(),"Rmd","SFRPG.css")
 power.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers.html")
 power.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers-table.html")
 

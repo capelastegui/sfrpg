@@ -1,6 +1,6 @@
 source (file.path(getwd(),"scripts","csv-to-html.R"))
 
-css.file <- file.path(getwd(),"raw","SFRPG.css")
+css.file <- file.path(getwd(),"Rmd","SFRPG.css")
 css <- readChar(css.file, file.info(css.file)$size)
 weapons.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Weapons-table.html")
 armor.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-table.html")
