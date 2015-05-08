@@ -1,17 +1,17 @@
-source (file.path(getwd(),"scripts","csv-to-html.R"))
+source (file.path(getwd(),"scripts","0-00-csv-to-html.R"))
 
 css.file <- file.path(getwd(),"Rmd","SFRPG.css")
 css <- readChar(css.file, file.info(css.file)$size)
 weapons.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Weapons-table.html")
 armor.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-table.html")
-armorbyclass.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-by-class-table.html")
+armorbyclass.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-by-class-legacy.html")
 implement.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Implement-table.html")
 
-weapons.table <- read.csv(file.path(getwd(),"raw","Weapons-raw.csv"), sep=";")%>% tbl_df()
-armor.table <- read.csv(file.path(getwd(),"raw","Armor-raw.csv"), sep=";")%>% tbl_df()
-implement.table <- read.csv(file.path(getwd(),"raw","Implement-raw.csv"), sep=";")%>% tbl_df()
+weapons.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Weapons-raw.csv"), sep=";")%>% tbl_df()
+armor.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Armor-raw.csv"), sep=";")%>% tbl_df()
+implement.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Implement-raw.csv"), sep=";")%>% tbl_df()
 names(armor.table) <- gsub("\\."," ",names(armor.table))
-armorbyclass.table <- read.csv(file.path(getwd(),"raw","Armor-by-class.csv"), sep=";")%>% tbl_df() %>%
+armorbyclass.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Armor-by-class-legacy.csv"), sep=";")%>% tbl_df() %>%
   arrange(Class)
 
 #Build weapons tables
@@ -71,6 +71,6 @@ write(armorbyclass.table.htm,armorbyclass.table.htm.file)
 write(implement.table.htm,implement.table.htm.file)
 
 #exploration, delete this.
-require(ggplot2)
-ggplot(armorbyclass.table)+aes(x=Expected.AC,fill=Role)+geom_bar(binwidth=1,color="black")
-ggplot(armorbyclass.table)+aes(x=Expected.AC,fill=Armor.Type)+geom_bar(binwidth=1,color="black")+facet_grid(Role ~.)
+#require(ggplot2)
+#ggplot(armorbyclass.table)+aes(x=Expected.AC,fill=Role)+geom_bar(binwidth=1,color="black")
+#ggplot(armorbyclass.table)+aes(x=Expected.AC,fill=Armor.Type)+geom_bar(binwidth=1,color="black")+facet_grid(Role ~.)

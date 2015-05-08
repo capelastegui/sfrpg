@@ -1,10 +1,8 @@
-source(file.path(getwd(),"scripts","csv-to-html.R"))
+source(file.path(getwd(),"scripts","0-00-csv-to-html.R"))
 
 power.raw <- file.path(getwd(),"raw","charactercreation","Powers-raw.csv")
 power.tag <- file.path(getwd(),"raw","charactercreation","Powers-tags.csv")
 css.file <- file.path(getwd(),"Rmd","SFRPG.css")
-power.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers.html")
-power.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers-table.html")
 
 class.stat.raw <- file.path(getwd(),"raw","charactercreation","Class-stats.csv")
 class.stat.htm.file  <- file.path(getwd(),"html","CharacterCreation","Class-stats.html")
@@ -12,7 +10,8 @@ class.stat.htm.file  <- file.path(getwd(),"html","CharacterCreation","Class-stat
 class.features.raw <- file.path(getwd(),"raw","charactercreation","Class-features.csv")
 class.features.tag <- file.path(getwd(),"raw","charactercreation","Class-features-tags.csv")
 
-
+power.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers.html")
+power.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers-table.html")
 
 class.stat.df  <- read.csv(class.stat.raw, sep=";", header=TRUE)
 class.feature.df  <- read.csv(class.features.raw, sep=";", header=TRUE)

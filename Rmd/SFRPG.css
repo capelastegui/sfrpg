@@ -60,11 +60,11 @@ table {
   
 tr:nth-child(even) {background-color: #ffefbf;} 
 
-.Feat-table table, .Power-table {width: 20cm;}
+.wide , .Feat-table table, .Power-table {width: 20cm;}
 
-.Class-table {width: 10cm;}
+.narrow, .Class-table {width: 12cm;}
 
-.General-table {width: 12cm;}
+.medium-width, .General-table {width: 16cm;}
       
 
 
@@ -111,7 +111,7 @@ tr:nth-child(even) {background-color: #ffefbf;}
   font-size: 11px;  
   line-height: normal;  
   /*width: 290px;  */
-  width: 6.3cm;
+  width: 6.5cm;
   margin-bottom: 25px;
   display: inline-block;  
 

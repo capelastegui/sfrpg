@@ -4,6 +4,7 @@ output:
   html_document:
     highlight: null
     mathjax: null
+   # theme: null
     css: SFRPG.css
 ---
 

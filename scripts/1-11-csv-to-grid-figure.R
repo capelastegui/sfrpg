@@ -23,8 +23,8 @@ plotGrid <- function(grid.df)
   ggplot(grid.df)+aes(y=-y,x=x)+
     geom_tile(color="black", aes(fill=value))+
     geom_text(aes(label=label))+
-    #scale_x_continuous(breaks=NULL)+
-    #scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL) + 
+    scale_x_continuous(breaks=NULL)+
+    scale_y_continuous(breaks=NULL)+labs(x=NULL,y=NULL) + 
     scale_fill_manual(
       values = c("0"="lightgreen","X"="grey20", 
                  "x"="tan4", 

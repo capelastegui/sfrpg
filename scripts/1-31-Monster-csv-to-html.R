@@ -1,13 +1,13 @@
-source(file.path(getwd(),"scripts","csv-to-html.R"))
+source(file.path(getwd(),"scripts","0-00-csv-to-html.R"))
 
-monster.race.raw <- file.path(getwd(),"raw","Monsters-race-raw.csv")
-monster.race.tag <- file.path(getwd(),"raw","Monsters-race-tags.csv")
-monster.class.raw <- file.path(getwd(),"raw","Monsters-class-raw.csv")
-monster.class.tag <- file.path(getwd(),"raw","Monsters-class-tags.csv")
+monster.race.raw <- file.path(getwd(),"raw","monsters","Monsters-race-raw.csv")
+monster.race.tag <- file.path(getwd(),"raw","monsters","Monsters-race-tags.csv")
+monster.class.raw <- file.path(getwd(),"raw","monsters","Monsters-class-raw.csv")
+monster.class.tag <- file.path(getwd(),"raw","monsters","Monsters-class-tags.csv")
 monster.css.file <- file.path(getwd(),"Rmd","SFRPG-monsters.css")
-monster.race.htm.file <- file.path(getwd(),"html","Monsters.race.html")
-monster.class.htm.file <- file.path(getwd(),"html","Monsters.class.html")
-monster.htm.file <- file.path(getwd(),"html","Monsters.html")
+monster.race.htm.file <- file.path(getwd(),"html","monsters","Monsters.race.html")
+monster.class.htm.file <- file.path(getwd(),"html","monsters","Monsters.class.html")
+monster.htm.file <- file.path(getwd(),"html","monsters","Monsters.html")
 
  
 monster.race.df <- read.csv(monster.race.raw, sep=",")
