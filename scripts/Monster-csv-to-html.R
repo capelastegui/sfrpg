@@ -1,15 +1,13 @@
-basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
+source(file.path(getwd(),"scripts","csv-to-html.R"))
 
-source(file.path(basedir,"scripts","csv-to-html.R"))
-
-monster.race.raw <- file.path(basedir,"raw","Monsters-race-raw.csv")
-monster.race.tag <- file.path(basedir,"raw","Monsters-race-tags.csv")
-monster.class.raw <- file.path(basedir,"raw","Monsters-class-raw.csv")
-monster.class.tag <- file.path(basedir,"raw","Monsters-class-tags.csv")
-monster.css.file <- file.path(basedir,"raw","SFRPG-monsters.css")
-monster.race.htm.file <- file.path(basedir,"html","Monsters.race.html")
-monster.class.htm.file <- file.path(basedir,"html","Monsters.class.html")
-monster.htm.file <- file.path(basedir,"html","Monsters.html")
+monster.race.raw <- file.path(getwd(),"raw","Monsters-race-raw.csv")
+monster.race.tag <- file.path(getwd(),"raw","Monsters-race-tags.csv")
+monster.class.raw <- file.path(getwd(),"raw","Monsters-class-raw.csv")
+monster.class.tag <- file.path(getwd(),"raw","Monsters-class-tags.csv")
+monster.css.file <- file.path(getwd(),"raw","SFRPG-monsters.css")
+monster.race.htm.file <- file.path(getwd(),"html","Monsters.race.html")
+monster.class.htm.file <- file.path(getwd(),"html","Monsters.class.html")
+monster.htm.file <- file.path(getwd(),"html","Monsters.html")
 
  
 monster.race.df <- read.csv(monster.race.raw, sep=",")

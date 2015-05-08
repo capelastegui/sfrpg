@@ -38,8 +38,8 @@ plotGrid <- function(grid.df)
 }
 
 #todo: adapt this
-p+geom_segment(data=example.cover1.df,aes(x=x-0.5, xend=x+0.5, y =-y+0.5, yend=-y+0.5),size=1.5,color="grey30")
-p+geom_segment(data=example.cover1.df,aes(x=x-0.5, xend=x+0.5, y =-y+0.5, yend=-y+0.5),size=1.5,color="brown60")
+#p+geom_segment(data=example.cover1.df,aes(x=x-0.5, xend=x+0.5, y =-y+0.5, yend=-y+0.5),size=1.5,color="grey30")
+#p+geom_segment(data=example.cover1.df,aes(x=x-0.5, xend=x+0.5, y =-y+0.5, yend=-y+0.5),size=1.5,color="brown60")
 
 
 

@@ -4,7 +4,7 @@ output:
   html_document:
     highlight: null
     mathjax: null
-    css: C:\Users\acer\Documents\Perico\OCIO\SFRPG-web\raw\SFRPG.css
+    css: SFRPG.css
 
 ---
 
@@ -14,9 +14,10 @@ output:
 require(plyr)
 require(reshape2)
 require(dplyr)
+library(rutil)
 
-source('~/Perico/Trabajo/COM/Codigo/R/utils/plyr.nested.R')
-source('~/Perico/OCIO/SFRPG-web/scripts/Feat-csv-to-html.R')
+
+source(file.path(getwd(),"scripts","Feat-csv-to-html.R"))
 
 
 #cat(attr(getFeatSection(getFeatList()$feats),"full"))

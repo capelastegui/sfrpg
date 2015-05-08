@@ -1,6 +1,3 @@
-
-
-
 #auxiliary functions
 
 refactor<-function(data){colwise(function(col) {if (is.factor(col)) factor(col)  else col }) (data)}
@@ -42,19 +39,17 @@ getFeatSection  <- function(featraw, pre, post)
 
 getFeatList <- function ()
 {
-  basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
+  source(file.path(getwd(),"scripts","csv-to-html.R"))
   
-  source(file.path(basedir,"scripts","csv-to-html.R"))
-  
-  feat.raw <- file.path(basedir,"raw","charactercreation","Feats-raw.csv")
-  feat.tag <- file.path(basedir,"raw","charactercreation","Feats-tags.csv")
-  feat.lesser.raw <- file.path(basedir,"raw","charactercreation","Feats-Lesser-raw.csv")
-  feat.lesser.tag <- file.path(basedir,"raw","charactercreation","Feats-Lesser-tags.csv")
-  css.file <- file.path(basedir,"raw","SFRPG.css")
-  feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
-  feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
-  feat.lesser.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser.html")
-  feat.lesser.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser-table.html")
+  feat.raw <- file.path(getwd(),"raw","charactercreation","Feats-raw.csv")
+  feat.tag <- file.path(getwd(),"raw","charactercreation","Feats-tags.csv")
+  feat.lesser.raw <- file.path(getwd(),"raw","charactercreation","Feats-Lesser-raw.csv")
+  feat.lesser.tag <- file.path(getwd(),"raw","charactercreation","Feats-Lesser-tags.csv")
+  css.file <- file.path(getwd(),"raw","SFRPG.css")
+  feat.htm.file <- file.path(getwd(),"html","CharacterCreation","Feats.html")
+  feat.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Feats-table.html")
+  feat.lesser.htm.file <- file.path(getwd(),"html","CharacterCreation","Feats-lesser.html")
+  feat.lesser.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Feats-lesser-table.html")
   
   feat.raw.df <- read.csv(feat.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
   feat.raw.df <- gsubColwise(feat.raw.df,"\\n","<br>")

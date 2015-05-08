@@ -1,19 +1,17 @@
-basedir <- "C:/Users/acer/Documents/Perico/OCIO/SFRPG-web"
+source (file.path(getwd(),"scripts","csv-to-html.R"))
 
-source (file.path(basedir,"scripts","csv-to-html.R"))
-
-css.file <- file.path(basedir,"raw","SFRPG.css")
+css.file <- file.path(getwd(),"raw","SFRPG.css")
 css <- readChar(css.file, file.info(css.file)$size)
-weapons.table.htm.file <- file.path(basedir,"html","CharacterCreation","Weapons-table.html")
-armor.table.htm.file <- file.path(basedir,"html","CharacterCreation","Armor-table.html")
-armorbyclass.table.htm.file <- file.path(basedir,"html","CharacterCreation","Armor-by-class-table.html")
-implement.table.htm.file <- file.path(basedir,"html","CharacterCreation","Implement-table.html")
+weapons.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Weapons-table.html")
+armor.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-table.html")
+armorbyclass.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-by-class-table.html")
+implement.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Implement-table.html")
 
-weapons.table <- read.csv(file.path(basedir,"raw","Weapons-raw.csv"), sep=";")%>% tbl_df()
-armor.table <- read.csv(file.path(basedir,"raw","Armor-raw.csv"), sep=";")%>% tbl_df()
-implement.table <- read.csv(file.path(basedir,"raw","Implement-raw.csv"), sep=";")%>% tbl_df()
+weapons.table <- read.csv(file.path(getwd(),"raw","Weapons-raw.csv"), sep=";")%>% tbl_df()
+armor.table <- read.csv(file.path(getwd(),"raw","Armor-raw.csv"), sep=";")%>% tbl_df()
+implement.table <- read.csv(file.path(getwd(),"raw","Implement-raw.csv"), sep=";")%>% tbl_df()
 names(armor.table) <- gsub("\\."," ",names(armor.table))
-armorbyclass.table <- read.csv(file.path(basedir,"raw","Armor-by-class.csv"), sep=";")%>% tbl_df() %>%
+armorbyclass.table <- read.csv(file.path(getwd(),"raw","Armor-by-class.csv"), sep=";")%>% tbl_df() %>%
   arrange(Class)
 
 #Build weapons tables
