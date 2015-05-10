@@ -8,6 +8,16 @@ output:
 
   
 ---
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+basedir <- dirname(getwd())
+cat(basedir)
+source(file.path(basedir,"scripts","1-01-00-Weapon-csv-to-html.R"))
+equipTables <- getEquipmentTables(basedir)
+
+
+```
+
 This chapter provides the rules for creating and levelling Player Characters. The overall character creation process is first described, and then each creation and levelling step is discussed in detail: stat generation, race and class selection, mundane equipment, feat selection, levelling up, and using magic items.
 
 
@@ -217,8 +227,35 @@ The hand requirements to use a weapon are as follows:
 
 The tables below provide stats for all weapons in the game, classified by the type of training they require, whether they are melee or ranged weapons, and the number of hands they require.
 
-TODO: When translating to HTML, use HTML tables instead of images
 
+##### Basic Weapons
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
+cat(equipTables$weapons$Basic )
+
+
+```
+##### Improvised Weapons
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
+cat(equipTables$weapons$Improvised )
+
+
+```
+##### Martial Weapons
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
+cat(equipTables$weapons$Martial )
+
+
+```
+##### Inner Weapons
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
+cat(equipTables$weapons$Inner )
+
+
+```
 
 
 Some character classes use unique weapons not available to other classes. In these cases, stats for these weapons should be provided within the class rules.
@@ -238,15 +275,17 @@ Some character classes from older sourcebooks have bonuses associated with obsol
 - **Scimitar**: replace with Short Sword
 - **Club**: replace with Mace</div>
 
-####Armor
+###Armor
 
-Each weapon in the game is described by the following elements:
+Each armor in the game is described by the following elements:
 
 - **Name**
 - **AC bonus**: Bonus granted to a character’s AC for wearing the armor with training.
 - **Type**: Whether the armor is Light Armor or Heavy Armor, or a Shield. 
 - **Armor Penalty**: Penalty granted to Initiative and many Skills for wearing the armor.
 - **Movement Penalty**: Penalty granted to a character’s Speed (for all available movement types) for wearing the armor.
+
+Each character can wear one suit of Light Armor or Heavy Armor. In addition, each character can use one Shield. Characters wearing nothing but plainclothes, or wearing no clothes, are considered as wearing Cloth Armor. Using a shield takes up one hand, and characters cannot wield weapons or implements nor carry objects with their shield hand.
 
 A character’s class determines which armors the character is trained to use. A character using an armor without training does not benefit from any of the armor’s properties, including AC bonus and any magic abilities. However, any Armor Penalty or Movement Penalty imposed by the armor still applies. All characters are considered to be trained in the use of Cloth Armor.
 
@@ -263,6 +302,8 @@ Note that these are the most common types of AC bonus, but other bonuses granted
 
 <div class="compatibility">**Compatibility Note**: Unlike other defenses, a character’s Abilities provide no bonus to that character’s AC. In older rulebooks this was not the case, and it was common to have character classes whose Class Features allowed using an Ability as a bonus to AC while wearing Light Armor. Ignore these bonuses, and any other mention of an Ability bonus to AC. Fixed bonuses to AC that do not depend on a character’s Abilities still apply as normal.</div>
 
+####Armor Types
+
 The different types of armor available in the game are described as follows:
 
 - Light Armor
@@ -278,11 +319,20 @@ The different types of armor available in the game are described as follows:
 - Shield
     * **Light Shield**: Shield of reduced size and weight.
     * **Heavy Shield**: Large shield that covers most of a character’s body.
+    
+####Armor Table
 
 The table below provides stats for all types of armor in the game:
 
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 
-####Implements
+cat(equipTables$armor )
+
+
+```
+
+
+###Implements
 
 Each implement in the game is described by the following elements:
 
@@ -293,7 +343,9 @@ Each implement in the game is described by the following elements:
 
 Note that, unlike weapons, implements do not have an associated damage die. Damage in implement attacks is not affected by the choice of implement. The only mechanical differences between implements are their hand requirements, the bonuses provided by their associated Implement Focus Feats, and the range for Implement Ranged Basic Attacks (but not for other ranged attacks). The rules for Implement Ranged Basic Attacks are in the Stat Generation section of this chapter.
 
-A character’s class determines which implements the character is trained to use. A character using an implement without training does not benefit from any of the implement’s properties, including damage, keywords, and any magic abilities. Instead, the weapon is treated as an Light Improvised Weapon if it requires one hand to wield, or a Heavy Improvised Weapon if it requires two hands. Improvised weapons can be used without training.
+A character’s class determines which implements the character is trained to use. A character wielding no implement, or wielding an implement without training uses the "No Implement" stats, which include a -2 penalty to hit due to the Very Unwieldy property. A character using an implement without training does not benefit from any of the implement’s properties, including damage, keywords, and any magic abilities. 
+
+####Implement Types
 
 The following implement types are supported in the game:
 
@@ -308,10 +360,30 @@ The following implement types are supported in the game:
 - **Weapon Implement** - Weapon that can be used to channel supernatural powers. Some character classes allow specific types of weapons to be used as Weapon Implements. Weapon Implements require the same number of hands to wield as their associated weapons.
 - **No Implement** - A character using just hand gestures to channel power.
 
+####Implement Keyword
+
 The following implement keywords are supported in the game:
+
 - **Very Unwieldy**: Attacks made with this implement gain a -2 penalty to hit.
 
+####Implement Hands
+
+The hand requirements to use a weapon are as follows:
+
+- **No Hand implements** do not require any free hands to be wielded.
+- **One-handed implements** can be wielded in the character’s **main hand** or **off-hand**.
+- **Two-handed implements** require both hands to be wielded. A character cannot use a hand to wield any other item while wielding such an implement.
+
+####Implement Table
+
 The table below provide stats for all implements in the game:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
+cat(equipTables$implements )
+
+
+```
 
 
 ##Feats

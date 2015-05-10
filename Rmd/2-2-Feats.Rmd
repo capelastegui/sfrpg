@@ -11,10 +11,7 @@ output:
 
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-require(plyr)
-require(reshape2)
-require(dplyr)
-library(rutil)
+
 
 
 source(file.path(getwd(),"scripts","Feat-csv-to-html.R"))
