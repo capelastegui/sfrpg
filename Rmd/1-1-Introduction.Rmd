@@ -88,7 +88,7 @@ As the level of characters increases, so do their Hit Points, the amount of dama
 
 The multiplier applied for an Ability Damage Modifier varies with the character’s level, from 1 at level 1 to a maximum of 6 at level 30. The progression by level is:
 
-<div class="General-table">
+<div class="very-narrow">
 Level  | Multiplier value
 ------------- | -------------
 1   | x1

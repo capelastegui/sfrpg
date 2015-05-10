@@ -62,6 +62,8 @@ tr:nth-child(even) {background-color: #ffefbf;}
 
 .wide , .Feat-table table, .Power-table {width: 20cm;}
 
+.very-narrow {width: 8cm;}
+
 .narrow, .Class-table {width: 12cm;}
 
 .medium-width, .General-table {width: 16cm;}
