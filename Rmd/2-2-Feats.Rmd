@@ -12,13 +12,10 @@ output:
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 
+basedir <- dirname(getwd())
+source(file.path(basedir,"scripts","1-02-Feat-csv-to-html.R"))
 
-
-source(file.path(getwd(),"scripts","Feat-csv-to-html.R"))
-
-
-#cat(attr(getFeatSection(getFeatList()$feats),"full"))
-featlist <- getFeatList()
+featlist <- getFeatList(basedir)
 pre  <- featlist$tag$pre
 post  <- featlist$tag$post
 

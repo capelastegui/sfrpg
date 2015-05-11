@@ -11,7 +11,6 @@ output:
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- dirname(getwd())
-cat(basedir)
 source(file.path(basedir,"scripts","1-01-00-Weapon-csv-to-html.R"))
 equipTables <- getEquipmentTables(basedir)
 
