@@ -1,17 +1,21 @@
-source(file.path(getwd(),"scripts","0-00-csv-to-html.R"))
 
-power.raw <- file.path(getwd(),"raw","charactercreation","Powers-raw.csv")
-power.tag <- file.path(getwd(),"raw","charactercreation","Powers-tags.csv")
-css.file <- file.path(getwd(),"Rmd","SFRPG.css")
+getClassList <- function (basedir=getwd())
+{
+  require(rutils)
+  source(file.path(basedir,"scripts","0-00-csv-to-html.R"))
 
-class.stat.raw <- file.path(getwd(),"raw","charactercreation","Class-stats.csv")
-class.stat.htm.file  <- file.path(getwd(),"html","CharacterCreation","Class-stats.html")
+power.raw <- file.path(basedir,"raw","charactercreation","Powers-raw.csv")
+power.tag <- file.path(basedir,"raw","charactercreation","Powers-tags.csv")
+css.file <- file.path(basedir,"Rmd","SFRPG.css")
 
-class.features.raw <- file.path(getwd(),"raw","charactercreation","Class-features.csv")
-class.features.tag <- file.path(getwd(),"raw","charactercreation","Class-features-tags.csv")
+class.stat.raw <- file.path(basedir,"raw","charactercreation","Class-stats.csv")
+class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
 
-power.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers.html")
-power.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Powers-table.html")
+class.features.raw <- file.path(basedir,"raw","charactercreation","Class-features.csv")
+class.features.tag <- file.path(basedir,"raw","charactercreation","Class-features-tags.csv")
+
+power.htm.file <- file.path(basedir,"html","CharacterCreation","Powers.html")
+power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-table.html")
 
 class.stat.df  <- read.csv(class.stat.raw, sep=";", header=TRUE)
 class.feature.df  <- read.csv(class.features.raw, sep=";", header=TRUE)
@@ -40,9 +44,9 @@ power.raw.df <- read.csv(power.raw, sep=";") %>%
   mutate(UsageLimit=factor(UsageLimit, 
                            levels=c(usageOrder,setdiff(UsageLimit,usageOrder)))) %>%  
   arrange(Class, isFeature!="Feature", Type, UsageLimit, Level, Name) %>% 
-  mutate(usageColors=revalue(UsageLimit,replace=c(Daily="Gray", Encounter="Red","At-Will"="Green")))
+  mutate(usageColors=revalue(UsageLimit,replace=c(Daily="gray", Encounter="red","At-Will"="green")))
 
-levels(power.raw.df$usageColors)[levels(power.raw.df$usageColors)==""] <- "Green"
+levels(power.raw.df$usageColors)[levels(power.raw.df$usageColors)==""] <- "green"
 
 power.raw.df  <- power.raw.df %>% 
   mutate(Name=paste("<span class=\"",usageColors,"\">",Name, sep="")) %>%
@@ -93,8 +97,21 @@ class.list  <- llply.parallel.multilist(class.power.list,
 
 
 
+class.list
+}
 
-css <- readChar(css.file, file.info(css.file)$size)
+writeClassList  <- function(class.list)
+{
+  
+  css.file <- file.path(basedir,"Rmd","SFRPG.css")
+
+
+class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
+
+
+
+power.htm.file <- file.path(basedir,"html","CharacterCreation","Powers.html")
+power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-table.html")
 
 #Build power tables
 #add stuff to nested list
@@ -143,10 +160,8 @@ power.full <- paste("<html>\r\n<head>\r\n<title>power-test</title>\r\n<style typ
                     collapse="")
 
 
-# power.full  <- paste("<html>\r\n<head>\r\n<title>power-test</title>\r\n<style type=\"text/css\">",
-#                      css,
-#                      "</style></head>\r\n<body>",
 
 
 writeChar(power.full,power.htm.file)
-
+classList
+ }

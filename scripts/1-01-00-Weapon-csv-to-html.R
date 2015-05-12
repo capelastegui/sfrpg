@@ -1,18 +1,20 @@
-source (file.path(getwd(),"scripts","0-00-csv-to-html.R"))
 
-css.file <- file.path(getwd(),"Rmd","SFRPG.css")
+getEquipmentTables <- function (basedir=getwd())
+{
+
+source (file.path(basedir,"scripts","0-00-csv-to-html.R"))
+css.file <- file.path(basedir,"Rmd","SFRPG.css")
+weapons.table.htm.file <- file.path(basedir,"html","CharacterCreation","Weapons-table.html")
+armor.table.htm.file <- file.path(basedir,"html","CharacterCreation","Armor-table.html")
+armorbyclass.table.htm.file <- file.path(basedir,"html","CharacterCreation","Armor-by-class-legacy.html")
+implement.table.htm.file <- file.path(basedir,"html","CharacterCreation","Implement-table.html")
+
 css <- readChar(css.file, file.info(css.file)$size)
-weapons.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Weapons-table.html")
-armor.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-table.html")
-armorbyclass.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Armor-by-class-legacy.html")
-implement.table.htm.file <- file.path(getwd(),"html","CharacterCreation","Implement-table.html")
-
-weapons.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Weapons-raw.csv"), sep=";")%>% tbl_df()
-armor.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Armor-raw.csv"), sep=";")%>% tbl_df()
-implement.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Implement-raw.csv"), sep=";")%>% tbl_df()
+weapons.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Weapons-raw.csv"), sep=";") 
+armor.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Armor-raw.csv"), sep=";")
+implement.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Implement-raw.csv"), sep=";")
 names(armor.table) <- gsub("\\."," ",names(armor.table))
-armorbyclass.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Armor-by-class-legacy.csv"), sep=";")%>% tbl_df() %>%
-  arrange(Class)
+armorbyclass.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Armor-by-class-legacy.csv"), sep=";")%>% arrange(Class)
 
 #Build weapons tables
 
@@ -20,7 +22,6 @@ armorbyclass.table <- read.csv(file.path(getwd(),"raw","CharacterCreation","Armo
 
 
 weapons.table.htm<-llply(weapons.table %>%  
-                        group_by(Training) %>% 
                         split(weapons.table$Training)  ,
                       .fun=buildTableApply,
                       df.names=names(weapons.table),
@@ -31,44 +32,53 @@ armorbyclass.table.htm  <- buildTableApply(armorbyclass.table,tableClass="Genera
 
 implement.table.htm  <- buildTableApply(implement.table,tableClass="General-table")
 
-weapons.table.htm<-paste(weapons.table.htm,collapse="<br> ")
+equipList <- list(weapons=weapons.table.htm, 
+                  armor=armor.table.htm, 
+                  legacy.class.armor=armorbyclass.table.htm,
+                  implements=implement.table.htm)
+equipList
+}
+# weapons.table.htm<-paste(weapons.table.htm,collapse="\r\n<br> ")
+# 
+# weapons.table.htm <- paste("<html>\r\n<head>\r\n<title>Weapons</title>\r\n<style type=\"text/css\">",
+#                    css,
+#                    "</style></head>\r\n<body>",
+#                    weapons.table.htm,
+#                    "</body></html>",
+#                    sep="\r\n",
+#                    collapse="")
+# 
+# armor.table.htm <- paste("<html>\r\n<head>\r\n<title>Armor</title>\r\n<style type=\"text/css\">",
+#                            css,
+#                            "</style></head>\r\n<body>",
+#                            armor.table.htm,
+#                            "</body></html>",
+#                            sep="\r\n",
+#                            collapse="")
+# 
+# armorbyclass.table.htm <- paste("<html>\r\n<head>\r\n<title>Armor</title>\r\n<style type=\"text/css\">",
+#                          css,
+#                          "</style></head>\r\n<body>",
+#                          armorbyclass.table.htm,
+#                          "</body></html>",
+#                          sep="\r\n",
+#                          collapse="")
+# 
+# implement.table.htm <- paste("<html>\r\n<head>\r\n<title>Armor</title>\r\n<style type=\"text/css\">",
+#                          css,
+#                          "</style></head>\r\n<body>",
+#                          implement.table.htm,
+#                          "</body></html>",
+#                          sep="\r\n",
+#                          collapse="")
 
-weapons.table.htm <- paste("<html>\r\n<head>\r\n<title>Weapons</title>\r\n<style type=\"text/css\">",
-                   css,
-                   "</style></head>\r\n<body>",
-                   weapons.table.htm,
-                   "</body></html>",
-                   sep="\r\n",
-                   collapse="")
 
-armor.table.htm <- paste("<html>\r\n<head>\r\n<title>Armor</title>\r\n<style type=\"text/css\">",
-                           css,
-                           "</style></head>\r\n<body>",
-                           armor.table.htm,
-                           "</body></html>",
-                           sep="\r\n",
-                           collapse="")
 
-armorbyclass.table.htm <- paste("<html>\r\n<head>\r\n<title>Armor</title>\r\n<style type=\"text/css\">",
-                         css,
-                         "</style></head>\r\n<body>",
-                         armorbyclass.table.htm,
-                         "</body></html>",
-                         sep="\r\n",
-                         collapse="")
 
-implement.table.htm <- paste("<html>\r\n<head>\r\n<title>Armor</title>\r\n<style type=\"text/css\">",
-                         css,
-                         "</style></head>\r\n<body>",
-                         implement.table.htm,
-                         "</body></html>",
-                         sep="\r\n",
-                         collapse="")
-
-write(weapons.table.htm,weapons.table.htm.file)
-write(armor.table.htm,armor.table.htm.file)
-write(armorbyclass.table.htm,armorbyclass.table.htm.file)
-write(implement.table.htm,implement.table.htm.file)
+# write(weapons.table.htm,weapons.table.htm.file)
+# write(armor.table.htm,armor.table.htm.file)
+# write(armorbyclass.table.htm,armorbyclass.table.htm.file)
+# write(implement.table.htm,implement.table.htm.file)
 
 #exploration, delete this.
 #require(ggplot2)

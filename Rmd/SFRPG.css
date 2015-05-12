@@ -120,8 +120,8 @@ tr:nth-child(even) {background-color: #ffefbf;}
 }
   
 .Power  p {  
-  margin-top: 3px;  
-  margin-bottom: 0px;
+  margin-top: 0px;  
+  margin-bottom: 3px;
 }
 
 

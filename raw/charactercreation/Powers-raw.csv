@@ -3,12 +3,10 @@ Power Attack;Universal;Universal;;1;Attack;Encounter; ;Weapon;Personal Reaction,
 Upgrade 23: Increase extra damage to 3W";Deal extra damage and push
 Empower Spell;Universal;Universal;;1;Attack;Encounter; ;Implement;Personal Reaction, Interrupt ;you hit with an Implement attack;;targets an enemy hit by the triggering attack;;;;;Against the target, the triggering attack deals an extra 1d10 and gains Push 1.;;;"Upgrade 13: Increase extra damage to 2d10
 Upgrade 23: Increase extra damage to 3d10";Deal extra damage and push
-Offensive Training;Universal;Universal;;1;Attack;Daily; ; ;;;Personal;;;;;;Until you recharge or retrain this power, your attacks gain +1 Miss Damage.;;;"Upgrade 5: Your attacks gain +1 damage and +1 Miss Damage.
-Upgrade 15: Your attacks gain +1 damage and +2 Miss Damage.
-Upgrade 25: Your attacks gain +2 damage and +2 Miss Damage.";Small damage bonus all day
-Defensive Training;Universal;Universal;;1;Attack;Daily;; ;;;Personal;;;;;;Until you recharge or retrain this power, you gain +3 HP.;;;"Upgrade 5: +4 HP
-Upgrade 15: +6 HP
-Upgrade 25: +9 HP";Small HP bonus all day
+Offensive Training;Universal;Universal;;1;Attack;Daily; ; ;;;Personal;;;;;;Until you recharge or retrain this power, your attacks gain +1 Damage.;;;"Upgrade 15: Your attacks gain +2 damage and +1 Miss Damage.
+Upgrade 25: Your attacks gain +3 damage and +2 Miss Damage.";Small damage bonus all day
+Defensive Training;Universal;Universal;;1;Attack;Daily;; ;;;Personal;;;;;;Until you recharge or retrain this power, you gain +5 HP.;;;"Upgrade 15: gain +10 HP instead.
+Upgrade 25: gain +15 HP instead.";Small HP bonus all day
 Shield Bash;Fighter;Guardian;;1;Attack;;;Weapon, Shield;;;Melee;;Str vs AC;;1W+Str. Push 1, and you may shift that distance to a square adjacent to the target.;;;;;Level 21: Increase Hit damage to 2W+Str.;Push and follow up
 Cleave;Fighter;Guardian;;1;Attack;;;Weapon;;;Melee;;Str vs AC;;1W+Str. Make a secondary attack.;;;;"Melee, targets another enemy, Str vs AC
 Hit: Str.";Level 21: Increase Hit damage to 2W+Str.;Damage an additional enemy
@@ -29,25 +27,25 @@ Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.";All encounter, damage a
 Shield Wall;Fighter;Guardian;;2;Utility;Encounter;;Shield;Minor Action;;Personal;;;;;;Until your next turn, you gain Cover against enemy attacks and cannot be flanked.;;;;Gain Cover, can't be flanked
 Grit;Fighter;Guardian;;2;Utility;Encounter;;;Minor Action;;Personal;;;;;;Roll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.;;;;Save against condition
 Find Opening;Fighter;Guardian;;2;Utility;Encounter;;;Minor Action;;Melee;;;;;;Until end of your next turn, your attacks against the target gain Advantage and Pierce Resist;;;;Gain Advantage
-Arcane Missiles;Wizard;Abjurer;;1;Attack;;;Implement;;;Ranged 20;targets up to 3 enemies within 2 of each other;Int vs Ref; ;1d10, and Push 1;;;;;Level 21: Increase Hit damage to 2d10;Low damage and push to 3 targets
-Frost Bolt;Wizard;Abjurer;;1;Attack;;;Implement;;;Ranged 10;;Int vs For;;1d8+Int Cold, and Slowed (save ends);;;;;Level 21: Increase Hit damage to 2d8+Int;
-Fire Burst;Wizard;Abjurer;;1;Attack;;;Implement;;;Area 10 Burst 1;;Int vs Ref;;1d8+Int Fire;;;;;Level 21: Increase Hit damage to 2d8+Int;
-Burning Hands;Wizard;Abjurer;;1;Attack;Encounter;;Implement;;;Close Blast 5;;Int vs Ref;;3d6+Int Fire;Half Damage;;;;"Upgrade 13: Increase Hit damage to 5d6+Int
+Arcane Missiles;Wizard;Evoker;;1;Attack;;;Implement;;;Ranged 20;targets up to 3 enemies within 2 of each other;Int vs Ref; ;1d10, and Push 1;;;;;Level 21: Increase Hit damage to 2d10;Low damage and push to 3 targets
+Frost Bolt;Wizard;Evoker;;1;Attack;;;Implement;;;Ranged 10;;Int vs For;;1d8+Int Cold, and Slowed (save ends);;;;;Level 21: Increase Hit damage to 2d8+Int;
+Fire Burst;Wizard;Evoker;;1;Attack;;;Implement;;;Area 10 Burst 1;;Int vs Ref;;1d8+Int Fire;;;;;Level 21: Increase Hit damage to 2d8+Int;
+Burning Hands;Wizard;Evoker;;1;Attack;Encounter;;Implement;;;Close Blast 5;;Int vs Ref;;3d6+Int Fire;Half Damage;;;;"Upgrade 13: Increase Hit damage to 5d6+Int
 Upgrade 23: Increase Hit damage to 7d6+Int";
-Ice Beam;Wizard;Abjurer;;1;Attack;Encounter;;Implement;;;Close Line 10;;Int vs For;;1d12 Cold, and Immobilized until your next turn.;Slowed until your next turn.;;;;"Upgrade 13: Increase Hit damage to 2d12
+Ice Beam;Wizard;Evoker;;1;Attack;Encounter;;Implement;;;Close Line 10;;Int vs For;;1d12 Cold, and Immobilized until your next turn.;Slowed until your next turn.;;;;"Upgrade 13: Increase Hit damage to 2d12
 Upgrade 23: Increase Hit damage to 3d12";
-Shock Sphere;Wizard;Abjurer;;1;Attack;Encounter;;Implement;;;Area 10 Burst 2;;Int vs Ref;;2d6 Lightning, and Dazed until end of your next turn.;Cannot use Reactions until end of your next turn.;;;;"Upgrade 13: Increase Hit damage to 4d6
+Shock Sphere;Wizard;Evoker;;1;Attack;Encounter;;Implement;;;Area 10 Burst 2;;Int vs Ref;;2d6 Lightning, and Dazed until end of your next turn.;Cannot use Reactions until end of your next turn.;;;;"Upgrade 13: Increase Hit damage to 4d6
 Upgrade 23: Increase Hit damage to 6d6";
-Fireball;Wizard;Abjurer;;1;Attack;Daily;;Implement;;;Area 20 Burst 3;;Int vs Ref;;4d6+Int Fire;Half Damage;;;;"Upgrade 15: Increase Hit damage to 7d6+Int
+Fireball;Wizard;Evoker;;1;Attack;Daily;;Implement;;;Area 20 Burst 3;;Int vs Ref;;4d6+Int Fire;Half Damage;;;;"Upgrade 15: Increase Hit damage to 7d6+Int
 Upgrade 25: Increase Hit damage to 9d6+Int";
-Ice Storm;Wizard;Abjurer;;1;Attack;Daily;;Implement;;;Area 10 Burst 2;;Int vs For;;2d6 Cold, and knock Prone;Half Damage;Create a Zone of Difficult Terrain in burst until end of your next turn.;Sustain Minor: Int Cold to creatures in the zone. You can move the zone 1 square. Sustain the zone until end of your next turn.;;"Upgrade 15: Increase Hit damage to 4d6
+Ice Storm;Wizard;Evoker;;1;Attack;Daily;;Implement;;;Area 10 Burst 2;;Int vs For;;2d6 Cold, and knock Prone;Half Damage;Create a Zone of Difficult Terrain in burst until end of your next turn.;Sustain Minor: Int Cold to creatures in the zone. You can move the zone 1 square. Sustain the zone until end of your next turn.;;"Upgrade 15: Increase Hit damage to 4d6
 Upgrade 25: Increase Hit damage to 6d6";
-Crushing Fist;Wizard;Abjurer;;1;Attack;Daily;;Implement;;;Ranged 20;;Int vs Ref;;3d6+Int, and Grabbed until end of the encounter.;Half Damage;;Sustain Minor: If an enemy is Grabbed by this power, that enemy takes Int damage. Otherwise, repeat the attack.;;"
+Crushing Fist;Wizard;Evoker;;1;Attack;Daily;;Implement;;;Ranged 20;;Int vs Ref;;3d6+Int, and Grabbed until end of the encounter.;Half Damage;;Sustain Minor: If an enemy is Grabbed by this power, that enemy takes Int damage. Otherwise, repeat the attack.;;"
 Upgrade 15: Increase Hit damage to 6d6+Int,
 Upgrade 25: Increase Hit damage to 9d6+Int";
-Arcane Shield;Wizard;Abjurer;;2;Utility;Encounter;;;Minor Action;;Personal;;;;;;Gain Superior Cover against the next attack that targets you this encounter.;;;;
-Wall of Ice;Wizard;Abjurer;;2;Utility;Daily;;;Minor Action;;Area 10 Wall 8;;;;;;Create a Zone of Very Difficult Terrain and Covering Terrain in the wall until the end of the encounter. You can dismiss the Zone as a Minor Action.;;;;
-Levitate;Wizard;Abjurer;;2;Utility;Daily;;;Minor Action;;Personal;;;;;;Until end of the encounter, gain Fly Speed 2 (Altitude 2).;;;;
+Arcane Shield;Wizard;Evoker;;2;Utility;Encounter;;;Minor Action;;Personal;;;;;;Gain Superior Cover against the next attack that targets you this encounter.;;;;
+Wall of Ice;Wizard;Evoker;;2;Utility;Daily;;;Minor Action;;Area 10 Wall 8;;;;;;Create a Zone of Very Difficult Terrain and Covering Terrain in the wall until the end of the encounter. You can dismiss the Zone as a Minor Action.;;;;
+Levitate;Wizard;Evoker;;2;Utility;Daily;;;Minor Action;;Personal;;;;;;Until end of the encounter, gain Fly Speed 2 (Altitude 2).;;;;
 Piercing Strike;Rogue;Scoundrel;;1;Attack;;;Weapon, Light  Weapon;;;Melee or Ranged;;Dex+2 vs Ref;;1W+Dex;;;;;Level 21: Increase Hit damage to 2W+Dex;
 Setup Strike;Rogue;Scoundrel;;1;Attack;;;Weapon, Light  Weapon;;;Melee or Ranged;;Dex vs AC;;1W+Dex;;Until end of your next turn, your attacks against the target have Advantage or, if you already have Advantage, deal +Cha extra damage.;;;Level 21: Increase Hit damage to 2W+Dex;
 King's Castle;Rogue;Scoundrel;;1;Attack;Encounter;;Weapon, Light  Weapon;;;Melee or Ranged;;Dex+2 vs Wil;Before or after the attack, choose an adjacent creature. You and that creature Slide to switch places.;2W+Dex;;;;;"Upgrade 13: Increase Hit damage to 3W+Dex
@@ -69,25 +67,33 @@ Run to Cover;Rogue;Scoundrel;;2;Utility;Encounter;;;Move Action;;Personal;;;;;;M
 Assign Blame;Rogue;Scoundrel;;2;Utility;Encounter;;;Minor Action;;Melee;targets an enemy you  have hit this turn.;;;;;Until end of your next turn, the target is Marked by your ally closest to it, and grants Advantage to you.;;;;
 Healing Word;Priest;Light;Feature;1;Utility;Encounter;x2;Healing, Safe;Minor Action;;Ranged 5;targets an ally;;;;;The target spends a Surge, and heals +1d6;;;"Level 11: heals +2d6
 Level 21: heals +3d6";Heal surge+1d6
-Healing Light;Priest;Light;;1;Attack;;;Implement;;;Ranged 7;;Wis vs Ref;;1d8 Radiant, and you or an ally within 2 of you heal Wis;;;;;;
-Guiding Light;Priest;Light;;1;Attack;;;Implement;;;Ranged 7;;Wis vs Ref;;1d8+Wis Radiant, and until your next turn, attacks against the target gain Advantage and halve hit penalties from Cover and Concealment.;;;;;;
-Dazzling Burst;Priest;Light;;1;Attack;Encounter;;Implement;;;Area 7 Burst 2;targets enemies ;Wis vs Wil;;1d8 Radiant, and Dazzled until your next turn.;;;;;;
-Restoring Beam;Priest;Light;;1;Attack;Encounter;;Implement;;;Close Line 7;targets enemies;Wis vs Ref;;1d8+Wis Radiant.;;If you hit one or more targets, allies in the line heal Wisdom and make a sav e.;;;;
-Blinding Light;Priest;Light;;1;Attack;Encounter;;Implement;;;Ranged 7;;Wis vs Ref;;2d8+Wis, and Blind until end of next turn.;;;;;;
+Healing Light;Priest;Light;;1;Attack;;;Implement;;;Ranged 7;;Wis vs Ref;;1d8 Radiant, and you or an ally within 2 of you heal Wis;;;;;Level 21: Increase Hit damage to 2d8;
+Guiding Light;Priest;Light;;1;Attack;;;Implement;;;Ranged 7;;Wis vs Ref;;1d8+Wis Radiant, and until your next turn, attacks against the target gain Advantage and halve hit penalties from Cover and Concealment.;;;;;Level 21: Increase Hit damage to 2d8+Wis;
+Dazzling Burst;Priest;Light;;1;Attack;Encounter;;Implement;;;Area 7 Burst 2;targets enemies ;Wis vs Wil;;1d8 Radiant, and Dazzled until your next turn.;;;;;"Upgrade 13: Increase  Hit damage to 2d8
+Upgrade 23: Increase Hit damage to 2d8";
+Restoring Beam;Priest;Light;;1;Attack;Encounter;;Implement;;;Close Line 7;targets enemies;Wis vs Ref;;1d8+Wis Radiant.;;If you hit one or more targets, allies in the line heal Wisdom and make a sav e.;;;"Upgrade 13: Increase  Hit damage to 2d8
+Upgrade 23: Increase Hit damage to 3d8";
+Blinding Light;Priest;Light;;1;Attack;Encounter;;Implement;;;Ranged 7;;Wis vs Ref;;2d8+Wis, and Blind until end of next turn.;;;;;"Upgrade 13: Increase  Hit damage to 3d8+Wis
+Upgrade 23: Increase Hit damage to 4d8+Wis";
 Pacify;Priest;Light;;1;Attack;Daily;;Implement, Reliable;;;Ranged 7;;Wis vs Wil;;The target is Weak (save ends). When the target attacks, the target cannot save against this effect that turn. ;;;Special: This attack misses automatically if the target is over 90 HP.;;"Upgrade 15: Miss automatically if target is over 180 HP
 Upgrade 25: Miss automatically if target is over 270 HP";
-Consecrated Ground;Priest;Light;;1;Attack;Daily;;Implement, Zone;;;Close Burst 2;;;;;;Until end of next turn, create Zone in burst. While in the zone, you and your allies gain Regeneration equal to your Charisma.;Sustain Minor: The zone persists until end of your next turn. Make a Secondary Attack targeting enemies in the zone.;Wis vs For, Hit: 1d8 Radiant.;;
-Heroism;Priest;Light;;1;Attack;Daily;;Implement;;;Melee;targets an ally;;;;;2d12 Shield Points, and +2 hit until end of the encounter.;;;"Upgrade 15: 4d12 Shield Points
-Upgrade 25: 6d12 Shield Points";
+Consecrated Ground;Priest;Light;;1;Attack;Daily;;Implement, Zone;;;Close Burst 2;;;;;;Until end of next turn, create Zone in burst. While in the zone, you and your allies gain Regeneration equal to your Charisma.;Sustain Minor: The zone persists until end of your next turn. Make a Secondary Attack targeting enemies in the zone.;Wis vs For, Hit: 1d8 Radiant.;"Upgrade 15: Increase Secondary Hit damage to 2d8
+Upgrade 25: Increase Secondary Hit damage to 3d8";
+Heroism;Priest;Light;;1;Attack;Daily;;Implement;;;Melee;targets an ally;;;;;2d12+Wis Shield Points, and +2 hit until end of the encounter.;;;"Upgrade 15: 4d12+Wis Shield Points
+Upgrade 25: 6d12+Wis Shield Points";
 Sanctuary;Priest;Light;;2;Utility;Encounter;;Safe;;;Ranged 7;targets you and an ally;;;;;Resist All until end of your next turn.  This effect ends when the target attacks.;;;;
 Saving Grace;Priest;Light;;2;Utility;Encounter;;Safe;;;Ranged 7;targets you or an ally;;;;;Choose one - the target rolls a save, or you lose a Surge and choose a Condition, and the target rolls a save to ignore that Condition until next turn.;;;;
 Bless;Priest;Light;;2;Utility;Daily;;;Minor Action;;Close Burst 5;targets you and allies;;;;;Until end of the encounter, +1 to Hit and +1 to Save.;;;;
-Rage Strike;Barbarian;Rager;Feature;1;Attack;Encounter;;Fatigueless;;;Melee;;Str vs AC;;3W+Str;Half Damage;;Special: Use only while raging.;;;
-Invigorating Strike;Barbarian;Rager;;1;Attack;;; ;;;Melee;;Str vs AC;;W+Str, and you gain Con Shield Points. If you already had Shield Points, deal +Con extra damage.;;;;;;
-Mighty Shove;Barbarian;Rager;;1;Attack;;; ;;;Melee;;Str vs AC;;W+Str. Push 2, and you move 2 to a square closer to the target.;;;;;;
-All-In;Barbarian;Rager;;1;Attack;Encounter;; ;;;Melee;;Str vs AC;;3W+Str, and you gain Lesser Vulnerable All until next turn.;;;;;;
-No Pain;Barbarian;Rager;;1;Attack;Encounter;; ;;;Melee;;Str vs AC;;2W+Str. You may lose a Surge and gain Shield Points equal to your Surge Value.;;;;;;
-Blade Whirlwind;Barbarian;Rager;;1;Attack;Encounter;;Weapon;;;Close Burst 1;;Str vs Ref;;W, and Push Con;;;;;;
+Rage Strike;Barbarian;Rager;Feature;1;Attack;Encounter;;Fatigueless;;;Melee;;Str vs AC;;3W+Str.;Half Damage;;Special: Use only while raging.;;"Rage Level 15: Increase Hit damage to 5W+Str
+Rage Level 25: Increase Hit damage to 7W+Str";
+Invigorating Strike;Barbarian;Rager;;1;Attack;;;Weapon;;;Melee;;Str vs AC;;W+Str, and you gain Con Shield Points. If you already had Shield Points, deal +Con extra damage.;;;;;Level 21: Increase Hit damage to 2W+Str.;
+Mighty Shove;Barbarian;Rager;;1;Attack;;;Weapon;;;Melee;;Str vs AC;;W+Str. Push 2, and you move 2 to a square closer to the target.;;;;;Level 21: Increase Hit damage to 2W+Str.;
+All-In;Barbarian;Rager;;1;Attack;Encounter;;Weapon;;;Melee;;Str vs AC;;3W+Str.;;You gain Lesser Vulnerable All until next turn.;;;"Upgrade 13: Increase  Hit damage to 4W+Str
+Upgrade 23: Increase Hit damage to 6W+Str";
+No Pain;Barbarian;Rager;;1;Attack;Encounter;;Weapon;;;Melee;;Str vs AC;;2W+Str. You may lose a Surge and gain Shield Points equal to your Surge Value.;;;;;"Upgrade 13: Increase  Hit damage to 3W+Str
+Upgrade 23: Increase Hit damage to 4W+Str";
+Blade Whirlwind;Barbarian;Rager;;1;Attack;Encounter;;Weapon;;;Close Burst 1;;Str vs Ref;;W, and Push Con;;;;;"Upgrade 13: Increase  Hit damage to 2W
+Upgrade 23: Increase Hit damage to 3W";
 Crowd Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Until end of the encounter, you cannot be flanked, and when you hit an enemy, you can deal Con damage to an enemy adjacent to it.;;;;
 Blood Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Until end of the encounter, you gain Lesser Resist All while Bloodied, and Bloodied enemies gain Lesser Vulnerable All against your attacks.;;;;
 Stubborn Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Roll a save to ignore a Condition this turn. Until end of the encounter, at the start of each turn you roll a save to ignore a Condition that turn.;;;;
