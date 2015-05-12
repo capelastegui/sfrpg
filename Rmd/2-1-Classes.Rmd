@@ -19,7 +19,6 @@ classList <- getClassList(basedir)
 ```
 
 
-#Classes
 
 ## Universal Powers
 The following powers are available to Player Characters of all classes.
@@ -43,7 +42,7 @@ cat(currentClass$features.htm)
 ```
 <br/>
 
-####Class Powers
+####Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 cat(currentClass$powers.htm)
 ```
@@ -62,7 +61,7 @@ cat(currentClass$features.htm)
 ```
 <br/>
 
-####Class Powers
+####Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 cat(currentClass$powers.htm)
 ```
@@ -81,7 +80,7 @@ cat(currentClass$features.htm)
 ```
 <br/>
 
-####Class Powers
+####Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 cat(currentClass$powers.htm)
 ```
@@ -100,7 +99,7 @@ cat(currentClass$features.htm)
 ```
 <br/>
 
-####Class Powers
+####Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 cat(currentClass$powers.htm)
 ```
@@ -119,7 +118,7 @@ cat(currentClass$features.htm)
 ```
 <br/>
 
-####Class Powers
+####Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 cat(currentClass$powers.htm)
 ```
