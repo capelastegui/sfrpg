@@ -1,5 +1,5 @@
 ---
-title: "Character Building"
+title: "Chapter 2 - Character Building"
 output:
   html_document:
     highlight: null

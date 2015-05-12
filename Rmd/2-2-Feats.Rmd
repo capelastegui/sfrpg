@@ -1,5 +1,5 @@
 ---
-title: "Feats"
+title: "Chapter B3 - Feats"
 output:
   html_document:
     highlight: null

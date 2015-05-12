@@ -1,5 +1,5 @@
 ---
-title: "Classes"
+title: "Chapter B2 - Classes"
 output: 
   html_document:
     highlight: null

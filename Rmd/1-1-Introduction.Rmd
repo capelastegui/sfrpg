@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Chapter 1 - Introduction"
 output: 
   html_document:
     highlight: null
@@ -8,7 +8,6 @@ output:
     css: SFRPG.css
 ---
 
-#Chapter 1 - Introduction
 
 ##Introduction to Role Playing Games
 
