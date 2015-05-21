@@ -1,0 +1,426 @@
+---
+title: "Chapter 3 - Combat"
+output:
+  html_document:
+    highlight: null
+    mathjax: null
+    css: SFRPG.css
+---
+<!---
+## Combat Fundamentals
+## The Combat Map
+### Distances
+### Lines, Bursts, Blasts
+### Line of Sight and Cover
+### Light and Concealment
+### Flanking
+
+## Combat Sequence
+### Escalation
+
+## Resource Management
+### At-Will, Encounter and Daily powers
+### Action Points
+### Damage, Incapacitation and Healing
+
+## Actions
+### Reactions
+
+## Movement
+
+## Attacking
+### Range and Targeting
+### Hit Roll
+### Hit Modifiers
+#### Critical Hits
+### Damage Roll
+#### Miss Damage
+### Combat Conditions
+### Forced Movement
+
+## Combat Maneuvers
+###Standard Maneuvers
+###Improvised Maneuvers
+-->
+
+
+In this chapter we provide the rules for resolving a combat encounter.
+
+##Combat Fundamentals
+
+In Square Fireballs, a combat encounter represents a short, violent conflict between an adventuring party of Player Characters and a group of Monsters controlled by the Game Master. 
+
+<div class="tip">**Tip**:Note that we use **Monsters** as shorthand for "bad guys", and it is perfectly possible to have a Monster team composed of non-monstruous mundane characters like human bandits or wolves. Or they can also be, you know, many-eyed tentacled abominations.</div>
+
+In combat, each character (whether a Player Character or a Monster) takes **turns** to carry out **actions** such as moving, attacking enemies, or healing or assisting allies. Some actions succeed automatically, whereas others require the character to make a successful die roll. For example, movement through normal terrain is resolved automatically, with the player stating the character's movement path and changing the character's position accordingly. On the other hand, attacking requires the character to roll against the enemy's defense to determine if the attack hits, and then rolling again to determine the damage dealt by the attack.
+
+<div class="tip">**Tip**: Generally, to make a dice check in the game a player rolls a 20-sided die (aka. d20), adds the appropriate bonus from their Character Sheet, plus any modifiers that apply, and tries to beat a target number, like a Check Difficulty or an enemy defense stat. Another common type of die roll is the damage roll, which is made after hitting with an attack. In a damage roll, the player rolls several dice of a type determined by the attack, adds a damage bonus and uses the total as the amount of inflicted damage.</div>
+
+The goal of a combat encounter is incapacitate all enemy characters, typically by inflicting enough damage to reduce them below 0 Hit Points. A combat can also end when either the monsters or the Player Characters decide to flee.
+
+
+
+
+
+## The Combat Map
+
+
+
+### Distances
+
+The following figure illustrates how distances work. The number in each square represent the distance between the Wizard and that square.
+
+![Map distances](figures/I_1_1_Distances.png)
+
+This figure shows some specific examples of squares that are 1,2,3,4, and 5 units away from the Wizard
+
+![Map distance examples](figures/I_1_2_Distances2.png)
+
+### Lines
+
+Due to the way that distances are defined in our maps, certain geometrical elements like lines are not as straightforward as one would expect. In the game map, a Line is:
+
+- one of the shortest paths between two points (note that there can be several paths that meet this requirement!)
+- composed of up to two straight segments: one in the horizontal or vertical direction, and another in a diagonal direction. 
+
+For any two points in the map, there will be one or two Lines that meet this definition.
+
+This figure shows the simplest types of lines, composed of a single horizontal (1), vertical (2) or diagonal (3, 4) segment. Note that when two points can be joined by a single-segment Line, there will only be a single Line between these points.
+
+![Line definition](figures/I_2_1_Lines.png)
+
+This figure shows examples of two-segment lines. When two points can be joined by a two-segment line, there will always be two such lines between these points.
+
+![Line examples](figures/I_2_2_Lines2.png)
+
+### Close and Area powers: Burst, Blast, Line
+
+Area Burst
+
+![Area Burst](figures/I_3_1_Burst.png)
+
+Range of Area Burst powers
+
+![Area Burst range](figures/I_3_2_BurstDistance.png)
+
+Close Burst
+
+![Close Burst](figures/I_3_3_CBurst.png)
+
+TODO: Blast
+TODO: Line
+
+
+### Line of Sight and Cover
+
+Basic cover
+
+![Cover basics](figures/C_5_1_Cover1.png)
+
+Basic cover examples with attacking characters
+
+![Cover basic examples](figures/C_5_1b_Cover1b.png)
+
+Cover for large creatures
+
+![Cover for large creatures](figures/C_5_2_Cover2.png)
+
+Examples of cover for large creatures with attacking characters
+
+![Cover for large creatures - examples](figures/C_5_2b_Cover2b.png)
+
+Basic Line of Sight
+
+![Line of Sight](figures/C_6_1_LOS1.png)
+
+Examples of Line of Sight with enemy characters
+
+![Line of Sight - examples](figures/C_6_1b_LOS1b.png)
+
+Examples of Line of Sight with walls and doors
+
+![Line of Sight - advanced](figures/C_6_2_LOS2.png)
+
+Combining Line of Sight, Cover, Superior Cover
+
+![Line of Sight and Cover](figures/C_6_3_LOScover.png)
+
+### Light and Concealment
+
+Light
+
+![Light basics](figures/C_7_1_Light1.png)
+
+more light
+
+![More Light](figures/C_7_2_Light2.png)
+
+Yet more light
+
+![Yet More Light](figures/C_7_3_Light3.png)
+
+
+
+### Flanking
+
+Flanking basics
+
+![Flanking basics](figures/C_1_1_Flank.png)
+
+Flanking for large creatures
+
+![Flanking for large creatures](figures/C_1_2_FlankLarge.png)
+
+## Combat Sequence
+### Escalation
+
+## Resource Management
+### At-Will, Encounter and Daily powers
+### Action Points
+### Damage, Incapacitation and Healing
+
+## Actions
+### Reactions
+
+## Movement
+
+## Attacking
+### Range and Targeting
+### Hit Roll
+#### Hit Modifiers
+
+Condition | Modifier
+------------- | -------------
+Defender grants Advantage  | +2
+Defender has any Cover from Attacker | -2
+Defender has Superior Cover from Attacker | -3
+Defender has any Concealment from Attacker | -2
+Defender has Superior Concealment from Attacker | -3
+Attacker is Prone | -2
+Attacker has used Stand Up maneuver this turn | -2
+Attacker has used Shift maneuver this turn | -2
+Attacker has used Quick Draw maneuver this turn | -2
+Attack with Recharge weapon, unless Recharged | -2
+Ranged attack at Long Range | -2
+Charge attack | -1
+Opportunity Attack | + Reaction Modifier
+
+#### Critical Hits
+### Damage Roll
+#### Miss Damage
+### Combat Conditions
+#### List of Combat Conditions
+
+List of combat conditions
+
+- Blinded
+    - Grants Advantage (+2 to be hit)
+    - Cannot Flank
+    - Treats other characters or objects as having Superior Concealment (-5 to hit them).
+    - No line of sight to other characters or objects
+
+- Dazed
+    - Cannot Flank
+    - Cannot use Opportunity or Immediate Actions
+    - Each turn, can use only:
+        - One minor action, and
+        - Either one standard action or one move action
+        
+- Dazzled
+    - Treats all enemies as having Concealment (-2 to hit them) or, if already in Concealment, as having Superior Concealment (-5 to hit them).
+
+
+- Deafened
+    - Grants Advantage
+    - Cannot use Search Maneuver.
+    - +1 Difficulty Category to Perception Checks.
+
+
+- Dominated
+    - Cannot take actions
+    - When damaged, can make saving throw against domination, condition ends on successful save
+    - Dominator can spend a move action to make the dominated character move its speed. This counts as forced movement.
+    - Dominator can spend a standard action to make the dominated character use an at-will attack. This counts as a forced attack.
+
+<div class="tip">
+Sidebar: Forced attack
+
+Certain powers or effects allow one character to force an enemy to make an attack. Such attacks are considered forced attacks, and use the following rules:
+
+If there are different attack powers that meet the requirement for the forced attack (e.g. basic attacks or at-will attacks), the character forcing the attack is aware of all available options and can choose any of them.
+
+For the chosen attack power, the character forcing the attack can make any relevant decision, including (but not limited to) targets, area of effect, forced movement caused by the attack.
+
+A character forced to make an attack cannot target himself with the forced attack.
+
+Forced attacks ignore the marked condition. A character making a forced attack counts as not marked, for the purposes of that attack.
+
+Forced attacks never trigger opportunity attacks.
+</div>
+
+- Grabbed
+    - When grabbed, character is pulled adjacent to grabber
+    - Condition ends if at any time the character is not adjacent to grabber
+    - Can spend a move action to make an Escape Check (see sidebar). If successful, condition ends.
+    - Cannot move
+    - If forced movement would cause the character and the grabber to no longer be adjacent, character can make an Escape Check (see sidebar) as a free action. If successful, condition ends. If the check fails or is not taken, the forced movement is negated.
+
+<div class="tip">
+Sidebar: Escape Check
+
+Characters can make Escape Checks to end conditions like Grabbed or Swallowed, usually by spending a move action.
+
+Check: choose one of the following:
+
+Acrobatics vs Reflex of condition source
+
+Athletics vs Fortitude of condition source
+</div>
+
+- Helpless
+
+    - Grants Advantage
+    - Can be attacked with Coup de Grace
+
+- Immobilized
+    - Cannot move
+
+- Marked
+    - -2 mark penalty to attack rolls of attacks that violate mark (see sidebar)
+
+<div class="tip">
+Sidebar: Violating marks
+
+An attack violates a mark if it targets one or more enemies and does not include the marker as a target. The following exceptions apply:
+
+If multiple attacks are made simultaneously as part of the same attack power, none of the attacks violate the mark as long as the marker is the target of at least one attack.
+
+If multiple attacks are made in sequence as part of the same attack power (e.g. primary and secondary attacks), once an attack is made that includes the marker as a target, none of the subsequent attacks violate the mark.
+
+If an attack initially includes the marker as a target and is later prevented from including the marker as a target by an effect controlled by an enemy (e.g. a power changing attack targets), this attack does not violate the mark.
+
+If a character is marked while making an attack (e.g. by an Interrupt power that marks), that attack does not violate the mark.
+
+Note: Any power or effect that triggers when a marked character makes an attack that does not include the marking character as a target should be updated to trigger when a marked character makes an attack that violates the mark, and use the rules described above.
+</div>
+
+<div class="tip">
+Sidebar: Defender Aura
+
+The text on defender aura should be replaced with the following:
+
+“Enemies in the aura are marked”
+
+(Note that the new rules for stacking conditions mean that a mark no longer overrides other marks or defender auras, and a character can be simultaneously marked by multiple enemies).
+</div>
+
+- Petrified
+    - Grants Advantage
+    - Cannot take actions
+    - Gains Resist (all) [Note: New rules for resistances will be added in a future article. For the purposes of this condition, read this as “halve all damage taken”].
+
+- Prone
+    - Condition lasts indefinitely until character stands up
+    - Character can use a move action to stand up. This ends the condition, and lets the character move 1 square afterward.
+    - Grants Advantage in melee attacks
+    - Against non-melee attacks, gains Cover (-2 cover penalty to attack rolls) or, if already in Cover, gains Total Cover (-5 cover penalty to attack rolls)
+    - -2 power penalty to attack rolls
+    - Can only move by crawling. Characters can crawl 1 square, or their crawl speed  (if any).
+
+- Exiled 
+    - When exiled, a character disappears from its current position. When the condition ends, the character reappears on this position or, if not possible, in the closest ground square of his choice, unless the exiling effect states otherwise.
+    - Does not occupy a space.
+    - No line of sight to and from other creatures or objects unless the exiling effect states otherwise.
+    - No line of effect to and from other creatures or objects unless the exiling effect states otherwise.
+
+- Restrained
+    - Grants Advantage
+    - Cannot move
+    - Ignores forced movement
+    - -2 power penalty to attack rolls
+
+- Slowed
+    - For each square moved, must spend an additional square of movement
+
+- Stunned
+    - Grants Advantage
+    - Can only take one action per turn
+    - Cannot attack
+    - Cannot move
+    - Cannot use Reactions
+
+- Swallowed
+    - When swallowed, a character disappears from its current position. When the condition ends, the character reappears in a square of his choice as close as possible to the swallower.
+    - Can spend a move action to make an Escape Check (see sidebar). If successful, condition ends.
+    - Does not occupy a space.
+    - Can only take one action per turn.
+    - Only has line of effect and line of sight to and from the swallower, and other characters and objects swallowed by it.
+    - The inside of the swallower, and swallowed characters and objects, are in total darkness unless otherwise specified. Swallowed characters can use any light source to illuminate the inside of the swallower and all characters and objects swallowed by it.
+    - When using a burst or blast power while swallowed, the swallower and all characters and objects swallowed by it are included in the burst or blast.
+
+- Unconscious
+    - When a character falls unconscious, he is knocked prone.
+    - When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.
+    - Grants Advantage
+    - Can be attacked with Coup de Grace.
+    - Cannot take actions
+    - Cannot see.
+
+- Weakened
+    - Damage dealt is halved
+    - Healing received is halved
+
+
+
+
+
+
+### Forced Movement{.newPage}
+
+#### Push
+
+Push a single unit
+
+![Push 1](figures/C_2_1_Push1.png)
+
+Push a single unit, showing Lines
+
+![Push 1](figures/C_2_1b_Push1b.png)
+
+Push multiple units
+
+![Push multiple squares](figures/C_2_2_Push2.png)
+
+Push multiple units, showing Lines for path
+
+![Push multiple squares](figures/C_2_2b_Push2b.png)
+
+Push single unit at range, showing Lines
+
+![Push at range](figures/C_2_4_PushRanged1.png)
+
+Push multiple units at range, showing Lines
+
+![Push at range](figures/C_2_5_PushRanged2.png)
+
+
+#### Pull
+
+Pull at range
+
+![Pull](figures/C_3_1_Pull1.png)
+
+#### Slide
+
+Slide a single unit, at range (1) and in melee (2)
+
+![Slide](figures/C_4_1_Slide1.png)
+
+Slide multiple units, at range (1) and in melee (2)
+
+![Slide](figures/C_4_2_Slide2.png)
+
+
+## Combat Maneuvers
+###Standard Maneuvers
+###Improvised Maneuvers

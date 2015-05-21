@@ -8,9 +8,30 @@ output:
     css: SFRPG.css
 ---
 
+##Welcome to the game
+TODO
 
-##Introduction to Role Playing Games
+###What is a Role Playing Game?
+TODO
 
+###Why Square Fireballs?
+
+Why did we choose to call our game Square Fireballs? What does that even mean? The following figure illustrates the reasoning behind the name:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
+basedir <- dirname(getwd())
+library(png)
+library(grid)
+img1 <- readPNG(file.path(basedir,"figures","Square-Fireball-1.png"))
+img2 <- readPNG(file.path(basedir,"figures","Square-Fireball-2.png"))
+grid.raster(img1,interpolate=FALSE,x=0.3,width=unit(0.25, "npc"))
+grid.raster(img2,interpolate=FALSE,x=0.7,width=unit(0.25, "npc"))
+#grid.raster(img1,width=0.5,height=0.5,  )
+#grid.raster(img2,width=2,height=0.5)
+
+
+```
 
 ##A note on text format
 
@@ -27,6 +48,10 @@ Text in white boxes is used to define formulas.
 <div class="compatibility">Gold text is used to provide compatibility instructions to integrate material from older sourcebooks. It is typically preceded by **“Compatibility Note”**.</div>
 
 <div class="design">Red text is used to provide insight into the designer's ideas regarding a game element. It is typically preceded by **"Designer's Note"**.</div>
+
+##Rolling Dice
+
+TODO
 
 ##Character Stats
 In this section, we describe the main stats that affect the performance of characters (including both Player Characters and Monsters) in the game.
