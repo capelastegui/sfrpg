@@ -1,12 +1,11 @@
 ---
 title: "Chapter 2 - Character Building"
 output:
+  pdf_document: default
   html_document:
+    css: SFRPG.css
     highlight: null
     mathjax: null
-    css: SFRPG.css
-
-  
 ---
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
@@ -75,15 +74,15 @@ The basic steps for creating a character are:
 
 Once the player has decided on a character class and a class build, the abilities for the Player Character can be generated. To do this, the player first selects Primary, Secondary, and Weak Abilities, and then assigns scores to each Ability by picking one of two possible Ability Arrays.
 
-By selecting Primary, Secondary, and Weak Abilities, a player chooses what will be the strong and weak points of the Player Character. These choices are usually conditioned, if not fully determined, by the character’s class and class build:
+By selecting Primary, Secondary, and Weak Abilities, a player chooses what will be the strong and weak points of the Player Character. These choices are usually conditioned, if not fully determined, by the character's class and class build:
 
-- The **Primary Ability** is the character’s strongest and most important Ability, used for most attacks. Most class builds have a fixed Primary Ability.
+- The **Primary Ability** is the character's strongest and most important Ability, used for most attacks. Most class builds have a fixed Primary Ability.
 - The **Secondary Ability** adds useful bonuses to several character Powers and Class Features. Many class builds have a predetermined Secondary Ability, though some provide a choice between two or three options.
 - The **Weak Ability** is an Ability that sees little to no use for the character, and has the lowest score. Class builds should provide suggestions for suitable Weak Abilities, but the choice is otherwise up to the player.
 
 The remaining three Abilities are considered **Tertiary Abilities**.
 
-The next step is to assign scores to each Ability. To this end, there are two **Ability Arrays** that can be chosen: a **Focused Array** that concentrates on maximizing the Primary Ability (and hence the character’s offensive potential), and a **Flexible Array** that provides a more balanced approach (resulting in a better Secondary Ability and higher average Secondary Defenses, Secondary Stats and Skills). The arrays assign the following scores to each Ability:
+The next step is to assign scores to each Ability. To this end, there are two **Ability Arrays** that can be chosen: a **Focused Array** that concentrates on maximizing the Primary Ability (and hence the character's offensive potential), and a **Flexible Array** that provides a more balanced approach (resulting in a better Secondary Ability and higher average Secondary Defenses, Secondary Stats and Skills). The arrays assign the following scores to each Ability:
 
 - Focused Array
     - +5 to Primary Ability
@@ -98,14 +97,14 @@ The next step is to assign scores to each Ability. To this end, there are two **
 
 <div class="tip">**Tip**: When deciding over an Ability Array, the Focused Array is a safe default option, whereas the Flexible Array can shine for characters whose Class Features and Powers strongly reward high Secondary Abilities.</div>
 
-As a final step in the generation of Abilities, the player has to check the Favoured Abilities for the character’s Race. Each Race typically has two or more Favoured Abilities, and characters whose Favoured Abilities match their Primary or Secondary Abilities gain Skill-related bonus:
+As a final step in the generation of Abilities, the player has to check the Favoured Abilities for the character's Race. Each Race typically has two or more Favoured Abilities, and characters whose Favoured Abilities match their Primary or Secondary Abilities gain Skill-related bonus:
 
 - If either the Primary Ability or the Secondary Ability match a Favoured Ability, the character gains Skill Training as a bonus Feat.
 - If both the Primary Ability and the Secondary Ability match Favoured Abilities, the character gains Skill Training and Skill Focus as bonus Feats.
 
 See the Feat section later in this chapter for a description of these bonus Feats. The player can choose any legally available Skill for these Feats, and should do so after choosing class and racial Skills for the character (as described in the Skills section in this chapter).
 
-<div class="tip">**Tip**: It is a good idea to take into account how racial Favoured Abilities match with the Primary and Secondary Abilities of each class build, when picking your Race and Class. However, if you really like a particular Race and Class combination with mismatched Abilities, you should not hesitate to take it - the Skill bonuses are a nice thing to have, but they won’t make or break a character.</div>
+<div class="tip">**Tip**: It is a good idea to take into account how racial Favoured Abilities match with the Primary and Secondary Abilities of each class build, when picking your Race and Class. However, if you really like a particular Race and Class combination with mismatched Abilities, you should not hesitate to take it - the Skill bonuses are a nice thing to have, but they won't make or break a character.</div>
 
 
 <div class="compatibility">**Compatibility Note**: The Favoured Ability rule replaces racial Ability bonuses from older rulebooks. When a race provides a bonus to one or more Abilities, consider instead that these Abilities are Favoured Abilities.</div>
@@ -120,7 +119,7 @@ See the Feat section later in this chapter for a description of these bonus Feat
 
 Depending on their class, Player Characters can choose a number of Skills to become Trained in them. Characters gain a +3 bonus to Skill Checks with Trained Skills, and Skill Checks of Hard Difficulty are only available to characters with training in that Skill.
 
-In order to select a Player Character’s Skills, the player should look look at the Class Skill List for the character’s class, as well as the Racial Skill List for the character’s race. Any Skill in either of these lists can be selected as a Trained Skill for the character. The player then looks at the number of Trained Skills allowed by the character’s class, and selects that many Trained Skills. 
+In order to select a Player Character's Skills, the player should look look at the Class Skill List for the character's class, as well as the Racial Skill List for the character's race. Any Skill in either of these lists can be selected as a Trained Skill for the character. The player then looks at the number of Trained Skills allowed by the character's class, and selects that many Trained Skills. 
 
 <div class="compatibility">**Compatibility Note**: The Racial Skill rule replaces racial Skill bonuses from older rulebooks. When a race provides a numeric bonus to one or more Skills, consider instead that these Skills are Racial Skills. Any other Skill-related benefit, such as gaining Training with a specific Skill, remains unchanged. </div>
 
@@ -128,7 +127,7 @@ Some Races and Classes provide automatic training with predetermined Skills. In 
 
 A character whose Primary or Secondary Abilities match their racial Favored Abilities gains bonus Skill-related Feats. The Skills associated with these Feats are chosen after the selection of Trained Skills.
 
-<div class="tip">**Tip**: When selecting Trained Skills, it is usually a good idea to prioritize Skills that match the character’s Primary or Secondary Abilities. If you end up with training in two or more Skills associated with your Tertiary or Weak Abilities, consider taking Unnatural Ability as a Lesser Feat when you level up, in order to compensate for the lower Ability scores in these Skills.</div>
+<div class="tip">**Tip**: When selecting Trained Skills, it is usually a good idea to prioritize Skills that match the character's Primary or Secondary Abilities. If you end up with training in two or more Skills associated with your Tertiary or Weak Abilities, consider taking Unnatural Ability as a Lesser Feat when you level up, in order to compensate for the lower Ability scores in these Skills.</div>
 
 <div class="tip">**Tip**: As your character levels up, you can expand your Trained Skill selection by taking Skill Training as a Lesser Feat. Alternatively, you can specialize on your best Skills by taking Skill Focus as a Lesser Feat.</div>
 
@@ -137,7 +136,7 @@ For a detailed description of Skills and how to use them in the game, see the Sk
 
 ##Equipment selection
 
-A character’s class determines which weapons, implements and armor the character is proficient with. Upon creation, every character starts the game with the following items:
+A character's class determines which weapons, implements and armor the character is proficient with. Upon creation, every character starts the game with the following items:
 Up to three weapons the character is proficient with.
 An armor the character is proficient with.
 Up to one implement the character is proficient with.
@@ -162,7 +161,7 @@ Each weapon in the game is described by the following elements:
 - **Type**: Whether it is a Melee or Ranged weapon.
 - **Hands**:Whether the weapon requires 1 or 2 hands to be wielded.
 
-A character’s class determines which weapons the character is trained to use. A character using a weapon without training does not benefit from any of the weapon’s properties, including damage, keywords, and any magic abilities. Instead, the weapon is treated as an Light Improvised Weapon if it requires one hand to wield, or a Heavy Improvised Weapon if it requires two hands. Improvised weapons can be used without training.
+A character's class determines which weapons the character is trained to use. A character using a weapon without training does not benefit from any of the weapon's properties, including damage, keywords, and any magic abilities. Instead, the weapon is treated as an Light Improvised Weapon if it requires one hand to wield, or a Heavy Improvised Weapon if it requires two hands. Improvised weapons can be used without training.
 
 <div class="compatibility">**Compatibility Note**: In older rulebooks, weapon training is referred to as weapon proficiency, and weapons can have a Proficiency Bonus to hit, if the character is trained with them. This Proficiency Bonus no longer exists, and any mentions to it should be ignored. </div>
 
@@ -190,7 +189,7 @@ The following weapon families are supported in the game:
 - **Sling**: Ranged weapon consisting of a pouch and a string, used to throw stones or bullets.
 - **Spear**: Melee weapon consisting of a pointed head attached to a long shaft.
 - **Staff**: Melee weapon consisting of a long wooden shaft.
-- **Unarmed**: A character’s own body used as a melee weapon.
+- **Unarmed**: A character's own body used as a melee weapon.
 
 <div class="tip">**Tip**: Weapon Family is of special relevance in relation to the Weapon Focus category of Feats, as these Feats often give bonuses when wielding any weapon of a specific family. Advanced players are encouraged to study the different Feat bonuses when considering their weapon of choice. For beginning players, we suggest instead to choose based on aesthetic preferences - you can always use the Retraining rule to rethink your choice at a later point.</div>
 
@@ -204,7 +203,7 @@ The following weapon keywords are supported in the game:
 - **Reach**: Weapons with reach increase the Melee Reach for attacks made with them by a certain amount. A medium-sized character typically has a Melee Reach of 1, which increases to 2 with a Reach +1 weapon, and to 3 with a Reach +2 weapon.
 - **Recharge**: -2 to hit unless the wielder has spent a move action to recharge this weapon since last drawing it or attacking with it.
 -- Recharge (move action). Move 1 square. You can ignore the Recharge penalty to hit with one of your weapons for your next attack power with that weapon.
-- **Throw**: Melee weapons with Throw can be used to make Ranged and Area attacks as well as Melee and Close attacks. The Throw keyword is followed by two numbers. The first number is the Short Range, the maximum distance at which the weapon can make Ranged and Area attacks without penalty. The second number is the Long Range, the maximum distance at which the weapon can make Ranged and Area attacks with a Long Range penalty (-2 hit). After using a Ranged or Area attack power with a Throw weapon, choose a character targeted by the attack. The weapon is placed on the ground in a square in the character’s space. Magical Weapons with Throw are automatically returned to the wielder’s hand after each attack instead.
+- **Throw**: Melee weapons with Throw can be used to make Ranged and Area attacks as well as Melee and Close attacks. The Throw keyword is followed by two numbers. The first number is the Short Range, the maximum distance at which the weapon can make Ranged and Area attacks without penalty. The second number is the Long Range, the maximum distance at which the weapon can make Ranged and Area attacks with a Long Range penalty (-2 hit). After using a Ranged or Area attack power with a Throw weapon, choose a character targeted by the attack. The weapon is placed on the ground in a square in the character's space. Magical Weapons with Throw are automatically returned to the wielder's hand after each attack instead.
 - **Unwieldy**: Attacks made with this weapon gain a -1 penalty to hit.
 - **Versatile**: When wielded on the main hand with a free off-hand, this weapon deals +1 damage per weapon damage die. This increases to +2 damage per weapon damage die at level 16.
 - **Very Unwieldy**: Attacks made with this weapon gain a -2 penalty to hit.
@@ -215,8 +214,8 @@ The following weapon keywords are supported in the game:
 
 The hand requirements to use a weapon are as follows:
 
-- **One-handed weapons without the Off-Hand keyword** can be wielded in the character’s **main hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the Off-Hand.
-- **One-handed weapons with the Off-Hand keyword** can be wielded in the character’s **main hand or off-hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the other hand. When a character wields an Off-Hand weapon in each hand, these weapons gain the Parry keyword (+1 AC vs melee).
+- **One-handed weapons without the Off-Hand keyword** can be wielded in the character's **main hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the Off-Hand.
+- **One-handed weapons with the Off-Hand keyword** can be wielded in the character's **main hand or off-hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the other hand. When a character wields an Off-Hand weapon in each hand, these weapons gain the Parry keyword (+1 AC vs melee).
 - **One-handed weapons with the Versatile keyword** can be wielded in **one hand** like regular one-handed weapons. However, if the **other hand is free**, the character gains a **damage bonus** when using the weapon of +1 per weapon damage die (which increases to +2 at level 16). Versatile weapons wielded while leaving a hand free count as two-handed weapons for any Power or Class Feature that references two-handed weapons.
 - **Two-handed weapons** require both hands to be wielded. A character cannot use a hand to wield any other item while wielding such a weapon.
 
@@ -279,27 +278,27 @@ Some character classes from older sourcebooks have bonuses associated with obsol
 Each armor in the game is described by the following elements:
 
 - **Name**
-- **AC bonus**: Bonus granted to a character’s AC for wearing the armor with training.
+- **AC bonus**: Bonus granted to a character's AC for wearing the armor with training.
 - **Type**: Whether the armor is Light Armor or Heavy Armor, or a Shield. 
 - **Armor Penalty**: Penalty granted to Initiative and many Skills for wearing the armor.
-- **Movement Penalty**: Penalty granted to a character’s Speed (for all available movement types) for wearing the armor.
+- **Movement Penalty**: Penalty granted to a character's Speed (for all available movement types) for wearing the armor.
 
 Each character can wear one suit of Light Armor or Heavy Armor. In addition, each character can use one Shield. Characters wearing nothing but plainclothes, or wearing no clothes, are considered as wearing Cloth Armor. Using a shield takes up one hand, and characters cannot wield weapons or implements nor carry objects with their shield hand.
 
-A character’s class determines which armors the character is trained to use. A character using an armor without training does not benefit from any of the armor’s properties, including AC bonus and any magic abilities. However, any Armor Penalty or Movement Penalty imposed by the armor still applies. All characters are considered to be trained in the use of Cloth Armor.
+A character's class determines which armors the character is trained to use. A character using an armor without training does not benefit from any of the armor's properties, including AC bonus and any magic abilities. However, any Armor Penalty or Movement Penalty imposed by the armor still applies. All characters are considered to be trained in the use of Cloth Armor.
 
 A character using a Shield and wearing Light Armor or Heavy Armor can add the AC bonuses from shield and armor. However, Armor Penalties and Movement Penalties are also added.
 
 Some character classes gain an additional bonus to AC while wearing Light Armor. This is called Light Armor AC Bonus. Some classes also have class features that grant a bonus to AC, and these can stack with their Light Armor AC Bonus. A table summarizing Light Armor AC Bonus and other stats for all classes currently in the game (including classes from older rulebooks) is provided in this chapter, in the Race and Class Selection section. 
 
-To summarize, a character’s AC is calculated as follows:
+To summarize, a character's AC is calculated as follows:
 ```
 AC= 10 + Armor bonus + Shield bonus + Class Light Armor bonus
 ```
 
 Note that these are the most common types of AC bonus, but other bonuses granted by specific Class Features, Feats, or Powers can still apply.
 
-<div class="compatibility">**Compatibility Note**: Unlike other defenses, a character’s Abilities provide no bonus to that character’s AC. In older rulebooks this was not the case, and it was common to have character classes whose Class Features allowed using an Ability as a bonus to AC while wearing Light Armor. Ignore these bonuses, and any other mention of an Ability bonus to AC. Fixed bonuses to AC that do not depend on a character’s Abilities still apply as normal.</div>
+<div class="compatibility">**Compatibility Note**: Unlike other defenses, a character's Abilities provide no bonus to that character's AC. In older rulebooks this was not the case, and it was common to have character classes whose Class Features allowed using an Ability as a bonus to AC while wearing Light Armor. Ignore these bonuses, and any other mention of an Ability bonus to AC. Fixed bonuses to AC that do not depend on a character's Abilities still apply as normal.</div>
 
 ####Armor Types
 
@@ -317,7 +316,7 @@ The different types of armor available in the game are described as follows:
 
 - Shield
     * **Light Shield**: Shield of reduced size and weight.
-    * **Heavy Shield**: Large shield that covers most of a character’s body.
+    * **Heavy Shield**: Large shield that covers most of a character's body.
     
 ####Armor Table
 
@@ -342,7 +341,7 @@ Each implement in the game is described by the following elements:
 
 Note that, unlike weapons, implements do not have an associated damage die. Damage in implement attacks is not affected by the choice of implement. The only mechanical differences between implements are their hand requirements, the bonuses provided by their associated Implement Focus Feats, and the range for Implement Ranged Basic Attacks (but not for other ranged attacks). The rules for Implement Ranged Basic Attacks are in the Stat Generation section of this chapter.
 
-A character’s class determines which implements the character is trained to use. A character wielding no implement, or wielding an implement without training uses the "No Implement" stats, which include a -2 penalty to hit due to the Very Unwieldy property. A character using an implement without training does not benefit from any of the implement’s properties, including damage, keywords, and any magic abilities. 
+A character's class determines which implements the character is trained to use. A character wielding no implement, or wielding an implement without training uses the "No Implement" stats, which include a -2 penalty to hit due to the Very Unwieldy property. A character using an implement without training does not benefit from any of the implement's properties, including damage, keywords, and any magic abilities. 
 
 ####Implement Types
 
@@ -370,7 +369,7 @@ The following implement keywords are supported in the game:
 The hand requirements to use a weapon are as follows:
 
 - **No Hand implements** do not require any free hands to be wielded.
-- **One-handed implements** can be wielded in the character’s **main hand** or **off-hand**.
+- **One-handed implements** can be wielded in the character's **main hand** or **off-hand**.
 - **Two-handed implements** require both hands to be wielded. A character cannot use a hand to wield any other item while wielding such an implement.
 
 ####Implement Table
@@ -426,7 +425,7 @@ epic might
 epic ability
 -->
 
-A Feat is a character customization option that lets player specialize their characters beyond their Race, Class, and Power selection. Each Feat provides a significant improvement to the character’s combat capabilities. Characters start the game with one Feat, and gain additional ones as they level up, to a maximum of nine. On top of that, characters may gain bonus feats from other sources, such as their Race or Class. Depending on the specific case, a character gaining a bonus Feat may be able of picking any available Feat of a certain level or lower, or of picking any feat within a given Feat Category, or just gain a predetermined Feat.
+A Feat is a character customization option that lets player specialize their characters beyond their Race, Class, and Power selection. Each Feat provides a significant improvement to the character's combat capabilities. Characters start the game with one Feat, and gain additional ones as they level up, to a maximum of nine. On top of that, characters may gain bonus feats from other sources, such as their Race or Class. Depending on the specific case, a character gaining a bonus Feat may be able of picking any available Feat of a certain level or lower, or of picking any feat within a given Feat Category, or just gain a predetermined Feat.
 
 Each Feat is composed of the following elements:
 
@@ -439,7 +438,7 @@ Some Feat Categories are labeled as “Unlimited”. A character can select any 
 - **Description**: The benefits granted by the feat.
 - **Summary**: An abbreviated version of the Feat Description, used in summary tables. The Summary text does not necessarily provide exact or complete rules, and should only be used as a quick guide for character building decisions, not as a rules reference.
 
-In addition to regular Feats, characters can also gain Lesser Feats, which are customization options that usually improve a character’s adventuring capabilities but have little or no impact in their combat performance. Through Lesser Feats, characters can expand their knowledge in Skills, Rituals, or languages. Characters start the game with no Lesser Feats but acquire them as they level up, to a maximum of nine. On top of that, characters may gain bonus Lesser Feats from other sources, such as their Race or Class, or other Feats. Depending on the specific case, a character gaining a bonus Lesser Feat may be able of picking any available Lesser Feat of a certain level or lower, or just gain a predetermined Lesser Feat.
+In addition to regular Feats, characters can also gain Lesser Feats, which are customization options that usually improve a character's adventuring capabilities but have little or no impact in their combat performance. Through Lesser Feats, characters can expand their knowledge in Skills, Rituals, or languages. Characters start the game with no Lesser Feats but acquire them as they level up, to a maximum of nine. On top of that, characters may gain bonus Lesser Feats from other sources, such as their Race or Class, or other Feats. Depending on the specific case, a character gaining a bonus Lesser Feat may be able of picking any available Lesser Feat of a certain level or lower, or just gain a predetermined Lesser Feat.
 
 Each Lesser Feat is composed of the following elements:
 
@@ -487,12 +486,12 @@ Each Feat Slot can be used to gain a Feat with a level equal or lower to that of
 <div class="tip">**Tip**: If you are lost, or want to experiment, choosing legal Feats at random is still expected to yield competent (if unfocused) characters.</div>
 
 
-<div class="compatibility">**Compatibility Note**: Feats from older rulebooks are considered obsolete and should not be used. This is not, strictly speaking, due to compatibility issues (since the Feats should mostly work under the current rules), but as a way to improve the game experience - see the Designer’s Note below for a detailed explanation. That said, Game Masters who wish to incorporate older Feats into their campaigns can do so with minimal translation effort, as long as they are aware that they risk breaking design assumptions about combat length and difficulty, and class balance.</div>
+<div class="compatibility">**Compatibility Note**: Feats from older rulebooks are considered obsolete and should not be used. This is not, strictly speaking, due to compatibility issues (since the Feats should mostly work under the current rules), but as a way to improve the game experience - see the Designer's Note below for a detailed explanation. That said, Game Masters who wish to incorporate older Feats into their campaigns can do so with minimal translation effort, as long as they are aware that they risk breaking design assumptions about combat length and difficulty, and class balance.</div>
 
 
 <div class="design">**Designer Note**: Experienced players may find this Feat system too restrictive compared to those of previous games. However, these restrictions serve an important purpose. Here is the reasoning behind them:
 
-- **Separation between combat options and adventuring options**: Allowing characters to freely choose between combat and non-combat Feats results in excessive performance variability, to the point that it’s virtually impossible to design high level content that will be moderately difficult and enjoyable to both characters that are completely specialized on combat and characters that only select non-combat Feats. Furthermore, it is usually optimal to ignore either combat or non-combat options (depending on the campaign), resulting in roughly half the Feats in the game seeing little to no play. By splitting customization slots between combat options (Feats) and non-combat options (Lesser Feats), we get much more predictable character outcomes, which allow for a better high level game experience. This also allows players to improve both their combat and non-combat capabilities without feeling that they are hurting their character’s potential.
+- **Separation between combat options and adventuring options**: Allowing characters to freely choose between combat and non-combat Feats results in excessive performance variability, to the point that it's virtually impossible to design high level content that will be moderately difficult and enjoyable to both characters that are completely specialized on combat and characters that only select non-combat Feats. Furthermore, it is usually optimal to ignore either combat or non-combat options (depending on the campaign), resulting in roughly half the Feats in the game seeing little to no play. By splitting customization slots between combat options (Feats) and non-combat options (Lesser Feats), we get much more predictable character outcomes, which allow for a better high level game experience. This also allows players to improve both their combat and non-combat capabilities without feeling that they are hurting their character's potential.
 - **Feat categories**: It is a natural thing for players to experiment with spending all of their customization resources in improving a single dimension of their character, such as damage, or defenses, or even mobility. Again, this leads to excessive variability between high level character builds and, as a consequence, high variability in game difficulty, combat length, and overall game experience. By classifying Feats into functional Categories, and restricting players to one Feat per Category, we can, for example, provide dozens of options to increase attack damage while ensuring that a given character will only be able to have two or three of them at once.
 - **No support for previous Feats**: We wanted every Feat in the game to have a purpose, and to be playable for a significant percentage of character builds. However, older rulebooks had thousands of Feats with wildly inconsistent quality and power level. We decided that starting from scratch and having a compact set of Feats that could realistically be tested and polished was the best option.
 - **No class/race requirements**: We wanted the total number of feats to be manageable for players, but also to maintain backwards compatibility with previous Races and Classes. Since older rulebooks have dozens of Races and Classes, and including Feats for only a subset of them would be considered unfair and introduce balance issues, we chose to remove racial feats altogether and replace Class Feats with options based on Class Role and Power Source, which fill a similar niche with much less effort and complexity. That said, we might reconsider this for future supplements.</div>

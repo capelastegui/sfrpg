@@ -106,10 +106,10 @@ cat(currentClass$powers.htm)
 
 
 ##Wizard{.newPage}
-###Build: Wizard Abjurer
+###Build: Wizard Elementalist
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Wizard$Evoker
+currentClass  <- classList$Wizard$Elementalist
 cat(currentClass$stats.htm)
 ```
 ####Class Features
