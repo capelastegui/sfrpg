@@ -1,39 +1,72 @@
 ---
 title: "Chapter 1 - Introduction"
-output: 
+output:
   html_document:
+    css: SFRPG.css
     highlight: null
     mathjax: null
-   # theme: null
-    css: SFRPG.css
+  pdf_document: default
 ---
 
 ##Welcome to the game
-TODO
+
+Welcome to Square Fireballs! In this game, a group of friends can take the role of a party of adventurers exploring a fantasy world, fighting rampaging monsters, and discovering ancient treasures. 
+
+We recommend playing this game in groups of 4 to 6 players. 
 
 ###What is a Role Playing Game?
-TODO
+
+Square Fireballs is a Role Playing Game, that is, a game where players use their imagination to represent characters in a simulated world. Players sit on a table, and use rulebooks, pen, paper and dice to resolve character actions and keep track of game progress.
+
+There are two types of players in these games:
+
+- **Player Characters**: Each Player Character (abreviated as **PC**) has a character with their own unique backgrounds, personalities, and sets of skills. Player Characters get to decide what actions their characters take, but not necessarily the outcomes of these actions - those are determined by the rules of the game and usually involve a random element like dice.
+- **Game Master**: The Game Master, or **GM**, is in control of the game world: its environments and history, and all characters other than the Player Characters (which are known as **Non-Player Characters**, or **NPCs**). The Game Master's responsibility is to present interesting scenarios and challenges for the players to overcome. In each game session there must be one Game Master.
+
+A Role Playing Game is composed of a set of **game rules**, which provide a framework to resolve the character's actions and their interactions with each other and with the game world. Another component that is often present is a description of the **game setting**: the people and places that PCs can interact with. This is used as a reference by GM and PCs alike to better understand what is going on in the game, and how their characters should behave. In addition, many games also include suggestions on how to run a game, explanations of the game philosophy, and other pieces of advice. 
+
+Role Playing games are usually played in **game sessions** of a few hours of duration. Player groups that meet regularly can have a persistent continuity across game sessions, following the adventures of a cast of recurring characters over extended periods of time - this is known as a **game campaign**.
+
+Unlike board games and most computer games, Role Playing Games do not have a fixed set of goals or win conditions. Rather, a GM presents Player Characters with a series of scenarios, often involving but not limited to the resolution of missions and quests. The Player Characters are not obligated to achieve these missions, but are encouraged to do in order to aquire wealth and fame within the game world (or, more rarely, out of sheer nobility and heroism). On the other hand, it is quite possible for characters to die in the game, and a party of PCs can, in fact, lose the game once if all their characters are dead. It should be noted, though, that although the GM is in control of the PCs' enemies, a GM's goal in the game is not to defeat the PCs, but to present them with challenging encounters, to enforce the game rules with fairness, and to make the game as fun as possible for everyone. Some characters may not survive the experience.
 
 ###Why Square Fireballs?
 
-Why did we choose to call our game Square Fireballs? What does that even mean? The following figure illustrates the reasoning behind the name:
-
+Why did we choose to call our game Square Fireballs? What does that even mean? The following figures illustrate the reasoning behind the name:
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-
 basedir <- dirname(getwd())
 library(png)
 library(grid)
 img1 <- readPNG(file.path(basedir,"figures","Square-Fireball-1.png"))
 img2 <- readPNG(file.path(basedir,"figures","Square-Fireball-2.png"))
-grid.raster(img1,interpolate=FALSE,x=0.3,width=unit(0.25, "npc"))
-grid.raster(img2,interpolate=FALSE,x=0.7,width=unit(0.25, "npc"))
+grid.raster(img1,interpolate=FALSE,x=0.25,width=unit(0.4, "npc"))
+grid.raster(img2,interpolate=FALSE,x=0.75,width=unit(0.4, "npc"))
 #grid.raster(img1,width=0.5,height=0.5,  )
 #grid.raster(img2,width=2,height=0.5)
-
-
 ```
 
+In this game, whenever a combat encounter comes up, characters are arranged on a gridded map in order to keep track of their relative positions. This can be done by using miniatures to represent each character, or other means such as cardboard tokens. The grid map is composed of **squares** - each square being the minimum unit of distance in the game. Typically, a single character can fit on a given square. Each character can move a certain number of squares during a game turn, and make melee attacks to enemy characters in adjacent squares. A character's ranged attacks have a maximum range measured in squares. Diagonal movement across squares in the map is handled just the same as horizontal or vertical movement - just count the number of squares crossed - , which introduces some interesting distortions to the map geometry. And this brings us back to the figures above, and the Square Fireballs.
+
+You see, this is a game set in a fantasy world where heroic adventurers such as fighters, rogues and wizards battle hordes of monsters such as orcs and goblins. The figure to the left depicts a wizard (leftmost square) facing four goblins and an orc (to the right). Now, wizard characters are famous for their ability to conjure offensive spells to blast groups of enemies. The right figure shows one such spell, a Lesser Fireball, centered on the unfortunate orc, and producing an explosion that damages everything in adjacent squares - including the orc's four goblin buddies. Observant readers will note that, due to the geometrical liberties we have taken in our choice of map representation, said Ball of Fire is rendered as a perfect square. Someone found this funny enough to use it as the name for a blog and, years later, decent enough to reuse as the title of a game. 
+
+And this is why the cover of the game says Square Fireballs, and why goblins don't like to walk close to each other.
+
+###Why should you play this game?
+
+In the decades since the invention of role playing games, there have been plenty of game systems based on the same basic concept of adventuring in a fantasy world. Many of them are great. Some introduce highly innovative ideas in their rules or settings. Most of them are prettier than the one you hold in your hands. Why, then, should you keep reading this? 
+
+The defining features of Square Fireballs are rich tactical combat, flexible and straightforward rules for non-combat interactions, and easy preparation of game sessions and characters. Of these, the star of the show is the combat. It is a deep system that rewards careful positioning, teamwork, and resource management. It offers a great deal of variety, in options for building and playing characters, in the range of available monsters, and in ways of interacting with the environment. And yet, I have taken great effort in making the rules accessible and consistent, in removing any complexity over the strictly necessary, and in ensuring that no style of play is overshadowed by others. 
+
+The rules for handling challenges outside of combat are a different beast altogether. All interactions share the same simple resolution mechanic, and there are always multiple paths to achieve an objective. Creative thinking, planning and collaboration are rewarded, and there are clear guidelines for handling failures and allowing the game to move forward. 
+
+Finally, the game goes to great lengths to reduce the effort and difficulty of setting up a session. Characters are highly customizable, but players are always offered a default option, and all choices are close enough in effectiveness that even choosing at random should result in a competent and enjoyable adventurer. Monsters are likewise easy to customize, and random generation of monsters and encounters is both supported and encouraged. Characters have levels that determine their overall power, but the progression is smooth enough that adventurers and monsters of a wide range of levels can take part in the same combat in a satisfying way.
+
+It's only fair to mention that Square Fireballs is not a perfect system, nor is it a game for everybody. There is a strong emphasis in combat, and while I believe that the non-combat mechanics are solid enough, players that are not interested in fighting monsters will be missing a huge part of the system. The design prioritizes gameplay over realism, and players that look for accurate simulations of fantastical societies and ecosystems will probably not find what they are looking for in here. And the game lacks an actual setting, and leaves Game Masters to borrow their world descriptions from other sources - though, on the bright side, it has been designed to be quite flexible in that regard, and be able to fit in anything from high fantasy to nonmagical medieval adventure.
+
+All of these disclaimers aside, I honestly believe there is a great time to be had in here. If you are at all excited by the notion of incinerating goblins, pushing ogres off cliffs, triggering trapped chests, grappling with dragons, finding legendary swords, talking to mysterious strangers in taverns, arguing with kings, leaping from the shadows, performing miracles, getting stabbed, bitten, cursed, imprisoned, poisoned, petrified, swallowed whole... If any of these sound like fun, read on.
+
 ##A note on text format
+
+We use different styles of text to differentiate between game rules and definitions, and other types of content. Here is a quick summary:
 
 Normally formatted, black text is used to describe game rules.
 
@@ -58,11 +91,11 @@ In this section, we describe the main stats that affect the performance of chara
 
 ###Level
 
-The **Level** of a character is a general measure of that character’s relative power. Player Characters start at level 1, and gain levels as they acquire experience, up to a maximum of 30. Monsters have a level that is determined by their race, and is typically between 1 and 30, but can exceptionally go over 30.
+The **Level** of a character is a general measure of that character's relative power. Player Characters start at level 1, and gain levels as they acquire experience, up to a maximum of 30. Monsters have a level that is determined by their race, and is typically between 1 and 30, but can exceptionally go over 30.
 
 The most direct benefit of Level is its impact on character attacks. Attacking a lower level character provides a bonus to hit of +1 per every two levels that the attacker has over the defender. Likewise, attacking a higher level character provides a hit penalty penalty of -1 per every two levels that the attacker has below the defender.
 
-In addition, a character’s Hit Points are derived from character level (and class), and attack damage increases with level. For a detailed view of damage progression for Player Characters, see Levelling in the Character Building chapter. For a detailed view of damage progression for monsters, see Monster Stats in the Monster chapter.
+In addition, a character's Hit Points are derived from character level (and class), and attack damage increases with level. For a detailed view of damage progression for Player Characters, see Levelling in the Character Building chapter. For a detailed view of damage progression for monsters, see Monster Stats in the Monster chapter.
 
 Based on the level of Player Characters, the game is organized in three **tiers**: **Heroic** (levels 1 to 10), **Paragon** (levels 11 to 20) and **Epic** (levels 21 and above). Character tier is sometimes referenced by game elements such as feats, but otherwise has no direct impact on the game. For a detailed discussion of tiers, see Levelling in the Character Building chapter.
 
@@ -80,7 +113,7 @@ A summary table with the HP and other stats corresponding to each Player Charact
 
 A character under half of their maximum Hit Points is said to be Bloodied. Many game effects check for the Bloodied condition in characters. For easier reference, a **Bloodied Value** stat is provided for each character, equal to one half of maximum Hit Points. Characters with a current HP total under Bloodied Value are Bloodied.
 
-For Player Characters, another stat derived from Hit Points is the **Surge Value**, which determines the amount of HP that is healed when a character spends a Surge to heal. A character’s Surge Value is equal to one quarter their maximum Hit Points.
+For Player Characters, another stat derived from Hit Points is the **Surge Value**, which determines the amount of HP that is healed when a character spends a Surge to heal. A character's Surge Value is equal to one quarter their maximum Hit Points.
 
 ###Abilities
 
@@ -104,13 +137,13 @@ For Player Characters, some stats that are derived from Abilities. These are the
 - **Charisma**: Will, Surges
 - **Intelligence**: Will, Initiative
 
-The process for generating a Player Character’s Abilities is described in the Stat Generation section, in the Character Building chapter.
+The process for generating a Player Character's Abilities is described in the Stat Generation section, in the Character Building chapter.
 
 ####Ability Damage Modifier  
 
-As the level of characters increases, so do their Hit Points, the amount of damage they deal, and the amount of healing they require. To keep Ability modifiers relevant when applied to damaging and healing effects of a Player Character, we adjust them by a multiplier that depends on the character’s level. The Ability modifier multiplied by this value is called **Ability Damage Modifier**. There is an Ability Damage Modifier for each character Ability, and there are referred to as Strength Damage Modifier, Dexterity Damage Modifier, and so on.
+As the level of characters increases, so do their Hit Points, the amount of damage they deal, and the amount of healing they require. To keep Ability modifiers relevant when applied to damaging and healing effects of a Player Character, we adjust them by a multiplier that depends on the character's level. The Ability modifier multiplied by this value is called **Ability Damage Modifier**. There is an Ability Damage Modifier for each character Ability, and there are referred to as Strength Damage Modifier, Dexterity Damage Modifier, and so on.
 
-The multiplier applied for an Ability Damage Modifier varies with the character’s level, from 1 at level 1 to a maximum of 6 at level 30. The progression by level is:
+The multiplier applied for an Ability Damage Modifier varies with the character's level, from 1 at level 1 to a maximum of 6 at level 30. The progression by level is:
 
 <div class="very-narrow">
 Level  | Multiplier value
@@ -144,7 +177,7 @@ An Ability Damage Modifier is applied instead of a regular Ability score in the 
 
 ###Defenses
 
-A character’s defenses determine how hard the character is to hit with attacks. Characters have one Primary Defense and three Secondary Defenses.
+A character''s defenses determine how hard the character is to hit with attacks. Characters have one Primary Defense and three Secondary Defenses.
 
 <div class="tip">**Tip**: Defense values typically range between 10 and 17 for Player Characters, and between 11 and 15 for monsters. For all characters, the average defense value is 13, which corresponds to a 65% chance of being hit on an attack with the typical hit bonus of +5.</div>
 
@@ -161,7 +194,7 @@ A table stating the AC bonuses for each type of Armor and Shield is provided in 
 
 For Monsters, AC is determined by monster class. A table with the typical AC values for each class role is provided in the Monster Stats section of the Monsters chapter.
 
-The Secondary Defenses are **Fortitude** (For), **Reflex** (Ref) and **Will** (Wil). These defenses are used much less frequently than Armor Class: on average, all three Secondary Defenses put together are targeted roughly as much as AC. For Player Characters, each Secondary defense is determined by the character’s Ability scores, plus a bonus based on character class: 
+The Secondary Defenses are **Fortitude** (For), **Reflex** (Ref) and **Will** (Wil). These defenses are used much less frequently than Armor Class: on average, all three Secondary Defenses put together are targeted roughly as much as AC. For Player Characters, each Secondary defense is determined by the character's Ability scores, plus a bonus based on character class: 
 ```
 For = 10 + Class bonus to For + (highest of Str and Con)
 Ref = 10 + Class bonus to Ref + (highest of Dex and Wis)
@@ -182,18 +215,18 @@ Secondary Stats</div>
 
 ###Secondary Stats
 
-In addition to their direct application as modifiers to Powers and Skill Checks, a Player Character’s Ability scores are used to generate six important stats: the three Secondary Defenses and three **Secondary Stats**. The Secondary Stats are **Reaction Modifier**, **Surge Number**, and **Initiative Modifier**.
+In addition to their direct application as modifiers to Powers and Skill Checks, a Player Character's Ability scores are used to generate six important stats: the three Secondary Defenses and three **Secondary Stats**. The Secondary Stats are **Reaction Modifier**, **Surge Number**, and **Initiative Modifier**.
 
-**Reaction Modifier** is a hit modifier that applies to a character’s Spontaneous Reaction attacks. The most common type of Spontaneous Reaction attack is the Opportunity Attack, which is triggered by moving or making Ranged or Area attacks while adjacent to an enemy. Typical values for a Reaction Modifier range between -5 and +0. For Player Characters, a Reaction Modifier is determined as follows:
+**Reaction Modifier** is a hit modifier that applies to a character's Spontaneous Reaction attacks. The most common type of Spontaneous Reaction attack is the Opportunity Attack, which is triggered by moving or making Ranged or Area attacks while adjacent to an enemy. Typical values for a Reaction Modifier range between -5 and +0. For Player Characters, a Reaction Modifier is determined as follows:
 ```
 Reaction Modifier = (highest of Str and Wis) - 5
 ```
 
-**Surge Number** is the maximum number of Surges that a Player Character can have. Characters can spend surges during an encounter to heal HP, and outside of encounters to have a Short Rest and recover all HP and Encounter powers. Characters regain all of their Surges after a Full Rest. Typical Surge Numbers range between 6 and 14. Each character class has a base value for Surge Number, which is modified by the character’s abilities:
+**Surge Number** is the maximum number of Surges that a Player Character can have. Characters can spend surges during an encounter to heal HP, and outside of encounters to have a Short Rest and recover all HP and Encounter powers. Characters regain all of their Surges after a Full Rest. Typical Surge Numbers range between 6 and 14. Each character class has a base value for Surge Number, which is modified by the character's abilities:
 ```
 Surge Number = Character Surges + (highest of Con and Cha)
 ```
-**Initiative Modifier** is a value that is added to a character’s Initiative Roll at the start of an encounter, to determine the order in which character turns are taken. Typical values for an Initiative Modifier range between -3 and +5. Characters wearing armor may suffer an Armor Penalty, which is applied to the Initiative Modifier as well as to many Skills:
+**Initiative Modifier** is a value that is added to a character's Initiative Roll at the start of an encounter, to determine the order in which character turns are taken. Typical values for an Initiative Modifier range between -3 and +5. Characters wearing armor may suffer an Armor Penalty, which is applied to the Initiative Modifier as well as to many Skills:
 ```
 Initiative Modifier = (highest of Dex and Int) - Armor Penalty
 ```
@@ -207,7 +240,7 @@ For a description of Initiative Rolls, see Combat Sequence in the Combat chapter
 
 ###Movement Speed
 
-During an encounter, characters are assigned a position in a grid map, and they can take actions to move to new positions. The base movement distance that a character can move, measured in map squares, is called **Movement Speed**. This stat depends on the character’s race, and its value typically ranges between 4 and 7. Player Characters wearing Heavy Armor usually apply an Armor Movement Penalty of -1 to their Movement Speed:
+During an encounter, characters are assigned a position in a grid map, and they can take actions to move to new positions. The base movement distance that a character can move, measured in map squares, is called **Movement Speed**. This stat depends on the character's race, and its value typically ranges between 4 and 7. Player Characters wearing Heavy Armor usually apply an Armor Movement Penalty of -1 to their Movement Speed:
 ```
 Movement Speed = Race Speed - Armor Movement Penalty.
 ```
@@ -221,7 +254,7 @@ Movement Speed is used for characters moving on the ground, which in the game wo
 - **Burrowing Speed**, for moving by making tunnels in the ground or through walls.
 - **Teleport Speed**, for creatures capable of teleporting between two squares within sight.
 
-Whenever a game element refers to a character’s Speed, this applies to the Speed for any type of movement the character is using at the moment.
+Whenever a game element refers to a character's Speed, this applies to the Speed for any type of movement the character is using at the moment.
 
 An in-depth discussion of different modes of movement is provided in the Movement section of the Combat chapter.
 
