@@ -1,19 +1,20 @@
 Class;Build;Name;Description
-Fighter;Guardian;Weapon Mastery;You gain +1 Hit with weapon attacks
+Fighter;Guardian;Weapon Mastery; +1 Hit with weapon attacks
 Fighter;Guardian;Guardian's Aura;"You gain the Defender's Aura power.
 Enemies Marked by you trigger Opportunity Attacks from you when Shifting or violating a Mark."
-Fighter;Guardian;Guardian's Shield;Attacks by enemies in your Defender Aura or targeting allies in your Defender Aura gain -Constitution to hit.
-Fighter;Guardian;Heavy Armor Specialist;You subtract your Constitution from your total Armor Penalty to Skills.
-Fighter;Watchman;Weapon Mastery;You gain +1 Hit with weapon attacks
+Fighter;Guardian;Guardian's Shield;"Grant (-Con) hit to attacks violating your mark. 
+When one or more allies in your Defender Aura are targeted by an attack, as a Free Reaction you grant them (Con) Shield Points"
+Fighter;Guardian;Heavy Armor Specialist;Reduce your Skill Armor Penalty by (Con)
+Fighter;Watchman;Weapon Mastery; +1 Hit with weapon attacks
 Fighter;Watchman;Watchman's Challenge;"When you target an enemy with an attack, that enemy is Marked until end of your next turn.
 Enemies Marked by you trigger Opportunity Attacks from you when Shifting or violating a Mark."
 Fighter;Watchman;Watchman's Eye;"Add your Wisdom to your Reaction Modifier. 
 Add your Wisdom to the Crit Range of your Reaction attacks."
-Fighter;Watchman;Watchman's Vigilance;Add your Wisdom to your Perception, Insight and Streetwise Skills.
-Fighter;Sellsword;Weapon Mastery;You gain +1 Hit with weapon attacks
+Fighter;Watchman;Watchman's Vigilance; +(Wis) to your Perception and Authority Skills.
+Fighter;Sellsword;Weapon Mastery; +1 Hit with weapon attacks
 Fighter;Sellsword;Sellsword's Ruthlessness;Add your Intelligence to the damage of your Melee and Close attacks.
 Fighter;Sellsword;Sellsword's Valor;When you attack an enemy,that enemy subtracts double your Intelligence to the damage of their Reaction attacks that turn.
-Fighter;Sellsword;Sellsword's Training;Add your Intelligence to your Athletics, Intimidate and Insight Skills.
+Fighter;Sellsword;Sellsword's Bargaining; +Intelligence to your Authority and Bluff Skills.
 Wizard;Elementalist;Controller Feat;Gain a bonus Feat from the Controller Feat category
 Wizard;Elementalist;Evoker's Barrage;"Add your Dexterity to your Miss Damage.
 Add your Dexterity to the range of your Ranged and Area attacks, and to the size of your Line attacks."
