@@ -84,7 +84,53 @@ Text in white boxes is used to define formulas.
 
 ##Rolling Dice
 
+For any non-trivial action that a character performs in the game, success is not guaranteed. We use dice to determine the outcomes of these actions. There are three main types of dice rolls in the game:
+
+- **Checks**: Used to determine whether an action is a success or a failure.
+- **Damage Rolls**: Used to determine the amount of damage (or, more rarely, of healing) that a character takes.
+- **Action Point Rolls**: Used to determine if a character can use an Action Point.
+
+Square Fireballs, like many role playing games, uses special dice with different number of sides:
+
+- Twenty-sided dice, or d20
+- Four-sided dice, or d4
+- Six-sided dice, or d6
+- Eight-sided dice, or d8
+- Ten-sided dice, or d10
+- Twelve-sided dice, or d12
+
+D20s are always used for Checks. D4s are used for Action Point Rolls. Damage rolls can use d4s, d6s, d8s, d10s or d12s - the specific dice used by a character at any given type depends on that character's choice of weapons and powers.
+
+Sometimes the game requires a player to roll severall dice at once as part of a damage roll. In these cases, the number of dice is written before the type of dice. This way, 2d6 means rolling two six-sided dice, whereas 5d10 means rolling five ten-sided dice, and 9d4 means rolling nine four-sided dice. When a single die is rolled, no number is required: d12 means rolling one twelve-sided die.
+
+The type of dice required for a damage roll in an attack made with a weapon can vary depending on the weapon used. Longswords use d8s, whereas Greatswords use d12s, daggers use d4s, and so forth. In the game, we use 'W' to refer to the damage dice of a weapon attack: W means one die, 2W means two dice, 3W means three dice, and so on. When making an attack with a weapon, replace the W with the appropriate type of dice used by that weapon: A 'W' attack with a Longsword rolls d8, a '2W' attack with a Greatsword rolls 2d12, and a '7W' attack with a dagger rolls 7d4.
+
+
+###Rolling Checks
+
+There are several types of checks in the game that a character can make:
+
+- **Attack Rolls**: Used to determine whether an attack hits or misses. Rolled as part of an Attack Action.
+- **Skill Checks**: Used to determine whether an interaction with other characters or the environment is a success or a failure. Rolled as part of a Skill Action.
+- **Saves**: Used to resist a harmful condition. Some effects allow characters to automatically attempt a Save at the end of their turns. These are known as 'Save Ends' effects. In addition, some powers allow a character to Save against certain effects.
+
+The general method to resolve a check is to roll a d20, add the character's bonus to that check (if any) and any modifiers that apply, and compare the result with a target number. If the result is equal or greater than the target number, the check is a success, otherwise, the check is a failure.
+
+- For Attack Rolls, the attacking character rolls a d20, adds the character's Hit bonus for that attack and any attack modifiers that apply, and compares the result with the defending character's Defense attribute that is appropriate for that attack. There are four different defense attributes: Armor (Ar), Fortitude (For), Reflex (Ref) and Will (Wil). This process is described in more detail in the Combat chapter.
+- For Skill Check, the character making the check rolls a d20, adds the character's Skill bonus for the Skill used in that action, and any modifiers that apply. The result is compared with a number based on the Skill Check Difficulty. This process is described in more detail in the Skills chapter.
+- For a Save, the character making the save rolls a d20, and adds any modifiers that apply. If the result is equal to or greater than 11, the Save succeeds, otherwise it is a failure. This process is described in more detail in the Combat chapter.
+
+###Rolling Damage Rolls
+
 TODO
+
+###Rolling Action Point Rolls
+
+TODO
+
+
+
+
 
 ##Character Stats
 In this section, we describe the main stats that affect the performance of characters (including both Player Characters and Monsters) in the game.

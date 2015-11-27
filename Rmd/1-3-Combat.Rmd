@@ -214,33 +214,34 @@ Opportunity Attack | + Reaction Modifier
 List of combat conditions
 
 - Blinded
-    - Grants Advantage (+2 to be hit)
+    - Grants Advantage _(+2 to be hit)_
     - Cannot Flank
-    - Treats other characters or objects as having Superior Concealment (-5 to hit them).
+    - Treats other characters or objects as having Superior Concealment _(-5 to hit them)_.
     - No line of sight to other characters or objects
+    - +1 Difficulty Category to Perception Skill Checks.
 
 - Dazed
     - Cannot Flank
     - Cannot use Opportunity or Immediate Actions
     - Each turn, can use only:
-        - One minor action, and
-        - Either one standard action or one move action
+        - One Minor Action, and
+        - Either one Standard Action or one Move Action
         
 - Dazzled
-    - Treats all enemies as having Concealment (-2 to hit them) or, if already in Concealment, as having Superior Concealment (-5 to hit them).
+    - Treats all enemies as having Concealment _(-2 to hit them)_ or, if already in Concealment, as having Superior Concealment _(an additional -3 to hit them)_.
 
 
 - Deafened
-    - Grants Advantage
-    - Cannot use Search Maneuver.
-    - +1 Difficulty Category to Perception Checks.
+    - Grants Advantage  _(+2 to be hit)_
+    - When using the Search combat maneuver, roll a Save. On a failed save, the maneuver has no effect
+    - +1 Difficulty Category to Perception Skill Checks
 
 
 - Dominated
     - Cannot take actions
-    - When damaged, can make saving throw against domination, condition ends on successful save
-    - Dominator can spend a move action to make the dominated character move its speed. This counts as forced movement.
-    - Dominator can spend a standard action to make the dominated character use an at-will attack. This counts as a forced attack.
+    - When damaged, can roll a Save to end this condition
+    - The dominating character can spend a move action to make the dominated character move its speed. _(This counts as forced movement)_
+    - The dominating character can spend a standard action to make the dominated character use an at-will attack. _(This counts as a forced attack)_
 
 <div class="tip">
 Sidebar: Forced attack
@@ -259,73 +260,72 @@ Forced attacks never trigger opportunity attacks.
 </div>
 
 - Grabbed
-    - When grabbed, character is pulled adjacent to grabber
-    - Condition ends if at any time the character is not adjacent to grabber
-    - Can spend a move action to make an Escape Check (see sidebar). If successful, condition ends.
     - Cannot move
-    - If forced movement would cause the character and the grabber to no longer be adjacent, character can make an Escape Check (see sidebar) as a free action. If successful, condition ends. If the check fails or is not taken, the forced movement is negated.
-
-<div class="tip">
-Sidebar: Escape Check
-
-Characters can make Escape Checks to end conditions like Grabbed or Swallowed, usually by spending a move action.
-
-Check: choose one of the following:
-
-Acrobatics vs Reflex of condition source
-
-Athletics vs Fortitude of condition source
-</div>
+    - When grabbed, the character is pulled to a square adjacent to the grabbing character
+    - The condition ends if at any time the grabbed character is not adjacent to the grabbing character
+    - Grabbed character can use the Escape combat maneuver to end the condition. _(Move Action, roll save to end grab from one enemy)_
+    - If forced movement would cause the grabbed character and the grabbing character to no longer be adjacent, the grabbed can roll a Save to end this condition. If the condition doesn't end this way, the forced movement is negated
+    - A character may be Grabbed by multiple enemies at a time.
 
 - Helpless
 
-    - Grants Advantage
-    - Can be attacked with Coup de Grace
+    - Grants Advantage _(+2 to be hit)_
+    - Melee Attacks against the character gain +10 Crit Range
+    
+    
+- Hindered
+
+    - -2 to Hit
+    
+<div class="tip">
+Tip: Many types of action can cause a character to be Hindered for a turn. These include combat maneuvers like Shift, Charge, Stand Up, Quick Draw, 
+</div>
 
 - Immobilized
     - Cannot move
 
 - Marked
-    - -2 mark penalty to attack rolls of attacks that violate mark (see sidebar)
+    - -2 Hit on attacks that violate the mark (see sidebar)
+    - A character may be Marked by multiple enemies at a time.
 
 <div class="tip">
 Sidebar: Violating marks
 
-An attack violates a mark if it targets one or more enemies and does not include the marker as a target. The following exceptions apply:
+An attack by a Marked character violates a mark if it targets an enemy not marking the character. The following exceptions apply:
 
-If multiple attacks are made simultaneously as part of the same attack power, none of the attacks violate the mark as long as the marker is the target of at least one attack.
-
-If multiple attacks are made in sequence as part of the same attack power (e.g. primary and secondary attacks), once an attack is made that includes the marker as a target, none of the subsequent attacks violate the mark.
-
-If an attack initially includes the marker as a target and is later prevented from including the marker as a target by an effect controlled by an enemy (e.g. a power changing attack targets), this attack does not violate the mark.
-
-If a character is marked while making an attack (e.g. by an Interrupt power that marks), that attack does not violate the mark.
-
-Note: Any power or effect that triggers when a marked character makes an attack that does not include the marking character as a target should be updated to trigger when a marked character makes an attack that violates the mark, and use the rules described above.
+- If the attack targets multiple characters, and all enemies marking the character are already targeted, any additional targets do not violate the mark.
+- If multiple attacks are made in sequence as part of the same attack power _(e.g. primary and secondary attacks)_, once all enemies marking the character have been targeted at least once, any additional targets do not violate the mark.
+- If an attack originally does not violate the mark, and the attack targets are somehow changed by an enemy action or other effect, this does not cause the attack to violate the mark. 
+- If an attack originally does not violate the mark, and the attacker becomes Marked during the attack _(e.g. by an enemy reaction)_, this does not cause the attack to violate the mark. 
 </div>
 
-<div class="tip">
-Sidebar: Defender Aura
+<div class="compatibility">**Compatibility Note**: Defender Aura
 
-The text on defender aura should be replaced with the following:
+Some characters in compatible books have the Defender Aura power. The effect of this power should be replaced with the following:
 
-“Enemies in the aura are marked”
-
-(Note that the new rules for stacking conditions mean that a mark no longer overrides other marks or defender auras, and a character can be simultaneously marked by multiple enemies).
+“Enemies in the aura are Marked by you.”
 </div>
+
+<div class="compatibility">**Compatibility Note**: Violating Marks
+
+Any reference from compatible books to effects that trigger when a Marked character 'makes an attack that does not include the marking character as a target' should use the rules for violating marks described above.
+</div>
+
+
 
 - Petrified
     - Grants Advantage
     - Cannot take actions
-    - Gains Resist (all) [Note: New rules for resistances will be added in a future article. For the purposes of this condition, read this as “halve all damage taken”].
+    - Gains Resist.
 
 - Prone
-    - Condition lasts indefinitely until character stands up
-    - Character can use a move action to stand up. This ends the condition, and lets the character move 1 square afterward.
-    - Grants Advantage in melee attacks
-    - Against non-melee attacks, gains Cover (-2 cover penalty to attack rolls) or, if already in Cover, gains Total Cover (-5 cover penalty to attack rolls)
-    - -2 power penalty to attack rolls
-    - Can only move by crawling. Characters can crawl 1 square, or their crawl speed  (if any).
+    - Condition lasts indefinitely until the character stands up _(e.g. by using the Stand Up combat maneuver: Move Action, end the prone condition, move 1, and become Hindered this turn)_
+    - Cannot make any movement other than crawling _(e.g. by having a Crawl Speed, or by using the Crawl combat maneuver: Move Action, crawl 1)_
+    - Hindered _(-2 Hit)_
+    - Grants Advantage against melee attacks _(+2 to be hit)_
+    - Against non-melee attacks, gains Cover _(-2 cover penalty to attack rolls)_ or, if already in Cover, gains Total Cover _(an additional -3 cover penalty to attack rolls)_
+
+
 
 - Exiled 
     - When exiled, a character disappears from its current position. When the condition ends, the character reappears on this position or, if not possible, in the closest ground square of his choice, unless the exiling effect states otherwise.
@@ -334,20 +334,20 @@ The text on defender aura should be replaced with the following:
     - No line of effect to and from other creatures or objects unless the exiling effect states otherwise.
 
 - Restrained
-    - Grants Advantage
     - Cannot move
-    - Ignores forced movement
-    - -2 power penalty to attack rolls
+    - Ignores forced movement 
+    - Grants Advantage _(+2 to be hit)_
+    - Hindered _(-2 Hit)_
 
 - Slowed
     - For each square moved, must spend an additional square of movement
 
 - Stunned
-    - Grants Advantage
-    - Can only take one action per turn
     - Cannot attack
     - Cannot move
+    - Can only take one action per turn
     - Cannot use Reactions
+    - Grants Advantage _(+2 to be hit)_
 
 - Swallowed
     - When swallowed, a character disappears from its current position. When the condition ends, the character reappears in a square of his choice as close as possible to the swallower.
@@ -361,14 +361,14 @@ The text on defender aura should be replaced with the following:
 - Unconscious
     - When a character falls unconscious, he is knocked prone.
     - When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.
-    - Grants Advantage
-    - Can be attacked with Coup de Grace.
+    - Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_
     - Cannot take actions
     - Cannot see.
 
 - Weakened
     - Damage dealt is halved
-    - Healing received is halved
+    - Healing granted or received is halved 
+    - Shield Points granted or received are halved
 
 
 

@@ -30,14 +30,14 @@ Find Opening;Fighter;Guardian;;2;Utility;Encounter;;;Minor Action;;Melee;;;;;;Un
 Arcane Missiles;Wizard;Elementalist;;1;Attack;;;Implement;;;Ranged 20;targets up to 3 enemies within 2 of each other;Int vs Ref; ;1d10, and Push 1;;;;;Level 21: Increase Hit damage to 2d10;Low damage and push to 3 targets
 Frost Bolt;Wizard;Elementalist;;1;Attack;;;Implement;;;Ranged 10;;Int vs For;;1d8+Int Cold, and Slowed (save ends);;;;;Level 21: Increase Hit damage to 2d8+Int;
 Lesser Fireball;Wizard;Elementalist;;1;Attack;;;Implement;;;Area 10 Burst 1;;Int vs Ref;;1d8+Int Fire;;;;;Level 21: Increase Hit damage to 2d8+Int;
-Burning Hands;Wizard;Elementalist;;1;Attack;Encounter;;Implement;;;Close Blast 5;;Int vs Ref;;3d6+Int Fire;Half Damage;;;;"Upgrade 13: Increase Hit damage to 5d6+Int
-Upgrade 23: Increase Hit damage to 7d6+Int";
+Burning Hands;Wizard;Elementalist;;1;Attack;Encounter;;Implement;;;Close Blast 5;;Int vs Ref;;2d10+Int Fire;Half Damage;;;;"Upgrade 13: Increase Hit damage to 3d10+Int
+Upgrade 23: Increase Hit damage to 4d10+Int";
 Ice Beam;Wizard;Elementalist;;1;Attack;Encounter;;Implement;;;Close Line 10;;Int vs For;;1d12 Cold, and Immobilized until your next turn.;Slowed until your next turn.;;;;"Upgrade 13: Increase Hit damage to 2d12
 Upgrade 23: Increase Hit damage to 3d12";
 Shock Sphere;Wizard;Elementalist;;1;Attack;Encounter;;Implement;;;Area 10 Burst 2;;Int vs Ref;;2d6 Lightning, and Dazed until end of your next turn.;Cannot use Reactions until end of your next turn.;;;;"Upgrade 13: Increase Hit damage to 4d6
 Upgrade 23: Increase Hit damage to 6d6";
-Fireball;Wizard;Elementalist;;1;Attack;Daily;;Implement;;;Area 20 Burst 3;;Int vs Ref;;4d6+Int Fire;Half Damage;;;;"Upgrade 15: Increase Hit damage to 7d6+Int
-Upgrade 25: Increase Hit damage to 9d6+Int";
+Fireball;Wizard;Elementalist;;1;Attack;Daily;;Implement;;;Area 20 Burst 3;;Int vs Ref;;3d8+Int Fire;Half Damage;;;;"Upgrade 15: Increase Hit damage to 5d8+Int
+Upgrade 25: Increase Hit damage to 7d8+Int";
 Ice Storm;Wizard;Elementalist;;1;Attack;Daily;;Implement;;;Area 10 Burst 2;;Int vs For;;2d6 Cold, and knock Prone;Half Damage;Create a Zone of Difficult Terrain in burst until end of your next turn.;Sustain Minor: Int Cold to creatures in the zone. You can move the zone 1 square. Sustain the zone until end of your next turn.;;"Upgrade 15: Increase Hit damage to 4d6
 Upgrade 25: Increase Hit damage to 6d6";
 Crushing Fist;Wizard;Elementalist;;1;Attack;Daily;;Implement;;;Ranged 20;;Int vs Ref;;3d6, and Grabbed until end of next turn.;;;Sustain Minor: Repeat the attack;;"Upgrade 15: Increase Hit damage to 6d6,
@@ -62,7 +62,7 @@ Open Wounds;Rogue;Scoundrel;;1;Attack;Daily;;Weapon, Light  Weapon, Reliable;;;M
 Upgrade 25: Increase Hit damage to 7W";
 Tumble;Rogue;Scoundrel;;2;Utility;Encounter;;;Move Action;;Personal;;;;;;Shift your Speed.;Special: When you spend an Action Point, recharge this.;;;
 Run to Cover;Rogue;Scoundrel;;2;Utility;Encounter;;;Move Action;;Personal;;;;;;Move your Speed. At the end of turn, if you are in Cover (other than Body Cover) or Concealment from all enemies, you become Shrouded. If you were already Shrouded, you become Hidden instead.;;;;
-Blame Other;Rogue;Scoundrel;;2;Utility;Encounter;;;Minor Action;;Melee;targets an enemy you  have hit this turn.;;;;;Until end of your next turn, the target is Marked by your ally closest to it, and grants Advantage to you.;;;;
+I didn't do it!;Rogue;Scoundrel;;2;Utility;Encounter;;;Minor Action;;Melee;targets an enemy you  have hit this turn.;;;;;Until end of your next turn, the target is Marked by your ally closest to it, and grants Advantage to you.;;;;
 Healing Word;Priest;Light;Feature;1;Utility;Encounter;x2;Healing, Non-Provoking;Minor Action;;Ranged 5;targets an ally;;;;;The target spends a Surge, and heals +1d6;;;"Level 11: heals +2d6
 Level 21: heals +3d6";Heal surge+1d6
 Healing Light;Priest;Light;;1;Attack;;;Implement;;;Ranged 7;;Wis vs Ref;;1d8 Radiant, and you or an ally within 2 of you heal Wis;;;;;Level 21: Increase Hit damage to 2d8;
@@ -71,7 +71,7 @@ Dazzling Burst;Priest;Light;;1;Attack;Encounter;;Implement;;;Area 7 Burst 2;targ
 Upgrade 23: Increase Hit damage to 2d8";
 Restoring Beam;Priest;Light;;1;Attack;Encounter;;Implement;;;Close Line 7;targets enemies;Wis vs Ref;;1d8+Wis Radiant.;;If you hit one or more targets, allies in the line heal Wisdom and make a sav e.;;;"Upgrade 13: Increase  Hit damage to 2d8
 Upgrade 23: Increase Hit damage to 3d8";
-Blinding Light;Priest;Light;;1;Attack;Encounter;;Implement;;;Ranged 7;;Wis vs Ref;;2d8+Wis, and Blind until end of next turn.;;;;;"Upgrade 13: Increase  Hit damage to 3d8+Wis
+Blinding Light;Priest;Light;;1;Attack;Encounter;;Implement;;;Ranged 7;;Wis vs Ref;;2d8+Wis Radiant, and Blind until end of next turn.;;;;;"Upgrade 13: Increase  Hit damage to 3d8+Wis
 Upgrade 23: Increase Hit damage to 4d8+Wis";
 Pacify;Priest;Light;;1;Attack;Daily;;Implement, Reliable;;;Ranged 7;;Wis + Cha vs Wil;;The target is Weak (save ends). When the target attacks, the target cannot save against this effect that turn. ;;;Special: This attack misses automatically if the target is over 90 HP.;;"Upgrade 15: Miss automatically if target is over 180 HP
 Upgrade 25: Miss automatically if target is over 270 HP";
@@ -98,4 +98,33 @@ Blood Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Until end of th
 Stubborn Rage;Barbarian;Rager;;1;Attack;Daily;;Rage;;;Personal;;;;;;Roll a save to ignore a Condition this turn. Until end of the encounter, at the start of each turn you roll a save to ignore a Condition that turn.;;;;
 Battle Vigor;Barbarian;Rager;;2;Utility;Encounter;; ;Minor Action;;Personal;;;;;;Gain Con Shield Points or, if you are Bloodied, gain 2xCon Shield Points.;;;;
 Break Free;Barbarian;Rager;;2;Utility;Encounter;; ;Minor Action;;Personal;;;;;;Roll a save to end any of the following Conditions on you: Slowed, Immobilized, Restrained, Grabbed, Prone, Marked.;;;;
-Challenge Accepted;Barbarian;Rager;;2;Utility;Encounter;; ;Minor Action;;Melee;targets an enamy Marking you or that has Bloodied you this encounter;;;;;Until end of turn, you gain Advantage and +Con Crit Range against the target.;;;;
+Challenge Accepted;Barbarian;Rager;;2;Utility;Encounter;; ;Minor Action;;Melee;targets an enemy Marking you or that has Bloodied you this encounter;;;;;Until end of turn, you gain Advantage and +Con Crit Range against the target.;;;;
+Hit right here!;Warlord;Tactician;;1;Attack;;;Weapon;;;Melee;;Str vs Ref;;Int;;An ally adjacent to the target makes a melee basic attack against it.;;;;
+A bit to the left!;Warlord;Tactician;;1;Attack;;;Weapon;;;Melee;;Str vs AC;Before or after the attack, an ally within 2 squares of the target shifts 1.;W+Str;;;;;;
+One-two punch;Warlord;Tactician;;1;Attack;Encounter;;Weapon;;;Melee;targets a flanked enemy;Str vs AC;;W;;An ally flanking the target makes a melee basic attack againt it with +Int Crit Range;;;;
+Sunder Armor;Warlord;Tactician;;1;Attack;Encounter;;Weapon;;;Melee;;Str vs AC;;2W+Str, and -Int AC until end of your next turn;;;;;;
+All yours!;Warlord;Tactician;;1;Attack;Encounter;;Weapon;;;Melee;;Str vs AC;;2W+Str, Push 1. Choose an ally adjacent to the target. Until end of your next turn, the target is marked by that ally, and the target provokes an attack of opportunity from that ally if it shifts or violates a mark.;;;;;;
+Pile On!;Warlord;Tactician;;1;Attack;Daily;;Weapon;Reliable;;Melee;targets a bloodied enemy;Str vs AC;;W+Str, and up to two allies adjacent to the target make a melee basic attack against it.;;;;;;
+Follow Me!;Warlord;Tactician;;1;Attack;Daily;;Weapon;;;Melee;targets an enemy you can charge.;;Charge the target. Up to two allies that can see and hear you charge the target, ignoring opportunity attacks for the charge, and dealing half damage with the charge attack.;;;;;;;
+Time for Action!;Warlord;Tactician;;1;Attack;Daily;;Weapon;;;Melee;;Str vs AC;;2W+Str;Half Damage;Until your next turn, your allies can reroll failed Action Point Rolls. The first time an ally makes an attack with an Action Point before your next turn, that ally gains +Int Crit Range and +Int Damage for the attack.;;;;
+Move It!;Warlord;Tactician;;2;Utility;Encounter;;Non-Provoking;Move Action;;Ranged 5;targets an ally that can hear you;;;;;The target stands up if prone. The target moves their speed.;;;;
+Incoming!;Warlord;Tactician;;2;Utility;Encounter;;;Prepared Reaction (Interrupt);You and one or more allies are targeted by a close or area attack.;No Range;targets the targets of the triggering attack;;;;;Knocked Prone, and gain Resist against the triggering attack.;;;;
+Forget it!;Warlord;Tactician;;2;Utility;Encounter;;Non-Provoking;Minor Action;;Ranged 5;targets an ally that can hear you and is adjacent to an enemy;;;;;The target is no longer Marked, and Shifts 1 away from an adjacent enemy.;;;;
+Invigorating Word;Warlord;Tactician;Feature;1;Utility;Encounter;x2;Healing, Non-Provoking;Minor Action;;Ranged 5;targets an ally that can hear you;;;;;The target spends a Surge, and heals +1d6;;;"Level 11: heals +2d6
+Level 21: heals +3d6";
+Veil of Darkness;Warlock;Shadow;;1;Attack;;;;;;Ranged 10;;Cha vs For;;1d10+Cha Necro, and Dazzled until end of your next turn.  ;Treat this attack as a hit for the purposes of applying your Shadow Curse;;;;;
+Unseen Horror;Warlock;Shadow;;1;Attack;;;;;;Ranged 10;;Cha vs Wil;;1d10 Psychic. Push Dex,  and Slowed until end of your next turn.;Push 1;;;;;
+Dark Bolt;Warlock;Shadow;;1;Attack;Encounter;;;;;Ranged 15;;Cha vs For;;2d8+Int Necro, and Blind (save ends);Dazzled (save ends);;;;;
+Howling Agony;Warlock;Shadow;;1;Attack;Encounter;;;;;Ranged 10;;Cha vs Wil;;2d10+Cha Psychic, and Dazed (save ends). Push Dex all enemies that can see and hear the target.;Half Damage. Push 1 all enemies that can see and hear the target.;;;;;
+Soul Drain;Warlock;Shadow;;1;Attack;Encounter;;;;;Ranged 7;;Cha vs For;;2d10+Cha Necro, and knocked prone.;Half Damage;You heal damage equal to half the damage dealt. If you kill the target with the attack, gain Shield Point equal to half the damage dealt.;;;;
+Soul Feed;Warlock;Shadow;;1;Attack;Daily;;;;;Ranged 7;;Cha vs For;;3d10+Cha Necro, and Weakened (save ends);Half Damage;Regain 1 Surge. If you kill the target with this attack, regain 2 Surges instead.;;;;
+Black Hole;Warlock;Shadow;;1;Attack;Daily;;;;;Ranged 10;;Cha vs Ref;;3d6+Cha Necro;;Until the end of the encounter, create a zone of Very Difficult and Obscuring Terrain in a Burst 2 centered on the target. Creatures ending their turn in the zone take Cha Necro.;;;;
+Shadowfiend;Warlock;Shadow;;1;Attack;Daily;;Summon;Minor Action;;;;;;;;" - Note: summons benefit from Curse
+- +2 Def
+- Shadow Aura - Aura 2: Enemies in aura grant Advantage and can’t gain Advantage.
+- Standard Command - Ch vs Ref, 2d8+Ch, and Dazed UEONT
+- Reaction Command (enemy provokes OA from hound) - Make Standard Command attack against target.
+- Move Command - Teleport 2";;;;
+Dark Portal;Warlock;Shadow;;2;Utility;Encounter;;;Move Action;;Personal;;;;;;Teleport 2+Dex. Gain Concealment until next turn.;;;;
+A Curse Upon You;Warlock;Shadow;;2;Utility;Encounter;;;Minor Action;;Ranged 5;;;;;;;;;;
+Treacherous Shadows;Warlock;Shadow;;2;Utility;Encounter;;;Minor Action;;Ranged 10;targets  any number of cursed enemies;;;;;Create a zone of Shadows in a square adjacent to the target until next turn. When the target takes a provoking action while adjacent to the zone, the target takes 2xDex Necro damage;;;;

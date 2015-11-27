@@ -1,11 +1,11 @@
 ---
 title: "Chapter 2 - Character Building"
 output:
-  pdf_document: default
   html_document:
     css: SFRPG.css
     highlight: null
     mathjax: null
+  pdf_document: default
 ---
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}

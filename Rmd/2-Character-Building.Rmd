@@ -1,5 +1,5 @@
 ---
-title: "Chapter B3 - Feats"
+title: "2-SFRPG-Character-Building"
 output:
   html_document:
     highlight: null
@@ -7,6 +7,122 @@ output:
     css: SFRPG.css
 
 ---
+
+
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+basedir <- dirname(getwd())
+source(file.path(basedir,"scripts","1-01-Class-csv-to-html.R"))
+classList <- getClassList(basedir)
+
+
+```
+
+
+
+## Universal Powers
+The following powers are available to Player Characters of all classes.
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass  <- classList$Universal$Universal
+cat(currentClass$powers.htm)
+```
+
+
+##Barbarian{.newPage}
+###Build: Barbarian Rager
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass  <- classList$Barbarian$Rager
+cat(currentClass$stats.htm)
+```
+####Class Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$features.htm)
+```
+<br/>
+
+####Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$powers.htm)
+```
+
+
+##Fighter{.newPage}
+###Build: Fighter Guardian
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass  <- classList$Fighter$Guardian
+cat(currentClass$stats.htm)
+```
+####Class Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$features.htm)
+```
+<br/>
+
+####Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$powers.htm)
+```
+
+
+##Priest{.newPage}
+###Build: Priest of Light
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass  <- classList$Priest$Light
+cat(currentClass$stats.htm)
+```
+####Class Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$features.htm)
+```
+<br/>
+
+####Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$powers.htm)
+```
+
+
+##Rogue{.newPage}
+###Build: Scoundrel Rogue
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass  <- classList$Rogue$Scoundrel
+cat(currentClass$stats.htm)
+```
+####Class Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$features.htm)
+```
+<br/>
+
+####Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$powers.htm)
+```
+
+
+##Wizard{.newPage}
+###Build: Wizard Elementalist
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass  <- classList$Wizard$Elementalist
+cat(currentClass$stats.htm)
+```
+####Class Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$features.htm)
+```
+<br/>
+
+####Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+cat(currentClass$powers.htm)
+```
+
 
 # Feats
 

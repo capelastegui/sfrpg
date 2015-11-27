@@ -38,31 +38,57 @@ Wizard;Summoner;Master Ritualist;"Gain Ritual Training as a bonus lesser feat.
 You learn an additional Heroic Ritual from each Ritual Training lesser feat.
 You learn an additional Paragon Ritual from each Paragon Ritual Training lesser feat.
 You learn an additional Epic Ritual from each Epic ritual Training lesser feat."
+Rogue;Scoundrel;Sneak Attack;"Add 2d6 damage to Weapon attacks with Advantage made with a Light Weapon. This extra damage is halved on attacks with multiple targets or multiple attack rolls.
+Increase the extra damage to +3d6 at level 11, and to +5d6 at level 21."
 Rogue;Scoundrel;Scoundrel's Weapon;"You treat the following weapons as Light Weapons: Light Blades, Crossbows, Slings. 
-+1 Hit with Off-hand weapons and Slings."
-Rogue;Scoundrel;Sneak Attack;"While wielding a Light Weapon, when you hit on an attack with Advantage you deal +2d6 damage. If the attack has multiple targets or multiple attack rolls, this extra damage is halved.
++1 Hit with Weapon attacks with Recharge weapons and Daggers."
+Rogue;Scoundrel;Scoundrel's Ambush;"Add your Charisma to your Initiative.
+Gain Advantage when attacking enemies that have not yet acted in the current encounter.
+Gain Advantage against Slowed, Immobilized or Grabbed enemies. "
+Rogue;Scoundrel;Evasive Scoundrel;Add double your Charisma to all defenses against Opportunity Attacks.
+Rogue;Scoundrel;Rogue Focus;Gain Skill Focus in a Trained Skill of your choice.
+Rogue;Thug;Sneak Attack;"Add 2d6 damage to Weapon attacks with Advantage made with a Light Weapon. This extra damage is halved on attacks with multiple targets or multiple attack rolls.
 Increase the extra damage to +3d6 at level 11, and to +5d6 at level 21."
-Rogue;Scoundrel;Summoner;"Add 2d6 damage to attacks with advantage while wielding a Light Weapon. This extra damage is halved on attacks with multiple targets or multiple attack rolls.
+Rogue;Thug;Thug's Weapon;"You treat the following weapons as Light Weapons: Light Blades, Mace, Light Hammer.
++1 Hit with Weapon attacks with Off-Hand weapons and Maces."
+Rogue;Thug;Meathead;Add double your Strength to your HP.
+Rogue;Thug;Whack in the Head;"When you hit an enemy with a melee attack, that enemy is Dazzled until the end of your next turn.
+When attacking Dazzled enemies, you can use Sneak Attack as if you attacked with Advantage, and you gain +Strength Crit Range."
+Rogue;Thug;Rogue Focus;Gain Skill Focus in a Trained Skill of your choice.
+Rogue;Duelist;Sneak Attack;"Add 2d6 damage to Weapon attacks with Advantage made with a Light Weapon. This extra damage is halved on attacks with multiple targets or multiple attack rolls.
 Increase the extra damage to +3d6 at level 11, and to +5d6 at level 21."
-Rogue;Scoundrel;Scoundrel's Ambush;"You add your Charisma to your Initiative.
-On the first round of combat, gain Advantage against enemies that have not acted yet."
-Rogue;Scoundrel;Scoundrel Move;Add double your Charisma to all defenses against Opportunity Attacks.
-Rogue;Swashbuckler;Swashbuckler's Weapon;"You treat the following weapons as Light Weapons: Light Blades, Crossbows, Slings. 
-+1 Hit with Off-hand weapons and Slings."
-Rogue;Swashbuckler;Sneak Attack;"While wielding a Light Weapon, when you hit on an attack with Advantage you deal +2d6 damage. If the attack has multiple targets or multiple attack rolls, this extra damage is halved.
+Rogue;Duelist;Duelist's Weapon;You treat Light Blades as Light Weapons.
+Rogue;Duelist;Duelist's Cunning;"Add your Intelligence to your Reaction Modifier.
+While wielding two weapons, you gain a +Intelligence bonus to AC against melee attacks."
+Rogue;Duelist;Duel;"Gain the Duel power (Minor Action, 1/encounter, Mark adjacent enemy until end of encounter). 
+When attacking enemies Marked by you, you can use Sneak Attack as if you attacked with Advantage"
+Rogue;Duelist;Rogue Focus;Gain Skill Focus in a Trained Skill of your choice.
+Rogue;Swashbuckler;Sneak Attack;"Add 2d6 damage to Weapon attacks with Advantage made with a Light Weapon. This extra damage is halved on attacks with multiple targets or multiple attack rolls.
 Increase the extra damage to +3d6 at level 11, and to +5d6 at level 21."
-Rogue;Swashbuckler;;
-Rogue;Swashbuckler;;
-Priest;Light;Healing Word;You gain the Healing Word power.
+Rogue;Swashbuckler;Swashbuckler's Weapon;You treat the following weapons as Light Weapons: Light Blades, Hand Crossbow.
+Rogue;Swashbuckler;Swashbuckler's Step;"When you Shift, you can have that movement count as Climbing or as a Long Jump.
+When you use the Shift Maneuver, you Shift your Charisma (instead of Shift 1)."
+Rogue;Swashbuckler;High Ground;"When you use the Drop Maneuver, you reduce the falling distance by your Charisma (instead of by 1). If you fall adjacent to an enemy, you gain Advantage against that enemy this turn.
+Gain Advantage on melee attacks against enemies on squares at a lower height than your space."
+Rogue;Swashbuckler;Rogue Focus;Gain Skill Focus in a Trained Skill of your choice.
+Priest;Light;Healing Word;Gain the Healing Word power.
 Priest;Light;Faith Healing;"When you use a Healing power, add your Charisma to the Surge Value of any character spending a Surge.
-When you use a character to full health, that character gains Shield Points equal to your Charisma."
-Priest;Light;Shield of the Gods;Attacks without Advantage made against you or any ally within 5 squares gain -1 Crit Range.
+When you heal a character to full health, that character gains Shield Points equal to your Charisma."
+Priest;Light;Shield of the Gods;Attacks without Advantage made against you or any ally within 3 squares gain -1 Crit Range.
 Priest;Light;Ritual Training;You gain Ritual Training as a bonus lesser feat.
 Barbarian;Rager;Rage Strike;You gain the Rage Strike power.
 Barbarian;Rager;Savage Attack;Your attacks deal +Constitution damage.
 Barbarian;Rager;Raging Resilience;You add your Constitution to your Surge Value.
-Barbarian;Rager;Barbarian Charge;When you charge an enemy within 4 or more squares, you gain +2 hit, and you can use a Barbarian melee attack instead of a melee Basic attack.
+Barbarian;Rager;Barbarian Charge;"You do not become Hindered due to charging.
+When you charge an enemy within 4 or more squares, you gain Advantage, and you can use a Barbarian melee attack instead of a melee Basic attack."
 Barbarian;Rager;Savage Skill;You add your Constitution to your Intimidate skill and your Nature skill.
+Warlord;Tactician;Healing Word;Gain the Healing Word power.
+Warlord;Tactician;Tactical Advice;Allies that can see and hear you gain a bonus to Initiative equal to your Intelligence.
+Warlord;Tactician;Tactical Action;Allies that can see and hear you gain a bonus to hit with Action Point attacks equal to your Intelligence.
+Warlord;Tactician;Tactical Skill;TODO: Skill related assist feature.
+Warlord;Tactician;;
+Warlord;Tactician;;
+;;;
 Warlord;Tactician;;
 Warlock;Darkness;;
 Bard;Trickster;;
