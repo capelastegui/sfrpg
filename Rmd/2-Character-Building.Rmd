@@ -9,12 +9,31 @@ output:
 ---
 
 
-
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- dirname(getwd())
 source(file.path(basedir,"scripts","1-01-Class-csv-to-html.R"))
 classList <- getClassList(basedir)
 
+printClassTitle <- function (className, build, skipClass=FALSE)
+{
+  cat("<w:p><w:r><w:br w:type=\"page\"/></w:r></w:p>")
+  cat("<p><!-- pagebreak --></p>")
+  if(!skipClass)
+    {cat(paste('<h2>', className,'</h2>',sep=""))}
+  cat(paste('<h3>Build: ', className," ", build,'</h3>',sep=""))
+}
+
+printClass <- function (class)
+{
+  
+  cat(class$stats.htm)
+  cat('<h4>Class Features</h4>')
+  cat(class$features.htm)
+  cat("<w:p><w:r><w:br w:type=\"page\"/></w:r></w:p>")
+  cat("<p><!-- pagebreak --></p>")
+  cat('<h4>Class Powers</h4>')
+  cat(class$powers.htm)
+}
 
 ```
 
@@ -28,103 +47,29 @@ currentClass  <- classList$Universal$Universal
 cat(currentClass$powers.htm)
 ```
 
-
-##Barbarian{.newPage}
-###Build: Barbarian Rager
+{.newPage}
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Barbarian$Rager
-cat(currentClass$stats.htm)
+printClassTitle('Barbarian', 'Rager')
+printClass(classList$Barbarian$Rager)
+printClassTitle('Fighter', 'Guardian')
+printClass(classList$Fighter$Guardian)
+printClassTitle('Priest', 'of Light')
+printClass(classList$Priest$Light)
+printClassTitle('Rogue', 'Scoundrel')
+printClass(classList$Rogue$Scoundrel)
+printClassTitle('Wizard', 'Elementalist')
+printClass(classList$Wizard$Elementalist)
+printClassTitle('Warlord', 'Tactician')
+printClass(classList$Warlord$Tactician)
+printClassTitle('Warlock', 'of Shadow')
+printClass(classList$Warlock$Shadow)
 ```
-####Class Features
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
-```
+### {.newPage}
+### {.newPage}
 
 
-##Fighter{.newPage}
-###Build: Fighter Guardian
-
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Fighter$Guardian
-cat(currentClass$stats.htm)
-```
-####Class Features
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
-```
-
-
-##Priest{.newPage}
-###Build: Priest of Light
-
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Priest$Light
-cat(currentClass$stats.htm)
-```
-####Class Features
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
-```
-
-
-##Rogue{.newPage}
-###Build: Scoundrel Rogue
-
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Rogue$Scoundrel
-cat(currentClass$stats.htm)
-```
-####Class Features
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
-```
-
-
-##Wizard{.newPage}
-###Build: Wizard Elementalist
-
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Wizard$Elementalist
-cat(currentClass$stats.htm)
-```
-####Class Features
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
-```
-
-
-# Feats
+## Feats
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 

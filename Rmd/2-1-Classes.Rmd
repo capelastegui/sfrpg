@@ -15,6 +15,17 @@ basedir <- dirname(getwd())
 source(file.path(basedir,"scripts","1-01-Class-csv-to-html.R"))
 classList <- getClassList(basedir)
 
+printClassFeatures <- function (class)
+{
+  cat(class$stats.htm)
+  cat('<h4>Class Features</h4>')
+  cat(class$features.htm)
+}
+
+printClassPowers <- function (class)
+{
+    cat(class$powers.htm)
+}
 
 ```
 
@@ -28,98 +39,80 @@ currentClass  <- classList$Universal$Universal
 cat(currentClass$powers.htm)
 ```
 
-
-##Barbarian{.newPage}
-###Build: Barbarian Rager
-
+## Barbarian{.newPage}
+### Barbarian Rager
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Barbarian$Rager
-cat(currentClass$stats.htm)
+currentClass <- classList$Barbarian$Rager
+printClassFeatures(currentClass)
 ```
-####Class Features
+#### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
+printClassPowers(currentClass)
 ```
 
-
-##Fighter{.newPage}
-###Build: Fighter Guardian
-
+## Fighter{.newPage}
+### Fighter Guardian
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Fighter$Guardian
-cat(currentClass$stats.htm)
+currentClass <- classList$Fighter$Guardian
+printClassFeatures(currentClass)
 ```
-####Class Features
+#### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
+printClassPowers(currentClass)
 ```
 
-
-##Priest{.newPage}
-###Build: Priest of Light
-
+## Priest{.newPage}
+### Priest of Light
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Priest$Light
-cat(currentClass$stats.htm)
-```
-####Class Features
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
+currentClass <- classList$Priest$Light
+printClassFeatures(currentClass)
 ```
 
-
-##Rogue{.newPage}
-###Build: Scoundrel Rogue
-
+#### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Rogue$Scoundrel
-cat(currentClass$stats.htm)
-```
-####Class Features
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
+printClassPowers(currentClass)
 ```
 
-
-##Wizard{.newPage}
-###Build: Wizard Elementalist
-
+## Rogue{.newPage}
+### Rogue Scoundrel
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Wizard$Elementalist
-cat(currentClass$stats.htm)
+currentClass <- classList$Rogue$Scoundrel
+printClassFeatures(currentClass)
 ```
-####Class Features
+#### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$features.htm)
-```
-<br/>
-
-####Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-cat(currentClass$powers.htm)
+printClassPowers(currentClass)
 ```
 
+## Warlock{.newPage}
+### Shadow Warlock
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass <- classList$Warlock$Shadow
+printClassFeatures(currentClass)
+```
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+printClassPowers(currentClass)
+```
+
+## Warlord{.newPage}
+### Warlord Tactician
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass <- classList$Warlord$Tactician
+printClassFeatures(currentClass)
+```
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+printClassPowers(currentClass)
+```
+
+## Wizard{.newPage}
+### Wizard Elementalist
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+currentClass <- classList$Wizard$Elementalist
+printClassFeatures(currentClass)
+```
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+printClassPowers(currentClass)
+```

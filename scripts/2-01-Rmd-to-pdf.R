@@ -13,7 +13,7 @@ rmd.files$a3.combat<- file.path(dir.rmd,"1-3-Combat.Rmd")
 rmd.files$b2.classes<- file.path(dir.rmd,"2-1-Classes.Rmd")
 rmd.files$b3.feats<- file.path(dir.rmd,"2-2-Feats.Rmd")
 rmd.files$a.rules<- file.path(dir.rmd,"1-SFRPG-Game-Rules.Rmd")
-rmd.files$b.charbuild <- file.path(dir.rmd,"2-CharacterBuilding.Rmd")
+rmd.files$b.charbuild <- file.path(dir.rmd,"2-Character-Building.Rmd")
 
 
 # dir.rmd  <-  file.path(basedir,"Rmd")
@@ -56,7 +56,7 @@ mapply(input=rmd.files,output_file=htm.files,FUN = rmarkdown::render)
 
 mapply(f.in=htm.files,f.out=pdf.files,FUN = toPdf)
 
-toPdf(paste (htm.files, collapse=" "), file.path(dir.pdf,"SFRPG-full.pdf"))
+#toPdf(paste (htm.files, collapse=" "), file.path(dir.pdf,"SFRPG-full.pdf"))
 
 
 

@@ -9,6 +9,7 @@ output:
 ---
 
 
+
 ##Welcome to the game
 
 Welcome to Square Fireballs! In this game, a group of friends can take the role of a party of adventurers exploring a fantasy world, fighting rampaging monsters, and discovering ancient treasures. 
