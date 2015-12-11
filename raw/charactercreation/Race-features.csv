@@ -1,0 +1,22 @@
+Race;Subrace;Name;Description
+Human;Human;Human Versatility;Gain a bonus Level 1 Feat
+Human;Human;Human Impulsiveness;"When you take a Full Rest, gain an additional Action Point.
+Gain +2 Hit on attacks made with an Action Point.
+If you fail your first Action Point Check in an encounter, you can make an additional attempt at a later turn.  "
+Dwarf;Dwarf;Dwarven Stubbornness;"Reduce Forced Movement against you by 1.
+When you are knocked Prone, roll a Save. On a success, you do not become Prone.
+Ignore any Armor Speed Penalty."
+Dwarf;Dwarf;Dwarven Resilience;Once per encounter, you can use Second Wind as a Minor Action.
+Elf;Elf;Elven Step;The first time each turn that you enter a square of Difficult Terrain or Very Difficult Terrain, or that you enter a new square while Slowed, the additional cost to enter that square is reduced by 1.
+Elf;Elf;Elven Accuracy;Gain the Elven Accuracy power.
+Halfling;Halfling;Halfling Luck;"Gain +2 to all defenses against Opportunity Attacks.
+Enemy attacks against you have -1 Crit Range."
+Halfling;Halfling;Halfling Evasion;Gain the Halfling Evasion power.
+Elf;High Elf;Dazzling Beauty;Gain Aura 1: Enemies in aura cannot Flank your allies.
+Elf;High Elf;Charming Presence;Gain the Charming Presence power
+Gnome;Gnome;Absent Minded;At the start of your turn, if you are Marked, you can roll a Save to ignore the Marked condition that turn.
+Gnome;Gnome;Gnomish Ingenuity;Gain the Gnomish Ingenuity power
+Orc;Orc;Orc Toughness;You as having an extra level for the purposes of calculating your HP.
+Orc;Orc;Orc Smash;Gain the Orc Smash power
+Dragonfolk;Dragonfolk;Dragon Scales;You have Resist (Missed Attacks) and Resist (Fall Damage).
+Dragonfolk;Dragonfolk;Dragon Breath;Gain the Dragon Breath power

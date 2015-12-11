@@ -6,7 +6,7 @@ Rogue;Scoundrel;Martial;Striker;Standard;30;3;6;2; +2 Ref;Leather;Dagger, Short 
 Priest;Light;Divine;Leader;Standard;30;3;7;2; +1 For, +1 Wil; - ;Mace, Sling, Quarterstaff;Symbol;Wisdom;Charisma;Religion;2;-
 Warlord;Tactician;Martial;Leader;Standard;30;3;7;0; +1 For, +1 Wil;Light Shield, Leather, Hide, Chain;All Basic, 1-hand Martial, Longspear, Halberd, Glaive;-;Strength;Intelligence;History;2;-
 Barbarian;Rager;Primal;Striker;Standard;35;3,5;8;0; +2 For;Leather, Hide;All Basic, All Martial;-;Strength;Constitution;Endurance;2;-
-Warlock;Darkness;Arcane;Controller;Standard;30;3;6;1; +1 Ref, +1 Wil;Leather;All Basic;Wand, Rod, Weapon Implement (Dagger);Charisma;Dexterity;Intimidate;2;-
+Warlock;Shadow;Arcane;Controller;Standard;30;3;6;1; +1 Ref, +1 Wil;Leather;All Basic;Wand, Rod, Weapon Implement (Dagger);Charisma;Dexterity;Intimidate;2;-
 Bard;Trickster;Arcane;Leader;Standard;30;3;7;0; +1 Ref, +1 Wil;Light Shield, Leather, Hide, Chain;All Basic, 1-hand Martial;Wand, Weapon Implement (Light Blade or Heavy Blade);Charisma;Intelligence;Bluff;4;
 Ranger;Archer;Martial;Striker;Standard;30;3;6;0; +2 Ref;Leather;All Basic, Ranged Martial; -;Dexterity;Wisdom;Perception;2;
 Wizard;Summoner;Arcane;Controller;Standard;30;3;6;0; +2 Wil;-;Dagger, Quarterstaff;Wand, Staff, Orb, Tome;Intelligence;Wisdom;Arcana;2;

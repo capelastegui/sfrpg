@@ -1228,6 +1228,13 @@ Slide multiple units, at range (1) and in melee (2)
 
 
 ## Combat Maneuvers
-###Standard Maneuvers
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+basedir <- dirname(getwd())
+source(file.path(basedir,"scripts","1-01-Maneuver-csv-to-html.R"))
+
+cat(toHtmlManeuverList(getManeuverList(basedir)))
+```
+
 ###Improvised Maneuvers
 

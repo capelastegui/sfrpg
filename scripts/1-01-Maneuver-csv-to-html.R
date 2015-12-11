@@ -33,8 +33,10 @@ getManeuverList <- function (basedir=getwd())
   levels(maneuver.raw.df$usageColors)[levels(maneuver.raw.df$usageColors)==""] <- "green"
   
   maneuver.raw.df  <- maneuver.raw.df %>% 
-    mutate(Name=paste("<span class=\"",usageColors,"\">",Name, sep="")) %>%
-    mutate(Level=paste(Level,"</span>",sep=""))
+    mutate(Name=paste("<span class=\"",usageColors,"\">",Name, "</span>",sep="")) 
+  
+   #%>%
+   #mutate(Level=paste(Level,"</span>",sep=""))
   
   
   htm <- buildElementApply(maneuver.raw.df,maneuver.tag.pre, maneuver.tag.post,
@@ -42,7 +44,7 @@ getManeuverList <- function (basedir=getwd())
                            skipEmpty = TRUE)
   
   table <- buildTableApply(maneuver.raw.df %>% arrange(desc(Type),Name),
-                           df.names=c("Name",  "Type", "UsageLimit","Range","Action","Summary"),
+                           df.names=c("Name",  "Type", "Action","Summary"),
                            tableClass="power-table")
   
   list(maneuvers=maneuver.raw.df,maneuvers.htm=htm,maneuvers.table=table)
@@ -79,11 +81,16 @@ writeManeuverList  <- function(maneuver.list)
                       "</body></html>",
                       sep="\r\n",
                       collapse="")
-  
-  
-  
-  
-  
   writeChar(maneuver.full,maneuver.htm.file)
+}
+
+toHtmlManeuverList <- function(maneuver.list)
+{
+  maneuver.full <- paste("<p>",maneuver.list$maneuvers.table,"</p>",
+                         maneuver.list$maneuvers.htm,
+                         sep="\r\n",
+                         collapse="")
 
 }
+
+

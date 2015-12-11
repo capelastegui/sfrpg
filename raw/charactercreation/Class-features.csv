@@ -15,7 +15,7 @@ Fighter;Sellsword;Weapon Mastery; +1 Hit with weapon attacks
 Fighter;Sellsword;Sellsword's Ruthlessness;Add your Intelligence to the damage of your Melee and Close attacks.
 Fighter;Sellsword;Sellsword's Valor;When you attack an enemy,that enemy subtracts double your Intelligence to the damage of their Reaction attacks that turn.
 Fighter;Sellsword;Sellsword's Bargaining; +Intelligence to your Authority and Bluff Skills.
-Wizard;Elementalist;Controller Feat;Gain a bonus Feat from the Controller Feat category
+Wizard;Elementalist;Controller Option;Gain a bonus Feat from the Controller Feat category
 Wizard;Elementalist;Evoker's Barrage;"Gain +Dex Miss Damage.
 Gain +Dex to the range of your Ranged and Area attacks, and to the size of your Line attacks."
 Wizard;Elementalist;Wizard Flexibility;Gain an additional At-Will attack power.
@@ -23,7 +23,7 @@ Wizard;Elementalist;Master Ritualist;"Gain Ritual Training as a bonus lesser fea
 You learn an additional Heroic Ritual from each Ritual Training lesser feat.
 You learn an additional Paragon Ritual from each Paragon Ritual Training lesser feat.
 You learn an additional Epic Ritual from each Epic ritual Training lesser feat."
-Wizard;Abjurer;Controller Feat;"Gain a bonus Feat from the Controller Feat category."
+Wizard;Abjurer;Controller Option;"Gain a bonus Feat from the Controller Feat category."
 Wizard;Abjurer;Abjurer`s Shield;"Add double your Constitution to your Hit Points.
 Add your Constitution to your Reflex"
 Wizard;Abjurer;Wizard Flexibility;Gain an additional At-Will attack power.
@@ -31,7 +31,7 @@ Wizard;Abjurer;Master Ritualist;"Gain Ritual Training as a bonus lesser feat.
 You learn an additional Heroic Ritual from each Ritual Training lesser feat.
 You learn an additional Paragon Ritual from each Paragon Ritual Training lesser feat.
 You learn an additional Epic Ritual from each Epic ritual Training lesser feat."
-Wizard;Summoner;Controller Feat;"Gain a bonus Feat from the Controller Feat category."
+Wizard;Summoner;Controller Option;"Gain a bonus Feat from the Controller Feat category."
 Wizard;Summoner;Master Summoner;"You treat Body Cover granted to you by your summons and allies as Superior Cover.
 Add triple your Charisma to the HP of your Summons."
 Wizard;Summoner;Wizard Flexibility;Gain an additional At-Will attack power.
@@ -88,7 +88,12 @@ Warlord;Tactician;Tactical Skill;TODO: Skill related assist feature.
 Warlord;Other;;
 Warlord;Other;;
 Warlord;Other;;
-Warlock;Darkness;;
+Warlock;Shadow;Controller Option;Gain a bonus Feat from the Controller Feat category
+Warlock;Shadow;Shadow Curse;"Once per turn, when you target an enemy with an attack, the enemy is afflicted with your Shadow Curse until the end of the encounter. Enemies under the Shadow Curse treat you as having Concealment or, if you already have Concealment, as having Total Concealment.
+"
+Warlock;Shadow;Shadow Pact;Once per round, when an enemy under your Shadow Curse is reduced to 0 HP, the enemy's space becomes a zone of Difficult Terrain for your enemies until the end of the encounter. Enemies ending their turns in the zone or adjacent to it take Dex necrotic damage.
+;;;
+;;;
 Bard;Trickster;;
 Ranger;Archer;;
 Wizard;Summoner;;
@@ -97,3 +102,4 @@ Monk;Wind;;
 Brawler;Tough;;
 Ninja;Sneak;;
 Universal;Universal;;
+;;;

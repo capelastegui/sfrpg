@@ -42,8 +42,6 @@ output:
 ###Standard Maneuvers
 ###Improvised Maneuvers
 -->
-
-
 In this chapter we provide the rules for resolving a combat encounter.
 
 ##Combat Fundamentals
@@ -191,18 +189,14 @@ Flanking for large creatures
 
 Condition | Modifier
 ------------- | -------------
-Defender grants Advantage  | +2
+Defender grants Advantage to Attacker | +2
 Defender has any Cover from Attacker | -2
 Defender has Superior Cover from Attacker | -3
 Defender has any Concealment from Attacker | -2
 Defender has Superior Concealment from Attacker | -3
-Attacker is Prone | -2
-Attacker has used Stand Up maneuver this turn | -2
-Attacker has used Shift maneuver this turn | -2
-Attacker has used Quick Draw maneuver this turn | -2
+Attacker is Hindered | -2
 Attack with Recharge weapon, unless Recharged | -2
 Ranged attack at Long Range | -2
-Charge attack | -1
 Opportunity Attack | + Reaction Modifier
 
 #### Critical Hits
@@ -422,5 +416,13 @@ Slide multiple units, at range (1) and in melee (2)
 
 
 ## Combat Maneuvers
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+basedir <- dirname(getwd())
+source(file.path(basedir,"scripts","1-01-Maneuver-csv-to-html.R"))
+
+cat(toHtmlManeuverList(getManeuverList(basedir)))
+```
+
 ###Standard Maneuvers
 ###Improvised Maneuvers
