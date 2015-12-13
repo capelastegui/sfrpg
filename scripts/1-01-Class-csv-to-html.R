@@ -18,7 +18,7 @@ power.htm.file <- file.path(basedir,"html","CharacterCreation","Powers.html")
 power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-table.html")
 
 class.stat.df  <- read.csv(class.stat.raw, sep=";", header=TRUE)
-class.feature.df  <- read.csv(class.features.raw, sep=";", header=TRUE)
+class.feature.df  <- read.csv(class.features.raw, sep=";", header=TRUE)  %>%  gsubColwise("\\n","<br>")
 
 class.stat.list  <- split(class.stat.df,class.stat.df$Class)
 class.stat.list <- llply(class.stat.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})

@@ -21,7 +21,7 @@ race.power.table.htm.file <- file.path(basedir,"html","CharacterCreation","race-
 
 #Data frames
 race.stat.df  <- read.csv(race.stat.raw, sep=";", header=TRUE)
-race.feature.df  <- read.csv(race.features.raw, sep=";", header=TRUE)
+race.feature.df  <- read.csv(race.features.raw, sep=";", header=TRUE) %>%  gsubColwise("\\n","<br>")
 #Lists
 race.stat.list  <- split(race.stat.df,race.stat.df$Race)
 race.stat.list <- llply(race.stat.list, .fun=function(a){a <- refactor(a);split(a,a$Subrace)})
@@ -56,9 +56,9 @@ race.power.raw.df  <- race.power.raw.df %>%
   mutate(Level=paste(Level,"</span>",sep=""))
 
 
-race.race.power.list  <- split(race.power.raw.df,race.power.raw.df$Race) 
-race.race.power.list <- llply(race.race.power.list, .fun=function(a){a <- refactor(a);split(a,a$Subrace)})
-race.race.power.list <- llply.n(race.race.power.list,2,race.power.tag.pre, race.power.tag.post,
+race.power.list  <- split(race.power.raw.df,race.power.raw.df$Race) 
+race.power.list <- llply(race.power.list, .fun=function(a){a <- refactor(a);split(a,a$Subrace)})
+race.power.list <- llply.n(race.power.list,2,race.power.tag.pre, race.power.tag.post,
                            .fun2=function(df,race.power.tag.pre, race.power.tag.post){
                              htm <- buildElementApply(df,race.power.tag.pre, race.power.tag.post,
                                                       df.names=setdiff(names(df),c("Summary","Subrace","usageColors")),
@@ -72,9 +72,9 @@ race.race.power.list <- llply.n(race.race.power.list,2,race.power.tag.pre, race.
                            })
 
 
-race.race.power.list  <- llply.n(race.race.power.list,2,
+race.power.list  <- llply.n(race.power.list,2,
                              .fun=function(l){
-                               l$racebuild  <- paste("<h2>",l$powers$Race[1],l$powers$Subrace[1],"</h2>",sep=" ")
+                               l$racebuild  <- paste("<h2>",l$powers$Subrace[1],"</h2>",sep=" ")
                                l})
 
 
@@ -83,7 +83,7 @@ race.feature.list <- llply(race.feature.list, .fun=function(a){a <- refactor(a);
 race.feature.list <- llply.n(race.feature.list,2,feature.tag.pre, feature.tag.post,
                             .fun2=function(df,feature.tag.pre, feature.tag.post){
                               htm <- buildElementApply(df,feature.tag.pre, feature.tag.post,
-                                                       df.names=setdiff(names(df),c("race","Build")),
+                                                       df.names=setdiff(names(df),c("Race","Subrace")),
                                                        skipEmpty = TRUE)
                               #htm <- paste("<div race=\"Power-List\">",htm,"</div>" ,sep="")
                               
@@ -93,8 +93,8 @@ race.feature.list <- llply.n(race.feature.list,2,feature.tag.pre, feature.tag.po
 
 
 #join all race nested lists
-race.list  <- llply.parallel.multilist(race.race.power.list, 
-                                        list(race.race.power.list,race.stat.list,race.feature.list),
+race.list  <- llply.parallel.multilist(race.stat.list, 
+                                        list(race.power.list,race.stat.list,race.feature.list),
                                         n=2,
                                         .fun=function(...){unlist(c(...),recursive=FALSE)})
 
