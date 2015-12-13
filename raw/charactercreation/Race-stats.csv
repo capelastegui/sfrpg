@@ -1,0 +1,9 @@
+Race;Subrace;Main Racial Ability;Secondary Racial Ability;Race Skill List;Feature 1;Feature 2
+Human;Human;Choose any; -;Choose one;Human Versatility;Human Impulsiveness
+Dwarf;Dwarf;Constitution;Wisdom or Strength;Endurance, Lore;Dwarven Stubbornness;Dwarven Resilience
+Elf;Elf;Dexterity;Wisdom or Charisma;Perception, Nature;Elven Step;Elven Accuracy
+Halfling;Halfling;Dexterity;Charisma or Constitution;Stealth, Trickery;Halfling Luck;Halfling Evasion
+Elf;High Elf;Wisdom;Charisma or Intelligence;Arcana, Lore;Dazzling Beauty;Charming Presence
+Gnome;Gnome;Intelligence;Constitution or Charisma;Arcana, Concentration;Absent Minded;Gnomish Ingenuity
+Orc;Orc;Strength;Constitution or Dexterity;Authority, Endurance;Orc Toughness;Orc Smash
+Dragonfolk;Dragonfolk;Charisma;Strength or Constitution;Authority, Athletics;Dragon Scales;Dragon Breath

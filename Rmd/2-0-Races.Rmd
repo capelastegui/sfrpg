@@ -8,111 +8,56 @@ output:
 
 ---
 
-
+TODO: FIX FOLDERS
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- dirname(getwd())
+cat(basedir)
 source(file.path(basedir,"scripts","1-01-Race-csv-to-html.R"))
-classList <- getClassList(basedir)
+raceList <- getRaceList(basedir)
 
-printClassFeatures <- function (class)
+printRaceFeatures <- function (race)
 {
-  cat(class$stats.htm)
-  cat('<h4>Class Features</h4>')
-  cat(class$features.htm)
+  cat(race$stats.htm)
+  cat('<h4>Race Features</h4>')
+  cat(race$feature.df$features.htm)
 }
 
-printClassPowers <- function (class)
+printRacePowers <- function (race)
 {
-    cat(class$powers.htm)
+    cat(race$powers.htm)
 }
 
 ```
 
 
 
-## Universal Powers
-The following powers are available to Player Characters of all classes.
-
+## Human{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Universal$Universal
-cat(currentClass$powers.htm)
+currentRace <- raceList$Human$Human
+printRaceFeatures(currentRace)
+```
+#### Race Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+printRacePowers(currentRace)
 ```
 
-## Barbarian{.newPage}
-### Barbarian Rager
+## Orc{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Barbarian$Rager
-printClassFeatures(currentClass)
+currentRace <- raceList$Orc$Orc
+printRaceFeatures(currentRace)
 ```
-#### Class Powers{.newPage}
+#### Race Powers
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
-```
-
-## Fighter{.newPage}
-### Fighter Guardian
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Fighter$Guardian
-printClassFeatures(currentClass)
-```
-#### Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+printRacePowers(currentRace)
 ```
 
-## Priest{.newPage}
-### Priest of Light
+## Orc{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Priest$Light
-printClassFeatures(currentClass)
+currentRace <- raceList$Orc$Orc
+printRaceFeatures(currentRace)
 ```
-
-#### Class Powers{.newPage}
+#### Race Powers
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
-```
-
-## Rogue{.newPage}
-### Rogue Scoundrel
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Rogue$Scoundrel
-printClassFeatures(currentClass)
-```
-#### Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
-```
-
-## Warlock{.newPage}
-### Shadow Warlock
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Warlock$Shadow
-printClassFeatures(currentClass)
-```
-#### Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
-```
-
-## Warlord{.newPage}
-### Warlord Tactician
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Warlord$Tactician
-printClassFeatures(currentClass)
-```
-#### Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
-```
-
-## Wizard{.newPage}
-### Wizard Elementalist
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Wizard$Elementalist
-printClassFeatures(currentClass)
-```
-#### Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+printRacePowers(currentRace)
 ```

@@ -1,7 +1,8 @@
-Name;Class;Build;isFeature;Level;Type;UsageLimit;UsageNumber;Keywords;Action;Trigger;Range;Target;AttackRoll;EffectPre;Hit;Miss;EffectPost;Misc;SecondaryAttack;Upgrades;Summary
-Elven Accuracy;Elf;Elf;;;;;;;Personal Reaction - Interrupt;(You miss an enemy with an attack);;;;;;;You reroll the attack against the triggering enemy.;;;;
-Halfling Evasion;Halfling;Halfling;;;;;;;Minor Action;;;;;;;;The next time an enemy attack hits you before the end of the encounter, reroll the attack.;;;;
-Charming Presence;Elf;High Elf;;;;;;Non-Provoking;Minor Action;;Ranged 5;targets an enemy you haven't attacked this turn.;;;;;"You Charm the target until end of your next turn. This effect ends when you attack the target.
+Name;Race;Subrace;isFeature;Level;Type;UsageLimit;UsageNumber;Keywords;Action;Trigger;Range;Target;AttackRoll;EffectPre;Hit;Miss;EffectPost;Misc;SecondaryAttack;Upgrades;Summary
+test;test;test;Feature;0;;Encounter;;;;;test;;;;;;;;;test;test
+Elven Accuracy;Elf;Elf;;1;Utility;Encounter;;;Personal Reaction - Interrupt;(You miss an enemy with an attack);;;;;;;You reroll the attack against the triggering enemy.;;;;
+Halfling Evasion;Halfling;Halfling;;1;Utility;Encounter;;;Minor Action;;;;;;;;The next time an enemy attack hits you before the end of the encounter, reroll the attack.;;;;
+Charming Presence;Elf;High Elf;;1;Utility;Encounter;;Non-Provoking;Minor Action;;Ranged 5;targets an enemy you haven't attacked this turn.;;;;;"You Charm the target until end of your next turn. This effect ends when you attack the target.
  (A Charmed enemy can't attack you, and doesn't provoke Opportunity Attacks from you).";;;;
-Orc Smash;Orc;Orc;;;;;;;Minor Action;;;;;;;;The next time you hit an enemy before the end of the encounter, Push 3 the enemy, and the enemy takes an additional +1d4 damage per Damage Die.;;;;
-Dragon Breath;Dragonfolk;Dragonfolk;;;;;;;Minor Action;;Close Blast 3;;Primary Ability vs Ref;;1d8 damage of the chosen type.;;;Special: When you gain this power, choose Fire, Cold, Lightning or Physical. This attack deals damage of that type.;;;
+Orc Smash;Orc;Orc;;1;Attack;Encounter;;;Minor Action;;;;;;;;The next time you hit an enemy before the end of the encounter, Push 3 the enemy, and the enemy takes an additional +1d4 damage per Damage Die.;;;;
+Dragon Breath;Dragonfolk;Dragonfolk;;1;Attack;Encounter;;;Minor Action;;Close Blast 3;;Primary Ability vs Ref;;1d8 damage of the chosen type.;;;Special: When you gain this power, choose Fire, Cold, Lightning or Physical. This attack deals damage of that type.;;;
