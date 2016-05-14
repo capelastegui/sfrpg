@@ -117,7 +117,7 @@ There are several types of checks in the game that a character can make:
 - **Skill Checks**: Used to determine whether an interaction with other characters or the environment is a success or a failure. Rolled as part of a Skill Action.
 - **Saves**: Used to resist a harmful condition. Some effects allow characters to automatically attempt a Save at the end of their turns. These are known as 'Save Ends' effects. In addition, some powers allow a character to Save against certain effects.
 
-The general method to resolve a check is to roll a **d20**, add the character's **bonu**s to that check (if any) and any **modifiers** that apply, and compare the result with a target number. If the result is equal or greater than the target number, the check is a success, otherwise, the check is a failure.
+The general method to resolve a check is to roll a **d20**, add the character's **bonus** to that check (if any) and any **modifiers** that apply, and compare the result with a target number. If the result is equal or greater than the target number, the check is a success, otherwise, the check is a failure.
 
 - For **Attack Rolls**, the attacking character rolls a **d20**, adds the character's **Hit bonus** for that attack and any **attack modifiers** that apply, and compares the result with the defending character's **Defense** attribute that is appropriate for that attack. There are four different defense attributes: **Armor (Ar), Fortitude (For), Reflex (Ref) and Will (Wil)**. This process is described in more detail in the Combat chapter.
 - For **Skill Check**, the character making the check rolls a **d20**, adds the character's **Skill bonus** for the Skill used in that action, and any **skill modifiers** that apply. The result is compared with a number based on the Skill Check Difficulty. This process is described in more detail in the Skills chapter.
@@ -127,7 +127,36 @@ The general method to resolve a check is to roll a **d20**, add the character's 
 
 Unlike check rolls, damage rolls do not use a single d20. Instead, a variable number and type of dice is used for each damage roll, depending on the damaging attack and the weapon used.
 
-To resolve a damage roll, roll all the **Damage Dice** required for the attack, and add them together. Then, add to that total any **Damage bonus** that applies for that attack. 
+To resolve a damage roll, roll all the **Damage Dice** required for the attack, and add them together. Then, add to that total the  **Ability Bonus** to damage for that attackas well as any other **Damage Bonuses** that apply. High level characters then apply multipliers to the damage dice and ability bonus based on their level:
+```
+Damage= (Damage Dice X Dice Multiplier) + (Ability Bonus * Ability Multiplier) + Damage Bonuses
+```
+The level progression for the Dice Multiplier and the Ability Multiplier are shown below for convenience. A more detailed description of these stats is provided on [later](#abilitymult) [sections](#abilitymult) of this chapter
+
+<div class="very-narrow">
+Level  | Dice Multiplier
+------------- | -------------
+1   | x1
+6	| x1.5
+16	| x2
+26 	| x3
+</div>
+
+<div class="very-narrow">
+Level  | Ability Multiplier
+------------- | -------------
+1   | x1
+4	| x1.5
+9	| x2
+11 	| x2.5
+14	| x3
+17 	| x3.5
+19	| x4
+21 	| x5
+24	| x6
+27 	| x7
+29	| x8
+</div>
 
 ###Rolling Action Point Rolls
 
@@ -160,6 +189,41 @@ The amount of HP of a Character depends on character Level and Class, for Player
 - Classes with high HP: 35 HP + 3.5 HP per level.
 - Classes with very high HP: 40 HP + 4 HP per level.
 
+<div class="very-narrow">
+Level  | HP Level | Normal HP | High HP | Very High HP
+------------- | -------------
+1 | 11 | 33 | 38 | 44
+2 | 12 | 36 | 42 | 40
+3 | 13 | 39 | 45 | 40
+4 | 14 | 42 | 49 | 40
+5 | 15 | 45 | 52 | 40
+6 | 16 | 48 | 56 | 40
+7 | 17 | 51 | 59 | 40
+8 | 18 | 54 | 63 | 40
+9 | 19 | 57 | 66 | 40
+10 | 20 | 60 | 70 | 40
+11 | 22 | 66 | 77 | 40
+12 | 24 | 72 | 84 | 40
+13 | 26 | 78 | 91 | 40
+14 | 28 | 84 | 98 | 40
+15 | 30 | 90 | 105 | 40
+16 | 32 | 96 | 112 | 40
+17 | 34 | 102 | 119 | 40
+18 | 36 | 108 | 126 | 40
+19 | 38 | 114 | 133 | 40
+20 | 40 | 120 | 140 | 40
+21 | 44 | 132 | 154 | 40
+22 | 48 | 144 | 168 | 40
+23 | 52 | 156 | 182 | 40
+24 | 56 | 168 | 196 | 40
+25 | 60 | 180 | 210 | 40
+26 | 64 | 192 | 224 | 40
+27 | 68 | 200 | 238 | 40
+28 | 72 | 216 | 252 | 40
+29 | 76 | 228 | 266 | 40
+30 | 80 | 240 | 280 | 320
+</div>
+
 A summary table with the HP and other stats corresponding to each Player Character class is provided in the Classes section of the Character Building chapter.
 
 A character under half of their maximum Hit Points is said to be Bloodied. Many game effects check for the Bloodied condition in characters. For easier reference, a **Bloodied Value** stat is provided for each character, equal to one half of maximum Hit Points. Characters with a current HP total under Bloodied Value are Bloodied.
@@ -190,26 +254,26 @@ For Player Characters, some stats that are derived from Abilities. These are the
 
 The process for generating a Player Character's Abilities is described in the Stat Generation section, in the Character Building chapter.
 
-####Ability Damage Modifier  
+#### Ability Damage Modifier {#abilitymult}  
 
 As the level of characters increases, so do their Hit Points, the amount of damage they deal, and the amount of healing they require. To keep Ability modifiers relevant when applied to damaging and healing effects of a Player Character, we adjust them by a multiplier that depends on the character's level. The Ability modifier multiplied by this value is called **Ability Damage Modifier**. There is an Ability Damage Modifier for each character Ability, and there are referred to as Strength Damage Modifier, Dexterity Damage Modifier, and so on.
 
 The multiplier applied for an Ability Damage Modifier varies with the character's level, from 1 at level 1 to a maximum of 6 at level 30. The progression by level is:
 
 <div class="very-narrow">
-Level  | Multiplier value
+Level  | Ability Multiplier
 ------------- | -------------
 1   | x1
-3	| x1.5
+4	| x1.5
 9	| x2
 11 	| x2.5
 14	| x3
 17 	| x3.5
 19	| x4
-21 	| x4.5
-24	| x5
-27 	| x5.5
-29	| x6
+21 	| x5
+24	| x6
+27 	| x7
+29	| x8
 </div>
 
 An Ability Damage Modifier is applied instead of a regular Ability score in the following cases:
