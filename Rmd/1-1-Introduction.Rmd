@@ -127,7 +127,7 @@ The general method to resolve a check is to roll a **d20**, add the character's 
 
 Unlike check rolls, damage rolls do not use a single d20. Instead, a variable number and type of dice is used for each damage roll, depending on the damaging attack and the weapon used.
 
-To resolve a damage roll, roll all the **Damage Dice** required for the attack, and add them together. Then, add to that total the  **Ability Bonus** to damage for that attackas well as any other **Damage Bonuses** that apply. High level characters then apply multipliers to the damage dice and ability bonus based on their level:
+To resolve a damage roll, roll all the **Damage Dice** required for the attack, and add them together. Then, add to that total the  **Ability Bonus** to damage for that attacks well as any other **Damage Bonuses** that apply. High level characters then apply multipliers to the damage dice and ability bonus based on their level:
 ```
 Damage= (Damage Dice X Dice Multiplier) + (Ability Bonus * Ability Multiplier) + Damage Bonuses
 ```
@@ -160,7 +160,17 @@ Level  | Ability Multiplier
 
 ###Rolling Action Point Rolls
 
-TODO
+**Action Points** are a special kind of resource that Player Characters can spend to gain additional actions in combat. Typically, Action Points are not available at the start of an encounter but, as the combat progresses, Player Characters gain  a small chance of using an Action Point, which increases with each additional turn. This is resolved with an **Action Point Roll**.
+
+To make an Action Point roll, a character rolls a d4, and adds the current value of the **Escalation Die** (explained in the following section), as well as any bonuses or penalties to Action Point rolls that apply for that character. If the result is 4 or higher, the attempt is successful. Otherwise, it is a failure.
+
+The complete rules for using Action Points are described in the Combat chapter.
+
+Note that, in addition to Player Characters, some special monsters such as Elite or Solo monsters are also capable of using Action Points.
+
+###Escalation Die
+ 
+In a combat encounter,  
 
 
 

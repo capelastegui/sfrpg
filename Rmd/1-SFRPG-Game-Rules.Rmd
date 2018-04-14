@@ -8,8 +8,6 @@ output:
 
 ---
 
-
-
 ##Welcome to the game
 
 Welcome to Square Fireballs! In this game, a group of friends can take the role of a party of adventurers exploring a fantasy world, fighting rampaging monsters, and discovering ancient treasures. 
@@ -22,14 +20,17 @@ Square Fireballs is a Role Playing Game, that is, a game where players use their
 
 There are two types of players in these games:
 
-- **Player Characters**: Each Player Character (abreviated as **PC**) has a character with their own unique backgrounds, personalities, and sets of skills. Player Characters get to decide what actions their characters take, but not necessarily the outcomes of these actions - those are determined by the rules of the game and usually involve a random element like dice.
+- **Player Characters**: Each Player Character (abreviated as **PC**) has a character with their own unique background, personality, and set of skills. Player Characters get to decide what actions their characters take, but not necessarily the outcomes of these actions - those are determined by the rules of the game and usually involve a random element like rolling dice.
 - **Game Master**: The Game Master, or **GM**, is in control of the game world: its environments and history, and all characters other than the Player Characters (which are known as **Non-Player Characters**, or **NPCs**). The Game Master's responsibility is to present interesting scenarios and challenges for the players to overcome. In each game session there must be one Game Master.
 
 A Role Playing Game is composed of a set of **game rules**, which provide a framework to resolve the character's actions and their interactions with each other and with the game world. Another component that is often present is a description of the **game setting**: the people and places that PCs can interact with. This is used as a reference by GM and PCs alike to better understand what is going on in the game, and how their characters should behave. In addition, many games also include suggestions on how to run a game, explanations of the game philosophy, and other pieces of advice. 
 
 Role Playing games are usually played in **game sessions** of a few hours of duration. Player groups that meet regularly can have a persistent continuity across game sessions, following the adventures of a cast of recurring characters over extended periods of time - this is known as a **game campaign**.
 
-Unlike board games and most computer games, Role Playing Games do not have a fixed set of goals or win conditions. Rather, a GM presents Player Characters with a series of scenarios, often involving but not limited to the resolution of missions and quests. The Player Characters are not obligated to achieve these missions, but are encouraged to do in order to aquire wealth and fame within the game world (or, more rarely, out of sheer nobility and heroism). On the other hand, it is quite possible for characters to die in the game, and a party of PCs can, in fact, lose the game once if all their characters are dead. It should be noted, though, that although the GM is in control of the PCs' enemies, a GM's goal in the game is not to defeat the PCs, but to present them with challenging encounters, to enforce the game rules with fairness, and to make the game as fun as possible for everyone. Some characters may not survive the experience.
+Unlike board games and most computer games, Role Playing Games do not have a fixed set of goals or win conditions. Rather, a GM presents Player Characters with a series of scenarios, often involving but not limited to the resolution of missions and quests. The Player Characters are not obligated to achieve these missions, but are encouraged to do in order to aquire wealth and fame within the game world (or, more rarely, out of sheer nobility and heroism). On the other hand, it is quite possible for characters to die in the game, and a party of PCs can, in fact, lose the game when all their characters are dead. 
+
+It should be noted, though, that although the GM is in control of the PCs' enemies, a GM's goal in the game is not to defeat the PCs, but to present them with challenging encounters, to enforce the game rules with fairness, and to make the game as fun as possible for everyone. The risk of beloved characters suffering, or even dying, is just a valuable tool to achieve an engaging and memorable game experience.
+
 
 ###Why Square Fireballs?
 
@@ -46,25 +47,25 @@ grid.raster(img2,interpolate=FALSE,x=0.75,width=unit(0.4, "npc"))
 #grid.raster(img2,width=2,height=0.5)
 ```
 
-In this game, whenever a combat encounter comes up, characters are arranged on a gridded map in order to keep track of their relative positions. This can be done by using miniatures to represent each character, or other means such as cardboard tokens. The grid map is composed of **squares** - each square being the minimum unit of distance in the game. Typically, a single character can fit on a given square. Each character can move a certain number of squares during a game turn, and make melee attacks to enemy characters in adjacent squares. A character's ranged attacks have a maximum range measured in squares. Diagonal movement across squares in the map is handled just the same as horizontal or vertical movement - just count the number of squares crossed - , which introduces some interesting distortions to the map geometry. And this brings us back to the figures above, and the Square Fireballs.
+In this game, whenever a combat encounter comes up, characters are arranged on a gridded map in order to keep track of their relative positions. This can be done by using miniatures to represent each character, or other means such as cardboard tokens. The grid map is composed of **squares** - each square being the minimum unit of distance in the game. Typically, each character fits in a single square, though other character sizes are also allowed. Each character can move a certain number of squares during a game turn, and make melee attacks to enemy characters in adjacent squares. A character's ranged attacks have a maximum range measured in squares. Diagonal movement across squares in the map is handled just the same as horizontal or vertical movement - just count the number of squares crossed -  which introduces some interesting distortions to the map geometry. And this brings us back to the figures above, and the Square Fireballs.
 
-You see, this is a game set in a fantasy world where heroic adventurers such as fighters, rogues and wizards battle hordes of monsters such as orcs and goblins. The figure to the left depicts a wizard (leftmost square) facing four goblins and an orc (to the right). Now, wizard characters are famous for their ability to conjure offensive spells to blast groups of enemies. The right figure shows one such spell, a Lesser Fireball, centered on the unfortunate orc, and producing an explosion that damages everything in adjacent squares - including the orc's four goblin buddies. Observant readers will note that, due to the geometrical liberties we have taken in our choice of map representation, said Ball of Fire is rendered as a perfect square. Someone found this funny enough to use it as the name for a blog and, years later, decent enough to reuse as the title of a game. 
+You see, this is a game set in a fantasy world where heroic adventurers such as fighters, rogues and wizards battle hordes of monsters like orcs and goblins. The figure to the left depicts a **wizard** (leftmost square) facing four **goblins** and an **orc** (to the right). Now, wizard characters are famous for their ability to conjure offensive spells to blast groups of enemies. The right figure shows one such spell, a **Lesser Fireball**, centered on the unfortunate orc, and producing an explosion that damages everything in adjacent squares - including the orc's four goblin buddies. Observant readers will note that, due to the geometrical liberties we have taken in our choice of map representation, the aforementioned ball of fire is rendered as a perfect square. The author's questionable sense of humor found this fact funny enough to use as the name for a blog and, years later, as the title of a game. 
 
-And this is why the cover of the game says Square Fireballs, and why goblins don't like to walk close to each other.
+And this is why you will soon be playing a game called Square Fireballs, and why goblins don't like to walk close to each other.
 
 ###Why should you play this game?
 
-In the decades since the invention of role playing games, there have been plenty of game systems based on the same basic concept of adventuring in a fantasy world. Many of them are great. Some introduce highly innovative ideas in their rules or settings. Most of them are prettier than the one you hold in your hands. Why, then, should you keep reading this? 
+In the decades since the invention of role playing games, there have been plenty of game systems based on the same basic concept of adventuring in a fantasy world. Many of them are great. Some introduce highly innovative ideas in their rules or settings. Most of them are prettier than the one you hold in your hands. Why, then, should you keep reading this particular book and spend your valuable time learning a fairly complex set of rules? 
 
-The defining features of Square Fireballs are rich tactical combat, flexible and straightforward rules for non-combat interactions, and easy preparation of game sessions and characters. Of these, the star of the show is the combat. It is a deep system that rewards careful positioning, teamwork, and resource management. It offers a great deal of variety, in options for building and playing characters, in the range of available monsters, and in ways of interacting with the environment. And yet, I have taken great effort in making the rules accessible and consistent, in removing any complexity over the strictly necessary, and in ensuring that no style of play is overshadowed by others. 
+The defining features of Square Fireballs are rich tactical combat, flexible and straightforward rules for non-combat interactions, and easy preparation of game sessions and characters. Of these, I believe that the star of the show is the combat. It is a deep system that rewards careful positioning, teamwork, and resource management. It offers a great deal of variety, in options for building and playing characters, as well as in the range of available monsters, and in the ways of interacting with the environment. And yet, I have taken great efforts to make the rules as accessible and consistent as possible, while removing any complexity above the strictly necessary.
 
 The rules for handling challenges outside of combat are a different beast altogether. All interactions share the same simple resolution mechanic, and there are always multiple paths to achieve an objective. Creative thinking, planning and collaboration are rewarded, and there are clear guidelines for handling failures and allowing the game to move forward. 
 
-Finally, the game goes to great lengths to reduce the effort and difficulty of setting up a session. Characters are highly customizable, but players are always offered a default option, and all choices are close enough in effectiveness that even choosing at random should result in a competent and enjoyable adventurer. Monsters are likewise easy to customize, and random generation of monsters and encounters is both supported and encouraged. Characters have levels that determine their overall power, but the progression is smooth enough that adventurers and monsters of a wide range of levels can take part in the same combat in a satisfying way.
+Finally, the game goes to great lengths to reduce the effort and difficulty of setting up a session. Characters are highly customizable, but players are always offered a default option, and all choices are close enough in effectiveness that even choosing at random should result in a competent and enjoyable adventurer. Monsters are likewise easy to customize, and random generation of monsters and encounters is both supported and encouraged. Characters have levels that determine their overall power, but the progression is smooth enough that adventurers and monsters of a wide range of levels can take part in the same session in a satisfying way.
 
 It's only fair to mention that Square Fireballs is not a perfect system, nor is it a game for everybody. There is a strong emphasis in combat, and while I believe that the non-combat mechanics are solid enough, players that are not interested in fighting monsters will be missing a huge part of the system. The design prioritizes gameplay over realism, and players that look for accurate simulations of fantastical societies and ecosystems will probably not find what they are looking for in here. And the game lacks an actual setting, and leaves Game Masters to borrow their world descriptions from other sources - though, on the bright side, it has been designed to be quite flexible in that regard, and be able to fit in anything from high fantasy to nonmagical medieval adventure.
 
-All of these disclaimers aside, I honestly believe there is a great time to be had in here. If you are at all excited by the notion of incinerating goblins, pushing ogres off cliffs, triggering trapped chests, grappling with dragons, finding legendary swords, talking to mysterious strangers in taverns, arguing with kings, leaping from the shadows, performing miracles, getting stabbed, bitten, cursed, imprisoned, poisoned, petrified, swallowed whole... If any of these sound like fun, read on.
+All of these disclaimers aside, I honestly believe there is a great time to be had in here. If you are at all excited by the notion of incinerating goblins, pushing ogres off cliffs, triggering trapped chests, grappling with dragons, finding legendary swords, talking to mysterious strangers in taverns, arguing with kings, leaping from the shadows, performing miracles, getting stabbed, bitten, cursed, imprisoned, poisoned, petrified or swallowed whole... this may be the game for you.
 
 ##A note on text format
 
@@ -90,7 +91,7 @@ For any non-trivial action that a character performs in the game, success is not
 
 - **Checks**: Used to determine whether an action is a success or a failure.
 - **Damage Rolls**: Used to determine the amount of damage (or, more rarely, of healing) that a character takes.
-- **Action Point Rolls**: Used to determine if a character can use an Action Point.
+- **Action Point Checks**: Used to determine if a character can use an Action Point.
 
 Square Fireballs, like many role playing games, uses special dice with different number of sides:
 
@@ -101,7 +102,7 @@ Square Fireballs, like many role playing games, uses special dice with different
 - Ten-sided dice, or d10
 - Twelve-sided dice, or d12
 
-D20s are always used for Checks. D4s are used for Action Point Rolls. Damage rolls can use d4s, d6s, d8s, d10s or d12s - the specific dice used by a character at any given type depends on that character's choice of weapons and powers.
+D20s are always used for Checks. D4s are used for Action Point Checks. Damage rolls can use d4s, d6s, d8s, d10s or d12s - the specific dice used by a character at any given type depends on that character's choice of weapons and powers.
 
 Sometimes the game requires a player to roll severall dice at once as part of a damage roll. In these cases, the number of dice is written before the type of dice. This way, 2d6 means rolling two six-sided dice, whereas 5d10 means rolling five ten-sided dice, and 9d4 means rolling nine four-sided dice. When a single die is rolled, no number is required: d12 means rolling one twelve-sided die.
 
@@ -112,24 +113,66 @@ The type of dice required for a damage roll in an attack made with a weapon can 
 
 There are several types of checks in the game that a character can make:
 
-- **Attack Rolls**: Used to determine whether an attack hits or misses. Rolled as part of an Attack Action.
+- **Attack Rolls**: Used to determine whether an attack hits or misses. Rolled as part of an **Attack Action**.
 - **Skill Checks**: Used to determine whether an interaction with other characters or the environment is a success or a failure. Rolled as part of a Skill Action.
 - **Saves**: Used to resist a harmful condition. Some effects allow characters to automatically attempt a Save at the end of their turns. These are known as 'Save Ends' effects. In addition, some powers allow a character to Save against certain effects.
 
-The general method to resolve a check is to roll a d20, add the character's bonus to that check (if any) and any modifiers that apply, and compare the result with a target number. If the result is equal or greater than the target number, the check is a success, otherwise, the check is a failure.
+The general method to resolve a check is to roll a **d20**, add the character's **bonus** to that check (if any) and any **modifiers** that apply, and compare the result with a target number. If the result is equal or greater than the target number, the check is a success, otherwise, the check is a failure.
 
-- For Attack Rolls, the attacking character rolls a d20, adds the character's Hit bonus for that attack and any attack modifiers that apply, and compares the result with the defending character's Defense attribute that is appropriate for that attack. There are four different defense attributes: Armor (Ar), Fortitude (For), Reflex (Ref) and Will (Wil). This process is described in more detail in the Combat chapter.
-- For Skill Check, the character making the check rolls a d20, adds the character's Skill bonus for the Skill used in that action, and any modifiers that apply. The result is compared with a number based on the Skill Check Difficulty. This process is described in more detail in the Skills chapter.
-- For a Save, the character making the save rolls a d20, and adds any modifiers that apply. If the result is equal to or greater than 11, the Save succeeds, otherwise it is a failure. This process is described in more detail in the Combat chapter.
+- For **Attack Rolls**, the attacking character rolls a **d20**, adds the character's **Hit bonus** for that attack and any **attack modifiers** that apply, and compares the result with the defending character's **Defense** attribute that is appropriate for that attack. There are four different defense attributes: **Armor (Ar), Fortitude (For), Reflex (Ref) and Will (Wil)**. This process is described in more detail in the Combat chapter.
+- For **Skill Check**, the character making the check rolls a **d20**, adds the character's **Skill bonus** for the Skill used in that action, and any **skill modifiers** that apply. The result is compared with a number based on the Skill Check Difficulty. This process is described in more detail in the Skills chapter.
+- For a **Save**, the character making the save rolls a **d20**, and adds any modifiers that apply. If the result is equal to or greater than **11**, the Save succeeds, otherwise it is a failure. This process is described in more detail in the Combat chapter.
 
 ###Rolling Damage Rolls
 
-TODO
+Unlike check rolls, damage rolls do not use a single d20. Instead, a variable number and type of dice is used for each damage roll, depending on the damaging attack and the weapon used.
 
-###Rolling Action Point Rolls
+To resolve a damage roll, roll all the **Damage Dice** required for the attack, and add them together. Then, add to that total the  **Ability Bonus** to damage for that attackas well as any other **Damage Bonuses** that apply. High level characters then apply multipliers to the damage dice and ability bonus based on their level:
+```
+Damage= (Damage Dice X Dice Multiplier) + (Ability Bonus * Ability Multiplier) + Damage Bonuses
+```
+The level progression for the Dice Multiplier and the Ability Multiplier are shown below for convenience. A more detailed description of these stats is provided on [later](#abilitymult) [sections](#abilitymult) of this chapter
 
-TODO
+<div class="very-narrow">
+Level  | Dice Multiplier
+------------- | -------------
+1   | x1
+6	| x1.5
+16	| x2
+26 	| x3
+</div>
 
+<div class="very-narrow">
+Level  | Ability Multiplier
+------------- | -------------
+1   | x1
+4	| x1.5
+9	| x2
+11 	| x2.5
+14	| x3
+17 	| x3.5
+19	| x4
+21 	| x5
+24	| x6
+27 	| x7
+29	| x8
+</div>
+
+###Rolling Action Point Checks
+
+**Action Points** are a special kind of resource that Player Characters can spend to gain additional actions in combat. Typically, Action Points are not available at the start of an encounter but, as the combat progresses, Player Characters gain  a small chance of using an Action Point, which increases with each additional turn. This is resolved with an **Action Point Check**.
+
+To make an Action Point Check, a character rolls a d4, and adds the current value of the **Escalation Die** (explained in the following section), as well as any bonuses or penalties to Action Point rolls that apply for that character. If the result is 4 or higher, the attempt is successful, and the character can spend the Action Point. Otherwise, it is a failure - the character is not able to use the Action Point, and no Action Point is lost. 
+
+By default, a character may only attempt one Action Point Check each encounter. Some special rules may allow a character to attempt additional Action Point Checks in the same encounter - in that case, the character may only attempt one Action Point Check each turn.
+
+The complete rules for using Action Points are described in the Combat chapter.
+
+Note that, in addition to Player Characters, some special monsters such as Elite or Solo monsters are also capable of using Action Points.
+
+###Escalation Die
+ 
+In a combat encounter,  
 
 
 
@@ -157,11 +200,47 @@ The amount of HP of a Character depends on character Level and Class, for Player
 - Classes with high HP: 35 HP + 3.5 HP per level.
 - Classes with very high HP: 40 HP + 4 HP per level.
 
+<div class="very-narrow">
+Level  | HP Level | Normal HP | High HP | Very High HP
+------------- | -------------
+1 | 11 | 33 | 38 | 44
+2 | 12 | 36 | 42 | 40
+3 | 13 | 39 | 45 | 40
+4 | 14 | 42 | 49 | 40
+5 | 15 | 45 | 52 | 40
+6 | 16 | 48 | 56 | 40
+7 | 17 | 51 | 59 | 40
+8 | 18 | 54 | 63 | 40
+9 | 19 | 57 | 66 | 40
+10 | 20 | 60 | 70 | 40
+11 | 22 | 66 | 77 | 40
+12 | 24 | 72 | 84 | 40
+13 | 26 | 78 | 91 | 40
+14 | 28 | 84 | 98 | 40
+15 | 30 | 90 | 105 | 40
+16 | 32 | 96 | 112 | 40
+17 | 34 | 102 | 119 | 40
+18 | 36 | 108 | 126 | 40
+19 | 38 | 114 | 133 | 40
+20 | 40 | 120 | 140 | 40
+21 | 44 | 132 | 154 | 40
+22 | 48 | 144 | 168 | 40
+23 | 52 | 156 | 182 | 40
+24 | 56 | 168 | 196 | 40
+25 | 60 | 180 | 210 | 40
+26 | 64 | 192 | 224 | 40
+27 | 68 | 200 | 238 | 40
+28 | 72 | 216 | 252 | 40
+29 | 76 | 228 | 266 | 40
+30 | 80 | 240 | 280 | 320
+</div>
+
 A summary table with the HP and other stats corresponding to each Player Character class is provided in the Classes section of the Character Building chapter.
 
 A character under half of their maximum Hit Points is said to be Bloodied. Many game effects check for the Bloodied condition in characters. For easier reference, a **Bloodied Value** stat is provided for each character, equal to one half of maximum Hit Points. Characters with a current HP total under Bloodied Value are Bloodied.
 
 For Player Characters, another stat derived from Hit Points is the **Surge Value**, which determines the amount of HP that is healed when a character spends a Surge to heal. A character's Surge Value is equal to one quarter their maximum Hit Points.
+
 
 ###Abilities
 
@@ -187,26 +266,26 @@ For Player Characters, some stats that are derived from Abilities. These are the
 
 The process for generating a Player Character's Abilities is described in the Stat Generation section, in the Character Building chapter.
 
-####Ability Damage Modifier  
+####Ability Damage Modifier  {#abilitymult}  
 
 As the level of characters increases, so do their Hit Points, the amount of damage they deal, and the amount of healing they require. To keep Ability modifiers relevant when applied to damaging and healing effects of a Player Character, we adjust them by a multiplier that depends on the character's level. The Ability modifier multiplied by this value is called **Ability Damage Modifier**. There is an Ability Damage Modifier for each character Ability, and there are referred to as Strength Damage Modifier, Dexterity Damage Modifier, and so on.
 
 The multiplier applied for an Ability Damage Modifier varies with the character's level, from 1 at level 1 to a maximum of 6 at level 30. The progression by level is:
 
 <div class="very-narrow">
-Level  | Multiplier value
+Level  | Ability Multiplier
 ------------- | -------------
 1   | x1
-3	| x1.5
+4	| x1.5
 9	| x2
 11 	| x2.5
 14	| x3
 17 	| x3.5
 19	| x4
-21 	| x4.5
-24	| x5
-27 	| x5.5
-29	| x6
+21 	| x5
+24	| x6
+27 	| x7
+29	| x8
 </div>
 
 An Ability Damage Modifier is applied instead of a regular Ability score in the following cases:
