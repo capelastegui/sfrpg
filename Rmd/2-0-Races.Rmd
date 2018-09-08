@@ -1,13 +1,4 @@
----
-title: "Chapter B1 - Races"
-output: 
-  html_document:
-    highlight: null
-    mathjax: null
-    css: SFRPG.css
-
----
-#Races
+# Races
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- dirname(getwd())

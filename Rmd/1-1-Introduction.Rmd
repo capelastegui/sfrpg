@@ -1,12 +1,4 @@
----
-title: "Chapter 1 - Introduction"
-output:
-  html_document:
-    css: SFRPG.css
-    highlight: null
-    mathjax: null
-  pdf_document: default
----
+# Introduction
 
 ##Welcome to the game
 

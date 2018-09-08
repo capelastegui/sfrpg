@@ -1,11 +1,5 @@
----
-title: "Chapter 3 - Combat"
-output:
-  html_document:
-    highlight: null
-    mathjax: null
-    css: SFRPG.css
----
+# Combat 
+
 <!---
 ## Combat Fundamentals
 ## The Combat Map

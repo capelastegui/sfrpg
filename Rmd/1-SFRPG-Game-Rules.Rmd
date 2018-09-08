@@ -1,12 +1,4 @@
----
-title: "Square Fireballs RPG"
-output:
-  html_document:
-    highlight: null
-    mathjax: null
-    css: SFRPG.css
-
----
+# Game Rules
 
 ##Welcome to the game
 

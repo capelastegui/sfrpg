@@ -1,13 +1,3 @@
----
-title: "Chapter B3 - Feats"
-output:
-  html_document:
-    highlight: null
-    mathjax: null
-    css: SFRPG.css
-
----
-
 # Feats
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}

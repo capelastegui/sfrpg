@@ -1,12 +1,4 @@
----
-title: "Chapter 2 - Character Building"
-output:
-  html_document:
-    css: SFRPG.css
-    highlight: null
-    mathjax: null
-  pdf_document: default
----
+# Character Building
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- dirname(getwd())

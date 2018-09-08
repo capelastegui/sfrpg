@@ -1,13 +1,4 @@
----
-title: "1-3-Skills"
-output:
-  html_document:
-    highlight: null
-    mathjax: null
-    css: SFRPG.css
-
----
-
+# Skills
 
 Skill bonus:
 

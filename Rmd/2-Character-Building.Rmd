@@ -1,14 +1,6 @@
----
-title: "2-SFRPG-Character-Building"
-output:
-  html_document:
-    highlight: null
-    mathjax: null
-    css: SFRPG.css
+# Character Building
 
----
-
-#Races
+## Races
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- dirname(getwd())
