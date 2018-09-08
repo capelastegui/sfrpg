@@ -9,7 +9,13 @@ output:
 ---
 
 
+Skill bonus:
 
+```Ability + Training + Other```
+
+- Ability:
+- Training:
+- Other:
 
 Skill Check Difficulty table
 
@@ -31,13 +37,13 @@ Skill | Ability | Summary
 Athletics | Strength | Sprinting, Climbing, Swimming
 Authority | Strength | Intimidation, Leadership, Military
 Concentration | Constitution | Study, Craftsmanship, Art
-Endurance | Constitution | Stamina, Partying, First Aid
-Acrobatics | Dexterity | Balance, Jumping, Tumbling
-Stealth | Dexterity | Hiding, Secrets, Codes
+Endurance | Constitution | Stamina, Wakefulness, Survival
+Finesse | Dexterity | Balance, Tumbling, Lockpicking
+Stealth | Dexterity | Hiding, Secrets, Ciphers
 Perception | Wisdom | Observation, Empathy, Memory
-Nature | Wisdom | Flora, Fauna, Environment, Anatomy
+Nature | Wisdom | Flora, Fauna, Environment, Healing
 Diplomacy | Charisma | Rethoric, Etiquette, Politics
-Trickery | Charisma | Deception, Gossip, Sleigh of Hand
+Deception | Charisma | Lying, Gossip, Forgery
 Arcana | Intelligence | Magic, Science, Cosmology
 Lore | Intelligence | History, Geography, Law
 
