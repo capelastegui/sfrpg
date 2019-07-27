@@ -1,6 +1,6 @@
 require(knitr)
 
-basedir  <- getwd()
+basedir  <- here::here()
 .Platform$file.sep <- "\\"
 
 dir.htmpdf <- file.path('C:','\"Program Files\"','wkhtmltopdf','bin')

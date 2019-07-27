@@ -28,7 +28,7 @@ It should be noted, though, that although the GM is in control of the PCs' enemi
 
 Why did we choose to call our game Square Fireballs? What does that even mean? The following figures illustrate the reasoning behind the name:
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-basedir <- dirname(getwd())
+basedir <- here::here()
 library(png)
 library(grid)
 img1 <- readPNG(file.path(basedir,"figures","Square-Fireball-1.png"))

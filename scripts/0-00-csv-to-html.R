@@ -2,7 +2,6 @@ require(plyr)
 require(dplyr)
 
 
-
 buildElement <- function(str, pre, post,skipEmpty=TRUE)
 {
   buildElementLoop  <- function(s,pre,post,skipEmpty){

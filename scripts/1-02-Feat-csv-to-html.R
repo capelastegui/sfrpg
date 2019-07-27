@@ -39,7 +39,7 @@ getFeatSection  <- function(featraw, pre, post)
 }
 
 
-getFeatList <- function (basedir=getwd())
+getFeatList <- function (basedir=here::here())
 {
   source(file.path(basedir,"scripts","0-00-csv-to-html.R"))
   

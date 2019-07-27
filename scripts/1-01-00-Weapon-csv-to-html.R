@@ -1,5 +1,5 @@
 
-getEquipmentTables <- function (basedir=getwd())
+getEquipmentTables <- function (basedir=here::here())
 {
 
 source (file.path(basedir,"scripts","0-00-csv-to-html.R"))

@@ -1,5 +1,5 @@
 
-getClassList <- function (basedir=getwd())
+getClassList <- function (basedir=here::here())
 {
   require(rutils)
   source(file.path(basedir,"scripts","0-00-csv-to-html.R"))

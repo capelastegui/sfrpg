@@ -2,7 +2,7 @@
 
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-basedir <- dirname(getwd())
+basedir <- here::here()
 source(file.path(basedir,"scripts","1-01-Class-csv-to-html.R"))
 classList <- getClassList(basedir)
 
