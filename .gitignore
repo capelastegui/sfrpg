@@ -32,12 +32,15 @@ Network Trash Folder
 Temporary Items
 .apdisk
 *.bak
-html/CharacterCreation/Feats-full-backup.html
-html/CharacterCreation/Feats-table.html
-*.png
-*.pdf
+1-1-Introduction.md
+# IDE directories and files
+.idea/
+*.Rproj
 .Rproj.user
 .Rhistory
 .RData
-1-1-Introduction.md
 *.RData
+# Output folders and files
+*.pdf
+*.html
+html/
