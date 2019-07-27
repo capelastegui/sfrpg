@@ -1,0 +1,13 @@
+Package: SFRPG-web
+Type: Book
+Title: Square Fireballs RPG
+Version: 0.0.1
+Imports:
+    reshape2,
+    plyr,
+    dplyr,
+    ggplot2,
+    bookdown
+Remotes:
+    rstudio/bookdown
+    capelastegui/rutils
