@@ -1,5 +1,5 @@
-
-
+updateLosPlots <- function()
+{
 example1.df <- meltGridCsv(file.path(here::here(),"raw","combat","Grid-LOS-example-1-no-blocking.csv"))
 example1.line.df <- meltGridCsv(file.path(here::here(),"raw","combat","Grid-LOS-example-1-no-blocking-lines.csv"))
 example2.df <- meltGridCsv(file.path(here::here(),"raw","combat","Grid-LOS-example-2-no-blocking.csv"))
@@ -17,7 +17,7 @@ ggsave(file.path(here::here(),"figures","Grid-LOS-example-2-no-blocking.png"))
 plotGridLOS(example3.df,plotLOS(example1.line.df,color1="darkred",color2="darkred"))
 ggsave(file.path(here::here(),"figures","Grid-LOS-example-3-blocking.png"))
 # Note: the arrange(y) part is needed to order path points properly
-plotGridLOS(example4.df, c(plotLOS(example4.line1.df)[2], plotLOS(example4.line2.df %.% arrange(y))[2]))
+plotGridLOS(example4.df, c(plotLOS(example4.line1.df)[2], plotLOS(example4.line2.df %>% arrange(y))[2]))
 ggsave(file.path(here::here(),"figures","Grid-LOS-example-4-wall.png"))
 
 example.cover1.df <- meltGridCsv(file.path(here::here(),"raw","combat","Grid-cover-example-1-diag.csv"))
@@ -32,6 +32,7 @@ plotGrid(example.cover3.df)
 ggsave(file.path(here::here(),"figures","Grid-cover-example-3-vert.png"))
 plotGrid(example.cover4.df)
 ggsave(file.path(here::here(),"figures","Grid-cover-example-4-combi.png"))
+}
 
 
 

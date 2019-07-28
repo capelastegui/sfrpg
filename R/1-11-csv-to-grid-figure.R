@@ -71,8 +71,8 @@ plotGridLOS <- function(grid.df, grid.line.plot=NULL)
 
 plotLOS <-  function(grid.df,color1="darkgreen",color2="darkgreen")
 {
-    list(geom_path(data=grid.df%.% filter(value=="/"), size=1.5,color=color1),
-         geom_path(data=grid.df%.% filter(value=="-"), size=1.5, color=color2)  
+    list(geom_path(data=grid.df%>% filter(value=="/"), size=1.5,color=color1),
+         geom_path(data=grid.df%>% filter(value=="-"), size=1.5, color=color2)  
     )
   
 }

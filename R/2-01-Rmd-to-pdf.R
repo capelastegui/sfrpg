@@ -1,6 +1,6 @@
-require(knitr)
-
-basedir  <- here::here()
+knitRmd <- function()
+{
+  basedir  <- here::here()
 .Platform$file.sep <- "\\"
 
 dir.htmpdf <- file.path('C:','\"Program Files\"','wkhtmltopdf','bin')
@@ -57,6 +57,9 @@ mapply(input=rmd.files,output_file=htm.files,FUN = rmarkdown::render)
 mapply(f.in=htm.files,f.out=pdf.files,FUN = toPdf)
 
 #toPdf(paste (htm.files, collapse=" "), file.path(dir.pdf,"SFRPG-full.pdf"))
+
+}
+
 
 
 

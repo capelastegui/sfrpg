@@ -1,4 +1,6 @@
-source(file.path(here::here(),"R","0-00-csv-to-html.R"))
+#source(file.path(here::here(),"R","0-00-csv-to-html.R"))
+
+updateMonsters <- function() {
 
 monster.race.raw <- file.path(here::here(),"raw","monsters","Monsters-race-raw.csv")
 monster.race.tag <- file.path(here::here(),"raw","monsters","Monsters-race-tags.csv")
@@ -9,7 +11,6 @@ monster.race.htm.file <- file.path(here::here(),"html","monsters","Monsters.race
 monster.class.htm.file <- file.path(here::here(),"html","monsters","Monsters.class.html")
 monster.htm.file <- file.path(here::here(),"html","monsters","Monsters.html")
 
- 
 monster.race.df <- read.csv(monster.race.raw, sep=",")
 monster.race.tag.df <- read.csv(monster.race.tag, sep=";")
 monster.race.tag.pre<- monster.race.tag.df[1,]
@@ -69,3 +70,4 @@ monster.full <- paste("<!DOCTYPE html>",
 writeChar(monster.full,monster.htm.file)
 writeChar(monster.race.full,monster.race.htm.file)
 writeChar(monster.class.full,monster.class.htm.file)
+}

@@ -1,7 +1,7 @@
 
 getManeuverList <- function (basedir=here::here())
 {
-  require(rutils)
+  ##require(rutils)
   source(file.path(basedir,"R","0-00-csv-to-html.R"))
   
   maneuver.raw <- file.path(basedir,"raw","combat","Combat-maneuvers.csv")

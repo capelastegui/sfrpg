@@ -1,7 +1,7 @@
 
 getRaceList <- function (basedir=here::here())
 {
-  require(rutils)
+  #require(rutils)
   source(file.path(basedir,"R","0-00-csv-to-html.R"))
 
 #File paths

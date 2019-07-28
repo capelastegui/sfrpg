@@ -1,19 +1,20 @@
 require(plyr)
 require(dplyr)
 
+#' Build html element from dataframe
+#'
+#' On a dataframe column of strings, 
+#' appends strings before and after each element
+#'
+#' @param str string
+#' @param pre string
+#' @param post string
+#' @param skipEmpty logical
+#'
+#' @return string
+#' @export
+#'
 buildElement <- function(str, pre, post,skipEmpty=TRUE)  {
-  # On a dataframe column of strings,
-  # appends strings before and after each element
-  #
-  # Args:
-  #   str: String vector taken as input
-  #   pre: String to append before input
-  #   post: String to append after input
-  #   skipEmpty: If True, null values of str will be converted to ''.
-  # Returns:
-  #   A string array pasting pre, str and post.
-  #
-  # Used to convert dataframes into html tables
   buildElementLoop  <- function(s,pre,post,skipEmpty){
     if(skipEmpty){
       emptyIndices <- is.na(s)||s==""
