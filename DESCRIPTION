@@ -11,3 +11,4 @@ Imports:
 Remotes:
     rstudio/bookdown
     capelastegui/rutils
+Suggests: testthat
