@@ -4,16 +4,16 @@
 \alias{buildElement}
 \title{Build html element from dataframe}
 \usage{
-buildElement(str, pre, post, skipEmpty = TRUE)
+buildElement(s, pre, post, skipEmpty = TRUE)
 }
 \arguments{
-\item{str}{string}
-
 \item{pre}{string}
 
 \item{post}{string}
 
 \item{skipEmpty}{logical}
+
+\item{str}{string}
 }
 \value{
 string

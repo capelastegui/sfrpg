@@ -1,4 +1,4 @@
 library(testthat)
-library(SFRPG-web)
+library(sfrpg)
 
-test_check("SFRPG-web")
+test_check("sfrpg")

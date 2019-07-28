@@ -1,4 +1,4 @@
-Package: SFRPGweb
+Package: sfrpg
 Type: Package
 Title: Square Fireballs RPG
 Version: 0.0.1.000
@@ -8,10 +8,11 @@ Authors@R:
            role = c("aut", "cre"),
            email = "not.a.real.email@example.com",
            )
-Description: Source and code for the book Square Firebals RPG
+Description: Source and code for the book Square Fireballs RPG.
 License: CC Attribution-NonCommercial 4.0
 Imports:
     here,
+    purrr,
     reshape2,
     plyr,
     dplyr,
