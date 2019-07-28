@@ -1,7 +1,13 @@
 Package: SFRPG-web
 Type: Book
 Title: Square Fireballs RPG
-Version: 0.0.1
+Version: 0.0.1.000
+Authors@R:
+    person(given = "Pedro",
+           family = "Capelastegui",
+           role = c("aut", "cre"))
+Description: Source and code for the book Square Firebals RPG
+License: CC Attribution-NonCommercial 4.0
 Imports:
     reshape2,
     plyr,
@@ -12,3 +18,5 @@ Remotes:
     rstudio/bookdown
     capelastegui/rutils
 Suggests: testthat
+Encoding: UTF-8
+LazyData: true

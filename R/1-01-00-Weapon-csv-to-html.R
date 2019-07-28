@@ -2,7 +2,7 @@
 getEquipmentTables <- function (basedir=here::here())
 {
 
-source (file.path(basedir,"scripts","0-00-csv-to-html.R"))
+source (file.path(basedir,"R","0-00-csv-to-html.R"))
 css.file <- file.path(basedir,"Rmd","SFRPG.css")
 weapons.table.htm.file <- file.path(basedir,"html","CharacterCreation","Weapons-table.html")
 armor.table.htm.file <- file.path(basedir,"html","CharacterCreation","Armor-table.html")

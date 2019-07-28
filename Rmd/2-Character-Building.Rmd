@@ -5,7 +5,7 @@
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- here::here()
 #basedir <- file.path(basedir, 'SFRPG-web')
-source(file.path(basedir,"scripts","1-01-Race-csv-to-html.R"))
+source(file.path(basedir,"R","1-01-Race-csv-to-html.R"))
 raceList <- getRaceList(basedir)
 
 printRaceTitle <- function (raceName, subrace, skipClass=TRUE)
@@ -77,7 +77,7 @@ printRace(raceList$Orc$Orc)
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- here::here()
-source(file.path(basedir,"scripts","1-01-Class-csv-to-html.R"))
+source(file.path(basedir,"R","1-01-Class-csv-to-html.R"))
 classList <- getClassList(basedir)
 
 printClassFeatures <- function (class)
@@ -194,7 +194,7 @@ printClassPowers(currentClass)
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 
 basedir <- here::here()
-source(file.path(basedir,"scripts","1-02-Feat-csv-to-html.R"))
+source(file.path(basedir,"R","1-02-Feat-csv-to-html.R"))
 
 featlist <- getFeatList(basedir)
 pre  <- featlist$tag$pre

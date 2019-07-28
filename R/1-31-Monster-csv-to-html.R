@@ -1,4 +1,4 @@
-source(file.path(here::here(),"scripts","0-00-csv-to-html.R"))
+source(file.path(here::here(),"R","0-00-csv-to-html.R"))
 
 monster.race.raw <- file.path(here::here(),"raw","monsters","Monsters-race-raw.csv")
 monster.race.tag <- file.path(here::here(),"raw","monsters","Monsters-race-tags.csv")
@@ -25,7 +25,7 @@ monster.css <- readChar(monster.css.file, file.info(monster.css.file)$size)
 #quickStr(feat.raw.df)
 #paste(feat.tag.pre$Name, feat.raw.df$Name[1], feat.tag.post$Name, sep="")
 
-#Use these lines to test scripts
+#Use these lines to test R
 #tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
 monster.race.df<-monster.race.df[1:40,]
 monster.race.df<-gsub.dataframe(monster.race.df,"\\n", "<br>")

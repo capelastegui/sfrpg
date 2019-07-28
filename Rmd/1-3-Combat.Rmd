@@ -413,7 +413,7 @@ Slide multiple units, at range (1) and in melee (2)
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- here::here()
-source(file.path(basedir,"scripts","1-01-Maneuver-csv-to-html.R"))
+source(file.path(basedir,"R","1-01-Maneuver-csv-to-html.R"))
 
 cat(toHtmlManeuverList(getManeuverList(basedir)))
 ```

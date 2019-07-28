@@ -3,7 +3,7 @@
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- here::here()
 #basedir <- file.path(basedir, 'SFRPG-web')
-source(file.path(basedir,"scripts","1-01-Race-csv-to-html.R"))
+source(file.path(basedir,"R","1-01-Race-csv-to-html.R"))
 raceList <- getRaceList(basedir)
 
 printRaceTitle <- function (raceName, subrace, skipClass=TRUE)

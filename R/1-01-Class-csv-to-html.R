@@ -2,7 +2,7 @@
 getClassList <- function (basedir=here::here())
 {
   require(rutils)
-  source(file.path(basedir,"scripts","0-00-csv-to-html.R"))
+  source(file.path(basedir,"R","0-00-csv-to-html.R"))
 
 power.raw <- file.path(basedir,"raw","charactercreation","Powers-raw.csv")
 power.tag <- file.path(basedir,"raw","charactercreation","Powers-tags.csv")

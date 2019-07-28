@@ -41,7 +41,7 @@ getFeatSection  <- function(featraw, pre, post)
 
 getFeatList <- function (basedir=here::here())
 {
-  source(file.path(basedir,"scripts","0-00-csv-to-html.R"))
+  source(file.path(basedir,"R","0-00-csv-to-html.R"))
   
   feat.raw <- file.path(basedir,"raw","charactercreation","Feats-raw.csv")
   feat.tag <- file.path(basedir,"raw","charactercreation","Feats-tags.csv")

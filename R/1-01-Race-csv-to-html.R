@@ -2,7 +2,7 @@
 getRaceList <- function (basedir=here::here())
 {
   require(rutils)
-  source(file.path(basedir,"scripts","0-00-csv-to-html.R"))
+  source(file.path(basedir,"R","0-00-csv-to-html.R"))
 
 #File paths
 ## Race powers
