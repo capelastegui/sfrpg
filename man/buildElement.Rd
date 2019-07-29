@@ -2,23 +2,26 @@
 % Please edit documentation in R/0-00-csv-to-html.R
 \name{buildElement}
 \alias{buildElement}
-\title{Build html element from dataframe}
+\title{Append tags before and after elements in a string array}
 \usage{
 buildElement(s, pre, post, skipEmpty = TRUE)
 }
 \arguments{
+\item{s}{string}
+
 \item{pre}{string}
 
 \item{post}{string}
 
 \item{skipEmpty}{logical}
-
-\item{str}{string}
 }
 \value{
 string
 }
 \description{
-On a dataframe column of strings, 
-appends strings before and after each element
+Typically used to convert raw data into html elements
+}
+\examples{
+str_result = buildElement(c('hello','world'),'<<', '>>')
+
 }

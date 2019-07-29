@@ -17,7 +17,11 @@ Imports:
     plyr,
     dplyr,
     ggplot2,
-    bookdown
+    stringr,
+    rmarkdown,
+    bookdown,
+    magrittr,
+    tibble
 Remotes:
     rstudio/bookdown
     capelastegui/rutils
