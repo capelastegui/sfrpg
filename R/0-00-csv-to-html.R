@@ -1,4 +1,3 @@
-# library(plyr)
 # library(dplyr)
 
 #' Append tags before and after elements in a string array
@@ -50,27 +49,7 @@ buildElement <- function(s, pre, post,skipEmpty=TRUE)  {
 #'   buildElementApply(tibble::tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
 #'   
 buildElementApply <- function (df,pre,post,
-  df.names=names(df),skipEmpty=TRUE)
-  # On an input dataframe of string columns, run BuildElement() on
-  # each column, then paste each row into a single string, then
-  # paste all rows into a single string and append strings before and after.
-  #
-  # Args:
-  #   df: Dataframe with string columns, used as input
-  #   pre: Dataframe with string columns and same names as df. Each column in
-  #        pre contains a string value to append before the corresponding
-  #        column in df. Includes a Body column, to be appended before the
-  #        aggregated output.
-  #   post: Dataframe with string columns and same names as df. Each column in
-  #        post contains a string value to append before the corresponding
-  #        column in df. Includes a Body column, to be appended after the
-  #        aggregated output.
-  #   skipEmpty: If True, null values of str will be converted to ''.
-  # Returns:
-  #   A string array pasting pre, str and post.
-  #
-  # Used to convert dataframes into html elements
-{
+  df.names=names(df),skipEmpty=TRUE) {
   df_tmp = df.names %>%
     purrr::map_dfc(~buildElement(df[[.]], pre[[.]], post[[.]], skipEmpty))
 
@@ -101,24 +80,26 @@ buildElementApply <- function (df,pre,post,
 buildTableApply <- function (df, df.names=names(df),
   tableClass=NULL,skipHeader=FALSE)
 {
-  if(!skipHeader){
-    tmp1<-paste0(plyr::laply(df.names,
-      .fun=function(n){buildElement(n,"<td>","</td>",skipEmpty=FALSE)}),
-      collapse="")
-    tmp1<-paste0("<tr>",tmp1,"</tr>", "\n",collapse="")
-  }else{tmp1 <- ""}
-  
-  tmp<-plyr::ldply(df.names,df,
-    .fun=function(n,df){buildElement(df[[n]],"<td>","</td>",skipEmpty=FALSE)})
-  tmp<-plyr::laply(tmp,paste0, collapse="")
-  tmp<-paste0("<tr>",tmp,"</tr>", "\n",collapse="")
-  tmp<-paste0(tmp1,tmp,collapse="\r\n")
-  tableTag<-"<table>"
+  table_tag<-"<table>"
   if(!is.null(tableClass))
-    {tableTag<-paste0("<table class=\"",tableClass,"\">")}
-  tmp<-paste(tableTag,"\r\n<tbody>" ,tmp,"</tbody>\r\n</table>", "\n",
+  {table_tag<-paste0("<table class=\"",tableClass,"\">")}
+  
+  if(!skipHeader){
+    table_header<-map_chr(df.names, buildElement, "<td>","</td>",skipEmpty=FALSE) %>% 
+      paste0(collapse='') %>% 
+      (function(x) {paste0("<tr>",x,"</tr>", "\n",collapse="")})
+  }else{table_header <- ""}
+  
+  table_body<-df[df.names] %>% map(buildElement, "<td>","</td>",skipEmpty=FALSE) %>%
+    dplyr::bind_cols() %>% 
+    purrr::transpose() %>%
+    purrr::map_chr(paste, collapse='') %>%
+    (function(x) {paste0("<tr>",x,"</tr>", "\n",collapse="")}) %>% 
+    (function (x) {paste0(table_header,x,collapse="\r\n")})
+
+  result<-paste(table_tag,"\r\n<tbody>" ,table_body,"</tbody>\r\n</table>", "\n",
     collapse="")
-  tmp
+  result
 }
 
 
@@ -142,14 +123,18 @@ gsubColwise <- function(df,pattern,replacement)
   df %>% purrr::map_dfc(replace_if_str)
 }
 
-# gsub.dataframe is an alias for gsubColwise
-# TODO: rename references for consistency
-gsub.dataframe <- gsubColwise
+# TODO: Consider changing all factors to strings
 
-
+#' Apply factor again on factor columns
+#'
+#' @param data 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 refactor<-function(data)
   # Run factor() on each factor column
 {
-  plyr::colwise(function(col)
-    {if (is.factor(col)) factor(col)  else col }) (data)
+  data %>% purrr::map_if(is.factor, factor) %>% dplyr::bind_cols()
 }

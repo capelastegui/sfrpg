@@ -29,8 +29,8 @@ monster.css <- readChar(monster.css.file, file.info(monster.css.file)$size)
 #Use these lines to test R
 #tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
 monster.race.df<-monster.race.df[1:40,]
-monster.race.df<-gsub.dataframe(monster.race.df,"\\n", "<br>")
-monster.class.df<-gsub.dataframe(monster.class.df,"\\n", "<br>")
+monster.race.df<-gsubColwise(monster.race.df,"\\n", "<br>")
+monster.class.df<-gsubColwise(monster.class.df,"\\n", "<br>")
 
 #monster.class.df<-monster.class.df[1,]
 

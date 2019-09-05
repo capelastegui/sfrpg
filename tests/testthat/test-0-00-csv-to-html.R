@@ -55,7 +55,7 @@ test_that("buildTableApply works", {
     "</tbody>\r\n</table> \n")
   expect_equal(str_result, str_expected)
   
-  # Test 3 - with df.names and tableClass
+  # Test 2 - with df.names and tableClass
   str_result = buildTableApply(df_in, df.names='x', tableClass='my_class')
   str_expected = paste0(
     "<table class=\"my_class\"> \r\n",
@@ -81,6 +81,14 @@ test_that('gsubColwise works',{
   df_in = tibble(x=c('hello','world'),y=c('a', 'o')) 
   df_result = df_in %>% gsubColwise('o','u')
   df_expected = tibble(x=c('hellu','wurld'),y=c('a', 'u')) 
+  expect_equal(df_result, df_expected)
+  
+})
+
+test_that('refactor works',{
+  df_in = tibble(x=c('hello','world'),y=c('a', 'o')) %>% mutate(x=x %>% factor)
+  df_result = df_in %>% head(1) %>% refactor
+  df_expected = tibble(x=c('hello'),y=c('a')) %>% mutate(x=x %>% factor) %>% as.data.frame()
   expect_equal(df_result, df_expected)
   
 })
