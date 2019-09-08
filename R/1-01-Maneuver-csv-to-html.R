@@ -22,7 +22,7 @@ getManeuverList <- function (dir_base=here::here())
   
   maneuver.raw.df <- read.csv(maneuver.raw, sep=";") %>% 
     filter(Name!="DELETEME")%>% 
-    gsubColwise("\\n","<br>")%>% 
+    gsub_colwise("\\n","<br>")%>%
     tbl_df() %>% 
     
     mutate(UsageLimit=factor(UsageLimit, 
@@ -64,7 +64,7 @@ writeManeuverList  <- function(maneuver.list)
   
   #Build maneuver tables
   #add stuff to nested list
-  #class.list  <- llply.n(class.list,2,.fun2 = function(...){c(...,a="A")})
+  #l_class  <- llply.n(l_class,2,.fun2 = function(...){c(...,a="A")})
   # No longer used, keep in case we need a global maneuver table
   # maneuver.table.htm<-build_table_apply(maneuver.raw.df,
   #                       df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),

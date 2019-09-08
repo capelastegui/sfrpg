@@ -21,7 +21,7 @@ race.power.table.htm.file <- file.path(dir_base,"html","CharacterCreation","race
 
 #Data frames
 race.stat.df  <- read.csv(race.stat.raw, sep=";", header=TRUE)
-race.feature.df  <- read.csv(race.features.raw, sep=";", header=TRUE) %>%  gsubColwise("\\n","<br>")
+race.feature.df  <- read.csv(race.features.raw, sep=";", header=TRUE) %>%  gsub_colwise("\\n","<br>")
 #Lists
 race.stat.list  <- split(race.stat.df,race.stat.df$Race)
 race.stat.list <- llply(race.stat.list, .fun=function(a){a <- refactor(a);split(a,a$Subrace)})
@@ -42,7 +42,7 @@ feature.tag.pre<- feature.tag.df[1,]
 feature.tag.post<- feature.tag.df[2,]
 
 race.power.raw.df <- read.csv(race.power.raw, sep=";") %>% 
-  gsubColwise("\\n","<br>")%>% 
+  gsub_colwise("\\n","<br>")%>%
   tbl_df() %>% 
   mutate(UsageLimit=factor(UsageLimit, 
                            levels=c(usageOrder,setdiff(UsageLimit,usageOrder)))) %>%  

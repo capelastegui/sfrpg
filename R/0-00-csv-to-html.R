@@ -49,13 +49,17 @@ build_element <- function(s, pre, post,skipEmpty=TRUE)  {
 #'   build_element_apply(tibble::tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
 #'   
 build_element_apply <- function (df,pre,post,
-  df.names=names(df),skipEmpty=TRUE) {
+  df.names=names(df),skipEmpty=TRUE, collapse='') {
+
+  pre <- pre %>% fillna_df()
+  post <- post %>% fillna_df()
+
   df_tmp = df.names %>%
     purrr::map_dfc(~build_element(df[[.]], pre[[.]], post[[.]], skipEmpty))
 
   str_result = df_tmp %>%
     purrr::transpose() %>%
-    purrr::map(paste0, collapse="") %>%
+    purrr::map(paste0, collapse=collapse) %>%
     purrr::map_chr(~paste0(pre$Body, ., post$Body, collapse= "\r\n"))  %>%
     purrr::reduce(paste ,sep="\r\n")
   str_result
@@ -80,6 +84,8 @@ build_element_apply <- function (df,pre,post,
 build_table_apply <- function (df, df.names=names(df),
   tableClass=NULL,skipHeader=FALSE)
 {
+  df = df %>% fillna_df()
+
   table_tag<-"<table>"
   if(!is.null(tableClass))
   {table_tag<-paste0("<table class=\"",tableClass,"\">")}
@@ -137,4 +143,9 @@ refactor<-function(data)
   # Run factor() on each factor column
 {
   data %>% purrr::map_if(is.factor, factor) %>% dplyr::bind_cols()
+}
+
+
+fillna_df <- function(df) {
+  df %>% mutate_all (~tidyr::replace_na(.,''))
 }

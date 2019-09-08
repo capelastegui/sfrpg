@@ -4,7 +4,7 @@
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 basedir <- here::here()
 source(file.path(basedir,"R","1-01-Class-csv-to-html.R"))
-classList <- getClassList(basedir)
+classList <- get_l_class(basedir)
 
 printClassFeatures <- function (class)
 {

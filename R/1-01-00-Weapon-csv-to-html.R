@@ -16,10 +16,8 @@ get_equip_tables <- function (dir_base=here::here())
 {
   file_utils = file.path(dir_base,"R","0-00-csv-to-html.R")
   source (file_utils)
-  file_css <- file.path(dir_base,"Rmd","SFRPG.css")
-  get_file_htm <- function(s) {file.path(dir_base,"html","CharacterCreation",s)}
+  #get_file_htm <- function(s) {file.path(dir_base,"html","CharacterCreation",s)}
 
-  css <- readChar(file_css, file.info(file_css)$size)
   read_my_csv <- function(s) {
       readr::read_delim(file.path(dir_base,"raw","CharacterCreation",paste0(s,".csv")),
                         delim=";")}
