@@ -27,15 +27,15 @@ monster.css <- readChar(monster.css.file, file.info(monster.css.file)$size)
 #paste(feat.tag.pre$Name, feat.raw.df$Name[1], feat.tag.post$Name, sep="")
 
 #Use these lines to test R
-#tmp1<-buildElement(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
+#tmp1<-build_element(feat.raw.table$Name, feat.pre.table$Name, feat.post.table$Name)
 monster.race.df<-monster.race.df[1:40,]
 monster.race.df<-gsubColwise(monster.race.df,"\\n", "<br>")
 monster.class.df<-gsubColwise(monster.class.df,"\\n", "<br>")
 
 #monster.class.df<-monster.class.df[1,]
 
-monster.race.htm<-buildElementApply(monster.race.df, monster.race.tag.pre, monster.race.tag.post, df.names=names(monster.race.df))
-monster.class.htm<-buildElementApply(monster.class.df, monster.class.tag.pre, monster.class.tag.post, df.names=names(monster.class.df))
+monster.race.htm<-build_element_apply(monster.race.df, monster.race.tag.pre, monster.race.tag.post, df.names=names(monster.race.df))
+monster.class.htm<-build_element_apply(monster.class.df, monster.class.tag.pre, monster.class.tag.post, df.names=names(monster.class.df))
 
 #write(feat.htm,feat.htm.file)
 

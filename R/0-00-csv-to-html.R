@@ -13,9 +13,9 @@
 #' @export
 #'
 #'@examples
-#' str_result = buildElement(c('hello','world'),'<<', '>>')
+#' str_result = build_element(c('hello','world'),'<<', '>>')
 #' 
-buildElement <- function(s, pre, post,skipEmpty=TRUE)  {
+build_element <- function(s, pre, post,skipEmpty=TRUE)  {
   if (skipEmpty){
     s  %>% purrr::map_chr(
       ~dplyr::if_else(is.na(.) | . == '',
@@ -46,12 +46,12 @@ buildElement <- function(s, pre, post,skipEmpty=TRUE)  {
 #' @examples
 #'   df_pre = tibble::tibble(x='<x>', y='<y>' ,Body='(')
 #'   df_post = tibble::tibble(x= '<x>', y='</y>', Body=')')
-#'   buildElementApply(tibble::tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
+#'   build_element_apply(tibble::tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
 #'   
-buildElementApply <- function (df,pre,post,
+build_element_apply <- function (df,pre,post,
   df.names=names(df),skipEmpty=TRUE) {
   df_tmp = df.names %>%
-    purrr::map_dfc(~buildElement(df[[.]], pre[[.]], post[[.]], skipEmpty))
+    purrr::map_dfc(~build_element(df[[.]], pre[[.]], post[[.]], skipEmpty))
 
   str_result = df_tmp %>%
     purrr::transpose() %>%
@@ -75,9 +75,9 @@ buildElementApply <- function (df,pre,post,
 #' @export
 #'
 #' @examples
-#' buildTableApply(tibble::tibble(x=c('hello','world'),y=c('1', '2')) )
+#' build_table_apply(tibble::tibble(x=c('hello','world'),y=c('1', '2')) )
 #' 
-buildTableApply <- function (df, df.names=names(df),
+build_table_apply <- function (df, df.names=names(df),
   tableClass=NULL,skipHeader=FALSE)
 {
   table_tag<-"<table>"
@@ -85,12 +85,12 @@ buildTableApply <- function (df, df.names=names(df),
   {table_tag<-paste0("<table class=\"",tableClass,"\">")}
   
   if(!skipHeader){
-    table_header<-map_chr(df.names, buildElement, "<td>","</td>",skipEmpty=FALSE) %>% 
+    table_header<-purrr::map_chr(df.names, build_element, "<td>","</td>",skipEmpty=FALSE) %>%
       paste0(collapse='') %>% 
       (function(x) {paste0("<tr>",x,"</tr>", "\n",collapse="")})
   }else{table_header <- ""}
   
-  table_body<-df[df.names] %>% map(buildElement, "<td>","</td>",skipEmpty=FALSE) %>%
+  table_body<-df[df.names] %>% purrr::map(build_element, "<td>","</td>",skipEmpty=FALSE) %>%
     dplyr::bind_cols() %>% 
     purrr::transpose() %>%
     purrr::map_chr(paste, collapse='') %>%
@@ -113,7 +113,7 @@ buildTableApply <- function (df, df.names=names(df),
 #' @export
 #'
 #' @examples
-gsubColwise <- function(df,pattern,replacement)
+gsub_colwise <- function(df,pattern,replacement)
 {
   replace_if_str <- function(x){
     if(is.character(x) | is.factor(x)) {

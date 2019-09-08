@@ -25,7 +25,7 @@ class.stat.list <- llply(class.stat.list, .fun=function(a){a <- refactor(a);spli
 class.stat.list <- llply.n(class.stat.list,2,
                        .fun2=function(df){
                          table <- cbind(gsub("\\."," ",names(df)),trans_df(df))
-                         htm <- buildTableApply(table,tableClass="Class-table", skipHeader = TRUE)
+                         htm <- build_table_apply(table,tableClass="Class-table", skipHeader = TRUE)
                          list(stats=table,stats.htm=htm)
                               })
 
@@ -57,12 +57,12 @@ class.power.list  <- split(power.raw.df,power.raw.df$Class)
 class.power.list <- llply(class.power.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
 class.power.list <- llply.n(class.power.list,2,power.tag.pre, power.tag.post,
                            .fun2=function(df,power.tag.pre, power.tag.post){
-                             htm <- buildElementApply(df,power.tag.pre, power.tag.post,
+                             htm <- build_element_apply(df,power.tag.pre, power.tag.post,
                                                       df.names=setdiff(names(df),c("Summary","Build","usageColors")),
                                                       skipEmpty = TRUE)
                              htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
 
-                             table <- buildTableApply(df,
+                             table <- build_table_apply(df,
                                                     df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
                                                     tableClass="Power-table")
                              list(powers=df,powers.htm=htm,powers.table=table)
@@ -79,7 +79,7 @@ class.feature.list  <- split(class.feature.df,class.feature.df$Class)
 class.feature.list <- llply(class.feature.list, .fun=function(a){a <- refactor(a);split(a,a$Build)})
 class.feature.list <- llply.n(class.feature.list,2,feature.tag.pre, feature.tag.post,
                             .fun2=function(df,feature.tag.pre, feature.tag.post){
-                              htm <- buildElementApply(df,feature.tag.pre, feature.tag.post,
+                              htm <- build_element_apply(df,feature.tag.pre, feature.tag.post,
                                                        df.names=setdiff(names(df),c("Class","Build")),
                                                        skipEmpty = TRUE)
                               #htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
@@ -117,7 +117,7 @@ power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-tab
 #add stuff to nested list
 #class.list  <- llply.n(class.list,2,.fun2 = function(...){c(...,a="A")})
 # No longer used, keep in case we need a global power table
-# power.table.htm<-buildTableApply(power.raw.df, 
+# power.table.htm<-build_table_apply(power.raw.df,
 #                       df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
 #                       tableClass="Power-table")
 # power.table.htm<-paste(power.table.htm,collapse="<br> ")

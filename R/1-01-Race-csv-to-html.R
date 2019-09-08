@@ -28,7 +28,7 @@ race.stat.list <- llply(race.stat.list, .fun=function(a){a <- refactor(a);split(
 race.stat.list <- llply.n(race.stat.list,2,
                        .fun2=function(df){
                          table <- cbind(gsub("\\."," ",names(df)),trans_df(df))
-                         htm <- buildTableApply(table,tableClass = "Race-table", skipHeader = TRUE)
+                         htm <- build_table_apply(table,tableClass = "Race-table", skipHeader = TRUE)
                          list(stats=table,stats.htm=htm)
                               })
 
@@ -60,12 +60,12 @@ race.power.list  <- split(race.power.raw.df,race.power.raw.df$Race)
 race.power.list <- llply(race.power.list, .fun=function(a){a <- refactor(a);split(a,a$Subrace)})
 race.power.list <- llply.n(race.power.list,2,race.power.tag.pre, race.power.tag.post,
                            .fun2=function(df,race.power.tag.pre, race.power.tag.post){
-                             htm <- buildElementApply(df,race.power.tag.pre, race.power.tag.post,
+                             htm <- build_element_apply(df,race.power.tag.pre, race.power.tag.post,
                                                       df.names=setdiff(names(df),c("Summary","Subrace","usageColors")),
                                                       skipEmpty = TRUE)
                              htm <- paste("<div race=\"Power-List\">",htm,"</div>" ,sep="")
 
-                             table <- buildTableApply(df,
+                             table <- build_table_apply(df,
                                                     df.names=c("Name", "Race", "Level", "Type","UsageLimit","Range","Action","Summary"),
                                                     tableClass = "Power-table")
                              list(powers=df,powers.htm=htm,powers.table=table)
@@ -82,7 +82,7 @@ race.feature.list  <- split(race.feature.df,race.feature.df$Race)
 race.feature.list <- llply(race.feature.list, .fun=function(a){a <- refactor(a);split(a,a$Subrace)})
 race.feature.list <- llply.n(race.feature.list,2,feature.tag.pre, feature.tag.post,
                             .fun2=function(df,feature.tag.pre, feature.tag.post){
-                              htm <- buildElementApply(df,feature.tag.pre, feature.tag.post,
+                              htm <- build_element_apply(df,feature.tag.pre, feature.tag.post,
                                                        df.names=setdiff(names(df),c("Race","Subrace")),
                                                        skipEmpty = TRUE)
                               #htm <- paste("<div race=\"Power-List\">",htm,"</div>" ,sep="")
@@ -120,7 +120,7 @@ race.power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Power
 #add stuff to nested list
 #race.list  <- llply.n(race.list,2,.fun2 = function(...){c(...,a="A")})
 # No longer used, keep in case we need a global power table
-# race.power.table.htm<-buildTableApply(race.power.raw.df, 
+# race.power.table.htm<-build_table_apply(race.power.raw.df,
 #                       df.names=c("Name", "race", "Level", "Type","UsageLimit","Range","Action","Summary"),
 #                       tablerace="Power-table")
 # race.power.table.htm<-paste(race.power.table.htm,collapse="<br> ")

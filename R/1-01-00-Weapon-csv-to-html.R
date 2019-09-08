@@ -1,42 +1,47 @@
+library(dplyr)
+library(stringr)
 
 getEquipmentTables <- function (basedir=here::here())
 {
+  file_utils = file.path(basedir,"R","0-00-csv-to-html.R")
+  source (file_utils)
+  file_css <- file.path(basedir,"Rmd","SFRPG.css")
+  get_file_htm <- function(s) {file.path(basedir,"html","CharacterCreation",s)}
+  file_weapons_table_html <- get_file_htm("Weapons-table.html")
+  file_armor_table_html <- get_file_htm("Armor-table.html")
+  file_armorbyclass_table_htm <- get_file_htm("Armor-by-class-legacy.html")
+  file_implement_table_htm <- get_file_htm("Implement-table.html")
+  
+  css <- readChar(file_css, file.info(file_css)$size)
+  read_my_csv <- function(s) {
+      read.csv(file.path(basedir,"raw","CharacterCreation",paste0(s,".csv")),
+      sep=";")}
+  table_weapons <- read_my_csv("Weapons-raw")
+  table_armor <- read_my_csv("Armor-raw") %>%
+    purrr::set_names(names(.) %>% stringr::str_replace("\\."," "))
 
-source (file.path(basedir,"R","0-00-csv-to-html.R"))
-css.file <- file.path(basedir,"Rmd","SFRPG.css")
-weapons.table.htm.file <- file.path(basedir,"html","CharacterCreation","Weapons-table.html")
-armor.table.htm.file <- file.path(basedir,"html","CharacterCreation","Armor-table.html")
-armorbyclass.table.htm.file <- file.path(basedir,"html","CharacterCreation","Armor-by-class-legacy.html")
-implement.table.htm.file <- file.path(basedir,"html","CharacterCreation","Implement-table.html")
+  table_implement <- read_my_csv("Implement-raw")
+  table_armorbyclass <- read_my_csv('Armor-by-class-legacy') %>%
+    dplyr::arrange(Class)
 
-css <- readChar(css.file, file.info(css.file)$size)
-weapons.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Weapons-raw.csv"), sep=";") 
-armor.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Armor-raw.csv"), sep=";")
-implement.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Implement-raw.csv"), sep=";")
-names(armor.table) <- gsub("\\."," ",names(armor.table))
-armorbyclass.table <- read.csv(file.path(basedir,"raw","CharacterCreation","Armor-by-class-legacy.csv"), sep=";")%>% arrange(Class)
+  #Build weapons tables
 
-#Build weapons tables
-
-
-
-
-weapons.table.htm<-llply(weapons.table %>%  
-                        split(weapons.table$Training)  ,
-                      .fun=buildTableApply,
-                      df.names=names(weapons.table),
-                      tableClass="General-table")
-
-armor.table.htm  <- buildTableApply(armor.table,tableClass="General-table")
-armorbyclass.table.htm  <- buildTableApply(armorbyclass.table,tableClass="General-table")
-
-implement.table.htm  <- buildTableApply(implement.table,tableClass="General-table")
-
-equipList <- list(weapons=weapons.table.htm, 
-                  armor=armor.table.htm, 
-                  legacy.class.armor=armorbyclass.table.htm,
-                  implements=implement.table.htm)
-equipList
+  weapons.table.htm<-llply(table_weapons %>%
+                             split(table_weapons$Training)  ,
+                           .fun=build_table_apply,
+                           df.names=names(table_weapons),
+                           tableClass="General-table")
+  
+  armor.table.htm  <- build_table_apply(table_armor,tableClass="General-table")
+  armorbyclass.table.htm  <- build_table_apply(table_armorbyclass,tableClass="General-table")
+  
+  implement.table.htm  <- build_table_apply(table_implement,tableClass="General-table")
+  
+  equipList <- list(weapons=weapons.table.htm, 
+                    armor=armor.table.htm, 
+                    legacy.class.armor=armorbyclass.table.htm,
+                    implements=implement.table.htm)
+  equipList
 }
 # weapons.table.htm<-paste(weapons.table.htm,collapse="\r\n<br> ")
 # 

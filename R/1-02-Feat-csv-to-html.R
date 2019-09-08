@@ -33,8 +33,8 @@ getFullFeatHtm  <- function(featlist)
 
 getFeatSection  <- function(featraw, pre, post)
 {
-  feat.table  <- buildTableApply(featraw,df.names=setdiff(names(featraw),"Text"))
-  feat.htm  <- buildElementApply(featraw,pre,post,df.names=setdiff(names(featraw),"Summary"))
+  feat.table  <- build_table_apply(featraw,df.names=setdiff(names(featraw),"Text"))
+  feat.htm  <- build_element_apply(featraw,pre,post,df.names=setdiff(names(featraw),"Summary"))
   paste0 (feat.table,feat.htm,collapse="<br/>\r\n")
 }
 
@@ -76,16 +76,16 @@ getFeatList <- function (basedir=here::here())
   
   
   feat.list.raw <- llply(split(feat.raw.df,feat.raw.df$Level),.fun=applysplit, splitvar="Category")
-  feat.list.table  <- llply.2(feat.list.raw,.fun=buildTableApply, 
+  feat.list.table  <- llply.2(feat.list.raw,.fun=build_table_apply,
                               df.names=setdiff(names(feat.raw.df),"Text"))
-  feat.list.htm  <- llply.2(feat.list.raw,.fun=buildElementApply, 
+  feat.list.htm  <- llply.2(feat.list.raw,.fun=build_element_apply,
                             feat.tag.pre, feat.tag.post, df.names=setdiff(names(feat.raw.df),"Summary"))
   
   
   feat.lesser.list.raw  <- llply(split(feat.lesser.raw.df,feat.lesser.raw.df$Level),.fun=applysplit, splitvar="Keywords")
-  feat.lesser.list.table  <- llply.2(feat.lesser.list.raw,.fun=buildTableApply, 
+  feat.lesser.list.table  <- llply.2(feat.lesser.list.raw,.fun=build_table_apply,
                                      df.names=setdiff(names(feat.lesser.raw.df),"Text"))
-  feat.lesser.list.htm  <- llply.2(feat.lesser.list.raw,.fun=buildElementApply, 
+  feat.lesser.list.htm  <- llply.2(feat.lesser.list.raw,.fun=build_element_apply,
                                    feat.lesser.tag.pre, feat.lesser.tag.post, df.names=setdiff(names(feat.lesser.raw.df),"Summary"))
   
   

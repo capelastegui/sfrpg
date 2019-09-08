@@ -39,11 +39,11 @@ getManeuverList <- function (basedir=here::here())
    #mutate(Level=paste(Level,"</span>",sep=""))
   
   
-  htm <- buildElementApply(maneuver.raw.df,maneuver.tag.pre, maneuver.tag.post,
+  htm <- build_element_apply(maneuver.raw.df,maneuver.tag.pre, maneuver.tag.post,
                            df.names=setdiff(names(maneuver.raw.df),c("Summary","Build","usageColors")),
                            skipEmpty = TRUE)
   
-  table <- buildTableApply(maneuver.raw.df %>% arrange(desc(Type),Name),
+  table <- build_table_apply(maneuver.raw.df %>% arrange(desc(Type),Name),
                            df.names=c("Name",  "Type", "Action","Summary"),
                            tableClass="power-table")
   
@@ -66,7 +66,7 @@ writeManeuverList  <- function(maneuver.list)
   #add stuff to nested list
   #class.list  <- llply.n(class.list,2,.fun2 = function(...){c(...,a="A")})
   # No longer used, keep in case we need a global maneuver table
-  # maneuver.table.htm<-buildTableApply(maneuver.raw.df, 
+  # maneuver.table.htm<-build_table_apply(maneuver.raw.df,
   #                       df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
   #                       tableClass="maneuver-table")
   # maneuver.table.htm<-paste(maneuver.table.htm,collapse="<br> ")
