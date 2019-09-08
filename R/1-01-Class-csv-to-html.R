@@ -1,21 +1,21 @@
 
-getClassList <- function (basedir=here::here())
+getClassList <- function (dir_base=here::here())
 {
   #require(rutils)
-  source(file.path(basedir,"R","0-00-csv-to-html.R"))
+  source(file.path(dir_base,"R","0-00-csv-to-html.R"))
 
-power.raw <- file.path(basedir,"raw","charactercreation","Powers-raw.csv")
-power.tag <- file.path(basedir,"raw","charactercreation","Powers-tags.csv")
-css.file <- file.path(basedir,"Rmd","SFRPG.css")
+power.raw <- file.path(dir_base,"raw","charactercreation","Powers-raw.csv")
+power.tag <- file.path(dir_base,"raw","charactercreation","Powers-tags.csv")
+css.file <- file.path(dir_base,"Rmd","SFRPG.css")
 
-class.stat.raw <- file.path(basedir,"raw","charactercreation","Class-stats.csv")
-class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
+class.stat.raw <- file.path(dir_base,"raw","charactercreation","Class-stats.csv")
+class.stat.htm.file  <- file.path(dir_base,"html","CharacterCreation","Class-stats.html")
 
-class.features.raw <- file.path(basedir,"raw","charactercreation","Class-features.csv")
-class.features.tag <- file.path(basedir,"raw","charactercreation","Class-features-tags.csv")
+class.features.raw <- file.path(dir_base,"raw","charactercreation","Class-features.csv")
+class.features.tag <- file.path(dir_base,"raw","charactercreation","Class-features-tags.csv")
 
-power.htm.file <- file.path(basedir,"html","CharacterCreation","Powers.html")
-power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-table.html")
+power.htm.file <- file.path(dir_base,"html","CharacterCreation","Powers.html")
+power.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Powers-table.html")
 
 class.stat.df  <- read.csv(class.stat.raw, sep=";", header=TRUE)
 class.feature.df  <- read.csv(class.features.raw, sep=";", header=TRUE)  %>%  gsubColwise("\\n","<br>")
@@ -103,15 +103,15 @@ class.list
 writeClassList  <- function(class.list)
 {
   
-  css.file <- file.path(basedir,"Rmd","SFRPG.css")
+  css.file <- file.path(dir_base,"Rmd","SFRPG.css")
 
 
-class.stat.htm.file  <- file.path(basedir,"html","CharacterCreation","Class-stats.html")
+class.stat.htm.file  <- file.path(dir_base,"html","CharacterCreation","Class-stats.html")
 
 
 
-power.htm.file <- file.path(basedir,"html","CharacterCreation","Powers.html")
-power.table.htm.file <- file.path(basedir,"html","CharacterCreation","Powers-table.html")
+power.htm.file <- file.path(dir_base,"html","CharacterCreation","Powers.html")
+power.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Powers-table.html")
 
 #Build power tables
 #add stuff to nested list

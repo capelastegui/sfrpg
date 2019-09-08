@@ -1,11 +1,11 @@
 knitRmd <- function()
 {
-  basedir  <- here::here()
+  dir_base  <- here::here()
 .Platform$file.sep <- "\\"
 
 dir.htmpdf <- file.path('C:','\"Program Files\"','wkhtmltopdf','bin')
 
-dir.rmd  <-  file.path(basedir,"Rmd")
+dir.rmd  <-  file.path(dir_base,"Rmd")
 rmd.files <- list()
 rmd.files$a1.intro<- file.path(dir.rmd,"1-1-Introduction.Rmd")
 rmd.files$a2.charbuild<- file.path(dir.rmd,"1-2-CharacterBuilding.Rmd")
@@ -16,7 +16,7 @@ rmd.files$a.rules<- file.path(dir.rmd,"1-SFRPG-Game-Rules.Rmd")
 rmd.files$b.charbuild <- file.path(dir.rmd,"2-Character-Building.Rmd")
 
 
-# dir.rmd  <-  file.path(basedir,"Rmd")
+# dir.rmd  <-  file.path(dir_base,"Rmd")
 # md.files  <- list()
 # md.files$a1.intro<- file.path(dir.rmd,"1-1-Introduction.md")
 # md.files$a2.charbuild<- file.path(dir.rmd,"1-2-CharacterBuilding.md")
@@ -27,7 +27,7 @@ rmd.files$b.charbuild <- file.path(dir.rmd,"2-Character-Building.Rmd")
 # md.files$b.charbuild <- file.path(dir.rmd,"2-CharacterBuilding.md")
 
 
-dir.html  <-  file.path(basedir,"html")
+dir.html  <-  file.path(dir_base,"html")
 htm.files  <- list()
 htm.files$a1.intro<- file.path(dir.html,"Introduction.html")
 htm.files$a2.charbuild<- file.path(dir.html,"CharacterBuilding.html")
@@ -37,7 +37,7 @@ htm.files$b3.feats<- file.path(dir.html,"Feats.html")
 htm.files$a.rules<- file.path(dir.html,"1-SFRPG-Game-Rules.html")
 htm.files$b.charbuild <- file.path(dir.html,"2-CharacterBuilding.html")
 
-dir.pdf  <- file.path(basedir,"pdf")
+dir.pdf  <- file.path(dir_base,"pdf")
 pdf.files  <- list()
 pdf.files$a1.intro<- file.path(dir.pdf,"A1-Introduction.pdf")
 pdf.files$a2.charbuild<- file.path(dir.pdf,"A2-CharacterBuilding.pdf")

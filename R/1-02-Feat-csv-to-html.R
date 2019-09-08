@@ -39,19 +39,19 @@ getFeatSection  <- function(featraw, pre, post)
 }
 
 
-getFeatList <- function (basedir=here::here())
+getFeatList <- function (dir_base=here::here())
 {
-  source(file.path(basedir,"R","0-00-csv-to-html.R"))
+  source(file.path(dir_base,"R","0-00-csv-to-html.R"))
   
-  feat.raw <- file.path(basedir,"raw","charactercreation","Feats-raw.csv")
-  feat.tag <- file.path(basedir,"raw","charactercreation","Feats-tags.csv")
-  feat.lesser.raw <- file.path(basedir,"raw","charactercreation","Feats-Lesser-raw.csv")
-  feat.lesser.tag <- file.path(basedir,"raw","charactercreation","Feats-Lesser-tags.csv")
-  css.file <- file.path(basedir,"Rmd","SFRPG.css")
-  feat.htm.file <- file.path(basedir,"html","CharacterCreation","Feats.html")
-  feat.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-table.html")
-  feat.lesser.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser.html")
-  feat.lesser.table.htm.file <- file.path(basedir,"html","CharacterCreation","Feats-lesser-table.html")
+  feat.raw <- file.path(dir_base,"raw","charactercreation","Feats-raw.csv")
+  feat.tag <- file.path(dir_base,"raw","charactercreation","Feats-tags.csv")
+  feat.lesser.raw <- file.path(dir_base,"raw","charactercreation","Feats-Lesser-raw.csv")
+  feat.lesser.tag <- file.path(dir_base,"raw","charactercreation","Feats-Lesser-tags.csv")
+  css.file <- file.path(dir_base,"Rmd","SFRPG.css")
+  feat.htm.file <- file.path(dir_base,"html","CharacterCreation","Feats.html")
+  feat.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Feats-table.html")
+  feat.lesser.htm.file <- file.path(dir_base,"html","CharacterCreation","Feats-lesser.html")
+  feat.lesser.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Feats-lesser-table.html")
   
   feat.raw.df <- read.csv(feat.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
   feat.raw.df <- gsubColwise(feat.raw.df,"\\n","<br>")

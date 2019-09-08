@@ -1,16 +1,16 @@
 
-getManeuverList <- function (basedir=here::here())
+getManeuverList <- function (dir_base=here::here())
 {
   ##require(rutils)
-  source(file.path(basedir,"R","0-00-csv-to-html.R"))
+  source(file.path(dir_base,"R","0-00-csv-to-html.R"))
   
-  maneuver.raw <- file.path(basedir,"raw","combat","Combat-maneuvers.csv")
-  maneuver.tag <- file.path(basedir,"raw","combat","Combat-maneuvers-tags.csv")
-  css.file <- file.path(basedir,"Rmd","SFRPG.css")
+  maneuver.raw <- file.path(dir_base,"raw","combat","Combat-maneuvers.csv")
+  maneuver.tag <- file.path(dir_base,"raw","combat","Combat-maneuvers-tags.csv")
+  css.file <- file.path(dir_base,"Rmd","SFRPG.css")
   
   
-  maneuver.htm.file <- file.path(basedir,"html","Combat","maneuvers.html")
-  maneuver.table.htm.file <- file.path(basedir,"html","Combat","maneuvers-table.html")
+  maneuver.htm.file <- file.path(dir_base,"html","Combat","maneuvers.html")
+  maneuver.table.htm.file <- file.path(dir_base,"html","Combat","maneuvers-table.html")
   
  
   
@@ -57,10 +57,10 @@ getManeuverList <- function (basedir=here::here())
 writeManeuverList  <- function(maneuver.list)
 {
   
-  css.file <- file.path(basedir,"Rmd","SFRPG.css")
+  css.file <- file.path(dir_base,"Rmd","SFRPG.css")
   
   
-  maneuver.htm.file <- file.path(basedir,"html","Combat","maneuvers.html")
+  maneuver.htm.file <- file.path(dir_base,"html","Combat","maneuvers.html")
   
   #Build maneuver tables
   #add stuff to nested list
