@@ -83,7 +83,7 @@ For any non-trivial action that a character performs in the game, success is not
 
 - **Checks**: Used to determine whether an action is a success or a failure.
 - **Damage Rolls**: Used to determine the amount of damage (or, more rarely, of healing) that a character takes.
-- **Action Point Rolls**: Used to determine if a character can use an Action Point.
+- **Action Point Checks**: Used to determine if a character can use an Action Point.
 
 Square Fireballs, like many role playing games, uses special dice with different number of sides:
 
@@ -150,11 +150,13 @@ Level  | Ability Multiplier
 29	| x8
 </div>
 
-###Rolling Action Point Rolls
+###Rolling Action Point Checks
 
-**Action Points** are a special kind of resource that Player Characters can spend to gain additional actions in combat. Typically, Action Points are not available at the start of an encounter but, as the combat progresses, Player Characters gain  a small chance of using an Action Point, which increases with each additional turn. This is resolved with an **Action Point Roll**.
+**Action Points** are a special kind of resource that Player Characters can spend to gain additional actions in combat. Typically, Action Points are not available at the start of an encounter but, as the combat progresses, Player Characters gain  a small chance of using an Action Point, which increases with each additional turn. This is resolved with an **Action Point Check**.
 
-To make an Action Point roll, a character rolls a d4, and adds the current value of the **Escalation Die** (explained in the following section), as well as any bonuses or penalties to Action Point rolls that apply for that character. If the result is 4 or higher, the attempt is successful. Otherwise, it is a failure.
+To make an Action Point Check, a character rolls a d4, and adds the current value of the **Escalation Die** (explained in the following section), as well as any bonuses or penalties to Action Point rolls that apply for that character. If the result is 4 or higher, the attempt is successful, and the character can spend the Action Point. Otherwise, it is a failure - the character is not able to use the Action Point, and no Action Point is lost. 
+
+By default, a character may only attempt one Action Point Check each encounter. Some special rules may allow a character to attempt additional Action Point Checks in the same encounter - in that case, the character may only attempt one Action Point Check each turn.
 
 The complete rules for using Action Points are described in the Combat chapter.
 

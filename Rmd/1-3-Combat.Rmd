@@ -189,7 +189,6 @@ Defender has Superior Cover from Attacker | -3
 Defender has any Concealment from Attacker | -2
 Defender has Superior Concealment from Attacker | -3
 Attacker is Hindered | -2
-Attack with Recharge weapon, unless Recharged | -2
 Ranged attack at Long Range | -2
 Opportunity Attack | + Reaction Modifier
 
