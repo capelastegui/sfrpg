@@ -1,37 +1,37 @@
 
-get_l_class <- function (dir_base=here::here())
+get_l_class <- function (dir_base = here::here())
 {
   #require(rutils)
-  source(file.path(dir_base,"R","0-00-csv-to-html.R"))
-  source(file.path(dir_base,"R","utils.R"))
-
+  source(file.path(dir_base, "R", "0-00-csv-to-html.R"))
+  source(file.path(dir_base, "R", "utils.R"))
+  
   read_my_csv <- function(s) {
-  readr::read_delim(file.path(dir_base,"raw","CharacterCreation",paste0(s,".csv")),
-                    delim=";", col_types = readr::cols(.default = "c"))}
-
-    #class.stat.htm.file  <- file.path(dir_base,"html","CharacterCreation","Class-stats.html")
-    #power.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Powers-table.html")
-
-    usageOrder  <- c("","At-Will","Encounter","Daily")
-
-    df_class_stat = read_my_csv('Class-stats') # TODO: header=TRUE, if required
-    df_class_feature = read_my_csv('Class-features') %>%  gsub_colwise("\\n","<br>") # TODO: header=TRUE, if required
-    # Todo: convert columns to character if required
-    df_feature_tag <- read_my_csv('Class-features-tags')
-    df_power_tag <-  read_my_csv('Powers-tags')
-    df_power_raw <-  read_my_csv('Powers-raw') %>%
-      gsub_colwise("\\n","<br>")%>%
-      fillna_df %>%
-      mutate(UsageLimit=factor(UsageLimit,
-                               levels=c(usageOrder,setdiff(UsageLimit,usageOrder)))) %>%
-      arrange(Class, isFeature!="Feature", Type, UsageLimit, Level, Name) %>%
-      mutate(usageColors=revalue(UsageLimit,replace=c(Daily="gray", Encounter="red","At-Will"="green")))
-
-    levels(df_power_raw$usageColors)[levels(df_power_raw$usageColors)==""] <- "green"
-
-    df_power_raw  <- df_power_raw %>%
-      mutate(Name=paste("<span class=\"",usageColors,"\">",Name, sep="")) %>%
-      mutate(Level=paste(Level,"</span>",sep=""))
+    readr::read_delim(
+      file.path(dir_base, "raw", "CharacterCreation", paste0(s, ".csv")),
+      delim = ";",
+      col_types = readr::cols(.default = "c")
+    )
+  }
+  
+  #class.stat.htm.file  <- file.path(dir_base,"html","CharacterCreation","Class-stats.html")
+  #power.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Powers-table.html")
+  
+  usageOrder  <- c("", "At-Will", "Encounter", "Daily")
+  
+  df_class_stat = read_my_csv('Class-stats') # TODO: header=TRUE, if required
+  df_class_feature = read_my_csv('Class-features') %>%  gsub_colwise("\\n", "<br>") # TODO: header=TRUE, if required
+  # Todo: convert columns to character if required
+  df_feature_tag <- read_my_csv('Class-features-tags')
+  df_power_tag <-  read_my_csv('Powers-tags')
+  df_power_raw <-  read_my_csv('Powers-raw') %>%
+    gsub_colwise("\\n", "<br>") %>%
+    fillna_df %>%
+    mutate(usageColors = UsageLimit %>% 
+             factor %>% forcats::fct_recode(!!!c(
+               green = "",red = "Encounter",gray = "Daily"))) %>% 
+    arrange(Class, isFeature != "Feature", Type, usageColors, Level, Name)  %>%
+    mutate(Name=paste("<span class=\"",usageColors,"\">",Name, sep="")) %>%
+    mutate(Level=paste(Level,"</span>",sep=""))
 
     l_class_stat  <- split(df_class_stat, df_class_stat$Class)
     l_class_stat <- llply(l_class_stat, .fun=function(a){a <- refactor(a);split(a,a$Build)})
@@ -48,37 +48,36 @@ get_l_class <- function (dir_base=here::here())
     feature_tag_pre<- df_feature_tag[1,]
     feature_tag_post<- df_feature_tag[2,]
 
-    l_class_power  <- split(df_power_raw,df_power_raw$Class)
-    l_class_power <- llply(l_class_power, .fun=function(a){a <- refactor(a);split(a,a$Build)})
-    l_class_power <- llply.n(l_class_power,2,power_tag_pre, power_tag_post,
-                               .fun2=function(df,power.tag.pre, power.tag.post){
-                                 htm <- build_element_apply(df,power.tag.pre, power.tag.post,
-                                                          df.names=setdiff(names(df),c("Summary","Build","usageColors")),
-                                                          skipEmpty = TRUE, collapse = ' ')
-                                 htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
+    l_class_power  <- split(df_power_raw,df_power_raw$Class) %>% 
+      plyr::llply(.fun=function(a){a <- refactor(a);split(a,a$Build)}) %>% 
+      llply.n(2,power_tag_pre, power_tag_post,
+              .fun2=function(df,power.tag.pre, power.tag.post){
+                htm <- build_element_apply(df,power.tag.pre, power.tag.post,
+                                           df.names=setdiff(names(df),c("Summary","Build","usageColors")),
+                                           skipEmpty = TRUE, collapse = ' ')
+                htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
+                
+                table <- build_table_apply(
+                  df,
+                  df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
+                  tableClass="Power-table")
+                list(powers=df,powers.htm=htm,powers.table=table)
+              }) %>% 
+      llply.n(2,.fun=function(l){
+        l$classbuild  <- paste("<h2>",l$powers$Class[1],l$powers$Build[1],"</h2>",sep=" ")
+        l})
 
-                                 table <- build_table_apply(df,
-                                                        df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
-                                                        tableClass="Power-table")
-                                 list(powers=df,powers.htm=htm,powers.table=table)
-                               })
-    l_class_power  <- llply.n(l_class_power,2,
-                                 .fun=function(l){
-                                   l$classbuild  <- paste("<h2>",l$powers$Class[1],l$powers$Build[1],"</h2>",sep=" ")
-                                   l})
 
-
-l_class_feature  <- split(df_class_feature,df_class_feature$Class)
-l_class_feature <- llply(l_class_feature, .fun=function(a){a <- refactor(a);split(a,a$Build)})
-l_class_feature <- llply.n(l_class_feature,2,feature_tag_pre, feature_tag_post,
-                            .fun2=function(df,feature.tag.pre, feature.tag.post){
-                              htm <- build_element_apply(df,feature.tag.pre, feature.tag.post,
-                                                       df.names=setdiff(names(df),c("Class","Build")),
-                                                       skipEmpty = TRUE)
-                              #htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
-                              
-                              list(features=df,features.htm=htm)
-                            })
+    l_class_feature  <- split(df_class_feature,df_class_feature$Class) %>% 
+      plyr::llply(.fun=function(a){a <- refactor(a);split(a,a$Build)}) %>% 
+      llply.n(2,feature_tag_pre, feature_tag_post,
+              .fun2=function(df,feature.tag.pre, feature.tag.post){
+                htm <- build_element_apply(df,feature.tag.pre, feature.tag.post,
+                                           df.names=setdiff(names(df),c("Class","Build")),
+                                           skipEmpty = TRUE)
+                #htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
+                list(features=df,features.htm=htm)
+              })
 
 #join all class nested lists
 l_class  <- llply.parallel.multilist(l_class_power,

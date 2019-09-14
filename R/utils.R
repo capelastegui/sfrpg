@@ -39,7 +39,7 @@ llply.2 <- function(l, .fun2 = NULL, ...) {
 # nested list
 
 llply.n <- function(l, n, .fun2 = NULL, ...) {
-    llply(l, n, .fun2, ..., .fun = function(l1, n, .fun2, ...) {
+    plyr::llply(l, n, .fun2, ..., .fun = function(l1, n, .fun2, ...) {
         if (n <= 1) {
             if (!is.null(.fun2)) {
                 .fun2(l1, ...)
@@ -70,7 +70,7 @@ unlist.n <- function(l, n) {
 
 llply.name <- function(l, .fun = NULL, ...) {
     myfun <- .fun
-    l1 <- llply(names(l), l, myfun = myfun, ..., .fun = function(l.name, l, myfun, ...) {
+    l1 <- plyr::llply(names(l), l, myfun = myfun, ..., .fun = function(l.name, l, myfun, ...) {
         if (!is.null(myfun)) {
             myfun(l[[l.name]], ..., l.name)
         } else {
@@ -125,7 +125,7 @@ llply.parallel.multilist <- function(list.ref, list.multi, n, .fun = NULL, ...) 
     list.ref <- llply.n.labelname(list.ref, n, pasteLabels = FALSE)
 
     llply.n(list.ref, n, list.multi, .fun, ..., .fun2 = function(list.ref.1, list.multi, .fun, ...) {
-        list.multi.1 <- llply(list.multi, attr(list.ref.1, ".name"), .fun = get.nested)
+        list.multi.1 <- plyr::llply(list.multi, attr(list.ref.1, ".name"), .fun = get.nested)
         if (!is.null(.fun)) {
             .fun(list.multi.1, ...)
         } else {
