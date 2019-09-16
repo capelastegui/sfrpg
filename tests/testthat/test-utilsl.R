@@ -1,0 +1,50 @@
+context("test_utils")
+
+library(plyr)
+library(dplyr)
+library(purrr)
+
+test_that("llply.parallel.ab works", {
+    # Test 1 - simple input
+    l1 = list(
+      a1=list(b1='a',b2='b'),
+      a2=list(b1='a',b2='b')
+    )
+    
+    get_l_result = function(l1,l2) {list(list1=l1, list2=l2)}
+    
+    l_result = llply.parallel.ab(l1,l1, 2,.fun=get_l_result)
+    
+    l_result %>% qstr(4)
+    
+    # Alt implementation: with map2
+    l_result2 = map2(l1,l1, ~map2(.x, .y, get_l_result))
+    
+    l_result2 %>% qstr(4)
+  }
+)
+
+test_that("llply.parallel.multilist works", {
+  print('testing llply.parallel.multilist')
+  # Test 1 - simple input
+  l1 = list(
+    a1=list(b1='a',b2='b'),
+    a2=list(b1='a',b2='b')
+  )
+  l_in = list(l1, l1, l1)
+  
+  get_l_result = function(l_in) {l_in}
+  
+  l_result = llply.parallel.multilist(l1,l_in, 2,.fun=get_l_result)
+  
+  l_result %>% qstr(4)
+  
+  # Alt implementation: with map2 - haven't managed it yet.
+  get_l_result = function(...) {list(...)}
+  #l_result2 = map2(l1,l1, ~map2(.x, .y, get_l_result))
+  #l_result2 = purrr::pmap(l_in, get_l_result)
+  #l_result2 = purrr::pmap(l_in, ~pmap(., get_l_result))
+  #l_result2 = purrr::pmap(l_in, ~pmap(.,  ~pmap(., get_l_result)))
+  #l_result2 %>% qstr(4)
+}
+)
