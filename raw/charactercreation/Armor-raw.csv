@@ -1,9 +1,7 @@
 Name;AC bonus;Type;Armor Penalty;Movement Penalty
-Cloth;0;Light Armor;0;0
-Leather;1;Light Armor;0;0
-Hide;2;Light Armor;-1;0
+Cloth;1;Light Armor;0;0
+Leather;2;Light Armor;0;0
+Hide;3;Heavy Armor;-1;-1
 Chain;3;Heavy Armor;-1;-1
-Scale;4;Heavy Armor;-2;-1
-Plate;5;Heavy Armor;-2;-1
-Light Shield;1;Shield;0;0
-Heavy Shield;2;Shield;-1;0
+Scale;4;Heavy Armor;-1;-1
+Plate;5;Heavy Armor;-1;-1
