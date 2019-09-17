@@ -12,15 +12,15 @@ css <- readChar(file_css, file.info(file_css)$size)
 
 
 test_that("get_equip_tables works", {
-  l_tables_equip = get_equip_tables(dir_base)
+  df_tables_equip <- get_equip_tables(dir_base)
   expect_equal(
-    l_tables_equip %>% names(),
-    c('weapons','armor','legacy.class.armor','implements'))
+    df_tables_equip$table_type %>% unique(),
+    c('Weapons','Armor','Armor_by_Class','Implements'))
   expect_equal(
-    l_tables_equip$weapons %>% names(),
-    c('Basic', 'Improvised', 'Inner', 'Martial'))
+    df_tables_equip$Training %>% unique(),
+    c( 'Improvised','Basic', 'Martial', 'Inner',  '-'))
   
-  str_tables =l_tables_equip %>% purrr::flatten () %>% paste0(collapse='\r\n')
+  str_tables =df_tables_equip$table %>% paste0(collapse='\r\n')
   
   str_tables <- paste("<html>\r\n<head>\r\n<title>Test tables</title>\r\n<style type=\"text/css\">",
                      css,

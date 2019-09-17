@@ -1,60 +1,3 @@
-
-
-get_l_class <- function (dir_base = here::here())
-{
-  #require(rutils)
-  source(file.path(dir_base, "R", "0-00-csv-to-html.R"))
-  source(file.path(dir_base, "R", "utils.R"))
-  
-  read_my_csv <- function(s) {
-    readr::read_delim(
-      file.path(dir_base, "raw", "CharacterCreation", paste0(s, ".csv")),
-      delim = ";",
-      col_types = readr::cols(.default = "c")
-    )
-  }
-  
-  #class.stat.htm.file  <- file.path(dir_base,"html","CharacterCreation","Class-stats.html")
-  #power.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Powers-table.html")
-  
-  usageOrder  <- c("", "At-Will", "Encounter", "Daily")
-  
-  df_class_stat = read_my_csv('Class-stats') # TODO: header=TRUE, if required
-  df_class_feature = read_my_csv('Class-features') %>%  gsub_colwise("\\n", "<br>") # TODO: header=TRUE, if required
-  # Todo: convert columns to character if required
-  df_feature_tag <- read_my_csv('Class-features-tags')
-  df_power_tag <-  read_my_csv('Powers-tags')
-  df_power_raw <-  read_my_csv('Powers-raw') %>%
-    gsub_colwise("\\n", "<br>") %>%
-    fillna_df %>%
-    mutate(usageColors = UsageLimit %>%
-             factor %>% forcats::fct_recode(!!!c(
-               green = "",
-               red = "Encounter",
-               gray = "Daily"
-             ))) %>%
-    arrange(Class, isFeature != "Feature", Type, usageColors, Level, Name)  %>%
-    mutate(Name = paste("<span class=\"", usageColors, "\">", Name, sep =
-                          "")) %>%
-    mutate(Level = paste(Level, "</span>", sep = ""))
-  
-  apply_class_stat <- function(df) {
-    table <- cbind(gsub("\\.", " ", names(df)), trans_df(df))
-    htm <-
-      build_table_apply(table, tableClass = "Class-table", skipHeader = TRUE)
-    list(stats = table, stats.htm = htm)
-  }
-  
-  l_class_stat  <- df_class_stat %>% split(.$Class) %>%
-    purrr::map( ~ split(., .$Build)) %>%
-    purrr::map(purrr::map, apply_class_stat)
-  
-  power_tag_pre <- df_power_tag[1, ]
-  power_tag_post <- df_power_tag[2, ]
-  
-  feature_tag_pre <- df_feature_tag[1, ]
-  feature_tag_post <- df_feature_tag[2, ]
-  
   apply_class_power <- function(df) {
     {
       htm <- build_element_apply(
@@ -92,12 +35,14 @@ get_l_class <- function (dir_base = here::here())
     }
   }
   
-  l_class_power <- df_power_raw %>% split(.$Class) %>%
-    purrr::map( ~ split(., .$Build)) %>%
-    purrr::map(purrr::map, apply_class_power)
+    apply_class_stat <- function(df) {
+    table <- cbind(gsub("\\.", " ", names(df)), trans_df(df))
+    htm <-
+      build_table_apply(table, tableClass = "Class-table", skipHeader = TRUE)
+    list(stats = table, stats.htm = htm)
+  }
   
-  
-  apply_class_feature <-
+    apply_class_feature <-
     function(df, feature.tag.pre, feature.tag.post) {
       htm <- build_element_apply(
         df,
@@ -109,6 +54,58 @@ get_l_class <- function (dir_base = here::here())
       #htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
       list(features = df, features.htm = htm)
     }
+
+get_l_class <- function (dir_base = here::here())
+{
+  #require(rutils)
+  source(file.path(dir_base, "R", "0-00-csv-to-html.R"))
+  source(file.path(dir_base, "R", "utils.R"))
+  
+  read_my_csv <- function(s) {
+    readr::read_delim(
+      file.path(dir_base, "raw", "CharacterCreation", paste0(s, ".csv")),
+      delim = ";",
+      col_types = readr::cols(.default = "c")
+    )
+  }
+  
+  #file_class_stat_htm  <- file.path(dir_base,"html","CharacterCreation","Class-stats.html")
+  #file_power_table_htm <- file.path(dir_base,"html","CharacterCreation","Powers-table.html")
+  
+  usageOrder  <- c("", "At-Will", "Encounter", "Daily")
+  
+  df_class_stat = read_my_csv('Class-stats') # TODO: header=TRUE, if required
+  df_class_feature = read_my_csv('Class-features') %>%  gsub_colwise("\\n", "<br>") # TODO: header=TRUE, if required
+  # Todo: convert columns to character if required
+  df_feature_tag <- read_my_csv('Class-features-tags')
+  df_power_tag <-  read_my_csv('Powers-tags')
+  df_power_raw <-  read_my_csv('Powers-raw') %>%
+    gsub_colwise("\\n", "<br>") %>%
+    fillna_df %>%
+    mutate(usageColors = UsageLimit %>%
+             factor %>% forcats::fct_recode(!!!c(
+               green = "",
+               red = "Encounter",
+               gray = "Daily"
+             ))) %>%
+    arrange(Class, isFeature != "Feature", Type, usageColors, Level, Name)  %>%
+    mutate(Name = paste("<span class=\"", usageColors, "\">", Name, sep =
+                          "")) %>%
+    mutate(Level = paste(Level, "</span>", sep = ""))
+    
+  l_class_stat  <- df_class_stat %>% split(.$Class) %>%
+    purrr::map( ~ split(., .$Build)) %>%
+    purrr::map(purrr::map, apply_class_stat)
+  
+  power_tag_pre <- df_power_tag[1, ]
+  power_tag_post <- df_power_tag[2, ]
+  
+  feature_tag_pre <- df_feature_tag[1, ]
+  feature_tag_post <- df_feature_tag[2, ]
+  
+  l_class_power <- df_power_raw %>% split(.$Class) %>%
+    purrr::map( ~ split(., .$Build)) %>%
+    purrr::map(purrr::map, apply_class_power)
   
   l_class_feature <- df_class_feature %>% split(.$Class) %>%
     purrr::map( ~ split(., .$Build)) %>%
@@ -116,8 +113,7 @@ get_l_class <- function (dir_base = here::here())
                apply_class_feature,
                feature_tag_pre,
                feature_tag_post)
-  
-  
+    
   # TODO: change workflow to purrr nested data, list-column
   
   #join all class nested lists
@@ -136,26 +132,16 @@ get_l_class <- function (dir_base = here::here())
 writeClassList  <- function(l_class)
 {
   # TODO: change workflow to purrr nested data, list-column
-  css.file <- file.path(dir_base, "Rmd", "SFRPG.css")
+  file_css <- file.path(dir_base, "Rmd", "SFRPG.css")
   
-  class.stat.htm.file  <-
+  file_class_stat_htm  <-
     file.path(dir_base, "html", "CharacterCreation", "Class-stats.html")
   
-  power.htm.file <-
+  file_power_htm <-
     file.path(dir_base, "html", "CharacterCreation", "Powers.html")
-  power.table.htm.file <-
+  file_power_table_htm <-
     file.path(dir_base, "html", "CharacterCreation", "Powers-table.html")
-  
-  #Build power tables
-  #add stuff to nested list
-  #l_class  <- llply.n(l_class,2,.fun2 = function(...){c(...,a="A")})
-  # No longer used, keep in case we need a global power table
-  # power.table.htm<-build_table_apply(power.raw.df,
-  #                       df.names=c("Name", "Class", "Level", "Type","UsageLimit","Range","Action","Summary"),
-  #                       tableClass="Power-table")
-  # power.table.htm<-paste(power.table.htm,collapse="<br> ")
-  #write(power.table.htm,power.table.htm.file)
-  
+
   #Build full text descriptions
   power.full <-
     paste(
@@ -191,7 +177,6 @@ writeClassList  <- function(l_class)
         l$features.htm,
         "</p>\r\n",
         "<p><h3>Class Powers</h3></p>\r\n",
-        #"<p>",l$powers.table,"</p>\r\n",
         "<p>",
         l$powers.htm,
         "</p>\r\n",
@@ -213,6 +198,6 @@ writeClassList  <- function(l_class)
       collapse = ""
     )
   
-  writeChar(power.full, power.htm.file)
+  writeChar(power.full, file_power_htm)
   classList
 }
