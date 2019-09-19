@@ -1,59 +1,31 @@
-  apply_class_power <- function(df) {
-    {
-      htm <- build_element_apply(
-        df,
-        power_tag_pre,
-        power_tag_post,
-        df.names = setdiff(names(df), c("Summary", "Build", "usageColors")),
-        skipEmpty = TRUE,
-        collapse = ' '
-      )
-      htm <-
-        paste("<div class=\"Power-List\">", htm, "</div>" , sep = "")
-      
-      table <- build_table_apply(
-        df,
-        df.names = c(
-          "Name",
-          "Class",
-          "Level",
-          "Type",
-          "UsageLimit",
-          "Range",
-          "Action",
-          "Summary"
-        ),
-        tableClass = "Power-table"
-      )
-      list(
-        powers = df,
-        powers.htm = htm,
-        powers.table = table,
-        classbuild = paste("<h2>", df$Class[1], df$Build[1], "</h2>", sep =
-                             " ")
-      )
-    }
+apply_class_power_htm <- function(df, pre, post) {
+    htm <- build_element_apply(
+      df,
+      pre,
+      post,
+      df.names = setdiff(names(df), c("Summary", "Build", "usageColors")),
+      skipEmpty = TRUE,
+      collapse = ' '
+    )
+    paste("<div class=\"Power-List\">", htm, "</div>" , sep = "")
   }
-  
-    apply_class_stat <- function(df) {
-    table <- cbind(gsub("\\.", " ", names(df)), trans_df(df))
-    htm <-
-      build_table_apply(table, tableClass = "Class-table", skipHeader = TRUE)
-    list(stats = table, stats.htm = htm)
+
+apply_class_power_summary  <- function(df) {
+
+    build_table_apply(
+      df,
+      df.names = c(
+        "Name",
+        "Level",
+        "Type",
+        "UsageLimit",
+        "Range",
+        "Action",
+        "Summary"
+      ),
+      tableClass = "Power-table"
+    )
   }
-  
-    apply_class_feature <-
-    function(df, feature.tag.pre, feature.tag.post) {
-      htm <- build_element_apply(
-        df,
-        feature.tag.pre,
-        feature.tag.post,
-        df.names = setdiff(names(df), c("Class", "Build")),
-        skipEmpty = TRUE
-      )
-      #htm <- paste("<div class=\"Power-List\">",htm,"</div>" ,sep="")
-      list(features = df, features.htm = htm)
-    }
 
 get_l_class <- function (dir_base = here::here())
 {
@@ -69,63 +41,56 @@ get_l_class <- function (dir_base = here::here())
     )
   }
   
-  #file_class_stat_htm  <- file.path(dir_base,"html","CharacterCreation","Class-stats.html")
-  #file_power_table_htm <- file.path(dir_base,"html","CharacterCreation","Powers-table.html")
-  
+
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
-  
-  df_class_stat = read_my_csv('Class-stats') # TODO: header=TRUE, if required
-  df_class_feature = read_my_csv('Class-features') %>%  gsub_colwise("\\n", "<br>") # TODO: header=TRUE, if required
-  # Todo: convert columns to character if required
-  df_feature_tag <- read_my_csv('Class-features-tags')
-  df_power_tag <-  read_my_csv('Powers-tags')
-  df_power_raw <-  read_my_csv('Powers-raw') %>%
-    gsub_colwise("\\n", "<br>") %>%
-    fillna_df %>%
-    mutate(usageColors = UsageLimit %>%
-             factor %>% forcats::fct_recode(!!!c(
-               green = "",
-               red = "Encounter",
-               gray = "Daily"
-             ))) %>%
-    arrange(Class, isFeature != "Feature", Type, usageColors, Level, Name)  %>%
-    mutate(Name = paste("<span class=\"", usageColors, "\">", Name, sep =
-                          "")) %>%
-    mutate(Level = paste(Level, "</span>", sep = ""))
-    
-  l_class_stat  <- df_class_stat %>% split(.$Class) %>%
-    purrr::map( ~ split(., .$Build)) %>%
-    purrr::map(purrr::map, apply_class_stat)
-  
-  power_tag_pre <- df_power_tag[1, ]
-  power_tag_post <- df_power_tag[2, ]
-  
-  feature_tag_pre <- df_feature_tag[1, ]
-  feature_tag_post <- df_feature_tag[2, ]
-  
-  l_class_power <- df_power_raw %>% split(.$Class) %>%
-    purrr::map( ~ split(., .$Build)) %>%
-    purrr::map(purrr::map, apply_class_power)
-  
-  l_class_feature <- df_class_feature %>% split(.$Class) %>%
-    purrr::map( ~ split(., .$Build)) %>%
-    purrr::map(purrr::map,
-               apply_class_feature,
-               feature_tag_pre,
-               feature_tag_post)
-    
-  # TODO: change workflow to purrr nested data, list-column
-  
-  #join all class nested lists
-  l_class  <- llply.parallel.multilist(
-    l_class_power,
-    list(l_class_power, l_class_stat, l_class_feature),
-    n = 2,
-    .fun = function(...) {
-      unlist(c(...), recursive = FALSE)
-    }
-  )
-  l_class
+
+df_class_stat = read_my_csv('Class-stats') # TODO: header=TRUE, if required
+df_class_feature = read_my_csv('Class-features') %>%
+  gsub_colwise("\\n", "<br>") %>%
+  map_dfc (tidyr::replace_na,'-')
+# Todo: convert columns to character if required
+df_feature_tag <- read_my_csv('Class-features-tags')
+df_power_tag <-  read_my_csv('Powers-tags')
+df_power_raw <-  read_my_csv('Powers-raw') %>%
+  gsub_colwise("\\n", "<br>") %>%
+  fillna_df %>%
+  mutate(usageColors = UsageLimit %>%
+           factor %>% forcats::fct_recode(!!!c(
+             green = "",
+             red = "Encounter",
+             gray = "Daily"
+           ))) %>%
+  arrange(Class, isFeature != "Feature", Type, usageColors, Level, Name)  %>%
+  mutate(Name = paste("<span class=\"", usageColors, "\">", Name, sep =
+                        "")) %>%
+  mutate(Level = paste(Level, "</span>", sep = ""))
+
+power_tag_pre <- df_power_tag[1, ] %>% select(-Class, -Build)
+power_tag_post <- df_power_tag[1, ] %>% select(-Class, -Build)
+
+feature_tag_pre <- df_feature_tag[1, ] %>% select(-Class, -Build)
+feature_tag_post <- df_feature_tag[1, ] %>% select(-Class, -Build)
+
+df_class = list(
+  df_power_raw  %>% group_by(Class, Build) %>% tidyr::nest (.key='data_power'),
+  df_class_stat %>% group_by(Class, Build) %>% tidyr::nest (.key='data_stat'),
+  df_class_feature %>% group_by(Class, Build) %>% tidyr::nest (.key='data_feature')
+) %>%
+  reduce(full_join, by= c('Class', 'Build')) %>%
+  mutate(
+    htm_stat =data_stat %>%  map_chr(
+      build_table_apply,
+      tableClass = "Class-table", skipHeader = TRUE),
+    htm_feature = data_feature %>% map_chr(
+      build_element_apply,
+      feature_tag_pre, feature_tag_post, skipEmpty = TRUE),
+    htm_power = data_power %>% map_chr(apply_class_power_htm,
+        power_tag_pre, power_tag_post),
+    htm_power_summary = data_power %>% map_chr(apply_class_power_summary)
+    )
+
+df_class
+
 }
 
 

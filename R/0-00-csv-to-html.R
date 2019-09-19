@@ -61,7 +61,7 @@ build_element_apply <- function (df,pre,post,
     purrr::transpose() %>%
     purrr::map(paste0, collapse=collapse) %>%
     purrr::map_chr(~paste0(pre$Body, ., post$Body, collapse= "\r\n"))  %>%
-    purrr::reduce(paste ,sep="\r\n")
+    purrr::reduce(paste ,sep="\r\n", .init='')
   str_result
 }
 
@@ -84,6 +84,7 @@ build_element_apply <- function (df,pre,post,
 build_table_apply <- function (df, df.names=names(df),
   tableClass=NULL,skipHeader=FALSE)
 {
+  if (df %>% is.null()) {return("")}
   df = df %>% fillna_df()
 
   table_tag<-"<table>"
