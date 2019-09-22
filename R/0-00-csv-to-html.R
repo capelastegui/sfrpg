@@ -148,5 +148,5 @@ refactor<-function(data)
 
 
 fillna_df <- function(df) {
-  df %>% mutate_all (~tidyr::replace_na(.,''))
+  df %>% mutate_if (purrr::negate(is.factor),~tidyr::replace_na(.,''))
 }
