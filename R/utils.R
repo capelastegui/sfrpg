@@ -186,6 +186,8 @@ llply.n.labelname <- function(l, n, pasteLabels = TRUE) {
 
 # transpose a data frame, assign type - needs homogeneous column types
 trans_df <- function(.data, type = NA, extractNames = FALSE) {
+    if (is.null(.data)) {return(NULL)}
+  
     tmpData <- .data
     if (extractNames) {
         tmpNames <- .data[, 1]
@@ -200,4 +202,10 @@ trans_df <- function(.data, type = NA, extractNames = FALSE) {
             logical = colwise(as.logical)(result))
     }
     result
+}
+
+trans_df2 <- function (df){
+  # Taken from https://stackoverflow.com/questions/52684395/put-the-first-row-as-the-column-names-of-my-dataframe-with-dplyr-in-r
+  if (is.null(df)) {return(NULL)}
+  df %>%  tidyr::gather(key = key, value = value, 2:ncol(.)) %>%  tidyr::spread(key = names(.)[1], value = "value")
 }
