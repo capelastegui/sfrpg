@@ -10,17 +10,23 @@ Skill bonus:
 
 Skill Check Difficulty table
 
-Easy 8 (65% at +0)
-Normal 12 (65% at +4)
-Hard 16 (65% at +8) - requires trained
-Very Hard 20 (65% at +12) - requires focus
+Abreviation | Check level | DC | Req. Level | Stamina cost
+-- | -- | -- | -- | --
+R | Routine | - |   |  
+E | Easy | 8 |   | 1 on Failure
+M | Medium | 13 |   | 1 on Failure
+H | Hard | 18 |   | 1 on Failure
+VH | Very Hard | 23 | Trained | 1 on Failure
+I | Legendary | 28 | Master | 2 on Failure
+I | Impossible | 33 | Grandmaster | 2 on Failure
 
 Difficulty guide
 - Easy - Anyone can do it, but an untrained character may sometimes fail this or require extra time or help
-- Normal - Hard for untrained characters, trained characters will handle it most of the time.
-- Hard - Requires training, only the most talented can do it reliably.
-- Very Hard - Only achievable by top experts, with effort.
-- Impossible - Only achievable by top experts with significant assistance and luck.
+- Medium - Non-trivial effort for untrained characters, trained characters will handle it most of the time.
+- Hard - This is the most an individual without special training can achieve, with luck. Requires effort even from experts.
+- Very Hard - Experts can sometimes accomplish this, with luck.
+- Legendary - Something only the best in the world could do, on a good day.
+- Impossible - Normally considered out of reach for mortals.
 
 
 Skill | Ability | Summary
@@ -34,10 +40,12 @@ Stealth | Dexterity | Hiding, Secrets, Ciphers
 Perception | Wisdom | Observation, Empathy, Memory
 Nature | Wisdom | Flora, Fauna, Environment, Healing
 Diplomacy | Charisma | Rethoric, Etiquette, Politics
-Deception | Charisma | Lying, Gossip, Forgery
+Trickery | Charisma | Lying, Gossip, Forgery
 Arcana | Intelligence | Magic, Science, Cosmology
 Lore | Intelligence | History, Geography, Law
 
+
+TODO: All the examples below need reviewing, may be obsolete
 
 Athletics
 Lift or Drag Load
