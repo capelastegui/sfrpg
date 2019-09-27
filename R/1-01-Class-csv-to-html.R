@@ -55,16 +55,52 @@ get_class_section <- function(class, build,
   )
 }
 
+get_df_class_stat <- function(df_class_stat_raw){
+  
+  get_skill_str_column <- function(skill, df_class_stat){
+    df_class_stat[[skill]]  %>% 
+      tidyr::replace_na('') %>% 
+      as.character %>% 
+      stringr::str_replace('0', '') %>%
+      stringr::str_replace('1', paste0(skill,','))
+  }
+  
+  l_skills = c('Athletics', 'Authority', 'Endurance',
+               'Concentration', 'Stealth', 'Finesse',
+               'Perception', 'Nature', 'Trickery',
+               'Diplomacy', 'Arcana', 'Lore')
+  
+  col_skills = l_skills %>%
+    purrr::map_dfc(get_skill_str_column, df_class_stat_raw) %>% 
+    purrr::transpose() %>% 
+    purrr::map_chr(paste0, collapse='') %>% 
+    stringr::str_replace(',$', '')
+  
+  df_class_stat_raw %>% mutate(Skills = col_skills) %>% 
+    select(-one_of(l_skills))
+}
+
+get_class_stat_trans <- function(df_class_stat){
+  l_keys =df_class_stat %>% names()
+  
+  get_class_stat_trans_apply <- function(colname, df_class_stat){
+    list(key=colname, value=df_class_stat[[colname]][[1]])
+  }
+  
+  l_keys %>% purrr::map_dfr(get_class_stat_trans_apply, df_class_stat)
+  
+}
+
 get_l_class <- function (dir_base = here::here())
 {
   #require(rutils)
   source(file.path(dir_base, "R", "0-00-csv-to-html.R"))
   source(file.path(dir_base, "R", "utils.R"))
   
-  read_my_csv <- function(s) {
+  read_my_csv <- function(s, delim=';') {
     readr::read_delim(
       file.path(dir_base, "raw", "CharacterCreation", paste0(s, ".csv")),
-      delim = ";",
+      delim = delim,
       col_types = readr::cols(.default = "c")
     )
   }
@@ -72,10 +108,11 @@ get_l_class <- function (dir_base = here::here())
 
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
 
-df_class_stat = read_my_csv('Class-stats') # TODO: header=TRUE, if required
+df_class_stat = read_my_csv('Class-stats', delim=',') %>% 
+  get_df_class_stat()
 df_class_feature = read_my_csv('Class-features') %>%
   gsub_colwise("\\n", "<br>") %>%
-  map_dfc (tidyr::replace_na,'-')
+  purrr::map_dfc (tidyr::replace_na,'-')
 # Todo: convert columns to character if required
 df_feature_tag <- read_my_csv('Class-features-tags')
 df_power_tag <-  read_my_csv('Powers-tags')
@@ -104,17 +141,17 @@ df_class = list(
   df_class_stat %>% group_by(Class, Build) %>% tidyr::nest (.key='data_stat'),
   df_class_feature %>% group_by(Class, Build) %>% tidyr::nest (.key='data_feature')
 ) %>%
-  reduce(full_join, by= c('Class', 'Build')) %>%
+  purrr::reduce(full_join, by= c('Class', 'Build')) %>%
   mutate(
-    htm_stat =data_stat %>%  map_chr(
-      ~ .x %>% trans_df2() %>% build_table_apply,  # TODO: convert to tibble, set column names
-      tableClass = "Class-table", skipHeader = TRUE),
-    htm_feature = data_feature %>% map_chr(
+    htm_stat =data_stat %>% 
+      purrr::map( ~ .x %>% get_class_stat_trans) %>% 
+      purrr::map_chr(~.x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)),
+    htm_feature = data_feature %>% purrr::map_chr(
       build_element_apply,
       feature_tag_pre, feature_tag_post, skipEmpty = TRUE),
-    htm_power = data_power %>% map_chr(apply_class_power_htm,
+    htm_power = data_power %>% purrr::map_chr(apply_class_power_htm,
         power_tag_pre, power_tag_post),
-    htm_power_summary = data_power %>% map_chr(apply_class_power_summary),
+    htm_power_summary = data_power %>% purrr::map_chr(apply_class_power_summary),
     htm_class_section = get_class_section(
       Class, Build, htm_stat, htm_feature, htm_power_summary, htm_power
     )
@@ -152,7 +189,7 @@ writeClassList  <- function(l_class)
   file_css <- file.path(dir_base, "Rmd", "SFRPG.css")
   
   file_class_stat_htm  <-
-    file.path(dir_base, "html", "CharacterCreation", "Class-stats.html")
+    file.path(dir_base, "html", "CharacterCreation", "Class-stats_new.html")
   
   file_power_htm <-
     file.path(dir_base, "html", "CharacterCreation", "Powers.html")

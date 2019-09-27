@@ -299,9 +299,9 @@ The different types of armor available in the game are described as follows:
 - Light Armor
     * **Cloth**: Regular clothing, or Robes
     * **Leather**: A combination of regular clothing and leather pieces for added protection, such as a leather jacket or coat, a leather suit, or leather breastplates.
-    * **Hide**: A combination of regular clothing, leather pieces, and thick pieces of beast skin for added protection.
 
 - Heavy Armor
+    * **Hide**: A combination of regular clothing, leather pieces, and thick pieces of beast skin for added protection.
     * **Chain**: Armor made of interlocking metal rings.
     * **Scale**: Armor made of small, overlapping metal scales.
     * **Plate**: Armor made of large metal plates.

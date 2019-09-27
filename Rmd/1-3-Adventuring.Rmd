@@ -1,0 +1,93 @@
+# Adventuring
+
+As players characters go on adventures, they will face a series of challenges that test them and drain their resources. 
+There are two main types of encounters in the game:
+- Skill encounters:  The PCs interact with the environment and other characters to solve a problem. This is primarily handled by the Skill system.
+- Combat encounters: The PCs fight monsters for survival or to achieve a goal. This is primarily handled by the Combat system.
+
+In addition, it is possible to have mixed encounters where both character Skills and Combat abilities are in the spotlight.
+We call these mixed encounters. Note that characters still get to use their Skills in regular Combat encounters if they choose to -
+the difference in mixed encounters is that there are explicit goals that require the use of Skills.
+
+A typical encounter has the following consequences:
+- Rewards: Characters can gain experience points, gold, and treasure after an encounter.
+- Resource use: Characters have a stat called Stamina that determines how many encounters 
+they can take before stopping to take a Long Rest. Stamina can be lost in an encounter by 
+receiving wounds, failing Skill Checks or using certain special powers. In addition,
+taking a Short Rest to recover after an encounter also spends 1 Stamina point.
+- Campaign consequences: Depending on the degree of success of an encounter, there can be
+consequences for the Player Characters, their allies, or the environment.
+
+In addition, a particularly disastrous encounter can have Player Characters end up
+permanently crippled or even dead.
+
+## Character Stamina and resource management
+
+Adventuring resources
+
+- Stamina: A measure of how long a character can go without resting. Characters can lose Stamina by taking a Short Rest or running out of Vitality or Morale. Characters recover Stamina by getting a Long or Full Rest. 
+- Vitality: A measure of how long a character can fight without resting. Characters lose Vitality by getting knocked out or healing in combat. Characters fully recover their Vitality after taking a Short, Long or Full Rest.
+- Morale: A measure of how long a character can keep adventuring without resting. Characters lose Morale by failing Skill Checks. Characters fully recover their morale after taking a Short, Long or Full Rest.
+- Healing Surge: The base amount of Hit Points that a character recovers when healing. Any power that makes a character use a healing surge has that character lose 1 point of Vitality and recover Hit Points equal to their Healing Surge value, plus any modifiers that apply
+
+Sidebar: Stat Values
+A typical character has Stamina 6, Vitality 1, and Morale 1.
+Stamina, Vitality and Morale are based on a character’s class.
+Healing Surge Value is equal to a quarter of a character’s maximum Hit Points, plus their Constitution / Charisma modifier.
+
+## Resting
+
+Characters can rest to recover resources. There are three types of rest, depending on the time and conditions of resting:
+
+- Short Rest: A brief pause after combat, allowing characters to catch their breath.
+- Long Rest: A full night’s rest.
+- Full Rest: (period between adventures)
+
+Resource spending and recovery.
+
+The following table summarizes how rests work:
+
+- Short Rest: 
+-1 Stamina, Recover all HP, Vitality, Morale, and Encounter Powers.
+- Long Rest:
++1 Stamina, Recover all HP, Vitality, Morale, and Encounter Powers.
+Reset Action Points to 1.
+At the DM’s discretion, a Long rest may grant additional stamina, as well as a chance to recharge spent Daily Powers.
+- Full Rest:
+Recover all Stamina, HP, Vitality, Morale, Encounter and Daily Powers.
+Reset Action Points to 1.
+Full Rests are only available at the end of an adventure, or on special circumstances at the DM’s discretion.
+
+## Summary
+
+The following table summarizes how resources are spent and recovered:
+- Vitality: 
+  - Recover all Vitality when taking a Short Rest, Long Rest or Full Rest.
+  - Lose 1 Vitality when dropping below 1 HP.
+  - Lose 1 Vitality when failing a Death Saving Throw (e.g. while in combat and below 1 HP).
+  - Lose 1 Vitality when you use a healing surge.
+  - If at any point a character would lose Vitality but has no Vitality left, they lose 1 Stamina instead. If they have no Stamina left, they instead lose HP equal to half their HP value.
+- Morale:
+  - Recover all Morale when taking a Short Rest, Long Rest or Full Rest.
+  - Lose 1 Morale when failing a Skill Check. Some 
+  - Lose 1 Morale when performing a Ritual. Some rituals have an additional Morale cost, see ritual description for more details.
+  - Some types of Skill Check are classified as Safe. Characters don’t lose Morale from failing Safe Skill Checks.
+  - Some types of Skill Check have an additional Morale cost. See skill description for more details.
+  - If at any point a character would lose Morale but has no Morale left, they lose 1 Stamina instead. Characters cannot take actions that could lead them to lose Morale if they are out of both Morale and Stamina. If a character that is out of Morale and Stamina loses Morale, nothing happens.
+- Stamina:
+  - Lose 1 Stamina when taking a Short Rest
+  - Lose 1 Stamina when losing 1 Vitality while out of Vitality
+  - Lose 1 Stamina when losing 1 Morale while out of Morale
+  - Recover 1 Stamina when taking a Long Rest. Some Long Rests let characters recover additional Stamina.
+  - Recover all Stamina when taking a Full Rest.
+
+TODO: Exhaustion rules.
+
+When a character would lose 1 Stamina but has no Stamina left, they become Exhausted (1) instead. If the character is already exhausted,
+they increase their exhaustion level by 1. Characters get a -1 penalty to all their rolls per level of exhaustion.
+
+Recovering from exhaustion: Whenever a character regains 1 Stamina while exhausted, reduce their exhaustion level by 1. 
+If this reduces their exhaustion level to 0 or lower, they are no longer exhausted.
+
+At the DM's discrection, a very exhausted character may be out of action and incapable of adventuring until they recover. 
+We suggest this is only applied to characters with an exhaustion level of 3 or higher. 

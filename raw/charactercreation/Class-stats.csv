@@ -1,17 +1,9 @@
-Class;Build;Power Source;Role;Power Progression;Starting HP;Level HP;Base Surges;Light Armor Bonus;Defense Bonuses;Armor Training;Weapon Training;Implement Training;Primary Ability;Secondary Ability;Fixed Skills;Base Skills;Class Skill List
-Fighter;Guardian;Martial;Defender;Standard;35;3,5;9;1; +2 For;Light Shield, Heavy Shield, Leather, Hide, Chain, Scale;All Basic, 1-hand Martial;-;Strength;Wisdom;Athletics;3;Athletics, Authority, Endurance, Perception
-Wizard;Elementalist;Arcane;Controller;Standard;30;3;6;0; +2 Wil; -;Dagger, Quarterstaff;Wand, Staff, Orb, Tome;Intelligence;Dexterity;Arcana;3;Concentration, Trickery, Arcana, Lore
-Wizard;Abjurer;Arcane;Controller;Standard;30;3;6;0; +2 Wil; -;Dagger, Quarterstaff;Wand, Staff, Orb, Tome;Intelligence;Constitution;Arcana;3;Concentration, Endurance, Arcana, Lore
-Rogue;Scoundrel;Martial;Striker;Standard;30;3;6;2; +2 Ref;Leather;Dagger, Short Sword, Rapier, Sling, Hand Crossbow, Light Crossbow;-;Dexterity;Charisma;Acrobatics;4;Concentration, Acrobatics, Stealth, Perception, Trickery
-Priest;Light;Divine;Leader;Standard;30;3;7;2; +1 For, +1 Wil; - ;Mace, Sling, Quarterstaff;Symbol;Wisdom;Charisma;Religion;3;Concentration, Perception, Diplomacy, Arcana
-Warlord;Tactician;Martial;Leader;Standard;30;3;7;0; +1 For, +1 Wil;Light Shield, Leather, Hide, Chain;All Basic, 1-hand Martial, Longspear, Halberd, Glaive;-;Strength;Intelligence;History;3;Authority, Diplomacy, Perception, Lore
-Barbarian;Rager;Primal;Striker;Standard;35;3,5;8;0; +2 For;Leather, Hide;All Basic, All Martial;-;Strength;Constitution;Endurance;3;Athletics, Authority, Endurance, Nature
-Warlock;Shadow;Arcane;Controller;Standard;30;3;6;1; +1 Ref, +1 Wil;Leather;All Basic;Wand, Rod, Weapon Implement (Dagger);Charisma;Dexterity;Intimidate;3;Concentration, Stealth, Trickery, Arcana
-Bard;Trickster;Arcane;Leader;Standard;30;3;7;0; +1 Ref, +1 Wil;Light Shield, Leather, Hide, Chain;All Basic, 1-hand Martial;Wand, Weapon Implement (Light Blade or Heavy Blade);Charisma;Intelligence;Bluff;4;Acrobatics, Diplomacy, Trickery, Arcana, Lore
-Ranger;Archer;Martial;Striker;Standard;30;3;6;0; +2 Ref;Leather;All Basic, Ranged Martial; -;Dexterity;Wisdom;Perception;3;Endurance, Stealth, Nature, Perception
-Wizard;Summoner;Arcane;Controller;Standard;30;3;6;0; +2 Wil;-;Dagger, Quarterstaff;Wand, Staff, Orb, Tome;Intelligence;Wisdom;Arcana;3;Concentration, Diplomacy, Arcana, Lore
-Paladin;Protector;Divine;Defender;Standard;35;3,5;10;0; +1 For, +1 Ref, +1 Wil;Light Shield, Heavy Shield, Leather, Hide, Chain, Scale, Plate;All Basic, 1-hand Martial;Symbol;Charisma;Wisdom;Diplomacy;3;Authority, Endurance, Diplomacy, Lore
-Monk;Wind;Inner;Striker;Standard;30;3;6;3; +1 For, +1 Ref, +1 Wil;-;All Inner;Focus;Dexterity;Wisdom;Insight;3;Concentration, Acrobatics, Perception, Arcana
-Brawler;Tough;Martial;Defender;Standard;50;5;9;0; +2 For;Leather;All Inner; - ;Strength;Constitution;Endurance;3;Athletics, Authority, Endurance, Trickery
-Ninja;Sneak;Martial;Striker;Standard;25;2,5;6;2; +2 Ref; -;Dagger, Short Sword, Light Flail, Flail, Longsword, Glaive, Hand Crossbow, Light Crossbow; -;Dexterity;Intelligence;Stealth;3;Athletics, Acrobatics, Stealth, Trickery
-Universal;Universal;Martial;Defender;Standard;35;3,5;9;1; +2 For;Light Shield, Heavy Shield, Leather, Hide, Chain, Scale;All Basic, 1-hand Martial;-;Strength;Wisdom;Athletics;3;-
+Class,Build,Power Source,Role,Power Progression,HP,Stamina,Vitality,Morale,Magic,Light Armor Bonus,Fortitude,Reflex,Will,Primary Ability,Secondary Ability,Trained Skills,Athletics,Authority,Endurance,Concentration,Stealth,Finesse,Arcana,Lore,Perception,Nature,Trickery,Diplomacy,Total class skills,Weapon Training,Implement Training,Armor Training,Expected Armor
+Fighter,Guardian,Martial,Defender,Standard,High,6,2,1,1,1,2,0,0,Str,Con,4,1,1,1,,,,,1,1,,,,5,"All Basic, All Melee Martial",-,"Clot, Leather, Hide, Chain, Scale, Light Shield, Heavy Shield",16
+Priest,Light,Divine,Support,Standard,Medium,7,1,1,1,1,1,0,1,Wis,Cha,4,,1,,1,,,1,,,1,,1,5,"Light Hammer, Mace, Quarterstaff",Symbol,Cloth,12
+Rogue,Scoundrel,Martial,Striker,Standard,Medium,6,1,2,1,1,0,2,0,Dex,Cha,5,1,1,,1,1,1,,,1,,1,1,8,"All Off-Hand, Short Bow",,"Cloth, Leather",13
+Wizard,Elementalist,Arcane,Controller,Standard,Medium,6,1,1,2,0,0,0,2,Int,Dex,4,0,0,0,1,0,1,1,1,,,1,,5,"Dagger, Staff","Staff, Wand, Rod, Orb, Tome",Cloth,11
+Ranger,Archer,Martial,Striker,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,
+Barbarian,Rager,Primal,Striker,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,
+Warlord,Tactician,Martial,Support,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,
+Warlock,Shadow,Arcane,Controller,,,,,,,,,,,,,,,,,,,,,,,,,,0,,,,

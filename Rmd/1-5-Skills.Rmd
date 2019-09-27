@@ -1,5 +1,32 @@
 # Skills
 
+There are 12 Skills in the game. Each skill has an associated ability modifier
+
+Skill | Ability | Summary
+-- | -- | -- 
+Athletics | Strength | Sprinting, Climbing, Swimming
+Authority | Strength | Intimidation, Leadership, Military
+Concentration | Constitution | Study, Craftsmanship, Art
+Endurance | Constitution | Stamina, Wakefulness, Survival
+Finesse | Dexterity | Balance, Tumbling, Lockpicking
+Stealth | Dexterity | Hiding, Secrets, Ciphers
+Perception | Wisdom | Observation, Empathy, Memory
+Nature | Wisdom | Flora, Fauna, Environment, Healing
+Diplomacy | Charisma | Rethoric, Etiquette, Politics
+Trickery | Charisma | Lying, Gossip, Forgery
+Arcana | Intelligence | Magic, Science, Cosmology
+Lore | Intelligence | History, Geography, Law
+
+Using Skills
+
+Some actions are only available to characters with an appropriate level of training in a skill. These are the levels of training that a character can have in a skill:
+
+- Untrained. This the level that most characters have with a skill. Untrained characters have not received any formal training with a skill, but they can still attempt basic tasks associated with it, and succeed with a bit of luck and natural talent.
+- Trained. Characters Trained with a skill have spent significant time practicing it, and can be considered experts in the area. Trained characters rarely make errors on mundane tasks related to their skill of choice, and with effort and luck, they can even succeed on advanced actions out of the reach of amateurs.
+- Master. Skill Masters are individuals of extraordinary talent who have become famous for their prowess with a particular skill.
+- Grandmaster. Very few mortals ever reach this level of proficiency. The feats that Grandmasters can achieve are the stuff of legends.
+
+
 Skill bonus:
 
 ```Ability + Training + Other```
@@ -7,6 +34,7 @@ Skill bonus:
 - Ability:
 - Training:
 - Other:
+
 
 Skill Check Difficulty table
 
@@ -29,20 +57,7 @@ Difficulty guide
 - Impossible - Normally considered out of reach for mortals.
 
 
-Skill | Ability | Summary
--- | -- | -- 
-Athletics | Strength | Sprinting, Climbing, Swimming
-Authority | Strength | Intimidation, Leadership, Military
-Concentration | Constitution | Study, Craftsmanship, Art
-Endurance | Constitution | Stamina, Wakefulness, Survival
-Finesse | Dexterity | Balance, Tumbling, Lockpicking
-Stealth | Dexterity | Hiding, Secrets, Ciphers
-Perception | Wisdom | Observation, Empathy, Memory
-Nature | Wisdom | Flora, Fauna, Environment, Healing
-Diplomacy | Charisma | Rethoric, Etiquette, Politics
-Trickery | Charisma | Lying, Gossip, Forgery
-Arcana | Intelligence | Magic, Science, Cosmology
-Lore | Intelligence | History, Geography, Law
+
 
 
 TODO: All the examples below need reviewing, may be obsolete
