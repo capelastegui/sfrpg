@@ -77,7 +77,9 @@ get_df_class_stat <- function(df_class_stat_raw){
     stringr::str_replace(',$', '')
   
   df_class_stat_raw %>% mutate(Skills = col_skills) %>% 
-    select(-one_of(l_skills))
+    select(-one_of(l_skills)) %>% 
+    #select(`Power Source`:`Trained Skills`, Skills, `Total class skills`:`Expected Armor`)
+    select(`Class`:`Trained Skills`, Skills, `Total class skills`:`Expected Armor`)
 }
 
 get_class_stat_trans <- function(df_class_stat){
