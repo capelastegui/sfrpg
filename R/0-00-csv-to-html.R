@@ -124,7 +124,7 @@ gsub_colwise <- function(df,pattern,replacement)
 {
   replace_if_str <- function(x){
     if(is.character(x) | is.factor(x)) {
-      stringr::str_replace(x, pattern, replacement)   
+      stringr::str_replace_all(x, pattern, replacement)
     } else {x}
   }  
   df %>% purrr::map_dfc(replace_if_str)

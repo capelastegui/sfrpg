@@ -55,7 +55,8 @@ Upgrade 23: Increase Hit damage to 4W+Dex";
 Stay Down;Rogue;Scoundrel;;1;Attack;Encounter;;Weapon, Light  Weapon;;;Melee or Ranged;;Dex vs AC;;2W+Dex, and Prone. If you have Advantage, provokes Opportunity Attacks when standing up next turn.;;;;;"Upgrade 13: Increase Hit damage to 3W+Dex
 Upgrade 23: Increase Hit damage to 4W+Dex";
 Blinding Trick;Rogue;Scoundrel;;1;Attack;Daily;;Weapon, Light  Weapon;;;Melee or Ranged;;Dex vs Ref;;Blinded (save ends);Miss: Grants Advantage (save ends);Make a Secondary Attack against the target.;;"Dex vs AC
-Hit: 3W+Dex, and -2xCha to save until your next turn.";"Upgrade 15: Increase Secondary Hit damage to 5W+Dex
+Hit: 3W+Dex, and -2xCha to save until your next turn.
+";"Upgrade 15: Increase Secondary Hit damage to 5W+Dex
 Upgrade 25: Increase Secondary Hit damage to 7W+Dex";
 Stunning Blow;Rogue;Scoundrel;;1;Attack;Daily;;Weapon, Light  Weapon, Reliable;;;Melee;targets an enemy granting Advantage to you;Dex vs For;;2W+Dex, and Stunned (save ends);;;;;"Upgrade 15: Increase  Hit damage to 3W+Dex
 Upgrade 25: Increase  Hit damage to 5W+Dex";
@@ -122,7 +123,7 @@ Soul Feed;Warlock;Shadow;;1;Attack;Daily;;;;;Ranged 7;;Cha vs For;;3d10+Cha Necr
 Black Hole;Warlock;Shadow;;1;Attack;Daily;;;;;Ranged 10;;Cha vs Ref;;3d6+Cha Necro;;Until the end of the encounter, create a zone of Very Difficult and Obscuring Terrain in a Burst 2 centered on the target. Creatures ending their turn in the zone take Cha Necro.;;;;
 Shadowfiend;Warlock;Shadow;;1;Attack;Daily;;Summon;Minor Action;;;;;;;;" - Note: summons benefit from Curse
 - +2 Def
-- Shadow Aura - Aura 2: Enemies in aura grant Advantage and can’t gain Advantage.
+- Shadow Aura - Aura 2: Enemies in aura grant Advantage and canï¿½t gain Advantage.
 - Standard Command - Ch vs Ref, 2d8+Ch, and Dazed UEONT
 - Reaction Command (enemy provokes OA from hound) - Make Standard Command attack against target.
 - Move Command - Teleport 2";;;;
