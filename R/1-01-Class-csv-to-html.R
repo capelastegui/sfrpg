@@ -62,7 +62,7 @@ get_df_class_stat <- function(df_class_stat_raw){
       tidyr::replace_na('') %>% 
       as.character %>% 
       stringr::str_replace('0', '') %>%
-      stringr::str_replace('1', paste0(skill,','))
+      stringr::str_replace('1', paste0(skill,', '))
   }
   
   l_skills = c('Athletics', 'Authority', 'Endurance',
@@ -74,7 +74,7 @@ get_df_class_stat <- function(df_class_stat_raw){
     purrr::map_dfc(get_skill_str_column, df_class_stat_raw) %>% 
     purrr::transpose() %>% 
     purrr::map_chr(paste0, collapse='') %>% 
-    stringr::str_replace(',$', '')
+    stringr::str_replace(', $', '')
   
   df_class_stat_raw %>% mutate(Skills = col_skills) %>% 
     select(-one_of(l_skills)) %>% 
