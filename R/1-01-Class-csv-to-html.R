@@ -171,14 +171,12 @@ get_class_stat_trans <- function(df_class_stat) {
 #' @export
 #'
 #' @examples
-get_l_class <- function (dir_base = here::here())
+get_l_class <- function ()
 {
-  source(file.path(dir_base, "R", "0-00-csv-to-html.R"))
-  source(file.path(dir_base, "R", "utils.R"))
-  
+  dir_base  = system.file('raw', "CharacterCreation", package='sfrpg')
   read_my_csv <- function(s, delim = ';') {
     readr::read_delim(
-      file.path(dir_base, "raw", "CharacterCreation", paste0(s, ".csv")),
+      file.path(dir_base, paste0(s, ".csv")),
       delim = delim,
       col_types = readr::cols(.default = "c")
     )
@@ -278,8 +276,8 @@ get_class_build <- function(df_class, char_class, char_build) {
 #'
 #' @examples
 get_htm_file <- function(str_htm) {
-  dir_base = file.path(here::here(), 'sfrpg')
-  file_css <- file.path(dir_base, "Rmd", "SFRPG.css")
+
+  file_css <- system.file('rmd', "SFRPG.css", package='sfrpg')
   css <- readChar(file_css, file.info(file_css)$size)
   
   paste(

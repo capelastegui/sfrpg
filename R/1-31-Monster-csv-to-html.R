@@ -2,10 +2,10 @@
 
 updateMonsters <- function() {
 
-monster.race.raw <- file.path(here::here(),"raw","monsters","Monsters-race-raw.csv")
-monster.race.tag <- file.path(here::here(),"raw","monsters","Monsters-race-tags.csv")
-monster.class.raw <- file.path(here::here(),"raw","monsters","Monsters-class-raw.csv")
-monster.class.tag <- file.path(here::here(),"raw","monsters","Monsters-class-tags.csv")
+monster.race.raw <- file.path(here::here(),"inst", "raw","monsters","Monsters-race-raw.csv")
+monster.race.tag <- file.path(here::here(),"inst", "raw","monsters","Monsters-race-tags.csv")
+monster.class.raw <- file.path(here::here(),"inst", "raw","monsters","Monsters-class-raw.csv")
+monster.class.tag <- file.path(here::here(),"inst", "raw","monsters","Monsters-class-tags.csv")
 monster.css.file <- file.path(here::here(),"Rmd","SFRPG-monsters.css")
 monster.race.htm.file <- file.path(here::here(),"html","monsters","Monsters.race.html")
 monster.class.htm.file <- file.path(here::here(),"html","monsters","Monsters.class.html")

@@ -4,8 +4,8 @@ getManeuverList <- function (dir_base=here::here())
   ##require(rutils)
   source(file.path(dir_base,"R","0-00-csv-to-html.R"))
   
-  maneuver.raw <- file.path(dir_base,"raw","combat","Combat-maneuvers.csv")
-  maneuver.tag <- file.path(dir_base,"raw","combat","Combat-maneuvers-tags.csv")
+  maneuver.raw <- file.path(dir_base,"inst", "raw","combat","Combat-maneuvers.csv")
+  maneuver.tag <- file.path(dir_base,"inst", "raw","combat","Combat-maneuvers-tags.csv")
   css.file <- file.path(dir_base,"Rmd","SFRPG.css")
   
   

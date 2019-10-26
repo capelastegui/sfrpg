@@ -1,24 +1,17 @@
-
-library(dplyr)
-library(stringr)
-library(readr)
-
 #' Generate html tables for equipment from source .csv files
 #'
-#' @param dir_base Path of base project directory
 #'
 #' @return List of strings with html tables
 #' @export
 #'
 #' @examples
-#' df_tables_equip = get_equip_tables(dir_base)
-get_equip_tables <- function (dir_base=here::here())
+#' df_tables_equip = get_equip_tables()
+get_equip_tables <- function ()
 {
-  file_utils = file.path(dir_base,"R","0-00-csv-to-html.R")
-  source (file_utils)
-  
+  dir_base  = system.file('raw', "CharacterCreation", package='sfrpg')
+  print(dir_base)
   read_my_csv <- function(s) {
-    readr::read_delim(file.path(dir_base,"raw","CharacterCreation",paste0(s,".csv")),
+    readr::read_delim(file.path(dir_base,paste0(s,".csv")),
                       delim=";")}
   
   df_weapons <- read_my_csv("Weapons-raw")
@@ -33,7 +26,7 @@ get_equip_tables <- function (dir_base=here::here())
   str_weapons<-df_weapons %>%
     split(df_weapons$Training) %>%
     purrr::map(build_table_apply, tableClass='General-table')
-  
+
   # New workflow model: encapsulate data in nested dataframe
   df_weapons_str <- df_weapons %>%
     group_by(table_type='Weapons', Training) %>% tidyr::nest() %>%

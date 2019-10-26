@@ -6,15 +6,15 @@ getRaceList <- function (dir_base=here::here())
 
 #File paths
 ## Race powers
-race.power.raw <- file.path(dir_base,"raw","charactercreation","Race-Powers-raw.csv")
-race.power.tag <- file.path(dir_base,"raw","charactercreation","Race-Powers-tags.csv")
+race.power.raw <- file.path(dir_base,"inst", "raw","charactercreation","Race-Powers-raw.csv")
+race.power.tag <- file.path(dir_base,"inst", "raw","charactercreation","Race-Powers-tags.csv")
 css.file <- file.path(dir_base,"Rmd","SFRPG.css")
 ## Race stats
-race.stat.raw <- file.path(dir_base,"raw","charactercreation","Race-stats.csv")
+race.stat.raw <- file.path(dir_base,"inst", "raw","charactercreation","Race-stats.csv")
 race.stat.htm.file  <- file.path(dir_base,"html","CharacterCreation","Race-stats.html")
 ## Race features
-race.features.raw <- file.path(dir_base,"raw","charactercreation","Race-features.csv")
-race.features.tag <- file.path(dir_base,"raw","charactercreation","Race-features-tags.csv")
+race.features.raw <- file.path(dir_base,"inst", "raw","charactercreation","Race-features.csv")
+race.features.tag <- file.path(dir_base,"inst", "raw","charactercreation","Race-features-tags.csv")
 ## Race html
 race.power.htm.file <- file.path(dir_base,"html","CharacterCreation","race-Powers.html")
 race.power.table.htm.file <- file.path(dir_base,"html","CharacterCreation","race-Powers-table.html")

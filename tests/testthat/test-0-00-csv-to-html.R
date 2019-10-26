@@ -1,9 +1,5 @@
 context("Convert data from .csv to html")
 
-library(plyr)
-library(dplyr)
-library(purrr)
-
 test_that("build_element works", {
   # Test 1 - simple input
   str_result = build_element(c('hello','world'),'<<', '>>')

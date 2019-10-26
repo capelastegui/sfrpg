@@ -4,7 +4,7 @@
 \alias{get_l_class}
 \title{Generate dataframe with html text for class rules}
 \usage{
-get_l_class(dir_base = here::here())
+get_l_class()
 }
 \arguments{
 \item{dir_base}{}

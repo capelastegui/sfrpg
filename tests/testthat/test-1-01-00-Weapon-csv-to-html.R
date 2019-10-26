@@ -1,18 +1,11 @@
 context("Convert data from .csv to html")
 
-# library(dplyr)
-# library(purrr)
-
-dir_base=file.path(here::here(),'sfrpg')
-print(dir_base)
-
-dir_output = file.path(dir_base, 'tests', 'testthat', 'output')
-file_css <- file.path(dir_base,"Rmd","SFRPG.css")
+#dir_output = here::here('tests', 'testthat', 'output')
+file_css <- system.file('rmd', "SFRPG.css", package='sfrpg')
 css <- readChar(file_css, file.info(file_css)$size)
 
-
 test_that("get_equip_tables works", {
-  df_tables_equip <- get_equip_tables(dir_base)
+  df_tables_equip <- get_equip_tables()
   expect_equal(
     df_tables_equip$table_type %>% unique(),
     c('Weapons','Armor','Armor_by_Class','Implements'))
@@ -30,6 +23,9 @@ test_that("get_equip_tables works", {
                      sep="\r\n",
                      collapse="")
   
-  writeLines(str_tables, file.path(dir_output, '1-01-equiptables.html'))
+  print(df_tables_equip)
+  succeed()
+  
+  #writeLines(str_tables, file.path(dir_output, '1-01-equiptables.html'))
 })
 

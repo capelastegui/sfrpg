@@ -1,5 +1,3 @@
-# library(dplyr)
-
 #' Append tags before and after elements in a string array
 #'
 #' Typically used to convert raw data into html elements

@@ -1,9 +1,5 @@
 context("test_utils")
 
-library(plyr)
-library(dplyr)
-library(purrr)
-
 test_that("llply.parallel.ab works", {
     # Test 1 - simple input
     l1 = list(
@@ -18,9 +14,10 @@ test_that("llply.parallel.ab works", {
     l_result %>% qstr(4)
     
     # Alt implementation: with map2
-    l_result2 = map2(l1,l1, ~map2(.x, .y, get_l_result))
+    l_result2 = purrr::map2(l1,l1, ~purrr::map2(.x, .y, get_l_result))
     
     l_result2 %>% qstr(4)
+    succeed()
   }
 )
 
@@ -46,6 +43,8 @@ test_that("llply.parallel.multilist works", {
   #l_result2 = purrr::pmap(l_in, ~pmap(., get_l_result))
   #l_result2 = purrr::pmap(l_in, ~pmap(.,  ~pmap(., get_l_result)))
   #l_result2 %>% qstr(4)
+  
+  succeed()
 }
 )
 
@@ -55,5 +54,7 @@ test_that("trans_df works", {
   df_result = df_in %>% trans_df()
 
   df_result_null = NULL %>% trans_df()
+  
+  succeed()
 }
 )
