@@ -4,10 +4,13 @@
 \alias{refactor}
 \title{Apply factor again on factor columns}
 \usage{
-refactor(data)
+refactor(df)
 }
 \arguments{
-\item{data}{}
+\item{df}{df with factor columns}
+}
+\value{
+df with refactorized columns
 }
 \description{
 Apply factor again on factor columns

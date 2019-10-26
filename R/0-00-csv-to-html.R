@@ -132,19 +132,20 @@ gsub_colwise <- function(df,pattern,replacement)
 
 #' Apply factor again on factor columns
 #'
-#' @param data 
+#' @param df df with factor columns
 #'
-#' @return
+#' @return df with refactorized columns
 #' @export
 #'
 #' @examples
-refactor<-function(data)
+# refactor(iris)
+refactor<-function(df)
   # Run factor() on each factor column
 {
-  data %>% purrr::map_if(is.factor, factor) %>% dplyr::bind_cols()
+  df %>% purrr::map_if(is.factor, factor) %>% dplyr::tbl_df()
 }
 
 
 fillna_df <- function(df) {
-  df %>% mutate_if (purrr::negate(is.factor),~tidyr::replace_na(.,''))
+  df %>% dplyr::mutate_if (purrr::negate(is.factor),~tidyr::replace_na(.,''))
 }

@@ -12,8 +12,8 @@ apply_class_power_htm <- function(df, pre, post) {
   if (is.null(df)) {
     return ("")
   }
-  df = df %>% arrange(
-    desc(isFeature),
+  df = df %>% dplyr::arrange(
+    dplyr::desc(isFeature),
     Type,
     usageColors %>% forcats::fct_relevel('green', 'red', 'gray')
   )
@@ -135,9 +135,9 @@ get_df_class_stat <- function(df_class_stat_raw) {
     purrr::map_chr(paste0, collapse = '') %>%
     stringr::str_replace(', $', '')
   
-  df_class_stat_raw %>% mutate(Skills = col_skills) %>%
-    select(-one_of(l_skills)) %>%
-    select(`Class`:`Trained Skills`,
+  df_class_stat_raw %>% dplyr::mutate(Skills = col_skills) %>%
+    dplyr::select(-dplyr::one_of(l_skills)) %>%
+    dplyr::select(`Class`:`Trained Skills`,
            Skills,
            `Total class skills`:`Expected Armor`)
 }
@@ -195,35 +195,35 @@ get_l_class <- function ()
   df_power_raw <-  read_my_csv('Powers-raw') %>%
     gsub_colwise("\\n", "<br>") %>%
     fillna_df %>%
-    mutate(usageColors = UsageLimit %>%
+    dplyr::mutate(usageColors = UsageLimit %>%
              factor %>% 
              forcats::fct_recode(!!!c(
                green = "",
                red = "Encounter",
                gray = "Daily"))
            ) %>%
-    arrange(Class, isFeature != "Feature",
+    dplyr::arrange(Class, isFeature != "Feature",
             Type, usageColors, Level, Name)  %>%
-    mutate(Name = paste(
+    dplyr::mutate(Name = paste(
       "<span class=\"", usageColors, "\">", Name, sep = "")) %>%
-    mutate(Level = paste(Level, "</span>", sep = ""))
+    dplyr::mutate(Level = paste(Level, "</span>", sep = ""))
   
-  power_tag_pre <- df_power_tag[1,] %>% select(-Class,-Build)
-  power_tag_post <- df_power_tag[2,] %>% select(-Class,-Build)
+  power_tag_pre <- df_power_tag[1,] %>% dplyr::select(-Class,-Build)
+  power_tag_post <- df_power_tag[2,] %>% dplyr::select(-Class,-Build)
   
-  feature_tag_pre <- df_feature_tag[1,] %>% select(-Class,-Build)
-  feature_tag_post <- df_feature_tag[2,] %>% select(-Class,-Build)
+  feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
+  feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
   
   df_class = list(
-    df_power_raw  %>% group_by(Class, Build) %>% 
+    df_power_raw  %>% dplyr::group_by(Class, Build) %>%
       tidyr::nest (.key = 'data_power'),
-    df_class_stat %>% group_by(Class, Build) %>%
+    df_class_stat %>% dplyr::group_by(Class, Build) %>%
       tidyr::nest (.key = 'data_stat'),
-    df_class_feature %>% group_by(Class, Build) %>%
+    df_class_feature %>% dplyr::group_by(Class, Build) %>%
       tidyr::nest (.key = 'data_feature')
   ) %>%
-  purrr::reduce(full_join, by = c('Class', 'Build')) %>%
-  mutate(
+  purrr::reduce(dplyr::full_join, by = c('Class', 'Build')) %>%
+  dplyr::mutate(
     htm_stat = data_stat %>%
       purrr::map(~ .x %>% get_class_stat_trans) %>%
       purrr::map_chr(

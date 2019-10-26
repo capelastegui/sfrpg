@@ -2,8 +2,6 @@
 
 #auxiliary functions
 
-refactor<-function(data){colwise(function(col) {if (is.factor(col)) factor(col)  else col }) (data)}
-
 applysplit  <- function (df,splitvar)
 { 
   df <- refactor(df)

@@ -29,12 +29,12 @@ get_equip_tables <- function ()
 
   # New workflow model: encapsulate data in nested dataframe
   df_weapons_str <- df_weapons %>%
-    group_by(table_type='Weapons', Training) %>% tidyr::nest() %>%
-    mutate(table = purrr::map_chr(data,build_table_apply, tableClass="General-table"))
+    dplyr::group_by(table_type='Weapons', Training) %>% tidyr::nest() %>%
+    dplyr::mutate(table = purrr::map_chr(data,build_table_apply, tableClass="General-table"))
   
   get_table <- function(df, type) {
-    df %>% group_by(table_type=type, Training='-') %>%  tidyr::nest() %>% 
-      mutate(table = purrr::map_chr(data,build_table_apply, tableClass="General-table"))
+    df %>% dplyr::group_by(table_type=type, Training='-') %>%  tidyr::nest() %>%
+      dplyr::mutate(table = purrr::map_chr(data,build_table_apply, tableClass="General-table"))
   }
   
   df_armor_str  <- get_table(df_armor, 'Armor')
@@ -42,7 +42,7 @@ get_equip_tables <- function ()
   
   df_implement_str  <- get_table(df_implement, 'Implements')
   
-  df_result = bind_rows(
+  df_result = dplyr::bind_rows(
     df_weapons_str,
     df_armor_str,
     df_armorbyclass_str,

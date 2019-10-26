@@ -23,10 +23,10 @@ Imports:
     rmarkdown,
     bookdown,
     magrittr,
-    tibble
+    tibble,
+    forcats
 Remotes:
     rstudio/bookdown
-    capelastegui/rutils
 Suggests: 
     testthat (>= 2.1.0)
 Encoding: UTF-8

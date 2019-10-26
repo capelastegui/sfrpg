@@ -50,7 +50,7 @@ test_that("llply.parallel.multilist works", {
 
 test_that("trans_df works", {
   print('testing trans_df')
-  df_in = tibble(x=c('hello','world'),y=c('a', 'o'))
+  df_in = tibble::tibble(x=c('hello','world'),y=c('a', 'o'))
   df_result = df_in %>% trans_df()
 
   df_result_null = NULL %>% trans_df()

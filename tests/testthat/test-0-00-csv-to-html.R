@@ -21,34 +21,34 @@ test_that("build_element works", {
 })
 
 test_that("build_element_apply works", {
-  df_pre = tibble(x='<x>', y='<y>' ,Body='(')
-  df_post = tibble (x= '<x>', y='</y>', Body=')')
+  df_pre = tibble::tibble(x='<x>', y='<y>' ,Body='(')
+  df_post = tibble::tibble(x= '<x>', y='</y>', Body=')')
 
   # Test 1 - simple input
   str_result = build_element_apply(
-    tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
+    tibble::tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
   str_expected = "\r\n(<x>hello<x><y>1</y>)\r\n(<x>world<x><y>2</y>)"
   expect_equal(str_result, str_expected)
 
   # Test 2 - missing values, skipEmpty=TRUE
   str_result = build_element_apply(
-    tibble(x=c('hello',NA,"",'world'),y=c('1',NA,"", '2')), df_pre, df_post)
+    tibble::tibble(x=c('hello',NA,"",'world'),y=c('1',NA,"", '2')), df_pre, df_post)
   str_expected = "\r\n(<x>hello<x><y>1</y>)\r\n()\r\n()\r\n(<x>world<x><y>2</y>)"
   expect_equal(str_result, str_expected)
   #succeed("Test implementation in progress")
   
   # Test 3 - missing values in df_pre, df_post, skipEmpty=TRUE
-  df_pre_na = tibble(x='<x>', y=NA ,Body='(')
-  df_post_na = tibble (x= '<x>', y=NA, Body=')')
+  df_pre_na = tibble::tibble(x='<x>', y=NA ,Body='(')
+  df_post_na = tibble::tibble(x= '<x>', y=NA, Body=')')
   str_result = build_element_apply(
-    tibble(x=c('hello',NA,"",'world'),y=c('1',NA,"", '2')), df_pre_na, df_post_na)
+    tibble::tibble(x=c('hello',NA,"",'world'),y=c('1',NA,"", '2')), df_pre_na, df_post_na)
   str_expected = "\r\n(<x>hello<x>1)\r\n()\r\n()\r\n(<x>world<x>2)"
   expect_equal(str_result, str_expected)
   #succeed("Test implementation in progress")
 })
 
 test_that("build_table_apply works", {
-  df_in = tibble(x=c('hello','world'),y=c('1', '2')) 
+  df_in = tibble::tibble(x=c('hello','world'),y=c('1', '2')) 
   
   # Test 1 - simple input
   str_result = build_table_apply(df_in)
@@ -83,17 +83,19 @@ test_that("build_table_apply works", {
 })
 
 test_that('gsub_colwise works',{
-  df_in = tibble(x=c('hello','world'),y=c('a', 'o')) 
+  df_in = tibble::tibble(x=c('hello','world'),y=c('a', 'o')) 
   df_result = df_in %>% gsub_colwise('o','u')
-  df_expected = tibble(x=c('hellu','wurld'),y=c('a', 'u')) 
+  df_expected = tibble::tibble(x=c('hellu','wurld'),y=c('a', 'u')) 
   expect_equal(df_result, df_expected)
   
 })
 
 test_that('refactor works',{
-  df_in = tibble(x=c('hello','world'),y=c('a', 'o')) %>% mutate(x=x %>% factor)
+  df_in = tibble::tibble(x=c('hello','world'),y=c('a', 'o')) %>% 
+    dplyr::mutate(x=x %>% factor)
   df_result = df_in %>% head(1) %>% refactor
-  df_expected = tibble(x=c('hello'),y=c('a')) %>% mutate(x=x %>% factor) %>% as.data.frame()
+  df_expected = tibble::tibble(x=c('hello'),y=c('a')) %>% 
+    dplyr::mutate(x=x %>% factor) %>% as.data.frame()
   expect_equal(df_result, df_expected)
   
 })
