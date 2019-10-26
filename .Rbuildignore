@@ -1,3 +1,4 @@
 ^sfrpg\.Rproj$
 ^\.Rproj\.user$
 ^\.idea$
+^\.travis\.yml$
