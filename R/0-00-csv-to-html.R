@@ -43,7 +43,7 @@ build_element <- function(s, pre, post,skipEmpty=TRUE)  {
 #' @return character
 #' @export
 #'
-#' @exalmples
+#' @examples
 #'   df_pre = tibble::tibble(x='<x>', y='<y>' ,Body='(')
 #'   df_post = tibble::tibble(x= '<x>', y='</y>', Body=')')
 #'   build_element_apply(tibble::tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)

@@ -13,6 +13,8 @@ License: CC Attribution-NonCommercial 4.0
 Imports:
     here,
     purrr,
+    readr,
+    tidyr,
     reshape2,
     plyr,
     dplyr,

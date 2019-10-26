@@ -31,13 +31,13 @@ test_that("build_element_apply works", {
   # Test 1 - simple input
   str_result = build_element_apply(
     tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
-  str_expected = "(<x>hello<x><y>1</y>)\r\n(<x>world<x><y>2</y>)"
+  str_expected = "\r\n(<x>hello<x><y>1</y>)\r\n(<x>world<x><y>2</y>)"
   expect_equal(str_result, str_expected)
 
   # Test 2 - missing values, skipEmpty=TRUE
   str_result = build_element_apply(
     tibble(x=c('hello',NA,"",'world'),y=c('1',NA,"", '2')), df_pre, df_post)
-  str_expected = "(<x>hello<x><y>1</y>)\r\n()\r\n()\r\n(<x>world<x><y>2</y>)"
+  str_expected = "\r\n(<x>hello<x><y>1</y>)\r\n()\r\n()\r\n(<x>world<x><y>2</y>)"
   expect_equal(str_result, str_expected)
   #succeed("Test implementation in progress")
   
@@ -46,7 +46,7 @@ test_that("build_element_apply works", {
   df_post_na = tibble (x= '<x>', y=NA, Body=')')
   str_result = build_element_apply(
     tibble(x=c('hello',NA,"",'world'),y=c('1',NA,"", '2')), df_pre_na, df_post_na)
-  str_expected = "(<x>hello<x>1)\r\n()\r\n()\r\n(<x>world<x>2)"
+  str_expected = "\r\n(<x>hello<x>1)\r\n()\r\n()\r\n(<x>world<x>2)"
   expect_equal(str_result, str_expected)
   #succeed("Test implementation in progress")
 })
