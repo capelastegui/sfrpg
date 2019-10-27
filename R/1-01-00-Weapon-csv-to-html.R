@@ -8,7 +8,8 @@
 #' df_tables_equip = get_equip_tables()
 get_equip_tables <- function ()
 {
-  dir_base  = system.file('raw', "CharacterCreation", package='sfrpg')
+  dir_base  = system.file('raw', "character_creation",
+    package='sfrpg', mustWork=TRUE)
   print(dir_base)
   read_my_csv <- function(s) {
     readr::read_delim(file.path(dir_base,paste0(s,".csv")),

@@ -16,7 +16,7 @@ rmd.files$a.rules<- file.path(dir.rmd,"1-SFRPG-Game-Rules.Rmd")
 rmd.files$b.charbuild <- file.path(dir.rmd,"2-Character-Building.Rmd")
 
 
-# dir.rmd  <-  file.path(dir_base,"Rmd")
+# dir.rmd  <-  file.path(dir_base,"rmd")
 # md.files  <- list()
 # md.files$a1.intro<- file.path(dir.rmd,"1-1-Introduction.md")
 # md.files$a2.charbuild<- file.path(dir.rmd,"1-2-CharacterBuilding.md")
