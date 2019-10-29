@@ -51,3 +51,19 @@ get_equip_tables <- function ()
   )
   df_result
 }
+
+#' Convenience function to extract subtable from equip_table
+#'
+#' @param df_tables_equip 
+#' @param type 
+#' @param subtype 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+extract_equip_table <- function(df_tables_equip, type, subtype='-'){
+  df_tables_equip %>%
+    dplyr::filter(table_type==type, Training==subtype) %>%
+    {.$table[1]}
+}

@@ -1,9 +1,9 @@
 # Character Building
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
 basedir <- here::here()
-source(file.path(basedir,"R","1-01-00-Weapon-csv-to-html.R"))
-equipTables <- get_equip_tables(basedir)
+df_tables_equip <- get_equip_tables()
 
 
 ```
@@ -220,31 +220,20 @@ The tables below provide stats for all weapons in the game, classified by the ty
 
 ##### Basic Weapons
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-
-cat(equipTables$weapons$Basic )
-
-
+sfrpg::extract_equip_table(df_tables_equip, 'Weapons', 'Basic') %>% cat()
 ```
+
 ##### Improvised Weapons
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-
-cat(equipTables$weapons$Improvised )
-
-
+extract_equip_table(df_tables_equip, 'Weapons', 'Improvised') %>% cat()
 ```
 ##### Martial Weapons
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-
-cat(equipTables$weapons$Martial )
-
-
+extract_equip_table(df_tables_equip, 'Weapons', 'Martial') %>% cat()
 ```
 ##### Inner Weapons
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-
-cat(equipTables$weapons$Inner )
-
-
+extract_equip_table(df_tables_equip, 'Weapons', 'Inner') %>% cat()
 ```
 
 
@@ -315,10 +304,7 @@ The different types of armor available in the game are described as follows:
 The table below provides stats for all types of armor in the game:
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-
-cat(equipTables$armor )
-
-
+extract_equip_table(df_tables_equip, 'Armor') %>% cat
 ```
 
 
@@ -369,10 +355,7 @@ The hand requirements to use a weapon are as follows:
 The table below provide stats for all implements in the game:
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-
-cat(equipTables$implements )
-
-
+extract_equip_table(df_tables_equip, 'Implements') %>% cat
 ```
 
 

@@ -51,10 +51,12 @@ getFeatList <- function (dir_base=here::here())
   feat.lesser.htm.file <- file.path(dir_base,"html","CharacterCreation","Feats-lesser.html")
   feat.lesser.table.htm.file <- file.path(dir_base,"html","CharacterCreation","Feats-lesser-table.html")
   
-  feat.raw.df <- read.csv(feat.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Category, Keywords, Name) %>% filter(Name!="")
+  feat.raw.df <- read.csv(feat.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Category, Keywords, Name) %>%
+    dplyr::filter(Name!="")
   feat.raw.df <- gsub_colwise(feat.raw.df,"\\n","<br>")
   
-  feat.lesser.raw.df <- read.csv(feat.lesser.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Keywords, Name) %>% filter(Name!="")
+  feat.lesser.raw.df <- read.csv(feat.lesser.raw, sep=";")%>% tbl_df()  %>% arrange(Level,Keywords, Name) %>%
+    dplyr::filter(Name!="")
   feat.lesser.raw.df <- gsub_colwise(feat.lesser.raw.df,"\\n","<br>")
   
   feat.tag.df <- read.csv(feat.tag, sep=";")

@@ -264,7 +264,7 @@ get_l_class <- function ()
 #'
 #' @examples
 get_class_build <- function(df_class, char_class, char_build) {
-  df_class %>% filter(Class == char_class, Build == char_build)
+  df_class %>% dplyr::filter(Class == char_class, Build == char_build)
 }
 
 

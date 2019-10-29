@@ -1,12 +1,12 @@
 # Introduction
 
-##Welcome to the game
+## Welcome to the game
 
 Welcome to Square Fireballs! In this game, a group of friends can take the role of a party of adventurers exploring a fantasy world, fighting rampaging monsters, and discovering ancient treasures. 
 
 We recommend playing this game in groups of 4 to 6 players. 
 
-###What is a Role Playing Game?
+### What is a Role Playing Game?
 
 Square Fireballs is a Role Playing Game, that is, a game where players use their imagination to represent characters in a simulated world. Players sit on a table, and use rulebooks, pen, paper and dice to resolve character actions and keep track of game progress.
 
@@ -24,7 +24,7 @@ Unlike board games and most computer games, Role Playing Games do not have a fix
 It should be noted, though, that although the GM is in control of the PCs' enemies, a GM's goal in the game is not to defeat the PCs, but to present them with challenging encounters, to enforce the game rules with fairness, and to make the game as fun as possible for everyone. The risk of beloved characters suffering, or even dying, is just a valuable tool to achieve an engaging and memorable game experience.
 
 
-###Why Square Fireballs?
+### Why Square Fireballs?
 
 Why did we choose to call our game Square Fireballs? What does that even mean? The following figures illustrate the reasoning behind the name:
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
@@ -45,7 +45,7 @@ You see, this is a game set in a fantasy world where heroic adventurers such as 
 
 And this is why you will soon be playing a game called Square Fireballs, and why goblins don't like to walk close to each other.
 
-###Why should you play this game?
+### Why should you play this game?
 
 In the decades since the invention of role playing games, there have been plenty of game systems based on the same basic concept of adventuring in a fantasy world. Many of them are great. Some introduce highly innovative ideas in their rules or settings. Most of them are prettier than the one you hold in your hands. Why, then, should you keep reading this particular book and spend your valuable time learning a fairly complex set of rules? 
 
@@ -59,7 +59,7 @@ It's only fair to mention that Square Fireballs is not a perfect system, nor is 
 
 All of these disclaimers aside, I honestly believe there is a great time to be had in here. If you are at all excited by the notion of incinerating goblins, pushing ogres off cliffs, triggering trapped chests, grappling with dragons, finding legendary swords, talking to mysterious strangers in taverns, arguing with kings, leaping from the shadows, performing miracles, getting stabbed, bitten, cursed, imprisoned, poisoned, petrified or swallowed whole... this may be the game for you.
 
-##A note on text format
+## A note on text format
 
 We use different styles of text to differentiate between game rules and definitions, and other types of content. Here is a quick summary:
 
@@ -77,7 +77,7 @@ Text in white boxes is used to define formulas.
 
 <div class="design">Red text is used to provide insight into the designer's ideas regarding a game element. It is typically preceded by **"Designer's Note"**.</div>
 
-##Rolling Dice
+## Rolling Dice
 
 For any non-trivial action that a character performs in the game, success is not guaranteed. We use dice to determine the outcomes of these actions. There are three main types of dice rolls in the game:
 
@@ -101,7 +101,7 @@ Sometimes the game requires a player to roll severall dice at once as part of a 
 The type of dice required for a damage roll in an attack made with a weapon can vary depending on the weapon used. Longswords use d8s, whereas Greatswords use d12s, daggers use d4s, and so forth. In the game, we use 'W' to refer to the damage dice of a weapon attack: W means one die, 2W means two dice, 3W means three dice, and so on. When making an attack with a weapon, replace the W with the appropriate type of dice used by that weapon: A 'W' attack with a Longsword rolls d8, a '2W' attack with a Greatsword rolls 2d12, and a '7W' attack with a dagger rolls 7d4.
 
 
-###Rolling Checks
+### Rolling Checks
 
 There are several types of checks in the game that a character can make:
 
@@ -115,7 +115,7 @@ The general method to resolve a check is to roll a **d20**, add the character's 
 - For **Skill Check**, the character making the check rolls a **d20**, adds the character's **Skill bonus** for the Skill used in that action, and any **skill modifiers** that apply. The result is compared with a number based on the Skill Check Difficulty. This process is described in more detail in the Skills chapter.
 - For a **Save**, the character making the save rolls a **d20**, and adds any modifiers that apply. If the result is equal to or greater than **11**, the Save succeeds, otherwise it is a failure. This process is described in more detail in the Combat chapter.
 
-###Rolling Damage Rolls
+### Rolling Damage Rolls
 
 Unlike check rolls, damage rolls do not use a single d20. Instead, a variable number and type of dice is used for each damage roll, depending on the damaging attack and the weapon used.
 
@@ -150,7 +150,7 @@ Level  | Ability Multiplier
 29	| x8
 </div>
 
-###Rolling Action Point Checks
+### Rolling Action Point Checks
 
 **Action Points** are a special kind of resource that Player Characters can spend to gain additional actions in combat. Typically, Action Points are not available at the start of an encounter but, as the combat progresses, Player Characters gain  a small chance of using an Action Point, which increases with each additional turn. This is resolved with an **Action Point Check**.
 
@@ -162,7 +162,7 @@ The complete rules for using Action Points are described in the Combat chapter.
 
 Note that, in addition to Player Characters, some special monsters such as Elite or Solo monsters are also capable of using Action Points.
 
-###Escalation Die
+### Escalation Die
  
 In a combat encounter,  
 
@@ -170,10 +170,10 @@ In a combat encounter,
 
 
 
-##Character Stats
+## Character Stats
 In this section, we describe the main stats that affect the performance of characters (including both Player Characters and Monsters) in the game.
 
-###Level
+### Level
 
 The **Level** of a character is a general measure of that character's relative power. Player Characters start at level 1, and gain levels as they acquire experience, up to a maximum of 30. Monsters have a level that is determined by their race, and is typically between 1 and 30, but can exceptionally go over 30.
 
@@ -183,7 +183,7 @@ In addition, a character's Hit Points are derived from character level (and clas
 
 Based on the level of Player Characters, the game is organized in three **tiers**: **Heroic** (levels 1 to 10), **Paragon** (levels 11 to 20) and **Epic** (levels 21 and above). Character tier is sometimes referenced by game elements such as feats, but otherwise has no direct impact on the game. For a detailed discussion of tiers, see Levelling in the Character Building chapter.
 
-###Hit Points
+### Hit Points
 
 Combat in the game is represented as a succession of attacks where characters deal a certain amount of damage to each other. **Hit Points** (abbreviated as **HP**) are a character stat that determines how much damage the character can take before falling unconscious.
 
@@ -234,7 +234,7 @@ A character under half of their maximum Hit Points is said to be Bloodied. Many 
 
 For Player Characters, another stat derived from Hit Points is the **Surge Value**, which determines the amount of HP that is healed when a character spends a Surge to heal. A character's Surge Value is equal to one quarter their maximum Hit Points.
 
-###Abilities
+### Abilities
 
 All characters have six Abilities, which are used for non-combat interaction such as Skill Checks and Ability Checks, as well as for combat maneuvers. For Player Characters, Abilities are often used to determine the effect of Powers and other attacks. The abilities are:
 
@@ -294,7 +294,7 @@ An Ability Damage Modifier is applied instead of a regular Ability score in the 
 
 <div class="compatibility">**Compatibility Note**: Some old powers use Ability Modifiers in combination with Resistances or Vulnerabilities. This is no longer supported - to see how this is translated to the current rules, see Resistances and Vulnerabilities in the Combat chapter.</div>
 
-###Defenses
+### Defenses
 
 A character''s defenses determine how hard the character is to hit with attacks. Characters have one Primary Defense and three Secondary Defenses.
 
@@ -332,7 +332,7 @@ For Monsters, Secondary Defenses are determined by monster class. A table with t
 - Will: Physical, Psychic, Radiant and Poison attacks, including some ranged attacks, and a few melee, close, and area attacks.
 Secondary Stats</div>
 
-###Secondary Stats
+### Secondary Stats
 
 In addition to their direct application as modifiers to Powers and Skill Checks, a Player Character's Ability scores are used to generate six important stats: the three Secondary Defenses and three **Secondary Stats**. The Secondary Stats are **Reaction Modifier**, **Surge Number**, and **Initiative Modifier**.
 
@@ -357,7 +357,7 @@ For more information about Surge usage and recovery, see Healing in the Combat c
 
 For a description of Initiative Rolls, see Combat Sequence in the Combat chapter, and for a list of the different types of armor and their associated Armor Penalty, see Equipment in the Character Building chapter.
 
-###Movement Speed
+### Movement Speed
 
 During an encounter, characters are assigned a position in a grid map, and they can take actions to move to new positions. The base movement distance that a character can move, measured in map squares, is called **Movement Speed**. This stat depends on the character's race, and its value typically ranges between 4 and 7. Player Characters wearing Heavy Armor usually apply an Armor Movement Penalty of -1 to their Movement Speed:
 ```
@@ -378,5 +378,5 @@ Whenever a game element refers to a character's Speed, this applies to the Speed
 An in-depth discussion of different modes of movement is provided in the Movement section of the Combat chapter.
 
 
-##Powers
+## Powers
 (TODO)
