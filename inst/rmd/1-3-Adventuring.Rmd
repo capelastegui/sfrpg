@@ -3,6 +3,7 @@
 As players characters go on adventures, they will face a series of challenges 
 that test them and drain their resources. 
 There are two main types of encounters in the game:
+
 - **Skill encounter**s:  The PCs interact with the environment and other 
   characters to solve a problem. This is primarily handled by the Skill system.
 - **Combat encounters**: The PCs fight monsters for survival or to achieve a
@@ -16,6 +17,7 @@ in mixed encounters is that there are explicit goals that require the use of
 Skills.
 
 A typical encounter has the following consequences:
+
 - **Resource use**: Characters have a stat called **Stamina** that determines 
 how many encounters they can take before stopping to take a Long Rest. Stamina 
 can be lost in an encounter by receiving wounds, failing Skill Checks or using 
@@ -37,16 +39,19 @@ Player characters have two types of resources: per-encounter resources that are
  recovered at a slower pace.
 
 Encounter resources are:
-- **Hit Points**. How much damage the character can take before
+
+- **Hit Points.** How much damage the character can take before
   falling unconscious.
-- **Vitality**. A stat that is spent to use healing powers, and is lost
+- **Vitality.** A stat that is spent to use healing powers, and is lost
   when knocked unconscious.
-- **Morale**. How much the character can use skills this encounter. Characters
+- **Morale.** How much the character can use skills this encounter. Characters
   lose Morale whenever they fail a Skill Check.
-- **Encounter powers**. Strong powers that, once spent, are recovered with a
+- **Encounter powers.** Strong powers that, once spent, are recovered with a
   Short Rest.
 
+
 Campaign resources are:
+
 - **Stamina**. A measure of how many more encounters the character can have 
   this day. Stamina is used to take Short Rests, and may be lost when out of
   encounter resources.
@@ -56,6 +61,7 @@ Campaign resources are:
   encounter. Gained after each milestone. 
   
 Other player stats that are related to encounter and campaign resources are:
+
 - **Healing Surge**: How many Hit Points the character recovers  when healing. 
   Many powers refer to using a Healing Surge - this means spending
   1 Vitality to recover HP equal to their Healing Surge value. In addition, 
@@ -73,6 +79,7 @@ The different types of resources are inter-related. Generally speaking,
 taking wounds or skill failures while out of encounter resources will result in
 loss of Stamina. These are the consequences for running out of each type of 
 resource:
+
 - **Hit Points**. A character reduced below 1 HP falls Unconscious until healed
   back to 1 or more HP, and is Bleeding until healed for any amount. The first
   time a PC drops  to 0 HP in an 
@@ -139,6 +146,7 @@ After each milestone, Daily Powers can be recovered as follows:
 ## Resources and Resting Summary
 
 The following table summarizes how resources are spent and recovered:
+
 - Hit Points:
   - Recover all HP when taking a Short Rest, Long Rest or Full Rest.
   - Recover HP equal to your Healing Surge value whenever you use a Healing
@@ -185,6 +193,7 @@ The following table summarizes how resources are spent and recovered:
 The rules for when a character should die are left intentionally vague: this 
 is something that should happen on exceptional circumstances with the GM's 
 approval. A character may die in the following scenarios:
+
 - Receiving massive damage, e.g. drop to negative HP equal or greater than their
 maximum HP.
 - All PCs dropping unconscious in a dangerous situation.
@@ -192,6 +201,7 @@ maximum HP.
 The GM should decide on the level of lethality they want for their campaign, 
 and communicate this clearly to the players. That said, GMs should be aware that
 players can be punished for defeat in ways that do not require death of a PC:
+
 - Instead of dying, a character may receive a permanent wound, such as a -1
   penalty to Stamina, Movement, Fortitude, Reflex, Will or to an Ability Skill 
   bonus. Alternately, a valuable Magic Item may be permanently destroyed

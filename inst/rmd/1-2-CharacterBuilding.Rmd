@@ -2,7 +2,6 @@
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 library(sfrpg)
-basedir <- here::here()
 df_tables_equip <- get_equip_tables()
 
 
@@ -23,7 +22,7 @@ This chapter provides the rules for creating and levelling Player Characters. Th
 1. Magic Items
 
 
-##Character Creation Overview
+## Character Creation Overview
 
 From the initial character concept to the point where the character sheet is complete, there are several decisions that a player must take in order to create a first level character. In this section, we explain the character creation process as a whole, and a more detailed discussion of each step is provided later on.
 
@@ -40,29 +39,29 @@ The basic steps for creating a character are:
 
 <div class="tip">**Tip**: Although beginning players are encouraged to follow the character creation steps in order as listed above, it is quite possible to go back and forth between steps, as each decision provides new inspiration and ideas to improve on previous choices. Furthermore, since the number of available options may get overwhelming for inexperienced (and not so inexperienced) players, we provide pre-built sample characters that can be played as-is, or used as basic templates to be customized to taste. These sample characters, along with suggested level-up options up to level 30, can be found in the Classes chapter.</div>
 
-##Character concept and story
+## Character concept and story
 
 ...
 
-##Race
+## Race
 
 ...
 
-##Class selection
+## Class selection
 
-###Power Source
+### Power Source
 
-###Role
+### Role
 
-###Class Build
+### Class Build
 
-###Class Powers
+### Class Powers
 
 
 ...
 
 
-##Ability generation
+## Ability generation
 
 Once the player has decided on a character class and a class build, the abilities for the Player Character can be generated. To do this, the player first selects Primary, Secondary, and Weak Abilities, and then assigns scores to each Ability by picking one of two possible Ability Arrays.
 
@@ -126,7 +125,7 @@ A character whose Primary or Secondary Abilities match their racial Favored Abil
 For a detailed description of Skills and how to use them in the game, see the Skills section in the Adventuring chapter.
 
 
-##Equipment selection
+## Equipment selection
 
 A character's class determines which weapons, implements and armor the character is proficient with. Upon creation, every character starts the game with the following items:
 Up to three weapons the character is proficient with.
@@ -141,7 +140,7 @@ That said, if you favor more detailed rules for economy, there are tables with r
 
 In the rest of this section, we list the weapons, armor and implement available in the game, along with a description of their rules.
 
-###Weapons
+### Weapons
 
 Each weapon in the game is described by the following elements:
 
@@ -166,7 +165,7 @@ Weapon types and categories
 Weapon keywords
 -->
 
-####Weapon Families
+#### Weapon Families
 
 The following weapon families are supported in the game:
 
@@ -185,7 +184,7 @@ The following weapon families are supported in the game:
 
 <div class="tip">**Tip**: Weapon Family is of special relevance in relation to the Weapon Focus category of Feats, as these Feats often give bonuses when wielding any weapon of a specific family. Advanced players are encouraged to study the different Feat bonuses when considering their weapon of choice. For beginning players, we suggest instead to choose based on aesthetic preferences - you can always use the Retraining rule to rethink your choice at a later point.</div>
 
-####Weapon Keywords
+#### Weapon Keywords
 
 The following weapon keywords are supported in the game:
 
@@ -202,7 +201,7 @@ The following weapon keywords are supported in the game:
 
 <div class="compatibility">**Compatibility Note** In older rulebooks, Throw weapons can be classified as Heavy Thrown or Light Thrown. Treat any mention to either of these as referring to Throw weapons instead.</div>
 
-####Weapon Hands
+#### Weapon Hands
 
 The hand requirements to use a weapon are as follows:
 
@@ -254,7 +253,7 @@ Some character classes from older sourcebooks have bonuses associated with obsol
 - **Scimitar**: replace with Short Sword
 - **Club**: replace with Mace</div>
 
-###Armor
+### Armor
 
 Each armor in the game is described by the following elements:
 
@@ -281,7 +280,7 @@ Note that these are the most common types of AC bonus, but other bonuses granted
 
 <div class="compatibility">**Compatibility Note**: Unlike other defenses, a character's Abilities provide no bonus to that character's AC. In older rulebooks this was not the case, and it was common to have character classes whose Class Features allowed using an Ability as a bonus to AC while wearing Light Armor. Ignore these bonuses, and any other mention of an Ability bonus to AC. Fixed bonuses to AC that do not depend on a character's Abilities still apply as normal.</div>
 
-####Armor Types
+#### Armor Types
 
 The different types of armor available in the game are described as follows:
 
@@ -299,7 +298,7 @@ The different types of armor available in the game are described as follows:
     * **Light Shield**: Shield of reduced size and weight.
     * **Heavy Shield**: Large shield that covers most of a character's body.
     
-####Armor Table
+#### Armor Table
 
 The table below provides stats for all types of armor in the game:
 
@@ -308,7 +307,7 @@ extract_equip_table(df_tables_equip, 'Armor') %>% cat
 ```
 
 
-###Implements
+### Implements
 
 Each implement in the game is described by the following elements:
 
@@ -321,7 +320,7 @@ Note that, unlike weapons, implements do not have an associated damage die. Dama
 
 A character's class determines which implements the character is trained to use. A character wielding no implement, or wielding an implement without training uses the "No Implement" stats, which include a -2 penalty to hit due to the Very Unwieldy property. A character using an implement without training does not benefit from any of the implement's properties, including damage, keywords, and any magic abilities. 
 
-####Implement Types
+#### Implement Types
 
 The following implement types are supported in the game:
 
@@ -336,13 +335,13 @@ The following implement types are supported in the game:
 - **Weapon Implement** - Weapon that can be used to channel supernatural powers. Some character classes allow specific types of weapons to be used as Weapon Implements. Weapon Implements require the same number of hands to wield as their associated weapons.
 - **No Implement** - A character using just hand gestures to channel power.
 
-####Implement Keyword
+#### Implement Keyword
 
 The following implement keywords are supported in the game:
 
 - **Very Unwieldy**: Attacks made with this implement gain a -2 penalty to hit.
 
-####Implement Hands
+#### Implement Hands
 
 The hand requirements to use a weapon are as follows:
 
@@ -350,7 +349,7 @@ The hand requirements to use a weapon are as follows:
 - **One-handed implements** can be wielded in the character's **main hand** or **off-hand**.
 - **Two-handed implements** require both hands to be wielded. A character cannot use a hand to wield any other item while wielding such an implement.
 
-####Implement Table
+#### Implement Table
 
 The table below provide stats for all implements in the game:
 
@@ -359,7 +358,7 @@ extract_equip_table(df_tables_equip, 'Implements') %>% cat
 ```
 
 
-##Feats
+## Feats
 <!-- 
 definition of feat
 
@@ -476,9 +475,9 @@ TODO: REWORD RACIAL ABILITIES TO DECOUPLE THEM FROM LESSER FEATS. JUST GRANT SKI
 
 
 
-##Power selection
-##Stat generation
+## Power selection
+## Stat generation
 Fill in the blanks
 IMPLEMENT RANGED BASIC ATTACK IS GENERATED HERE
-##Levelling 
-##Magic Items
+## Levelling 
+## Magic Items
