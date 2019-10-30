@@ -4,14 +4,12 @@ author: "Pedro Capelastegui"
 site: bookdown::bookdown_site
 documentclass: book
 output:
-  #bookdown::html_book:
   bookdown::gitbook: default
+  #bookdown::html_book:
   #  css: SFRPG.css
   #bookdown::pdf_book: default
 ---
 
 # Index
 
-Lorem ipsum bla
-
-<!-- If you need PDF output, uncomment bookdown::pdf_book above in YAML. You will need a LaTeX installation, e.g., https://yihui.name/tinytex/ -->
+Square Fireballs - A role playing game of tactical fantasy

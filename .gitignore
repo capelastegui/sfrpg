@@ -44,3 +44,4 @@ Temporary Items
 *.pdf
 *.html
 html/
+_bookdown_files

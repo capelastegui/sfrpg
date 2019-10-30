@@ -19,12 +19,23 @@ Lore | Intelligence | History, Geography, Law
 
 Using Skills
 
-Some actions are only available to characters with an appropriate level of training in a skill. These are the levels of training that a character can have in a skill:
+Some actions are only available to characters with an appropriate level of
+ training in a skill. These are the levels of training that a character can 
+ have in a skill:
 
-- Untrained. This the level that most characters have with a skill. Untrained characters have not received any formal training with a skill, but they can still attempt basic tasks associated with it, and succeed with a bit of luck and natural talent.
-- Trained. Characters Trained with a skill have spent significant time practicing it, and can be considered experts in the area. Trained characters rarely make errors on mundane tasks related to their skill of choice, and with effort and luck, they can even succeed on advanced actions out of the reach of amateurs.
-- Master. Skill Masters are individuals of extraordinary talent who have become famous for their prowess with a particular skill.
-- Grandmaster. Very few mortals ever reach this level of proficiency. The feats that Grandmasters can achieve are the stuff of legends.
+- Untrained. This the level that most characters have with a skill. 
+  Untrained characters have not received any formal training with a skill, 
+  but they can still attempt basic tasks associated with it, and succeed with
+  a bit of luck and natural talent.
+- Trained. Characters Trained with a skill have spent significant time 
+  practicing it, and can be considered experts in the area. Trained characters 
+  rarely make errors on mundane tasks related to their skill of choice,
+  and with effort and luck, they can even succeed on advanced actions out of
+  the reach of amateurs.
+- Master. Skill Masters are individuals of extraordinary talent who have
+  become famous for their prowess with a particular skill.
+- Grandmaster. Very few mortals ever reach this level of proficiency. The
+  feats that Grandmasters can achieve are the stuff of legends.
 
 
 Skill bonus:
@@ -49,9 +60,12 @@ I | Legendary | 28 | Master | 2 on Failure
 I | Impossible | 33 | Grandmaster | 2 on Failure
 
 Difficulty guide
-- Easy - Anyone can do it, but an untrained character may sometimes fail this or require extra time or help
-- Medium - Non-trivial effort for untrained characters, trained characters will handle it most of the time.
-- Hard - This is the most an individual without special training can achieve, with luck. Requires effort even from experts.
+- Easy - Anyone can do it, but an untrained character may sometimes fail
+  this or require extra time or help
+- Medium - Non-trivial effort for untrained characters, trained characters
+  will handle it most of the time.
+- Hard - This is the most an individual without special training can achieve, 
+ with luck. Requires effort even from experts.
 - Very Hard - Experts can sometimes accomplish this, with luck.
 - Legendary - Something only the best in the world could do, on a good day.
 - Impossible - Normally considered out of reach for mortals.

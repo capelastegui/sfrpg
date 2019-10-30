@@ -212,7 +212,7 @@ The hand requirements to use a weapon are as follows:
 
 <div class="tip">**Tip**: It is usually better to use two-handed weapons, or Versatile weapons with a free hand, if you want your character to focus on the offense, and a one-handed weapon with a shield or two Off-Hand weapons, if you prefer focusing on defense. Wielding a weapon in each hand does not grant additional attacks or any other inherent benefits (aside from the Parry keyword granted when dual wielding Off-Hand weapons), so it is usually not a good idea, unless you have class Powers or Features that require dual wielding or otherwise reward you for it.</div>
 
-####Weapon Tables
+#### Weapon Tables
 
 The tables below provide stats for all weapons in the game, classified by the type of training they require, whether they are melee or ranged weapons, and the number of hands they require.
 
