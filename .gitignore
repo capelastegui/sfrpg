@@ -42,6 +42,5 @@ Temporary Items
 *.RData
 # Output folders and files
 *.pdf
-*.html
-html/
 _bookdown_files
+/inst/tests/testthat/output/
