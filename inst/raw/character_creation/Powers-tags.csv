@@ -1,4 +1,4 @@
-Body;Name;Class;Build;isFeature;Level;Type;UsageLimit;UsageNumber;Keywords;Requires;Action;Trigger;Range;Target;AttackRoll;EffectPre;Hit;Miss;EffectPost;Misc;SecondaryAttack;Upgrades;Summary
-"<div class=""Power"">";"<p class=""large""><strong>"; -      ;;; ;<p>; - ;; - <i>;;<p><b><i>;<i> (Trigger: ;<b> ; ; ;<p><b>Effect</b>: ;<p><b>Hit</b>: ;<p><b>Miss</b>: ;<p><b>Effect</b>: ;<p>;<p><b>Secondary Attack:</b> ;"<p class=""Power-Upgrade"">";
-</div>; ; ;;;</strong ></p>;;;;</i></p>;;</i></b> -;)</i> - ; </b> -;;</p>;</p>;</p>;</p>;</p>;</p>;</p>;</p>;
- ; ; ;; ; ; ; ;; ; ; ; ; ; ; ; ;  ; ; ; ; ;  ;
+Body,Name,Class,Build,isFeature,Level,Type,UsageLimit,UsageNumber,Keywords,Requires,Action,Trigger,Range,Target,AttackRoll,EffectPre,Hit,Miss,EffectPost,Misc,SecondaryAttack,Upgrades,Summary
+"<div class=""Power"">","<p class=""large""><strong>", -      ,NA,NA,NA,<p>, - ,NA, - <i>,NA,<p><b><i>,<i> (Trigger: ,<b> ,NA,NA,<p><b>Effect</b>: ,<p><b>Hit</b>: ,<p><b>Miss</b>: ,<p><b>Effect</b>: ,<p>,<p><b>Secondary Attack:</b> ,"<p class=""Power-Upgrade"">",NA
+</div>,NA,NA,NA,NA,</strong ></p>,NA,NA,NA,</i></p>,NA,</i></b> -,)</i> - , </b> -,NA,</p>,</p>,</p>,</p>,</p>,</p>,</p>,</p>,NA
+NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA

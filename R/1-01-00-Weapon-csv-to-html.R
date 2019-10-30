@@ -12,7 +12,7 @@ get_equip_tables <- function ()
     package='sfrpg', mustWork=TRUE)
   read_my_csv <- function(s) {
     readr::read_delim(file.path(dir_base,paste0(s,".csv")),
-                      delim=";")}
+                      delim=",")}
   
   df_weapons <- read_my_csv("Weapons-raw")
   df_armor <- read_my_csv("Armor-raw") %>%

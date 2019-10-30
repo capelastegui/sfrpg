@@ -175,7 +175,7 @@ get_l_class <- function ()
 {
   dir_base  = system.file('raw', "character_creation", package='sfrpg',
     mustWork=TRUE)
-  read_my_csv <- function(s, delim = ';') {
+  read_my_csv <- function(s, delim = ',') {
     readr::read_delim(
       file.path(dir_base, paste0(s, ".csv")),
       delim = delim,

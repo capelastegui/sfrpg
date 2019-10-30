@@ -1,39 +1,39 @@
-Name;Family;Hit;Damage;Keywords;Training;Type;Hands
-Unarmed;Unarmed;-2;1d4;;Improvised;Melee;1 hand
-"Improvised, Light";Improvised;-1;1d4;Throw 6;Improvised;Melee;1 hand
-"Improvised, Heavy";Improvised;-2;1d8;Throw 2;Improvised;Melee;2 hands
-Dagger;Light Blade;+0;1d4;"Off-hand, Throw 8";Basic;Melee;1 hand
-Hand Axe;Axe;+0;1d4;"Off-hand, Throw 8";Basic;Melee;1 hand
-Light Hammer;Hammer;+0;1d4;"Off-hand, Throw 8";Basic;Melee;1 hand
-Javelin;Spear;+0;1d4;"Off-hand, Throw 8";Basic;Melee;1 hand
-Mace;Hammer;-1;1d8;;Basic;Melee;1 hand
-Halfspear;Spear;-1;1d8;;Basic;Melee;1 hand
-Scythe;Heavy Blade;+0;1d8;;Basic;Melee;2 hands
-Quarterstaff;Staff;+0;1d8;;Basic;Melee;2 hands
-Short Sword;Light Blade;+1;1d4;Off-hand;Martial;Melee;1 hand
-Nunchaku;Flail;+1;1d4;Off-hand;Martial;Melee;1 hand
-Longsword;Heavy Blade;+0;1d8;;Martial;Melee;1 hand
-Rapier;Light Blade;+0;1d8;;Martial;Melee;1 hand
-Battle Axe;Axe;+0;1d8;;Martial;Melee;1 hand
-Warhammer;Hammer;+0;1d8;;Martial;Melee;1 hand
-Light Flail;Flail;+0;1d8;;Martial;Melee;1 hand
-Greatsword;Heavy Blade;-1;1d12;;Martial;Melee;2 hands
-Greataxe;Axe;-1;1d12;;Martial;Melee;2 hands
-Maul;Hammer;-1;1d12;;Martial;Melee;2 hands
-Heavy Flail;Flail;-1;1d12;;Martial;Melee;2 hands
-Longspear;Spear;+0;1d8;Reach 2;Martial;Melee;2 hands
-Glaive;Heavy Blade;+0;1d8;Reach 2;Martial;Melee;2 hands
-Halberd;Axe;+0;1d8;Reach 2;Martial;Melee;2 hands
-Whip;Flail;+0;1d8;Reach 2;Martial;Melee;2 hands
-Shuriken;Light Blade;+1;1d4;"Off-hand, Throw 12";Martial;Ranged;1 hand
-Dart;Light Blade;+1;1d4;"Off-hand, Throw 12";Martial;Ranged;1 hand
-Boomerang;Hammer;+1;1d4;"Off-hand, Throw 12";Martial;Ranged;1 hand
-Hand Crossbow;Crossbow;+1;1d4;"Off-hand, Ranged 12";Martial;Ranged;1 hand
-Sling;Sling;+1;1d4;"Off-hand, Ranged 12";Martial;Ranged;1 hand
-Short Bow;Bow;+1;1d4;Ranged 14;Martial;Ranged;2 hands
-Light Crossbow;Crossbow;+0;1d8;Ranged 20;Martial;Ranged;2 hands
-Longbow;Bow;+0;1d8;Ranged 20;Martial;Ranged;2 hands
-Heavy Crossbow;Crossbow;-1;1d12;Ranged 20;Martial;Ranged;2 hands
-Composite Bow;Bow;-1;1d12;Ranged 20;Martial;Ranged;2 hands
-Unarmed Smash;"Unarmed, Hammer";+0;1d8;;Inner;Melee;1 hand
-Unarmed Chop;"Unarmed, Axe";+0;1d8;;Inner;Melee;1 hand
+Name,Family,Hit,Damage,Keywords,Training,Type,Hands
+Unarmed,Unarmed,-2,1d4,NA,Improvised,Melee,1 hand
+"Improvised, Light",Improvised,-1,1d4,Throw 6,Improvised,Melee,1 hand
+"Improvised, Heavy",Improvised,-2,1d8,Throw 2,Improvised,Melee,2 hands
+Dagger,Light Blade,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
+Hand Axe,Axe,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
+Light Hammer,Hammer,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
+Javelin,Spear,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
+Mace,Hammer,-1,1d8,NA,Basic,Melee,1 hand
+Halfspear,Spear,-1,1d8,NA,Basic,Melee,1 hand
+Scythe,Heavy Blade,0,1d8,NA,Basic,Melee,2 hands
+Quarterstaff,Staff,0,1d8,NA,Basic,Melee,2 hands
+Short Sword,Light Blade,1,1d4,Off-hand,Martial,Melee,1 hand
+Nunchaku,Flail,1,1d4,Off-hand,Martial,Melee,1 hand
+Longsword,Heavy Blade,0,1d8,NA,Martial,Melee,1 hand
+Rapier,Light Blade,0,1d8,NA,Martial,Melee,1 hand
+Battle Axe,Axe,0,1d8,NA,Martial,Melee,1 hand
+Warhammer,Hammer,0,1d8,NA,Martial,Melee,1 hand
+Light Flail,Flail,0,1d8,NA,Martial,Melee,1 hand
+Greatsword,Heavy Blade,-1,1d12,NA,Martial,Melee,2 hands
+Greataxe,Axe,-1,1d12,NA,Martial,Melee,2 hands
+Maul,Hammer,-1,1d12,NA,Martial,Melee,2 hands
+Heavy Flail,Flail,-1,1d12,NA,Martial,Melee,2 hands
+Longspear,Spear,0,1d8,Reach 2,Martial,Melee,2 hands
+Glaive,Heavy Blade,0,1d8,Reach 2,Martial,Melee,2 hands
+Halberd,Axe,0,1d8,Reach 2,Martial,Melee,2 hands
+Whip,Flail,0,1d8,Reach 2,Martial,Melee,2 hands
+Shuriken,Light Blade,1,1d4,"Off-hand, Throw 12",Martial,Ranged,1 hand
+Dart,Light Blade,1,1d4,"Off-hand, Throw 12",Martial,Ranged,1 hand
+Boomerang,Hammer,1,1d4,"Off-hand, Throw 12",Martial,Ranged,1 hand
+Hand Crossbow,Crossbow,1,1d4,"Off-hand, Ranged 12",Martial,Ranged,1 hand
+Sling,Sling,1,1d4,"Off-hand, Ranged 12",Martial,Ranged,1 hand
+Short Bow,Bow,1,1d4,Ranged 14,Martial,Ranged,2 hands
+Light Crossbow,Crossbow,0,1d8,Ranged 20,Martial,Ranged,2 hands
+Longbow,Bow,0,1d8,Ranged 20,Martial,Ranged,2 hands
+Heavy Crossbow,Crossbow,-1,1d12,Ranged 20,Martial,Ranged,2 hands
+Composite Bow,Bow,-1,1d12,Ranged 20,Martial,Ranged,2 hands
+Unarmed Smash,"Unarmed, Hammer",0,1d8,NA,Inner,Melee,1 hand
+Unarmed Chop,"Unarmed, Axe",0,1d8,NA,Inner,Melee,1 hand
