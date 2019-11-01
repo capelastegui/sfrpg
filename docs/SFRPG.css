@@ -1,0 +1,158 @@
+body {
+
+ font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 14px;
+  }
+
+.newPage {page-break-before: always;}
+
+
+/*Feat format*/
+.Feat {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  width: 6.3cm;  
+  /*margin-bottom: 25px; */
+  margin-bottom: 0.5cm;
+  display: inline-block;
+			
+}
+
+
+.Feat p {  
+  margin-top: 0px;  
+  margin-bottom: 6px;
+
+}
+
+.Feat-List, .Power-List {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;  
+  -moz-column-rule-style: none;
+  -webkit-column-rule-style: none;
+  column-rule-style: none;  
+  /*width: 900px;*/
+  width: 20cm;
+
+}
+/* Table formats*/
+
+table {
+  font-size: 11px;  
+  font-family: Verdana;  
+  padding-top: 0px;  
+  padding-right: 0px;  
+  padding-bottom: 0px;  
+  padding-left: 0px;  
+  color: #663300;  
+  background-color: #ffcc99;
+  margin-bottom: 30px;
+  border-collapse: separate;
+  border-spacing: 2px;
+    page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
+  }
+  
+tr:nth-child(even) {background-color: #ffefbf;} 
+
+.wide , .Feat-table table, .Power-table {width: 20cm;}
+
+.very-narrow {width: 8cm;}
+
+.narrow, .Class-table {width: 12cm;}
+
+.medium-width, .General-table {width: 16cm;}
+      
+
+
+
+
+ .Feature {  
+  font-family: Verdana;  
+  font-size: 12px;  
+  width: 20cm; 
+  line-height: normal;  
+   margin-bottom: 5px;  
+  page-break-inside: avoid;
+    -webkit-column-break-inside: avoid; 
+          page-break-inside: avoid; 
+               break-inside: avoid;
+}
+
+
+
+/* Color classes */
+.green {color:green}
+      
+.gray {color:Gray}
+
+.darkgray {color:DimGray}
+  
+.red {color:darkred}
+
+.blue{color: MediumBlue;} 
+
+.darkblue{color: DarkBlue;} 
+
+/* Font sizes*/
+.large {font-size: 14px;}
+ 
+ .huge {font-size: 18px;}
+ 
+ 
+
+/* Power format */
+  
+ .Power {  
+  font-family: Verdana;  
+  font-size: 11px;  
+  line-height: normal;  
+  /*width: 290px;  */
+  width: 6.5cm;
+  margin-bottom: 25px;
+  display: inline-block;  
+
+}
+  
+.Power  p {  
+  margin-top: 0px;  
+  margin-bottom: 3px;
+}
+
+
+
+   
+
+.Power-Upgrade {  
+  font-style: italic;  
+  color:gray
+}
+
+.compatibility {  
+  color: DarkGoldenrod;  
+  background-color: BlanchedAlmond;
+        border: 1px solid DarkGoldenrod;
+		 margin: 10px;
+		 display: inline-block;
+}
+
+.tip {  
+  color: darkblue;  
+  background-color: #DDDDFF;
+  border: 1px solid darkblue;
+  margin: 10px;
+  display: inline-block;
+}
+
+.design {  
+  color: #B20000; 
+  /*background-color: #ffcccc;*/
+  background-color: #ffdddd;
+        border: 1px solid darkred;
+		margin: 10px;
+		display: inline-block;
+}
