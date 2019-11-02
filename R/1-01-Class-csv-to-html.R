@@ -176,25 +176,26 @@ get_l_class <- function ()
   dir_base  = system.file('raw', "character_creation", package='sfrpg',
     mustWork=TRUE)
   read_my_csv <- function(s, delim = ',') {
+    str_regex = "\r[^\n]" # new lines with \r but not \r\n - to replace w \r\n
     readr::read_delim(
       file.path(dir_base, paste0(s, ".csv")),
       delim = delim,
       col_types = readr::cols(.default = "c")
-    )
-  }
+    )  %>% dplyr::mutate_if (is.character,  ~stringr::str_replace_all(., str_regex, "\r\n"))
+    }
   
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
   
   df_class_stat = read_my_csv('Class-stats', delim = ',') %>%
     get_df_class_stat()
   df_class_feature = read_my_csv('Class-features') %>%
-    gsub_colwise("\\n", "<br>") %>%
+    gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
   df_feature_tag <- read_my_csv('Class-features-tags')
   df_power_tag <-  read_my_csv('Powers-tags')
   df_power_raw <-  read_my_csv('Powers-raw') %>%
-    gsub_colwise("\\n", "<br>") %>%
+    gsub_colwise("\\r\\n", "<br>") %>%
     fillna_df %>%
     dplyr::mutate(usageColors = UsageLimit %>%
              factor %>% 

@@ -2,108 +2,103 @@
 
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-basedir <- here::here()
-source(file.path(basedir,"R","1-01-Class-csv-to-html.R"))
-classList <- get_l_class(basedir)
+library(sfrpg)
+df_class = get_l_class()
 
-printClassFeatures <- function (class)
-{
-  cat(class$stats.htm)
-  cat('<h4>Class Features</h4>')
-  cat(class$features.htm)
-}
-
-printClassPowers <- function (class)
-{
-    cat(class$powers.htm)
-}
+print(get_l_class)
 
 ```
-
 
 
 ## Universal Powers
 The following powers are available to Player Characters of all classes.
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass  <- classList$Universal$Universal
-cat(currentClass$powers.htm)
+df_class_build = get_class_build(df_class, 'Universal', 'Universal') 
+df_class_build$htm_power %>% cat
 ```
 
 ## Barbarian{.newPage}
 ### Barbarian Rager
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Barbarian$Rager
-printClassFeatures(currentClass)
+df_class_build = get_class_build(df_class, 'Barbarian', 'Rager')
+df_class_build$htm_stat %>% cat
 ```
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+df_class_build$htm_power %>% cat
 ```
 
 ## Fighter{.newPage}
 ### Fighter Guardian
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Fighter$Guardian
-printClassFeatures(currentClass)
+df_class_build = get_class_build(df_class, 'Fighter', 'Guardian')
+df_class_build$htm_stat %>% cat
+
+df_class_build$htm_feature
 ```
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+df_class_build$htm_power %>% cat
 ```
 
 ## Priest{.newPage}
 ### Priest of Light
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Priest$Light
-printClassFeatures(currentClass)
+df_class_build = get_class_build(df_class, 'Priest', 'Light')
+df_class_build$htm_stat %>% cat
+df_class_build$htm_feature %>% cat
 ```
 
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+df_class_build$htm_power %>% cat
 ```
 
 ## Rogue{.newPage}
 ### Rogue Scoundrel
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Rogue$Scoundrel
-printClassFeatures(currentClass)
+df_class_build = get_class_build(df_class, 'Rogue', 'Scoundrel')
+df_class_build$htm_stat   %>% cat
+df_class_build$htm_feature %>% cat
 ```
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+df_class_build$htm_power %>% cat
 ```
 
 ## Warlock{.newPage}
 ### Shadow Warlock
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Warlock$Shadow
-printClassFeatures(currentClass)
+df_class_build = get_class_build(df_class, 'Warlock', 'Shadow')
+df_class_build$htm_stat   %>% cat
+df_class_build$htm_feature %>% cat
 ```
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+df_class_build$htm_power %>% cat
 ```
 
 ## Warlord{.newPage}
 ### Warlord Tactician
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Warlord$Tactician
-printClassFeatures(currentClass)
+df_class_build = get_class_build(df_class, 'Warlord', 'Tactician')
+df_class_build$htm_stat %>% cat
+df_class_build$htm_feature %>% cat
 ```
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+df_class_build$htm_power %>% cat
 ```
 
 ## Wizard{.newPage}
 ### Wizard Elementalist
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-currentClass <- classList$Wizard$Elementalist
-printClassFeatures(currentClass)
+df_class_build = get_class_build(df_class, 'Wizard', 'Elementalist')
+df_class_build$htm_stat   %>% cat
+df_class_build$htm_feature %>% cat
 ```
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-printClassPowers(currentClass)
+df_class_build$htm_power %>% cat
 ```
