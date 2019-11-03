@@ -1,7 +1,7 @@
 context("Convert data from .csv to html")
 
 #dir_output = here::here('tests', 'testthat', 'output')
-file_css <- system.file("SFRPG.css", package='sfrpg',
+file_css <- system.file("SFRPG_test.css", package='sfrpg',
      mustWork=TRUE)
 css <- readChar(file_css, file.info(file_css)$size)
 

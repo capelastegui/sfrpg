@@ -65,7 +65,7 @@ Upgrade 25: Increase Hit damage to 7W",NA
 Tumble,Rogue,Scoundrel,NA,2,Utility,Encounter,NA,NA,Move Action,NA,Personal,NA,NA,NA,NA,NA,Shift your Speed.,"Special: When you spend an Action Point, recharge this.",NA,NA,NA
 Run to Cover,Rogue,Scoundrel,NA,2,Utility,Encounter,NA,NA,Move Action,NA,Personal,NA,NA,NA,NA,NA,"Move your Speed. At the end of turn, if you are in Cover (other than Body Cover) or Concealment from all enemies, you become Shrouded. If you were already Shrouded, you become Hidden instead.",NA,NA,NA,NA
 I didn't do it!,Rogue,Scoundrel,NA,2,Utility,Encounter,NA,NA,Minor Action,NA,Melee,targets an enemy you  have hit this turn.,NA,NA,NA,NA,"Until end of your next turn, the target is Marked by your ally closest to it, and grants Advantage to you.",NA,NA,NA,NA
-Healing Word,Priest,Light,Feature,1,Utility,Encounter,x2,"Healing, Non-Provoking",Minor Action,NA,Ranged 5,targets an ally,NA,NA,NA,NA,"The target spends a Surge, and heals +1d6",NA,NA,"Level 11: heals +2d6
+Healing Word,Priest,Light,Feature,NA,Utility,Encounter,x2,"Healing, Non-Provoking",Minor Action,NA,Ranged 5,targets an ally,NA,NA,NA,NA,"The target spends a Surge, and heals +1d6",NA,NA,"Level 11: heals +2d6
 Level 21: heals +3d6",Heal surge+1d6
 Healing Light,Priest,Light,NA,1,Attack,NA,NA,Implement,NA,NA,Ranged 7,NA,Wis vs Ref,NA,"1d8 Radiant, and you or an ally within 2 of you heal Wis",NA,NA,NA,NA,Level 21: Increase Hit damage to 2d8,NA
 Guiding Light,Priest,Light,NA,1,Attack,NA,NA,Implement,NA,NA,Ranged 7,NA,Wis vs Ref,NA,"1d8+Wis Radiant, and until your next turn, attacks against the target gain Advantage and halve hit penalties from Cover and Concealment.",NA,NA,NA,NA,Level 21: Increase Hit damage to 2d8+Wis,NA

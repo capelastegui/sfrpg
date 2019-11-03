@@ -47,13 +47,18 @@ build_element <- function(s, pre, post,skipEmpty=TRUE)  {
 #'   build_element_apply(tibble::tibble(x=c('hello','world'),y=c('1', '2')), df_pre, df_post)
 #'   
 build_element_apply <- function (df,pre,post,
-  df.names=names(df),skipEmpty=TRUE, collapse='') {
+  df.names=names(df),skipEmpty=TRUE, collapse='', reduce=TRUE) {
 
   pre <- pre %>% fillna_df()
   post <- post %>% fillna_df()
 
   df_tmp = df.names %>%
     purrr::map_dfc(~build_element(df[[.]], pre[[.]], post[[.]], skipEmpty))
+
+  if (!reduce){
+    colnames(df_tmp) <- df.names
+    return(df_tmp)
+  }
 
   str_result = df_tmp %>%
     purrr::transpose() %>%

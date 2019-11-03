@@ -1,4 +1,3 @@
 Body,Name,Class,Build,isFeature,Level,Type,UsageLimit,UsageNumber,Keywords,Requires,Action,Trigger,Range,Target,AttackRoll,EffectPre,Hit,Miss,EffectPost,Misc,SecondaryAttack,Upgrades,Summary
-"<div class=""Power"">","<p class=""large""><strong>", -      ,NA,NA,NA,<p>, - ,NA, - <i>,NA,<b><i>,<i> (Trigger: ,<b> ,NA,NA,<p><b>Effect</b>: ,<p><b>Hit</b>: ,<p><b>Miss</b>: ,<p><b>Effect</b>: ,<p>,<p><b>Secondary Attack:</b> ,"<p class=""Power-Upgrade"">",NA
-</div>,NA,NA,NA,NA,</strong ></p>,NA,NA,NA,</i></p><p>,NA,</i></b> -,)</i> - , </b> -,NA,</p>,</p>,</p>,</p>,</p>,</p>,</p>,</p>,NA
-NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+"<div class=""Power"">", ,NA,NA,NA,NA,NA,- ,NA, - <i>,NA,<b><i>,<i> (Trigger: ,<b>,NA,NA,<b>Effect</b>: ,<b>Hit</b>: ,<b>Miss</b>: ,<b>Effect</b>: ,NA,<b>Secondary Attack:</b> ,"<span class=""Power-Upgrade"">",NA
+</div>, - ,NA,NA,NA,NA,NA,NA,NA,</i>,NA,</i></b> -,)</i> -,</b> -,NA,NA,NA,NA,NA,NA,NA,NA,</span>,NA

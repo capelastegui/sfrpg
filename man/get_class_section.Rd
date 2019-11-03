@@ -4,8 +4,7 @@
 \alias{get_class_section}
 \title{Generate html document with class data for all classes}
 \usage{
-get_class_section(class, build, htm_stat, htm_feature, htm_power_summary,
-  htm_power)
+get_class_section(class, build, htm_stat, htm_feature, htm_power)
 }
 \arguments{
 \item{class}{Name of class}
@@ -16,9 +15,9 @@ get_class_section(class, build, htm_stat, htm_feature, htm_power_summary,
 
 \item{htm_feature}{string with class features in html form}
 
-\item{htm_power_summary}{string with html summary table for class powers}
-
 \item{htm_power}{string with class powers in html form}
+
+\item{htm_power_summary}{string with html summary table for class powers}
 }
 \value{
 string with class section in html form

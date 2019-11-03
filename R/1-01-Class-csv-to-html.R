@@ -1,3 +1,139 @@
+#' Read and clean csv files
+#'
+#' @param s 
+#' @param delim 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+read_my_csv <- function(s, delim = ',') {
+  dir_base  = system.file('raw', "character_creation", package='sfrpg',
+                          mustWork=TRUE)
+  
+  str_regex = "\r[^\n]" # new lines with \r but not \r\n - to replace w \r\n
+  readr::read_delim(
+    file.path(dir_base, paste0(s, ".csv")),
+    delim = delim,
+    col_types = readr::cols(.default = "c")
+  )  %>% dplyr::mutate_if (is.character,
+                           ~stringr::str_replace_all(., str_regex, "\r\n"))
+}
+
+# Convenience function to add <p> tags to an html paragraph
+add_p_tags <- function(col) {col %>% build_element('<p>','</p>')}
+
+# Collapse columns in a dataframe into a single character column
+collapse_cols <- function(df, collapse=''){
+
+  filter_and_collapse <- function(c){
+    c %>% purrr::discard(~nchar(.)==0) %>%
+    paste(collapse=collapse)
+  }
+
+  df %>%
+    purrr::transpose() %>%
+    purrr::map_chr(filter_and_collapse)
+}
+
+# variant of build_element_apply for power block paragraphs
+build_element_apply_power_p <- function (
+  df,pre,post,  df.names=names(df),skipEmpty=TRUE, collapse=' ') {
+
+  pre <- pre %>% fillna_df()
+  post <- post %>% fillna_df()
+
+  df_tmp = df.names %>%
+    purrr::map_dfc(~build_element(df[[.]], pre[[.]], post[[.]], skipEmpty))
+
+  str_result = df_tmp %>% collapse_cols(collapse)
+  str_result
+}
+
+# Add title paragraph column for power block
+add_p_title <- function(df_power, usageColors){
+  p_title <- df_power %>%
+    dplyr::select(Name, Class, isFeature, Level) %>%
+    collapse_cols(' ')
+
+  df_power %>%
+    dplyr::mutate(p_title = paste(
+      "<span class=\"", usageColors, " large\"><strong>",
+      p_title, '</strong></span>',sep = ""))
+}
+
+# Add type paragraph column for power block
+add_p_type <- function(df_power){
+  p_type <- df_power %>%
+    dplyr::select(Type, UsageLimit, UsageNumber,Keywords) %>%
+    collapse_cols(' ')
+
+  df_power %>% dplyr::mutate(p_type=p_type)
+}
+
+# Add action paragraph column for power block
+add_p_action <- function(df_power) {
+  p_action = df_power %>%
+  dplyr::select(Action, Trigger, Range, Target, AttackRoll)  %>%
+    collapse_cols(' ')
+
+  df_power %>% dplyr::mutate(p_action=p_action)
+}
+
+
+
+#' Build power block from raw data
+#'
+#' @param df_power_raw 
+#'
+#' @return character vector with html power blocks
+#' @export
+#'
+#' @examples
+get_power_clean <- function(df_power_raw, df_power_tag)
+{
+  l_color_map=c(green = "", red = "Encounter", gray = "Daily")
+
+  power_tag_pre <- df_power_tag[1,] %>% dplyr::select(-Class,-Build)
+  power_tag_post <- df_power_tag[2,] %>% dplyr::select(-Class,-Build)
+
+  df_power <- df_power_raw  %>%
+    gsub_colwise("\\r\\n", "<br>") %>%
+    fillna_df %>%
+    dplyr::mutate(
+      usageColors = UsageLimit %>%
+        factor %>%  forcats::fct_recode(!!!l_color_map)) %>%
+    dplyr::arrange(Class, isFeature != "Feature",
+                   Type, usageColors, Level, Name)
+
+  build_cols <- setdiff(names(df_power),
+    c("Summary", "Build", "usageColors"))
+
+  power_block <- df_power %>%
+    build_element_apply(power_tag_pre, power_tag_post,
+      build_cols, reduce=FALSE) %>%
+    add_p_title(df_power$usageColors) %>%
+    add_p_type() %>%
+    add_p_action() %>%
+    dplyr::select(p_title, p_type, p_action, EffectPre, Hit,
+           Miss, EffectPost, Misc, SecondaryAttack, Upgrades) %>%
+    purrr::map_dfc(add_p_tags) %>%
+    collapse_cols('\r\n') %>%
+    build_element('<div class="Power">','</div>')
+
+  df_power_clean <- df_power %>% 
+    dplyr::select(Class, Build) %>%
+    dplyr::mutate(power_block = power_block)  %>%
+    dplyr::group_by(Class, Build) %>%
+    dplyr::summarise(htm_power=power_block %>%
+      paste(collapse='\r\n')) %>%
+    dplyr::mutate(htm_power = paste0(
+      '<div class="Power-List">',htm_power, '</div>'))
+  
+  df_power_clean
+}
+
+
 #' Generate html table for powers
 #'
 #' @param df input dataframe
@@ -17,15 +153,9 @@ apply_class_power_htm <- function(df, pre, post) {
     Type,
     usageColors %>% forcats::fct_relevel('green', 'red', 'gray')
   )
-  
-  htm <- build_element_apply(
-    df,
-    pre,
-    post,
-    df.names = setdiff(names(df), c("Summary", "Build", "usageColors")),
-    skipEmpty = TRUE,
-    collapse = ' '
-  )
+
+  build_cols <- setdiff(names(df), c("Summary", "Build", "usageColors"))
+  htm <- build_element_apply(df,pre,post,build_cols)
   paste("<div class=\"Power-List\">", htm, "</div>" , sep = "")
 }
 
@@ -71,7 +201,7 @@ get_class_section <- function(class,
                               build,
                               htm_stat,
                               htm_feature,
-                              htm_power_summary,
+                              #htm_power_summary,
                               htm_power) {
   class_section = paste(
     "<p><h3>",
@@ -86,9 +216,9 @@ get_class_section <- function(class,
     htm_feature,
     "</p>\r\n",
     "<p><h3>Class Powers</h3></p>\r\n",
-    "<p>",
-    htm_power_summary,
-    "</p>\r\n",
+    #"<p>",
+    #htm_power_summary,
+    #"</p>\r\n",
     "<p>",
     htm_power,
     "</p>\r\n",
@@ -173,17 +303,6 @@ get_class_stat_trans <- function(df_class_stat) {
 #' @examples
 get_l_class <- function ()
 {
-  dir_base  = system.file('raw', "character_creation", package='sfrpg',
-    mustWork=TRUE)
-  read_my_csv <- function(s, delim = ',') {
-    str_regex = "\r[^\n]" # new lines with \r but not \r\n - to replace w \r\n
-    readr::read_delim(
-      file.path(dir_base, paste0(s, ".csv")),
-      delim = delim,
-      col_types = readr::cols(.default = "c")
-    )  %>% dplyr::mutate_if (is.character,  ~stringr::str_replace_all(., str_regex, "\r\n"))
-    }
-  
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
   
   df_class_stat = read_my_csv('Class-stats', delim = ',') %>%
@@ -194,31 +313,21 @@ get_l_class <- function ()
 
   df_feature_tag <- read_my_csv('Class-features-tags')
   df_power_tag <-  read_my_csv('Powers-tags')
-  df_power_raw <-  read_my_csv('Powers-raw') %>%
-    gsub_colwise("\\r\\n", "<br>") %>%
-    fillna_df %>%
-    dplyr::mutate(usageColors = UsageLimit %>%
-             factor %>% 
-             forcats::fct_recode(!!!c(
-               green = "",
-               red = "Encounter",
-               gray = "Daily"))
-           ) %>%
-    dplyr::arrange(Class, isFeature != "Feature",
-            Type, usageColors, Level, Name)  %>%
-    dplyr::mutate(Name = paste(
-      "<span class=\"", usageColors, "\">", Name, sep = "")) %>%
-    dplyr::mutate(Level = paste(Level, "</span>", sep = ""))
+  df_power_raw <-  read_my_csv('Powers-raw')
   
-  power_tag_pre <- df_power_tag[1,] %>% dplyr::select(-Class,-Build)
-  power_tag_post <- df_power_tag[2,] %>% dplyr::select(-Class,-Build)
+  #power_tag_pre <- df_power_tag[1,] %>% dplyr::select(-Class,-Build)
+  #power_tag_post <- df_power_tag[2,] %>% dplyr::select(-Class,-Build)
   
   feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
   feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
+
+  df_power_clean = df_power_raw %>%
+    get_power_clean(df_power_tag)
   
   df_class = list(
-    df_power_raw  %>% dplyr::group_by(Class, Build) %>%
-      tidyr::nest (.key = 'data_power'),
+    #df_power_raw  %>% dplyr::group_by(Class, Build) %>%
+    #  tidyr::nest (.key = 'data_power'),
+    df_power_clean,
     df_class_stat %>% dplyr::group_by(Class, Build) %>%
       tidyr::nest (.key = 'data_stat'),
     df_class_feature %>% dplyr::group_by(Class, Build) %>%
@@ -237,15 +346,15 @@ get_l_class <- function ()
       feature_tag_post,
       skipEmpty = TRUE
     ),
-    htm_power = data_power %>% purrr::map_chr(apply_class_power_htm,
-                                              power_tag_pre, power_tag_post),
-    htm_power_summary = data_power %>% purrr::map_chr(apply_class_power_summary),
+    #htm_power = data_power %>% purrr::map_chr(apply_class_power_htm,
+    #                                          power_tag_pre, power_tag_post),
+    #htm_power_summary = data_power %>% purrr::map_chr(apply_class_power_summary),
     htm_class_section = get_class_section(
       Class,
       Build,
       htm_stat,
       htm_feature,
-      htm_power_summary,
+      #htm_power_summary,
       htm_power
       )
     )
@@ -279,7 +388,7 @@ get_class_build <- function(df_class, char_class, char_build) {
 #' @examples
 get_htm_file <- function(str_htm) {
 
-  file_css <- system.file('rmd', "SFRPG.css", package='sfrpg',
+  file_css <- system.file("SFRPG.css", package='sfrpg',
      mustWork=TRUE)
   css <- readChar(file_css, file.info(file_css)$size)
   
@@ -301,6 +410,7 @@ write_class_file <- function(df_class, char_class, char_build, dir_output) {
     get_htm_file()
   path = file.path(dir_output,
     paste('1-01-class-',char_class,'-',char_build,'.html'))
+  print(paste('Writing class file: ', char_class, char_build, 'to:', path))
   writeLines(htm_file, path)
 }
 
