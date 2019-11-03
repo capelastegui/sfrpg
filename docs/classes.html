@@ -167,114 +167,79 @@
             <section class="normal" id="section-">
 <div id="classes" class="section level1">
 <h1><span class="header-section-number">Chapter 6</span> Classes</h1>
-<p>function ()
-{
-dir_base = system.file(“raw”, “character_creation”, package = “sfrpg”,
-mustWork = TRUE)
-read_my_csv &lt;- function(s, delim = “;”) {
-readr::read_delim(file.path(dir_base, paste0(s, “.csv”)),
-delim = delim, col_types = readr::cols(.default = “c”))
-}
-usageOrder &lt;- c("“,”At-Will“,”Encounter“,”Daily“)
-df_class_stat = read_my_csv(”Class-stats“, delim =”,“) %&gt;%
-get_df_class_stat()
-df_class_feature = read_my_csv(”Class-features“) %&gt;% gsub_colwise(”\n“,”<br>“) %&gt;% purrr::map_dfc(tidyr::replace_na,”-“)
-df_feature_tag &lt;- read_my_csv(”Class-features-tags“)
-df_power_tag &lt;- read_my_csv(”Powers-tags“)
-df_power_raw &lt;- read_my_csv(”Powers-raw“) %&gt;% gsub_colwise(”\n“,”<br>“) %&gt;% fillna_df %&gt;% dplyr::mutate(usageColors = UsageLimit %&gt;%
-factor %&gt;% forcats::fct_recode(!!!c(green =”“, red =”Encounter“,
-gray =”Daily“))) %&gt;% dplyr::arrange(Class, isFeature !=”Feature“, Type, usageColors, Level, Name) %&gt;% dplyr::mutate(Name = paste(”&lt;span class="“,
-usageColors,”"&gt;“, Name, sep =”“)) %&gt;% dplyr::mutate(Level = paste(Level,”</span>“, sep =”“))
-power_tag_pre &lt;- df_power_tag[1, ] %&gt;% dplyr::select(-Class,
--Build)
-power_tag_post &lt;- df_power_tag[2, ] %&gt;% dplyr::select(-Class,
--Build)
-feature_tag_pre &lt;- df_feature_tag[1, ] %&gt;% dplyr::select(-Class,
--Build)
-feature_tag_post &lt;- df_feature_tag[2, ] %&gt;% dplyr::select(-Class,
--Build)
-df_class = list(df_power_raw %&gt;% dplyr::group_by(Class, Build) %&gt;%
-tidyr::nest(.key =”data_power“), df_class_stat %&gt;% dplyr::group_by(Class,
-Build) %&gt;% tidyr::nest(.key =”data_stat“), df_class_feature %&gt;%
-dplyr::group_by(Class, Build) %&gt;% tidyr::nest(.key =”data_feature“)) %&gt;%
-purrr::reduce(dplyr::full_join, by = c(”Class“,”Build“)) %&gt;%
-dplyr::mutate(htm_stat = data_stat %&gt;% purrr::map(~.x %&gt;%
-get_class_stat_trans) %&gt;% purrr::map_chr(~.x %&gt;%
-build_table_apply(tableClass =”Class-table", skipHeader = TRUE)),
-htm_feature = data_feature %&gt;% purrr::map_chr(build_element_apply,
-feature_tag_pre, feature_tag_post, skipEmpty = TRUE),
-htm_power = data_power %&gt;% purrr::map_chr(apply_class_power_htm,
-power_tag_pre, power_tag_post), htm_power_summary = data_power %&gt;%
-purrr::map_chr(apply_class_power_summary), htm_class_section = get_class_section(Class,
-Build, htm_stat, htm_feature, htm_power_summary,
-htm_power))
-df_class
-}
-&lt;bytecode: 0x0000000015f9de58&gt;
-&lt;environment: namespace:sfrpg&gt;</p>
 <div id="universal-powers" class="section level2">
 <h2><span class="header-section-number">6.1</span> Universal Powers</h2>
 <p>The following powers are available to Player Characters of all classes.</p>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="red">Empower Spell 1</span></strong >
+<p>
+<span class="gray large"><strong>Defensive Training - Universal 1</strong></span>
+</p>
+<p>
+Attack - Daily
+</p>
+<p>
+<b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Until you recharge or retrain this power, you gain +5 HP.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: gain +10 HP instead.<br>Upgrade 25: gain +15 HP instead.</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Offensive Training - Universal 1</strong></span>
+</p>
+<p>
+Attack - Daily
+</p>
+<p>
+<b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Until you recharge or retrain this power, your attacks gain +1 Damage.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Your attacks gain +2 damage and +1 Miss Damage.<br>Upgrade 25: Your attacks gain +3 damage and +2 Miss Damage.</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Empower Spell - Universal 1</strong></span>
 </p>
 <p>
 Attack - Encounter - <i>Implement</i>
 </p>
 <p>
 <b><i>Personal Reaction, Interrupt </i></b> - <i> (Trigger: you hit with an Implement attack)</i> - targets an enemy hit by the triggering attack
+</p>
 <p>
 <b>Effect</b>: Against the target, the triggering attack deals an extra 1d10 and gains Push 1.
 </p>
-<p class="Power-Upgrade">
-Upgrade 13: Increase extra damage to 2d10<br>Upgrade 23: Increase extra damage to 3d10
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase extra damage to 2d10<br>Upgrade 23: Increase extra damage to 3d10</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Power Attack 1</span></strong >
+<p>
+<span class="red large"><strong>Power Attack - Universal 1</strong></span>
 </p>
 <p>
 Attack - Encounter - <i>Weapon</i>
 </p>
 <p>
 <b><i>Personal Reaction, Interrupt </i></b> - <i> (Trigger: you hit with a Weapon attack)</i> - targets an enemy hit by the triggering attack
+</p>
 <p>
 <b>Effect</b>: -
 </p>
 <p>
 <b>Effect</b>: Against the target, the triggering attack deals an extra 1W and gains Push 1.
 </p>
-<p class="Power-Upgrade">
-Upgrade 13: Increase extra damage to 2W<br>Upgrade 23: Increase extra damage to 3W
-</p>
-</div>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Defensive Training 1</span></strong >
-</p>
 <p>
-Attack - Daily <b> Personal </b> -
-<p>
-<b>Effect</b>: Until you recharge or retrain this power, you gain +5 HP.
-</p>
-<p class="Power-Upgrade">
-Upgrade 15: gain +10 HP instead.<br>Upgrade 25: gain +15 HP instead.
-</p>
-</div>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Offensive Training 1</span></strong >
-</p>
-<p>
-Attack - Daily <b> Personal </b> -
-<p>
-<b>Effect</b>: Until you recharge or retrain this power, your attacks gain +1 Damage.
-</p>
-<p class="Power-Upgrade">
-Upgrade 15: Your attacks gain +2 damage and +1 Miss Damage.<br>Upgrade 25: Your attacks gain +3 damage and +2 Miss Damage.
+<span class="Power-Upgrade">Upgrade 13: Increase extra damage to 2W<br>Upgrade 23: Increase extra damage to 3W</span>
 </p>
 </div>
 </div>
@@ -441,13 +406,14 @@ Expected Armor
 <h4><span class="header-section-number">6.2.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="red">Rage Strike Feature 1</span></strong >
+<p>
+<span class="red large"><strong>Rage Strike - Barbarian Feature 1</strong></span>
 </p>
 <p>
 Attack - Encounter - <i>Non-Fatiguing</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 3W+Str.
@@ -458,44 +424,95 @@ Attack - Encounter - <i>Non-Fatiguing</i>
 <p>
 Special: Use only while raging.
 </p>
-<p class="Power-Upgrade">
-Rage Level 15: Increase Hit damage to 5W+Str<br>Rage Level 25: Increase Hit damage to 7W+Str
+<p>
+<span class="Power-Upgrade">Rage Level 15: Increase Hit damage to 5W+Str<br>Rage Level 25: Increase Hit damage to 7W+Str</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Invigorating Strike 1</span></strong >
+<p>
+<span class="green large"><strong>Invigorating Strike - Barbarian 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: W+Str, and you gain Con Shield Points. If you already had Shield Points, deal +Con extra damage.
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2W+Str.&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Mighty Shove 1</span></strong >
+<p>
+<span class="green large"><strong>Mighty Shove - Barbarian 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: W+Str. Push 2, and you move 2 to a square closer to the target.
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2W+Str.&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">All-In 1</span></strong >
+<p>
+<span class="gray large"><strong>Blood Rage - Barbarian 1</strong></span>
+</p>
+<p>
+Attack - Daily - <i>Rage</i>
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Until end of the encounter, you gain Lesser Resist All while Bloodied, and Bloodied enemies gain Lesser Vulnerable All against your attacks.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Crowd Rage - Barbarian 1</strong></span>
+</p>
+<p>
+Attack - Daily - <i>Rage</i>
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Until end of the encounter, you cannot be flanked and, when you hit an enemy, you can deal Con damage to up to 2 other enemies adjacent to you.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Stubborn Rage - Barbarian 1</strong></span>
+</p>
+<p>
+Attack - Daily - <i>Rage</i>
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Roll a save to ignore a Condition this turn. Until end of the encounter, at the start of each turn you roll a save to ignore a Condition that turn.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>All-In - Barbarian 1</strong></span>
 </p>
 <p>
 Attack - Encounter - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 3W+Str.
@@ -506,107 +523,82 @@ Attack - Encounter - <i>Weapon</i>
 <p>
 <b>Effect</b>: You gain Lesser Vulnerable All until next turn.
 </p>
-<p class="Power-Upgrade">
-Upgrade 13: Increase Hit damage to 5W+Str<br>Upgrade 23: Increase Hit damage to 6W+Str
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 5W+Str<br>Upgrade 23: Increase Hit damage to 6W+Str</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Blade Whirlwind 1</span></strong >
+<p>
+<span class="red large"><strong>Blade Whirlwind - Barbarian 1</strong></span>
 </p>
 <p>
 Attack - Encounter - <i>Weapon</i>
 </p>
-<b> Close Burst 1 </b> - Str vs Ref
+<p>
+<b>Close Burst 1</b> - Str vs Ref
 </p>
 <p>
 <b>Hit</b>: W+Con, and Push 1
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase  Hit damage to 2W+Con&lt;br&gt;Upgrade 23: Increase Hit damage to 3W+Con&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W+Con<br>Upgrade 23: Increase Hit damage to 3W+Con</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">No Pain 1</span></strong >
+<p>
+<span class="red large"><strong>No Pain - Barbarian 1</strong></span>
 </p>
 <p>
 Attack - Encounter - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 2W+Str. You may lose a Surge and gain Shield Points equal to your Surge Value.
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase  Hit damage to 3W+Str&lt;br&gt;Upgrade 23: Increase Hit damage to 4W+Str&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Blood Rage 1</span></strong >
-</p>
 <p>
-Attack - Daily - <i>Rage</i>
-</p>
-<p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
-<p>
-<b>Effect</b>: Until end of the encounter, you gain Lesser Resist All while Bloodied, and Bloodied enemies gain Lesser Vulnerable All against your attacks.
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Crowd Rage 1</span></strong >
-</p>
 <p>
-Attack - Daily - <i>Rage</i>
-</p>
-<p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
-<p>
-<b>Effect</b>: Until end of the encounter, you cannot be flanked and, when you hit an enemy, you can deal Con damage to up to 2 other enemies adjacent to you.
-</p>
-</div>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Stubborn Rage 1</span></strong >
-</p>
-<p>
-Attack - Daily - <i>Rage</i>
-</p>
-<p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
-<p>
-<b>Effect</b>: Roll a save to ignore a Condition this turn. Until end of the encounter, at the start of each turn you roll a save to ignore a Condition that turn.
-</p>
-</div>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Battle Vigor 2</span></strong >
+<span class="red large"><strong>Battle Vigor - Barbarian 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Gain Con Shield Points or, if you are Bloodied, gain 2xCon Shield Points.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Break Free 2</span></strong >
+<p>
+<span class="red large"><strong>Break Free - Barbarian 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Roll a save to end any of the following Conditions on you: Slowed, Immobilized, Restrained, Grabbed, Prone, Marked.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Challenge Accepted 2</span></strong >
+<p>
+<span class="red large"><strong>Challenge Accepted - Barbarian 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Melee </b> - targets an enemy Marking you or that has Bloodied you this encounter
+<b><i>Minor Action</i></b> - <b>Melee</b> - targets an enemy Marking you or that has Bloodied you this encounter
+</p>
 <p>
 <b>Effect</b>: Until end of next turn, you gain Advantage and +Con Crit Range against the target.
 </p>
@@ -791,146 +783,123 @@ Expected Armor
 </tr>
 </tbody>
 </table>
-[1] "
-<div class="\&quot;Feature\&quot;">
+<div class="Feature">
 <p>
 <b>Weapon Mastery</b>: +1 Hit with weapon attacks
 </p>
 </div>
-
-<div class="\&quot;Feature\&quot;">
+<div class="Feature">
 <p>
 <b>Guardian’s Aura</b>: You gain the Defender Aura power.<br>Enemies Taunted by you trigger Opportunity Attacks from you when Shifting or ignoring your Taunt.
 </p>
 </div>
-
-<div class="\&quot;Feature\&quot;">
+<div class="Feature">
 <p>
 <b>Guardian’s Shield</b>: When an ally in your Defender Aura is damaged by an attack, or an ally is damaged by an attack made by an enemy in your Defender Aura, reduce the damage by your CON.
 </p>
 </div>
-
-<div class="\&quot;Feature\&quot;">
+<div class="Feature">
 <p>
 <b>Heavy Armor Specialist</b>: Reduce your Skill Armor Penalty by your CON.
 </p>
 </div>
-"
-#### Class Powers{.newPage}
+<div id="class-powers-2" class="section level4 newPage">
+<h4><span class="header-section-number">6.3.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="green">Defender Aura Feature 1</span></strong >
+<p>
+<span class="green large"><strong>Defender Aura - Fighter Feature 1</strong></span>
 </p>
 <p>
 Utility
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Gain Aura 1: You Mark enemies in the aura. This effect lasts until you dismiss it as a Minor Action, or you become Unconscious.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Cleave 1</span></strong >
+<p>
+<span class="green large"><strong>Cleave - Fighter 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 1W+Str. Make a secondary attack.
 </p>
-<pre><code>&lt;p&gt;&lt;b&gt;Secondary Attack:&lt;/b&gt; Melee, targets another enemy, Str vs AC&lt;br&gt;Hit: Str.&lt;/p&gt; &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2W+Str.&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<b>Secondary Attack:</b> Melee, targets another enemy, Str vs AC<br>Hit: Str.
+</p>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Shield Bash 1</span></strong >
+<p>
+<span class="green large"><strong>Shield Bash - Fighter 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon, Shield</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 1W+Str. Push 1, and you may shift that distance to a square adjacent to the target.
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2W+Str.&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Hamstring 1</span></strong >
-</p>
 <p>
-Attack - Encounter - <i>Weapon</i>
-</p>
-<b> Melee </b> - Str vs AC
-</p>
-<p>
-<b>Hit</b>: 2W + Str, and Slowed (save ends). Until your next turn, the target has -Con to save while adjacent to you.
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 3W+Str&lt;br&gt;Upgrade 23: Increase Hit damage to 4W+Str&lt;br&gt;&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Storm of blades 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Weapon</i>
-</p>
-<b> Close Burst 1 </b> - Str vs AC
-</p>
-<p>
-<b>Hit</b>: Hit: 1W, and Slide 1.
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 2W&lt;br&gt;Upgrade 23: Increase Hit damage to 3W&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Stunning Strike 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Weapon</i>
-</p>
-<b> Melee </b> - Str vs For
-</p>
-<p>
-<b>Hit</b>: Hit: 1W, and Stunned until your next turn.
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 2W&lt;br&gt;Upgrade 23: Increase Hit damage to 3W&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Blade Dance 1</span></strong >
+<span class="gray large"><strong>Blade Dance - Fighter 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon, Stance</i>
 </p>
-<b> Personal </b> -
+<p>
+<b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Use Total Defense. Stance: At the start of your turn, deal 1(W) and Slide 1 to one adjacent enemy.
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: Effect Deal 1W and Slide 1 to each adjacent enemy.<br>Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.
+<p>
+<span class="Power-Upgrade">Upgrade 15: Effect Deal 1W and Slide 1 to each adjacent enemy.<br>Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Brutal Strike 1</span></strong >
+<p>
+<span class="gray large"><strong>Brutal Strike - Fighter 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon, Reliable</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 3W+Str, and Push Con and Prone.
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 15: Increase Hit damage to 5W+Str&lt;br&gt;Upgrade 25: Increase Hit damage to 7W+Str&lt;br&gt;&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 5W+Str<br>Upgrade 25: Increase Hit damage to 7W+Str<br></span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Comeback Strike 1</span></strong >
+<p>
+<span class="gray large"><strong>Comeback Strike - Fighter 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 2W+Str.
@@ -941,46 +910,103 @@ Attack - Daily - <i>Weapon</i>
 <p>
 <b>Effect</b>: Spend a surge and double the amount healed.
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+Str
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+Str</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Find Opening 2</span></strong >
+<p>
+<span class="red large"><strong>Hamstring - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs AC
+</p>
+<p>
+<b>Hit</b>: 2W + Str, and Slowed (save ends). Until your next turn, the target has -Con to save while adjacent to you.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str<br></span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Storm of blades - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon</i>
+</p>
+<p>
+<b>Close Burst 1</b> - Str vs AC
+</p>
+<p>
+<b>Hit</b>: Hit: 1W, and Slide 1.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Stunning Strike - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs For
+</p>
+<p>
+<b>Hit</b>: Hit: 1W, and Stunned until your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Find Opening - Fighter 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Melee </b> -
+<b><i>Minor Action</i></b> - <b>Melee</b> -
+</p>
 <p>
 <b>Effect</b>: Until end of your next turn, your attacks against the target gain Advantage and Pierce Resist
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Grit 2</span></strong >
+<p>
+<span class="red large"><strong>Grit - Fighter 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Roll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Shield Wall 2</span></strong >
+<p>
+<span class="red large"><strong>Shield Wall - Fighter 2</strong></span>
 </p>
 <p>
 Utility - Encounter - <i>Shield</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Until your next turn, you gain Cover against enemy attacks and cannot be flanked.
 </p>
+</div>
 </div>
 </div>
 </div>
@@ -1181,104 +1207,70 @@ Expected Armor
 <b>Ritual Training</b>: You gain Ritual Training as a bonus lesser feat.
 </p>
 </div>
-<div id="class-powers-2" class="section level4 newPage">
+<div id="class-powers-3" class="section level4 newPage">
 <h4><span class="header-section-number">6.4.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="red">Healing Word Feature 1</span></strong >
+<p>
+<span class="red large"><strong>Healing Word - Priest Feature</strong></span>
 </p>
 <p>
 Utility - Encounter x2 - <i>Healing, Non-Provoking</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b> Ranged 5 </b> - targets an ally
+<b><i>Minor Action</i></b> - <b>Ranged 5</b> - targets an ally
+</p>
 <p>
 <b>Effect</b>: The target spends a Surge, and heals +1d6
 </p>
-<p class="Power-Upgrade">
-Level 11: heals +2d6<br>Level 21: heals +3d6
+<p>
+<span class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Guiding Light 1</span></strong >
+<p>
+<span class="green large"><strong>Guiding Light - Priest 1</strong></span>
 </p>
 <p>
 Attack - <i>Implement</i>
 </p>
-<b> Ranged 7 </b> - Wis vs Ref
+<p>
+<b>Ranged 7</b> - Wis vs Ref
 </p>
 <p>
 <b>Hit</b>: 1d8+Wis Radiant, and until your next turn, attacks against the target gain Advantage and halve hit penalties from Cover and Concealment.
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2d8+Wis&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2d8+Wis</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Healing Light 1</span></strong >
+<p>
+<span class="green large"><strong>Healing Light - Priest 1</strong></span>
 </p>
 <p>
 Attack - <i>Implement</i>
 </p>
-<b> Ranged 7 </b> - Wis vs Ref
+<p>
+<b>Ranged 7</b> - Wis vs Ref
 </p>
 <p>
 <b>Hit</b>: 1d8 Radiant, and you or an ally within 2 of you heal Wis
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2d8&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Blinding Light 1</span></strong >
-</p>
 <p>
-Attack - Encounter - <i>Implement</i>
-</p>
-<b> Ranged 5 </b> - Wis vs Ref
-</p>
-<p>
-<b>Hit</b>: 2d8+Cha Radiant, and Blind (save ends).
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase  Hit damage to 3d8+Wis&lt;br&gt;Upgrade 23: Increase Hit damage to 4d8+Wis&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Dazzling Burst 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Implement</i>
-</p>
-<b> Area 7 Burst 2 </b> - targets enemies Wis vs Wil
-</p>
-<p>
-<b>Hit</b>: 1d8 Radiant, and Dazzled until your next turn.
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase  Hit damage to 2d8&lt;br&gt;Upgrade 23: Increase Hit damage to 2d8&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Restoring Beam 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Implement</i>
-</p>
-<b> Close Line 7 </b> - targets enemies Wis vs Ref
-</p>
-<p>
-<b>Hit</b>: 1d8+Wis Radiant.
-</p>
-<p>
-<b>Effect</b>: If you hit one or more targets, allies in the line heal Wis and can make a save.
-</p>
-<p class="Power-Upgrade">
-Upgrade 13: Increase Hit damage to 2d8<br>Upgrade 23: Increase Hit damage to 3d8
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2d8</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Consecrated Ground 1</span></strong >
+<p>
+<span class="gray large"><strong>Consecrated Ground - Priest 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Implement, Zone</i>
 </p>
-<b> Close Burst 2 </b> -
+<p>
+<b>Close Burst 2</b> -
+</p>
 <p>
 <b>Effect</b>: Until end of next turn, create Zone in burst. While in the zone, you and your allies gain Regeneration equal to your Charisma.
 </p>
@@ -1288,33 +1280,36 @@ Sustain Minor: The zone persists until end of your next turn. Make a Secondary A
 <p>
 <b>Secondary Attack:</b> Wis vs For, Hit: 1d8 Radiant.
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: Increase Secondary Hit damage to 2d8<br>Upgrade 25: Increase Secondary Hit damage to 3d8
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Secondary Hit damage to 2d8<br>Upgrade 25: Increase Secondary Hit damage to 3d8</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Heroism 1</span></strong >
+<p>
+<span class="gray large"><strong>Heroism - Priest 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Implement</i>
 </p>
-<b> Melee </b> - targets an ally
+<p>
+<b>Melee</b> - targets an ally
+</p>
 <p>
 <b>Effect</b>: 2d12+Wis Shield Points.<br>Until end of the encounter, +Cha to Hit and +Cha to Action Point Rolls
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: 4d12+Wis Shield Points<br>Upgrade 25: 6d12+Wis Shield Points
+<p>
+<span class="Power-Upgrade">Upgrade 15: 4d12+Wis Shield Points<br>Upgrade 25: 6d12+Wis Shield Points</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Pacify 1</span></strong >
+<p>
+<span class="gray large"><strong>Pacify - Priest 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Implement, Reliable</i>
 </p>
-<b> Ranged 7 </b> - Wis + Cha vs Wil
+<p>
+<b>Ranged 7</b> - Wis + Cha vs Wil
 </p>
 <p>
 <b>Hit</b>: The target is Weak (save ends). When the target attacks, the target cannot save against this effect that turn.
@@ -1322,44 +1317,104 @@ Attack - Daily - <i>Implement, Reliable</i>
 <p>
 Special: This attack misses automatically if the target is over 90 HP.
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: Miss automatically if target is over 180 HP<br>Upgrade 25: Miss automatically if target is over 270 HP
+<p>
+<span class="Power-Upgrade">Upgrade 15: Miss automatically if target is over 180 HP<br>Upgrade 25: Miss automatically if target is over 270 HP</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Sanctuary 2</span></strong >
+<p>
+<span class="red large"><strong>Blinding Light - Priest 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Implement</i>
+</p>
+<p>
+<b>Ranged 5</b> - Wis vs Ref
+</p>
+<p>
+<b>Hit</b>: 2d8+Cha Radiant, and Blind (save ends).
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3d8+Wis<br>Upgrade 23: Increase Hit damage to 4d8+Wis</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Dazzling Burst - Priest 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Implement</i>
+</p>
+<p>
+<b>Area 7 Burst 2</b> - targets enemies Wis vs Wil
+</p>
+<p>
+<b>Hit</b>: 1d8 Radiant, and Dazzled until your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2d8<br>Upgrade 23: Increase Hit damage to 2d8</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Restoring Beam - Priest 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Implement</i>
+</p>
+<p>
+<b>Close Line 7</b> - targets enemies Wis vs Ref
+</p>
+<p>
+<b>Hit</b>: 1d8+Wis Radiant.
+</p>
+<p>
+<b>Effect</b>: If you hit one or more targets, allies in the line heal Wis and can make a save.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2d8<br>Upgrade 23: Increase Hit damage to 3d8</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Bless - Priest 2</strong></span>
+</p>
+<p>
+Utility - Daily
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Close Burst 5</b> - targets you and allies
+</p>
+<p>
+<b>Effect</b>: Until end of the encounter, +1 to Hit and +1 to Save.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Sanctuary - Priest 2</strong></span>
 </p>
 <p>
 Utility - Encounter - <i>Non-Provoking</i>
 </p>
-<b> Ranged 7 </b> - targets you and an ally
+<p>
+<b>Ranged 7</b> - targets you and an ally
+</p>
 <p>
 <b>Effect</b>: Resist All until end of your next turn. This effect ends when the target attacks.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Saving Grace 2</span></strong >
+<p>
+<span class="red large"><strong>Saving Grace - Priest 2</strong></span>
 </p>
 <p>
 Utility - Encounter - <i>Non-Provoking</i>
 </p>
-<b> Ranged 7 </b> - targets you or an ally
+<p>
+<b>Ranged 7</b> - targets you or an ally
+</p>
 <p>
 <b>Effect</b>: Choose one - the target rolls a save, or you lose a Surge and choose a Condition, and the target rolls a save to ignore that Condition until next turn.
-</p>
-</div>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Bless 2</span></strong >
-</p>
-<p>
-Utility - Daily
-<p>
-<b><i>Minor Action</i></b> - <b> Close Burst 5 </b> - targets you and allies
-<p>
-<b>Effect</b>: Until end of the encounter, +1 to Hit and +1 to Save.
 </p>
 </div>
 </div>
@@ -1561,30 +1616,35 @@ Expected Armor
 <b>Evasive Scoundrel</b>: Add CHA to all defenses against Opportunity Attacks and Partial Resist against Opportunity Attacks.
 </p>
 </div>
-<div id="class-powers-3" class="section level4 newPage">
+<div id="class-powers-4" class="section level4 newPage">
 <h4><span class="header-section-number">6.5.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="green">Piercing Strike 1</span></strong >
+<p>
+<span class="green large"><strong>Piercing Strike - Rogue 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon, Light Weapon</i>
 </p>
-<b> Melee or Ranged </b> - Dex+2 vs Ref
+<p>
+<b>Melee or Ranged</b> - Dex+2 vs Ref
 </p>
 <p>
 <b>Hit</b>: 1W+Dex
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2W+Dex&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Dex</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Setup Strike 1</span></strong >
+<p>
+<span class="green large"><strong>Setup Strike - Rogue 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon, Light Weapon</i>
 </p>
-<b> Melee or Ranged </b> - Dex vs AC
+<p>
+<b>Melee or Ranged</b> - Dex vs AC
 </p>
 <p>
 <b>Hit</b>: 1W+Dex
@@ -1592,63 +1652,19 @@ Attack - <i>Weapon, Light Weapon</i>
 <p>
 <b>Effect</b>: Until end of your next turn, your attacks against the target have Advantage or, if you already have Advantage, deal +Cha extra damage.
 </p>
-<p class="Power-Upgrade">
-Level 21: Increase Hit damage to 2W+Dex
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Dex</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Expose Weakness 1</span></strong >
-</p>
 <p>
-Attack - Encounter - <i>Weapon, Light Weapon</i>
-</p>
-<b> Melee or Ranged </b> - Dex vs AC
-</p>
-<p>
-<b>Effect</b>: Until end of your next turn, your attacks against the target have Advantage or, if you already have Advantage, gain +Cha Crit Range.
-</p>
-<p>
-<b>Hit</b>: 2W+Dex. Dex and, if you have Advantage, Dazed until end of your next turn.
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 3W+Dex&lt;br&gt;Upgrade 23: Increase Hit damage to 4W+Dex&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">King’s Castle 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Weapon, Light Weapon</i>
-</p>
-<b> Melee or Ranged </b> - Dex vs Wil
-</p>
-<p>
-<b>Effect</b>: Before or after the attack, choose an adjacent creature. You and that creature Slide to switch places.
-</p>
-<p>
-<b>Hit</b>: 2W+Dex
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 3W+Dex&lt;br&gt;Upgrade 23: Increase Hit damage to 4W+Dex&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Stay Down 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Weapon, Light Weapon</i>
-</p>
-<b> Melee or Ranged </b> - Dex vs AC
-</p>
-<p>
-<b>Hit</b>: 2W+Dex, and Prone. If you have Advantage, provokes Opportunity Attacks when standing up next turn.
-</p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 3W+Dex&lt;br&gt;Upgrade 23: Increase Hit damage to 4W+Dex&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Blinding Trick 1</span></strong >
+<span class="gray large"><strong>Blinding Trick - Rogue 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon, Light Weapon</i>
 </p>
-<b> Melee or Ranged </b> - Dex vs Ref
+<p>
+<b>Melee or Ranged</b> - Dex vs Ref
 </p>
 <p>
 <b>Hit</b>: Blinded (save ends)
@@ -1662,68 +1678,139 @@ Attack - Daily - <i>Weapon, Light Weapon</i>
 <p>
 <b>Secondary Attack:</b> Dex vs AC<br>Hit: 3W+Dex, and -2xCha to save until your next turn.<br>
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: Increase Secondary Hit damage to 5W+Dex<br>Upgrade 25: Increase Secondary Hit damage to 7W+Dex
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Secondary Hit damage to 5W+Dex<br>Upgrade 25: Increase Secondary Hit damage to 7W+Dex</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Open Wounds 1</span></strong >
+<p>
+<span class="gray large"><strong>Open Wounds - Rogue 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon, Light Weapon, Reliable</i>
 </p>
-<b> Melee or Ranged </b> - Dex vs AC
+<p>
+<b>Melee or Ranged</b> - Dex vs AC
 </p>
 <p>
 <b>Hit</b>: 3W, and Dex Ongoing damage (save ends). When the target moves, the target cannot save against this effect that turn.
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 15: Increase  Hit damage to 5W&lt;br&gt;Upgrade 25: Increase Hit damage to 7W&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 5W<br>Upgrade 25: Increase Hit damage to 7W</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Stunning Blow 1</span></strong >
+<p>
+<span class="gray large"><strong>Stunning Blow - Rogue 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon, Light Weapon, Reliable</i>
 </p>
-<b> Melee </b> - targets an enemy granting Advantage to you Dex vs For
+<p>
+<b>Melee</b> - targets an enemy granting Advantage to you Dex vs For
 </p>
 <p>
 <b>Hit</b>: 2W+Dex, and Stunned (save ends)
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 15: Increase  Hit damage to 3W+Dex&lt;br&gt;Upgrade 25: Increase  Hit damage to 5W+Dex&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Dex<br>Upgrade 25: Increase Hit damage to 5W+Dex</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">I didn’t do it! 2</span></strong >
+<p>
+<span class="red large"><strong>Expose Weakness - Rogue 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon, Light Weapon</i>
+</p>
+<p>
+<b>Melee or Ranged</b> - Dex vs AC
+</p>
+<p>
+<b>Effect</b>: Until end of your next turn, your attacks against the target have Advantage or, if you already have Advantage, gain +Cha Crit Range.
+</p>
+<p>
+<b>Hit</b>: 2W+Dex. Dex and, if you have Advantage, Dazed until end of your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>King’s Castle - Rogue 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon, Light Weapon</i>
+</p>
+<p>
+<b>Melee or Ranged</b> - Dex vs Wil
+</p>
+<p>
+<b>Effect</b>: Before or after the attack, choose an adjacent creature. You and that creature Slide to switch places.
+</p>
+<p>
+<b>Hit</b>: 2W+Dex
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Stay Down - Rogue 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon, Light Weapon</i>
+</p>
+<p>
+<b>Melee or Ranged</b> - Dex vs AC
+</p>
+<p>
+<b>Hit</b>: 2W+Dex, and Prone. If you have Advantage, provokes Opportunity Attacks when standing up next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>I didn’t do it! - Rogue 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Melee </b> - targets an enemy you have hit this turn.
+<b><i>Minor Action</i></b> - <b>Melee</b> - targets an enemy you have hit this turn.
+</p>
 <p>
 <b>Effect</b>: Until end of your next turn, the target is Marked by your ally closest to it, and grants Advantage to you.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Run to Cover 2</span></strong >
+<p>
+<span class="red large"><strong>Run to Cover - Rogue 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Move Action</i></b> - <b> Personal </b> -
+<b><i>Move Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Move your Speed. At the end of turn, if you are in Cover (other than Body Cover) or Concealment from all enemies, you become Shrouded. If you were already Shrouded, you become Hidden instead.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Tumble 2</span></strong >
+<p>
+<span class="red large"><strong>Tumble - Rogue 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Move Action</i></b> - <b> Personal </b> -
+<b><i>Move Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Shift your Speed.
 </p>
@@ -1908,15 +1995,18 @@ Expected Armor
 <b>Shadow Pact</b>: Once per round, when an enemy under your Shadow Curse is reduced to 0 HP, the enemy’s space becomes a zone of Difficult Terrain for your enemies until the end of the encounter. Enemies ending their turns in the zone or adjacent to it take Dex necrotic damage.
 </p>
 </div>
-<div id="class-powers-4" class="section level4 newPage">
+<div id="class-powers-5" class="section level4 newPage">
 <h4><span class="header-section-number">6.6.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="green">Unseen Horror 1</span></strong >
+<p>
+<span class="green large"><strong>Unseen Horror - Warlock 1</strong></span>
 </p>
 <p>
-Attack <b> Ranged 10 </b> - Cha vs Wil
+Attack
+</p>
+<p>
+<b>Ranged 10</b> - Cha vs Wil
 </p>
 <p>
 <b>Hit</b>: 1d10 Psychic. Push Dex, and Slowed until end of your next turn.
@@ -1924,13 +2014,16 @@ Attack <b> Ranged 10 </b> - Cha vs Wil
 <p>
 <b>Miss</b>: Push 1
 </p>
-<pre><code>&lt;/div&gt;</code></pre>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Veil of Darkness 1</span></strong >
+<p>
+<span class="green large"><strong>Veil of Darkness - Warlock 1</strong></span>
 </p>
 <p>
-Attack <b> Ranged 10 </b> - Cha vs For
+Attack
+</p>
+<p>
+<b>Ranged 10</b> - Cha vs For
 </p>
 <p>
 <b>Hit</b>: 1d10+Cha Necro, and Dazzled until end of your next turn.
@@ -1938,58 +2031,16 @@ Attack <b> Ranged 10 </b> - Cha vs For
 <p>
 <b>Miss</b>: Treat this attack as a hit for the purposes of applying your Shadow Curse
 </p>
-<pre><code>&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Dark Bolt 1</span></strong >
-</p>
-<p>
-Attack - Encounter <b> Ranged 15 </b> - Cha vs For
-</p>
-<p>
-<b>Hit</b>: 2d8+Int Necro, and Blind (save ends)
-</p>
-<p>
-<b>Miss</b>: Dazzled (save ends)
-</p>
-<pre><code>&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Howling Agony 1</span></strong >
-</p>
-<p>
-Attack - Encounter <b> Ranged 10 </b> - Cha vs Wil
-</p>
-<p>
-<b>Hit</b>: 2d10+Cha Psychic, and Dazed (save ends). Push Dex all enemies that can see and hear the target.
-</p>
-<p>
-<b>Miss</b>: Half Damage. Push 1 all enemies that can see and hear the target.
-</p>
-<pre><code>&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Soul Drain 1</span></strong >
-</p>
-<p>
-Attack - Encounter <b> Ranged 7 </b> - Cha vs For
-</p>
-<p>
-<b>Hit</b>: 2d10+Cha Necro, and knocked prone.
-</p>
-<p>
-<b>Miss</b>: Half Damage
-</p>
-<p>
-<b>Effect</b>: You heal damage equal to half the damage dealt. If you kill the target with the attack, gain Shield Point equal to half the damage dealt.
-</p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Black Hole 1</span></strong >
+<p>
+<span class="gray large"><strong>Black Hole - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Daily <b> Ranged 10 </b> - Cha vs Ref
+Attack - Daily
+</p>
+<p>
+<b>Ranged 10</b> - Cha vs Ref
 </p>
 <p>
 <b>Hit</b>: 3d6+Cha Necro
@@ -1999,24 +2050,28 @@ Attack - Daily <b> Ranged 10 </b> - Cha vs Ref
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Shadowfiend 1</span></strong >
+<p>
+<span class="gray large"><strong>Shadowfiend - Warlock 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Summon</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> -
+</p>
 <p>
 <b>Effect</b>: - Note: summons benefit from Curse<br>- +2 Def<br>- Shadow Aura - Aura 2: Enemies in aura grant Advantage and can&lt;U+FFFD&gt;t gain Advantage.<br>- Standard Command - Ch vs Ref, 2d8+Ch, and Dazed UEONT<br>- Reaction Command (enemy provokes OA from hound) - Make Standard Command attack against target.<br>- Move Command - Teleport 2
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Soul Feed 1</span></strong >
+<p>
+<span class="gray large"><strong>Soul Feed - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Daily <b> Ranged 7 </b> - Cha vs For
+Attack - Daily
+</p>
+<p>
+<b>Ranged 7</b> - Cha vs For
 </p>
 <p>
 <b>Hit</b>: 3d10+Cha Necro, and Weakened (save ends)
@@ -2029,34 +2084,94 @@ Attack - Daily <b> Ranged 7 </b> - Cha vs For
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">A Curse Upon You 2</span></strong >
+<p>
+<span class="red large"><strong>Dark Bolt - Warlock 1</strong></span>
 </p>
 <p>
-Utility - Encounter
+Attack - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Ranged 5 </b> -
+<b>Ranged 15</b> - Cha vs For
+</p>
+<p>
+<b>Hit</b>: 2d8+Int Necro, and Blind (save ends)
+</p>
+<p>
+<b>Miss</b>: Dazzled (save ends)
+</p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Dark Portal 2</span></strong >
+<p>
+<span class="red large"><strong>Howling Agony - Warlock 1</strong></span>
+</p>
+<p>
+Attack - Encounter
+</p>
+<p>
+<b>Ranged 10</b> - Cha vs Wil
+</p>
+<p>
+<b>Hit</b>: 2d10+Cha Psychic, and Dazed (save ends). Push Dex all enemies that can see and hear the target.
+</p>
+<p>
+<b>Miss</b>: Half Damage. Push 1 all enemies that can see and hear the target.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Soul Drain - Warlock 1</strong></span>
+</p>
+<p>
+Attack - Encounter
+</p>
+<p>
+<b>Ranged 7</b> - Cha vs For
+</p>
+<p>
+<b>Hit</b>: 2d10+Cha Necro, and knocked prone.
+</p>
+<p>
+<b>Miss</b>: Half Damage
+</p>
+<p>
+<b>Effect</b>: You heal damage equal to half the damage dealt. If you kill the target with the attack, gain Shield Point equal to half the damage dealt.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>A Curse Upon You - Warlock 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Move Action</i></b> - <b> Personal </b> -
+<b><i>Minor Action</i></b> - <b>Ranged 5</b> -
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Dark Portal - Warlock 2</strong></span>
+</p>
+<p>
+Utility - Encounter
+</p>
+<p>
+<b><i>Move Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Teleport 2+Dex. Gain Concealment until next turn.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Treacherous Shadows 2</span></strong >
+<p>
+<span class="red large"><strong>Treacherous Shadows - Warlock 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Ranged 10 </b> - targets any number of cursed enemies
+<b><i>Minor Action</i></b> - <b>Ranged 10</b> - targets any number of cursed enemies
+</p>
 <p>
 <b>Effect</b>: Create a zone of Shadows in a square adjacent to the target until next turn. When the target takes a provoking action while adjacent to the zone, the target takes 2xDex Necro damage
 </p>
@@ -2243,33 +2358,35 @@ Expected Armor
 <b>Tactical Skill</b>: TODO: Skill related assist feature.
 </p>
 </div>
-<div id="class-powers-5" class="section level4 newPage">
+<div id="class-powers-6" class="section level4 newPage">
 <h4><span class="header-section-number">6.7.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="red">Invigorating Word Feature 1</span></strong >
+<p>
+<span class="red large"><strong>Invigorating Word - Warlord Feature 1</strong></span>
 </p>
 <p>
 Utility - Encounter x2 - <i>Healing, Non-Provoking</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b> Ranged 5 </b> - targets an ally that can hear you
+<b><i>Minor Action</i></b> - <b>Ranged 5</b> - targets an ally that can hear you
+</p>
 <p>
 <b>Effect</b>: The target spends a Surge, and heals +1d6
 </p>
-<p class="Power-Upgrade">
-Level 11: heals +2d6<br>Level 21: heals +3d6
+<p>
+<span class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">A bit to the left! 1</span></strong >
+<p>
+<span class="green large"><strong>A bit to the left! - Warlord 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Effect</b>: Before or after the attack, an ally within 2 squares of the target shifts 1.
@@ -2277,15 +2394,16 @@ Attack - <i>Weapon</i>
 <p>
 <b>Hit</b>: W+Str
 </p>
-<pre><code> &lt;/div&gt;</code></pre>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Hit right here! 1</span></strong >
+<p>
+<span class="green large"><strong>Hit right here! - Warlord 1</strong></span>
 </p>
 <p>
 Attack - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs Ref
+<p>
+<b>Melee</b> - Str vs Ref
 </p>
 <p>
 <b>Hit</b>: Int
@@ -2295,81 +2413,42 @@ Attack - <i>Weapon</i>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">All yours! 1</span></strong >
-</p>
 <p>
-Attack - Encounter - <i>Weapon</i>
-</p>
-<b> Melee </b> - Str vs AC
-</p>
-<p>
-<b>Hit</b>: 2W+Str, Push 1. Choose an ally adjacent to the target. Until end of your next turn, the target is marked by that ally, and the target provokes an attack of opportunity from that ally if it shifts or violates a mark.
-</p>
-<pre><code> &lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">One-two punch 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Weapon</i>
-</p>
-<b> Melee </b> - targets a flanked enemy Str vs AC
-</p>
-<p>
-<b>Hit</b>: W
-</p>
-<p>
-<b>Effect</b>: An ally flanking the target makes a melee basic attack againt it with +Int Crit Range
-</p>
-</div>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Sunder Armor 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Weapon</i>
-</p>
-<b> Melee </b> - Str vs AC
-</p>
-<p>
-<b>Hit</b>: 2W+Str, and -Int AC until end of your next turn
-</p>
-<pre><code> &lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Follow Me! 1</span></strong >
+<span class="gray large"><strong>Follow Me! - Warlord 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon</i>
 </p>
-<b> Melee </b> - targets an enemy you can charge.
+<p>
+<b>Melee</b> - targets an enemy you can charge.
+</p>
 <p>
 <b>Effect</b>: Charge the target. Up to two allies that can see and hear you charge the target, ignoring opportunity attacks for the charge, and dealing half damage with the charge attack.
 </p>
-<pre><code>  &lt;/div&gt;</code></pre>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Pile On! 1</span></strong >
+<p>
+<span class="gray large"><strong>Pile On! - Warlord 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon</i>
 </p>
 <p>
-<b><i>Reliable</i></b> - <b> Melee </b> - targets a bloodied enemy Str vs AC
+<b><i>Reliable</i></b> - <b>Melee</b> - targets a bloodied enemy Str vs AC
 </p>
 <p>
 <b>Hit</b>: W+Str, and up to two allies adjacent to the target make a melee basic attack against it.
 </p>
-<pre><code> &lt;/div&gt;</code></pre>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Time for Action! 1</span></strong >
+<p>
+<span class="gray large"><strong>Time for Action! - Warlord 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Weapon</i>
 </p>
-<b> Melee </b> - Str vs AC
+<p>
+<b>Melee</b> - Str vs AC
 </p>
 <p>
 <b>Hit</b>: 2W+Str
@@ -2382,39 +2461,88 @@ Attack - Daily - <i>Weapon</i>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Forget it! 2</span></strong >
+<p>
+<span class="red large"><strong>All yours! - Warlord 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs AC
+</p>
+<p>
+<b>Hit</b>: 2W+Str, Push 1. Choose an ally adjacent to the target. Until end of your next turn, the target is marked by that ally, and the target provokes an attack of opportunity from that ally if it shifts or violates a mark.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>One-two punch - Warlord 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon</i>
+</p>
+<p>
+<b>Melee</b> - targets a flanked enemy Str vs AC
+</p>
+<p>
+<b>Hit</b>: W
+</p>
+<p>
+<b>Effect</b>: An ally flanking the target makes a melee basic attack againt it with +Int Crit Range
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Sunder Armor - Warlord 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs AC
+</p>
+<p>
+<b>Hit</b>: 2W+Str, and -Int AC until end of your next turn
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Forget it! - Warlord 2</strong></span>
 </p>
 <p>
 Utility - Encounter - <i>Non-Provoking</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b> Ranged 5 </b> - targets an ally that can hear you and is adjacent to an enemy
+<b><i>Minor Action</i></b> - <b>Ranged 5</b> - targets an ally that can hear you and is adjacent to an enemy
+</p>
 <p>
 <b>Effect</b>: The target is no longer Marked, and Shifts 1 away from an adjacent enemy.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Incoming! 2</span></strong >
+<p>
+<span class="red large"><strong>Incoming! - Warlord 2</strong></span>
 </p>
 <p>
 Utility - Encounter
+</p>
 <p>
-<b><i>Prepared Reaction (Interrupt)</i></b> - <i> (Trigger: You and one or more allies are targeted by a close or area attack.)</i> - <b> No Range </b> - targets the targets of the triggering attack
+<b><i>Prepared Reaction (Interrupt)</i></b> - <i> (Trigger: You and one or more allies are targeted by a close or area attack.)</i> - <b>No Range</b> - targets the targets of the triggering attack
+</p>
 <p>
 <b>Effect</b>: Knocked Prone, and gain Resist against the triggering attack.
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Move It! 2</span></strong >
+<p>
+<span class="red large"><strong>Move It! - Warlord 2</strong></span>
 </p>
 <p>
 Utility - Encounter - <i>Non-Provoking</i>
 </p>
 <p>
-<b><i>Move Action</i></b> - <b> Ranged 5 </b> - targets an ally that can hear you
+<b><i>Move Action</i></b> - <b>Ranged 5</b> - targets an ally that can hear you
+</p>
 <p>
 <b>Effect</b>: The target stands up if prone. The target moves their speed.
 </p>
@@ -2619,104 +2747,69 @@ Expected Armor
 <b>Master Ritualist</b>: Gain Ritual Training or Summon Familiar as a bonus Adventuring Feat.<br>You learn an additional Heroic Ritual from each Ritual Training feat.<br>You learn an additional Paragon Ritual from each Paragon Ritual Training feat.<br>You learn an additional Epic Ritual from each Epic ritual Training feat.
 </p>
 </div>
-<div id="class-powers-6" class="section level4 newPage">
+<div id="class-powers-7" class="section level4 newPage">
 <h4><span class="header-section-number">6.8.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
-<p class="large">
-<strong><span class="green">Arcane Missiles 1</span></strong >
+<p>
+<span class="green large"><strong>Arcane Missiles - Wizard 1</strong></span>
 </p>
 <p>
 Attack - <i>Implement</i>
 </p>
-<b> Ranged 7 </b> - targets up to 3 enemies Int vs Ref
+<p>
+<b>Ranged 7</b> - targets up to 3 enemies Int vs Ref
 </p>
 <p>
 <b>Hit</b>: 1d10, and Push 1
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2d10&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2d10</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Frost Bolt 1</span></strong >
+<p>
+<span class="green large"><strong>Frost Bolt - Wizard 1</strong></span>
 </p>
 <p>
 Attack - <i>Implement</i>
 </p>
-<b> Ranged 10 </b> - Int vs For
+<p>
+<b>Ranged 10</b> - Int vs For
 </p>
 <p>
 <b>Hit</b>: 1d8+Int Cold, and Slowed (save ends)
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2d8+Int&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2d8+Int</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="green">Lesser Fireball 1</span></strong >
+<p>
+<span class="green large"><strong>Lesser Fireball - Wizard 1</strong></span>
 </p>
 <p>
 Attack - <i>Implement</i>
 </p>
-<b> Area 10 Burst 1 </b> - Int vs Ref
+<p>
+<b>Area 10 Burst 1</b> - Int vs Ref
 </p>
 <p>
 <b>Hit</b>: 1d8+Int Fire
 </p>
-<pre><code> &lt;p class=&quot;Power-Upgrade&quot;&gt;Level 21: Increase Hit damage to 2d8+Int&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2d8+Int</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Burning Hands 1</span></strong >
-</p>
 <p>
-Attack - Encounter - <i>Implement</i>
-</p>
-<b> Close Blast 5 </b> - Int vs Ref
-</p>
-<p>
-<b>Hit</b>: 2d10+Int Fire
-</p>
-<p>
-<b>Miss</b>: Half Damage
-</p>
-<pre><code>&lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 3d10+Int&lt;br&gt;Upgrade 23: Increase Hit damage to 4d10+Int&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Ice Beam 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Implement</i>
-</p>
-<b> Close Line 10 </b> - Int vs For
-</p>
-<p>
-<b>Hit</b>: 1d12 Cold, and Immobilized until your next turn.
-</p>
-<p>
-<b>Miss</b>: Slowed until your next turn.
-</p>
-<pre><code>&lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 2d12&lt;br&gt;Upgrade 23: Increase Hit damage to 3d12&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="red">Shock Sphere 1</span></strong >
-</p>
-<p>
-Attack - Encounter - <i>Implement</i>
-</p>
-<b> Area 10 Burst 2 </b> - Int vs Ref
-</p>
-<p>
-<b>Hit</b>: 2d6 Lightning, and Dazed until end of your next turn.
-</p>
-<p>
-<b>Miss</b>: Cannot use Reactions until end of your next turn.
-</p>
-<pre><code>&lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 13: Increase Hit damage to 4d6&lt;br&gt;Upgrade 23: Increase Hit damage to 6d6&lt;/p&gt;&lt;/div&gt;</code></pre>
-<div class="Power">
-<p class="large">
-<strong><span class="gray">Crushing Fist 1</span></strong >
+<span class="gray large"><strong>Crushing Fist - Wizard 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Implement</i>
 </p>
-<b> Ranged 20 </b> - Int vs Ref
+<p>
+<b>Ranged 20</b> - Int vs Ref
 </p>
 <p>
 <b>Hit</b>: 3d6, and Grabbed until end of next turn.
@@ -2724,18 +2817,19 @@ Attack - Daily - <i>Implement</i>
 <p>
 Sustain Minor: Repeat the attack
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: Increase Hit damage to 6d6,<br>Upgrade 25: Increase Hit damage to 9d6
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 6d6,<br>Upgrade 25: Increase Hit damage to 9d6</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Fireball 1</span></strong >
+<p>
+<span class="gray large"><strong>Fireball - Wizard 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Implement</i>
 </p>
-<b> Area 20 Burst 3 </b> - Int vs Ref
+<p>
+<b>Area 20 Burst 3</b> - Int vs Ref
 </p>
 <p>
 <b>Hit</b>: 3d8+Int Fire
@@ -2743,15 +2837,19 @@ Attack - Daily - <i>Implement</i>
 <p>
 <b>Miss</b>: Half Damage
 </p>
-<pre><code>&lt;p class=&quot;Power-Upgrade&quot;&gt;Upgrade 15: Increase Hit damage to 5d8+Int&lt;br&gt;Upgrade 25: Increase Hit damage to 7d8+Int&lt;/p&gt;&lt;/div&gt;</code></pre>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 5d8+Int<br>Upgrade 25: Increase Hit damage to 7d8+Int</span>
+</p>
+</div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Ice Storm 1</span></strong >
+<p>
+<span class="gray large"><strong>Ice Storm - Wizard 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Implement</i>
 </p>
-<b> Area 10 Burst 2 </b> - Int vs For
+<p>
+<b>Area 10 Burst 2</b> - Int vs For
 </p>
 <p>
 <b>Hit</b>: 2d6 Cold, and Prone
@@ -2765,44 +2863,110 @@ Attack - Daily - <i>Implement</i>
 <p>
 Sustain Minor: Int Cold to creatures in the zone. You can move the zone 1 square. Sustain the zone until end of your next turn.
 </p>
-<p class="Power-Upgrade">
-Upgrade 15: Increase Hit damage to 4d6<br>Upgrade 25: Increase Hit damage to 6d6
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 4d6<br>Upgrade 25: Increase Hit damage to 6d6</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="red">Arcane Shield 2</span></strong >
+<p>
+<span class="red large"><strong>Burning Hands - Wizard 1</strong></span>
 </p>
 <p>
-Utility - Encounter
+Attack - Encounter - <i>Implement</i>
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
+<b>Close Blast 5</b> - Int vs Ref
+</p>
 <p>
-<b>Effect</b>: Gain Superior Cover against the next attack that targets you this encounter.
+<b>Hit</b>: 2d10+Int Fire
+</p>
+<p>
+<b>Miss</b>: Half Damage
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3d10+Int<br>Upgrade 23: Increase Hit damage to 4d10+Int</span>
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Levitate 2</span></strong >
+<p>
+<span class="red large"><strong>Ice Beam - Wizard 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Implement</i>
+</p>
+<p>
+<b>Close Line 10</b> - Int vs For
+</p>
+<p>
+<b>Hit</b>: 1d12 Cold, and Immobilized until your next turn.
+</p>
+<p>
+<b>Miss</b>: Slowed until your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2d12<br>Upgrade 23: Increase Hit damage to 3d12</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Shock Sphere - Wizard 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Implement</i>
+</p>
+<p>
+<b>Area 10 Burst 2</b> - Int vs Ref
+</p>
+<p>
+<b>Hit</b>: 2d6 Lightning, and Dazed until end of your next turn.
+</p>
+<p>
+<b>Miss</b>: Cannot use Reactions until end of your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 4d6<br>Upgrade 23: Increase Hit damage to 6d6</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Levitate - Wizard 2</strong></span>
 </p>
 <p>
 Utility - Daily
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Personal </b> -
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
 <p>
 <b>Effect</b>: Until end of the encounter, gain Fly Speed 2 (Altitude 2).
 </p>
 </div>
 <div class="Power">
-<p class="large">
-<strong><span class="gray">Wall of Ice 2</span></strong >
+<p>
+<span class="gray large"><strong>Wall of Ice - Wizard 2</strong></span>
 </p>
 <p>
 Utility - Daily
+</p>
 <p>
-<b><i>Minor Action</i></b> - <b> Area 10 Wall 8 </b> -
+<b><i>Minor Action</i></b> - <b>Area 10 Wall 8</b> -
+</p>
 <p>
 <b>Effect</b>: Create a Zone of Very Difficult Terrain and Covering Terrain in the wall until the end of the encounter. You can dismiss the Zone as a Minor Action.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Arcane Shield - Wizard 2</strong></span>
+</p>
+<p>
+Utility - Encounter
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Gain Superior Cover against the next attack that targets you this encounter.
 </p>
 </div>
 </div>

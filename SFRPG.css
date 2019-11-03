@@ -31,8 +31,9 @@ body {
   column-count: 3;  
   -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
-  column-rule-style: none;  
-  width: 900px;
+  column-rule-style: none;
+  column-width: 400px;
+  /*width: 900px;*/
   /*width: 20cm;*/
 
 }
@@ -110,8 +111,8 @@ tr:nth-child(even) {background-color: #ffefbf;}
   font-family: Verdana;  
   font-size: 11px;  
   line-height: normal;  
-  /*width: 290px;  */
-  width: 6.5cm;
+  width: 240px;
+  /*width: 6.5cm;*/
   margin-bottom: 25px;
   display: inline-block;
 
