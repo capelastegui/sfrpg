@@ -399,7 +399,7 @@ get_htm_file <- function(str_htm) {
     "</style></head>\r\n<body>",
     str_htm,
     "</body></html>",
-    sep = "<br/>",
+    sep = "<br>",
     collapse = ""
   )
 }
