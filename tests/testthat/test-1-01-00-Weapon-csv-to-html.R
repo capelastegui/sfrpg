@@ -23,8 +23,10 @@ test_that("get_equip_tables works", {
                      "</body></html>",
                      sep="\r\n",
                      collapse="")
-  
-  print(df_tables_equip)
+  verify_output(
+    test_path('output','test_equip_output.txt'),
+    print(df_tables_equip)
+  )
   succeed()
   
   #writeLines(str_tables, file.path(dir_output, '1-01-equiptables.html'))

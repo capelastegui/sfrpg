@@ -329,9 +329,9 @@ get_l_class <- function ()
     #  tidyr::nest (.key = 'data_power'),
     df_power_clean,
     df_class_stat %>% dplyr::group_by(Class, Build) %>%
-      tidyr::nest (.key = 'data_stat'),
+      dplyr::group_nest (.key = 'data_stat'),
     df_class_feature %>% dplyr::group_by(Class, Build) %>%
-      tidyr::nest (.key = 'data_feature')
+      dplyr::group_nest (.key = 'data_feature')
   ) %>%
   purrr::reduce(dplyr::full_join, by = c('Class', 'Build')) %>%
   dplyr::mutate(
@@ -404,6 +404,17 @@ get_htm_file <- function(str_htm) {
   )
 }
 
+#' Write class data for a single class into an html file
+#'
+#' @param df_class 
+#' @param char_class 
+#' @param char_build 
+#' @param dir_output 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 write_class_file <- function(df_class, char_class, char_build, dir_output) {
   htm_file = get_class_build(
     df_class, char_class, char_build)$htm_class_section %>%
@@ -414,6 +425,15 @@ write_class_file <- function(df_class, char_class, char_build, dir_output) {
   writeLines(htm_file, path)
 }
 
+#' Write class data for all classes into an html file
+#'
+#' @param df_class 
+#' @param dir_output 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 write_class_section_file <- function(df_class, dir_output) {
   htm_file_full = df_class$htm_class_section %>%
     purrr::map_chr( get_htm_file) %>% paste

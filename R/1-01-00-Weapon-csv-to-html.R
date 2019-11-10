@@ -41,12 +41,14 @@ get_equip_tables <- function ()
   df_armorbyclass_str  <- get_table(df_armorbyclass, 'Armor_by_Class')
   
   df_implement_str  <- get_table(df_implement, 'Implements')
-  
-  df_result = dplyr::bind_rows(
-    df_weapons_str,
-    df_armor_str,
-    df_armorbyclass_str,
-    df_implement_str
+  # dplyr::bind_rows raises annoying warnings - better to suppress them
+  df_result = suppressWarnings(
+      dplyr::bind_rows(
+      df_weapons_str,
+      df_armor_str,
+      df_armorbyclass_str,
+      df_implement_str
+    )
   )
   df_result
 }

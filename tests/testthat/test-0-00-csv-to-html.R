@@ -68,7 +68,6 @@ test_that("build_table_apply works", {
     "<tr><td>hello</td></tr>\n",
     "<tr><td>world</td></tr>\n ",
     "</tbody>\r\n</table> \n")
-  print(str_result)
   expect_equal(str_result, str_expected)
   
   # Test 3 - skipHeader=TRUE

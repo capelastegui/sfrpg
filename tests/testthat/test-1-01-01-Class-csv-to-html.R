@@ -6,16 +6,26 @@ context("Convert data from .csv to html")
 test_that("get_l_class works", {
   df_class = get_l_class()
   
-  print(df_class)
-  
-  write_output <- function(class, build) {
-    write_class_file(df_class, class, build, dir_output)
+  verify_output(
+    test_path('output','test_class_output.txt'),
+    print(df_class)
+  )
+
+  test_class_output <- function(class,build){
+    htm_file = get_class_build(
+    df_class, class, build)$htm_class_section %>%
+    get_htm_file()
+
+    verify_output(
+      test_path('output',paste0('test_class_',class,'_',build,'.html')),
+      cat(htm_file)
+    )
   }
-  
-  #write_output('Fighter', 'Guardian')
-  #write_output('Rogue', 'Scoundrel')
-  #write_output('Wizard', 'Elementalist')
-  #write_output('Priest', 'Light')
+
+  test_class_output('Fighter', 'Guardian')
+  test_class_output('Rogue', 'Scoundrel')
+  test_class_output('Wizard', 'Elementalist')
+  test_class_output('Priest', 'Light')
 
   #write_class_section_file(df_class, dir_output)
   
