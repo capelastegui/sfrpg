@@ -97,17 +97,17 @@ build_table_apply <- function (df, df.names=names(df),
   if(!skipHeader){
     table_header<-purrr::map_chr(df.names, build_element, "<td>","</td>",skipEmpty=FALSE) %>%
       paste0(collapse='') %>% 
-      (function(x) {paste0("<tr>",x,"</tr>", "\n",collapse="")})
+      (function(x) {paste0("<tr>",x,"</tr>", "\r\n",collapse="")})
   }else{table_header <- ""}
   
   table_body<-df[df.names] %>% purrr::map(build_element, "<td>","</td>",skipEmpty=FALSE) %>%
     dplyr::bind_cols() %>% 
     purrr::transpose() %>%
     purrr::map_chr(paste, collapse='') %>%
-    (function(x) {paste0("<tr>",x,"</tr>", "\n",collapse="")}) %>% 
+    (function(x) {paste0("<tr>",x,"</tr>", "\r\n",collapse="")}) %>%
     (function (x) {paste0(table_header,x,collapse="\r\n")})
 
-  result<-paste(table_tag,"\r\n<tbody>" ,table_body,"</tbody>\r\n</table>", "\n",
+  result<-paste(table_tag,"\r\n<tbody>" ,table_body,"</tbody>\r\n</table>", "\r\n",
     collapse="")
   result
 }

@@ -10,9 +10,9 @@ get_equip_tables <- function ()
 {
   dir_base  = system.file('raw', "character_creation",
     package='sfrpg', mustWork=TRUE)
-  read_my_csv <- function(s) {
-    readr::read_delim(file.path(dir_base,paste0(s,".csv")),
-                      delim=",")}
+  # read_my_csv <- function(s) {
+  #   readr::read_delim(file.path(dir_base,paste0(s,".csv")),
+  #                     delim=",")}
   
   df_weapons <- read_my_csv("Weapons-raw")
   df_armor <- read_my_csv("Armor-raw") %>%

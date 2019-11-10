@@ -102,7 +102,11 @@ get_power_clean <- function(df_power_raw, df_power_tag)
     fillna_df %>%
     dplyr::mutate(
       usageColors = UsageLimit %>%
-        factor %>%  forcats::fct_recode(!!!l_color_map)) %>%
+        factor %>%
+        # Assign colors as factor levels
+        forcats::fct_recode(!!!l_color_map) %>%
+        # Reorder factor levels: green,red,gray
+        forcats::fct_relevel(c('green','red','gray'))) %>%
     dplyr::arrange(Class, isFeature != "Feature",
                    Type, usageColors, Level, Name)
 
@@ -292,6 +296,45 @@ get_class_stat_trans <- function(df_class_stat) {
   
 }
 
+#' Read class feature data from partial .csv tables
+#'
+#' @return
+#' @export
+#'
+#' @examples
+read_df_class_feature <- function(){
+   df_class_build <- read_my_csv('class_build')
+   df_class_features_map <- read_my_csv('class_features_map')
+   df_class_features <- read_my_csv('class_features')
+
+   df_features = df_class_build %>%
+    dplyr::inner_join(df_class_features_map) %>%
+    dplyr::inner_join(df_class_features) %>%
+    dplyr::select(-build_id, -feature_id)
+
+  df_features
+}
+
+#' #' Read class power data from partial .csv tables
+#'
+#' @return
+#' @export
+#'
+#' @examples
+read_df_class_power <- function() {
+  df_class_build <- read_my_csv('class_build')
+  df_powers_map <- read_my_csv('powers_map')
+  df_powers_raw <- read_my_csv('powers_raw')
+
+    df_powers = df_class_build %>%
+    dplyr::inner_join(df_powers_map) %>%
+    dplyr::inner_join(df_powers_raw) %>%
+    dplyr::select (-build_id,-power_id)
+
+  df_powers
+
+}
+
 #' Generate dataframe with html text for class rules
 #'
 #' @param dir_base
@@ -301,12 +344,25 @@ get_class_stat_trans <- function(df_class_stat) {
 #' @export
 #'
 #' @examples
-get_l_class <- function ()
+get_l_class <- function (
+  df_class_feature_raw = NULL,
+  df_class_power_raw = NULL
+
+)
 {
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
   
   df_class_stat = read_my_csv('Class-stats', delim = ',') %>%
     get_df_class_stat()
+
+  if (df_class_feature_raw %>% is.null) {
+    df_class_feature_raw = read_df_class_feature()
+  }
+
+    if (df_class_power_raw %>% is.null) {
+    df_class_power_raw = read_df_class_power()
+  }
+
   df_class_feature = read_my_csv('Class-features') %>%
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
@@ -314,10 +370,7 @@ get_l_class <- function ()
   df_feature_tag <- read_my_csv('Class-features-tags')
   df_power_tag <-  read_my_csv('Powers-tags')
   df_power_raw <-  read_my_csv('Powers-raw')
-  
-  #power_tag_pre <- df_power_tag[1,] %>% dplyr::select(-Class,-Build)
-  #power_tag_post <- df_power_tag[2,] %>% dplyr::select(-Class,-Build)
-  
+
   feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
   feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
 
@@ -325,8 +378,6 @@ get_l_class <- function ()
     get_power_clean(df_power_tag)
   
   df_class = list(
-    #df_power_raw  %>% dplyr::group_by(Class, Build) %>%
-    #  tidyr::nest (.key = 'data_power'),
     df_power_clean,
     df_class_stat %>% dplyr::group_by(Class, Build) %>%
       dplyr::group_nest (.key = 'data_stat'),
@@ -346,15 +397,11 @@ get_l_class <- function ()
       feature_tag_post,
       skipEmpty = TRUE
     ),
-    #htm_power = data_power %>% purrr::map_chr(apply_class_power_htm,
-    #                                          power_tag_pre, power_tag_post),
-    #htm_power_summary = data_power %>% purrr::map_chr(apply_class_power_summary),
     htm_class_section = get_class_section(
       Class,
       Build,
       htm_stat,
       htm_feature,
-      #htm_power_summary,
       htm_power
       )
     )

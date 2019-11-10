@@ -54,29 +54,29 @@ test_that("build_table_apply works", {
   str_result = build_table_apply(df_in)
   str_expected = paste0(
     "<table> \r\n",
-    "<tbody> <tr><td>x</td><td>y</td></tr>\n",
-    "<tr><td>hello</td><td>1</td></tr>\n",
-    "<tr><td>world</td><td>2</td></tr>\n ",
-    "</tbody>\r\n</table> \n")
+    "<tbody> <tr><td>x</td><td>y</td></tr>\r\n",
+    "<tr><td>hello</td><td>1</td></tr>\r\n",
+    "<tr><td>world</td><td>2</td></tr>\r\n ",
+    "</tbody>\r\n</table> \r\n")
   expect_equal(str_result, str_expected)
   
   # Test 2 - with df.names and tableClass
   str_result = build_table_apply(df_in, df.names='x', tableClass='my_class')
   str_expected = paste0(
     "<table class=\"my_class\"> \r\n",
-    "<tbody> <tr><td>x</td></tr>\n",
-    "<tr><td>hello</td></tr>\n",
-    "<tr><td>world</td></tr>\n ",
-    "</tbody>\r\n</table> \n")
+    "<tbody> <tr><td>x</td></tr>\r\n",
+    "<tr><td>hello</td></tr>\r\n",
+    "<tr><td>world</td></tr>\r\n ",
+    "</tbody>\r\n</table> \r\n")
   expect_equal(str_result, str_expected)
   
   # Test 3 - skipHeader=TRUE
   str_result = build_table_apply(df_in, skipHeader=TRUE)
   str_expected = paste0(
     "<table> \r\n",
-    "<tbody> <tr><td>hello</td><td>1</td></tr>\n",
-    "<tr><td>world</td><td>2</td></tr>\n ",
-    "</tbody>\r\n</table> \n")
+    "<tbody> <tr><td>hello</td><td>1</td></tr>\r\n",
+    "<tr><td>world</td><td>2</td></tr>\r\n ",
+    "</tbody>\r\n</table> \r\n")
   expect_equal(str_result, str_expected)
   
 })
