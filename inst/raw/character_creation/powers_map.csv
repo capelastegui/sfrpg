@@ -1,6 +1,9 @@
 build_id,power_id
 univ,univ_en_powatk
+univ,univ_en_mobatk
 univ,univ_en_empspl
+univ,univ_en_sldspl
+univ,univ_en_healpr
 univ,univ_da_offtrn
 univ,univ_da_deftrn
 ftr_guard,ftr_fe_defaur
