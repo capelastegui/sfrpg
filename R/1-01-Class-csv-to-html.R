@@ -315,6 +315,17 @@ read_df_class_feature <- function(){
   df_features
 }
 
+#' @export
+get_df_class_feature_from_sheet <- function(
+  l_feature_id, Class='sheet', Build='sheet'){
+  df_features  <- read_my_csv('class_features') %>%
+    filter(feature_id %in% l_feature_id) %>%
+    mutate(Class=Class, Build = Build)  %>%
+    select(-feature_id)
+
+  df_features
+}
+
 #' #' Read class power data from partial .csv tables
 #'
 #' @return
@@ -332,7 +343,29 @@ read_df_class_power <- function() {
     dplyr::select (-build_id,-power_id)
 
   df_powers
+}
 
+#' @export
+get_df_class_power_from_sheet <- function(
+l_power_id, Class='sheet', Build='sheet')
+{
+  df_power  <- read_my_csv('powers_raw') %>%
+    filter(power_id %in% l_power_id) %>%
+    mutate(Class=Class, Build = Build)  %>%
+    select(-power_id)
+
+  df_power
+}
+
+#' @export
+get_html_sheet <- function(l_feature_id, l_power_id) {
+  df_class_feature = get_df_class_feature_from_sheet(l_feature_id)
+  df_class_power = get_df_class_power_from_sheet(l_power_id)
+  df_class = get_l_class(df_class_feature, df_class_power)
+  htm_file = df_class %>% get_class_build('sheet','sheet') %>%
+    get_htm_file()
+
+  htm_file
 }
 
 #' Generate dataframe with html text for class rules
@@ -346,30 +379,26 @@ read_df_class_power <- function() {
 #' @examples
 get_l_class <- function (
   df_class_feature_raw = NULL,
-  df_class_power_raw = NULL
-
-)
-{
+  df_class_power_raw = NULL) {
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
   
   df_class_stat = read_my_csv('Class-stats', delim = ',') %>%
     get_df_class_stat()
 
-  if (df_class_feature_raw %>% is.null) {
+  if (df_class_feature_raw %>% is.null()) {
     df_class_feature_raw = read_df_class_feature()
   }
 
-    if (df_class_power_raw %>% is.null) {
-    df_class_power_raw = read_df_class_power()
+    if (df_class_power_raw %>% is.null()) {
+    df_power_raw = read_df_class_power()
   }
 
-  df_class_feature = read_my_csv('Class-features') %>%
+  df_class_feature = df_class_feature_raw %>%
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
   df_feature_tag <- read_my_csv('Class-features-tags')
   df_power_tag <-  read_my_csv('Powers-tags')
-  df_power_raw <-  read_my_csv('Powers-raw')
 
   feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
   feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
@@ -386,24 +415,24 @@ get_l_class <- function (
   ) %>%
   purrr::reduce(dplyr::full_join, by = c('Class', 'Build')) %>%
   dplyr::mutate(
-    htm_stat = data_stat %>%
-      purrr::map(~ .x %>% get_class_stat_trans) %>%
-      purrr::map_chr(
-        ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
-      ),
-    htm_feature = data_feature %>% purrr::map_chr(
-      build_element_apply,
-      feature_tag_pre,
-      feature_tag_post,
-      skipEmpty = TRUE
-    ),
-    htm_class_section = get_class_section(
-      Class,
-      Build,
-      htm_stat,
-      htm_feature,
-      htm_power
-      )
+        htm_stat = data_stat %>%
+          purrr::map(~ .x %>% get_class_stat_trans) %>%
+          purrr::map_chr(
+            ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
+            ),
+        htm_feature = data_feature %>% purrr::map_chr(
+            build_element_apply,
+            feature_tag_pre,
+            feature_tag_post,
+            skipEmpty = TRUE
+          ),
+        htm_class_section = get_class_section(
+          Class,
+          Build,
+          htm_stat,
+          htm_feature,
+          htm_power
+          )
     )
   
   df_class
