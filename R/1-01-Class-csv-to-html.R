@@ -90,7 +90,7 @@ add_p_action <- function(df_power) {
 #' @export
 #'
 #' @examples
-get_power_clean <- function(df_power_raw, df_power_tag)
+get_power_clean <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
 {
   l_color_map=c(green = "", red = "Encounter", gray = "Daily")
 
@@ -107,13 +107,13 @@ get_power_clean <- function(df_power_raw, df_power_tag)
         forcats::fct_recode(!!!l_color_map) %>%
         # Reorder factor levels: green,red,gray
         forcats::fct_relevel(c('green','red','gray'))) %>%
-    dplyr::arrange(Class, isFeature != "Feature",
+    dplyr::arrange(isFeature != "Feature",
                    Type, usageColors, Level, Name)
 
   build_cols <- setdiff(names(df_power),
     c("Summary", "Build", "usageColors"))
 
-  power_block <- df_power %>%
+  power_block_tmp <- df_power %>%
     build_element_apply(power_tag_pre, power_tag_post,
       build_cols, reduce=FALSE) %>%
     add_p_title(df_power$usageColors) %>%
@@ -121,13 +121,26 @@ get_power_clean <- function(df_power_raw, df_power_tag)
     add_p_action() %>%
     dplyr::select(p_title, p_type, p_action, EffectPre, Hit,
            Miss, EffectPost, Misc, SecondaryAttack, Upgrades) %>%
-    purrr::map_dfc(add_p_tags) %>%
+    purrr::map_dfc(add_p_tags)
+
+  if(character_sheet){
+    power_block_tmp <- power_block_tmp %>%  dplyr::select(-Upgrades)
+  }
+  power_block = power_block_tmp %>%
     collapse_cols('\r\n') %>%
     build_element('<div class="Power">','</div>')
 
-  df_power_clean <- df_power %>% 
+  if(character_sheet) {
+    df_power_clean_tmp <- data.frame(
+      Class='sheet', Build='sheet', power_block=power_block
+    )
+  } else {
+    df_power_clean_tmp <- df_power %>%
     dplyr::select(Class, Build) %>%
-    dplyr::mutate(power_block = power_block)  %>%
+    dplyr::mutate(power_block = power_block)
+  }
+
+  df_power_clean <- df_power_clean_tmp  %>%
     dplyr::group_by(Class, Build) %>%
     dplyr::summarise(htm_power=power_block %>%
       paste(collapse='\r\n')) %>%
@@ -296,6 +309,7 @@ get_class_stat_trans <- function(df_class_stat) {
   
 }
 
+
 #' Read class feature data from partial .csv tables
 #'
 #' @return
@@ -349,24 +363,21 @@ read_df_class_power <- function() {
 get_df_class_power_from_sheet <- function(
 l_power_id, Class='sheet', Build='sheet')
 {
-  df_power  <- read_my_csv('powers_raw') %>%
-    filter(power_id %in% l_power_id) %>%
-    mutate(Class=Class, Build = Build)  %>%
-    select(-power_id)
+  df_powers_raw  <- read_my_csv('powers_raw') %>%
+    filter(power_id %in% l_power_id)
 
-  df_power
+    df_class_build <- read_my_csv('class_build')
+    df_powers_map <- read_my_csv('powers_map')
+
+    df_powers = df_class_build %>%
+    dplyr::inner_join(df_powers_map) %>%
+    dplyr::inner_join(df_powers_raw) %>%
+    dplyr::select (-build_id,-power_id)
+
+  df_powers
 }
 
-#' @export
-get_html_sheet <- function(l_feature_id, l_power_id) {
-  df_class_feature = get_df_class_feature_from_sheet(l_feature_id)
-  df_class_power = get_df_class_power_from_sheet(l_power_id)
-  df_class = get_l_class(df_class_feature, df_class_power)
-  htm_file = df_class %>% get_class_build('sheet','sheet') %>%
-    get_htm_file()
-
-  htm_file
-}
+# TODO: option not to include df_class_stat
 
 #' Generate dataframe with html text for class rules
 #'
@@ -439,6 +450,59 @@ get_l_class <- function (
   
 }
 
+# TODO: option not to include df_class_stat
+
+#' Generate dataframe with html text for character sheet
+#'
+#' @param dir_base
+#'
+#' @return df_class table (Class, Build,
+#'         htm_stat,htm_feature,htm_power_summary,htm_power)
+#' @export
+#'
+#' @examples
+get_html_sheet <- function (l_feature_id, l_power_id,
+character_name='Character Sheet') {
+  usageOrder  <- c("", "At-Will", "Encounter", "Daily")
+
+  df_power_raw = get_df_class_power_from_sheet(l_power_id)
+
+  df_class_feature = get_df_class_feature_from_sheet(l_feature_id) %>%
+    gsub_colwise("\\r\\n", "<br>") %>%
+    purrr::map_dfc (tidyr::replace_na, '-')
+
+  df_feature_tag <- read_my_csv('Class-features-tags')
+  df_power_tag <-  read_my_csv('Powers-tags')
+
+  feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
+  feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
+
+  htm_power = (df_power_raw %>% get_power_clean(df_power_tag, character_sheet=TRUE))$htm_power
+
+  htm_feature = df_class_feature %>% select(Name, Description) %>%
+    build_element_apply(
+    feature_tag_pre,
+    feature_tag_post,
+    skipEmpty = TRUE
+  )
+
+  htm_sheet = paste(
+    "<p><h3>",
+    character_name,
+    "</h3></p>\r\n",
+    "<p><h3>Class features</h3></p>\r\n",
+    "<p>",
+    htm_feature,
+    "</p>\r\n",
+    "<p><h3>Class Powers</h3></p>\r\n",
+    "<p>",
+    htm_power,
+    "</p>\r\n",
+    sep = ""
+  )
+  htm_sheet
+}
+
 #' Extract data for a single class build from df_class
 #'
 #' @param df_class 
@@ -496,10 +560,19 @@ write_class_file <- function(df_class, char_class, char_build, dir_output) {
     df_class, char_class, char_build)$htm_class_section %>%
     get_htm_file()
   path = file.path(dir_output,
-    paste('1-01-class-',char_class,'-',char_build,'.html'))
+    paste0('1-01-class-',char_class,'-',char_build,'.html'))
   print(paste('Writing class file: ', char_class, char_build, 'to:', path))
   writeLines(htm_file, path)
 }
+
+write_html_sheet <- function(l_feature_id, l_power_id, dir_output, character_name) {
+  htm_file = get_html_sheet(l_feature_id, l_power_id, character_name) %>%
+      get_htm_file()
+    path = file.path(dir_output,
+      paste0('sheet_',character_name,'.html'))
+  writeLines(htm_file, path)
+}
+
 
 #' Write class data for all classes into an html file
 #'
