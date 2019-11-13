@@ -124,7 +124,10 @@ get_power_clean <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
     purrr::map_dfc(add_p_tags)
 
   if(character_sheet){
-    power_block_tmp <- power_block_tmp %>%  dplyr::select(-Upgrades)
+    power_block_tmp <- power_block_tmp %>%
+    dplyr::select(-Upgrades) %>%
+    # There may be duplicate entries for powers mapped to multiple builds
+    dplyr::distinct()
   }
   power_block = power_block_tmp %>%
     collapse_cols('\r\n') %>%
