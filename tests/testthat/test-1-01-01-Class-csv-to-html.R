@@ -9,7 +9,6 @@ test_that("read_df_class_feature works", {
     test_path('output','test_read_df_class_feature.txt'),
     print(df_class_feature)
   )
-  succeed()
 })
 
 test_that("read_df_class_power works", {
@@ -34,8 +33,7 @@ test_that("get_l_class works", {
       test_path('output',paste0('test_class_',class,'_',build,'.txt')),
       htm_file %>% print()
     )
-    writeLines(htm_file, test_path('output',paste0('test_class_',class,'_',build,'.html')) )
-    
+    htm_file %>% readr::write_file(test_path('output',paste0('test_class_',class,'_',build,'.html')))
   }
 
   test_class_output('Fighter', 'Guardian')

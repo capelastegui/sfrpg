@@ -1,0 +1,117 @@
+Level,Name,Size,Type,Movement,H,D,E,HPHi,HPMid,HPLow,Resistances,Str,Con,Dex,Wis,Cha,Int,RacePowerName,RacePower,RaceTraitName,RaceTrait,RaceSkills
+1,Kobold,Small,Humanoid,6,4,10,2,30,25,20,,-1,0,2,0,1,0,Shifty,Minor Action: Shift 1,Mob Attack, +1 Hit (max. +4)  for each ally adjacent to target.,"Trickery, Arcana"
+1,Goblin,Small,Humanoid,6,4,10,2,30,25,20,,0,0,2,0,-1,1,Get over There,Minor Action - Melee 1 (targets ally): Slide 1,Mob Defense, +2 Defenses while adjacent to a flanked enemy.,"Stealth, Finesse"
+1,Mud Dwarf,Small,Humanoid,5,4,10,2,30,25,20,,0,2,1,0,-1,0,Pathetic Plea,"Minor Action - Ranged 5 (safe, targets enemy hit this turn), H vs Will
+Hit: Choose an ally you can see. The target is Taunted by that ally until your next turn.",Stinky,Aura 1 - Enemies in aura take -1 hit.,"Trickery, Endurance"
+1,Zombie,Medium,"Humanoid, Undead",4,4,10,2,36,30,24,"Resist Psychic, Vulnerable Radiant",1,2,-1,-2,-2,-2,Grab (Recharge 4+),"Minor Action - Melee 1 (targets enemy hit this turn) - H vs Ref
+Hit: Grabbed.",Wall of Flesh,"-2 Defenses, Automatically killed on a Crit. 
+Extra HP (already included in stats)",Endurance
+1,Web Spider,Medium,Beast,"6, Climb 6",4,10,2,30,25,20,Resist Poison,0,0,0,0,-2,-2,Web (Recharge 5+),"Move Action: Move 1, create a web zone in Close Burst 1 until end of encounter. The zone is difficult terrain for non-spiders",Web Walker, +2 Hit vs enemies in Difficult Terrain,Nature
+1,Armadillo,Medium,Beast,6,4,10,2,30,25,20,,0,0,0,0,-2,-2,Armadillo Roll,Minor Action (only while Armor Up is active) - Melee 1 (targets enemy hit) - Effect: Push 2,Armor Up,"After being attacked, gain +4 Defenses, -2 Hit until end of next turn.",Nature
+2,Halfling,Small,Humanoid,6,4,11,2,33,27,22,,-1,0,2,0,1,0,"Dodge (Recharge 6+)
+",Minor Action (must have been hit since last turn) - Reroll the first hit against you before the end of your next turn.,Nimble,Resist (Opportunity Attacks),"Stealth, Diplomacy"
+2,Gnome,Small,"Humanoid, Fey",5,4,11,2,33,27,22,,-1,0,0,0,1,2,Minor Illusion (Recharge 6+),"Minor Action - Close Burst 5, square in burst
+Summon a medium Illusionary Soldier with 1 HP, no movement, and no attack.",Gnome Cautiousness,"-3 Initiative
+On Initiative roll, Invisible until end of first round or until attack.","Arcana, Concentration"
+2,Hobgoblin,Medium,Humanoid,6,4,11,2,33,27,22,,1,1,0,0,0,0,Close Formation,Minor Action - Melee 2 (targets ally) - Pull 1,Phalanx, +2 Defenses while adjacent to an ally,"Authority, Lore"
+2,Skeleton,Medium,"Humanoid, Undead",5,4,11,2,33,27,22,Vulnerable Radiant,1,0,2,0,-1,0,Reassemble,"Move Action (only while Prone) - Stand up, move half speed, and gain +2 Hit this turn.",Crumble,"When you are hit, Prone and gain Resist (all) until next turn.",Endurance
+2,Wolf,Medium,Beast,6,4,11,2,33,27,22,,0,0,0,1,0,-2,Knock Down,"Minor Action - Melee 1 (targets enemy hit this turn) - H vs For
+Hit: Prone",Feed on the Fallen, +2 Hit and Defenses while adjacent to a Prone enemy.,Perception
+3,Human,Medium,Humanoid,6,4,12,3,36,30,24,,0,0,0,0,1,1,"Action Point (Exhausted, Recharge 6+)",Free Action - You take an extra Standard Action.,Resourceful, +1 to Recharge rolls while bloodied,"Concentration, Diplomacy"
+3,Orc,Medium,Humanoid,6,4,12,3,36,30,24,,2,1,0,0,-1,0,Waagh!,"Minor Action (only while Bloodied) - Melee 1 (targets enemy hit this turn) - H vs Will
+Hit: D Shield Points",Battle Rage, +2 Hit and -2 Defenses while Bloodied,"Authority, Endurance"
+3,Deep One,Medium,"Humanoid, Aquatic, Aberrant","6
+Swim 6",4,12,3,36,30,24,"Resist Radiant
+Vulnerable Psychic",0,1,2,0,-1,0,Gurgle (Recharge 6+),"Minor Action - Close Burst 5, targets an enemy hit this turn, H vs Will
+Hit: Dazed until end of next turn.","Slippery
+","When hit by enemy, enemy must push 1 you.
+","Finesse, Nature"
+3,Poison Spider,Medium,Beast,"6, Climb 6",4,12,3,36,30,24,Resist Poison,0,1,2,0,-1,0,"Spider Poison (Recharge 3+, poison)","Minor Action - Ranged 5 (safe, targets enemy hit this turn), H vs For
+Hit: Slow and ongoing E Poison damage (save ends)",Poison Feeder, +2 Hit vs enemies under a Poison effect. ,"Finesse, Nature"
+3,Ghost,Medium,"Humanoid, Undead","6, Phasing 1",4,12,3,30,25,20,,0,1,2,0,-1,0,Wail,"Move Action - Close Burst 3 - H vs Will
+Hit: Dazed until end of next turn",Ethereal,"Resist (Attacks without Advantage)
+Low HP (already included in stats)","Finesse, Nature"
+4,Gnoll,,Humanoid,6,4,13,3,39,32,26,,2,0,1,0,0,-1,Feed (Recharge 5+),"Minor Action - Melee, creature hit this turn, H+2 vs Ref
+Hit: Gain D THP.",Mad Dog," +E damage against Taunting enemies
+When hit by enemy, Taunted by that enemy until end of next turn.","Authority, Athletics"
+4,Elf,Medium,"Humanoid, Fey",7,4,13,3,39,32,26,Vulnerable Poison,0,-1,2,1,0,0,Precision (Recharge 6+),"Minor Action (only if missed an enemy this turn): On your next turn, reroll your first missed attack roll. ",Wild Step,"Ignore Difficult Terrain.
+When Slowed or Immobilized, save to downgrade.","Nature, Perception"
+4,Dwarf,,Humanoid,,4,13,3,39,32,26,Resist Poison,0,2,-1,1,0,0,"Defensive Stance (Exhausted, Recharge 4+)",Move Action: +4 Defenses until next turn.,Stand Firm,"Reduce Forced Movement by 1.
+When knocked prone, save to avoid.","Endurance, Lore"
+4,Lizardfolk,Medium,Humanoid,5,4,13,3,39,32,26,Vulnerable Cold,0,2,1,0,-1,0,Poisoned Strike (Recharge 6+),"Minor Action - Close Burst 10 - targets an enemy hit this turn, H vs For
+Hit: Ongoing D poison and slowed (save ends both)",Lizard Metabolism," -2 hit with Opportunity Attacks
+Regeneration (E).","Nature, Endurance"
+4,Ghoul,,Humanoid,,4,13,3,39,32,26,Vulnerable Radiant,0,1,2,0,-1,0,Paralyzing Touch (Recharge 3+),"Minor Action - Melee, creature hit this turn, H vs For
+Hit: Slowed (save ends) or, if Slowed, Immobilized (save ends).",Prey on the Weak,Combat Advantage vs Slowed or Immobilized creatures.,Perception
+5,Doppelganger,,Humanoid,,4,14,3,42,35,28,Vulnerable Psychic,-1,0,0,1,2,0,Copycat (Recharge 3+),"Minor Action - Melee, creature hit this turn, H vs Will
+Hit: Until you attack, allies of the target can't attack you until they pass a Hard Insight check.",Role Swap,"When hitting adjacent enemy with Advantage, you may slide 2 you and the enemy to switch spaces.","Perception, Trickery"
+5,Wildling,Medium,"Humanoid, Fey",,4,14,3,42,35,28,Vulnerable Poison,0,0,2,1,-1,0,Rampage (Recharge 4+),"Special: Must have hit an enemy this turn.
+Minor Action - Melee, targets enemy not hit this turn, H vs Ref
+Hit: F",Rage,"When Bloodied, +2 hit and -2 defenses.","Nature, Endurance"
+5,Ogre,Large,"Humanoid, Giant",6,4,14,3,42,35,28,,2,1,0,0,0,-1,Mighty Blow,"Minor Action: Melee 2, target an enemy hit this turn, H vs For
+Hit: Push 3.",Thick Skull,"-1 Crit Range.
+-2 Crit Range to enemy attacks.","Athletics, Endurance"
+5,Darkling,,"Humanoid, Shadow",,4,14,3,42,35,28,"Resist Necrotic, Vulnerable Radiant",0,1,2,0,-1,0,Fade Away (Encounter),Reaction (becomes Bloodied) - Invisible until end of the attacker's next turn.,Evasion,"-4 hit with Opportunity Attacks
++4 to defenses vs Opportunity Attacks","Stealth, Trickery"
+5,Pixie,Tiny,"Humanoid, Fey","6
+Fly 6 (H1)",4,14,3,42,35,28,Vulnerable Poison,-1,0,1,0,2,0,Eyebite (Recharge 3+),"Minor Action - Ranged 10, H vs Will
+Hit: You are Invisible to target until end of next turn.",Wee Fighter,"-1 hit.
++1 defenses.","Arcana, Trickery"
+5,Vampire Spawn,,"Humanoid, Undead",,4,14,3,42,35,28,Vulnerable Radiant,0,1,2,-1,0,0,Grab,"Minor Action - Melee, target enemy hit this turn, H vs Ref
+Hit: Grabbed.",Blood Thirst,"After damaging an enemy, if it is bloodied, gain F Shield Points","Authority, Athletics"
+6,Demonfolk,,"Humanoid, Demon",,4,15,3,45,37,30,Resist Fire,0,0,0,-1,2,1,Fiery Vengeance (Recharge 5+),"Reaction (are hit) - Close Burst 5, targets triggering enemy, H+4 vs Ref
+Hit: D/2 Fire.",Demonic Ferocity, +1 hit while Bloodied.,"Arcana, Authority"
+6,Dragonfolk,,"Humanoid, Dragon",,4,15,3,45,37,30,,2,0,-1,0,1,0,Dragon Breath (Recharge 6+),"Minor Action - Close Burst 3, 5 vs Ref
+Hit: D/2 Fire.",Draconic Courage, +1 to defenses while Bloodied.,"Lore, Authority"
+6,Shadowfolk,,"Humanoid, Shadow",,4,15,3,45,37,30,"Resist Necrotic, Vulnerable Radiant",0,-1,2,0,0,1,Vanish (Recharge 5+),Move Action - Insubstantial until end of next turn.,Born in Shadow," +1 defenses when in Concealment, Total Concealment
++1 hit vs enemies with Concealment, Total Concealment","Stealth, Perception"
+7,Dark Dwarf,,Humanoid,,4,16,4,48,40,32,Resist Poison,1,2,-1,0,0,0,Fire Shield,Move Action (only while Bloodied) - Enemies hitting you take F Fire damage.,Stand Firm,Reduce Forced Movement by 1.,"Endurance, Lore"
+7,Satyr,,"Humanoid, Fey",,4,16,4,48,40,32,Vulnerable Poison,0,0,1,-1,2,0,Luring Song,"Minor Action - Close Burst 10, H vs Will
+Hit: Pull 1.",Aura of Attraction,Aura 1 - Exiting the aura costs 1 extra movement for enemies.,"Nature, Trickery"
+7,Minotaur,,Humanoid,,4,16,4,48,40,32,Vulnerable Psychic,2,1,0,0,-1,0,Gore,"Charge with +1 hit. On hit, push 1.",Blood Craze,"-1 hit vs non-Bloodied enemies.
++2 hit vs Bloodied enemies.","Athletics, Lore"
+7,Black Lizardfolk,,Humanoid,,4,16,4,48,40,32,Vulnerable Cold,1,2,0,0,0,-1,Devour (Recharge 4+),"Minor Action - Melee, target enemy hit this turn, H-2 vs Ref
+Hit: F, and Grabbed.",Lizard Metabolism,"-3 hit with Opportunity Attacks
+Regeneration +E.","Endurance, Nature"
+8,Golemfolk,,"Humanoid, Construct",,4,17,4,51,42,34,"Resist Psychic, Vulnerable Acid",1,2,-1,0,0,0,Withstand (Recharge 6+),Minor Action (only while Bloodied) - Resist (all) until end of next turn.,Ward, +3 to saves.,"Endurance, Arcana"
+8,Dryad,,"Humanoid, Plant, Fey",,4,17,4,51,42,34,"Vulnerable Fire, Poison",-1,1,0,0,2,0,Charming Song,"Minor Action - Close Burst 10, H vs Will
+Hit: -2 hit until end of next turn.",Barkskin, Resist All (missed attacks),"Arcana, Nature"
+8,Black Orc,,Humanoid,,4,17,4,51,42,34,,2,1,0,0,-1,0,Power Attack,"Minor Action - On next attack, -4 hit and +5 damage.",Fury, +F Miss Damage while Bloodied,"Authority, Endurance"
+9,Snakefolk,,Humanoid,,4,18,4,54,45,36,Resist Poison,0,0,2,0,-1,1,Poison Spit (Recharge 3+),"Minor Action Attack - Close Burst 5, creature hit this turn, H vs For.
+Hit: The target is Slowed (save ends)",Master Poisoner, +F damage vs Slowed enemies.,"Trickery, Concentration"
+9,Troll,,"Humanoid, Giant",,4,18,4,54,45,36,"Vulnerable Fire, Acid",1,2,0,-2,-2,-2,Savage Blow (Recharge 5+),"Minor Action - Melee, target enemy hit this turn, H vs Ar.
+Hit: D/2.",Troll Regeneration," Regeneration +F
+Vulnerable (Fire, Acid)
+Damage Trigger (Fire, Acid): Can't regenerate next turn.","Athletics, Endurance"
+9,High Elf,,"Humanoid, Fey",,4,18,4,54,45,36,"Vulnerable Poison
+Resist Psychic",0,-1,1,0,0,2,Glamour (Recharge 5+),"Minor Action - Ranged 5 (safe, target an enemy you haven't attacked this turn) - H vs Will
+Charmed until end of next turn (can t attack unless taunted, ends if you attack them)",Irresistible Beauty,Enemies gain -2 to hit you unless you have attacked them your last turn.,"Arcana, Lore"
+10,Oni,,"Humanoid, Giant","6
+Fly 6 (H2)",4,19,4,57,47,38,,1,0,0,-1,0,2,Mighty Blow,"Minor Action: Melee 2, target an enemy hit this turn, H vs For
+Hit: Push 3.",Shroud of Shadows.," -1 Hit
+On Initiative roll, Invisible until end of first round or until attack.","Authority, Arcana"
+10,Vampire  ,,"Humanoid, Undead",,4,19,4,57,47,38,Vulnerable Radiant,0,0,1,-1,2,0,"Dominating Gaze (Exhausted, Recharge 5+)","Close Burst 5, targets enemy in burst, H vs Will.
+Hit: Dominated (save ends)",Blood Thirst,"After damaging an enemy, if it is bloodied, gain F Shield Points","Authority, Lore"
+11,Winged Kobold,,"Humanoid, Dragon","6
+Fly 6 (H2)",4,20,5,60,50,40,,0,0,2,0,1,-1,Shifty,Minor Action: Shift 1,Reborn in Flame,"-1 hit.
++3 to all defenses vs Burst, Blast.","Trickery, Arcana"
+11,Treefolk,,"Plant, Fey",,4,20,5,60,50,40,"Resist Radiant, Vulnerable Fire, Vulnerable Poison",1,2,-1,0,0,0,,,,,"Nature, Lore"
+11,Dark Elf,,"Humanoid, Fey",,4,20,5,60,50,40,Vulnerable Poison,0,0,1,-1,2,0,Precision (Recharge 6+),"Reaction, Interrupt (misses an attack)
+Reroll the attack.",Poisoned Weapons,"On a hit with Combat Advantage, target is Slowed until end of next turn.","Perception, Arcana"
+12,Hill Giant,,"Humanoid, Giant",,,,0,,,,,2,1,,,,-1,,,,,
+13,Rakshasa,,"Humanoid, Astral",,,,0,,,,,,,,,,,,,,,
+13,Cold Salamander,,"Humanoid, Elemental",,,,0,,,,"Resist Cold, Vulnerable Fire",,,,,,,,,,,
+14,Cyclops,,"Humanoid, Giant",,,,0,,,,Resist Radiant,,,,,,,,,,,
+14,War Troll,,"Humanoid, Giant",,,,0,,,,"Vulnerable Fire, Acid",,,,,,,,,,,
+16,Frost Giant,,"Humanoid, Giant",,,,0,,,,"Resist Cold, Vulnerable Fire",,,,,,,,,,,
+16,Vampire Lord,,"Humanoid, Undead","6
+Fly 6 (H2)",,,0,,,,Vulnerable Radiant,,,,,,,Dominating Gaze (Recharge 6+),"Close Burst 5, targets enemy in burst, H vs Will.
+Hit: Dominated (save ends)",Blood Feast,"Aura 3 - While there is a Bloodied enemy in the aura, you and allies in the aura gain Regeneration F",
+17,Ancient Treefolk,,"Plant, Fey",,,,0,,,,"Resist Radiant, Vulnerable Fire, Vulnerable Poison",,,,,,,,,,,
+17,Flame Salamander,,"Humanoid, Elemental",,,,0,,,,"Resist Fire, Vulnerable Cold",,,,,,,,,,,
+20,Fire Giant,,"Humanoid, Giant, Elemental",,,,0,,,,"Resist Fire, Vulnerable Cold",,,,,,,,,,,
+22,Earth Titan,,"Humanoid, Giant, Elemental",,,,0,,,,,,,,,,,,,,,
+23,Angel,,"Humanoid, Astral",,,,0,,,,"Resist Radiant, Vulnerable Necrotic",,,,,,,,,,,
+26,Ice Titan,,"Humanoid, Giant, Elemental",,,,0,,,,"Resist Fire, Vulnerable Cold",,,,,,,,,,,
+28,Battle Angel,,"Humanoid, Astral",,,,0,,,,"Resist Radiant, Vulnerable Necrotic",,,,,,,,,,,
+30,Magma Titan,,"Humanoid, Giant, Elemental",,,,0,,,,"Resist Fire, Vulnerable Cold",,,,,,,,,,,

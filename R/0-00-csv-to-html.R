@@ -1,3 +1,25 @@
+#' Read and clean csv files
+#'
+#' @param s
+#' @param delim
+#'
+#' @return
+#' @export
+#'
+#' @examples
+read_my_csv <- function(s, delim = ',', folder='character_creation') {
+  dir_base  = system.file('raw', folder, package='sfrpg', mustWork=TRUE)
+
+  str_regex = "\r[^\n]" # new lines with \r but not \r\n - to replace w \r\n
+  readr::read_delim(
+    file.path(dir_base, paste0(s, ".csv")),
+    delim = delim,
+    col_types = readr::cols(.default = "c")
+  )  %>% dplyr::mutate_if (is.character,
+                           ~stringr::str_replace_all(., str_regex, "\r\n"))
+}
+
+
 #' Append tags before and after elements in a string array
 #'
 #' Typically used to convert raw data into html elements
@@ -52,6 +74,11 @@ build_element_apply <- function (df,pre,post,
   pre <- pre %>% fillna_df()
   post <- post %>% fillna_df()
 
+  if (!'Body' %in% (pre %>% colnames())) {
+    pre <- pre %>% mutate(Body='')
+    post <- post %>% mutate(Body='')
+  }
+
   df_tmp = df.names %>%
     purrr::map_dfc(~build_element(df[[.]], pre[[.]], post[[.]], skipEmpty))
 
@@ -64,7 +91,9 @@ build_element_apply <- function (df,pre,post,
     purrr::transpose() %>%
     purrr::map(paste0, collapse=collapse) %>%
     purrr::map_chr(~paste0(pre$Body, ., post$Body, collapse= "\r\n"))  %>%
-    purrr::reduce(paste ,sep="\r\n", .init='')
+    purrr::reduce(paste ,
+    sep="\r\n",
+    .init='')
   str_result
 }
 
@@ -110,6 +139,36 @@ build_table_apply <- function (df, df.names=names(df),
   result<-paste(table_tag,"\r\n<tbody>" ,table_body,"</tbody>\r\n</table>", "\r\n",
     collapse="")
   result
+}
+
+
+#' Add html headers, css data to html string to use in standalone document
+#'
+#' @param htm_str
+#'
+#' @return
+#' @export
+#'
+#' @examples
+get_htm_file <- function(str_htm, css=NULL) {
+
+  if (css %>% is.null()) {
+    file_css <- system.file("SFRPG.css", package='sfrpg',
+     mustWork=TRUE)
+     css <- readChar(file_css, file.info(file_css)$size)
+  }
+
+
+  paste0(
+    "<!DOCTYPE html>\r\n",
+    "<html>\r\n<head>",
+    "\r\n<title>Test tables</title>\r\n<style type=\"text/css\">\r\n",
+    css,
+    "\r\n</style></head>\r\n<body>\r\n",
+    str_htm,
+    "\r\n</body></html>",
+    collapse = ""
+  )
 }
 
 

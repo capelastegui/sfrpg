@@ -1,25 +1,3 @@
-#' Read and clean csv files
-#'
-#' @param s 
-#' @param delim 
-#'
-#' @return
-#' @export
-#'
-#' @examples
-read_my_csv <- function(s, delim = ',') {
-  dir_base  = system.file('raw', "character_creation", package='sfrpg',
-                          mustWork=TRUE)
-  
-  str_regex = "\r[^\n]" # new lines with \r but not \r\n - to replace w \r\n
-  readr::read_delim(
-    file.path(dir_base, paste0(s, ".csv")),
-    delim = delim,
-    col_types = readr::cols(.default = "c")
-  )  %>% dplyr::mutate_if (is.character,
-                           ~stringr::str_replace_all(., str_regex, "\r\n"))
-}
-
 # Convenience function to add <p> tags to an html paragraph
 add_p_tags <- function(col) {col %>% build_element('<p>','</p>')}
 
@@ -521,31 +499,7 @@ get_class_build <- function(df_class, char_class, char_build) {
 }
 
 
-#' Add html headers, css data to html string to use in standalone document
-#'
-#' @param htm_str 
-#'
-#' @return
-#' @export
-#'
-#' @examples
-get_htm_file <- function(str_htm) {
 
-  file_css <- system.file("SFRPG.css", package='sfrpg',
-     mustWork=TRUE)
-  css <- readChar(file_css, file.info(file_css)$size)
-  
-  paste(
-    "<html>\r\n<head>",
-    "\r\n<title>Test tables</title>\r\n<style type=\"text/css\">",
-    css,
-    "</style></head>\r\n<body>",
-    str_htm,
-    "</body></html>",
-    sep = "<br>",
-    collapse = ""
-  )
-}
 
 #' Write class data for a single class into an html file
 #'
