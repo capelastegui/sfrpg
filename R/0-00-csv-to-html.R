@@ -75,8 +75,8 @@ build_element_apply <- function (df,pre,post,
   post <- post %>% fillna_df()
 
   if (!'Body' %in% (pre %>% colnames())) {
-    pre <- pre %>% mutate(Body='')
-    post <- post %>% mutate(Body='')
+    pre <- pre %>% dplyr::mutate(Body='')
+    post <- post %>% dplyr::mutate(Body='')
   }
 
   df_tmp = df.names %>%

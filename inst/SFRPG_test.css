@@ -31,32 +31,33 @@ body {
   column-count: 3;  
   -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
-  column-rule-style: none;  
-  width: 900px;
+  column-rule-style: none;
+  column-width: 400px;
+  /*width: 900px;*/
   /*width: 20cm;*/
 
 }
 /* Table formats*/
 
 table {
-  font-size: 11px;  
-  font-family: Verdana;  
-  padding-top: 0px;  
-  padding-right: 0px;  
-  padding-bottom: 0px;  
-  padding-left: 0px;  
-  color: #663300;  
+  font-size: 11px;
+  font-family: Verdana;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 0px;
+  color: #663300;
   background-color: #ffcc99;
   margin-bottom: 30px;
   border-collapse: separate;
   border-spacing: 2px;
     page-break-inside: avoid;
-    -webkit-column-break-inside: avoid; 
-          page-break-inside: avoid; 
+    -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
                break-inside: avoid;
   }
-  
-tr:nth-child(even) {background-color: #ffefbf;} 
+
+tr:nth-child(even) {background-color: #ffefbf;}
 
 .wide , .Feat-table table, .Power-table {width: 20cm;}
 
@@ -65,20 +66,20 @@ tr:nth-child(even) {background-color: #ffefbf;}
 .narrow, .Class-table {width: 12cm;}
 
 .medium-width, .General-table {width: 16cm;}
-      
 
 
 
 
- .Feature {  
-  font-family: Verdana;  
-  font-size: 12px;  
-  width: 20cm; 
-  line-height: normal;  
-   margin-bottom: 5px;  
+
+ .Feature {
+  font-family: Verdana;
+  font-size: 12px;
+  width: 20cm;
+  line-height: normal;
+   margin-bottom: 5px;
   page-break-inside: avoid;
-    -webkit-column-break-inside: avoid; 
-          page-break-inside: avoid; 
+    -webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
                break-inside: avoid;
 }
 
@@ -86,68 +87,241 @@ tr:nth-child(even) {background-color: #ffefbf;}
 
 /* Color classes */
 .green {color:green}
-      
+
 .gray {color:Gray}
 
 .darkgray {color:DimGray}
-  
+
 .red {color:darkred}
 
-.blue{color: MediumBlue;} 
+.blue{color: MediumBlue;}
 
-.darkblue{color: DarkBlue;} 
+.darkblue{color: DarkBlue;}
 
 /* Font sizes*/
 .large {font-size: 14px;}
- 
+
  .huge {font-size: 18px;}
- 
- 
+
+
 
 /* Power format */
-  
- .Power {  
-  font-family: Verdana;  
-  font-size: 11px;  
-  line-height: normal;  
-  /*width: 290px;  */
-  width: 6.5cm;
+
+ .Power {
+  font-family: Verdana;
+  font-size: 11px;
+  line-height: normal;
+  width: 240px;
+  /*width: 6.5cm;*/
   margin-bottom: 25px;
   display: inline-block;
 
 }
-  
-.Power  p {  
-  margin-top: 0px;  
+
+.Power  p {
+  margin-top: 0px;
   margin-bottom: 3px;
 }
 
-.Power-Upgrade {  
-  font-style: italic;  
+.Power-Upgrade {
+  font-style: italic;
   color:gray
 }
 
-.compatibility {  
-  color: DarkGoldenrod;  
+.compatibility {
+  color: DarkGoldenrod;
   background-color: BlanchedAlmond;
         border: 1px solid DarkGoldenrod;
 		 margin: 10px;
 		 display: inline-block;
 }
 
-.tip {  
-  color: darkblue;  
+.tip {
+  color: darkblue;
   background-color: #DDDDFF;
   border: 1px solid darkblue;
   margin: 10px;
   display: inline-block;
 }
 
-.design {  
-  color: #B20000; 
+.design {
+  color: #B20000;
   /*background-color: #ffcccc;*/
   background-color: #ffdddd;
         border: 1px solid darkred;
 		margin: 10px;
 		display: inline-block;
+}
+
+/* Monster format */
+
+table.monster, table.monster td, table.monster th {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-color: #003300;
+  text-align: center;
+  background-color: #dbffdb;
+  font-family: Verdana;
+  font-size: 9px;
+  color: Black;
+  margin-bottom: 0px;
+}
+
+table.monster td.title {
+  font-weight: bold;
+  background-color: #003300;
+  color: white;
+
+}
+
+table.monster td.subtitle {
+  background-color: #73c173;
+  font-weight: bold;
+height: 12px;
+}
+
+
+table.monster td.attackText {
+  text-align: left;
+  vertical-align: 0px;
+}
+
+
+table.monster td.large {
+  font-size: 14px;
+ }
+
+table.monster td.huge {
+  font-size: 18px;
+}
+
+
+div.monsterList {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -moz-column-rule-style: none;
+  -webkit-column-rule-style: none;
+  column-rule-style: none;
+  column-width: 300px;
+  /*width: 900px;*/
+  /*width: 20cm;*/
+  min-height: 400px;
+
+}
+
+div.monsterClass, div.monsterRace {
+  font-family: Verdana;
+  font-size: 9px;
+  width: 280px;
+  height: 305px;
+
+  position: relative;
+  background-color: #dbffdb;
+  margin-bottom: 30px;
+  /* Avoids breaking table across columns*/
+    display: inline-block;
+   /* width: 100%;*/
+
+}
+
+table.fullwidth {
+width: 277px;
+    float: left;
+}
+
+table.namewidth {
+width: 230px;
+  left: 47px;
+}
+
+table.monsterLevel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+}
+
+table.monsterName {
+  position: absolute;
+  top: 0px;
+
+}
+
+
+table.monsterMov {
+  position: absolute;
+  top: 50px;
+  left: 2px;
+  width: 100px;
+  height: 36px;
+}
+
+table.tableMonsterAttack {
+  position: absolute;
+  left: 105px;
+  top: 40px;
+  width: 99px;
+}
+
+
+table.tableMonsterHP {
+  position: absolute;
+  top: 40px;
+  left: 207px;
+  width: 70px;
+}
+
+table.monsterResist {
+  position: absolute;
+  top: 89px;
+  left: 2px;
+  width: 100px;
+  height: 46px;
+}
+
+table.monsterAbilities {
+  position: absolute;
+  top: 89px;
+  left: 105px;
+  width: 172px;
+}
+
+div .space1
+{
+width: 275px;
+height: 117px;
+    float: left;
+}
+
+div .space2
+{
+width: 275px;
+height: 28px;
+    float: left;
+}
+
+
+table.tableMonsterHP2 {
+
+  position: absolute;
+  top: 40px;
+  width: 57px;
+  height: 44px;
+}
+
+table.monsterDef {
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  width: 145px;
+
+}
+
+table.monsterMisc {
+  position: absolute;
+  left: 208px;
+  top: 40px;
+  width: 69px;
+  height: 46px;
 }

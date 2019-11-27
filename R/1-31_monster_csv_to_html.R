@@ -1,7 +1,24 @@
+#' Title
+#'
+#' @param s 
+#' @param delim 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 read_csv_monster <- function(s, delim=',') {
     read_my_csv(s, delim, 'monsters')
 }
 
+#' Title
+#'
+#' @param df_monster_race 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_htm_monster_race <- function(df_monster_race=NULL){
 
   if (df_monster_race %>% is.null()) {
@@ -16,6 +33,14 @@ get_htm_monster_race <- function(df_monster_race=NULL){
 }
 
 
+#' Title
+#'
+#' @param df_monster_class 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 get_htm_monster_class <- function(df_monster_class=NULL){
 
       if (df_monster_class %>% is.null()) {
@@ -29,19 +54,42 @@ get_htm_monster_class <- function(df_monster_class=NULL){
                       df.names=names(df_monster_class))
 }
 
+#' Title
+#'
+#' @param htm_monster 
+#'
+#' @return
+#' @export
+#'
+#' @examples
+get_monster_list_htm <- function(htm_monster){
+    paste0('<div class="monsterList">',htm_monster,'</div>')
+}
 
+
+#' Title
+#'
+#' @param htm_monster 
+#' @param dir_output 
+#' @param file_name 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 write_file_htm_monster <- function(htm_monster, dir_output, file_name){
-    file_css <- system.file("SFRPG-monsters.css", package='sfrpg',
+    file_css <- system.file("SFRPG.css", package='sfrpg',
         mustWork=TRUE)
     css <- readChar(file_css, file.info(file_css)$size)
 
     htm_full <- paste("<!DOCTYPE html>",
-    "<html>\r\n<head>\r\n<title>Monster stats</title>\r\n<style type=\"text/css\">",
-                      css,
-                      "</style></head>\r\n<body>",
-                      monster_htm,
-                      "</body></html>",
-                      sep="\r\n",
-                      collapse="<br>")
+        "<html>\r\n<head>\r\n<title>Monster stats</title>",
+        "\r\n<style type=\"text/css\">",
+        css,
+        "</style></head>\r\n<body>",
+        monster_htm %>% get_monster_list_htm(),
+        "</body></html>",
+        sep="\r\n",
+        collapse="<br>")
     writeChar(htm_full, file.path(dir_output, file_name))
 }

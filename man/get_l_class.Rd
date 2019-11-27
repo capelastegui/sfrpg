@@ -4,7 +4,7 @@
 \alias{get_l_class}
 \title{Generate dataframe with html text for class rules}
 \usage{
-get_l_class()
+get_l_class(df_class_feature_raw = NULL, df_class_power_raw = NULL)
 }
 \arguments{
 \item{dir_base}{}

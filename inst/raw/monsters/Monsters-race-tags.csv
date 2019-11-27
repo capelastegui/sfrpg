@@ -1,144 +1,137 @@
-Level;Name;Size;Type;Movement;H;D;F;HPHi;HPMid;HPLow;Resistances;Str;Con;Dex;Wis;Cha;Int;RacePowerName;RacePower;RaceTraitName;RaceTrait;RaceSkills
+Level;Name;Size;Type;Movement;Def;H;D;E;HPHi;HPMid;HPLow;Resistances;Str;Con;Dex;Wis;Cha;Int;RacePowerName;RacePower;RaceTraitName;RaceTrait;RaceSkills
 "<div class=""monsterRace"">
- 
-       <table class=""monsterLevel"">
-      <tbody>
-        <tr>
-          <td class=""title large"" colspan=""2"">Level</td>
-        </tr>
-        <tr>
-          <td class=""subtitle huge"">";"
-      <table class=""monsterName namewidth"">
-        <tbody>
-          <tr>
-            <td class=""title large"" colspan=""2"">";"
-          <tr>
-            <td class=""subtitle"">";;"
-      <table class=""monsterMov"" >
-        <tbody>
-        <tr>
-          <td class=""subtitle"">Movement</td>
-        </tr>
-        <tr>
-          <td >";"
-   
-      <table class=""tableMonsterAttack"" style=""width: 99px;"" border=""1"">
-        <tbody>
-          <tr>
-            <td class=""title"" style=""width: 155.65px; justify-content: center;""
-
-              colspan=""3"">Attack Stats</td>
-          </tr>
-          <tr>
-            <td class=""subtitle"">H</td>
-            <td class=""subtitle"">D</td>
-            <td class=""subtitle"">F</td>
-          </tr>
-          <tr>
-            <td>";"
-            <td>";"
-            <td>";"
-      <table class=""tableMonsterHP"" >
-        <tbody>
-          <tr>
-            <td class=""title"" rowspan=""3"">HP</td>
-            <td class=""subtitle"">Hi</td>
-            <td>";"
-          <tr>
-            <td class=""subtitle"">Mid</td>
-            <td>";"
-          <tr>
-            <td class=""subtitle"">Low</td>
-            <td>";"
-
-       <table class=""monsterResist"" >
-        <tbody>
-        <tr>
-          <td class=""subtitle"" >Resistances</td>
-        </tr>
-        <tr>
-          <td class=""attackText""> ";"
-         <table class=""monsterAbilities"">
-        <tbody>
-          <tr>
-            <td class=""title"" colspan=""6"">Abilities</td>
-          </tr>
-          <tr>
-            <td class=""subtitle"">Str</td>
-            <td class=""subtitle"">For</td>
-            <td class=""subtitle"">Dex</td>
-            <td class=""subtitle"">Wis</td>
-            <td class=""subtitle"">Cha</td>
-            <td class=""subtitle"">Int</td>
-          </tr>
-          <tr>
-            <td>";"  
-            <td>";"
-            <td>";"
-            <td>";"
-            <td>";"
-
-            <td>";"
-
-      <p><br></p>
-   <div class=""space1""></div>
-      <table class=""fullwidth"" >
-        <tbody>
-          <tr>
-            <td class=""title"" colspan=""2"">Race Power</td>
-          </tr>
-          <tr>
-            <td class=""subtitle"">";"
-          <tr>
-            <td class=""attackText"">";"
-      <p><br></p>
-
-      <table class=""fullwidth"" >
-        <tbody>
-          <tr>
-            <td class=""title"" colspan=""2"">Race Trait</td>
-          </tr>
-          <tr>
-            <td class=""subtitle"">";"
-          <tr>
-            <td class=""attackText"">";"
-    <tr>
-            <td class=""subtitle"">Race Skills</td>
-          </tr>
-          <tr>
-            <td class=""attackText"">"
+<table class=""monster monsterLevel"">
+<tbody>
+<tr>
+<td class=""title large"" colspan=""2"">Level</td>
+</tr>
+<tr>
+<td class=""subtitle huge"">";"
+<table class=""monster monsterName namewidth"">
+<tbody>
+<tr>
+<td class=""title large"" colspan=""2"">";"
+<tr>
+<td class=""subtitle"">"; - ;"
+<table class=""monster monsterMov"" >
+<tbody>
+<tr>
+<td class=""subtitle"">Movement</td>
+</tr>
+<tr>
+<td >";"
+<table class=""monster tableMonsterAttack"" style=""width: 99px;"">
+<tbody>
+<tr>
+<td class=""title"" style=""width: 155.65px;"" colspan=""4"">Base Stats</td>
+</tr>
+<tr>
+<td class=""subtitle"">Def</td>
+<td class=""subtitle"">H</td>
+<td class=""subtitle"">D</td>
+<td class=""subtitle"">E</td>
+</tr>
+<tr>
+<td>";"
+<td>";"
+<td>";"
+<td>";"
+<table class=""monster tableMonsterHP"" >
+<tbody>
+<tr>
+<td class=""title"" rowspan=""3"">HP</td>
+<td class=""subtitle"">Hi</td>
+<td>";"
+<tr>
+<td class=""subtitle"">Mid</td>
+<td>";"
+<tr>
+<td class=""subtitle"">Low</td>
+<td>";"
+ <table class=""monster monsterResist"" >
+<tbody>
+<tr>
+<td class=""subtitle"" >Resistances</td>
+</tr>
+<tr>
+<td class=""attackText""> ";"
+ <table class=""monster monsterAbilities"">
+<tbody>
+<tr>
+<td class=""title"" colspan=""6"">Abilities</td>
+</tr>
+<tr>
+<td class=""subtitle"">Str</td>
+<td class=""subtitle"">For</td>
+<td class=""subtitle"">Dex</td>
+<td class=""subtitle"">Wis</td>
+<td class=""subtitle"">Cha</td>
+<td class=""subtitle"">Int</td>
+</tr>
+<tr>
+<td>";"
+<td>";"
+<td>";"
+<td>";"
+<td>";"
+<td>";"
+<p><br></p>
+ <div class=""space1""></div>
+<table class=""monster fullwidth"" >
+<tbody>
+<tr>
+<td class=""title"" colspan=""2"">Race Power</td>
+</tr>
+<tr>
+<td class=""subtitle"">";"
+<tr>
+<td class=""attackText"">";"
+<p><br></p>
+<table class=""monster fullwidth"" >
+<tbody>
+<tr>
+<td class=""title"" colspan=""2"">Race Trait</td>
+</tr>
+<tr>
+<td class=""subtitle"">";"
+<tr>
+<td class=""attackText"">";"
+<tr>
+<td class=""subtitle"">Race Skills</td>
+</tr>
+<tr>
+<td class=""attackText"">"
 "</td>
-        </tr>
-      </tbody>
-    </table>";"</td>
-          </tr>";;"</td>
-          </tr>
-        </tbody>
-      </table>";"          </td>
-        </tr>
-      </tbody>
- 
-      </table>";</td>;</td>;"</td>
-          </tr>
-        </tbody>
-      </table>";"</td>
-          </tr>";"</td>
-          </tr>";"</td>
-          </tr>
-        </tbody>
-      </table>";"</td>
-        </tr>
-      </tbody>
-      </table>";          </td>;            </td>;            </td>;            </td>;            </td>;"            </td>
-          </tr>
-        </tbody>
-      </table>";"</td>
-          </tr>";"            </td>
-          </tr>
-        </tbody>
-      </table>";"</td>
-          </tr>";"</td>
-          </tr>";"</td>
-          </tr>
-        </tbody>
-      </table></div>"
+</tr>
+</tbody>
+</table>";"</td>
+</tr>";;"</td>
+</tr>
+</tbody>
+</table>";"</td>
+</tr>
+</tbody>
+</table>";</td>;</td>;</td>;"</td>
+</tr>
+</tbody>
+</table>";"</td>
+</tr>";"</td>
+</tr>";"</td>
+</tr>
+</tbody>
+</table>";"</td>
+</tr>
+</tbody>
+</table>";</td>;</td>;</td>;</td>;</td>;"</td>
+</tr>
+</tbody>
+</table>";"</td>
+</tr>";"</td>
+</tr>
+</tbody>
+</table>";"</td>
+</tr>";"</td>
+</tr>";"</td>
+</tr>
+</tbody>
+</table></div>"

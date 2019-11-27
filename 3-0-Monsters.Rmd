@@ -1,0 +1,27 @@
+# Monsters
+
+To generate a standard monster, pick a monster race and a monster class.
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+```
+
+## Monster Races
+
+### Monster Races - Heroic
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11) # %>% 
+  #dplyr::filter(Name %in% c('Goblin', 'Kobold'))
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+## Monster classes
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+htm_monster_class <- get_htm_monster_class()  %>% get_monster_list_htm( ) 
+htm_monster_class %>% cat()
+```
+

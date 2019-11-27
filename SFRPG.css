@@ -74,7 +74,8 @@ tr:nth-child(even) {background-color: #ffefbf;}
  .Feature {  
   font-family: Verdana;  
   font-size: 12px;  
-  width: 20cm; 
+  /*width: 20cm;*/
+  max-width: 900px;
   line-height: normal;  
    margin-bottom: 5px;  
   page-break-inside: avoid;
@@ -115,12 +116,14 @@ tr:nth-child(even) {background-color: #ffefbf;}
   /*width: 6.5cm;*/
   margin-bottom: 25px;
   display: inline-block;
+  vertical-align: top;
 
 }
   
-.Power  p {  
-  margin-top: 0px;  
-  margin-bottom: 3px;
+.Power  p {
+  /* Using !important because of conflicts with gitbook css */
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
 }
 
 .Power-Upgrade {  
@@ -151,4 +154,160 @@ tr:nth-child(even) {background-color: #ffefbf;}
         border: 1px solid darkred;
 		margin: 10px;
 		display: inline-block;
+}
+
+/* Monster format */
+
+div.monsterList {
+  max-width: 900px;
+  line-height: 1.3;
+  letter-spacing: 0px;
+}
+
+table.monster, table.monster td, table.monster th {
+  border: 1px solid black !important;
+  border-collapse: collapse;
+  border-color: #003300;
+  text-align: center;
+  background-color: #dbffdb;
+  font-family: Verdana;
+  font-size: 9px;
+  color: Black;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}
+
+table.monster td.title {
+  font-weight: bold;
+  background-color: #003300;
+  color: white;
+
+}
+
+table.monster td.subtitle {
+  background-color: #73c173;
+  font-weight: bold;
+height: 12px;
+}
+
+
+table.monster td.attackText {
+  text-align: left;
+  vertical-align: 0px;
+}
+
+
+table.monster td.large {
+  font-size: 14px;
+ }
+
+table.monster td.huge {
+  font-size: 18px;
+}
+
+div.monsterClass, div.monsterRace {
+  font-family: Verdana;
+  font-size: 9px;
+  width: 280px;
+  position: relative;
+  background-color: #dbffdb;
+  margin-bottom: 30px;
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+table.fullwidth {
+width: 277px;
+    float: left;
+}
+
+table.namewidth {
+width: 230px;
+  left: 47px;
+}
+
+table.monsterLevel {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 40px;
+}
+
+table.monsterName {
+  position: absolute;
+  top: 0px;
+
+}
+
+table.monsterMov {
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  width: 102px;
+  height: 36px;
+}
+
+table.tableMonsterAttack {
+  position: absolute;
+  left: 105px;
+  top: 40px;
+  width: 99px;
+}
+
+
+table.tableMonsterHP {
+  position: absolute;
+  top: 40px;
+  left: 207px;
+  width: 70px;
+}
+
+table.monsterResist {
+  position: absolute;
+  top: 89px;
+  left: 0px;
+  width: 102px;
+  height: 46px;
+}
+
+table.monsterAbilities {
+  position: absolute;
+  top: 89px;
+  left: 105px;
+  width: 172px;
+}
+
+div .space1 {
+width: 275px;
+height: 117px;
+    float: left;
+}
+
+div .space2 {
+width: 275px;
+height: 28px;
+    float: left;
+}
+
+table.tableMonsterHP2 {
+  position: absolute;
+  top: 40px;
+  width: 57px;
+  height: 44px;
+}
+
+table.monsterDef {
+  position: absolute;
+  left: 60px;
+  top: 40px;
+  width: 145px;
+}
+
+table.monsterMisc {
+  position: absolute;
+  left: 208px;
+  top: 40px;
+  width: 69px;
+  height: 44px;
 }
