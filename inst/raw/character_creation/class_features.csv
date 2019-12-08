@@ -44,3 +44,20 @@ wld_tac_skl,Tactical Skill,TODO: Skill related assist feature.
 wlk_contr,Controller Power,"Gain an additional Warlock Daily Attack power, of a level equal to the level of your lowest Warlock Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Warlock daily powers."
 wlk_shadow_crs,Shadow Curse,"Once per turn, when you target an enemy with an attack, the enemy is afflicted with your Shadow Curse until the end of the encounter. Enemies under the Shadow Curse treat you as having Concealment or, if you already have Concealment, as having Total Concealment."
 wlk_shadow_pct,Shadow Pact,"Once per round, when an enemy under your Shadow Curse is reduced to 0 HP, the enemy's space becomes a zone of Difficult Terrain for your enemies until the end of the encounter. Enemies ending their turns in the zone or adjacent to it take Dex necrotic damage."
+ori_human_act,Human of Action,"When you take a Full Rest, gain an additional Action Point.<br>+1 to Action Point Checks.<br>Gain Advantage on attacks made with an Action Point."
+ori_human_rec,Human Recovery,"When using Second Wind, heal an additional 1d6, and you can roll a save to avoid spending a Vitality point."
+ori_human_skl,Human Skill,Gain Skill Training as a bonus feat.
+ori_dwarf_stb,Dwarven Stubbornness,"Reduce enemy Forced Movement against you by 1.<br>When you are knocked Prone, you can roll a save to avoid the Prone condition.<br>Ignore any Armor Speed Penalty."
+ori_dwarf_res,Dwarven Resilience,You can use Second Wind as a Move Action.
+ori_elf_stp,Elven Step,"Each turn, you can ignore 1 square of extra movement cost due to Difficult Terrain."
+ori_elf_acc,Elven Accuracy,Gain the Elven Accuracy power.
+ori_halfl_nmb,Nimble,Resist(Opportunity Attacks).
+ori_halfl_ddg,Halfling Dodge,Gain the Halfling Dodge power.
+ori_elf_bty,Dazzling Beauty,Gain Aura 1: Enemies in aura cannot Flank your allies.
+ori_elf_chr,Elvish Charm,Gain the Elvish Charm power
+ori_gnome_abs,Absent Minded,"At the start of your turn, if you are Taunted, you can roll a Save to ignore the Taunted condition that turn."
+ori_gnome_ing,Gnomish Ingenuity,Gain the Gnomish Ingenuity power
+ori_orc_tgh,Orc Toughness,"Gain +3 HP (increase to +6 at level 11, +12 at level 21)."
+ori_orc_sms,Orc Smash,Gain the Orc Smash power.
+ori_dragonf_scl,Dragon Scales,"Resist (Missed Attacks), Resist (Fall Damage)."
+ori_dragf_brh,Dragon Breath,Gain the Dragon Breath power

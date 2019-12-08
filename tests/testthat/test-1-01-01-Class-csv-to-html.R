@@ -46,4 +46,22 @@ test_that("get_l_class works", {
   succeed() # Finished
 })
 
+test_that("read_df_class_power works", {
+  df_class_power <- read_df_class_power()
+  succeed()
+})
+
+test_that("get_df_origin works", {
+  df_origin = get_df_origin()
+  
+  verify_output(
+    test_path('output','test_origin_output.txt'),
+    print(df_origin)
+  )
+
+  #write_class_section_file(df_class, dir_output)
+  
+  succeed() # Finished
+})
+
 l_color_map=c(green = "", red = "Encounter", gray = "Daily")

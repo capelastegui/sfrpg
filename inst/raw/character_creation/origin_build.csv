@@ -1,0 +1,10 @@
+Class,Build,build_id
+Human,Human,ori_human
+Dwarf,Dwarf,ori_dwarf
+Elf,Elf,ori_elf
+Elf,High Elf,ori_elf_hi
+Gnome,Gnome,ori_gnome
+Orc,Orc,ori_orc
+Halfling,Halfling,ori_halfl
+Dragonfolk,Dragonfolk,ori_dragf
+Devilfolk,Devilfolk,ori_devlf

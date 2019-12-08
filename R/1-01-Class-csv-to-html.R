@@ -200,29 +200,34 @@ get_class_section <- function(class,
                               htm_stat,
                               htm_feature,
                               #htm_power_summary,
-                              htm_power) {
-  class_section = paste(
+                              htm_power,
+                              is_class=TRUE) {
+  str_type = ifelse(is_class, 'Class', 'Origin')
+
+  class_section = paste0(
     "<p><h3>",
     paste(class, build),
     "</h3></p>\r\n",
-    "<p><h3>Class Stats</h3></p>\r\n",
+    "<p><h3>",str_type," Stats</h3></p>\r\n",
     "<p>",
     htm_stat,
     "</p>\r\n",
-    "<p><h3>Class features</h3></p>\r\n",
+    "<p><h3>",str_type," features</h3></p>\r\n",
     "<p>",
     htm_feature,
     "</p>\r\n",
-    "<p><h3>Class Powers</h3></p>\r\n",
+    "<p><h3>",str_type," Powers</h3></p>\r\n",
     #"<p>",
     #htm_power_summary,
     #"</p>\r\n",
     "<p>",
     htm_power,
-    "</p>\r\n",
-    sep = ""
+    "</p>\r\n"
   )
 }
+
+
+
 
 #' Generate clean class ctats table from raw data
 #'
@@ -297,8 +302,11 @@ get_class_stat_trans <- function(df_class_stat) {
 #' @export
 #'
 #' @examples
-read_df_class_feature <- function(){
-   df_class_build <- read_my_csv('class_build')
+read_df_class_feature <- function(is_class=TRUE){
+
+  str_path_build = ifelse(is_class, 'class_build', 'origin_build')
+
+   df_class_build <- read_my_csv(str_path_build)
    df_class_features_map <- read_my_csv('class_features_map')
    df_class_features <- read_my_csv('class_features')
 
@@ -327,8 +335,11 @@ get_df_class_feature_from_sheet <- function(
 #' @export
 #'
 #' @examples
-read_df_class_power <- function() {
-  df_class_build <- read_my_csv('class_build')
+read_df_class_power <- function(is_class=TRUE) {
+
+  str_path_build = ifelse(is_class, 'class_build', 'origin_build')
+
+  df_class_build <- read_my_csv(str_path_build)
   df_powers_map <- read_my_csv('powers_map')
   df_powers_raw <- read_my_csv('powers_raw')
 
@@ -430,6 +441,82 @@ get_l_class <- function (
   df_class
   
 }
+
+
+#' Generate dataframe with html text for origin rules
+#'
+#' @param dir_base
+#'
+#' @return df_origin table (Class, Build,
+#'         htm_stat,htm_feature,htm_power_summary,htm_power)
+#' @export
+#'
+#' @examples
+get_df_origin <- function (
+  df_feature_raw = NULL,
+  df_power_raw = NULL) {
+  usageOrder  <- c("", "At-Will", "Encounter", "Daily")
+
+  df_class_stat = read_my_csv('Class-stats', delim = ',') %>%
+    get_df_class_stat()
+
+  if (df_feature_raw %>% is.null()) {
+    df_feature_raw = read_df_class_feature(is_class=FALSE)
+  }
+
+    if (df_power_raw %>% is.null()) {
+    df_power_raw = read_df_class_power(is_class=FALSE)
+  }
+
+  df_feature = df_feature_raw %>%
+    gsub_colwise("\\r\\n", "<br>") %>%
+    purrr::map_dfc (tidyr::replace_na, '-')
+
+  df_feature_tag <- read_my_csv('Class-features-tags')
+  df_power_tag <-  read_my_csv('Powers-tags')
+
+  feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
+  feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
+
+  df_power_clean = df_power_raw %>%
+    get_power_clean(df_power_tag)
+
+  df_origin = list(
+    df_power_clean,
+    # df_class_stat %>% dplyr::group_by(Class, Build) %>%
+    #   dplyr::group_nest (.key = 'data_stat'),
+    df_feature %>% dplyr::group_by(Class, Build) %>%
+      dplyr::group_nest (.key = 'data_feature')
+  ) %>%
+  purrr::reduce(dplyr::full_join, by = c('Class', 'Build')) %>%
+  dplyr::mutate(
+        # htm_stat = data_stat %>%
+        #   purrr::map(~ .x %>% get_class_stat_trans) %>%
+        #   purrr::map_chr(
+        #     ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
+        #     ),
+        htm_feature = data_feature %>% purrr::map_chr(
+            build_element_apply,
+            feature_tag_pre,
+            feature_tag_post,
+            skipEmpty = TRUE
+          ),
+        htm_class_section = get_class_section(
+          Class,
+          Build,
+          #htm_stat,
+          "",
+          htm_feature,
+          htm_power,
+          is_class=FALSE
+          )
+    )
+
+  df_origin
+
+}
+
+
 
 # TODO: option not to include df_class_stat
 

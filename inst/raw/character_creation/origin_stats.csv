@@ -1,0 +1,9 @@
+build_id;Main Racial Ability;Secondary Racial Ability;Race Skill List
+ori_human;Choose any; -; -
+ori_dwarf;Constitution;Wisdom or Strength;Endurance, Lore
+ori_elf;Dexterity;Wisdom or Charisma;Perception, Nature
+ori_halfl;Dexterity;Charisma or Constitution;Stealth, Trickery
+ori_elf_hi;Wisdom;Charisma or Intelligence;Arcana, Lore
+ori_gnome;Intelligence;Constitution or Charisma;Arcana, Concentration
+ori_orc;Strength;Constitution or Dexterity;Authority, Endurance
+ori_dragf;Charisma;Strength or Constitution;Authority, Athletics
