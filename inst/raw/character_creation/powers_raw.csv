@@ -93,6 +93,14 @@ wlk_ut_crsyou,A Curse Upon You,NA,2,Utility,Encounter,NA,NA,Minor Action,NA,Rang
 wlk_ut_trcsdw,Treacherous Shadows,NA,2,Utility,Encounter,NA,NA,Minor Action,NA,Ranged 10,targets  any number of cursed enemies,NA,NA,NA,NA,"Create a zone of Shadows in a square adjacent to the target until next turn. When the target takes a provoking action while adjacent to the zone, the target takes 2xDex Necro damage",NA,NA,NA,NA
 ori_elf_accur,Elven Accuracy,,1,Utility,Encounter,,,Personal Reaction - Interrupt,You miss an enemy with an attack,,,,,,,You reroll the attack against the triggering enemy.,,,,
 ori_hlf_dodge,Halfling Dodge,,1,Utility,Encounter,,,Minor Action,,,,,,,,"The next time an enemy attack hits you before the end of the encounter, reroll the attack with -1 Crit Range.",,,,
-ori_elf_charm,Charming Presence,,1,Utility,Encounter,NA,Reliable,Minor Action,,Ranged 5,targets an enemy you haven't attacked this turn.,Primary Ability +2 vs Wil,,,,"You Charm the target until end of your next turn.<br>(A Charmed enemy can't attack you, is not affected by your Taunts, and doesn't provoke Opportunity Attacks from you. Effect ends when you attack the target).",,,,
+ori_elf_charm,Elvish Charm,,1,Utility,Encounter,NA,Reliable,Minor Action,,Ranged 5,targets an enemy you haven't attacked this turn.,Primary Ability +2 vs Wil,,,,"You Charm the target until end of your next turn.<br>(A Charmed enemy can't attack you, is not affected by your Taunts, and doesn't provoke Opportunity Attacks from you. Effect ends when you attack the target).",,,,
 ori_orc_smash,Orc Smash,,1,Attack,Encounter,,,Minor Action,,,,,,,,"The next time you hit an enemy before the end of the encounter, deal +1d8 and Push 3.",,,,
 ori_drf_breth,Dragon Breath,,1,Attack,Encounter,,,Minor Action,,Close Blast 3,,Primary Ability vs Ref,,1d8 damage of the chosen type.,,,"Special: When you gain this power, choose Fire, Cold, Lightning, Poison or Physical. This attack deals damage of that type.",,,
+ori_dvl_fshld,Diabolic Shield,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Until end of next turn, gain Cover, and enemies attacking you take Fire damage equal to your primary ability.",,,,
+ori_gnm_trk,Gnomish Trick,,1,Utility,Encounter,NA,,Minor Action,,Ranged 5,,,"Choose one:<br>The target grants Advantage until your next turn.<br>The target is Dazzled until your next turn.",,,,,,,
+ori_gob_sld,Goblin Slide,,1,Utility,Encounter,NA,,Minor Action,,Melee 1,targets an ally,,"Slide 1",,,,,,,
+ori_dvl_fshld,Diabolic Shield,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Until end of next turn, gain Cover, and enemies attacking you take Fire damage equal to your primary ability.",,,,
+ori_min_red,See Red,,1,Utility,Encounter,,,Minor Action,,Personal,,,,,,"Until end of the Encounter, gain -1 to all Defenses, and when attacking Bloodied enemies gain +1 Hit and +1 Crit Range.",,,,
+ori_gol_res,Goliath Resistance,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Until end of next turn, gain Partial Resist (All)",,,,
+ori_kbl_shf,Shifty Kobold,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Shift 1",,,,
+

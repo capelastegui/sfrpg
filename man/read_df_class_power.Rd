@@ -4,7 +4,7 @@
 \alias{read_df_class_power}
 \title{#' Read class power data from partial .csv tables}
 \usage{
-read_df_class_power()
+read_df_class_power(is_class = TRUE)
 }
 \description{
 #' Read class power data from partial .csv tables

@@ -4,7 +4,7 @@
 \alias{read_df_class_feature}
 \title{Read class feature data from partial .csv tables}
 \usage{
-read_df_class_feature()
+read_df_class_feature(is_class = TRUE)
 }
 \description{
 Read class feature data from partial .csv tables
