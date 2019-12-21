@@ -8,72 +8,134 @@ df_origin = get_df_origin()
 
 ## Human
 
-### Origin Features
+### Origin Stats
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_origin, 'Human', 'Human') 
+df_class_build$htm_stat %>% cat()
+```
+
+
+### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build$htm_feature %>% cat()
+```
+
+<!-- ### Origin Powers -->
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 #df_class_build$htm_power %>% cat()
 ```
 
 ## Elf
 
-### Origin Features
+### Origin Stats
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_origin, 'Elf', 'Elf') 
-df_class_build$htm_feature %>% cat()
+df_class_build$htm_stat %>% cat()
+```
 
+
+### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_feature %>% cat()
+```
+
+### Origin Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build$htm_power %>% cat()
 ```
 
 ## High Elf
 
-### Origin Features
+### Origin Stats
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_origin, 'Elf', 'High Elf') 
-df_class_build$htm_feature %>% cat()
+df_class_build$htm_stat %>% cat()
+```
 
+
+### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_feature %>% cat()
+```
+
+### Origin Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build$htm_power %>% cat()
 ```
 
 
-
 ## Halfling
+
+### Origin Stats
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_origin, 'Halfling', 'Halfling') 
+df_class_build$htm_stat %>% cat()
+```
+
 
 ### Origin Features
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_class_build = get_class_build(df_origin, 'Halfling', 'Halfling') 
 df_class_build$htm_feature %>% cat()
+```
 
+### Origin Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build$htm_power %>% cat()
 ```
 
 ## Dwarf
 
-### Origin Features
+### Origin Stats
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_origin, 'Dwarf', 'Dwarf') 
-df_class_build$htm_feature %>% cat()
+df_class_build$htm_stat %>% cat()
+```
 
+
+### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_feature %>% cat()
+```
+
+<!-- ### Origin Powers -->
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 #df_class_build$htm_power %>% cat()
 ```
 
 ## Orc
 
-### Origin Features
+### Origin Stats
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_origin, 'Orc', 'Orc') 
-df_class_build$htm_feature %>% cat()
+df_class_build$htm_stat %>% cat()
+```
 
+
+### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_feature %>% cat()
+```
+
+### Origin Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build$htm_power %>% cat()
 ```
 
 ## Dragonfolk
 
-### Origin Features
+### Origin Stats
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_origin, 'Dragonfolk', 'Dragonfolk') 
-df_class_build$htm_feature %>% cat()
-
-df_class_build$htm_power %>% cat()
+df_class_build$htm_stat %>% cat()
 ```
 
+
+### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_feature %>% cat()
+```
+
+### Origin Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```

@@ -295,6 +295,31 @@ get_class_stat_trans <- function(df_class_stat) {
   
 }
 
+#' Read origin stats data from partial .csv tables
+#'
+#' @return
+#' @export
+#'
+#' @examples
+read_df_origin_stats <- function(){
+  df_origin_build <- read_my_csv('origin_build')
+  df_origin_stats_partial <- read_my_csv('origin_stats')
+
+  df_origin_stats_raw <- df_origin_build %>%
+    dplyr::inner_join(df_origin_stats_partial)
+
+  df_origin_stat <- df_origin_stats_raw %>%
+    dplyr::select(-build_id) %>%
+    dplyr::group_by(Class, Build) %>%
+    dplyr::group_nest (.key = 'data_stat_tmp') %>%
+    dplyr::mutate(data_stat = data_stat_tmp %>%
+           purrr::map(get_class_stat_trans)) %>%
+    dplyr::select(Class, Build, data_stat)
+
+  df_origin_stat
+}
+
+
 
 #' Read class feature data from partial .csv tables
 #'
@@ -457,8 +482,7 @@ get_df_origin <- function (
   df_power_raw = NULL) {
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
 
-  df_class_stat = read_my_csv('Class-stats', delim = ',') %>%
-    get_df_class_stat()
+  df_origin_stats = read_df_origin_stats()
 
   if (df_feature_raw %>% is.null()) {
     df_feature_raw = read_df_class_feature(is_class=FALSE)
@@ -483,18 +507,16 @@ get_df_origin <- function (
 
   df_origin = list(
     df_power_clean,
-    # df_class_stat %>% dplyr::group_by(Class, Build) %>%
-    #   dplyr::group_nest (.key = 'data_stat'),
+    df_origin_stats,
     df_feature %>% dplyr::group_by(Class, Build) %>%
       dplyr::group_nest (.key = 'data_feature')
   ) %>%
   purrr::reduce(dplyr::full_join, by = c('Class', 'Build')) %>%
   dplyr::mutate(
-        # htm_stat = data_stat %>%
-        #   purrr::map(~ .x %>% get_class_stat_trans) %>%
-        #   purrr::map_chr(
-        #     ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
-        #     ),
+        htm_stat = data_stat  %>%
+          purrr::map_chr(
+            ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
+            ),
         htm_feature = data_feature %>% purrr::map_chr(
             build_element_apply,
             feature_tag_pre,
@@ -504,8 +526,7 @@ get_df_origin <- function (
         htm_class_section = get_class_section(
           Class,
           Build,
-          #htm_stat,
-          "",
+          htm_stat,
           htm_feature,
           htm_power,
           is_class=FALSE

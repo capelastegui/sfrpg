@@ -59,8 +59,6 @@ test_that("get_df_origin works", {
     print(df_origin)
   )
 
-  #write_class_section_file(df_class, dir_output)
-  
   succeed() # Finished
 })
 
