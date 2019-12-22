@@ -390,7 +390,7 @@ H: Pick a simple lock
 
 Arcana
 M: Recognize unknown species of non-natural creature. You gain a basic idea of that species’ behaviour and racial traits.
--1: The creature is related to the character’s background (e.g. their power source, race or plane of origin)
+-1: The creature is related to the character’s background (e.g. their power source, Origin or plane of birth)
 +1: You gain a deep understanding of that species’ behaviour and racial traits.
 +1 Rare species
 
@@ -402,7 +402,7 @@ Dragons and creatures related to dragons
 M: After an hour of observation, gain a basic understanding of an object, enchantment, mechanism, etc. created through magical, divine, scientific or other non-conventional means.
 +1: A minute of observation
 +2: A round of observation
--1: Target is related to the character’s background (e.g. their power source, race, or plane of origin)
+-1: Target is related to the character’s background (e.g. their power source, Origin, or plane of birth)
 
 M: Navigate through an unfamiliar supernatural environment while travelling slowly
 -2 Familiar environment

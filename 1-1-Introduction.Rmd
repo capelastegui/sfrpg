@@ -359,12 +359,12 @@ For a description of Initiative Rolls, see Combat Sequence in the Combat chapter
 
 ### Movement Speed
 
-During an encounter, characters are assigned a position in a grid map, and they can take actions to move to new positions. The base movement distance that a character can move, measured in map squares, is called **Movement Speed**. This stat depends on the character's race, and its value typically ranges between 4 and 7. Player Characters wearing Heavy Armor usually apply an Armor Movement Penalty of -1 to their Movement Speed:
+During an encounter, characters are assigned a position in a grid map, and they can take actions to move to new positions. The base movement distance that a character can move, measured in map squares, is called **Movement Speed**. This stat depends on the character's origin, and its value typically ranges between 4 and 7. Player Characters wearing Heavy Armor usually apply an Armor Movement Penalty of -1 to their Movement Speed:
 ```
-Movement Speed = Race Speed - Armor Movement Penalty.
+Movement Speed = Origin Speed - Armor Movement Penalty.
 ```
 
-A summary table with the Race Speed and other stats corresponding to each Player Character race is provided in the Races section of the Character Building chapter. A table with the properties of different types of Armor and Shields, including Armor Movement Penalty, is provided in the Equipment section of the Character Building chapter.
+A summary table with the origin Speed and other stats corresponding to each Player Character origin is provided in the Origins section of the Character Building chapter. A table with the properties of different types of Armor and Shields, including Armor Movement Penalty, is provided in the Equipment section of the Character Building chapter.
 
 Movement Speed is used for characters moving on the ground, which in the game world may translate into walking, running, crawling, oozing, rolling, or other exotic means of displacement. Some characters are capable of other forms of movement, such as flying or swimming, which have their own speed stats:
 

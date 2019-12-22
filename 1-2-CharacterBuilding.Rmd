@@ -7,12 +7,12 @@ df_tables_equip <- get_equip_tables()
 
 ```
 
-This chapter provides the rules for creating and levelling Player Characters. The overall character creation process is first described, and then each creation and levelling step is discussed in detail: stat generation, race and class selection, mundane equipment, feat selection, levelling up, and using magic items.
+This chapter provides the rules for creating and levelling Player Characters. The overall character creation process is first described, and then each creation and levelling step is discussed in detail: stat generation, Origin and class selection, mundane equipment, feat selection, levelling up, and using magic items.
 
 
 1. Overview
 1. Stat Generation
-1. Races
+1. Origins
 1. Classes
     - Paragon Paths
     - Epic Destinies
@@ -29,7 +29,7 @@ From the initial character concept to the point where the character sheet is com
 The basic steps for creating a character are:
 
 1. Character concept and story
-1. Race and Class selection
+1. Origin and Class selection
 1. Ability generation
 1. Skill selection
 1. Equipment selection
@@ -43,7 +43,7 @@ The basic steps for creating a character are:
 
 ...
 
-## Race
+## Origin
 
 ...
 
@@ -88,17 +88,17 @@ The next step is to assign scores to each Ability. To this end, there are two **
 
 <div class="tip">**Tip**: When deciding over an Ability Array, the Focused Array is a safe default option, whereas the Flexible Array can shine for characters whose Class Features and Powers strongly reward high Secondary Abilities.</div>
 
-As a final step in the generation of Abilities, the player has to check the Favoured Abilities for the character's Race. Each Race typically has two or more Favoured Abilities, and characters whose Favoured Abilities match their Primary or Secondary Abilities gain Skill-related bonus:
+As a final step in the generation of Abilities, the player has to check the Favoured Abilities for the character's Origin. Each Origin typically has two or more Favoured Abilities, and characters whose Favoured Abilities match their Primary or Secondary Abilities gain Skill-related bonus:
 
 - If either the Primary Ability or the Secondary Ability match a Favoured Ability, the character gains Skill Training as a bonus Feat.
 - If both the Primary Ability and the Secondary Ability match Favoured Abilities, the character gains Skill Training and Skill Focus as bonus Feats.
 
 See the Feat section later in this chapter for a description of these bonus Feats. The player can choose any legally available Skill for these Feats, and should do so after choosing class and racial Skills for the character (as described in the Skills section in this chapter).
 
-<div class="tip">**Tip**: It is a good idea to take into account how racial Favoured Abilities match with the Primary and Secondary Abilities of each class build, when picking your Race and Class. However, if you really like a particular Race and Class combination with mismatched Abilities, you should not hesitate to take it - the Skill bonuses are a nice thing to have, but they won't make or break a character.</div>
+<div class="tip">**Tip**: It is a good idea to take into account how racial Favoured Abilities match with the Primary and Secondary Abilities of each class build, when picking your Origin and Class. However, if you really like a particular Origin and Class combination with mismatched Abilities, you should not hesitate to take it - the Skill bonuses are a nice thing to have, but they won't make or break a character.</div>
 
 
-<div class="compatibility">**Compatibility Note**: The Favoured Ability rule replaces racial Ability bonuses from older rulebooks. When a race provides a bonus to one or more Abilities, consider instead that these Abilities are Favoured Abilities.</div>
+<div class="compatibility">**Compatibility Note**: The Favoured Ability rule replaces racial Ability bonuses from older rulebooks. When an Origin provides a bonus to one or more Abilities, consider instead that these Abilities are Favoured Abilities.</div>
 
 
 <div class="tip">**Tip**: Character Abilities remain constant across all levels, with a few exceptions. It is possible to increase Tertiary and Weak Abilities by taking certain high level Feats. As for Primary and Secondary Abilities, the only way to increase them is by taking specific Epic Destinies.</div>
@@ -110,11 +110,11 @@ See the Feat section later in this chapter for a description of these bonus Feat
 
 Depending on their class, Player Characters can choose a number of Skills to become Trained in them. Characters gain a +3 bonus to Skill Checks with Trained Skills, and Skill Checks of Hard Difficulty are only available to characters with training in that Skill.
 
-In order to select a Player Character's Skills, the player should look look at the Class Skill List for the character's class, as well as the Racial Skill List for the character's race. Any Skill in either of these lists can be selected as a Trained Skill for the character. The player then looks at the number of Trained Skills allowed by the character's class, and selects that many Trained Skills. 
+In order to select a Player Character's Skills, the player should look look at the Class Skill List for the character's class, as well as the Racial Skill List for the character's Origin. Any Skill in either of these lists can be selected as a Trained Skill for the character. The player then looks at the number of Trained Skills allowed by the character's class, and selects that many Trained Skills. 
 
-<div class="compatibility">**Compatibility Note**: The Racial Skill rule replaces racial Skill bonuses from older rulebooks. When a race provides a numeric bonus to one or more Skills, consider instead that these Skills are Racial Skills. Any other Skill-related benefit, such as gaining Training with a specific Skill, remains unchanged. </div>
+<div class="compatibility">**Compatibility Note**: The Racial Skill rule replaces racial Skill bonuses from older rulebooks. When a Origin provides a numeric bonus to one or more Skills, consider instead that these Skills are Racial Skills. Any other Skill-related benefit, such as gaining Training with a specific Skill, remains unchanged. </div>
 
-Some Races and Classes provide automatic training with predetermined Skills. In that case, the character first gains training with these skills, and then the player selects Trained Skills as usual.
+Some Origins and Classes provide automatic training with predetermined Skills. In that case, the character first gains training with these skills, and then the player selects Trained Skills as usual.
 
 A character whose Primary or Secondary Abilities match their racial Favored Abilities gains bonus Skill-related Feats. The Skills associated with these Feats are chosen after the selection of Trained Skills.
 
@@ -269,7 +269,7 @@ A character's class determines which armors the character is trained to use. A c
 
 A character using a Shield and wearing Light Armor or Heavy Armor can add the AC bonuses from shield and armor. However, Armor Penalties and Movement Penalties are also added.
 
-Some character classes gain an additional bonus to AC while wearing Light Armor. This is called Light Armor AC Bonus. Some classes also have class features that grant a bonus to AC, and these can stack with their Light Armor AC Bonus. A table summarizing Light Armor AC Bonus and other stats for all classes currently in the game (including classes from older rulebooks) is provided in this chapter, in the Race and Class Selection section. 
+Some character classes gain an additional bonus to AC while wearing Light Armor. This is called Light Armor AC Bonus. Some classes also have class features that grant a bonus to AC, and these can stack with their Light Armor AC Bonus. A table summarizing Light Armor AC Bonus and other stats for all classes currently in the game (including classes from older rulebooks) is provided in this chapter, in the Origin and Class Selection section. 
 
 To summarize, a character's AC is calculated as follows:
 ```
@@ -399,7 +399,7 @@ epic might
 epic ability
 -->
 
-A Feat is a character customization option that lets player specialize their characters beyond their Race, Class, and Power selection. Each Feat provides a significant improvement to the character's combat capabilities. Characters start the game with one Feat, and gain additional ones as they level up, to a maximum of nine. On top of that, characters may gain bonus feats from other sources, such as their Race or Class. Depending on the specific case, a character gaining a bonus Feat may be able of picking any available Feat of a certain level or lower, or of picking any feat within a given Feat Category, or just gain a predetermined Feat.
+A Feat is a character customization option that lets player specialize their characters beyond their Origin, Class, and Power selection. Each Feat provides a significant improvement to the character's combat capabilities. Characters start the game with one Feat, and gain additional ones as they level up, to a maximum of nine. On top of that, characters may gain bonus feats from other sources, such as their Origin or Class. Depending on the specific case, a character gaining a bonus Feat may be able of picking any available Feat of a certain level or lower, or of picking any feat within a given Feat Category, or just gain a predetermined Feat.
 
 Each Feat is composed of the following elements:
 
@@ -412,7 +412,7 @@ Some Feat Categories are labeled as “Unlimited”. A character can select any 
 - **Description**: The benefits granted by the feat.
 - **Summary**: An abbreviated version of the Feat Description, used in summary tables. The Summary text does not necessarily provide exact or complete rules, and should only be used as a quick guide for character building decisions, not as a rules reference.
 
-In addition to regular Feats, characters can also gain Lesser Feats, which are customization options that usually improve a character's adventuring capabilities but have little or no impact in their combat performance. Through Lesser Feats, characters can expand their knowledge in Skills, Rituals, or languages. Characters start the game with no Lesser Feats but acquire them as they level up, to a maximum of nine. On top of that, characters may gain bonus Lesser Feats from other sources, such as their Race or Class, or other Feats. Depending on the specific case, a character gaining a bonus Lesser Feat may be able of picking any available Lesser Feat of a certain level or lower, or just gain a predetermined Lesser Feat.
+In addition to regular Feats, characters can also gain Lesser Feats, which are customization options that usually improve a character's adventuring capabilities but have little or no impact in their combat performance. Through Lesser Feats, characters can expand their knowledge in Skills, Rituals, or languages. Characters start the game with no Lesser Feats but acquire them as they level up, to a maximum of nine. On top of that, characters may gain bonus Lesser Feats from other sources, such as their Origin or Class, or other Feats. Depending on the specific case, a character gaining a bonus Lesser Feat may be able of picking any available Lesser Feat of a certain level or lower, or just gain a predetermined Lesser Feat.
 
 Each Lesser Feat is composed of the following elements:
 
@@ -468,7 +468,7 @@ Each Feat Slot can be used to gain a Feat with a level equal or lower to that of
 - **Separation between combat options and adventuring options**: Allowing characters to freely choose between combat and non-combat Feats results in excessive performance variability, to the point that it's virtually impossible to design high level content that will be moderately difficult and enjoyable to both characters that are completely specialized on combat and characters that only select non-combat Feats. Furthermore, it is usually optimal to ignore either combat or non-combat options (depending on the campaign), resulting in roughly half the Feats in the game seeing little to no play. By splitting customization slots between combat options (Feats) and non-combat options (Lesser Feats), we get much more predictable character outcomes, which allow for a better high level game experience. This also allows players to improve both their combat and non-combat capabilities without feeling that they are hurting their character's potential.
 - **Feat categories**: It is a natural thing for players to experiment with spending all of their customization resources in improving a single dimension of their character, such as damage, or defenses, or even mobility. Again, this leads to excessive variability between high level character builds and, as a consequence, high variability in game difficulty, combat length, and overall game experience. By classifying Feats into functional Categories, and restricting players to one Feat per Category, we can, for example, provide dozens of options to increase attack damage while ensuring that a given character will only be able to have two or three of them at once.
 - **No support for previous Feats**: We wanted every Feat in the game to have a purpose, and to be playable for a significant percentage of character builds. However, older rulebooks had thousands of Feats with wildly inconsistent quality and power level. We decided that starting from scratch and having a compact set of Feats that could realistically be tested and polished was the best option.
-- **No class/race requirements**: We wanted the total number of feats to be manageable for players, but also to maintain backwards compatibility with previous Races and Classes. Since older rulebooks have dozens of Races and Classes, and including Feats for only a subset of them would be considered unfair and introduce balance issues, we chose to remove racial feats altogether and replace Class Feats with options based on Class Role and Power Source, which fill a similar niche with much less effort and complexity. That said, we might reconsider this for future supplements.</div>
+- **No class/Origin requirements**: We wanted the total number of feats to be manageable for players, but also to maintain backwards compatibility with previous Origins and Classes. Since older rulebooks have dozens of Origins and Classes, and including Feats for only a subset of them would be considered unfair and introduce balance issues, we chose to remove racial feats altogether and replace Class Feats with options based on Class Role and Power Source, which fill a similar niche with much less effort and complexity. That said, we might reconsider this for future supplements.</div>
 
 
 TODO: REWORD RACIAL ABILITIES TO DECOUPLE THEM FROM LESSER FEATS. JUST GRANT SKILLS.
