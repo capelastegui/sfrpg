@@ -3,21 +3,21 @@ context("Convert data from .csv to html")
 #dir_output = here::here('sfrpg', 'tests', 'testthat', 'output')
 #print(dir_output)
 
-test_that("read_df_class_feature works", {
-  df_class_feature <- read_df_class_feature()
+test_that("read_df_feature works", {
+  df_class_feature <- read_df_feature()
   verify_output(
     test_path('output','test_read_df_class_feature.txt'),
     print(df_class_feature)
   )
 })
 
-test_that("read_df_class_power works", {
-  df_class_power <- read_df_class_power()
+test_that("read_df_power works", {
+  df_class_power <- read_df_power()
   succeed()
 })
 
-test_that("get_l_class works", {
-  df_class = get_l_class()
+test_that("get_df_class works", {
+  df_class = get_df_class()
   
   verify_output(
     test_path('output','test_class_output.txt'),
@@ -44,11 +44,6 @@ test_that("get_l_class works", {
   #write_class_section_file(df_class, dir_output)
   
   succeed() # Finished
-})
-
-test_that("read_df_class_power works", {
-  df_class_power <- read_df_class_power()
-  succeed()
 })
 
 test_that("get_df_origin works", {

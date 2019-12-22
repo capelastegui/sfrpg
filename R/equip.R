@@ -5,29 +5,18 @@
 #' @export
 #'
 #' @examples
-#' df_tables_equip = get_equip_tables()
-get_equip_tables <- function ()
+#' df_tables_equip = get_df_equip()
+get_df_equip <- function ()
 {
-  dir_base  = system.file('raw', "character_creation",
-    package='sfrpg', mustWork=TRUE)
-  # read_my_csv <- function(s) {
-  #   readr::read_delim(file.path(dir_base,paste0(s,".csv")),
-  #                     delim=",")}
-  
-  df_weapons <- read_my_csv("Weapons-raw")
-  df_armor <- read_my_csv("Armor-raw") %>%
+  df_weapons <- read_my_csv("weapons")
+  df_armor <- read_my_csv("armor") %>%
     purrr::set_names(names(.) %>% stringr::str_replace("\\."," "))
-  df_implement <- read_my_csv("Implement-raw")
-  df_armorbyclass <- read_my_csv('Armor-by-class-legacy') %>%
+  df_implement <- read_my_csv("implements")
+  df_armorbyclass <- read_my_csv('armor_by_class_reference') %>%
     dplyr::arrange(Class)
   
   #Build weapons tables
   
-  str_weapons<-df_weapons %>%
-    split(df_weapons$Training) %>%
-    purrr::map(build_table_apply, tableClass='General-table')
-
-  # New workflow model: encapsulate data in nested dataframe
   df_weapons_str <- df_weapons %>%
     dplyr::group_by(table_type='Weapons', Training) %>% tidyr::nest() %>%
     dplyr::mutate(table = purrr::map_chr(data,build_table_apply, tableClass="General-table"))
@@ -59,10 +48,11 @@ get_equip_tables <- function ()
 #' @param type 
 #' @param subtype 
 #'
-#' @return
+#' @return String with an html table for weapons, implements, or armor.
 #' @export
 #'
 #' @examples
+#' extract_equip_table(df_equip, 'Weapons', 'Basic') %>% cat()
 extract_equip_table <- function(df_tables_equip, type, subtype='-'){
   df_tables_equip %>%
     dplyr::filter(table_type==type, Training==subtype) %>%

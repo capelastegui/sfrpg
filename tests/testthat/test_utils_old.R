@@ -55,14 +55,4 @@ test_that("llply.parallel.multilist works", {
   #l_result2 %>% qstr(4)
   
   succeed()
-}
-)
-
-test_that("trans_df works", {
-  df_in = tibble::tibble(x=c('hello','world'),y=c('a', 'o'))
-  df_result = df_in %>% trans_df()
-  df_result_null = NULL %>% trans_df()
-  
-  succeed()
-}
-)
+})

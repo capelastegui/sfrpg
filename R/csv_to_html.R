@@ -1,12 +1,14 @@
 #' Read and clean csv files
 #'
-#' @param s
-#' @param delim
+#' @param s string , name of .csv file in /inst/raw/character_creation,
+#         without extension
+#' @param delim string, single character used to separate csv fields
 #'
-#' @return
+#' @return Dataframe generated from csv
 #' @export
 #'
 #' @examples
+#' df_origin_build <- read_my_csv('origin_build')
 read_my_csv <- function(s, delim = ',', folder='character_creation') {
   dir_base  = system.file('raw', folder, package='sfrpg', mustWork=TRUE)
 
@@ -24,12 +26,12 @@ read_my_csv <- function(s, delim = ',', folder='character_creation') {
 #'
 #' Typically used to convert raw data into html elements
 #'
-#' @param s string
-#' @param pre string
-#' @param post string
+#' @param s string array used as input
+#' @param pre string with tags to append before s
+#' @param post string with tags to append after s
 #' @param skipEmpty logical
 #'
-#' @return string
+#' @return string array with added tags
 #' @export
 #'
 #'@examples
@@ -172,7 +174,7 @@ get_htm_file <- function(str_htm, css=NULL) {
 }
 
 
-#' Apply gsub, then as.factor on string/factor columns of dataframe
+#' Apply gsub on string/factor columns of dataframe
 #'
 #' @param df Dataframe with string columns, used as input
 #' @param pattern regex to apply
@@ -182,6 +184,7 @@ get_htm_file <- function(str_htm, css=NULL) {
 #' @export
 #'
 #' @examples
+#' tibble::tibble(x=c('hello','world'),y=c('a', 'o'))  %>% gsub_colwise('o','u')
 gsub_colwise <- function(df,pattern,replacement)
 {
   replace_if_str <- function(x){
@@ -192,7 +195,8 @@ gsub_colwise <- function(df,pattern,replacement)
   df %>% purrr::map_dfc(replace_if_str)
 }
 
-# TODO: Consider changing all factors to strings
+
+# TODO: Remove references to this function, then delete. Factors no lnoger welcome.
 
 #' Apply factor again on factor columns
 #'
@@ -209,7 +213,37 @@ refactor<-function(df)
   df %>% purrr::map_if(is.factor, factor) %>% dplyr::tbl_df()
 }
 
-
+#' Fill NAs in non-factor columns with ''
+#'
+#' @param df input dataframe
+#'
+#' @return df with NA values replaced with ''
+#' @export
+#'
+#' @examples
+# fillna_df(tibble::tibble(x=c('hello',NULL),y=c(NULL, 'o')))
 fillna_df <- function(df) {
   df %>% dplyr::mutate_if (purrr::negate(is.factor),~tidyr::replace_na(.,''))
+}
+
+
+#' Transpose dataframe, into (key, value) form
+#'
+#' @param df_class_stat
+#'
+#' @return
+#' @export
+#'
+#' @examples
+trans_df <- function(df_class_stat) {
+  l_keys = df_class_stat %>% names()
+
+  trans_df_apply <- function(colname, df_class_stat) {
+    list(key = colname, value = df_class_stat[[colname]][[1]])
+  }
+
+  l_keys %>% purrr::map_dfr(trans_df_apply,
+                            # Convert to string due to problem with factors
+                            df_class_stat %>% purrr::map_dfc(as.character))
+
 }

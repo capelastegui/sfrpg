@@ -1,5 +1,11 @@
 context("Convert data from .csv to html")
 
+test_that("read_my_csv works",{
+  # Test 1 - simple read
+  df_origin_build <- read_my_csv('build')
+  succeed("Didn't crash")
+})
+
 test_that("build_element works", {
   # Test 1 - simple input
   str_result = build_element(c('hello','world'),'<<', '>>')
@@ -97,4 +103,20 @@ test_that('refactor works',{
     dplyr::mutate(x=x %>% factor) %>% as.data.frame()
   expect_equal(df_result, df_expected)
   
+})
+
+test_that('fillna_df works',{
+  df_in = tibble::tibble(x=c('hello',NA),y=c(NA, 'o'))
+  df_result = df_in %>% fillna_df()
+  df_expected = tibble::tibble(x=c('hello',''),y=c('','o'))
+  expect_equal(df_result, df_expected)
+
+})
+
+test_that("trans_df works", {
+  df_in = tibble::tibble(x=c('hello','world'),y=c('a', 'o'))
+  df_result = df_in %>% trans_df()
+  df_result_null = NULL %>% trans_df()
+
+  succeed()
 })

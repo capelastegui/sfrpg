@@ -1,3 +1,5 @@
+## -- Utilities used in old code. This will be removed soon
+
 # qstr provides a more convenient interface to 'str'
 qstr <- function(object, strSize = 3) {
   str(object, strSize, vec.len = strSize, list.len = strSize)
@@ -181,31 +183,4 @@ llply.n.labelname <- function(l, n, pasteLabels = TRUE) {
             ln
         })
     }
-}
-
-
-# transpose a data frame, assign type - needs homogeneous column types
-trans_df <- function(.data, type = NA, extractNames = FALSE) {
-    if (is.null(.data)) {return(NULL)}
-  
-    tmpData <- .data
-    if (extractNames) {
-        tmpNames <- .data[, 1]
-        tmpData <- tmpData[, -1]
-    }
-    result <- as.data.frame(t(tmpData), stringsAsFactors = FALSE)
-    if (extractNames) {
-        colnames(result) <- tmpNames
-    }
-    if (!is.na(type)) {
-        result <- switch(type, character = result, factor = colwise(factor)(result), numeric = colwise(as.numeric)(result),
-            logical = colwise(as.logical)(result))
-    }
-    result
-}
-
-trans_df2 <- function (df){
-  # Taken from https://stackoverflow.com/questions/52684395/put-the-first-row-as-the-column-names-of-my-dataframe-with-dplyr-in-r
-  if (is.null(df)) {return(NULL)}
-  df %>%  tidyr::gather(key = key, value = value, 2:ncol(.)) %>%  tidyr::spread(key = names(.)[1], value = "value")
 }

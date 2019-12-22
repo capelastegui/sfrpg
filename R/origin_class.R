@@ -1,3 +1,5 @@
+# -- Utility functions
+
 # Convenience function to add <p> tags to an html paragraph
 add_p_tags <- function(col) {col %>% build_element('<p>','</p>')}
 
@@ -12,20 +14,6 @@ collapse_cols <- function(df, collapse=''){
   df %>%
     purrr::transpose() %>%
     purrr::map_chr(filter_and_collapse)
-}
-
-# variant of build_element_apply for power block paragraphs
-build_element_apply_power_p <- function (
-  df,pre,post,  df.names=names(df),skipEmpty=TRUE, collapse=' ') {
-
-  pre <- pre %>% fillna_df()
-  post <- post %>% fillna_df()
-
-  df_tmp = df.names %>%
-    purrr::map_dfc(~build_element(df[[.]], pre[[.]], post[[.]], skipEmpty))
-
-  str_result = df_tmp %>% collapse_cols(collapse)
-  str_result
 }
 
 # Add title paragraph column for power block
@@ -59,16 +47,44 @@ add_p_action <- function(df_power) {
 }
 
 
+# -- Data processing functions
+
+#' #' Read class power data from partial .csv tables
+#'
+#' @return merged class power table, raw
+#' @export
+#'
+#' @examples
+#' df_power_raw = read_df_class_power()
+read_df_power <- function(is_class=TRUE) {
+
+  df_class_build <- read_my_csv('build')
+  df_powers_map <- read_my_csv('power_map')
+  df_powers_raw <- read_my_csv('powers')
+
+    df_powers = df_class_build %>%
+    dplyr::inner_join(df_powers_map) %>%
+    dplyr::inner_join(df_powers_raw) %>%
+    dplyr::select (-build_id,-power_id)
+
+  df_powers
+}
+
 
 #' Build power block from raw data
 #'
-#' @param df_power_raw 
+#' @param df_power_raw
+#' @param df_power_tag
+#' @param character_sheet boolean, true if generating table for a character
+#'        sheet
 #'
 #' @return character vector with html power blocks
 #' @export
 #'
 #' @examples
-get_power_clean <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
+#' clean_df_power(read_df_class_power(), read_my_csv('power_tags'))
+#'
+clean_df_power <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
 {
   l_color_map=c(green = "", red = "Encounter", gray = "Daily")
 
@@ -129,32 +145,6 @@ get_power_clean <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
       '<div class="Power-List">',htm_power, '</div>'))
   
   df_power_clean
-}
-
-
-#' Generate html table for powers
-#'
-#' @param df input dataframe
-#' @param pre
-#' @param post
-#'
-#' @return
-#' @export
-#'
-#' @examples
-apply_class_power_htm <- function(df, pre, post) {
-  if (is.null(df)) {
-    return ("")
-  }
-  df = df %>% dplyr::arrange(
-    dplyr::desc(isFeature),
-    Type,
-    usageColors %>% forcats::fct_relevel('green', 'red', 'gray')
-  )
-
-  build_cols <- setdiff(names(df), c("Summary", "Build", "usageColors"))
-  htm <- build_element_apply(df,pre,post,build_cols)
-  paste("<div class=\"Power-List\">", htm, "</div>" , sep = "")
 }
 
 
@@ -229,7 +219,7 @@ get_class_section <- function(class,
 
 
 
-#' Generate clean class ctats table from raw data
+#' Generate clean class stats table from raw data
 #'
 #' @param df_class_stat_raw class stats table
 #'        in raw form
@@ -276,25 +266,6 @@ get_df_class_stat <- function(df_class_stat_raw) {
 }
 
 
-#' Transpose class stats table, into (key, value) form
-#'
-#' @param df_class_stat
-#'
-#' @return
-#' @export
-#'
-#' @examples
-get_class_stat_trans <- function(df_class_stat) {
-  l_keys = df_class_stat %>% names()
-  
-  get_class_stat_trans_apply <- function(colname, df_class_stat) {
-    list(key = colname, value = df_class_stat[[colname]][[1]])
-  }
-  
-  l_keys %>% purrr::map_dfr(get_class_stat_trans_apply, df_class_stat)
-  
-}
-
 #' Read origin stats data from partial .csv tables
 #'
 #' @return
@@ -302,7 +273,7 @@ get_class_stat_trans <- function(df_class_stat) {
 #'
 #' @examples
 read_df_origin_stats <- function(){
-  df_origin_build <- read_my_csv('origin_build')
+  df_origin_build <- read_my_csv('build') %>% filter(type=='origin')
   df_origin_stats_partial <- read_my_csv('origin_stats')
 
   df_origin_stats_raw <- df_origin_build %>%
@@ -313,7 +284,7 @@ read_df_origin_stats <- function(){
     dplyr::group_by(Class, Build) %>%
     dplyr::group_nest (.key = 'data_stat_tmp') %>%
     dplyr::mutate(data_stat = data_stat_tmp %>%
-           purrr::map(get_class_stat_trans)) %>%
+           purrr::map(trans_df)) %>%
     dplyr::select(Class, Build, data_stat)
 
   df_origin_stat
@@ -327,13 +298,11 @@ read_df_origin_stats <- function(){
 #' @export
 #'
 #' @examples
-read_df_class_feature <- function(is_class=TRUE){
+read_df_feature <- function(is_class=TRUE){
 
-  str_path_build = ifelse(is_class, 'class_build', 'origin_build')
-
-   df_class_build <- read_my_csv(str_path_build)
-   df_class_features_map <- read_my_csv('class_features_map')
-   df_class_features <- read_my_csv('class_features')
+   df_class_build <- read_my_csv('build')
+   df_class_features_map <- read_my_csv('feature_map')
+   df_class_features <- read_my_csv('features')
 
    df_features = df_class_build %>%
     dplyr::inner_join(df_class_features_map) %>%
@@ -343,10 +312,11 @@ read_df_class_feature <- function(is_class=TRUE){
   df_features
 }
 
+
 #' @export
-get_df_class_feature_from_sheet <- function(
+get_df_feature_from_sheet <- function(
   l_feature_id, Class='sheet', Build='sheet'){
-  df_features  <- read_my_csv('class_features') %>%
+  df_features  <- read_my_csv('features') %>%
     filter(feature_id %in% l_feature_id) %>%
     mutate(Class=Class, Build = Build)  %>%
     select(-feature_id)
@@ -354,37 +324,17 @@ get_df_class_feature_from_sheet <- function(
   df_features
 }
 
-#' #' Read class power data from partial .csv tables
-#'
-#' @return
-#' @export
-#'
-#' @examples
-read_df_class_power <- function(is_class=TRUE) {
 
-  str_path_build = ifelse(is_class, 'class_build', 'origin_build')
-
-  df_class_build <- read_my_csv(str_path_build)
-  df_powers_map <- read_my_csv('powers_map')
-  df_powers_raw <- read_my_csv('powers_raw')
-
-    df_powers = df_class_build %>%
-    dplyr::inner_join(df_powers_map) %>%
-    dplyr::inner_join(df_powers_raw) %>%
-    dplyr::select (-build_id,-power_id)
-
-  df_powers
-}
 
 #' @export
-get_df_class_power_from_sheet <- function(
+get_df_power_from_sheet <- function(
 l_power_id, Class='sheet', Build='sheet')
 {
-  df_powers_raw  <- read_my_csv('powers_raw') %>%
+  df_powers_raw  <- read_my_csv('powers') %>%
     filter(power_id %in% l_power_id)
 
-    df_class_build <- read_my_csv('class_build')
-    df_powers_map <- read_my_csv('powers_map')
+    df_class_build <- read_my_csv('build')
+    df_powers_map <- read_my_csv('power_map')
 
     df_powers = df_class_build %>%
     dplyr::inner_join(df_powers_map) %>%
@@ -405,34 +355,38 @@ l_power_id, Class='sheet', Build='sheet')
 #' @export
 #'
 #' @examples
-get_l_class <- function (
+get_df_class <- function (
   df_class_feature_raw = NULL,
   df_class_power_raw = NULL) {
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
   
-  df_class_stat = read_my_csv('Class-stats', delim = ',') %>%
+  df_class_stat = read_my_csv('class_stats', delim = ',') %>%
     get_df_class_stat()
 
   if (df_class_feature_raw %>% is.null()) {
-    df_class_feature_raw = read_df_class_feature()
+    df_class_feature_raw = read_df_feature() %>%
+      filter(type=='class')%>%
+      select(-type)
   }
 
     if (df_class_power_raw %>% is.null()) {
-    df_power_raw = read_df_class_power()
+    df_power_raw = read_df_power() %>%
+      filter(type=='class')%>%
+      select(-type)
   }
 
   df_class_feature = df_class_feature_raw %>%
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
-  df_feature_tag <- read_my_csv('Class-features-tags')
-  df_power_tag <-  read_my_csv('Powers-tags')
+  df_feature_tag <- read_my_csv('feature_tags')
+  df_power_tag <-  read_my_csv('power_tags')
 
   feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
   feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
 
   df_power_clean = df_power_raw %>%
-    get_power_clean(df_power_tag)
+    clean_df_power(df_power_tag)
   
   df_class = list(
     df_power_clean,
@@ -444,7 +398,7 @@ get_l_class <- function (
   purrr::reduce(dplyr::full_join, by = c('Class', 'Build')) %>%
   dplyr::mutate(
         htm_stat = data_stat %>%
-          purrr::map(~ .x %>% get_class_stat_trans) %>%
+          purrr::map(~ .x %>% trans_df) %>%
           purrr::map_chr(
             ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
             ),
@@ -485,25 +439,29 @@ get_df_origin <- function (
   df_origin_stats = read_df_origin_stats()
 
   if (df_feature_raw %>% is.null()) {
-    df_feature_raw = read_df_class_feature(is_class=FALSE)
+    df_feature_raw = read_df_feature(is_class=FALSE) %>%
+    filter(type=='origin') %>%
+      select(-type)
   }
 
     if (df_power_raw %>% is.null()) {
-    df_power_raw = read_df_class_power(is_class=FALSE)
+    df_power_raw = read_df_power(is_class=FALSE) %>%
+    filter(type=='origin') %>%
+      select(-type)
   }
 
   df_feature = df_feature_raw %>%
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
-  df_feature_tag <- read_my_csv('Class-features-tags')
-  df_power_tag <-  read_my_csv('Powers-tags')
+  df_feature_tag <- read_my_csv('feature_tags')
+  df_power_tag <-  read_my_csv('power_tags')
 
   feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
   feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
 
   df_power_clean = df_power_raw %>%
-    get_power_clean(df_power_tag)
+    clean_df_power(df_power_tag)
 
   df_origin = list(
     df_power_clean,
@@ -554,19 +512,19 @@ get_html_sheet <- function (l_feature_id, l_power_id,
 character_name='Character Sheet') {
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
 
-  df_power_raw = get_df_class_power_from_sheet(l_power_id)
+  df_power_raw = get_df_power_from_sheet(l_power_id)
 
-  df_class_feature = get_df_class_feature_from_sheet(l_feature_id) %>%
+  df_class_feature = get_df_feature_from_sheet(l_feature_id) %>%
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
-  df_feature_tag <- read_my_csv('Class-features-tags')
-  df_power_tag <-  read_my_csv('Powers-tags')
+  df_feature_tag <- read_my_csv('feature_tags')
+  df_power_tag <-  read_my_csv('power_tags')
 
   feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
   feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
 
-  htm_power = (df_power_raw %>% get_power_clean(df_power_tag, character_sheet=TRUE))$htm_power
+  htm_power = (df_power_raw %>% clean_df_power(df_power_tag, character_sheet=TRUE))$htm_power
 
   htm_feature = df_class_feature %>% select(Name, Description) %>%
     build_element_apply(
@@ -630,7 +588,8 @@ write_class_file <- function(df_class, char_class, char_build, dir_output) {
   writeLines(htm_file, path)
 }
 
-write_html_sheet <- function(l_feature_id, l_power_id, dir_output, character_name) {
+write_html_sheet <- function(l_feature_id, l_power_id,
+                             dir_output, character_name) {
   htm_file = get_html_sheet(l_feature_id, l_power_id, character_name) %>%
       get_htm_file()
     path = file.path(dir_output,
@@ -653,5 +612,3 @@ write_class_section_file <- function(df_class, dir_output) {
     purrr::map_chr( get_htm_file) %>% paste
   writeLines(htm_file_full, file.path(dir_output, '1-01-class-full.html'))
 }
-
-
