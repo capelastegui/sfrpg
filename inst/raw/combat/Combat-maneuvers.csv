@@ -1,34 +1,38 @@
-Name;Class;Build;isFeature;Level;Type;UsageLimit;UsageNumber;Keywords;Action;Trigger;Range;Target;AttackRoll;EffectPre;Hit;Miss;EffectPost;Misc;SecondaryAttack;Upgrades;Summary
-DELETEME;TMP;TMP;a;a;TMP;a;a;a ;;a ;a;a ;a ;a ;a ;a ;a;a;a;a;a
-Walk;  ;Basic;;;Basic;;;;Move Action;;;;;;;;Move your Speed.;;;;Move your Speed.
-Shift;  ;Basic;;;Basic;;;;Move Action;;;;;;;;Shift 1. You are Hindered this turn. ;;;;Shift 1, and Hindered.
-Charge;  ;Basic;;;Basic;;;;Standard Action;;;;;;;;You are Hindered and Dazed this turn. Move your Speed and make a Melee Basic Attack.;;;;Hindered and Dazed. Move Speed and make Melee Basic Attack.
-Total Defense;  ;Basic;;;Basic;;;;Standard Action;;;;;;;;Gain +4 to all defenses until your next turn.;;;; +4 to all defenses until end of next turn.
-Second Wind;  ;Basic;;;Basic;Encounter;;;Standard Action;;;;;;;;Spend a Surge. Gain +2 to all defenses until your next turn.;;;;(Encounter) Spend a Surge. +2 to all defenses until next turn.
-Stand Up;  ;Basic;;;Basic;;;;Move Action;;;;;;;;You stop being Prone, and you are Hindered this turn. Move 1.;;;;Hindered. No longer Prone, Move 1.
-Run;  ;Basic;;;Basic;;;;Standard Action;;;;;;;;Move your Speed +4. You are Dazed until the start of your next turn.;;;;Move Speed+4, and Dazed until next turn.
-Draw;  ;Basic;;;Basic;;;;Move Action;;;;;;;;Move 1. Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand. ;;;;Move 1. Sheathe items, then draw items.
-Quick Draw;  ;Advanced;;;Advanced;;;;Minor Action;;;;;;;;"Drop any number of items from your hands. Draw up to one item per hand. You are Hindered this turn.
-";;;;Drop Items, then draw items. Hindered.
-Recharge;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Move 1. Choose one Recharge weapon you are wielding. You ignore the Recharge hit penalty for your next attack with that weapon.;;;;Move 1. Recharge your Recharge weapon.
-Climb;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Climb 1.;;;;Climb 1.
-Swim;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Swim 1. ;;;;Swim 1. 
-Crawl;;Advanced;;;Advanced;;;;Move Action;;;;;;;;Crawl 1. ;;;;Crawl 1. 
-Balance;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Move 1 over narrow or slippery terrain.;;;;Move 1 over narrow/slippery terrain.
-Long Jump;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Move half your Speed. If you are 2 or more squares away from your starting position, Long Jump 2.;;;;Move Speed/2, Long Jump 2
-High Jump;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Move half your Speed. If you are 2 or more squares away from your starting position, High Jump 1.;;;;Move Speed/2, High Jump 1
-Drop;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Move 1. If you fall during this movement, treat the fall if the fall distance was 1 less. You can choose to become Prone;;;;Move 1, fall as if from 1 less square, you may drop Prone.
-Hide;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;"Move 1. If you are in Cover (other than Body Cover) or Concealment from all enemies, you become Shrouded. If you were already Shrouded, you become Hidden instead.
-";;;;Move 1. If in Cover/Concealment, become Shrouded/Hidden
-Vanish;  ;Advanced;;;Advanced;;;;Standard Action;;;;;;;;Move 1. If you are in Superior Cover or Superior Concealment from all enemies, you become Hidden. ;;;;Move 1. If in Superior Cover/Concealment, become Hidden
-Sneak;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;"Special: Use only while Shrouded or Hidden. Effect: Move half your Speed. If you are in Cover (other than Body Cover) or Concealment from all enemies, you remain Shrouded or Hidden.
-";;;;Move Speed/2, remain Shrouded/Hidden
-Search;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Move 1. All Hidden enemies within 2 squares of you become Shrouded instead.;;;;Move 1. Hidden enemies within 2 become Shrouded instead.
-Escape;  ;Advanced;;;Advanced;;;;Move Action;;;;;;;;Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy.;;;;Roll save to stop being Grabbed by an enemy.
-First Aid;  ;Advanced;;;Advanced;;;;Standard Action;;Melee;targets a Dying ally;;;;;The target is no longer Dying.;;;;Melee, targets a Dying ally. No longer Dying.
-Administer Potion;  ;Advanced;;;Advanced;;;;Standard Action;;Melee;targets an ally;;;;;The target uses a Potion carried or held by you or the target.;;;;Melee, targets an ally. Use Potion on target.
-Ready Attack;;Advanced;;;Advanced;;;;Standard Action;;;;;;;;Until next turn, you gain the following Secondary Attack, and prepare it as a Reaction.;;Prepared Reaction (Trigger: ;;
-;;;;;;;;;;;;;;;;;;;;;
-Melee Basic Attack (Weapon);;;;;;;;;;;;;;;;;;;;;
-Ranged Basic Attack (Weapon);;;;;;;;;;;;;;;;;;;;;
-Ranged Basic Attack (Implement);;;;;;;;;;;;;;;;;;;;;
+power_id,Name,isFeature,Level,Type,UsageLimit,UsageNumber,Keywords,Action,Trigger,Range,Target,AttackRoll,EffectPre,Hit,Miss,EffectPost,Misc,SecondaryAttack,Upgrades,Summary
+# Basic Attacks
+mnv_mbawp,Melee Basic Attack (Weapon),NA,1,Attack,NA,NA,"Weapon",NA,NA,Melee,NA,Primary Ability vs Arm,NA,"1W+Primary Ability.",NA,NA,NA,NA,Level 21: Increase Hit damage to 2W+Primary Ability.,Attack with a weapon in melee
+mnv_rbawp,Ranged Basic Attack (Weapon),NA,1,Attack,NA,NA,"Weapon",NA,NA,Weapon Range,NA,Str vs Arm,NA,"1W+Primary Ability.",NA,NA,NA,NA,Level 21: Increase Hit damage to 2W+Primary Ability.,Attack with a weapon at range
+mnv_rbaim,Ranged Basic Attack (Implement),NA,1,Attack,NA,NA,"Implement",NA,NA,Implement Range,NA,Str vs Arm,NA,"1d6+Primary Ability.",NA,NA,NA,NA,Level 21: Increase Hit damage to 2d6+Primary Ability.,Attack with an implement at range
+# Core Maneuvers
+mnv_walk,Walk,NA,1,Utility,,,,,,Move Action,,,,,,,,Move your Speed.,,,,Move your Speed.
+mnv_opatk,Opportunity Attack,NA,1,Attack,,NA,NA,Reaction (Interrupt),An adjacent enemy moves or makes a Ranged or Area attack,,,NA,NA,NA,NA,"You make a Melee Basic Attack against the triggering enemy, adding your Opportunity Modifier to the Hit Roll",NA,NA,NA,"Reaction attack against adjacent enemy shifting or using ranged attacks."
+mnv_defns,Total Defense,NA,1,Utility,,,,,,Standard Action,,,,,,,,Gain +4 to all defenses until your next turn.,,,, +4 to all defenses until end of next turn.
+mnv_shift,Shift,NA,1,Utility,,,,,Move Action,,,,,,,,Shift 1. If you move away from an adjacent enemy this way, you are Hindered this turn. ,,,,"Shift 1."
+mnv_secwn,Second Wind,NA,1,Utility,,,Encounter,,,Standard Action,,,,,,,,Spend a Surge. Gain +4 to all defenses until your next turn.,,,,(Encounter) Spend a Surge. +4 to all defenses until next turn.
+# Basic Miscellaneous Maneuvers
+mnv_draw,Draw,NA,1,Utility,,,,,,Move Action,,,,,,,,Move 1. Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand. ,,,,"Move 1. Sheathe items, then draw items."
+mnv_qdraw,Quick Draw,NA,1,Utility,,Advanced,,,,Minor Action,,,,,,,,"Drop any number of items from your hands. Draw up to one item per hand. You are Hindered this turn.<br>",,,,"Drop Items, then draw items. Hindered."
+mnv_blank,Point Blank Shot,NA,1,Utility,,,,,Minor Action,,,,,,,,"Until end of turn, you are Hindered, and making Ranged or Area attacks targeting adjacent enemies does not provoke opportunity attacks",,,,"Hindered, and can use Ranged attack in melee."
+# Basic Move Maneuvers
+mnv_charge,Charge,NA,1,Attack,,,,,,Standard Action,,,,,,,,You are Hindered. Move your Speed and make a Melee Basic Attack. You can't move this turn,,,,Hindered and Dazed. Move Speed and make Melee Basic Attack.
+mnv_stnup,Stand Up,NA,1,Utility,,,,,,Move Action,,,,,,,,"You stop being Prone, and you are Hindered this turn. Move 1",,,,"Hindered. No longer Prone, Move 1."
+mnv_run,Run,NA,1,Utility,,,,,,Standard Action,,,,,,,,"Move your Speed +4. You are Dazed until the start of your next turn.",,,,"Move Speed+4, and Dazed until next turn."
+# Advanced Move Maneuvers
+mnv_climb,Climb,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,Climb 1.,,,,Climb 1.
+mnv_swim,Swim,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,Swim 1. ,,,,Swim 1.
+mnv_crawl,Crawl,,Advanced,,,Advanced,,,,Move Action,,,,,,,,Crawl 1. ,,,,Crawl 1.
+mnv_blnce,Balance,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,Move 1 over narrow or slippery terrain.,,,,Move 1 over narrow/slippery terrain.
+mnv_lnjmp,Long Jump,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,"Move half your Speed. If you are 2 or more squares away from your starting position, Long Jump 2.",,,,"Move Speed/2, Long Jump 2"
+mnv_hijmp,High Jump,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,"Move half your Speed. If you are 2 or more squares away from your starting position, High Jump 1.",,,,"Move Speed/2, High Jump 1"
+mnv_drop,Drop,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,"Move 1. If you fall during this movement, treat the fall if the fall distance was 1 less. You can choose to become Prone",,,,"Move 1, fall as if from 1 less square, you may drop Prone."
+# Advanced Stealth Maneuvers
+mnv_hide,Hide,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,"Move 1. If you are in Cover (other than Body Cover) or Concealment from all enemies, you become Shrouded. If you were already Shrouded, you become Hidden instead.",,,,"Move 1. If in Cover/Concealment, become Shrouded/Hidden"
+mnv_vansh,Vanish,NA,1,Utility,,Advanced,,,,Standard Action,,,,,,,,"Move 1. If you are in Superior Cover or Superior Concealment from all enemies, you become Hidden. ",,,,"Move 1. If in Superior Cover/Concealment, become Hidden"
+mnv_sneak,Sneak,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,"Special: Use only while Shrouded or Hidden. Effect: Move half your Speed. If you are in Cover (other than Body Cover) or Concealment from all enemies, you remain Shrouded or Hidden.",,,,"Move Speed/2, remain Shrouded/Hidden"
+mnv_serch,Search,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,"Move 1. All Hidden enemies within 2 squares of you become Shrouded instead.",,,,"Move 1. Hidden enemies within 2 become Shrouded instead."
+# Advanced Miscellaneous Maneuvers
+mnv_escpe,Escape,NA,1,Utility,,Advanced,,,,Move Action,,,,,,,,"Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy.",,,,Roll save to stop being Grabbed by an enemy."
+mnv_ftaid,First Aid,NA,1,Utility,,Advanced,,,,Standard Action,,Melee,targets a Dying ally,,,,,The target is no longer Dying.,,,,"Melee, targets a Dying ally. No longer Dying."
+mnv_adpot,Administer Potion,NA,1,Utility,,Advanced,,,,Standard Action,,Melee,targets an ally,,,,,"The target uses a Potion carried or held by you or the target.",,,,"Melee, targets an ally. Use Potion on target."
+mnv_rdyrn,Ready Attack,,Advanced,,,Advanced,,,,Standard Action,,,,,,,,"Until next turn, you gain the following Secondary Attack, and prepare it as a Reaction.",,"Prepared Reaction (Trigger: ...",,,,,,,,,,,,,,,,,,,,,,,
+

@@ -7,7 +7,12 @@
 read_my_csv(s, delim = ",", folder = "character_creation")
 }
 \arguments{
-\item{delim}{}
+\item{s}{string , name of .csv file in /inst/raw/character_creation,}
+
+\item{delim}{string, single character used to separate csv fields}
+}
+\value{
+Dataframe generated from csv
 }
 \description{
 Read and clean csv files

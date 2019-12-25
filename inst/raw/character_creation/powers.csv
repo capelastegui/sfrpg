@@ -103,4 +103,43 @@ ori_dvl_fshld,Diabolic Shield,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Until 
 ori_min_red,See Red,,1,Utility,Encounter,,,Minor Action,,Personal,,,,,,"Until end of the Encounter, gain -1 to all Defenses, and when attacking Bloodied enemies gain +1 Hit and +1 Crit Range.",,,,
 ori_gol_res,Goliath Resistance,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Until end of next turn, gain Partial Resist (All)",,,,
 ori_kbl_shf,Shifty Kobold,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Shift 1",,,,
-
+#power_id,Name,isFeature,Level,Type,UsageLimit,UsageNumber,Keywords,Action,Trigger,Range,Target,AttackRoll,EffectPre,Hit,Miss,EffectPost,Misc,SecondaryAttack,Upgrades,Summary
+# Basic Attacks
+mnv_mbawp,Melee Basic Attack (Weapon),NA,,Attack,NA,NA,"Weapon",NA,NA,Melee,NA,Primary Ability vs Arm,NA,"1W+Primary Ability.",NA,NA,NA,NA,Level 21: Increase Hit damage to 2W+Primary Ability.,Attack with a weapon in melee
+mnv_rbawp,Ranged Basic Attack (Weapon),NA,,Attack,NA,NA,"Weapon",NA,NA,Weapon Range,NA,Primary Ability vs Arm,NA,"1W+Primary Ability.",NA,NA,NA,NA,Level 21: Increase Hit damage to 2W+Primary Ability.,Attack with a weapon at range
+mnv_rbaim,Ranged Basic Attack (Implement),NA,,Attack,NA,NA,"Implement",NA,NA,Implement Range,NA,Primary Ability vs Arm,NA,"1d6+Primary Ability.",NA,NA,NA,NA,Level 21: Increase Hit damage to 2d6+Primary Ability.,Attack with an implement at range
+mnv_secwn,Second Wind,NA,,Utility,Encounter,,,Standard Action,,,,,,,,Spend a Surge. Gain +4 to all defenses until your next turn.,,,,(Encounter) Spend a Surge. +4 to all defenses until next turn.
+mnv_actio,Use Action Point,NA,,Utility,,,,Free Action (1/turn),,,,,,,,"Make an Action Point Check. If successful, you can spend an Action Point to gain an extra Standard Action.","(You can only spend one Action Point per encounter.)",,,Make Action Point Check to spend an Action Point.
+# Core Maneuvers
+mnv_walk,Walk,NA,,Utility,,,,Move Action,,,,,,,Move your Speed.,,,,,Move your Speed.
+mnv_opatk,Opportunity Attack,NA,,Attack,,NA,NA,Unlimited Reaction (Interrupt),An adjacent enemy moves or makes a Ranged or Area attack,,,NA,NA,NA,NA,"You make a Melee Basic Attack against the triggering enemy, adding your Opportunity Modifier to the Hit Roll",NA,NA,NA,"Reaction attack against adjacent enemy shifting or using ranged attacks."
+mnv_defns,Total Defense,NA,,Utility,,,,Standard Action,,,,,,,,Gain +4 to all defenses until your next turn.,,,, +4 to all defenses until end of next turn.
+mnv_shift,Shift,NA,,Utility,,,,Move Action,,,,,,,,"Shift 1. If you move away from an adjacent enemy this way, you are Hindered this turn. ",,,,"Shift 1."
+# Basic Miscellaneous Maneuvers
+mnv_draw,Draw,NA,,Utility,,,,Move Action,,,,,,,,"Move 1. Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand.",,,,"Move 1. Sheathe items, then draw items."
+mnv_qdraw,Quick Draw,NA,,Utility,,,,Minor Action,,,,,,,,"Drop any number of items from your hands. Draw up to one item per hand. You are Hindered this turn.<br>",,,,"Drop Items, then draw items. Hindered."
+mnv_blank,Point Blank Shot,NA,,Utility,,,,Minor Action,,,,,,,,"Until end of turn, you are Hindered, and making Ranged or Area attacks targeting adjacent enemies does not provoke opportunity attacks",,,,"Hindered, and can use Ranged attack in melee."
+# Basic Move Maneuvers
+mnv_charge,Charge,NA,,Attack,,,,Standard Action,,,,,,,,You are Hindered. Move your Speed and make a Melee Basic Attack. You can't move this turn,,,,Hindered and Dazed. Move Speed and make Melee Basic Attack.
+mnv_stnup,Stand Up,NA,,Utility,,,,Move Action,,,,,,,,"You stop being Prone, and you are Hindered this turn. Move 1",,,,"Hindered. No longer Prone, Move 1."
+mnv_run,Run,NA,,Utility,,,,Standard Action,,,,,,,,"Move your Speed +4. You are Dazed until the start of your next turn.",,,,"Move Speed+4, and Dazed until next turn."
+# Advanced Miscellaneous Maneuvers
+mnv_escpe,Escape,NA,,Utility,,,,Move Action,,,,,,,,"Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy.",,,,"Roll save to stop being Grabbed by an enemy."
+mnv_ftaid,First Aid,,,Utility,,,,Standard Action,,Melee,targets a Dying ally,,,,,The target is no longer Dying.,,,,"Melee, targets a Dying ally. No longer Dying."
+mnv_adpot,Administer Potion,,,Utility,,,,Standard Action,,Melee,targets an ally,,,,,"The target uses a Potion carried or held by you or the target.",,,,"Melee, targets an ally. Use Potion on target."
+mnv_rdyml,Ready Melee Attack,,,Utility,,,,Standard Action,,,,"Until your next turn, the first time an enemy you can see moves to a square adjacent to you, they provoke an opportunity attack from you.","You can use this attack only if there are no enemies you can see adjacent to you.",,,,,,,"Gain Opportunity Attack to next enemy moving into melee range."
+mnv_rdyrn,Ready Ranged Attack,,,Utility,,,,Standard Action,,,,"Until your next turn, you are Hindered, the first time an enemy you can see moves to a square within Long Range of your Ranged Basic Attack, you can make a Ranged Basic Attack as a Reaction (Interrupt) against them","You can use this attack only if there are no enemies you can see within Long Range of your Ranged Basic Attack.",,,,,,,"Gain Reaction Ranged Basic Attack to next enemy moving into range. Hindered until next turn."
+mnv_pierce,Pierce,NA,,Utility,,,,Minor Action,,,,,,,,"Choose an enemy you can see and name a type of resistance. On your attacks against that enemy this turn, that resistance is downgraded. You are Hindered this turn.",,,,"Downgrade a resistance against your attacks. Hindered."
+# Advanced Move Maneuvers
+mnv_climb,Climb,,,Utility,,,,Move Action,,,,,,,,Climb 1.,,,,Climb 1.
+mnv_swim,Swim,,,Utility,,,,Move Action,,,,,,,,Swim 1. ,,,,Swim 1.
+mnv_crawl,Crawl,,,Utility,,,,Move Action,,,,,,,,Crawl 1. ,,,,Crawl 1.
+mnv_blnce,Balance,NA,,Utility,,,,Move Action,,,,,,,,Move 1 over narrow or slippery terrain.,,,,Move 1 over narrow/slippery terrain.
+mnv_lnjmp,Long Jump,NA,,Utility,,,,Move Action,,,,,,,,"Move half your Speed. If you are 2 or more squares away from your starting position, Long Jump 2.",,,,"Move Speed/2, Long Jump 2"
+mnv_hijmp,High Jump,NA,,Utility,,,,Move Action,,,,,,,,"Move half your Speed. If you are 2 or more squares away from your starting position, High Jump 1.",,,,"Move Speed/2, High Jump 1"
+mnv_drop,Drop,NA,,Utility,,,,Move Action,,,,,,,,"Move 1. If you fall during this movement, treat the fall if the fall distance was 1 less. You can choose to become Prone",,,,"Move 1, fall as if from 1 less square, you may drop Prone."
+# Advanced Stealth Maneuvers
+mnv_hide,Hide,NA,,Utility,,,,Move Action,,,,,,,,"Move 1. If you are in Cover (other than Body Cover) or Concealment from all enemies, you become Shrouded. If you were already Shrouded, you become Hidden instead.",,,,"Move 1. If in Cover/Concealment, become Shrouded/Hidden"
+mnv_vansh,Vanish,NA,,Utility,,,,Standard Action,,,,,,,,"Move 1. If you are in Superior Cover or Superior Concealment from all enemies, you become Hidden. ",,,,"Move 1. If in Superior Cover/Concealment, become Hidden"
+mnv_sneak,Sneak,NA,,Utility,,,,Move Action,,,,,,,,"Special: Use only while Shrouded or Hidden. Effect: Move half your Speed. If you are in Cover (other than Body Cover) or Concealment from all enemies, you remain Shrouded or Hidden.",,,,"Move Speed/2, remain Shrouded/Hidden"
+mnv_serch,Search,NA,,Utility,,,,Move Action,,,,,,,,"Move 1. All Hidden enemies within 2 squares of you become Shrouded instead.",,,,"Move 1. Hidden enemies within 2 become Shrouded instead."

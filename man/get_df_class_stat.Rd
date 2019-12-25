@@ -2,7 +2,7 @@
 % Please edit documentation in R/origin_class.R
 \name{get_df_class_stat}
 \alias{get_df_class_stat}
-\title{Generate clean class ctats table from raw data}
+\title{Generate clean class stats table from raw data}
 \usage{
 get_df_class_stat(df_class_stat_raw)
 }
@@ -14,5 +14,5 @@ in raw form}
 df_class_stats class stats table in clean form
 }
 \description{
-Generate clean class ctats table from raw data
+Generate clean class stats table from raw data
 }

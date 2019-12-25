@@ -5,8 +5,6 @@
 #'
 #' @return
 #' @export
-#'
-#' @examples
 read_csv_monster <- function(s, delim=',') {
     read_my_csv(s, delim, 'monsters')
 }
@@ -17,8 +15,6 @@ read_csv_monster <- function(s, delim=',') {
 #'
 #' @return
 #' @export
-#'
-#' @examples
 get_htm_monster_race <- function(df_monster_race=NULL){
 
   if (df_monster_race %>% is.null()) {
@@ -39,8 +35,6 @@ get_htm_monster_race <- function(df_monster_race=NULL){
 #'
 #' @return
 #' @export
-#'
-#' @examples
 get_htm_monster_class <- function(df_monster_class=NULL){
 
       if (df_monster_class %>% is.null()) {
@@ -60,8 +54,6 @@ get_htm_monster_class <- function(df_monster_class=NULL){
 #'
 #' @return
 #' @export
-#'
-#' @examples
 get_monster_list_htm <- function(htm_monster){
     paste0('<div class="monsterList">',htm_monster,'</div>')
 }
@@ -75,8 +67,6 @@ get_monster_list_htm <- function(htm_monster){
 #'
 #' @return
 #' @export
-#'
-#' @examples
 write_file_htm_monster <- function(htm_monster, dir_output, file_name){
     file_css <- system.file("SFRPG.css", package='sfrpg',
         mustWork=TRUE)

@@ -7,16 +7,16 @@
 build_element(s, pre, post, skipEmpty = TRUE)
 }
 \arguments{
-\item{s}{string}
+\item{s}{string array used as input}
 
-\item{pre}{string}
+\item{pre}{string with tags to append before s}
 
-\item{post}{string}
+\item{post}{string with tags to append after s}
 
 \item{skipEmpty}{logical}
 }
 \value{
-string
+string array with added tags
 }
 \description{
 Typically used to convert raw data into html elements

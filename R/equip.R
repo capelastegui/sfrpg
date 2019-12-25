@@ -3,9 +3,6 @@
 #'
 #' @return List of strings with html tables
 #' @export
-#'
-#' @examples
-#' df_tables_equip = get_df_equip()
 get_df_equip <- function ()
 {
   df_weapons <- read_my_csv("weapons")
@@ -50,9 +47,6 @@ get_df_equip <- function ()
 #'
 #' @return String with an html table for weapons, implements, or armor.
 #' @export
-#'
-#' @examples
-#' extract_equip_table(df_equip, 'Weapons', 'Basic') %>% cat()
 extract_equip_table <- function(df_tables_equip, type, subtype='-'){
   df_tables_equip %>%
     dplyr::filter(table_type==type, Training==subtype) %>%

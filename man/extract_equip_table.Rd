@@ -13,6 +13,9 @@ extract_equip_table(df_tables_equip, type, subtype = "-")
 
 \item{subtype}{}
 }
+\value{
+String with an html table for weapons, implements, or armor.
+}
 \description{
 Convenience function to extract subtable from equip_table
 }

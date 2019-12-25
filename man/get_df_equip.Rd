@@ -12,6 +12,3 @@ List of strings with html tables
 \description{
 Generate html tables for equipment from source .csv files
 }
-\examples{
-df_tables_equip = get_df_equip()
-}

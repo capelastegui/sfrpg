@@ -53,9 +53,6 @@ add_p_action <- function(df_power) {
 #'
 #' @return merged class power table, raw
 #' @export
-#'
-#' @examples
-#' df_power_raw = read_df_class_power()
 read_df_power <- function(is_class=TRUE) {
 
   df_class_build <- read_my_csv('build')
@@ -80,10 +77,6 @@ read_df_power <- function(is_class=TRUE) {
 #'
 #' @return character vector with html power blocks
 #' @export
-#'
-#' @examples
-#' clean_df_power(read_df_class_power(), read_my_csv('power_tags'))
-#'
 clean_df_power <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
 {
   l_color_map=c(green = "", red = "Encounter", gray = "Daily")
@@ -154,8 +147,6 @@ clean_df_power <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
 #'
 #' @return
 #' @export
-#'
-#' @examples
 apply_class_power_summary  <- function(df) {
   build_table_apply(
     df,
@@ -183,8 +174,6 @@ apply_class_power_summary  <- function(df) {
 #'
 #' @return string with class section in html form
 #' @export
-#'
-#' @examples
 get_class_section <- function(class,
                               build,
                               htm_stat,
@@ -226,8 +215,6 @@ get_class_section <- function(class,
 #'
 #' @return df_class_stats class stats table in clean form
 #' @export
-#'
-#' @examples
 get_df_class_stat <- function(df_class_stat_raw) {
   get_skill_str_column <- function(skill, df_class_stat) {
     df_class_stat[[skill]]  %>%
@@ -270,17 +257,15 @@ get_df_class_stat <- function(df_class_stat_raw) {
 #'
 #' @return
 #' @export
-#'
-#' @examples
 read_df_origin_stats <- function(){
-  df_origin_build <- read_my_csv('build') %>% filter(type=='origin')
+  df_origin_build <- read_my_csv('build') %>% dplyr::filter(type=='origin')
   df_origin_stats_partial <- read_my_csv('origin_stats')
 
   df_origin_stats_raw <- df_origin_build %>%
     dplyr::inner_join(df_origin_stats_partial)
 
   df_origin_stat <- df_origin_stats_raw %>%
-    dplyr::select(-build_id) %>%
+    dplyr::select(-build_id, -type) %>%
     dplyr::group_by(Class, Build) %>%
     dplyr::group_nest (.key = 'data_stat_tmp') %>%
     dplyr::mutate(data_stat = data_stat_tmp %>%
@@ -296,8 +281,6 @@ read_df_origin_stats <- function(){
 #'
 #' @return
 #' @export
-#'
-#' @examples
 read_df_feature <- function(is_class=TRUE){
 
    df_class_build <- read_my_csv('build')
@@ -344,6 +327,27 @@ l_power_id, Class='sheet', Build='sheet')
   df_powers
 }
 
+#' Generate dataframe with html text for combat maneuver rules
+#'
+#' @param dir_base
+#'
+#' @return df_class table (Class, Build,
+#'         htm_stat,htm_feature,htm_power_summary,htm_power)
+#' @export
+get_df_maneuver <- function(){
+    df_power_raw = read_df_power() %>%
+    dplyr::filter(type=='maneuver')%>%
+    dplyr::select(-type)
+
+    df_power_tag <-  read_my_csv('power_tags')
+
+    df_power_clean = df_power_raw %>%
+    clean_df_power(df_power_tag)
+
+    df_power_clean
+
+}
+
 # TODO: option not to include df_class_stat
 
 #' Generate dataframe with html text for class rules
@@ -353,8 +357,6 @@ l_power_id, Class='sheet', Build='sheet')
 #' @return df_class table (Class, Build,  
 #'         htm_stat,htm_feature,htm_power_summary,htm_power)
 #' @export
-#'
-#' @examples
 get_df_class <- function (
   df_class_feature_raw = NULL,
   df_class_power_raw = NULL) {
@@ -365,14 +367,14 @@ get_df_class <- function (
 
   if (df_class_feature_raw %>% is.null()) {
     df_class_feature_raw = read_df_feature() %>%
-      filter(type=='class')%>%
-      select(-type)
+      dplyr::filter(type=='class')%>%
+      dplyr::select(-type)
   }
 
     if (df_class_power_raw %>% is.null()) {
     df_power_raw = read_df_power() %>%
-      filter(type=='class')%>%
-      select(-type)
+      dplyr::filter(type=='class')%>%
+      dplyr::select(-type)
   }
 
   df_class_feature = df_class_feature_raw %>%
@@ -429,8 +431,6 @@ get_df_class <- function (
 #' @return df_origin table (Class, Build,
 #'         htm_stat,htm_feature,htm_power_summary,htm_power)
 #' @export
-#'
-#' @examples
 get_df_origin <- function (
   df_feature_raw = NULL,
   df_power_raw = NULL) {
@@ -440,14 +440,14 @@ get_df_origin <- function (
 
   if (df_feature_raw %>% is.null()) {
     df_feature_raw = read_df_feature(is_class=FALSE) %>%
-    filter(type=='origin') %>%
-      select(-type)
+    dplyr::filter(type=='origin') %>%
+      dplyr::select(-type)
   }
 
     if (df_power_raw %>% is.null()) {
     df_power_raw = read_df_power(is_class=FALSE) %>%
-    filter(type=='origin') %>%
-      select(-type)
+    dplyr::filter(type=='origin') %>%
+      dplyr::select(-type)
   }
 
   df_feature = df_feature_raw %>%
@@ -506,8 +506,6 @@ get_df_origin <- function (
 #' @return df_class table (Class, Build,
 #'         htm_stat,htm_feature,htm_power_summary,htm_power)
 #' @export
-#'
-#' @examples
 get_html_sheet <- function (l_feature_id, l_power_id,
 character_name='Character Sheet') {
   usageOrder  <- c("", "At-Will", "Encounter", "Daily")
@@ -558,8 +556,6 @@ character_name='Character Sheet') {
 #'
 #' @return
 #' @export
-#'
-#' @examples
 get_class_build <- function(df_class, char_class, char_build) {
   df_class %>% dplyr::filter(Class == char_class, Build == char_build)
 }
@@ -576,8 +572,6 @@ get_class_build <- function(df_class, char_class, char_build) {
 #'
 #' @return
 #' @export
-#'
-#' @examples
 write_class_file <- function(df_class, char_class, char_build, dir_output) {
   htm_file = get_class_build(
     df_class, char_class, char_build)$htm_class_section %>%
@@ -605,8 +599,6 @@ write_html_sheet <- function(l_feature_id, l_power_id,
 #'
 #' @return
 #' @export
-#'
-#' @examples
 write_class_section_file <- function(df_class, dir_output) {
   htm_file_full = df_class$htm_class_section %>%
     purrr::map_chr( get_htm_file) %>% paste

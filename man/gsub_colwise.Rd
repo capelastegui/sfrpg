@@ -2,7 +2,7 @@
 % Please edit documentation in R/csv_to_html.R
 \name{gsub_colwise}
 \alias{gsub_colwise}
-\title{Apply gsub, then as.factor on string/factor columns of dataframe}
+\title{Apply gsub on string/factor columns of dataframe}
 \usage{
 gsub_colwise(df, pattern, replacement)
 }
@@ -17,5 +17,8 @@ gsub_colwise(df, pattern, replacement)
 A dataframe like df1, with pattern replaced by replacement in columns
 }
 \description{
-Apply gsub, then as.factor on string/factor columns of dataframe
+Apply gsub on string/factor columns of dataframe
+}
+\examples{
+tibble::tibble(x=c('hello','world'),y=c('a', 'o'))  \%>\% gsub_colwise('o','u')
 }

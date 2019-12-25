@@ -38,7 +38,7 @@
 -->
 In this chapter we provide the rules for resolving a combat encounter.
 
-##Combat Fundamentals
+## Combat Fundamentals
 
 In Square Fireballs, a combat encounter represents a short, violent conflict between an adventuring party of Player Characters and a group of Monsters controlled by the Game Master. 
 
@@ -186,11 +186,15 @@ Condition | Modifier
 Defender grants Advantage to Attacker | +2
 Defender has any Cover from Attacker | -2
 Defender has Superior Cover from Attacker | -3
-Defender has any Concealment from Attacker | -2
-Defender has Superior Concealment from Attacker | -3
+Defender has any Concealment from Attacker, attack is Melee or Ranged | -2
+Defender has Superior Concealment from Attacker, attack is Melee or Ranged | -3
 Attacker is Hindered | -2
 Ranged attack at Long Range | -2
-Opportunity Attack | + Reaction Modifier
+
+Note: Characters with Superior Cover also benefit from regular Cover, so attacks
+against them will have a total modifier of -5. Likewise, Characters with 
+Superior Concealment also benefit from regular Concealment, and attacks against
+them have a total modifier of -5.
 
 #### Critical Hits
 ### Damage Roll
@@ -215,20 +219,26 @@ List of combat conditions
         - Either one Standard Action or one Move Action
         
 - Dazzled
-    - Treats all enemies as having Concealment _(-2 to hit them)_ or, if already in Concealment, as having Superior Concealment _(an additional -3 to hit them)_.
+    - Treats all enemies as having Concealment _(-2 to hit them)_ or,
+      if already in Concealment, as having Superior Concealment 
+      _(an additional -3 to hit them)_.
 
 
 - Deafened
     - Grants Advantage  _(+2 to be hit)_
-    - When using the Search combat maneuver, roll a Save. On a failed save, the maneuver has no effect
+    - When using the Search combat maneuver, roll a Save. 
+      On a failed save, the maneuver has no effect
     - +1 Difficulty Category to Perception Skill Checks
 
 
 - Dominated
     - Cannot take actions
     - When damaged, can roll a Save to end this condition
-    - The dominating character can spend a move action to make the dominated character move its speed. _(This counts as forced movement)_
-    - The dominating character can spend a standard action to make the dominated character use an at-will attack. _(This counts as a forced attack)_
+    - The dominating character can spend a move action to make the dominated 
+      character move its speed. _(This counts as forced movement)_
+    - The dominating character can spend a standard action to make the 
+      dominated character use an at-will attack. 
+      _(This counts as a forced attack)_
 
 <div class="tip">
 Sidebar: Forced attack
@@ -246,12 +256,21 @@ Forced attacks ignore the marked condition. A character making a forced attack c
 Forced attacks never trigger opportunity attacks.
 </div>
 
+- Flanked
+  - Grants Advantage on Melee attacks _(+2 to be hit)_
+
 - Grabbed
     - Cannot move
-    - When grabbed, the character is pulled to a square adjacent to the grabbing character
-    - The condition ends if at any time the grabbed character is not adjacent to the grabbing character
-    - Grabbed character can use the Escape combat maneuver to end the condition. _(Move Action, roll save to end grab from one enemy)_
-    - If forced movement would cause the grabbed character and the grabbing character to no longer be adjacent, the grabbed can roll a Save to end this condition. If the condition doesn't end this way, the forced movement is negated
+    - When grabbed, the character is pulled to a square adjacent to 
+      the grabbing character
+    - The condition ends if at any time the grabbed character is not 
+      adjacent to the grabbing character
+    - Grabbed character can use the Escape combat maneuver to end the 
+      condition. _(Move Action, roll save to end grab from one enemy)_
+    - If forced movement would cause the grabbed character and the grabbing 
+      character to no longer be adjacent, the grabbed character can roll a Save 
+      to end this condition. If the condition doesn't end this way, 
+      the forced movement is negated
     - A character may be Grabbed by multiple enemies at a time.
 
 - Helpless
@@ -271,31 +290,31 @@ Tip: Many types of action can cause a character to be Hindered for a turn. These
 - Immobilized
     - Cannot move
 
-- Marked
-    - -2 Hit on attacks that violate the mark (see sidebar)
-    - A character may be Marked by multiple enemies at a time.
+- Taunted
+    - -2 Hit on attacks that ignore the Taunt (see sidebar)
+    - A character may be Taunted by multiple enemies at a time.
 
 <div class="tip">
-Sidebar: Violating marks
+Sidebar: ignoring Taunts
 
-An attack by a Marked character violates a mark if it targets an enemy not marking the character. The following exceptions apply:
+An attack by a Taunted character ignores a Taunt if it targets an enemy not taunting the character. The following exceptions apply:
 
-- If the attack targets multiple characters, and all enemies marking the character are already targeted, any additional targets do not violate the mark.
-- If multiple attacks are made in sequence as part of the same attack power _(e.g. primary and secondary attacks)_, once all enemies marking the character have been targeted at least once, any additional targets do not violate the mark.
-- If an attack originally does not violate the mark, and the attack targets are somehow changed by an enemy action or other effect, this does not cause the attack to violate the mark. 
-- If an attack originally does not violate the mark, and the attacker becomes Marked during the attack _(e.g. by an enemy reaction)_, this does not cause the attack to violate the mark. 
+- If the attack targets multiple characters, and all enemies taunting the character are already targeted, any additional targets do not ignore the Taunt.
+- If multiple attacks are made in sequence as part of the same attack power _(e.g. primary and secondary attacks)_, once all enemies Taunting the character have been targeted at least once, any additional targets do not ignore the Taunt.
+- If an attack originally does not ignore the Taunt, and the attack targets are somehow changed by an enemy action or other effect, this does not cause the attack to ignore the Taunt. 
+- If an attack originally does not ignore the Taunt, and the attacker becomes Taunted during the attack _(e.g. by an enemy reaction)_, this does not cause the attack to ignore the mark. 
 </div>
 
 <div class="compatibility">**Compatibility Note**: Defender Aura
 
 Some characters in compatible books have the Defender Aura power. The effect of this power should be replaced with the following:
 
-“Enemies in the aura are Marked by you.”
+“Enemies in the aura are Taunted by you.”
 </div>
 
-<div class="compatibility">**Compatibility Note**: Violating Marks
+<div class="compatibility">**Compatibility Note**: ignoring Taunts
 
-Any reference from compatible books to effects that trigger when a Marked character 'makes an attack that does not include the marking character as a target' should use the rules for violating marks described above.
+Any reference from compatible books to effects that trigger when a Taunted character 'makes an attack that does not include the Taunting character as a target' should use the rules for violating Taunts described above.
 </div>
 
 
@@ -346,7 +365,7 @@ Any reference from compatible books to effects that trigger when a Marked charac
     - When using a burst or blast power while swallowed, the swallower and all characters and objects swallowed by it are included in the burst or blast.
 
 - Unconscious
-    - When a character falls unconscious, he is knocked prone.
+    - When a character falls unconscious, they are knocked prone.
     - When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.
     - Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_
     - Cannot take actions
@@ -410,6 +429,10 @@ Slide multiple units, at range (1) and in melee (2)
 
 ## Combat Maneuvers
 
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_maneuver = get_df_maneuver()
+```
 
 ### PC Maneuvers
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}

@@ -6,9 +6,6 @@
 #'
 #' @return Dataframe generated from csv
 #' @export
-#'
-#' @examples
-#' df_origin_build <- read_my_csv('origin_build')
 read_my_csv <- function(s, delim = ',', folder='character_creation') {
   dir_base  = system.file('raw', folder, package='sfrpg', mustWork=TRUE)
 
@@ -16,7 +13,8 @@ read_my_csv <- function(s, delim = ',', folder='character_creation') {
   readr::read_delim(
     file.path(dir_base, paste0(s, ".csv")),
     delim = delim,
-    col_types = readr::cols(.default = "c")
+    col_types = readr::cols(.default = "c"),
+    comment='#'
   )  %>% dplyr::mutate_if (is.character,
                            ~stringr::str_replace_all(., str_regex, "\r\n"))
 }
