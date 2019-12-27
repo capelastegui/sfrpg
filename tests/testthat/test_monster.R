@@ -9,6 +9,8 @@ test_that("get_htm_monster_race() works", {
   htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
     get_monster_list_htm() %>% 
     get_htm_file(css=css)
+  
+  skip_on_travis()
   verify_output(
     test_path('output','test_get_htm_monster_race.txt'),
     print(htm_monster_race)
@@ -23,10 +25,13 @@ test_that("get_htm_monster_class() works", {
   css <- readChar(file_css, file.info(file_css)$size)
   htm_monster_class <- get_htm_monster_class()  %>% get_monster_list_htm( )%>% 
     get_htm_file(css=css)
+  
+  skip_on_travis()
   verify_output(
     test_path('output','test_get_htm_monster_class.txt'),
     print(htm_monster_class)
   )
+  
   htm_monster_class %>%
   readr::write_file(test_path('output','test_get_htm_monster_class.html'))
 

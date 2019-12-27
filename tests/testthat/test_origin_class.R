@@ -5,6 +5,7 @@ context("Convert data from .csv to html")
 
 test_that("read_df_feature works", {
   df_class_feature <- read_df_feature()
+  skip_on_travis()
   verify_output(
     test_path('output','test_read_df_class_feature.txt'),
     print(df_class_feature)
@@ -18,6 +19,8 @@ test_that("read_df_power works", {
 
 test_that("get_df_class works", {
   df_class = get_df_class()
+  
+  skip_on_travis()
   
   verify_output(
     test_path('output','test_class_output.txt'),
@@ -48,7 +51,7 @@ test_that("get_df_class works", {
 
 test_that("get_df_origin works", {
   df_origin = get_df_origin()
-  
+  skip_on_travis()
   verify_output(
     test_path('output','test_origin_output.txt'),
     print(df_origin)

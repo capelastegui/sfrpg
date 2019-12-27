@@ -23,6 +23,7 @@ test_that("get_equip_tables works", {
                      "</body></html>",
                      sep="\r\n",
                      collapse="")
+  skip_on_travis()
   verify_output(
     test_path('output','test_equip_output.txt'),
     print(df_equip)

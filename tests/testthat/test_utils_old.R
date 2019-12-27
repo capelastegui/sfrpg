@@ -14,7 +14,7 @@ test_that("test_llply.parallel.ab works", {
     l_result2 = purrr::map2(l1,l1, ~purrr::map2(.x, .y, get_l_result))
     
 
-    
+    skip_on_travis()
     verify_output(
       test_path('output','test_llply.parallel.ab.txt'),
       l_result %>% qstr(4),
@@ -41,6 +41,7 @@ test_that("llply.parallel.multilist works", {
   
   l_result = llply.parallel.multilist(l1,l_in, 2,.fun=get_l_result)
   
+  skip_on_travis()
   verify_output(
     test_path('output','test_llply.parallel.multilist.txt'),
      l_result %>% qstr(4)
