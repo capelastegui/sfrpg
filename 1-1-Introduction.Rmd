@@ -1,5 +1,12 @@
 # Introduction
 
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+basedir <- here::here()
+library(png)
+library(grid)
+library(sfrpg)
+```
+
 ## Welcome to the game
 
 Welcome to Square Fireballs! In this game, a group of friends can take the role of a party of adventurers exploring a fantasy world, fighting rampaging monsters, and discovering ancient treasures. 
@@ -28,9 +35,6 @@ It should be noted, though, that although the GM is in control of the PCs' enemi
 
 Why did we choose to call our game Square Fireballs? What does that even mean? The following figures illustrate the reasoning behind the name:
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-basedir <- here::here()
-library(png)
-library(grid)
 img1 <- readPNG(file.path(basedir,"figures","Square-Fireball-1.png"))
 img2 <- readPNG(file.path(basedir,"figures","Square-Fireball-2.png"))
 grid.raster(img1,interpolate=FALSE,x=0.25,width=unit(0.4, "npc"))
@@ -189,43 +193,14 @@ Combat in the game is represented as a succession of attacks where characters de
 
 The amount of HP of a Character depends on character Level and Class, for Player Characters, and on character Level, monster Role, and monster Type, in the case of monsters. The HP progression for Player Characters is:
 
-- Classes with normal HP: 30 HP + 3 HP per level.
-- Classes with high HP: 35 HP + 3.5 HP per level.
-- Classes with very high HP: 40 HP + 4 HP per level.
+- Classes with normal HP: 25 HP + 2.5 HP per level
+- Classes with high HP: 30 HP + 3 HP per level.
+- Classes with very high HP: 35 HP + 3.5 HP per level.
 
 <div class="very-narrow">
-Level  | HP Level | Normal HP | High HP | Very High HP
-------------- | -------------
-1 | 11 | 33 | 38 | 44
-2 | 12 | 36 | 42 | 40
-3 | 13 | 39 | 45 | 40
-4 | 14 | 42 | 49 | 40
-5 | 15 | 45 | 52 | 40
-6 | 16 | 48 | 56 | 40
-7 | 17 | 51 | 59 | 40
-8 | 18 | 54 | 63 | 40
-9 | 19 | 57 | 66 | 40
-10 | 20 | 60 | 70 | 40
-11 | 22 | 66 | 77 | 40
-12 | 24 | 72 | 84 | 40
-13 | 26 | 78 | 91 | 40
-14 | 28 | 84 | 98 | 40
-15 | 30 | 90 | 105 | 40
-16 | 32 | 96 | 112 | 40
-17 | 34 | 102 | 119 | 40
-18 | 36 | 108 | 126 | 40
-19 | 38 | 114 | 133 | 40
-20 | 40 | 120 | 140 | 40
-21 | 44 | 132 | 154 | 40
-22 | 48 | 144 | 168 | 40
-23 | 52 | 156 | 182 | 40
-24 | 56 | 168 | 196 | 40
-25 | 60 | 180 | 210 | 40
-26 | 64 | 192 | 224 | 40
-27 | 68 | 200 | 238 | 40
-28 | 72 | 216 | 252 | 40
-29 | 76 | 228 | 266 | 40
-30 | 80 | 240 | 280 | 320
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+get_df_hp_html()
+```
 </div>
 
 A summary table with the HP and other stats corresponding to each Player Character class is provided in the Classes section of the Character Building chapter.
