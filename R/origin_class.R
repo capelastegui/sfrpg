@@ -91,9 +91,14 @@ clean_df_power <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
       usageColors = UsageLimit %>%
         factor %>%
         # Assign colors as factor levels
-        forcats::fct_recode(!!!l_color_map) %>%
+        # Noisy function, suppressing warnings
+        #forcats::fct_recode(!!!l_color_map) %>%
+        {suppressWarnings( forcats::fct_recode(.,!!!l_color_map))} %>%
         # Reorder factor levels: green,red,gray
-        forcats::fct_relevel(c('green','red','gray'))) %>%
+        # Noisy function, suppressing warnings
+        #forcats::fct_relevel(c('green','red','gray'))
+        {suppressWarnings( forcats::fct_relevel(.,c('green','red','gray')))}
+    ) %>%
     dplyr::arrange(isFeature != "Feature",
                    Type, usageColors, Level, Name)
 
@@ -434,8 +439,6 @@ get_df_class <- function (
 get_df_origin <- function (
   df_feature_raw = NULL,
   df_power_raw = NULL) {
-  usageOrder  <- c("", "At-Will", "Encounter", "Daily")
-
   df_origin_stats = read_df_origin_stats()
 
   if (df_feature_raw %>% is.null()) {
@@ -508,8 +511,6 @@ get_df_origin <- function (
 #' @export
 get_html_sheet <- function (l_feature_id, l_power_id,
 character_name='Character Sheet') {
-  usageOrder  <- c("", "At-Will", "Encounter", "Daily")
-
   df_power_raw = get_df_power_from_sheet(l_power_id)
 
   df_class_feature = get_df_feature_from_sheet(l_feature_id) %>%
