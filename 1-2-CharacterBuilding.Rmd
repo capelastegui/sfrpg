@@ -188,13 +188,11 @@ The following weapon families are supported in the game:
 
 The following weapon keywords are supported in the game:
 
-- **Off-Hand**: The weapon can be wielded in the off-hand while another weapon or object is wielded in the main hand. When a character is simultaneously wielding two Off-Hand weapons, these weapons gain the Parry keyword (+1 AC vs melee).
-- **Parry**: A character wielding one or more weapons with Parry gains +1 to AC against melee attacks. The bonus from multiple weapons with this keyword does not stack.
-- **Range**: Ranged weapons have the Range keyword, followed by two numbers. The first number is the Short Range, the maximum distance at which the weapon can make Ranged and Area attacks without penalty. The second number is the Long Range, the maximum distance at which the weapon can make Ranged and Area attacks with a Long Range penalty (-2 hit).
+- **Off-Hand**: The weapon can be wielded in the off-hand while another weapon or object is wielded in the main hand. 
+- **Parry**: A character wielding one or more weapons or shields with Parry gains +1 to AC against Melee and Close attacks. The bonus from multiple instances of this keyword does not stack.
+- **Ranged**: Ranged weapons have the Range keyword, followed by a number indicating the Weapon Range. Characters can make Ranged and Area attacks up to a distance equal to the Weapon Range without penalty. In addition, characters can make Ranged (but not Area) attacks at long range, to distances between Weapon Range and twice the Weapon Range, with a -2 penalty to hit.
 - **Reach**: Weapons with reach increase the Melee Reach for attacks made with them by a certain amount. A medium-sized character typically has a Melee Reach of 1, which increases to 2 with a Reach +1 weapon, and to 3 with a Reach +2 weapon.
-- **Recharge**: -2 to hit unless the wielder has spent a move action to recharge this weapon since last drawing it or attacking with it.
--- Recharge (move action). Move 1 square. You can ignore the Recharge penalty to hit with one of your weapons for your next attack power with that weapon.
-- **Throw**: Melee weapons with Throw can be used to make Ranged and Area attacks as well as Melee and Close attacks. The Throw keyword is followed by two numbers. The first number is the Short Range, the maximum distance at which the weapon can make Ranged and Area attacks without penalty. The second number is the Long Range, the maximum distance at which the weapon can make Ranged and Area attacks with a Long Range penalty (-2 hit). After using a Ranged or Area attack power with a Throw weapon, choose a character targeted by the attack. The weapon is placed on the ground in a square in the character's space. Magical Weapons with Throw are automatically returned to the wielder's hand after each attack instead.
+- **Throw**: Melee weapons with Throw can be used to make Ranged and Area attacks as well as Melee and Close attacks. The Throw keyword is followed by a number indicating the Weapon Range. Characters can make Ranged and Area attacks up to a distance equal to the Weapon Range without penalty. In addition, characters can make Ranged (but not Area) attacks at long range, to distances between Weapon Range and twice the Weapon Range, with a -2 penalty to hit. After using a Ranged or Area attack power with a Throw weapon, choose a character targeted by the attack. The weapon is placed on the ground in a square in the character's space. Magical Weapons with Throw are automatically returned to the wielder's hand after each attack instead.
 - **Unwieldy**: Attacks made with this weapon gain a -1 penalty to hit.
 - **Versatile**: When wielded on the main hand with a free off-hand, this weapon deals +1 damage per weapon damage die. This increases to +2 damage per weapon damage die at level 16.
 - **Very Unwieldy**: Attacks made with this weapon gain a -2 penalty to hit.
@@ -206,11 +204,12 @@ The following weapon keywords are supported in the game:
 The hand requirements to use a weapon are as follows:
 
 - **One-handed weapons without the Off-Hand keyword** can be wielded in the character's **main hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the Off-Hand.
-- **One-handed weapons with the Off-Hand keyword** can be wielded in the character's **main hand or off-hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the other hand. When a character wields an Off-Hand weapon in each hand, these weapons gain the Parry keyword (+1 AC vs melee).
-- **One-handed weapons with the Versatile keyword** can be wielded in **one hand** like regular one-handed weapons. However, if the **other hand is free**, the character gains a **damage bonus** when using the weapon of +1 per weapon damage die (which increases to +2 at level 16). Versatile weapons wielded while leaving a hand free count as two-handed weapons for any Power or Class Feature that references two-handed weapons.
+- **One-handed weapons with the Off-Hand keyword** can be wielded in the character's **main hand or off-hand**. The character can wield another item, such as an Off-Hand weapon, an implement or a Shield, in the other hand. When making an attack, a character can choose to use either the main hand weapon or the Off-Hand weapon - there are no penalties for Off-Hand attacks.
 - **Two-handed weapons** require both hands to be wielded. A character cannot use a hand to wield any other item while wielding such a weapon.
 
-<div class="tip">**Tip**: It is usually better to use two-handed weapons, or Versatile weapons with a free hand, if you want your character to focus on the offense, and a one-handed weapon with a shield or two Off-Hand weapons, if you prefer focusing on defense. Wielding a weapon in each hand does not grant additional attacks or any other inherent benefits (aside from the Parry keyword granted when dual wielding Off-Hand weapons), so it is usually not a good idea, unless you have class Powers or Features that require dual wielding or otherwise reward you for it.</div>
+**One-handed versatility** : A character wielding a One-Handed weapon while leaving the other hand free can choose to take a -1 Hit penalty on an attack with that weapon to gain a +1 bonus to the weapon damage (scaling with Weapon Damage Multiplier). When they do, that weapon counts as Two-Handed for the purpose of powers or abilities that care about weapon types.
+
+<div class="tip">**Tip**: It is usually better to use two-handed weapons, or One-handed weapons with a free hand or a Light Shield, if you want your character to focus on the offense, and a one-handed weapon with a Heavy Shield if you prefer focusing on defense. Wielding a weapon in each hand offers you extra flexibility, but otherwise it does not grant additional attacks or any other inherent benefits, so it is usually not a good idea, unless you have class Powers or Features that require dual wielding or otherwise reward you for it.</div>
 
 #### Weapon Tables
 
@@ -260,14 +259,18 @@ Each armor in the game is described by the following elements:
 - **Name**
 - **AC bonus**: Bonus granted to a character's AC for wearing the armor with training.
 - **Type**: Whether the armor is Light Armor or Heavy Armor, or a Shield. 
-- **Armor Penalty**: Penalty granted to Initiative and many Skills for wearing the armor.
-- **Movement Penalty**: Penalty granted to a character's Speed (for all available movement types) for wearing the armor.
+- **Armor Penalty**: Penalty granted to Ranged and Area attacks and many Skills.
+- **Movement Penalty**: Penalty granted to a character's Speed (for all available movement types).
 
 Each character can wear one suit of Light Armor or Heavy Armor. In addition, each character can use one Shield. Characters wearing nothing but plainclothes, or wearing no clothes, are considered as wearing Cloth Armor. Using a shield takes up one hand, and characters cannot wield weapons or implements nor carry objects with their shield hand.
 
+**Armor Penalty**: Some types of armor have an Armor Penalty value (typically -1). This penalty attacks to Hit rolls of Ranged and Area attacks, as well as Skill Checks for Athletics, Endurance, Finesse, and Stealth.
+
+<div class="tip">**Tip**: Characters focused on Ranged and Area attacks should consider carefully whether the added protection of Heavy Armor is worth taking the Armor Penalty to hit. As a rule of thumb, a +1 to Hit on all attacks is worth more than a +1 to defend against half of enemy attacks (since armor does not protect against attacks targeting Fortitude, Reflex or Will). </div>
+
 A character's class determines which armors the character is trained to use. A character using an armor without training does not benefit from any of the armor's properties, including AC bonus and any magic abilities. However, any Armor Penalty or Movement Penalty imposed by the armor still applies. All characters are considered to be trained in the use of Cloth Armor.
 
-A character using a Shield and wearing Light Armor or Heavy Armor can add the AC bonuses from shield and armor. However, Armor Penalties and Movement Penalties are also added.
+A character using a Shield and wearing Light Armor or Heavy Armor can add the AC bonuses from shield and armor.
 
 Some character classes gain an additional bonus to AC while wearing Light Armor. This is called Light Armor AC Bonus. Some classes also have class features that grant a bonus to AC, and these can stack with their Light Armor AC Bonus. A table summarizing Light Armor AC Bonus and other stats for all classes currently in the game (including classes from older rulebooks) is provided in this chapter, in the Origin and Class Selection section. 
 
@@ -306,6 +309,10 @@ The table below provides stats for all types of armor in the game:
 extract_equip_table(df_equip, 'Armor') %>% cat
 ```
 
+Shields have the following rules:
+
+- **Light Shield**: Gain Parry (+1 Arm vs Melee and Close attacks)
+- **Heavy Shield**: -1 Hit on all attacks. Gain +2 Arm.
 
 ### Implements
 
@@ -427,7 +434,7 @@ Each Lesser Feat is composed of the following elements:
 The following table summarizes the acquisition of  Feat Slots and Lesser Feat Slots per character level:
 
 Level | Slots aquired | Total Feats  | Total Less. Feats  | Feat levels | Lesser Feat levels
-------------- | -------------|--|-- |--|--
+- | ------ |--|-- |---- |---- 
  1| Gain a Level 1 Feat Slot | 1 | 0 | 1 | 
  2| Gain a Level 2 Lesser Feat Slot | 1 | 1| 1 | 2
  4| Gain a Level 4 Feat Slot | 2 | 1| 1,4 | 2
