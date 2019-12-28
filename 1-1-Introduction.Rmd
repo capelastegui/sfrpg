@@ -193,10 +193,6 @@ Combat in the game is represented as a succession of attacks where characters de
 
 The amount of HP of a Character depends on character Level and Class, for Player Characters, and on character Level, monster Role, and monster Type, in the case of monsters. The HP progression for Player Characters is:
 
-- Classes with normal HP: 25 HP + 2.5 HP per level
-- Classes with high HP: 30 HP + 3 HP per level.
-- Classes with very high HP: 35 HP + 3.5 HP per level.
-
 <div class="very-narrow">
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 get_df_hp_html()
