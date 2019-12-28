@@ -6,10 +6,10 @@ Dagger,Light Blade,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
 Hand Axe,Axe,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
 Light Hammer,Hammer,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
 Javelin,Spear,0,1d4,"Off-hand, Throw 8",Basic,Melee,1 hand
-Mace,Hammer,-1,1d8,NA,Basic,Melee,1 hand
-Halfspear,Spear,-1,1d8,NA,Basic,Melee,1 hand
-Scythe,Heavy Blade,0,1d8,NA,Basic,Melee,2 hands
-Quarterstaff,Staff,0,1d8,NA,Basic,Melee,2 hands
+Mace,Hammer,-1,1d8,NA,Basic,Melee,2 hands
+Halfspear,Spear,-1,1d8,NA,Basic,Melee,2 hands
+Scythe,Heavy Blade,-1,1d8,NA,Basic,Melee,2 hands
+Quarterstaff,Staff,-1,1d8,NA,Basic,Melee,2 hands
 Short Sword,Light Blade,1,1d4,Off-hand,Martial,Melee,1 hand
 Nunchaku,Flail,1,1d4,Off-hand,Martial,Melee,1 hand
 Longsword,Heavy Blade,0,1d8,NA,Martial,Melee,1 hand
