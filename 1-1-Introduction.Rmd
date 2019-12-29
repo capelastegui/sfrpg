@@ -5,6 +5,7 @@ basedir <- here::here()
 library(png)
 library(grid)
 library(sfrpg)
+library(magrittr)
 ```
 
 ## Welcome to the game
@@ -325,19 +326,34 @@ Level  | Ability Multiplier
  Characters gain  a small chance of using an Action Point, which increases with
  each additional turn. This is resolved with an **Action Point Check**.
 
-To make an Action Point Check, a character rolls a d4, and adds the current
+To make an Action Point Check, a character rolls a d6, and adds the current
  value of the **Escalation Die** (explained in the following section), as well
  as any bonuses or penalties to Action Point rolls that apply for that
- character. If the result is 4 or higher, the attempt is successful, and the
+ character. If the result is 6 or higher, the attempt is successful, and the
  character can spend the Action Point. Otherwise, it is a failure - the
  character is not able to use the Action Point, and no Action Point is lost. 
 
-By default, a character may only attempt one Action Point Check each encounter.
- Some special rules may allow a character to attempt additional Action Point
- Checks in the same encounter - in that case, the character may only attempt
- one Action Point Check each turn.
+```
+Action Point Check= d6 + Escalation Die + Action Point Check Modifiers
+```
 
-The complete rules for using Action Points are described in the Combat chapter.
+The following Action Point Check Modifiers can apply:
+
+- Character is Bloodied: +1
+
+In addition, some characters can have special abilities that modify Action Point
+Checks. As an example, Human characters have an Origin Feature that grants them
++1 to Action Point Checks
+
+Each character may only attempt an Action Point Check per turn, and spend a 
+single Action Point per encounter.
+
+The primary way to spend an action point is the Use Action Point maneuver:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+get_df_power_from_sheet('mnv_actio') %>% clean_df_power() %$%
+   htm_power %>% cat()
+```
 
 Note that, in addition to Player Characters, some special monsters such as
  Elite or Solo monsters are also capable of using Action Points.
