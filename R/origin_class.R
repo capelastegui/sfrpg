@@ -68,6 +68,26 @@ read_df_power <- function(is_class=TRUE) {
 }
 
 
+#' @export
+clean_df_feature <- function(df_feature_raw, df_feature_tag=NULL) {
+
+  if (df_feature_tag %>% is.null())  {
+    df_feature_tag <- read_my_csv('feature_tags')
+  }
+
+  feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
+  feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
+
+  htm_feature <- df_feature_raw %>%
+    build_element_apply(
+    feature_tag_pre,
+    feature_tag_post,
+    skipEmpty = TRUE
+  )
+
+  htm_feature
+}
+
 #' Build power block from raw data
 #'
 #' @param df_power_raw
@@ -77,9 +97,11 @@ read_df_power <- function(is_class=TRUE) {
 #'
 #' @return character vector with html power blocks
 #' @export
-clean_df_power <- function(df_power_raw, df_power_tag, character_sheet=FALSE)
+clean_df_power <- function(df_power_raw, df_power_tag=NULL, character_sheet=FALSE)
 {
   l_color_map=c(green = "", red = "Encounter", gray = "Daily")
+
+  if (df_power_tag %>% is.null()) {df_power_tag <-  read_my_csv('power_tags')}
 
   power_tag_pre <- df_power_tag[1,] %>% dplyr::select(-Class,-Build)
   power_tag_post <- df_power_tag[2,] %>% dplyr::select(-Class,-Build)
@@ -305,9 +327,9 @@ read_df_feature <- function(is_class=TRUE){
 get_df_feature_from_sheet <- function(
   l_feature_id, Class='sheet', Build='sheet'){
   df_features  <- read_my_csv('features') %>%
-    filter(feature_id %in% l_feature_id) %>%
-    mutate(Class=Class, Build = Build)  %>%
-    select(-feature_id)
+    dplyr::filter(feature_id %in% l_feature_id) %>%
+    dplyr::mutate(Class=Class, Build = Build)  %>%
+    dplyr::select(-feature_id)
 
   df_features
 }
@@ -319,7 +341,7 @@ get_df_power_from_sheet <- function(
 l_power_id, Class='sheet', Build='sheet')
 {
   df_powers_raw  <- read_my_csv('powers') %>%
-    filter(power_id %in% l_power_id)
+    dplyr::filter(power_id %in% l_power_id)
 
     df_class_build <- read_my_csv('build')
     df_powers_map <- read_my_csv('power_map')
@@ -344,10 +366,7 @@ get_df_maneuver <- function(){
     dplyr::filter(type=='maneuver')%>%
     dplyr::select(-type)
 
-    df_power_tag <-  read_my_csv('power_tags')
-
-    df_power_clean = df_power_raw %>%
-    clean_df_power(df_power_tag)
+    df_power_clean = df_power_raw %>%  clean_df_power()
 
     df_power_clean
 
@@ -386,14 +405,7 @@ get_df_class <- function (
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
-  df_feature_tag <- read_my_csv('feature_tags')
-  df_power_tag <-  read_my_csv('power_tags')
-
-  feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
-  feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
-
-  df_power_clean = df_power_raw %>%
-    clean_df_power(df_power_tag)
+  df_power_clean = df_power_raw %>% clean_df_power()
   
   df_class = list(
     df_power_clean,
@@ -409,12 +421,7 @@ get_df_class <- function (
           purrr::map_chr(
             ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
             ),
-        htm_feature = data_feature %>% purrr::map_chr(
-            build_element_apply,
-            feature_tag_pre,
-            feature_tag_post,
-            skipEmpty = TRUE
-          ),
+        htm_feature = data_feature %>% purrr::map_chr(clean_df_feature),
         htm_class_section = get_class_section(
           Class,
           Build,
@@ -457,14 +464,7 @@ get_df_origin <- function (
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
-  df_feature_tag <- read_my_csv('feature_tags')
-  df_power_tag <-  read_my_csv('power_tags')
-
-  feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
-  feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
-
-  df_power_clean = df_power_raw %>%
-    clean_df_power(df_power_tag)
+  df_power_clean = df_power_raw %>%  clean_df_power()
 
   df_origin = list(
     df_power_clean,
@@ -478,12 +478,7 @@ get_df_origin <- function (
           purrr::map_chr(
             ~ .x %>% build_table_apply(tableClass = "Class-table", skipHeader = TRUE)
             ),
-        htm_feature = data_feature %>% purrr::map_chr(
-            build_element_apply,
-            feature_tag_pre,
-            feature_tag_post,
-            skipEmpty = TRUE
-          ),
+        htm_feature = data_feature %>% purrr::map_chr(clean_df_feature),
         htm_class_section = get_class_section(
           Class,
           Build,
@@ -517,20 +512,10 @@ character_name='Character Sheet') {
     gsub_colwise("\\r\\n", "<br>") %>%
     purrr::map_dfc (tidyr::replace_na, '-')
 
-  df_feature_tag <- read_my_csv('feature_tags')
-  df_power_tag <-  read_my_csv('power_tags')
-
-  feature_tag_pre <- df_feature_tag[1,] %>% dplyr::select(-Class,-Build)
-  feature_tag_post <- df_feature_tag[2,] %>% dplyr::select(-Class,-Build)
-
-  htm_power = (df_power_raw %>% clean_df_power(df_power_tag, character_sheet=TRUE))$htm_power
+  htm_power = (df_power_raw %>% clean_df_power(character_sheet=TRUE))$htm_power
 
   htm_feature = df_class_feature %>% select(Name, Description) %>%
-    build_element_apply(
-    feature_tag_pre,
-    feature_tag_post,
-    skipEmpty = TRUE
-  )
+    clean_df_feature()
 
   htm_sheet = paste(
     "<p><h3>",
