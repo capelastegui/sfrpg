@@ -79,15 +79,11 @@ The basic steps for creating a character are:
 
 ## Ability generation
 
-Once the player has decided on a character class and a class build, the
- abilities for the Player Character can be generated. To do this, the player
- first selects Primary, Secondary, and Weak Abilities, and then assigns
- scores to each Ability by picking one of two possible Ability Arrays.
-
-By selecting Primary, Secondary, and Weak Abilities, a player chooses what
- will be the strong and weak points of the Player Character. These choices
- are usually conditioned, if not fully determined, by the character's class
- and class build:
+Once the player has decided on a character class and a class build, the 
+ Abilities for the Player Character can be generated. To do this, the player
+ selects a Primary and a Secondary ability, and then assigns scores to each.
+ These choices are usually conditioned, if not fully determined, 
+ by the character's class build:
 
 - The **Primary Ability** is the character's strongest and most important
   Ability, used for most attacks. Most class builds have a fixed Primary
@@ -95,75 +91,69 @@ By selecting Primary, Secondary, and Weak Abilities, a player chooses what
 - The **Secondary Ability** adds useful bonuses to several character Powers
   and Class Features. Many class builds have a predetermined Secondary Ability,
   though some provide a choice between two or three options.
+
+Assign the following scores:
+
+- +4 to Primary Ability
+- +3 to Secondary Ability
+- +0 to to other Abilities
+
+<div class="compatibility">**Compatibility Note**: Under legacy rules, 
+ PCs used to get Ability increases from their Origin (then called Race), 
+ as well as from levelling up. This is no longer the case, but see the
+ Ability Skill Bonus section below.</div>
+
+<div class="compatibility">**Compatibility Note**: The only remaining way to 
+ increase Ability Scores is through Epic Destinies. However, whenever
+ an Epic Destiny from an older rulebook provides a bonus to an Ability score,
+ that bonus is halved (typically from +2 to +1).</div>
+
+### Wide Ability Array (Advanced rule)
+
+The set of Ability scores described above is known as the 
+ **Default Ability Array**, and should be a good fit for the majority of 
+ characters. However, some character builds may have ability requirements that 
+ are spread across many abilities, usually due to heavy multiclassing or to 
+ being non-conventional designs from early legacy sourcebooks. For those cases, 
+ and with approval of the GM, a player may choose instead the 
+ **Wide Ability Array** - choose one Primary Ability and **two** Secondary
+ Abilities (instead of just one, as usual), and assign the following scores:
+ 
+- +3 to Primary Ability
+- +3 to Secondary Ability
+- +0 to to other Abilities
+
+<div class="tip">**Tip**: We recommend new players to ignore the 
+ **Wide Ability Array**. Even experienced players should stay away from this
+ most of the time - it's just offered as a patch from some old classes that
+ would otherwise be very difficult to play. </div>
+
+### Tertiary Ability and Weak Ability (Optional)
+
+As an option, players can choose two Abilities that are not Primary nor 
+Secondary to be their Tertiary and Weak Abilities:
+
+- The **Tertiary Ability** is an Ability with a slightly above average score.
 - The **Weak Ability** is an Ability that sees little to no use for the
   character, and has the lowest score. Class builds should provide suggestions
   for suitable Weak Abilities, but the choice is otherwise up to the player.
+  
+Assign the following scores:
 
-The remaining three Abilities are considered **Tertiary Abilities**.
+- +1 to Tertiary Ability
+- -1 to Weak Ability
 
-The next step is to assign scores to each Ability. To this end, there are two
- **Ability Arrays** that can be chosen: a **Focused Array** that concentrates
- on maximizing the Primary Ability (and hence the character's offensive
- potential), and a **Flexible Array** that provides a more balanced approach
- (resulting in a better Secondary Ability and higher average Secondary Defenses,
- Secondary Stats and Skills). The arrays assign the following scores to each
- Ability:
+<div class="tip">**Tip**: Having a Tertiary and Weak abilities very slightly
+ increases a PC's effectiveness, but it's not really a required step in 
+ character generation. New players are encouraged to skip this step until they 
+ have a good grasp of the rules of the game and the impact of changing these 
+ ability scores. We recommend GMs to allow selection of Tertiary and Weak
+ abilities at a later point in the game, such as after reaching Level 2.
+</div>
 
-- Focused Array
-    - +5 to Primary Ability
-    - +2 to Secondary Ability
-    - +0 to Tertiary Abilities
-    - -1 to Weak Ability
-- Flexible Array
-    - +4 to Primary Ability
-    - +3 to Secondary Ability
-    - +1 to Tertiary Abilities
-    - +0 to Weak Ability
+### Ability Skill Bonus 
 
-<div class="tip">**Tip**: When deciding over an Ability Array, the Focused Array
- is a safe default option, whereas the Flexible Array can shine for characters
- whose Class Features and Powers strongly reward high Secondary Abilities.</div>
-
-As a final step in the generation of Abilities, the player has to check the
- Favoured Abilities for the character's Origin. Each Origin typically has two
- or more Favoured Abilities, and characters whose Favoured Abilities match
- their Primary or Secondary Abilities gain Skill-related bonus:
-
-- If either the Primary Ability or the Secondary Ability match a Favoured
-  Ability, the character gains Skill Training as a bonus Feat.
-- If both the Primary Ability and the Secondary Ability match Favoured
-  Abilities, the character gains Skill Training and Skill Focus as bonus Feats.
-
-See the Feat section later in this chapter for a description of these bonus
- Feats. The player can choose any legally available Skill for these Feats,
- and should do so after choosing class and racial Skills for the character
- (as described in the Skills section in this chapter).
-
-<div class="tip">**Tip**: It is a good idea to take into account how racial
- Favoured Abilities match with the Primary and Secondary Abilities of each
- class build, when picking your Origin and Class. However, if you really like
- a particular Origin and Class combination with mismatched Abilities, you
- should not hesitate to take it - the Skill bonuses are a nice thing to have,
- but they won't make or break a character.</div>
-
-
-<div class="compatibility">**Compatibility Note**: The Favoured Ability rule
- replaces racial Ability bonuses from older rulebooks. When an Origin provides
- a bonus to one or more Abilities, consider instead that these Abilities are
- Favoured Abilities.</div>
-
-
-<div class="tip">**Tip**: Character Abilities remain constant across all levels,
- with a few exceptions. It is possible to increase Tertiary and Weak Abilities
- by taking certain high level Feats. As for Primary and Secondary Abilities,
- the only way to increase them is by taking specific Epic Destinies.</div>
-
-
-<div class="compatibility">**Compatibility Note**: Under previous rules for
- levelling characters, Abilities increased naturally upon reaching certain
- levels. Ignore any mention to such Ability increases. In addition, whenever
- an Epic Destiny from an older rulebook provides a bonus to an Ability score,
- that bonus is halved (typically from +2 to +1).</div>
+Under Construction
 
 ## Skill selection
 
