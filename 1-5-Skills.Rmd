@@ -3,7 +3,7 @@
 There are 12 Skills in the game. Each skill has an associated ability modifier
 
 Skill | Ability | Summary
--- | -- | -- 
+-- | -- | --- 
 Athletics | Strength | Sprinting, Climbing, Swimming
 Authority | Strength | Intimidation, Leadership, Military
 Concentration | Constitution | Study, Craftsmanship, Art

@@ -151,11 +151,110 @@ Assign the following scores:
  abilities at a later point in the game, such as after reaching Level 2.
 </div>
 
+## Skill Bonuses
+
+There are 12 Skills in the game that determine how good a character is at 
+different activities. For each skill, the associated Skill Bonus is generated
+as follows: 
+
+```
+Skill Bonus = Ability Skill Bonus + Skill Training Bonus + Armor Penalty + Other Modifiers
+```
+
+Each of these modifiers is explained in a separate section below.
+
+The following table shows all 12 Skills with their corresponding Abilities and
+a summary of what they are used for. For a detailed description of Skills and
+ how they work, see the Skills chapter.
+ 
+ Skill | Ability | Summary
+-- | -- | --- 
+Athletics | Strength | Sprinting, Climbing, Swimming
+Authority | Strength | Intimidation, Leadership, Military
+Concentration | Constitution | Study, Craftsmanship, Art
+Endurance | Constitution | Stamina, Wakefulness, Survival
+Finesse | Dexterity | Balance, Tumbling, Lockpicking
+Stealth | Dexterity | Hiding, Secrets, Ciphers
+Perception | Wisdom | Observation, Empathy, Memory
+Nature | Wisdom | Flora, Fauna, Environment, Healing
+Diplomacy | Charisma | Rethoric, Etiquette, Politics
+Trickery | Charisma | Lying, Gossip, Forgery
+Arcana | Intelligence | Magic, Science, Cosmology
+Lore | Intelligence | History, Geography, Law
+
 ### Ability Skill Bonus 
 
-Under Construction
+Each Skill has an associated Ability, which is used to determine the 
+ Skill Bonus. However, rather than directly adding ability scores to the
+ Skill Bonus, we use a related value, called the Ability Skill Bonus. Unlike 
+ Ability scores, which remain constant after a character creation, an 
+ Ability Skill Bonus can be affected by the character's Origin, and increase 
+ as they level up.
+ 
+For each Ability, the corresponding Ability Skill Bonus is generated as follows:
 
-## Skill selection
+```
+Ability Skill Bonus = Ability + Origin Ability Modifier + Ability Skill Points + Other Modifiers
+```
+
+An explanation for each :
+- **Ability**: Ability Score
+- **Origin Ability Modifier**: Modifier to that Ability Skill Bonus from the
+  character's Origin. Typically, Origins add +1 to 2 fixed Ability Skill Bonuses
+- **Ability Skill Points**: Players get to assign extra points to add to their 
+  Ability Skill Bonus as they level up - see the table below.
+- **Other Modifiers**: Characters can gain additional modifiers from Feats or
+ Magic Items, among other sources.
+  
+Ability Skill Points are gained at levels 4, 8, 14, 18, 24 and 28. When a 
+PC reaches one of these levels, they choose an Ability and add 1 to the
+Ability Skill Points  assigned to that Ability Skill Bonus, as shown
+in the table below:
+
+Level | Points gained | Score Limit
+4 | +1 | +2
+8 | +1 | +3
+14 | +1 | +3
+18 | +1 | +4
+24 | +1 | +4
+28 | +1 | +5
+  
+Players are restricted in the abilities they can choose to increase their
+ Ability Skill Points: only abilities where the sum of Ability Score and 
+ current Ability Skill Points are below a certain value (shown in column Score
+ Limit of the table above) can be chosen this way. Other bonuses, such as
+ the Origin Ability Modifier, are not counted towards the Score Limit.
+
+ 
+<div class="tip">
+ Example - Ability Skill Bonus for a Level 1 PC.
+ Gimli is a Level 1 Dwarf Warrior with +4 Str, +3 Con, and +0 to other 
+ abilities. Origin Ability Modifiers for a Dwarf are +1 Con, +1 Wis. This
+ character will have the following Ability Skill Bonuses:
+ 
+ - Str: +4 (Ability)
+ - Con: +3 (Ability) +1 (Origin) ; Total: +4
+ - Dex: +0 (Ability)
+ - Wis: +0 (Ability) +1 (Origin) ; Total: +1 
+ - Int: +0 (Ability) 
+ - Cha: +0 (Ability)
+</div>
+
+<div class="tip">Example - Ability Skill Points.
+ The character from the previous example levels up. When he reaches level 4, he
+ can gain an Ability Skill Point on any ability other than Str and Con. 
+ He chooses to add a point to Wis. Ability Skill Bonus for Wis at Level 4:
+ 
+ - Wis: +0 (Ability) +1 (Origin) +1 (Points); Total: +2 
+ 
+ At level 8, he can add an Ability Skill point on any ability other than Str.
+ He chooses Con this time.  Ability Skill Bonus for Con at Level 8:
+ 
+ - Con: +3 (Ability) +1 (Origin) +1 (Points); Total: +5 
+ </div>
+
+
+### Skill Training
 
 Depending on their class, Player Characters can choose a number of Skills to
  become Trained in them. Characters gain a +3 bonus to Skill Checks with
@@ -179,9 +278,6 @@ Some Origins and Classes provide automatic training with predetermined Skills.
  In that case, the character first gains training with these skills, and then
  the player selects Trained Skills as usual.
 
-A character whose Primary or Secondary Abilities match their racial Favored
- Abilities gains bonus Skill-related Feats. The Skills associated with these
- Feats are chosen after the selection of Trained Skills.
 
 <div class="tip">**Tip**: When selecting Trained Skills, it is usually a
  good idea to prioritize Skills that match the character's Primary or Secondary
@@ -195,9 +291,17 @@ A character whose Primary or Secondary Abilities match their racial Favored
  Alternatively, you can specialize on your best Skills by taking Skill Focus
  as a Lesser Feat.</div>
 
-For a detailed description of Skills and how to use them in the game, see the
- Skills section in the Adventuring chapter.
+### Armor Penalty to Skill
 
+Some types of armor have an Armor Penalty value
+ (typically -1). This penalty applies to Skill Checks for Athletics, Endurance,
+ Finesse, and Stealth. See Armor in the equipment section of this chapter
+ for more information.
+
+### Other Skill Bonuses
+
+Characters can gain additional modifiers from Feats or Magic
+  Items, among other sources.
 
 ## Equipment selection
 
@@ -437,7 +541,7 @@ Each character can wear one suit of Light Armor or Heavy Armor. In addition,
  carry objects with their shield hand.
 
 **Armor Penalty**: Some types of armor have an Armor Penalty value
- (typically -1). This penalty attacks to Hit rolls of Ranged and Area attacks,
+ (typically -1). This penalty applies to Hit rolls of Ranged and Area attacks,
  as well as Skill Checks for Athletics, Endurance, Finesse, and Stealth.
 
 <div class="tip">**Tip**: Characters focused on Ranged and Area attacks should
