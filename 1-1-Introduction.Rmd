@@ -490,11 +490,9 @@ The **Level** of a character is a general measure of that character's relative
  by their race, and is typically between 1 and 30, but can exceptionally go
  over 30.
 
-The most direct benefit of Level is its impact on character attacks. Attacking
- a lower level character provides a bonus to hit of +1 per every two levels
- that the attacker has over the defender. Likewise, attacking a higher level
- character provides a hit penalty penalty of -1 per every two levels that
- the attacker has below the defender.
+The most direct benefit of Level is its impact on character attacks and 
+ defenses - both PCs and monsters get a bonus to their Hit Rolls and defenses
+  based on their level, which is explained in the following section.
 
 In addition, a character's Hit Points are derived from character level
  (and class), and attack damage increases with level. For a detailed view of
@@ -508,6 +506,47 @@ Based on the level of Player Characters, the game is organized in three
  game elements such as feats, but otherwise has no direct impact on the game.
  For a detailed discussion of tiers, see Levelling in the Character Building
  chapter.
+ 
+### Level Bonuses to HIt and Defenses.
+
+PCs and monsters get a bonus to their Hit Rolls and defenses based on their 
+level, as shown in the table below:
+
+Level | PC Hit Bonus | PC Def Bonus | Monster Hit Bonus | Monster Def Bonus
+-- | -- | -- | -- | --
+1 | 0 | 0 | 0 | 0
+2 | 0 | 1 | 0 | 1
+3 | 1 | 1 | 1 | 1
+4 | 1 | 2 | 1 | 2
+5 | 2 | 2 | 2 | 2
+6 | 2 | 3 | 2 | 3
+7 | 3 | 3 | 3 | 3
+8 | 3 | 4 | 3 | 4
+9 | 4 | 4 | 4 | 4
+10 | 4 | 5 | 4 | 5
+11 | 5 | 5 | 5 | 5
+12 | 5 | 6 | 5 | 6
+13 | 6 | 6 | 6 | 6
+14 | 6 | 7 | 6 | 7
+15 | 7 | 7 | 7 | 7
+16 | 7 | 8 | 7 | 8
+17 | 8 | 8 | 8 | 8
+18 | 8 | 9 | 8 | 9
+19 | 9 | 9 | 9 | 9
+20 | 9 | 10 | 9 | 10
+21 | 10 | 10 | 10 | 10
+22 | 10 | 11 | 10 | 11
+23 | 11 | 11 | 11 | 11
+24 | 11 | 12 | 11 | 12
+25 | 12 | 12 | 12 | 12
+26 | 12 | 13 | 12 | 13
+27 | 13 | 13 | 13 | 13
+28 | 13 | 14 | 13 | 14
+29 | 14 | 14 | 14 | 14
+30 | 15 | 15 | 15 | 15
+
+Note that these bonuses are already included in a monster's stat block - they 
+are provided here for reference.
 
 ### Hit Points
 
