@@ -287,7 +287,8 @@ To resolve a damage roll, roll all the **Damage Dice** required for the attack,
  characters then apply multipliers to the damage dice and ability bonus based
  on their level:
 ```
-Damage= (Damage Dice X Dice Multiplier) + (Ability Bonus * Ability Multiplier) + Damage Bonuses
+Damage = (Damage Dice X Dice Multiplier) + Ability Damage Modifier + Damage Bonuses
+Ability Damage Modifier = Ability Bonus * Ability Multiplier
 ```
 The level progression for the Dice Multiplier and the Ability Multiplier are
  shown below for convenience. A more detailed description of these stats is
@@ -295,16 +296,19 @@ The level progression for the Dice Multiplier and the Ability Multiplier are
 
 <div class="very-narrow">
 Level  | Dice Multiplier
-------------- | -------------
+-- | -----
 1   | x1
-6	| x1.5
+6	| x1 + Fraction Bonus
 16	| x2
+21	| x2 + Fraction Bonus
 26 	| x3
+28 	| x3 + Fraction Bonus
+30 	| x4
 </div>
 
 <div class="very-narrow">
 Level  | Ability Multiplier
-------------- | -------------
+--- | -----
 1   | x1
 4	| x1.5
 9	| x2
@@ -317,6 +321,61 @@ Level  | Ability Multiplier
 27 	| x7
 29	| x8
 </div>
+
+**Note - Fraction Bonus ** : On some levels, the Dice Multiplier should have
+fractional values (e.g. x1.5 at Level 6) in order to reach the expected values.
+Since we don't want players making excessively complex operations in the middle
+of the game, we instead add a fixed value that approximates the required number.
+This value is called Fraction Bonus, and varies with the type of dice rolled,
+as shown in the table below:
+
+Die type  | Fraction Bonus
+-- | --
+d4 | +1
+d6 | +1
+d8 | +2
+d10 | +2
+d12 | +3
+
+The Fraction Bonus is added to the value of each die, after applying any
+ multiplier. 
+ 
+ <div class="tip">**Example - Dice Multiplier**: Gimli makes an attack 
+ with a damage dice of 1d8, and rolls a 5. If Gimli is level 16, the total
+ damage for that die will be 5x2=10. If Gimli is level 21, a Fraction Bonus
+ would apply, so total damage would be 5x2 + 2 = 12.
+ 
+ If Gimli uses a different attack with damage dice of 2d8, and rolls a 5 and a
+  7 (total of 12 before modifiers) , at Level 21 the total damage would be 
+  12*2 + 2*2 = 28. 
+  
+ If you write down the damage for each power on your character sheet, we 
+ recommend to include any multipliers and damage bonuses that apply. A 2d8 
+ damage power at Level 21 could be written down as:
+ 
+ ```
+ 2d8 (x2) + 4
+ ```
+ , meaning that you would need to roll 2d8, multiply the result by 2, and add 4
+ to the total due to the Fraction Bonus.
+</div>
+
+<div class="tip">**Optional Rule** If you prefer it, and with the GM's approval,
+ you can multiply the number of dice rolled instead of the final values. We 
+ don't recommend this because rolling too many dice can be unwieldy and time 
+ consuming, but some players find it fun.
+</div>
+
+<div class="tip">**Tip**: Character HP and damage doubles every 10 levels, so 
+a level 30 character will have HP and damage values 8 times as high as those 
+of a level 1 character. 
+</div>
+
+<div class="design">**Designer's Note** : The reason for different multipliers
+for damage dice and ability bonuses is the fact that damage dice for powers
+also increase with level. Damage dice for a Level 30 power are double those of
+a Level 1 power, so we need a damage dice multiplier of x4 at that level in
+order to match the expected total multiplier of x8.</div>
 
 ### Rolling Action Point Checks
 
