@@ -360,11 +360,28 @@ Note that, in addition to Player Characters, some special monsters such as
 
 ### Escalation Die
  
-In a combat encounter,  
+For each encounter, the GM keeps track of how many turns have passed 
+since the encounter started. At the start of the third turn, the GM
+takes a special d4 called the Escalation Die and sets it to 1. This value
+increases on each turn thereafter, as shown in the table below:
 
+Turn | Escalation Die
+-- | ---
+1 | 0
+2 | 0
+3 | 1
+4 | 2
+5 | 3
+6+ | 4
 
+The Escalation Die value is used as follows:
+- **Add** the Escalation Die to every Hit Roll (both for PCs and monsters)
+- **Subtract** the Escalation Die from every Skill Check
 
-
+<div class="tip">**Tip**: The purpose of the Escalation Die is to ensure that 
+ combat encounters do not last too long (by making attacks more lethal
+ as time progresses), and to give PCs a sense of urgency on skill encounters
+ (by making checks harder with time).</div>
 
 ## Character Stats
 In this section, we describe the main stats that affect the performance of
