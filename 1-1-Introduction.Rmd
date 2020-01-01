@@ -275,7 +275,11 @@ The general method to resolve a check is to roll a **d20**, add the character's
   the Save succeeds, otherwise it is a failure. This process is described in
   more detail in the Combat chapter.
 
-### Rolling Damage Rolls
+### Rolling Damage Rolls - PCs
+
+Damage rolls use different rules depending on whether they are made by a PC or 
+a monster. We explain the rules for PC damage rolls here, and monster damage
+rolls in the next section.
 
 Unlike check rolls, damage rolls do not use a single d20. Instead, a variable
  number and type of dice is used for each damage roll, depending on the damaging
@@ -376,6 +380,38 @@ for damage dice and ability bonuses is the fact that damage dice for powers
 also increase with level. Damage dice for a Level 30 power are double those of
 a Level 1 power, so we need a damage dice multiplier of x4 at that level in
 order to match the expected total multiplier of x8.</div>
+
+### Rolling Damage Rolls - Monsters
+
+Monsters have fixed damage values, so the rules for their damage rolls are much
+simpler:
+
+```
+Damage = Attack Damage - Resist Dice
+```
+
+**Resist Dice** : PCs receiving damage from a monster get to roll Resist Dice,
+which are subtracted from the final damage value. Resist Dice depend on the
+ level of the attacked PC:
+ 
+ <div class="very-narrow">
+Level  | Resist Dice
+--- | -----
+1   | 1d4
+6	| 1d6
+11	| 1d8
+16	| 1d12
+21 	| 2d8
+26 	| 2d12
+</div>
+
+If a monster deals damage multiple times to the same PC as part of the same
+ action (for example with a Double Strike attack that rolls to hit twice), 
+ add all damage together and treat it like a single attack for the purposes of
+ rolling Resist Dice.
+ 
+If a monster deals damage to another monster, no Resist Dice apply - use the
+ full damage value instead.
 
 ### Rolling Action Point Checks
 
