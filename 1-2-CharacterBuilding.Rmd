@@ -151,7 +151,7 @@ Assign the following scores:
  abilities at a later point in the game, such as after reaching Level 2.
 </div>
 
-## Skill Bonuses
+## Skill Bonuses  
 
 There are 12 Skills in the game that determine how good a character is at 
 different activities. For each skill, the associated Skill Bonus is generated
@@ -182,7 +182,7 @@ Trickery | Charisma | Lying, Gossip, Forgery
 Arcana | Intelligence | Magic, Science, Cosmology
 Lore | Intelligence | History, Geography, Law
 
-### Ability Skill Bonus 
+### Ability Skill Bonus
 
 Each Skill has an associated Ability, which is used to determine the 
  Skill Bonus. However, rather than directly adding ability scores to the

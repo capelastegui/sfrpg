@@ -38,14 +38,15 @@ Some actions are only available to characters with an appropriate level of
   feats that Grandmasters can achieve are the stuff of legends.
 
 
-Skill bonus:
+For each skill, the associated Skill Bonus is generated
+as follows: 
 
-```Ability + Training + Other```
+```
+Skill Bonus = Ability Skill Bonus + Skill Training Bonus + Armor Penalty + Other Modifiers
+```
 
-- Ability:
-- Training:
-- Other:
-
+For a detailed description of the [Ability Skill Bonus], see the Character
+ Building chapter
 
 Skill Check Difficulty table
 
@@ -70,10 +71,127 @@ Difficulty guide
 - Legendary - Something only the best in the world could do, on a good day.
 - Impossible - Normally considered out of reach for mortals.
 
+## Skill Check Modifiers
+
+Description | Modifier
+--- | --
+Character previously failed same check | +1 DC
+Allies previously failed same check twice | +1 DC
+Advantage | +2
+Demoralized | -2
+
+A character is Demoralized when reduced to 0 Morale.
+
+## Skill Actions
+
+The following actions are available to PCs on Skill Encounters:
+
+- Simple Skill Check
+  - Standard Action
+  - Check: Choose a relevant Skill, and make a check using the Base DC for the 
+    challenge.
+  - Success: Gain +1 Progress for this challenge
+  - Option: With the GM's approval, the PC may increase DC by 1 to gain an 
+    additional +1 Progress on a successful check.
+- Partial Skill Check
+  - Standard Action
+  - Check: Choose a relevant Skill, and make a check using the Base DC for the 
+    challenge minus 1.
+  - Success: For each 3 successes in a Partial Skill Check, gain +1 Progress 
+    for this challenge.
+  - Special: This can be attempted multiple times per encounter, and the same 
+    Skill may be reused, but each attempt needs to focus on a different part
+    of the problem
+- Double Skill Check:
+  - Action: This requires 2 Standard actions. A single PC may spend these 
+    actions across 2 turns, or 2 PCs may spend them together.
+  - Check: Choose 2 relevant Skills , and make a single check using the Base DC
+    for the challenge minus 1. If the check is done by a single character, use 
+    the lowest of the 2 Skill Bonuses for the check. If the check is done by 2 
+    characters, each character chooses a Skill, then you take each character's
+    Skill Bonus for their chosen skill, and use the lowest of the 2. The check
+    is made once both actions have been spent.
+  - Success: Gain +1 Progress for this challenge
+  - Failure: This counts as a single failed Skill Check for each participating 
+    PC
+- Skill Assist
+  - Standard Action
+  - Check: Choose a Skill Check that a character will make this encounter, and 
+    a relevant Skill different that the one that will be used for that check. 
+    Make a check using the Base DC for the challenge minus 1.
+  - Success: The next character to make the chosen Skill Check gains Advantage 
+    (+2 to the Skill Check).
+- Skill Recovery
+  - Standard Action
+  - Check: After an ally has failed a Skill Check, choose a relevant Skill not 
+    used on that check, and make a check using the Base DC for the challenge 
+    minus 1.
+  - Success: Choose one of the following:
+    - Choose one of the characters that made the failed check. If that character
+      lost Vitality in that check, they recover 1 Vitality.
+    - Ignore the failed check for the purposes of determining check penalties 
+      the next time a character attempts that check this encounter.
+- Gain time
+  - Standard Action
+  - Check:  Choose a relevant Skill, and make a check using the Base DC for the 
+    challenge minus 1.
+  - Success: Prevent any increases of the Escalation Die next turn.
+  - Special: This can be attempted multiple times per encounter, but a different
+    Skill must be used each time
+- Gather Information
+  - Standard Action
+  - Check: Choose a relevant Skill, and make a check using the Base DC for the
+    challenge minus 2.
+  - Success: Gain clues for challenge, or find out about new options to solve
+    problem.
+  - Option: This may be taken as a Minor Action by increasing its DC by 1.
+
+
+There is also a special action that can only be used if all participating PCs
+agree:
+- Fail Forward
+  - The Skill Challenge ends. Each participating PC spends a Surge to have a
+    Short Rest
+  - At the GM's discretion, the challenge is overcome or a new path presents 
+    itself so that the characters can progress. The characters suffer a minor
+    loss in the context of the story.
+  - Minor loss examples: Wasted time, lost equipment, displeased NPCs, 
+    embarrassment, inconveniences.
+    
+Players are encouraged to use Fail Forward once other options have been 
+exhausted, or once all characters become Demoralized.
+
+## Skill Challenges
+
+Level | Challenge Tier | Required progress | DC
+- | -- | - | --
+1 | Basic | 3 | Normal
+3 | Basic, Long | 5 | Normal
+6 | Heroic | 3 | Hard
+11 | Heroic, Long | 5 | Hard
+16 | Paragon | 3 | Very Hard
+21 | Paragon, Long | 5 | Very Hard
+26 | Epic | 3 | Legendary
+31 | Epic, Long | 5 | Legendary
+36 | Impossible | 3 | Impossible
+
+
+Adjustments by party size:
+
+- Assumption: Default party size is 4 to 6
+- 1 PC: Required Progress of 3 becomes 1, and 5 becomes 2.
+- 2-3 PCs: -1 Required Progress
+- 7-8 PCs: +1 Required Progress
 
 
 
 
+    
+      
+
+
+
+<!---
 TODO: All the examples below need reviewing, may be obsolete
 
 Athletics
@@ -444,3 +562,4 @@ M: Be aware of the main settlements (e.g. larger towns, cities) and landmarks (e
 map
 
 humanoid species/culture trait
+--->
