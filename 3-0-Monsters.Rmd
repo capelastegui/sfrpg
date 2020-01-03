@@ -6,22 +6,68 @@ To generate a standard monster, pick a monster race and a monster class.
 library(sfrpg)
 ```
 
-## Monster Races
+## Standard Monsters
+
 
 ### Monster Races - Heroic
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_race <- read_csv_monster("monster_races") %>%
-  dplyr::filter(Level %>% as.numeric()<11) # %>% 
-  #dplyr::filter(Name %in% c('Goblin', 'Kobold'))
+  dplyr::filter(Level %>% as.numeric()<11, category=='Standard') 
+  dplyr::select(-category)
 htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
     get_monster_list_htm()
 htm_monster_race %>% cat()
 ```
 
-## Monster classes
+### Monster Classes
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-htm_monster_class <- get_htm_monster_class()  %>% get_monster_list_htm( ) 
+df_monster_class <- read_csv_monster("monster_classes") %>%
+  dplyr::filter(category=='Standard') 
+  dplyr::select(-category)
+htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
+   get_monster_list_htm( ) 
 htm_monster_class %>% cat()
 ```
 
+## Minion Monsters
+
+### Monster Races - Heroic
+
+
+### Monster Classes
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_class <- read_csv_monster("monster_classes") %>%
+  dplyr::filter(category=='Minion') 
+  dplyr::select(-category)
+htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
+   get_monster_list_htm( ) 
+htm_monster_class %>% cat()
+```
+
+## Base Stats
+
+In this section, we show monster templates with basic stats that can be used
+as reference when designing custom monsters.
+
+### Base Stats - Race - Heroic
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11, category=='Standard - Example') 
+  dplyr::select(-category)
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+### Base Stats - Class
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_class <- read_csv_monster("monster_classes") %>%
+  dplyr::filter(category=='Standard - Example') 
+  dplyr::select(-category)
+htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
+   get_monster_list_htm( ) 
+htm_monster_class %>% cat()
+```
