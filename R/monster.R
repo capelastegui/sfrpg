@@ -79,7 +79,7 @@ write_file_htm_monster <- function(htm_monster, dir_output, file_name){
         "\r\n<style type=\"text/css\">",
         css,
         "</style></head>\r\n<body>",
-        monster_htm %>% get_monster_list_htm(),
+        htm_monster %>% get_monster_list_htm(),
         "</body></html>",
         sep="\r\n",
         collapse="<br>")

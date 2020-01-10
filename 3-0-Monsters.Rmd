@@ -12,8 +12,7 @@ library(sfrpg)
 ### Monster Races - Heroic
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_race <- read_csv_monster("monster_races") %>%
-  dplyr::filter(Level %>% as.numeric()<11, category=='Standard') 
-  dplyr::select(-category)
+  dplyr::filter(Level %>% as.numeric()<11, category=='Standard')
 htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
     get_monster_list_htm()
 htm_monster_race %>% cat()
@@ -23,8 +22,7 @@ htm_monster_race %>% cat()
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_class <- read_csv_monster("monster_classes") %>%
-  dplyr::filter(category=='Standard') 
-  dplyr::select(-category)
+  dplyr::filter(category=='Standard')
 htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( ) 
 htm_monster_class %>% cat()
@@ -34,13 +32,19 @@ htm_monster_class %>% cat()
 
 ### Monster Races - Heroic
 
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11, category=='Minion')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
 
 ### Monster Classes
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_class <- read_csv_monster("monster_classes") %>%
-  dplyr::filter(category=='Minion') 
-  dplyr::select(-category)
+  dplyr::filter(category=='Minion')
 htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( ) 
 htm_monster_class %>% cat()
@@ -54,8 +58,7 @@ as reference when designing custom monsters.
 ### Base Stats - Race - Heroic
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_race <- read_csv_monster("monster_races") %>%
-  dplyr::filter(Level %>% as.numeric()<11, category=='Standard - Example') 
-  dplyr::select(-category)
+  dplyr::filter(Level %>% as.numeric()<11, category=='Standard - Example')
 htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
     get_monster_list_htm()
 htm_monster_race %>% cat()
@@ -66,7 +69,6 @@ htm_monster_race %>% cat()
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_class <- read_csv_monster("monster_classes") %>%
   dplyr::filter(category=='Standard - Example') 
-  dplyr::select(-category)
 htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( ) 
 htm_monster_class %>% cat()
