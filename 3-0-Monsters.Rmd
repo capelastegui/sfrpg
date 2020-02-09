@@ -6,6 +6,15 @@ To generate a standard monster, pick a monster race and a monster class.
 library(sfrpg)
 ```
 
+Note - Recharging attacks:
+- Some monsters have attacks with (recharge n+). These attacks are spent on use, and cannot be used again
+  until recharged.
+- At the end of a monster's turn, roll 1d6 for each spent recharge attack that wasn't used this turn. If
+  the roll is equal or higher to the recharge value, the attack is recharged.
+- PCs are aware when a monster they can see succeeds at recharging. They don't know details about
+  the recharged power, but they can find out with a Skill Check (see Skills chapter).
+- Some recharge attacks are labeled as Exhausted: monsters start combat with these powers spent.
+
 ## Standard Monsters
 
 
