@@ -211,6 +211,11 @@ List of combat conditions
     - No line of sight to other characters or objects
     - +1 Difficulty Category to Perception Skill Checks.
 
+- Charmed
+    - Cannot attack enemies Charming the character.
+    - A character may be Charmed by multiple enemies at a time.
+    - Automatically ends if attacked by an enemy Charming the character.
+
 - Dazed
     - Cannot Flank
     - Cannot use Opportunity or Immediate Actions
