@@ -120,6 +120,39 @@ htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
 htm_monster_class %>% cat()
 ```
 
+## Elite Monsters
+
+All Elite Monsters gain the following rules:
+- Action Point: Each Elite Monster has 1 Action Point, which can be spent with an
+  Action Point Check, using the same rules as PCs.
+- Endure Conditions: At the start of their turn, an Elite Monster can choose a Combat
+  Condition afflicting them, and make a Saving Throw. On a successful save, the condition
+  is downgraded until their next turn, and they take 2(E) damage.
+
+
+### Elite Monster Templates:
+
+Apply to Standard monsters to convert them to Elite
+
+Basic Elite Monster:
+- Double XP value
+- Double HP
+- Trait: Elite Attack: Melee and Ranged attacks can target 1 additional enemy in range.
+  Area and Close attacks have Burst size increased by 1. Damaging attacks that target a
+  single enemy deal +D/2 damage.
+
+## Other Templates
+
+Lieutenant:
+- +50% XP value
+- Double HP
+
+Veteran:
+- +25% XP value
+- +6/12/24 HP, depending on tier
+- +2/4/8 D, depending on tier
+- +1H, +1Def
+
 ## Base Stats
 
 In this section, we show monster templates with basic stats that can be used
