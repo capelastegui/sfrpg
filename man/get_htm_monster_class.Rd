@@ -9,6 +9,9 @@ get_htm_monster_class(df_monster_class = NULL)
 \arguments{
 \item{df_monster_class}{}
 }
+\value{
+
+}
 \description{
 Title
 }

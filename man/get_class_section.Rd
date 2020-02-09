@@ -4,8 +4,14 @@
 \alias{get_class_section}
 \title{Generate html document with class data for all classes}
 \usage{
-get_class_section(class, build, htm_stat, htm_feature, htm_power,
-  is_class = TRUE)
+get_class_section(
+  class,
+  build,
+  htm_stat,
+  htm_feature,
+  htm_power,
+  is_class = TRUE
+)
 }
 \arguments{
 \item{class}{Name of class}

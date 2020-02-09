@@ -13,6 +13,9 @@ write_file_htm_monster(htm_monster, dir_output, file_name)
 
 \item{file_name}{}
 }
+\value{
+
+}
 \description{
 Title
 }

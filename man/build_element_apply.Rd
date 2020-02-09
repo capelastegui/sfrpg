@@ -4,8 +4,15 @@
 \alias{build_element_apply}
 \title{Convert dataframe columns into html elements, then reduce to single string}
 \usage{
-build_element_apply(df, pre, post, df.names = names(df),
-  skipEmpty = TRUE, collapse = "", reduce = TRUE)
+build_element_apply(
+  df,
+  pre,
+  post,
+  df.names = names(df),
+  skipEmpty = TRUE,
+  collapse = "",
+  reduce = TRUE
+)
 }
 \arguments{
 \item{df}{input dataframe}

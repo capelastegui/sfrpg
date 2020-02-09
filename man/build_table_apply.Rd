@@ -4,8 +4,12 @@
 \alias{build_table_apply}
 \title{Convert an input dataframe of string columns into an HTML table}
 \usage{
-build_table_apply(df, df.names = names(df), tableClass = NULL,
-  skipHeader = FALSE)
+build_table_apply(
+  df,
+  df.names = names(df),
+  tableClass = NULL,
+  skipHeader = FALSE
+)
 }
 \arguments{
 \item{df}{Dataframe with string columns, used as input.}

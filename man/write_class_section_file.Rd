@@ -11,6 +11,9 @@ write_class_section_file(df_class, dir_output)
 
 \item{dir_output}{}
 }
+\value{
+
+}
 \description{
 Write class data for all classes into an html file
 }

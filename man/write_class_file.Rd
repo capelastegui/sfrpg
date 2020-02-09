@@ -15,6 +15,9 @@ write_class_file(df_class, char_class, char_build, dir_output)
 
 \item{dir_output}{}
 }
+\value{
+
+}
 \description{
 Write class data for a single class into an html file
 }

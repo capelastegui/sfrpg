@@ -9,6 +9,9 @@ get_monster_list_htm(htm_monster)
 \arguments{
 \item{htm_monster}{}
 }
+\value{
+
+}
 \description{
 Title
 }

@@ -11,6 +11,9 @@ read_csv_monster(s, delim = ",")
 
 \item{delim}{}
 }
+\value{
+
+}
 \description{
 Title
 }

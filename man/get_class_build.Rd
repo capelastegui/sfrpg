@@ -13,6 +13,9 @@ get_class_build(df_class, char_class, char_build)
 
 \item{char_build}{}
 }
+\value{
+
+}
 \description{
 Extract data for a single class build from df_class
 }

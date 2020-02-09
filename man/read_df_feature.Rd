@@ -6,6 +6,9 @@
 \usage{
 read_df_feature(is_class = TRUE)
 }
+\value{
+
+}
 \description{
 Read class feature data from partial .csv tables
 }

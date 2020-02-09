@@ -9,6 +9,9 @@ apply_class_power_summary(df)
 \arguments{
 \item{df}{input dataframe}
 }
+\value{
+
+}
 \description{
 Generate html table with power summary
 }

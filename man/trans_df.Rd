@@ -9,6 +9,9 @@ trans_df(df_class_stat)
 \arguments{
 \item{df_class_stat}{}
 }
+\value{
+
+}
 \description{
 Transpose dataframe, into (key, value) form
 }

@@ -4,7 +4,7 @@
 \alias{clean_df_power}
 \title{Build power block from raw data}
 \usage{
-clean_df_power(df_power_raw, df_power_tag, character_sheet = FALSE)
+clean_df_power(df_power_raw, df_power_tag = NULL, character_sheet = FALSE)
 }
 \arguments{
 \item{character_sheet}{boolean, true if generating table for a character

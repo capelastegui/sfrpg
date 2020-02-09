@@ -9,6 +9,9 @@ get_htm_monster_race(df_monster_race = NULL)
 \arguments{
 \item{df_monster_race}{}
 }
+\value{
+
+}
 \description{
 Title
 }

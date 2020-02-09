@@ -20,7 +20,7 @@ get_htm_monster_race <- function(df_monster_race=NULL){
   if (df_monster_race %>% is.null()) {
     df_monster_race <- read_csv_monster("monster_races")
   }
-  df_monster_race <- df_monster_race %>% dplyr::select(-category)
+  df_monster_race <- df_monster_race %>% dplyr::select(-category,-subcategory)
   df_tag <-  read_csv_monster("Monsters-race-tags",';')
   tag_pre <- df_tag[1,]
   tag_post <- df_tag[2,]
@@ -41,7 +41,7 @@ get_htm_monster_class <- function(df_monster_class=NULL){
       if (df_monster_class %>% is.null()) {
     df_monster_class <- read_csv_monster("monster_classes")
   }
-  df_monster_class <- df_monster_class %>% dplyr::select(-category)
+  df_monster_class <- df_monster_class %>% dplyr::select(-category,-subcategory)
   df_tag <-  read_csv_monster("Monsters-class-tags",';')
   tag_pre <- df_tag[1,]
   tag_post <- df_tag[2,]

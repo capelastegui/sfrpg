@@ -9,6 +9,9 @@ get_htm_file(str_htm, css = NULL)
 \arguments{
 \item{htm_str}{}
 }
+\value{
+
+}
 \description{
 Add html headers, css data to html string to use in standalone document
 }
