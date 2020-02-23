@@ -141,6 +141,13 @@ Basic Elite Monster:
   Area and Close attacks have Burst size increased by 1. Damaging attacks that target a
   single enemy deal +D/2 damage.
 
+### Elite Monster Classes
+
+Monsters with the following classes gain the Elite monster special
+rules, double XP and double HP.
+
+
+
 ## Other Templates
 
 Lieutenant:

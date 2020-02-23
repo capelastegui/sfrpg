@@ -21,7 +21,7 @@ get_htm_monster_race <- function(df_monster_race=NULL){
     df_monster_race <- read_csv_monster("monster_races")
   }
   df_monster_race <- df_monster_race %>% dplyr::select(-category,-subcategory)
-  df_tag <-  read_csv_monster("Monsters-race-tags",';')
+  df_tag <-  read_csv_monster("Monsters-race-tags")
   tag_pre <- df_tag[1,]
   tag_post <- df_tag[2,]
 
@@ -42,7 +42,7 @@ get_htm_monster_class <- function(df_monster_class=NULL){
     df_monster_class <- read_csv_monster("monster_classes")
   }
   df_monster_class <- df_monster_class %>% dplyr::select(-category,-subcategory)
-  df_tag <-  read_csv_monster("Monsters-class-tags",';')
+  df_tag <-  read_csv_monster("Monsters-class-tags")
   tag_pre <- df_tag[1,]
   tag_post <- df_tag[2,]
 
