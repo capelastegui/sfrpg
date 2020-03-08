@@ -50,7 +50,7 @@ For a detailed description of the [Ability Skill Bonus], see the Character
 
 Skill Check Difficulty table
 
-Abreviation | Check level | DC | Req. Level | Stamina cost
+Abreviation | Check level | DC | Req. Level | Morale cost
 -- | -- | -- | -- | --
 R | Routine | - |   |  
 E | Easy | 8 |   | 1 on Failure
@@ -128,7 +128,7 @@ The following actions are available to PCs on Skill Encounters:
     minus 1.
   - Success: Choose one of the following:
     - Choose one of the characters that made the failed check. If that character
-      lost Vitality in that check, they recover 1 Vitality.
+      lost Morale in that check, they recover 1 Morale.
     - Ignore the failed check for the purposes of determining check penalties 
       the next time a character attempts that check this encounter.
 - Gain time
