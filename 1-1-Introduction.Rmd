@@ -397,9 +397,9 @@ which are subtracted from the final damage value. Resist Dice depend on the
  <div class="very-narrow">
 Level  | Resist Dice
 --- | -----
-1   | 1d4
-6	| 1d6
-11	| 1d8
+1   | 1d6
+6	| 1d8
+11	| 1d10
 16	| 1d12
 21 	| 2d8
 26 	| 2d12
@@ -412,6 +412,8 @@ If a monster deals damage multiple times to the same PC as part of the same
  
 If a monster deals damage to another monster, no Resist Dice apply - use the
  full damage value instead.
+
+Damage from Minion monsters ignores Resist Dice.
 
 ### Rolling Action Point Checks
 
