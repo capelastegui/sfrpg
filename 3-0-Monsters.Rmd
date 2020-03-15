@@ -55,6 +55,16 @@ htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
 htm_monster_class %>% cat()
 ```
 
+### Monster Classes - Humanoid
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_class <- read_csv_monster("monster_classes") %>%
+  dplyr::filter(category=='Standard', subcategory=='Humanoid')
+htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
+   get_monster_list_htm( )
+htm_monster_class %>% cat()
+```
+
 ### Monster Classes - Elemental
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
