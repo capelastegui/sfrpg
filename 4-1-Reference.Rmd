@@ -1,6 +1,8 @@
-# Reference - Skills
+# Reference Tables
 
-## Skill Summary
+## Reference - Skills
+
+**Skill Summary**
 
 Skill | Ability | Summary
 -- | -- | --- 
@@ -17,7 +19,7 @@ Trickery | Charisma | Lying, Gossip, Forgery
 Arcana | Intelligence | Magic, Science, Cosmology
 Lore | Intelligence | History, Geography, Law
 
-## Skill Check Difficulty table
+**Skill Check Difficulty table**
 
 Abreviation | Check level | DC | Req. Level | Morale cost
 -- | -- | -- | -- | --
@@ -29,7 +31,7 @@ VH | Very Hard | 23 | Trained | 1 on Failure
 I | Legendary | 28 | Master | 2 on Failure
 I | Impossible | 33 | Grandmaster | 2 on Failure
 
-## Skill Check Modifiers
+**Skill Check Modifiers**
 
 Description | Modifier
 --- | --
@@ -38,7 +40,7 @@ Allies previously failed same check twice | +1 DC
 Advantage | +2
 Demoralized | -2
 
-## Roleplaying modifiers
+**Roleplaying modifiers**
 
 Modifier | Value
 -- | --
@@ -47,7 +49,7 @@ Conflicting for character | -2
 Matches character | +0
 Add character insight | +2
 
-## Skill Actions
+**Skill Actions**
 
 Check | Action | Check | Success | Augment
 --- | -- | ---- | ---- |
@@ -58,9 +60,9 @@ Assist | Standard | Base DC -1, not same skill as assisted check | A character g
 Recovery | Standard | Base DC -1, not same skill as recovered check | After failed check, recover 1 Morale or ignore fail penalty. | +1 DC, Minor Action |
 Gain Time | Standard | Base DC -1 | Prevent next Escalation Die increase |
 Gather Information | Standard | Base DC -2 | Gain clues, find options | +1 DC, Minor Action |
-Fail Forward | Challenge ends, party spends 1 Surge to take Short Rest | - | Find alternate path  |
+Fail Forward | Challenge ends | Party spends 1 Surge to take Short Rest | Find alternate path  |
 
-## Skill Challenges
+**Skill Challenges**
 
 Level | Challenge Tier | Required progress | DC
 - | -- | - | -- |
@@ -74,7 +76,7 @@ Level | Challenge Tier | Required progress | DC
 31 | Epic, Long | 5 | Legendary
 36 | Impossible | 3 | Impossible
 
-## Roleplaying die roll
+**Roleplaying die roll**
 
 Score | Result
 -- | --
@@ -82,3 +84,7 @@ Terrible | Failure
 Below Average | 1d4+6
 Good | 1d4+11
 Excellent | 1d4+16
+
+## Reference - Combat {.newPage}
+
+TODO
