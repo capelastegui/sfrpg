@@ -4,7 +4,7 @@ get_df_hp <- function() {
                           hp_level=c(1:10+10, (1:10+10)*2, (1:10+10)*4)) %>%
     dplyr::mutate(HP1=2.5*hp_level, HP2=3*hp_level, HP3=3.5*hp_level,
                   Surge1 = HP1/4, Surge2 = HP2/4, Surge3 = HP3/4) %>%
-    floor() %>%
+    #floor() %>% # TODO: Apply floor to all columns
     dplyr::select(Level,
                   HP1, Surge1,
                   HP2, Surge2,
