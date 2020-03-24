@@ -382,9 +382,33 @@ Any reference from compatible books to effects that trigger when a Taunted chara
     - Shield Points granted or received are halved
 
 
+- Shrouded
+    - Cannot be targeted by Ranged attacks, or Reaction attacks
+    - Cannot be Charged
+    - Cannot make Reaction attacks
+    - Condition is lost:
+      - After attacking
+      - After moving
+      - If, at the end of a character’s action, the Shrouded character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 
+- Hidden
+    - Cannot make Reaction attacks
+    - Gains Advantage when attacking
+    - Cannot be targeted by Melee or Ranged powers
+    - Cannot be targeted by a Close or Area power unless it targets a non-Hidden character.
+    - Location unknown to other characters
+    - Condition is lost:
+      - After attacking
+      - After moving
+      - If, at the end of a character’s action, the Hidden character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 
+<div class="tip">
+Tip: Although a Hidden character´s current location is unknown, other characters can guess it based on context: where the Hidden character was last seen, what suitable hiding locations are in the area, etc.
+</div>
 
+<div class="tip">
+Clarification: Actions that grant the Shrouded or Hidden condition do not cause the loss of that condition if they include attacks or movement.
+</div>
 
 ### Forced Movement{.newPage}
 
@@ -463,6 +487,12 @@ df_class_build = get_class_build(df_maneuver, 'Maneuver', 'Move Maneuvers')
 df_class_build$htm_power %>% cat()
 ```
 
+### Stealth Maneuvers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_maneuver, 'Maneuver', 'Advanced Stealth Maneuvers')
+df_class_build$htm_power %>% cat()
+```
+
 ### Advanced Miscellaneous Maneuvers
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_maneuver, 'Maneuver', 'Advanced Miscellaneous Maneuvers')
@@ -474,3 +504,5 @@ df_class_build$htm_power %>% cat()
 df_class_build = get_class_build(df_maneuver, 'Maneuver', 'Advanced Move Maneuvers')
 df_class_build$htm_power %>% cat()
 ```
+
+
