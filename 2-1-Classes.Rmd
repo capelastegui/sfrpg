@@ -52,6 +52,18 @@ df_class_build$htm_feature %>% cat()
 df_class_build$htm_power %>% cat()
 ```
 
+### Priest of Luck{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Priest', 'Luck')
+df_class_build$htm_stat %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
 ## Rogue{.newPage}
 ### Rogue Scoundrel
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}

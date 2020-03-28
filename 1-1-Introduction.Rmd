@@ -509,7 +509,7 @@ Based on the level of Player Characters, the game is organized in three
  For a detailed discussion of tiers, see Levelling in the Character Building
  chapter.
  
-### Level Bonuses to HIt and Defenses.
+### Level Bonuses to Hit and Defenses.
 
 PCs and monsters get a bonus to their Hit Rolls and defenses based on their 
 level, as shown in the table below:
