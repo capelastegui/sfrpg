@@ -197,53 +197,56 @@ Superior Concealment also benefit from regular Concealment, and attacks against
 them have a total modifier of -5.
 
 #### Critical Hits
+
 ### Damage Roll
+
 #### Miss Damage
-### Combat Conditions
-#### List of Combat Conditions
 
-List of combat conditions
-
-- Blinded
-    - Grants Advantage _(+2 to be hit)_
-    - Cannot Flank
-    - Treats other characters or objects as having Superior Concealment _(-5 to hit them)_.
-    - No line of sight to other characters or objects
-    - +1 Difficulty Category to Perception Skill Checks.
-
-- Charmed
-    - Cannot attack enemies Charming the character.
-    - A character may be Charmed by multiple enemies at a time.
-    - Automatically ends if attacked by an enemy Charming the character.
-
-- Dazed
-    - Cannot Flank
-    - Cannot use Opportunity or Immediate Actions
-    - Each turn, can use only:
-        - One Minor Action, and
-        - Either one Standard Action or one Move Action
-        
-- Dazzled
-    - Treats all enemies as having Concealment _(-2 to hit them)_ or,
-      if already in Concealment, as having Superior Concealment 
-      _(an additional -3 to hit them)_.
+## Combat Conditions
 
 
-- Deafened
-    - Grants Advantage  _(+2 to be hit)_
-    - When using the Search combat maneuver, roll a Save. 
-      On a failed save, the maneuver has no effect
-    - +1 Difficulty Category to Perception Skill Checks
+### List of Combat Conditions
 
 
-- Dominated
-    - Cannot take actions
-    - When damaged, can roll a Save to end this condition
-    - The dominating character can spend a move action to make the dominated 
-      character move its speed. _(This counts as forced movement)_
-    - The dominating character can spend a standard action to make the 
-      dominated character use an at-will attack. 
-      _(This counts as a forced attack)_
+Standard Conditions
+
+Condition | Downgrade | Effects
+| --- | --- | ------
+| Blinded | Dazzled | - Grants Advantage _(+2 to be hit)_<br />- Cannot Flank<br />- Treats other characters or objects as having Superior Concealment _(-5 to hit them)_.<br />- No line of sight to other characters or objects<br />- +1 DC to Perception Skill Checks.
+| Charmed | - | - Cannot attack enemies Charming the character.<br />- A character may be Charmed by multiple enemies at a time.<br />- Automatically ends if attacked by an enemy Charming the character.
+| Dazed | (something) | - Grants Advantage _(+2 to be hit)_<br />- Cannot Flank<br />- Cannot use Opportunity or Immediate Actions<br />- Each turn, can use a Minor Action and either a Standard Action or a Move Action,
+| Dazzled | - | - Treats all enemies as having Concealment _(-2 to hit them)_ or, if already in Concealment, as having Superior Concealment _(an additional -3 to hit them)_.
+| Dominated | Charmed | - Cannot take actions <br />- When damaged, can roll a Save to end this condition.  <br />- The dominating character can spend a move action to make the dominated character move its speed. _(This counts as forced movement)_ <br />- The dominating character can spend a standard action to make the dominated character use an at-will attack. _(This counts as a forced attack)_
+| Flanked | No | - Grants Advantage on Melee attacks _(+2 to be hit)_
+| Grabbed | - | Cannot move <br />-When grabbed, the character is pulled to a square adjacent to the grabbing character. <br />-The condition ends if at any time the grabbed character is not adjacent to the grabbing character.<br />-Grabbed character can use the Escape combat maneuver to end the condition. _(Move Action, roll save to end grab from one enemy)_<br />-If forced movement would cause the grabbed character and the grabbing character to no longer be adjacent, the grabbed character can roll a Save to end this condition. If the condition doesn’t end this way, the forced movement is negated<br />-A character may be Grabbed by multiple enemies at a time.
+| Helpless | No | - Grants Advantage _(+2 to be hit)_<br />-Melee Attacks against the character gain +10 Crit Range
+| Hindered | No | -2 Hit
+| Immobilized | Slowed | Cannot move
+| Taunted | - | - -2 Hit on attacks that ignore the Taunt (see sidebar) <br />- A character may be Taunted by multiple enemies at a time.
+| Petrified | Stunned | - Grants Advantage<br />- Cannot take actions<br />- Gains Resist (all).
+| Prone | No | Condition lasts indefinitely until the character stands up _(e.g. by spending a move action on the Stand Up maneuver)_ <br />-Cannot make any movement other than crawling (e.g. by having a Crawl Speed, or by using the Crawl combat maneuver: Move Action, crawl 1)<br />-Hindered (-2 Hit)<br />-Grants Advantage against melee attacks (+2 to be hit)<br />-Against non-melee attacks, gains Cover (-2 cover penalty to attack rolls) or, if already in Cover, gains Total Cover (an additional -3 cover penalty to attack rolls)
+| Restrained | Grabbed | - Cannot move <br />- Ignores forced movement <br />- Grants Advantage (+2 to be hit) <br />- Hindered (-2 Hit)
+| Slowed | - | - For each square moved, must spend an additional square of movement
+| Stunned | Dazed | -Cannot attack  <br />-Cannot move  <br />-Can only take one action per turn  <br />-Cannot use Reactions  <br />-Grants Advantage (+2 to be hit)
+| Unconscious | No | - When a character falls unconscious, they are knocked prone.  <br />-When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.  <br />- Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_  <br />- Cannot take actions  <br />- Cannot see.
+| Weakened | Fatigued | - Damage dealt is halved <br />- Healing granted or received is halved <br />- Shield Points granted or received are halved
+| Fatigued | -| - Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4
+
+Stealth conditions - These conditions are used by characters trying to hide in combat. Usually, a character enters these conditions voluntarily.
+Condition | Effects | Ends
+| --- | -------- | -----
+| Shrouded | Cannot be targeted by Ranged attacks, or Reaction attacks <br />-Cannot be Charged <br />-Cannot make Reaction attacks |Condition is lost: <br />-After attacking <br />-After moving <br />- If, at the end of a character’s action, the Shrouded character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
+| Hidden | Cannot make Reaction attacks <br />-Gains Advantage when attacking <br />-Cannot be targeted by Melee or Ranged powers <br />-Cannot be targeted by a Close or Area power unless it targets a non-Hidden character. <br />-Location unknown to other characters <br /> | Condition is lost: <br />- After attacking <br />- After moving <br />- If, at the end of a character’s action, the Hidden character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
+
+Special conditions - These conditions are rarely used, typically by monsters.
+
+Condition | Downgrade | Effects
+| --- | --- | ------
+| Swallowed | Grabbed | -When swallowed, a character disappears from its current position. When the condition ends, the character reappears in a square of his choice as close as possible to the swallower. <br />- Can spend a move action to make an Escape Check (see sidebar). If successful, condition ends. <br />- Does not occupy a space. <br />- Can only take one action per turn. <br />- Only has line of effect and line of sight to and from the swallower, and other characters and objects swallowed by it. <br />- The inside of the swallower, and swallowed characters and objects, are in total darkness unless otherwise specified. Swallowed characters can use any light source to illuminate the inside of the swallower and all characters and objects swallowed by it. <br />- When using a burst or blast power while swallowed, the swallower and all characters and objects swallowed by it are included in the burst or blast.
+| Exiled | Grabbed | - When exiled, a character disappears from its current position. <br />- When the condition ends, the character reappears on this position or, if not possible, in the closest ground square of his choice, unless the exiling effect states otherwise. <br />- Does not occupy a space. <br />- No line of sight to and from other creatures or objects unless the exiling effect states otherwise. <br />- No line of effect to and from other creatures or objects unless the exiling effect states otherwise.
+
+Legacy conditions:
+- Deafened: Renamed to Dazzled
 
 <div class="tip">
 Sidebar: Forced attack
@@ -261,43 +264,10 @@ Forced attacks ignore the marked condition. A character making a forced attack c
 Forced attacks never trigger opportunity attacks.
 </div>
 
-- Flanked
-  - Grants Advantage on Melee attacks _(+2 to be hit)_
 
-- Grabbed
-    - Cannot move
-    - When grabbed, the character is pulled to a square adjacent to 
-      the grabbing character
-    - The condition ends if at any time the grabbed character is not 
-      adjacent to the grabbing character
-    - Grabbed character can use the Escape combat maneuver to end the 
-      condition. _(Move Action, roll save to end grab from one enemy)_
-    - If forced movement would cause the grabbed character and the grabbing 
-      character to no longer be adjacent, the grabbed character can roll a Save 
-      to end this condition. If the condition doesn't end this way, 
-      the forced movement is negated
-    - A character may be Grabbed by multiple enemies at a time.
-
-- Helpless
-
-    - Grants Advantage _(+2 to be hit)_
-    - Melee Attacks against the character gain +10 Crit Range
-    
-    
-- Hindered
-
-    - -2 to Hit
-    
 <div class="tip">
 Tip: Many types of action can cause a character to be Hindered for a turn. These include combat maneuvers like Shift, Charge, Stand Up, Quick Draw, 
 </div>
-
-- Immobilized
-    - Cannot move
-
-- Taunted
-    - -2 Hit on attacks that ignore the Taunt (see sidebar)
-    - A character may be Taunted by multiple enemies at a time.
 
 <div class="tip">
 Sidebar: ignoring Taunts
@@ -324,84 +294,6 @@ Any reference from compatible books to effects that trigger when a Taunted chara
 
 
 
-- Petrified
-    - Grants Advantage
-    - Cannot take actions
-    - Gains Resist.
-
-- Prone
-    - Condition lasts indefinitely until the character stands up _(e.g. by using the Stand Up combat maneuver: Move Action, end the prone condition, move 1, and become Hindered this turn)_
-    - Cannot make any movement other than crawling _(e.g. by having a Crawl Speed, or by using the Crawl combat maneuver: Move Action, crawl 1)_
-    - Hindered _(-2 Hit)_
-    - Grants Advantage against melee attacks _(+2 to be hit)_
-    - Against non-melee attacks, gains Cover _(-2 cover penalty to attack rolls)_ or, if already in Cover, gains Total Cover _(an additional -3 cover penalty to attack rolls)_
-
-
-
-- Exiled 
-    - When exiled, a character disappears from its current position. When the condition ends, the character reappears on this position or, if not possible, in the closest ground square of his choice, unless the exiling effect states otherwise.
-    - Does not occupy a space.
-    - No line of sight to and from other creatures or objects unless the exiling effect states otherwise.
-    - No line of effect to and from other creatures or objects unless the exiling effect states otherwise.
-
-- Restrained
-    - Cannot move
-    - Ignores forced movement 
-    - Grants Advantage _(+2 to be hit)_
-    - Hindered _(-2 Hit)_
-
-- Slowed
-    - For each square moved, must spend an additional square of movement
-
-- Stunned
-    - Cannot attack
-    - Cannot move
-    - Can only take one action per turn
-    - Cannot use Reactions
-    - Grants Advantage _(+2 to be hit)_
-
-- Swallowed
-    - When swallowed, a character disappears from its current position. When the condition ends, the character reappears in a square of his choice as close as possible to the swallower.
-    - Can spend a move action to make an Escape Check (see sidebar). If successful, condition ends.
-    - Does not occupy a space.
-    - Can only take one action per turn.
-    - Only has line of effect and line of sight to and from the swallower, and other characters and objects swallowed by it.
-    - The inside of the swallower, and swallowed characters and objects, are in total darkness unless otherwise specified. Swallowed characters can use any light source to illuminate the inside of the swallower and all characters and objects swallowed by it.
-    - When using a burst or blast power while swallowed, the swallower and all characters and objects swallowed by it are included in the burst or blast.
-
-- Unconscious
-    - When a character falls unconscious, they are knocked prone.
-    - When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.
-    - Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_
-    - Cannot take actions
-    - Cannot see.
-
-- Weakened
-    - Damage dealt is halved
-    - Healing granted or received is halved 
-    - Shield Points granted or received are halved
-
-
-- Shrouded
-    - Cannot be targeted by Ranged attacks, or Reaction attacks
-    - Cannot be Charged
-    - Cannot make Reaction attacks
-    - Condition is lost:
-      - After attacking
-      - After moving
-      - If, at the end of a character’s action, the Shrouded character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
-
-- Hidden
-    - Cannot make Reaction attacks
-    - Gains Advantage when attacking
-    - Cannot be targeted by Melee or Ranged powers
-    - Cannot be targeted by a Close or Area power unless it targets a non-Hidden character.
-    - Location unknown to other characters
-    - Condition is lost:
-      - After attacking
-      - After moving
-      - If, at the end of a character’s action, the Hidden character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
-
 <div class="tip">
 Tip: Although a Hidden character´s current location is unknown, other characters can guess it based on context: where the Hidden character was last seen, what suitable hiding locations are in the area, etc.
 </div>
@@ -410,9 +302,11 @@ Tip: Although a Hidden character´s current location is unknown, other character
 Clarification: Actions that grant the Shrouded or Hidden condition do not cause the loss of that condition if they include attacks or movement.
 </div>
 
-### Forced Movement{.newPage}
+### Condition downgrading
 
-#### Push
+## Forced Movement{.newPage}
+
+### Push
 
 Push a single unit
 
