@@ -202,71 +202,55 @@ them have a total modifier of -5.
 
 #### Miss Damage
 
-## Combat Conditions
+## Status Effects
+
+Some powers or abilities can apply status effects on characters. A character afflicted by a status effect suffers penalties that depend on the type condition - see the table below for details.
+
+Normally, the effect creating a status effect states its duration, which is often a combat turn, but can also last until the character saves against the effect, or even indefinitely, depending on the case. Certain status effects have special rules affecting their duration, typically in the form of conditions that end the effect prematurely.
+
+It is possible for a character to be affected by multiple instances of a status effect. The penalties from instances of the same condition don't stack unless otherwise stated.
+
+Some status effects care about the source of the effect. For example, in the case of the Taunt status effect, the Taunted character does not suffer penalties when attacking the Taunting character. If multiple instances of such an effect are affecting a character, it is important to keep track of the source of each one.
+
+### Downgrading status effects
+
+Some abilities allow a character to downgrade a status effect. To downgrade a status effect, check the Downgrade column in the status effect table: the character treats the status effect as if it was the downgraded one for the duration of the downgrade. Note that a downgrade may have a shorter duration than the status effect it applies to - in that case, the original effect applies again when the Downgrade ends.
+
+If the downgrade for a status effect is listed as No Effect, the effect is completely ignored while Downgraded. Likewise, if it is listed as No Downgrade, the effect cannot be downgraded.
+
+A status effect can only be downgraded once at any given time. Notably, this means that abilities that downgrade multiple types of status effect do not stack with themselves. As an example, consider a character with the ability to downgrade the Slowed and Immobilized status effects. If that character becomes Immobilized, the downgrade would allow them to act as if they were Slowed instead - but it wouldn't let them ignore the Slow.
 
 
-### List of Combat Conditions
+### Standard Status Effects
 
-
-Standard Conditions
-
-Condition | Downgrade | Effects
+Status | Downgrade | Effects
 | --- | --- | ------
 | Blinded | Dazzled | - Grants Advantage _(+2 to be hit)_<br />- Cannot Flank<br />- Treats other characters or objects as having Superior Concealment _(-5 to hit them)_.<br />- No line of sight to other characters or objects<br />- +1 DC to Perception Skill Checks.
-| Charmed | - | - Cannot attack enemies Charming the character.<br />- A character may be Charmed by multiple enemies at a time.<br />- Automatically ends if attacked by an enemy Charming the character.
-| Dazed | (something) | - Grants Advantage _(+2 to be hit)_<br />- Cannot Flank<br />- Cannot use Opportunity or Immediate Actions<br />- Each turn, can use a Minor Action and either a Standard Action or a Move Action,
-| Dazzled | - | - Treats all enemies as having Concealment _(-2 to hit them)_ or, if already in Concealment, as having Superior Concealment _(an additional -3 to hit them)_.
+| Charmed | No Effect | - Cannot attack enemies Charming the character.<br />- A character may be Charmed by multiple enemies at a time.<br />- Automatically ends if attacked by an enemy Charming the character.
+| Dazed | Grants Advantage | - Grants Advantage _(+2 to be hit)_<br />- Cannot Flank<br />- Cannot use Opportunity or Immediate Actions<br />- Each turn, can use a Minor Action and either a Standard Action or a Move Action,
+| Dazzled | No Effect | - Treats all enemies as having Concealment _(-2 to hit them)_ or, if already in Concealment, as having Superior Concealment _(an additional -3 to hit them)_.
 | Dominated | Charmed | - Cannot take actions <br />- When damaged, can roll a Save to end this condition.  <br />- The dominating character can spend a move action to make the dominated character move its speed. _(This counts as forced movement)_ <br />- The dominating character can spend a standard action to make the dominated character use an at-will attack. _(This counts as a forced attack)_
-| Flanked | No | - Grants Advantage on Melee attacks _(+2 to be hit)_
-| Grabbed | - | Cannot move <br />-When grabbed, the character is pulled to a square adjacent to the grabbing character. <br />-The condition ends if at any time the grabbed character is not adjacent to the grabbing character.<br />-Grabbed character can use the Escape combat maneuver to end the condition. _(Move Action, roll save to end grab from one enemy)_<br />-If forced movement would cause the grabbed character and the grabbing character to no longer be adjacent, the grabbed character can roll a Save to end this condition. If the condition doesn’t end this way, the forced movement is negated<br />-A character may be Grabbed by multiple enemies at a time.
-| Helpless | No | - Grants Advantage _(+2 to be hit)_<br />-Melee Attacks against the character gain +10 Crit Range
-| Hindered | No | -2 Hit
+| Flanked | No Downgrade | - Grants Advantage on Melee attacks _(+2 to be hit)_
+| Grabbed | No Effect | Cannot move <br />-When grabbed, the character is pulled to a square adjacent to the grabbing character. <br />-The condition ends if at any time the grabbed character is not adjacent to the grabbing character.<br />-Grabbed character can use the Escape combat maneuver to end the condition. _(Move Action, roll save to end grab from one enemy)_<br />-If forced movement would cause the grabbed character and the grabbing character to no longer be adjacent, the grabbed character can roll a Save to end this condition. If the condition doesn’t end this way, the forced movement is negated<br />-A character may be Grabbed by multiple enemies at a time.
+| Helpless | No Downgrade | - Grants Advantage _(+2 to be hit)_<br />-Melee Attacks against the character gain +10 Crit Range
+| Hindered | No Effect | -2 Hit
 | Immobilized | Slowed | Cannot move
-| Taunted | - | - -2 Hit on attacks that ignore the Taunt (see sidebar) <br />- A character may be Taunted by multiple enemies at a time.
+| Taunted | No Effect | - -2 Hit on attacks that ignore the Taunt (see sidebar) <br />- A character may be Taunted by multiple enemies at a time.
 | Petrified | Stunned | - Grants Advantage<br />- Cannot take actions<br />- Gains Resist (all).
-| Prone | No | Condition lasts indefinitely until the character stands up _(e.g. by spending a move action on the Stand Up maneuver)_ <br />-Cannot make any movement other than crawling (e.g. by having a Crawl Speed, or by using the Crawl combat maneuver: Move Action, crawl 1)<br />-Hindered (-2 Hit)<br />-Grants Advantage against melee attacks (+2 to be hit)<br />-Against non-melee attacks, gains Cover (-2 cover penalty to attack rolls) or, if already in Cover, gains Total Cover (an additional -3 cover penalty to attack rolls)
+| Prone | No Downgrade | Condition lasts indefinitely until the character stands up _(e.g. by spending a move action on the Stand Up maneuver)_ <br />-Cannot make any movement other than crawling (e.g. by having a Crawl Speed, or by using the Crawl combat maneuver: Move Action, crawl 1)<br />-Hindered (-2 Hit)<br />-Grants Advantage against melee attacks (+2 to be hit)<br />-Against non-melee attacks, gains Cover (-2 cover penalty to attack rolls) or, if already in Cover, gains Total Cover (an additional -3 cover penalty to attack rolls)
 | Restrained | Grabbed | - Cannot move <br />- Ignores forced movement <br />- Grants Advantage (+2 to be hit) <br />- Hindered (-2 Hit)
-| Slowed | - | - For each square moved, must spend an additional square of movement
+| Slowed | No Effect | - For each square moved, must spend an additional square of movement
 | Stunned | Dazed | -Cannot attack  <br />-Cannot move  <br />-Can only take one action per turn  <br />-Cannot use Reactions  <br />-Grants Advantage (+2 to be hit)
-| Unconscious | No | - When a character falls unconscious, they are knocked prone.  <br />-When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.  <br />- Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_  <br />- Cannot take actions  <br />- Cannot see.
+| Unconscious | No Downgrade | - When a character falls unconscious, they are knocked prone.  <br />-When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.  <br />- Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_  <br />- Cannot take actions  <br />- Cannot see.
 | Weakened | Fatigued | - Damage dealt is halved <br />- Healing granted or received is halved <br />- Shield Points granted or received are halved
-| Fatigued | -| - Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4
+| Fatigued |  No Effect | - Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4
 
-Stealth conditions - These conditions are used by characters trying to hide in combat. Usually, a character enters these conditions voluntarily.
-Condition | Effects | Ends
-| --- | -------- | -----
-| Shrouded | Cannot be targeted by Ranged attacks, or Reaction attacks <br />-Cannot be Charged <br />-Cannot make Reaction attacks |Condition is lost: <br />-After attacking <br />-After moving <br />- If, at the end of a character’s action, the Shrouded character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
-| Hidden | Cannot make Reaction attacks <br />-Gains Advantage when attacking <br />-Cannot be targeted by Melee or Ranged powers <br />-Cannot be targeted by a Close or Area power unless it targets a non-Hidden character. <br />-Location unknown to other characters <br /> | Condition is lost: <br />- After attacking <br />- After moving <br />- If, at the end of a character’s action, the Hidden character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 
-Special conditions - These conditions are rarely used, typically by monsters.
 
-Condition | Downgrade | Effects
-| --- | --- | ------
-| Swallowed | Grabbed | -When swallowed, a character disappears from its current position. When the condition ends, the character reappears in a square of his choice as close as possible to the swallower. <br />- Can spend a move action to make an Escape Check (see sidebar). If successful, condition ends. <br />- Does not occupy a space. <br />- Can only take one action per turn. <br />- Only has line of effect and line of sight to and from the swallower, and other characters and objects swallowed by it. <br />- The inside of the swallower, and swallowed characters and objects, are in total darkness unless otherwise specified. Swallowed characters can use any light source to illuminate the inside of the swallower and all characters and objects swallowed by it. <br />- When using a burst or blast power while swallowed, the swallower and all characters and objects swallowed by it are included in the burst or blast.
-| Exiled | Grabbed | - When exiled, a character disappears from its current position. <br />- When the condition ends, the character reappears on this position or, if not possible, in the closest ground square of his choice, unless the exiling effect states otherwise. <br />- Does not occupy a space. <br />- No line of sight to and from other creatures or objects unless the exiling effect states otherwise. <br />- No line of effect to and from other creatures or objects unless the exiling effect states otherwise.
-
-Legacy conditions:
-- Deafened: Renamed to Dazzled
-
-<div class="tip">
-Sidebar: Forced attack
-
-Certain powers or effects allow one character to force an enemy to make an attack. Such attacks are considered forced attacks, and use the following rules:
-
-If there are different attack powers that meet the requirement for the forced attack (e.g. basic attacks or at-will attacks), the character forcing the attack is aware of all available options and can choose any of them.
-
-For the chosen attack power, the character forcing the attack can make any relevant decision, including (but not limited to) targets, area of effect, forced movement caused by the attack.
-
-A character forced to make an attack cannot target himself with the forced attack.
-
-Forced attacks ignore the marked condition. A character making a forced attack counts as not marked, for the purposes of that attack.
-
-Forced attacks never trigger opportunity attacks.
-</div>
 
 
 <div class="tip">
-Tip: Many types of action can cause a character to be Hindered for a turn. These include combat maneuvers like Shift, Charge, Stand Up, Quick Draw, 
+Tip - Hindered: Many types of action can cause a character to be Hindered for a turn. These include combat maneuvers like Shift, Charge, Stand Up, Quick Draw,
 </div>
 
 <div class="tip">
@@ -276,8 +260,8 @@ An attack by a Taunted character ignores a Taunt if it targets an enemy not taun
 
 - If the attack targets multiple characters, and all enemies taunting the character are already targeted, any additional targets do not ignore the Taunt.
 - If multiple attacks are made in sequence as part of the same attack power _(e.g. primary and secondary attacks)_, once all enemies Taunting the character have been targeted at least once, any additional targets do not ignore the Taunt.
-- If an attack originally does not ignore the Taunt, and the attack targets are somehow changed by an enemy action or other effect, this does not cause the attack to ignore the Taunt. 
-- If an attack originally does not ignore the Taunt, and the attacker becomes Taunted during the attack _(e.g. by an enemy reaction)_, this does not cause the attack to ignore the mark. 
+- If an attack originally does not ignore the Taunt, and the attack targets are somehow changed by an enemy action or other effect, this does not cause the attack to ignore the Taunt.
+- If an attack originally does not ignore the Taunt, and the attacker becomes Taunted during the attack _(e.g. by an enemy reaction)_, this does not cause the attack to ignore the mark.
 </div>
 
 <div class="compatibility">**Compatibility Note**: Defender Aura
@@ -289,9 +273,17 @@ Some characters in compatible books have the Defender Aura power. The effect of 
 
 <div class="compatibility">**Compatibility Note**: ignoring Taunts
 
-Any reference from compatible books to effects that trigger when a Taunted character 'makes an attack that does not include the Taunting character as a target' should use the rules for violating Taunts described above.
+Any reference from compatible books to effects that trigger when a Taunted character 'makes an attack that does not include the Taunting character as a target' should use the rules for ignoring Taunts described above.
 </div>
 
+### Stealth status effects
+
+These effects are used by characters trying to hide in combat. Unlike other status effects, these are mostly beneficial and often entered voluntarily.
+
+Status | Effects | Ends
+| --- | -------- | -----
+| Shrouded | Cannot be targeted by Ranged attacks, or Reaction attacks <br />-Cannot be Charged <br />-Cannot make Reaction attacks |Condition is lost: <br />-After attacking <br />-After moving <br />- If, at the end of a character’s action, the Shrouded character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
+| Hidden | Cannot make Reaction attacks <br />-Gains Advantage when attacking <br />-Cannot be targeted by Melee or Ranged powers <br />-Cannot be targeted by a Close or Area power unless it targets a non-Hidden character. <br />-Location unknown to other characters <br /> | Condition is lost: <br />- After attacking <br />- After moving <br />- If, at the end of a character’s action, the Hidden character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 
 
 <div class="tip">
@@ -302,9 +294,42 @@ Tip: Although a Hidden character´s current location is unknown, other character
 Clarification: Actions that grant the Shrouded or Hidden condition do not cause the loss of that condition if they include attacks or movement.
 </div>
 
-### Condition downgrading
+### Special Status Effects
 
-## Forced Movement{.newPage}
+These effectsare rarely used, typically by monsters.
+
+Status | Downgrade | Effects
+| --- | --- | ------
+| Swallowed | Grabbed | -When swallowed, a character disappears from its current position. When the condition ends, the character reappears in a square of his choice as close as possible to the swallower. <br />- Can spend a move action to make an Escape Check (see sidebar). If successful, condition ends. <br />- Does not occupy a space. <br />- Can only take one action per turn. <br />- Only has line of effect and line of sight to and from the swallower, and other characters and objects swallowed by it. <br />- The inside of the swallower, and swallowed characters and objects, are in total darkness unless otherwise specified. Swallowed characters can use any light source to illuminate the inside of the swallower and all characters and objects swallowed by it. <br />- When using a burst or blast power while swallowed, the swallower and all characters and objects swallowed by it are included in the burst or blast.
+| Exiled | Grabbed | - When exiled, a character disappears from its current position. <br />- When the condition ends, the character reappears on this position or, if not possible, in the closest ground square of his choice, unless the exiling effect states otherwise. <br />- Does not occupy a space. <br />- No line of sight to and from other creatures or objects unless the exiling effect states otherwise. <br />- No line of effect to and from other creatures or objects unless the exiling effect states otherwise.
+
+### Legacy status effects
+
+In legacy rules, status effects are referred to as conditions.
+
+Some status effects have been renamed from legacy rules:
+
+- Deafened: Renamed to Dazzled
+
+
+### Forced Attacks
+
+Certain powers or effects allow one character to force an enemy to make an attack. Such attacks are considered forced attacks, and use the following rules:
+
+- If there are different attack powers that meet the requirement for the forced attack (e.g. basic attacks or at-will attacks), the character forcing the attack is aware of all available options and can choose any of them.
+- For the chosen attack power, the character forcing the attack can make any relevant decision, including (but not limited to) targets, area of effect, forced movement caused by the attack.
+- A character forced to make an attack cannot target himself with the forced attack.
+- Forced attacks ignore the Taunted status effect . A character making a forced attack counts as not Taunted, for the purposes of that attack.
+- Forced attacks never trigger opportunity attacks.
+
+
+## Forced Movement {.newPage}
+
+Certain powers or effects allow one character to force an enemy to make a move. Such movements are considered forced movement, and use the following rules:
+- Forced Movement can be caused by Push, Pull and Slide effects. In these cases, the amount of squares of forced movement is indicated in the effect causing the forced movement.
+- If a Push, Pull or Slide effect ends before the full distance is moved because the moved character collides with an obstacle or another character, each character involved in the collision takes 1d4 damage. This damage scales with the tier of the source of the forced movement, to 2d4 for Paragon effects for Paragon sources, and 4d4 for Epic sources.
+- Forced Movement can also be caused by effects that force the character to move in a particular direction. In this case, the amount of squares of forced movement depends on the character's speed unless otherwise stated, and is affected by any status effects or other conditions that restrict movement.
+- Forced movement never triggers opportunity attacks or other character powers that would trigger on movement. Traps and hazardous terrain trigger normally.
 
 ### Push
 
