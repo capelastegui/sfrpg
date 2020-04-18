@@ -156,7 +156,13 @@ Basic Elite Monster:
 Monsters with the following classes gain the Elite monster special
 rules, double XP and double HP.
 
-
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_class <- read_csv_monster("monster_classes") %>%
+  dplyr::filter(category=='Elite')
+htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
+   get_monster_list_htm( )
+htm_monster_class %>% cat()
+```
 
 ## Other Templates
 
