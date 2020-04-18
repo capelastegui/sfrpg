@@ -133,6 +133,7 @@ htm_monster_class %>% cat()
 ## Elite Monsters
 
 All Elite Monsters gain the following rules:
+
 - Action Point: Each Elite Monster has 1 Action Point, which can be spent with an
   Action Point Check, using the same rules as PCs.
 - Endure Conditions: At the start of their turn, an Elite Monster can choose a Combat
