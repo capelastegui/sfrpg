@@ -224,7 +224,7 @@ A status effect can only be downgraded once at any given time. Notably, this mea
 ### Standard Status Effects
 
 Status | Downgrade | Effects
-| --- | --- | ------
+| - | - | --------
 | Blinded | Dazzled | - Grants Advantage _(+2 to be hit)_<br />- Cannot Flank<br />- Treats other characters or objects as having Superior Concealment _(-5 to hit them)_.<br />- No line of sight to other characters or objects<br />- +1 DC to Perception Skill Checks.
 | Charmed | No Effect | - Cannot attack enemies Charming the character.<br />- A character may be Charmed by multiple enemies at a time.<br />- Automatically ends if attacked by an enemy Charming the character.
 | Dazed | Grants Advantage | - Grants Advantage _(+2 to be hit)_<br />- Cannot Flank<br />- Cannot use Opportunity or Immediate Actions<br />- Each turn, can use a Minor Action and either a Standard Action or a Move Action,
@@ -281,7 +281,7 @@ Any reference from compatible books to effects that trigger when a Taunted chara
 These effects are used by characters trying to hide in combat. Unlike other status effects, these are mostly beneficial and often entered voluntarily.
 
 Status | Effects | Ends
-| --- | -------- | -----
+| -- | -------- | -----
 | Shrouded | Cannot be targeted by Ranged attacks, or Reaction attacks <br />-Cannot be Charged <br />-Cannot make Reaction attacks |Condition is lost: <br />-After attacking <br />-After moving <br />- If, at the end of a character’s action, the Shrouded character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 | Hidden | Cannot make Reaction attacks <br />-Gains Advantage when attacking <br />-Cannot be targeted by Melee or Ranged powers <br />-Cannot be targeted by a Close or Area power unless it targets a non-Hidden character. <br />-Location unknown to other characters <br /> | Condition is lost: <br />- After attacking <br />- After moving <br />- If, at the end of a character’s action, the Hidden character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 
