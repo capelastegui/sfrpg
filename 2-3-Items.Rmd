@@ -1,0 +1,7 @@
+# Magic Items
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+htm_items = clean_df_items() 
+htm_items %>% cat()
+```
