@@ -33,3 +33,31 @@ test_that("get_equip_tables works", {
   #writeLines(str_tables, file.path(dir_output, '1-01-equiptables.html'))
 })
 
+test_that("clean_df_items works", {
+  df_items <- clean_df_items()
+  # expect_equal(
+  #   df_items$table_type %>% unique(),
+  #   c('Weapons','Armor','Armor_by_Class','Implements'))
+  # expect_equal(
+  #   df_equip$Training %>% unique(),
+  #   c( 'Improvised','Basic', 'Martial', 'Inner',  '-'))
+
+  # str_tables =df_items$table %>% paste0(collapse='\r\n')
+
+  # str_tables <- paste("<html>\r\n<head>\r\n<title>Test tables</title>\r\n<style type=\"text/css\">",
+  #                    css,
+  #                    "</style></head>\r\n<body>",
+  #                    str_tables,
+  #                    "</body></html>",
+  #                    sep="\r\n",
+  #                    collapse="")
+  # skip_on_travis()
+  # verify_output(
+  #   test_path('output','test_items.html'),
+  #   print(df_equip)
+  # )
+  succeed()
+
+  #writeLines(str_tables, file.path(dir_output, '1-01-equiptables.html'))
+})
+
