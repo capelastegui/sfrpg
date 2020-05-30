@@ -1,7 +1,117 @@
 # Magic Items
 
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+
+## Magic Weapons
+
+Magic Weapons grant a bonus to damage:
+
+- Heroic: +1 damage
+- Paragon : +3 damage
+- Epic: +6 damage
+
+<br/><br/>
+
+```{r magic_weapon, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 library(sfrpg)
-htm_items = clean_df_items() 
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Weapon')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Magic Implements
+
+Magic Implements grant a bonus to damage:
+
+- Heroic: +1 damage
+- Paragon : +3 damage
+- Epic: +6 damage
+
+<br/><br/>
+
+```{r magic_impl, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Implement')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Magic Armor
+
+Magic Armor grants a bonus to damage:
+
+- Heroic: +4 HP
+- Paragon : +12 HP
+- Epic: +24 HP
+
+<br/><br/>
+
+```{r magic_armor, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Armor')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Neck Items
+```{r magic_neck, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Neck')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Feet Items
+```{r magic_feet, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Feet')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Waist Items
+```{r magic_waist, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Waist')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Head Items
+```{r magic_head, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Head')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Arms Items
+```{r magic_arms, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Arms')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Hands Items
+```{r magic_hands, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Hands')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Magic Rings
+```{r magic_ring, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Ring')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```
+
+## Wondrous Items
+```{r magic_wondrous, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Wondrous Item')
+htm_items = clean_df_items(df_items_raw)
 htm_items %>% cat()
 ```

@@ -22,7 +22,7 @@ getManeuverList <- function (dir_base=here::here())
   
   maneuver.raw.df <- read.csv(maneuver.raw, sep=";") %>% 
     dplyr::filter(Name!="DELETEME")%>%
-    gsub_colwise("\\n","<br>")%>%
+    gsub_colwise("\\n","<br>") %>%
     tbl_df() %>% 
     
     mutate(UsageLimit=factor(UsageLimit, 

@@ -93,11 +93,13 @@ tr:nth-child(even) {background-color: #ffefbf;}
 
 .darkgray {color:DimGray}
   
-.red {color:darkred}
+.red {color:DarkRed}
 
 .blue{color: MediumBlue;} 
 
-.darkblue{color: DarkBlue;} 
+.darkblue{color: DarkBlue;}
+
+.gold{color: GoldenRod}
 
 /* Font sizes*/
 .large {font-size: 14px;}

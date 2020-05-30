@@ -57,14 +57,16 @@ extract_equip_table <- function(df_tables_equip, type, subtype='-'){
 #' Add title paragraph column for item block
 #' @export
 add_p_item_title <- function(df_item, rarity_colors){
-  p_title <- df_item %>%
-    dplyr::select(name, type, rarity, level_h, level_p, level_e) %>%
-    collapse_cols(' ')
-
   df_item %>%
-    dplyr::mutate(p_title = paste0(
-      "<span class=\"", rarity_colors, " large\"><strong>",
-      p_title, '</strong></span>'))
+    dplyr::mutate(
+      title1=paste0("<span class=\"", rarity_colors, " large\"><strong>",
+                    name, '</strong></span>', '<br>'),
+      title2=paste0("<span class=\"", rarity_colors, "\"><strong>",
+                    paste0(rarity, ' ' , type, ' - ',
+                           paste(level_h, level_p,  level_e, sep='/'),
+                    '</strong></span>', '<br>')),
+      p_title=paste0(title1, title2)
+    ) %>% dplyr::select (-title1, -title2)
 }
 
 #' Write magic items data
@@ -74,9 +76,9 @@ add_p_item_title <- function(df_item, rarity_colors){
 #'
 #' @return
 #' @export
-clean_df_items <- function(df_items_raw=NULL, df_items_tag=NULL) {
+clean_df_items <- function(df_items_raw=NULL, df_items_tag=NULL, to_html=TRUE) {
 
-  l_color_map=c(black = "Common", silver = "Uncommon", gold = "Rare")
+  l_color_map=c(black = "Common", darkgray = "Uncommon", gold = "Rare")
 
   if (df_items_raw %>% is.null())  {
     df_items_raw <- read_my_csv('magic_items')
@@ -98,9 +100,13 @@ clean_df_items <- function(df_items_raw=NULL, df_items_tag=NULL) {
         # Reorder factor levels: green,red,gray
         # Noisy function, suppressing warnings
         #forcats::fct_relevel(c('green','red','gray'))
-        {suppressWarnings( forcats::fct_relevel(.,c('black','gray','gold')))}
+        {suppressWarnings( forcats::fct_relevel(.,c('black','darkgray','gold')))}
     ) %>%
-    dplyr::arrange(type, rarity, level_h, name)
+    dplyr::arrange(type, rarity_colors, level_h, name)
+
+    if(!to_html) {
+    return(df_items)
+  }
 
   items_tag_pre <- df_items_tag[1,] #%>% dplyr::select(-Class,-Build)
   items_tag_post <- df_items_tag[2,] #%>% dplyr::select(-Class,-Build)
@@ -116,11 +122,23 @@ clean_df_items <- function(df_items_raw=NULL, df_items_tag=NULL) {
       purrr::map_dfc(add_p_tags)
 
   item_block <- item_block_tmp %>%
-    collapse_cols('\r\n') %>%
+    gsub_colwise("\\n","<br>") %>%  # Replace line breaks in raw file with html br
+    collapse_cols('\r\n') %>%  # Add line breaks for html readability
     build_element('<div class="Power">','</div>') %>%
     paste(collapse='\r\n')
 
-  htm_item <- paste0('<div class="Power-List">',item_block, '</div>')
+  add_strong<- function(str_in){
+    paste0('<strong>',str_in, '</strong>')
+  }
+
+
+  htm_item <- paste0('<div class="Power-List">',item_block, '</div>') %>%
+    # [H] is converted to link in markdown - need to escape
+    # , also \\[H\\] is converted into something else
+    stringr::str_replace_all('\\[', '&#91;') %>%
+    stringr::str_replace_all('\\]', '&#93;') %>%
+    stringr::str_replace_all("(Power.+?)\\:", add_strong) %>%
+    stringr::str_replace_all("(Property|Special|Requirement)\\:", add_strong)
 
   htm_item
 }
