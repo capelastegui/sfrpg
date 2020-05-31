@@ -187,8 +187,8 @@ Text in white boxes is used to define formulas.
 <div class="tip">Blue text is used to provide advice on how to play the game.
  It is typically preceded by **“Tip”** or **“Example”**.</div>
 
-<div class="compatibility">Gold text is used to provide compatibilit
-y instructions to integrate material from older sourcebooks. It is typically
+<div class="compatibility">Gold text is used to provide compatibility
+ instructions to integrate material from older sourcebooks. It is typically
  preceded by **“Compatibility Note”**.</div>
 
 <div class="design">Red text is used to provide insight into the designer's
@@ -383,37 +383,32 @@ order to match the expected total multiplier of x8.</div>
 
 ### Rolling Damage Rolls - Monsters
 
-Monsters have fixed damage values, so the rules for their damage rolls are much
-simpler:
+Monsters have fixed damage values rather than damage dice, so the rules for
+their damage rolls are much simpler. When a monster hits an enemy with an attack,
+the GM may choose one of the following ways to determine the amount of damage:
 
-```
-Damage = Attack Damage - Resist Dice
-```
+- Fixed damage: Deal the amount of attack damage indicated in the monster's stat block.
+- Variable damage: Roll 1d6 to modify the base attack damage.
 
-**Resist Dice** : PCs receiving damage from a monster get to roll Resist Dice,
-which are subtracted from the final damage value. Resist Dice depend on the
- level of the attacked PC:
- 
- <div class="very-narrow">
-Level  | Resist Dice
---- | -----
-1   | 1d6
-6	| 1d8
-11	| 1d10
-16	| 1d12
-21 	| 2d8
-26 	| 2d12
-</div>
+When using variable damage, roll 1d6 and calculate total damage based on the roll:
 
-If a monster deals damage multiple times to the same PC as part of the same
- action (for example with a Double Strike attack that rolls to hit twice), 
- add all damage together and treat it like a single attack for the purposes of
- rolling Resist Dice.
- 
-If a monster deals damage to another monster, no Resist Dice apply - use the
- full damage value instead.
+- 1-2: Base damage - (E)
+- 3-4: Base damage
+- 5-6: Base damage + (E)
 
-Damage from Minion monsters ignores Resist Dice.
+, where (E) is the monster's extra damage stat, as listed in the monster stat block.
+
+
+<div class="tip">**Example:** A goblin hits a PC with an attack that deals 8 damage.
+If the GM chooses to use fixed damage, the attack deals 8 damage. If they choose
+variable damage instead, they will roll 1d6 and use the goblin's (E) stat value of 2
+to modify the damage, for a total of 6 damage on a roll of 1-2, 8 damage on a roll
+of 3-4, and 10 damage on a roll of 5-6.</div>
+
+<div class="tip">**Tip:** We recommend GMs to use fixed damage for minion monsters,
+and variable damage for other monsters, to make combat less predictable. That said,
+GMs can choose fixed damage for all monsters when they want to speed up combat.</div>
+
 
 ### Rolling Action Point Checks
 
