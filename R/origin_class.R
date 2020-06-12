@@ -507,7 +507,7 @@ get_df_origin <- function (
 #' @return df_class table (Class, Build,
 #'         htm_stat,htm_feature,htm_power_summary,htm_power)
 #' @export
-get_html_sheet <- function (l_feature_id, l_power_id,
+get_html_sheet <- function (l_feature_id, l_power_id, l_items=NULL,
 character_name='Character Sheet') {
   df_power_raw = get_df_power_from_sheet(l_power_id)
 
@@ -520,7 +520,16 @@ character_name='Character Sheet') {
   htm_feature = df_class_feature %>% select(Name, Description) %>%
     clean_df_feature()
 
-  htm_sheet = paste(
+  if(!is.null(l_items)) {
+    htm_items = read_my_csv('magic_items') %>%
+      dplyr::filter (name %in% l_items) %>% clean_df_items()
+
+    htm_items = paste0( "<p>",
+    htm_items,
+    "</p>\r\n")
+  } else {htm_items = '' }
+
+  htm_sheet = paste0(
     "<p><h3>",
     character_name,
     "</h3></p>\r\n",
@@ -532,7 +541,7 @@ character_name='Character Sheet') {
     "<p>",
     htm_power,
     "</p>\r\n",
-    sep = ""
+    htm_items
   )
   htm_sheet
 }
@@ -571,9 +580,9 @@ write_class_file <- function(df_class, char_class, char_build, dir_output) {
   writeLines(htm_file, path)
 }
 
-write_html_sheet <- function(l_feature_id, l_power_id,
+write_html_sheet <- function(l_feature_id, l_power_id, l_items,
                              dir_output, character_name) {
-  htm_file = get_html_sheet(l_feature_id, l_power_id, character_name) %>%
+  htm_file = get_html_sheet(l_feature_id, l_power_id, l_items, character_name) %>%
       get_htm_file()
     path = file.path(dir_output,
       paste0('sheet_',character_name,'.html'))
