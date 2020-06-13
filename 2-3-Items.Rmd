@@ -115,3 +115,11 @@ df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Wondrous Ite
 htm_items = clean_df_items(df_items_raw)
 htm_items %>% cat()
 ```
+
+## Consumable Items
+```{r magic_consumable, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_items_raw <- read_my_csv('magic_items') %>% dplyr::filter(type=='Consumable')
+htm_items = clean_df_items(df_items_raw)
+htm_items %>% cat()
+```

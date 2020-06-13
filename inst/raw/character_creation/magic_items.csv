@@ -337,3 +337,15 @@ Speed 6
 Standard Action - At-Will
   Attack: Melee 1 (one creature); +4 vs Arm
   Hit: [H] 5 damage. [P] 10 damage. [E] 20 damage.",
+Healing Potion,Consumable,Common,1,11,21,"Minor Action: Heal HP:
+- [H]: 10 HP
+- [P]: 20 HP
+- [E]: 40 HP",,,,
+Superior Healing Potion,Consumable,Common,6,16,26,"Minor Action: Heal HP:
+- [H]: 15 HP
+- [P]: 30 HP
+- [E]: 60 HP",,,,
+Stimulating Potion,Consumable,Common,3,13,23,"Minor Action (only while exhausted: Reduce your Exhaustion Penalty until end of the encounter.
+- [H]: Penalty reduced by 1
+- [P]: Penalty reduced by 2
+- [E]: Penalty reduced by 3",,,,
