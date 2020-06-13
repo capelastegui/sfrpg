@@ -1,5 +1,8 @@
 feature_id,Name,Description
 ftr_weapn_mas,Weapon Mastery, +1 Hit with weapon attacks
+ftr_train,Fighter Training,"Reduce by 1 the DC of the following Skill Checks:
+-  Social checks (Authority, Diplomacy) and knowledge checks related to weapons, armor and fighting styles (Perception, Lore)
+- Keep watch (Perception, Endurance)"
 ftr_guard_aur,Guardian's Aura,"You gain the Defender Aura power.<br>Enemies Taunted by you trigger Opportunity Attacks from you when ignoring your Taunt or shifting out of your Defender Aura.<br/>Enemies hit by your Opportunity Attacks are Taunted until end of turn."
 ftr_guard_shi,Guardian's Shield,"When an ally in your Defender Aura is damaged by an attack, or an ally is damaged by an attack made by an enemy in your Defender Aura, reduce the damage by your CON."
 ftr_armor_spc,Heavy Armor Specialist,Ignore your Skill Armor Penalty.
@@ -10,12 +13,19 @@ ftr_sell_rth,Sellsword's Ruthlessness,Add your Intelligence to the damage of you
 ftr_sell_val,Sellsword's Valor,"When you attack an enemy,that enemy subtracts double your Intelligence to the damage of their Reaction attacks that turn."
 ftr_sell_bar,Sellsword's Bargaining, +Intelligence to your Authority and Bluff Skills.
 wiz_contr_pow,Controller Power,"Gain an additional Wizard Daily Attack power, of a level equal to the level of your lowest Wizard Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Wizard daily powers."
+wiz_train,Wizard Training,"Wizard Training: Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy, Trickery) and knowledge checks (Arcana, Lore) related to Arcane magic.
+- Study and gather information from books (Concentration)"
 wiz_elem_rng,Elemental Range,"Gain +Dex to the range of your Ranged and Area attacks, and to the size of your Line attacks."
 wiz_flex,Wizard Flexibility,Gain an additional At-Will attack power.
 wiz_rit,Master Ritualist,"Gain Ritual Training or Summon Familiar as a bonus Adventuring Feat.<br>You learn an additional Heroic Ritual from each Ritual Training feat.<br>You learn an additional Paragon Ritual from each Paragon Ritual Training feat.<br>You learn an additional Epic Ritual from each Epic ritual Training feat."
 wiz_abjur_shi,Abjurer`s Shield,"Add double your CON to your Hit Points.<br>Add your CON to your Reflex"
 wiz_summ_mas,Master Summoner,"You treat Body Cover granted to you by your summons and allies as Superior Cover.<br>Add triple your Charisma to the HP of your Summons."
 rog_sneak,Sneak Attack,"When attacking with Advantage with an Rogue Weapon, deal +1d4 damage per W. (Weapon damage modifiers apply to this damage)"
+rog_train,Rogue Training,"Rogue Training: Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy, Trickery) and knowledge checks (Perception, Lore) related to crime.
+- Pick locks (Finesse), pick pockets (Trickery)
+- Find traps (Perception) and disable traps (Concentration)"
 rog_scoun_wpn,Scoundrel's Weapon,"You treat the following weapons as Rogue Weapons: Light Blades, Crossbows, Slings.<br>You deal +Cha damage with Rogue Weapons.<br>+1 Hit with Dagger attacks."
 rog_scoun_amb,Scoundrel's Ambush,"Gain +Cha Initiative.<br>Gain Advantage when attacking enemies that have not yet acted in the current encounter.<br>Gain Advantage against Slowed, Immobilized or Grabbed enemies."
 rog_thug_wpn,Thug's Weapon,"You treat the following weapons as Light Weapons: Light Blades, Mace, Light Hammer.<br>+1 Hit with Weapon attacks with Off-Hand weapons and Maces."
@@ -28,22 +38,43 @@ rog_swash_wpn,Swashbuckler's Weapon,"You treat the following weapons as Light We
 rog_swash_stp,Swashbuckler's Step,"When you Shift, you can have that movement count as Climbing or as a Long Jump.<br>When you use the Shift Maneuver, you Shift your Charisma (instead of Shift 1)."
 rog_swash_grn,High Ground,"When you use the Drop Maneuver, you reduce the falling distance by your Charisma (instead of by 1). If you fall adjacent to an enemy, you gain Advantage against that enemy this turn.<br>Gain Advantage on melee attacks against enemies on squares at a lower height than your space."
 pri_heal,Healing Word,Gain the Healing Word power.
+pri_train,Priest Training,"Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy) and knowledge checks (Arcana, Lore) related to Gods, Divine power and the undead.
+- Heal the sick or wounded (Nature, Concentration)"
 pri_light_fhl,Faith Healing,"When you use a Healing power, add Cha to the Surge Value of any character spending a Surge.<br>When you heal a character to full health, that character gains CHA Shield Points."
 pri_shi,Shield of the Gods,"You and allies within 5 squares gain Resist (Crit Damage). When you or an ally within 5 squares is critically hit by an enemy, they roll a save - on a success, the attacking enemy is knocked Prone."
 pri_rit,Ritual Training,You gain Ritual Training as a bonus lesser feat.
 pri_luck_bls,Fortune's Blessing,"At the start of each of your turns, randomly choose an ally that has not benefited from Fortune's Blessing on your previous turn. That ally gains +1 to Hit, Save, and all defenses until your next turn."
 bar_rstrike,Rage Strike,You gain the Rage Strike power.
+bar_train,Barbarian Training,"Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy) and knowledge checks (Perception, Lore) related to tribal organization
+- Break doors, chests, objects (Athletics)
+- Find food and shelter in the wilderness (Endurance)"
 bar_rager_svg,Savage Attack,Your attacks deal +Constitution damage.
 bar_rager_res,Raging Resilience,You add your Constitution to your Surge Value.
 bar_rager_chr,Barbarian Charge,"You do not become Hindered due to charging.<br>When you charge an enemy within 4 or more squares, you gain Advantage, and you can use a Barbarian melee attack instead of a melee Basic attack."
-bar_rager_skl,Savage Skill,You add your Constitution to your Intimidate skill and your Nature skill.
 wld_heal,Inspiring Word,Gain the Inspiring Word power.
 wld_tac_adv,Tactical Advice,Allies that can see or hear you gain+Int Initiative.
 wld_tac_act,Tactical Action,Allies that can see or hear you gain +Int hit with Action Point attacks.
-wld_tac_skl,Tactical Skill,TODO: Skill related assist feature.
 wlk_contr,Controller Power,"Gain an additional Warlock Daily Attack power, of a level equal to the level of your lowest Warlock Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Warlock daily powers."
 wlk_shadow_crs,Shadow Curse,"Once per turn, when you target an enemy with an attack, the enemy is afflicted with your Shadow Curse until the end of the encounter. Enemies under the Shadow Curse treat you as having Concealment or, if you already have Concealment, as having Total Concealment."
 wlk_shadow_pct,Shadow Pact,"Once per round, when an enemy under your Shadow Curse is reduced to 0 HP, the enemy's space becomes a zone of Difficult Terrain for your enemies until the end of the encounter. Enemies ending their turns in the zone or adjacent to it take Dex necrotic damage."
+rng_train,Ranger Training,"Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy) and knowledge checks (Nature) related to natural and magical beasts.
+- Track enemies (Perception, Nature) and avoid enemy tracking (Stealth)
+- Hunting (Nature)"
+dru_train,Druid Training,"Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy) and knowledge checks (Nature) related to Plants, Primal powers and spirits"
+pal_train,Paladin Training,"Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy) and Lore checks related to nobility and knighthood.
+- Riding (Concentration) and taming mounts (Nature)
+- Identify evil and deception (Perception)"
+brd_train,Bard Training,"Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy) and knowledge checks (Arcana, Lore) related to art, legends
+- Create works of art and perform (Concentration)"
+wld_train,Warlord Training,"Reduce by 1 the DC of the following Skill Checks:
+- Social checks (Authority, Diplomacy) and Lore checks related to the military, teamwork activities.
+- Teach and train others (Concentration)"
 ori_human_act,Human of Action,"When you take a Full Rest, gain an additional Action Point.<br>+1 to Action Point Checks.<br>Gain Advantage on attacks made with an Action Point."
 ori_human_rec,Human Recovery,"When using Second Wind, heal an additional 1d10, and you can roll a save to avoid spending a Vitality point."
 ori_human_skl,Human Skill,Gain Skill Training as a bonus feat.
