@@ -1,25 +1,25 @@
 name,type,rarity,level_h,level_p,level_e,p1,p2,p3,p4,p5
 Magic Weapon,Weapon,Common,1,11,21,,,,,
-Throwing Weapon,Weapon,Common,3,13,23,"Property: Gain Throw 5 or, if already has Throw, gain +5 to Throw range",,,,
+Far Weapon,Weapon,Common,3,13,23,"Property: If weapon is Ranged or has Throw, increase range by 2. Otherwise, gain Throw 2.",,,,
 Opportunist's Weapon,Weapon,Common,3,13,23,Requirement: Melee,Property: +2 Hit with Opportunity Attacks with this weapon.,,,
 Winged Weapon,Weapon,Common,3,13,23,Property: +1 Hit against flying targets,"Property: On a Critical Hit against a flying enemy, knock prone.",,,
 Healing Weapon,Weapon,Common,5,15,25,"Property: On a hit, you or an ally within 5 squares gain a bonus to Surge Value until end of next turn:
  - [H]:+2
 	- [P]:+6
 	- [E]:+12.","Property: On a Critical Hit, you or an ally within 5 squares can spend a Surge.",,,
-Vicious Weapon,Weapon,Common,5,15,25,"Property: On a Critical Hit, gain a bonus to Crit Damage:
-	- [H]: +4
- - [P]: +12
-	- [E]: +24",,,,
-Energy Weapon,Weapon,Common,7,17,27,"Special: Choose one of the following damage types when the weapon is created: Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder.","Property: On a Critical Hit, Crit Damage is of the chosen type, and gain a bonus to Crit Damage:
+Energy Weapon,Weapon,Common,5,15,25,"Special: Choose one of the following damage types when the weapon is created: Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder.","Property: On a Critical Hit, Crit Damage is of the chosen type, and gain a bonus to Crit Damage:
 	- [H]: +2
 	- [P]: +6
 	- [E]: +12",Power (At-will): Minor Action. All damage dealt by weapon attacks with this weapon is of the chosen type. You can dismiss this effect as a free action.,,
+Vicious Weapon,Weapon,Common,7,17,27,"Property: On a Critical Hit, gain a bonus to Crit Damage:
+	- [H]: +3
+ - [P]: +9
+	- [E]: +18",,,,
 Overwhelming Weapon,Weapon,Common,7,17,27,"Property: Gain +1 to the distance of Pulls, Pushes and Slides caused by weapon attacks with this weapon.","Property: On a Critical Hit, Push 1.",,,
 Defending Weapon,Weapon,Uncommon,3,13,23,Power (Encounter): Minor action. You don't grant combat advantage until the start of your next turn.,"Property: On a Critical Hit, recharge this weapon's power.",,,
-Extending Weapon,Weapon,Uncommon,3,13,23,"Power (Encounter): Minor action. Until the end of your next turn, the reach of this weapon increases by 1, and the range of this weapon increases by 10.",,,,
+Extending Weapon,Weapon,Uncommon,3,13,23,"Power (Encounter): Minor action. Until the end of your next turn, the reach of this weapon increases by 1, and the range of this weapon increases by 5.",,,,
 Snap Shot Weapon,Weapon,Uncommon,5,15,25,Requirement: Ranged,Power (Encounter): Opportunity Action (An adjacent enemy provokes an opportunity attack from you) Effect: Make a Safe ranged basic attack with this weapon against the triggering enemy,,,
-Rending Weapon,Weapon,Uncommon,5,15,25,Power (Encounter): Triggered Action (You score a Critical Hit with this weapon). Effect: Make a basic attack with this weapon against the triggering enemy.,,,,
+Rending Weapon,Weapon,Uncommon,5,15,25,Power (Daily): Triggered Action (You score a Critical Hit with this weapon). Effect: Make a basic attack with this weapon against the triggering enemy.,"Property: When you score a Critical Hit with this weapon, if the item power is spent, recharge it at the end of turn.",,,
 Feinting Weapon,Weapon,Uncommon,7,17,27,Power (Encounter): Minor Action. Effect: Choose an enemy you have missed with this weapon this turn. You gain Advantage against that enemy until end of your next turn.,"Property: On a Critical Hit, and when you spend an Action Point, recharge this weapon's power.",,,
 Keen Weapon,Weapon,Uncommon,7,17,27,"Property: When making a weapon attack with combat advantage, increase the Crit Range for this weapon by 1.",,,,
 Weapon of Light and Shadow,Weapon,Rare,3,13,23,"Power (At-Will): Minor Action. Choose radiant or necrotic. Your weapon attacks with this weapon gain that keyword, and all damage dealt by them is of the chosen type.","Property: When you hit with a radiant weapon attack with this weapon, an ally adjacent to the target gains Shield Points. When you hit with a necrotic weapon attack with this weapon, you gain Shield Points:
@@ -38,8 +38,8 @@ Vorpal Weapon,Weapon,Rare,7,17,27,"Property: On a Critical Hit, gain a bonus to 
 	- [P]: +12
 	- [E]: +24 . This bonus is doubled if you rolled a natural 20.","Power (Encounter): Triggered Action (You bloody an enemy with this weapon). Effect: The triggering enemy makes a saving throw. On a failed save, you choose whether to make the enemy Slowed until the end of the encounter or Fatigued until the end of the encounter.",,,
 Magic Implement,Implement,Common,1,11,21,,,,,
-Reaching Implement,Implement,Common,3,13,23,Property: Ranged and area implement attacks made with this implement gain a +3 bonus to range.,,,,
-Implement of Fear,Implement,Common,3,13,23,"Property: When you hit with an implement melee or close attack using this implement, the target can't flank until the start of your next turn.",,,,
+Far Implement,Implement,Common,3,13,23,Property: Ranged and area implement attacks made with this implement gain a +2 bonus to range.,,,,
+Implement of Fear,Implement,Common,3,13,23,"Property: When you hit an enemy with this implement, they treat squares adjacent to you as Difficult Terrain until your next turn.",,,,
 Healing Implement,Implement,Common,5,15,25,"Property: On a hit, you or an ally within 5 squares gain a bonus to Surge Value until end of next turn:
 	- [H]:+2
 	- [P]:+6
@@ -51,10 +51,10 @@ Attuned Implement,Implement,Common,7,17,27,"Special: Choose one of the following
 	- [P]:+3 Miss Damage
 	- [E]:+6 Miss Damage",,,
 Implement of Imposition,Implement,Uncommon,3,13,23,"Property: When an implement attack made with this implement inflicts an effect that a save can end, the target takes a -2 penalty to the first saving throw made against it.",,,,
-Implement of Ruin,Implement,Uncommon,5,15,25,"Power (Encounter): Minor action. Effect: The next implement attack with this implement that hits this turn deals extra damage:
-	- [H]:+3
-	- [P]:+9
-	- [E]:+18",,,,
+Implement of Ruin,Implement,Uncommon,5,15,25,"Power (Encounter): Minor action. Effect: Until end of turn, you attacks with this implement deal extra damage:
+	- [H]:Extra damage equal to the Escalation Die
+	- [P]:Extra Damage equal to three times the Escalation Die
+	- [E]:Extra Damage equal to six times the Escalation Die",,,,
 Storing Implement,Implement,Uncommon,5,15,25,"Special: When the implement is created, choose one encounter implement attack power that can be used as a standard action, from a class that is proficient with this implement:
 	- [H]: Power level 7 or less
 	- [P]: Power level 13 or less
@@ -75,36 +75,32 @@ Implement of Deadly Accuracy,Implement,Rare,7,17,27,"Property: When you hit with
 	- [P]: +3
 	- [E]: +6",Power (Daily): Minor Action. You gain a +5 power bonus to your next attack roll with this implement.,,,
 Magic Armor,Armor,Common,1,11,21,,,,,
-Ranged Armor,Armor,Common,3,13,23,Requirement: Heavy Armor,Property: The Armor Penalty of this armor applies to Melee attacks instead of Ranged and Area attacks.,,,
+Ranged Armor,Armor,Common,3,13,23,Requirement: Heavy Armor,Property: The Armor Penalty of this armor does not apply to Ranged attacks.,,,
 Nimble Armor,Armor,Common,3,13,23,Requirement: Heavy Armor,Property: This armor has no Movement Penalty,,,
-Dwarven Armor,Armor,Common,3,13,23,"Property: You can use the following bonus instead of your Constitution when making Concentration and Endurance checks:
- - [H]: +4
-	- [P]: +6
- - [E]: +8",,,,
 Armor of Resistance,Armor,Common,5,15,25,"Special: When this item is created, choose one of the following damage types: fire, cold, lightning, thunder, acid.",Property: You gain Resist against the chosen damage type,,,
 Razor Armor,Armor,Common,5,15,25," When an enemy scores a critical hit against you with a melee or close attack, they take damage:
 	- [H]: 5 damage,
 	- [P]: 15 damage,
 	- [E]: 30 damage ",,,,
-Shimmering Armor,Armor,Common,7,17,27,Property Your ranged and area attacks don't provoke opportunity attacks.,,,,
-Juggernaut Armor,Armor,Common,7,17,27,"Property: When you roll initiative, you gain Shield Points:
-	- [H]: 3 SP,
-	- [P]: 9 SP,
-	- [E]: 18 SP",,,,
+Shimmering Armor,Armor,Common,7,17,27,Property: Your ranged and area attacks against adjacent enemies don't provoke opportunity attacks.,,,,
+Juggernaut Armor,Armor,Common,7,17,27,"Property: The first time an enemy inflicts Forced Movement on you each encounter, ignore the Forced Movement.",,,,
 Bramble Armor,Armor,Uncommon,3,13,23,"Power (Daily): Minor Action. Until the end of the encounter, enemies that hit you take damage:
 	- [H]: 3 damage,
 	- [P]: 9 damage,
 	- [E]: 18 damage ",,,,
 Armor of Luck,Armor,Uncommon,5,15,25,Property: You gain a +3 bonus to your first save each encounter.,,,,
 Reinforcing Armor,Armor,Uncommon,5,15,25,"Property: When you are hit by an attack, you gain a +2 power bonus to AC until the start of your next turn.",,,,
-Stoneskin Armor,Armor,Uncommon,7,17,27,"Power (Encounter): Minor Action. Special: You must be bloodied. Effect: You gain Shield Points: [H]: 5 SP, [P]: 15 SP, [E]: 30 SP",,,,
+Stoneskin Armor,Armor,Uncommon,7,17,27,"Property: When you gain Shield Points, increase the amount:
+- [H]:+1 SP
+- [P]:+3 SP
+- [E]:+6 SP","Power (Daily): Minor Action. Special: You must be bloodied. Effect: You gain Shield Points: [H]: 9 SP, [P]: 27 SP, [E]: 54 SP",,,
 Invulnerable Armor,Armor,Uncommon,7,17,27,Property: You take no damage from missed attacks.,"Power (Daily): Minor Action: Until end of next turn, you gain Resist (All), and you treat the first attack that hits you as if it had missed insteadl.",,,
 Ghost Armor,Armor,Rare,5,15,25,Property:Your attacks ignore the insubstantial trait.,Property: You gain resist necrotic.,Power (Encounter): Minor action. You gain phasing and insubstantial until the end of your next turn.,,
 Dragon Armor,Armor,Rare,7,17,27,"Special: When this item is created, choose one of the following damage types: fire, cold, lightning, thunder, acid.",Property: You become immune against the chosen damage type.,"Power (Encounter, Fear): Minor action. Close burst 3. Targets enemies in burst. Until the end of your next turn, the targets gain a -2 penalty to attack rolls and grant Advantage.","Property: You gain a bonus to your Surge Value:
 	- [H]: +2
 	- [P]: +6
 	- [E]: +12",
-Elven Cloak,Neck,Common,3,13,23,"Property: You can use the following bonus instead of your Wisdom when making Nature and Perception checks:
+Cloak of Charisma,Neck,Common,1,11,21,"Property: You can use the following bonus instead of your Charisma when making Trickery and Diplomacy checks:
  - [H]: +4
 	- [P]: +6
  - [E]: +8",,,,
@@ -134,6 +130,10 @@ Hit:
  - [P]:5d8+Int Fire.
 	- [E] 7d8+Int Fire
 Miss: Half Damage",,,
+Boots of Dexterity,Feet,Common,1,11,21,"Property: You can use the following bonus instead of your Dexterity when making Finesse and Stealth checks:
+ - [H]: +4
+	- [P]: +6
+ - [E]: +8",,,,
 Running Boots,Feet,Common,3,13,23,Property: You gain +2 speed when you run or charge.,[P]Property: Gain +1 Speed.,[E] Property: Gain +2 Speed.,,
 Wavestrider Boots,Feet,Common,5,15,25,"[H]: Property: During your turn, you can walk over liquid as if it were normal terrain. 
 [H] Power (At-Will): Standard Action: Until end of your next turn, you can stand over liquid as if it were normal terrain.",[P][E] Property: You can walk over liquid as if it were normal terrain at all times.,[E] Property: You gain swim speed equal to your speed +2.,,
@@ -144,10 +144,7 @@ Slippers of the Escapist,Feet,Uncommon,5,15,25,"Power (Encounter): Minor Action.
 	- [H]: Slowed
 	- [P] Slowed, Immobilized, Grabbed
 	- [E] Slowed, Immobilized, Restrained, Grabbed, Exiled, Swallowed.",,,,
-Slippers of the Halfling,Feet,Uncommon,7,17,27,"Property: You can use the following bonus instead of your Dexterity when making Finesse and Stealth checks:
- - [H]: +4
-	- [P]: +6
- - [E]: +8",[H] Power (Encounter): Minor Action. You stand up from Prone.,[P][E] Power (At-Will): Minor Action. You stand up from Prone.,"[E] Property: The first time you are knocked prone each encounter, the effect is negated.",
+Slippers of the Acrobat,Feet,Uncommon,7,17,27,[H] Power (Encounter): Minor Action. You stand up from Prone.,[P][E] Power (At-Will): Minor Action. You stand up from Prone.,"[E] Property: The first time you are knocked prone each encounter, the effect is negated.",,
 Boots of Shifting,Feet,Uncommon,9,19,29,"Property: When you shift, you gain a bonus to the distance shifted:
 - [H][P]: +1
 - [E]: +2","[P] Property: +1 Speed","[P] Property: +2 Speed",,
@@ -155,7 +152,7 @@ Winged Boots,Feet,Rare,9,19,29,"Property: You gain a fly speed:
 	- [H]: Fly speed equal to half your speed, and an altitude limit of 2.
  - [P][E]: Fly speed equal to your speed, and an altitude limit of 3","[E] Property: +2 Speed.","Power (At-Will): Standard Action. You have no Altitude Limit until end of next turn.",,
 Boots of Teleportation,Feet,Rare,7,17,27,[H] Power(At-will): Move Action. You teleport 2 squares.,[P] [E] Power(At-will): Move Action. You teleport 4 squares.,[P][E] Power(Encounter): Move Action. You teleport 12 squares.,,
-Belt of the Orc,Waist,Common,3,13,23,"Property: You can use the following bonus instead of your Strength when making Athletics and Authority checks:
+Girdle of Constitution,Waist,Common,1,11,21,"Property: You can use the following bonus instead of your Constitution when making Concentration and Endurance checks:
  - [H]: +4
 	- [P]: +6
  - [E]: +8",,,,
@@ -192,11 +189,11 @@ Girdle of the Giant,Waist,Rare,9,19,29,"Property: You gain extra HP:
  - [H] +4 HP
 	- [P]: +12 HP
 	- [E]: +24 HP","[H] Power(Daily x2): Minor Action. Until the end of the encounter, your melee reach becomes 2 and your size becomes large. You can dismiss this effect as a minor action.","[P] Power(Encounter): Minor Action. Until the end of the encounter, your melee reach becomes 2 and your size becomes large. You can dismiss this effect as a minor action.","[E] Power(Encounter): Minor Action. Until the end of the encounter, your melee reach becomes 3 and your size becomes Huge. You can dismiss this effect as a minor action.",
-Gnomish Spectacles,Head,Common,3,13,23,"Property: You can use the following bonus instead of your Intelligence when making Arcana and Lore checks:
+Crown of Wisdom,Head,Common,1,11,21,"Property: You can use the following bonus instead of your Wisdom when making Nature and Perception checks:
  - [H]: +4
 	- [P]: +6
  - [E]: +8",,,,
-Crown of the Tiefling,Head,Common,3,13,23,"Property: You can use the following bonus instead of your Charisma when making Trickery and Diplomacy checks:
+Spectacles of Intelligence,Head,Common,1,11,1,"Property: You can use the following bonus instead of your Intelligence when making Arcana and Lore checks:
  - [H]: +4
 	- [P]: +6
  - [E]: +8",,,,
@@ -221,6 +218,10 @@ Helm of Mental Resolve,Head,Common,9,19,29,"Power (Daily x2): Free Action. Until
  - [E], Dazed, Charmed, Stunned and Dominated. (Special: You may choose to use this power while dominated).",,,,
 Glasses of True Sight,Head,Rare,1,11,21,Property: You can reroll failed Perception checks. You gain Resist (Psychic),"[H] Power (Daily x2): Minor Action. Until the end of next turn, you ignore all Cover and Concealment, and you can see all creatures within 6 squares regardless of cover, concealment, hiding, or blocking terrain.","[P][E] Power (Encounter): Minor Action. Until the end of next turn, you ignore all Cover and Concealment, and you can see all creatures within 6 squares regardless of cover, concealment, hiding, or blocking terrain.",[E] Property: You downgrade the Dazzled and Blinded conditions.,
 Mask of Terror,Head,Rare,3,13,23,Property: You can reroll failed Authority checks.,"[H] Power (Attack, Daily x2): Minor Action, Close Blast 3 (Enemies in Blast). Attack: Cha vs Will. Hit: Push 2, and grant Advantage until end of next turn.","[P] Power (Attack, Encounter): Minor Action, Close Blast 3 (Enemies in Blast). Attack: Cha vs Will. Hit: Push 3, and grant Advantage until end of next turn.","[E] Power (Attack, Encounter): Minor Action, Close Blast 5 (Enemies in Blast). Attack: Cha vs Will. Hit: Push 4, and grant Advantage until end of next turn.",
+Armbands of Strength,Arms,Common,1,11,21,"Property: You can use the following bonus instead of your Strength when making Athletics and Authority checks:
+ - [H]: +4
+	- [P]: +6
+ - [E]: +8",,,,
 Covering Shield,Arms,Common,3,13,23,Requirement: Shield,"[H] Property: Whenever you are targeted by an area or close attack, choose a random ally targeted by the attack. The ally gains Cover against the attack.","[P] Property: Whenever you are targeted by an area or close attack, all allies targeted by the attack gain Cover against the attack.","[E] Property: Whenever you are targeted by an area or close attack, all allies targeted by the attack gain Superior Cover against the attack.",
 Shield of Deflection,Arms,Common,5,15,25,Requirement: Shield,"Special: When this item is created, choose ranged attacks, or area and close attacks.","Property: When you are targeted by an attack of the chosen type, you gain Shield Points:
 	- [H]: 2 SP
@@ -256,7 +257,7 @@ Dragonslayer Shield,Arms,Rare,7,17,27,Requirement: Shield,Property: Gain Resist 
  - [H]: Reduce damage by up to 6.
 	- [P]: Reduce damage by up to 18.
 	- [E]: Reduce damage by up to 36.",,
-Gloves of Sleight of Hand,Hands,Common,3,13,23,"[H] Power (Encounter): Minor Action. Effect: Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand.","[P] [E] Power (At-Will) Minor Action. Effect: Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand.",[E] Power (Encounter): Minor Action. Effect: Draw an item. Gain Advantage to attacks with that item this turn.,,
+Gloves of Sleight of Hand,Hands,Common,3,13,23,"[H] Power (Encounter): Minor Action. Effect: Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand.","[P] [E] Power (At-Will): Minor Action. Effect: Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand.",[E] Power (Encounter): Minor Action. Effect: Draw an item. Gain Advantage to attacks with that item this turn.,,
 Gloves of Glancing Blows,Hands,Common,5,15,25,"Power (At-Will): Minor Action. You are Hindered. Until end of turn, your damaging attacks deal extra Miss Damage:
 	- [H] +2 Miss Damage
 	- [P]: +6 Miss Damage
@@ -278,11 +279,15 @@ Gloves of the Brawler,Hands,Uncommon,7,17,27,"Property: You can make unarmed att
 	- [H]: +1
  - [P]: +3
 	- [E]: +6","Power (Encounter): Minor Action. The next time you hit an enemy with an unarmed weapon attack this turn, the target is Grabbed.",,,
-Gauntlets of Ogre Power,Hands,Rare,3,13,23,Property: You can reroll failed Athletics checks.,"Power (Daily x2) Minor Action. Effect: [H] Until the end of the encounter, your melee attacks gain +3 Miss Damage and Push 1. "," [P] Power (Daily x2): Minor Action.  Until the end of the encounter, your melee attacks gain +9 Miss Damage and Push 2. ","[E] Power (Daily x2): Minor Action. Until the end of the encounter, your melee attacks gain +18 Miss Damage and Push 3.",
+Gauntlets of Ogre Power,Hands,Rare,3,13,23,Property: You can reroll failed Athletics checks.,"Power (Daily x2): Minor Action. Effect: [H] Until the end of the encounter, your melee attacks gain +3 Miss Damage and Push 1. "," [P] Power (Daily x2): Minor Action.  Until the end of the encounter, your melee attacks gain +9 Miss Damage and Push 2. ","[E] Power (Daily x2): Minor Action. Until the end of the encounter, your melee attacks gain +18 Miss Damage and Push 3.",
 Gloves of Admixture,Hands,Rare,7,17,27,"Power (At-Will): Minor action. Choose one of the following damage types: fire, cold, lightning, radiant, necrotic. The next attack you make this encounter gains that damage type in addition of any damage types it already has.","Power (Encounter): Minor action. The next time you damage an enemy with an attack this turn, that enemy takes extra damage for each damage type of the attack:
 	- [H]: +2 damage/type
 	- [P]: +6 damage/type
 	- [E]: +12 damage/type",,,
+Ring of Skill,Ring,Common,1,11,21,"Special: When this item is created, choose a skill.","Property: You increase your level of training with the chosen skill by 1, up to a maximum based on item level:
+- [H]: Trained
+- [P]: Master
+- [E]: Grandmaster",,,
 Ring of Passion,Ring,Uncommon,,11,21,"Power(Encounter): Minor Action. Target: one adjacent ally. Effect: Until the target is no longer adjacent to you, you and the target gain Shield Points at the beginning of the target's turns:
 	- [P]: 9 SP
 	- [E] 18 SP","Property: When you use this item's power, if you have reached at least one milestone today, you and the target cannot be pushed, pulled or slid while the effect lasts. ",,,
@@ -345,7 +350,7 @@ Superior Healing Potion,Consumable,Common,6,16,26,"Minor Action: Heal HP:
 - [H]: 15 HP
 - [P]: 30 HP
 - [E]: 60 HP",,,,
-Stimulating Potion,Consumable,Common,3,13,23,"Minor Action (only while exhausted: Reduce your Exhaustion Penalty until end of the encounter.
+Stimulating Potion,Consumable,Common,3,13,23,"Minor Action (only while exhausted): Reduce your Exhaustion Penalty until end of the encounter.
 - [H]: Penalty reduced by 1
 - [P]: Penalty reduced by 2
 - [E]: Penalty reduced by 3",,,,
