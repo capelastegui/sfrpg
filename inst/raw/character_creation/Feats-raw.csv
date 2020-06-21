@@ -91,7 +91,7 @@ On Reaction attacks other than Opportunity Attacks, +2 hit.";With Totem, +1 dama
 Focus: Tough Totem;Offense Focus;1;Implement, Totem;Implement Training with a Totem;"On implement attacks with a Totem , +1 damage per die.
 +2 Hit Points per tier.";With Totem, +1 damage per die, +3 HP per tier.
 Wind Robes;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 AC, and +1 AC vs ranged;With Cloth, +1 AC, and +1 AC vs ranged
-Elemental Robes;Defense Focus;1;Armor, Cloth;;"When taking this feat, choose one of the following damage types: Fire, Cold, Lightning, Radiant, Necrotic, Psychic.
+Elemental Robes;Defense Focus;1;Armor, Cloth;;"When taking this feat, choose one of the following damage types: Fire, Cold, Lightning, Radiant, Psychic.
 While wearing Cloth Armor, +1 AC,  and Resist (chosen damage type).";With Cloth, +1 AC, Resist a damage type.
 Courtier's Outfit;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 AC, +2 Diplomacy skill, +2 Bluff skill, +2 Intimidate skill.;With Cloth, +1 AC, +2 Diplomacy, +2 Bluff, +2 Intimidate
 Robes of Will;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 AC, +1 Will.;With Cloth, +1 AC, +1 Will.

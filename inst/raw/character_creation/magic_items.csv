@@ -7,7 +7,7 @@ Healing Weapon,Weapon,Common,5,15,25,"Property: On a hit, you or an ally within 
  - [H]:+2
 	- [P]:+6
 	- [E]:+12.","Property: On a Critical Hit, you or an ally within 5 squares can spend a Surge.",,,
-Energy Weapon,Weapon,Common,5,15,25,"Special: Choose one of the following damage types when the weapon is created: Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder.","Property: On a Critical Hit, Crit Damage is of the chosen type, and gain a bonus to Crit Damage:
+Energy Weapon,Weapon,Common,5,15,25,"Special: Choose one of the following damage types when the weapon is created: Cold, Fire, Lightning, Shadow, Poison, Psychic or Radiant.","Property: On a Critical Hit, Crit Damage is of the chosen type, and gain a bonus to Crit Damage:
 	- [H]: +2
 	- [P]: +6
 	- [E]: +12",Power (At-will): Minor Action. All damage dealt by weapon attacks with this weapon is of the chosen type. You can dismiss this effect as a free action.,,
@@ -22,11 +22,11 @@ Snap Shot Weapon,Weapon,Uncommon,5,15,25,Requirement: Ranged,Power (Encounter): 
 Rending Weapon,Weapon,Uncommon,5,15,25,Power (Daily): Triggered Action (You score a Critical Hit with this weapon). Effect: Make a basic attack with this weapon against the triggering enemy.,"Property: When you score a Critical Hit with this weapon, if the item power is spent, recharge it at the end of turn.",,,
 Feinting Weapon,Weapon,Uncommon,7,17,27,Power (Encounter): Minor Action. Effect: Choose an enemy you have missed with this weapon this turn. You gain Advantage against that enemy until end of your next turn.,"Property: On a Critical Hit, and when you spend an Action Point, recharge this weapon's power.",,,
 Keen Weapon,Weapon,Uncommon,7,17,27,"Property: When making a weapon attack with combat advantage, increase the Crit Range for this weapon by 1.",,,,
-Weapon of Light and Shadow,Weapon,Rare,3,13,23,"Power (At-Will): Minor Action. Choose radiant or necrotic. Your weapon attacks with this weapon gain that keyword, and all damage dealt by them is of the chosen type.","Property: When you hit with a radiant weapon attack with this weapon, an ally adjacent to the target gains Shield Points. When you hit with a necrotic weapon attack with this weapon, you gain Shield Points:
+Weapon of Light and Shadow,Weapon,Rare,3,13,23,"Power (At-Will): Minor Action. Choose radiant or Shadow. Your weapon attacks with this weapon gain that keyword, and all damage dealt by them is of the chosen type.","Property: When you hit with a radiant weapon attack with this weapon, an ally adjacent to the target gains Shield Points. When you hit with a Shadow weapon attack with this weapon, you gain Shield Points:
 - [H]: 1 SP
 - [P]: 3 SP
-- [E]: 6 SP","Property: On a Critical Hit, damage is radiant and necrotic, and until end of the encounter all damage dealt by your weapon attacks with this weapon is radiant and necrotic.",,
-Energy Burst Weapon,Weapon,Rare,5,15,25,"Special: Choose one of the following damage types when the weapon is created: Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder.","Property: On a Critical Hit, Crit Damage is of the chosen type, and gain a bonus to Crit Damage:
+- [E]: 6 SP","Property: On a Critical Hit, damage is radiant and Shadow, and until end of the encounter all damage dealt by your weapon attacks with this weapon is radiant and Shadow.",,
+Energy Burst Weapon,Weapon,Rare,5,15,25,"Special: Choose one of the following damage types when the weapon is created: Cold, Fire, Lightning, Shadow, Poison, Psychic or Radiant.","Property: On a Critical Hit, Crit Damage is of the chosen type, and gain a bonus to Crit Damage:
 	- [H]: +4
 	- [P]: +12
 	- [E]: +24",Property: You gain Resist against the chosen damage type.,Power (At-will): Minor Action. All damage dealt by weapon attacks with this weapon is of the chosen type. You can dismiss this effect as a free action.,"Power (Daily): Minor Action. Until the end of the encounter, weapon attacks with this weapon deal extra damage of the chosen type:
@@ -46,7 +46,7 @@ Healing Implement,Implement,Common,5,15,25,"Property: On a hit, you or an ally w
 	- [E]:+12.","Property: On a Critical Hit, you or an ally within 5 squares can spend a Surge.",,,
 Implement of Friendly Fire,Implement,Common,5,15,25,Property Implement attacks made with this implement gain -2 Hit against allies. Allies gain Partial Resist against attacks made with this implement.,,,,
 Overwhelming Implement,Implement,Common,7,17,27,"Property: Gain +1 to the distance of Pulls, Pushes and Slides caused by weapon attacks with this weapon.","Property: On a Critical Hit, Push 1.",,,
-Attuned Implement,Implement,Common,7,17,27,"Special: Choose one of the following damage types when the implement is created: Acid, Cold, Fire, Force, Lightning, Necrotic, Poison, Psychic, Radiant, or Thunder.","Property: Gain a bonus to Miss Damage with implement attacks of the chosen type using this implement:
+Attuned Implement,Implement,Common,7,17,27,"Special: Choose one of the following damage types when the implement is created: Cold, Fire, Lightning, Shadow, Poison, Psychic or Radiant.","Property: Gain a bonus to Miss Damage with implement attacks of the chosen type using this implement:
 	- [H]:+1 Miss Damage
 	- [P]:+3 Miss Damage
 	- [E]:+6 Miss Damage",,,
@@ -77,7 +77,7 @@ Implement of Deadly Accuracy,Implement,Rare,7,17,27,"Property: When you hit with
 Magic Armor,Armor,Common,1,11,21,,,,,
 Ranged Armor,Armor,Common,3,13,23,Requirement: Heavy Armor,Property: The Armor Penalty of this armor does not apply to Ranged attacks.,,,
 Nimble Armor,Armor,Common,3,13,23,Requirement: Heavy Armor,Property: This armor has no Movement Penalty,,,
-Armor of Resistance,Armor,Common,5,15,25,"Special: When this item is created, choose one of the following damage types: fire, cold, lightning, thunder, acid.",Property: You gain Resist against the chosen damage type,,,
+Armor of Resistance,Armor,Common,5,15,25,"Special: When this item is created, choose one of the following damage types: Fire, Cold, Lightning.",Property: You gain Resist against the chosen damage type,,,
 Razor Armor,Armor,Common,5,15,25," When an enemy scores a critical hit against you with a melee or close attack, they take damage:
 	- [H]: 5 damage,
 	- [P]: 15 damage,
@@ -95,8 +95,8 @@ Stoneskin Armor,Armor,Uncommon,7,17,27,"Property: When you gain Shield Points, i
 - [P]:+3 SP
 - [E]:+6 SP","Power (Daily): Minor Action. Special: You must be bloodied. Effect: You gain Shield Points: [H]: 9 SP, [P]: 27 SP, [E]: 54 SP",,,
 Invulnerable Armor,Armor,Uncommon,7,17,27,Property: You take no damage from missed attacks.,"Power (Daily): Minor Action: Until end of next turn, you gain Resist (All), and you treat the first attack that hits you as if it had missed insteadl.",,,
-Ghost Armor,Armor,Rare,5,15,25,Property:Your attacks ignore the insubstantial trait.,Property: You gain resist necrotic.,Power (Encounter): Minor action. You gain phasing and insubstantial until the end of your next turn.,,
-Dragon Armor,Armor,Rare,7,17,27,"Special: When this item is created, choose one of the following damage types: fire, cold, lightning, thunder, acid.",Property: You become immune against the chosen damage type.,"Power (Encounter, Fear): Minor action. Close burst 3. Targets enemies in burst. Until the end of your next turn, the targets gain a -2 penalty to attack rolls and grant Advantage.","Property: You gain a bonus to your Surge Value:
+Ghost Armor,Armor,Rare,5,15,25,Property:Your attacks ignore the insubstantial trait.,Property: You gain resist Shadow.,Power (Encounter): Minor action. You gain phasing and insubstantial until the end of your next turn.,,
+Dragon Armor,Armor,Rare,7,17,27,"Special: When this item is created, choose one of the following damage types: Fire, Cold, Lightning.",Property: You become immune against the chosen damage type.,"Power (Encounter, Fear): Minor action. Close burst 3. Targets enemies in burst. Until the end of your next turn, the targets gain a -2 penalty to attack rolls and grant Advantage.","Property: You gain a bonus to your Surge Value:
 	- [H]: +2
 	- [P]: +6
 	- [E]: +12",
@@ -105,7 +105,7 @@ Cloak of Charisma,Neck,Common,1,11,21,"Property: You can use the following bonus
 	- [P]: +6
  - [E]: +8",,,,
 Feather Cloak,Neck,Common,3,13,23,"Power (Encounter): Free Reaction (you fall). Effect: You take no damage from the fall, regardless of its distance, and do not fall prone at the end of the fall.",[P]: Property: You are Immune to Fall Damage,"[E]: Property: You gain Fly Speed 1. If you attack while flying this way, you fall. ",,
-Cloak of Resistance,Neck,Common,5,15,25,"Special: When this item is created, choose one of the following damage types: force, poison, necrotic, radiant, psychic.",[H]: Property: You gain Resist against the chosen damage type.,[P]: Property: You gain Resist against the chosen damage type. This resistance cannot be downgraded.,[E]: Property: You gain Immune against the chosen damage type.,
+Cloak of Resistance,Neck,Common,5,15,25,"Special: When this item is created, choose one of the following damage types: Poison, Shadow, Radiant, Psychic.",[H]: Property: You gain Resist against the chosen damage type.,[P]: Property: You gain Resist against the chosen damage type. This resistance cannot be downgraded.,[E]: Property: You gain Immune against the chosen damage type.,
 Amulet of Life,Neck,Common,5,15,25,"Property: You gain a bonus to Vitality Saving Throws:
 	- [H]: +4
 	- [P]: +5
@@ -280,7 +280,7 @@ Gloves of the Brawler,Hands,Uncommon,7,17,27,"Property: You can make unarmed att
  - [P]: +3
 	- [E]: +6","Power (Encounter): Minor Action. The next time you hit an enemy with an unarmed weapon attack this turn, the target is Grabbed.",,,
 Gauntlets of Ogre Power,Hands,Rare,3,13,23,Property: You can reroll failed Athletics checks.,"Power (Daily x2): Minor Action. Effect: [H] Until the end of the encounter, your melee attacks gain +3 Miss Damage and Push 1. "," [P] Power (Daily x2): Minor Action.  Until the end of the encounter, your melee attacks gain +9 Miss Damage and Push 2. ","[E] Power (Daily x2): Minor Action. Until the end of the encounter, your melee attacks gain +18 Miss Damage and Push 3.",
-Gloves of Admixture,Hands,Rare,7,17,27,"Power (At-Will): Minor action. Choose one of the following damage types: fire, cold, lightning, radiant, necrotic. The next attack you make this encounter gains that damage type in addition of any damage types it already has.","Power (Encounter): Minor action. The next time you damage an enemy with an attack this turn, that enemy takes extra damage for each damage type of the attack:
+Gloves of Admixture,Hands,Rare,7,17,27,"Power (At-Will): Minor action. Choose one of the following damage types: Fire, Cold, Lightning, Radiant, Shadow. The next attack you make this encounter gains that damage type in addition of any damage types it already has.","Power (Encounter): Minor action. The next time you damage an enemy with an attack this turn, that enemy takes extra damage for each damage type of the attack:
 	- [H]: +2 damage/type
 	- [P]: +6 damage/type
 	- [E]: +12 damage/type",,,
@@ -318,7 +318,7 @@ Figurine of Wondrous Power,Wondrous Item,Uncommon,9,15,25,"Property: When this i
 - Sneak: Deals double damage while invisible, and as a Standard Action, the creature becomes invisible - until the end of its next turn or until it attacks.
 - Artillery: The creature can use its melee attack as a Ranged 10 attack.
 - Aquatic: Swim 8, the creature is Aquatic (can breathe underwater, +2 to attack rolls against nonaquatic creatures while in aquatic combat), and Slide 1 on a Hit.
-- Elemental: When the item is created, choose one of the following energy types: fire, cold, lightning. The creature gains resist against the chosen type, and its attacks deal damage of the chosen type. Once per encounter, the creature can use its melee attack as a close blast 3.","Power(Daily): Minor Action. Effect: You conjure a Medium mystic animal (See below for stats) in a space adjacent to you. The creature can be attacked, and it remains until it is reduced to 0 or less hit points, you take an extended rest, or until you dismiss it as a free action. Every action it takes costs you a minor action, and the creature cannot exceed the normal allotment of actions (a standard, a move, and a minor action) each turn.","Conjured Creature – Medium natural animate
+- Elemental: When the item is created, choose one of the following energy types: Fire, Cold, Lightning. The creature gains resist against the chosen type, and its attacks deal damage of the chosen type. Once per encounter, the creature can use its melee attack as a close blast 3.","Power(Daily): Minor Action. Effect: You conjure a Medium mystic animal (See below for stats) in a space adjacent to you. The creature can be attacked, and it remains until it is reduced to 0 or less hit points, you take an extended rest, or until you dismiss it as a free action. Every action it takes costs you a minor action, and the creature cannot exceed the normal allotment of actions (a standard, a move, and a minor action) each turn.","Conjured Creature – Medium natural animate
 Level - as conjurer
 HP: [H] 30, [P] 60, [E] 120
 Base Defenses: 12
@@ -333,8 +333,8 @@ Greater Figurine of Wondrous Power,Wondrous Item,Rare,9,15,25,"Property: When th
 - Brute: Size Large, reach 2, Push 2 on a Hit.
 - Sneak: Deals double damage while invisible, and as a Standard Action, the creature becomes invisible - until the end of its next turn or until it attacks.
 - Artillery: The creature can use its melee attack as a Ranged 10 attack.
-- Aquatic: Swim 8, the creature is Aquatic (can breathe underwater, +2 to attack rolls against nonaquatic creatures while in aquatic combat), and Slide 1 on a Hit.
-- Elemental: When the item is created, choose one of the following energy types: fire, cold, lightning. The creature gains resist against the chosen type, and its attacks deal damage of the chosen type. Once per encounter, the creature can use its melee attack as a close blast 3.","Property: When you gain a milestone, you can spend a Surge to regain this item’s daily power. ","Power(Daily): Minor Action. Effect: You conjure a Medium mystic animal (See below for stats) in a space adjacent to you. The creature can be attacked, and it remains until it is reduced to 0 or less hit points, you take an extended rest, or until you dismiss it as a free action. Every action it takes costs you a minor action, and the creature cannot exceed the normal allotment of actions (a standard, a move, and a minor action) each turn.","Conjured Creature – Medium natural animate
+- Aquatic: Swim 8, the creature is Aquatic (can breathe underwater, +2 to attack rolls against non-aquatic creatures while in aquatic combat), and Slide 1 on a Hit.
+- Elemental: When the item is created, choose one of the following energy types: Fire, Cold, Lightning. The creature gains resist against the chosen type, and its attacks deal damage of the chosen type. Once per encounter, the creature can use its melee attack as a close blast 3.","Property: When you gain a milestone, you can spend a Surge to regain this item’s daily power. ","Power(Daily): Minor Action. Effect: You conjure a Medium mystic animal (See below for stats) in a space adjacent to you. The creature can be attacked, and it remains until it is reduced to 0 or less hit points, you take an extended rest, or until you dismiss it as a free action. Every action it takes costs you a minor action, and the creature cannot exceed the normal allotment of actions (a standard, a move, and a minor action) each turn.","Conjured Creature – Medium natural animate
 Level - as conjurer
 HP: [H] 30, [P] 60, [E] 120
 Base Defenses: 12

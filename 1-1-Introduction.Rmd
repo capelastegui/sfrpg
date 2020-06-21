@@ -713,7 +713,7 @@ For Monsters, Secondary Defenses are determined by monster class. A table
 
 - AC: Physical attacks, including most melee attacks, some ranged attacks,
   and a few close and area attacks.
-- Fortitude: Physical, Poison, Necrotic and Cold attacks, including some
+- Fortitude: Physical, Poison, Shadow and Cold attacks, including some
   melee attacks, and a few ranged, close and area attacks.
 - Reflex: Physical, Fire, Lightning, Radiant and Cold attacks, including
   most close and area attacks, and a few melee and ranged attacks.
