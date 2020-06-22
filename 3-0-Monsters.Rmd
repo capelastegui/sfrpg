@@ -45,6 +45,16 @@ htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
 htm_monster_race %>% cat()
 ```
 
+### Monster Races - Heroic, Other
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11, category=='Standard', subcategory %in% c('Aberration', 'Plant'))
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
 ### Monster Classes - Mundane
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
@@ -74,6 +84,7 @@ htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( )
 htm_monster_class %>% cat()
 ```
+
 
 ## Minion Monsters
 
@@ -120,11 +131,21 @@ htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
 htm_monster_race %>% cat()
 ```
 
+### Minion Races, Heroic Other
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11, category=='Minion', subcategory %in% c('Plant'))
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
 ### Minion Classes
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_class <- read_csv_monster("monster_classes") %>%
-  dplyr::filter(category=='Minion')
+  dplyr::filter(category=='Minion', subcategory=='Mundane')
 htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( ) 
 htm_monster_class %>% cat()
@@ -160,6 +181,37 @@ rules, double XP and double HP.
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_class <- read_csv_monster("monster_classes") %>%
   dplyr::filter(category=='Elite')
+htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
+   get_monster_list_htm( )
+htm_monster_class %>% cat()
+```
+
+## Solo Monsters
+
+All Solo Monsters gain the following rules:
+
+- Action Point: Each Solo Monster has 2 Action Points, which can be spent with an
+  Action Point Check, using the same rules as PCs.
+- Endure Conditions: Twice at the start of their turn, a Solo Monster can choose a Combat
+  Condition afflicting them, and make a Saving Throw with a +5 bonus. On a successful save, the condition
+  is downgraded until their next turn, and they take 2(E) damage.
+
+### Solo Monster Races - Dragon
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11, category=='Solo', subcategory=='Dragon')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+### Solo Monster Classes
+
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_class <- read_csv_monster("monster_classes") %>%
+  dplyr::filter(category=='Solo')
 htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( )
 htm_monster_class %>% cat()
