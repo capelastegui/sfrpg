@@ -1,4 +1,4 @@
-Name,Role,HP,Ar,For,Ref,Will,OA,Init,BasicAttack,StandardAttack,ClassPowerName,ClassPower,ClassPowerName2,ClassPower2,ClassTraitName,ClassTrait,ClassTraitName2,ClassTrait2,ClassTraitName3,ClassTrait3,ClassSkills
+Name,Role,HP,Ar,For,Ref,Will,OA,Init,Mov,BasicAttack,StandardAttack,ClassPowerName,ClassPower,ClassPowerName2,ClassPower2,ClassTraitName,ClassTrait,ClassTraitName2,ClassTrait2,ClassTraitName3,ClassTrait3,ClassSkills
 "<div class=""monsterClass""><br>
 <br>
 <table class=""monster monsterName fullwidth""><tbody>
@@ -20,11 +20,11 @@ Name,Role,HP,Ar,For,Ref,Will,OA,Init,BasicAttack,StandardAttack,ClassPowerName,C
 <td>","
 <td>","
 <table class=""monster monsterMisc""><tbody>
-<tr><td class=""title"" colspan=""2"">Misc. Stats</td></tr>
+<tr><td class=""title"" colspan=""3"">Misc. Stats</td></tr>
 <tr><td class=""subtitle"">OA</td>
-<td class=""subtitle"">Init</td></tr>
-<tr><td>","
-<td>","
+<td class=""subtitle"">Init</td>
+<td class=""subtitle"">Mov</td></tr>
+<tr><td>",<td>,<td>,"
 <div class=""space2""></div>
 <div class=""space2""></div>
 <table class=""monster fullwidth""><tbody>
@@ -55,19 +55,19 @@ Name,Role,HP,Ar,For,Ref,Will,OA,Init,BasicAttack,StandardAttack,ClassPowerName,C
 <tr><td class=""attackText"">","<table class=""monster fullwidth""><tbody>
 <tr><td class=""subtitle"">Class Skills</td></tr>
 <tr><td class=""attackText"">"
-"</td></tr>","</td></tr>
+</td></tr>,"</td></tr>
 </tbody></table>","</td></tr>
 <tr><td><br></td></tr>
-</tbody></table>",<br>,"<br></td>","<br></td>","<br></td></tr>
-</tbody></table>","<br></td>","<br></td></tr>
+</tbody></table>",<br>,<br></td>,<br></td>,"<br></td></tr>
+</tbody></table>",<br></td>,<br></td>,"<br></td></tr>
 </tbody></table>",</td>,"<br></td></tr>
-</tbody></table>","</td></tr>","</td></tr>
-</tbody></table>","</td></tr>","</td></tr>
-</tbody></table>","</td></tr>","</td></tr>
-</tbody></table>","</td></tr>","</td></tr>
-</tbody></table>","</td></tr>","</td></tr>
+</tbody></table>",</td></tr>,"</td></tr>
+</tbody></table>",</td></tr>,"</td></tr>
+</tbody></table>",</td></tr>,"</td></tr>
+</tbody></table>",</td></tr>,"</td></tr>
+</tbody></table>",</td></tr>,"</td></tr>
 </tbody></table>","
 </td></tr>
 </tbody></table>
 </div>"
-NA,NA,NA,</td>,NA,NA,NA,NA,NA,NA,NA,NA,NA,,,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,</td>,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,,,NA,NA,NA,NA,NA,NA,NA
