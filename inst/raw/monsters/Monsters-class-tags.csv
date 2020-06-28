@@ -1,4 +1,4 @@
-Name,Role,HP,Ar,For,Ref,Will,OA,Init,Mov,BasicAttack,StandardAttack,ClassPowerName,ClassPower,ClassPowerName2,ClassPower2,ClassTraitName,ClassTrait,ClassTraitName2,ClassTrait2,ClassTraitName3,ClassTrait3,ClassSkills
+Name,Role,HP,Ar,For,Ref,Will,OA,Init,Mov,BasicAttack,StandardAttack,ClassPowerName,ClassPower,ClassPowerName2,ClassPower2,ClassPowerName3,ClassPower3,ClassTraitName,ClassTrait,ClassTraitName2,ClassTrait2,ClassTraitName3,ClassTrait3,ClassSkills
 "<div class=""monsterClass""><br>
 <br>
 <table class=""monster monsterName fullwidth""><tbody>
@@ -43,6 +43,11 @@ Name,Role,HP,Ar,For,Ref,Will,OA,Init,Mov,BasicAttack,StandardAttack,ClassPowerNa
 <tr><td class=""subtitle"">
 ","
 <tr><td class=""attackText"">","
+<br>
+<table class=""monster fullwidth""><tbody>
+<tr><td class=""subtitle"">
+","
+<tr><td class=""attackText"">","
 <table class=""monster fullwidth""><tbody>
 <tr><td class=""title"" colspan=""2"">Class Trait</td></tr>
 <tr><td class=""subtitle"">","
@@ -66,8 +71,9 @@ Name,Role,HP,Ar,For,Ref,Will,OA,Init,Mov,BasicAttack,StandardAttack,ClassPowerNa
 </tbody></table>",</td></tr>,"</td></tr>
 </tbody></table>",</td></tr>,"</td></tr>
 </tbody></table>",</td></tr>,"</td></tr>
+</tbody></table>",</td></tr>,"</td></tr>
 </tbody></table>","
 </td></tr>
 </tbody></table>
 </div>"
-NA,NA,NA,</td>,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,,,NA,NA,NA,NA,NA,NA,NA
+NA,NA,NA,</td>,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,,,,,NA,NA,NA,NA,NA,NA,NA
