@@ -667,32 +667,32 @@ A character''s defenses determine how hard the character is to hit with attacks.
  the average defense value is 13, which corresponds to a 60% chance of being
  hit on an attack with the typical hit bonus of +4.</div>
 
-**Armor Class** (**AC**), is the Primary Defense, the one most commonly targeted
- by attacks. For Player Characters, AC is determined by the type of Armor
+**Armor Class** (**Arm**), is the Primary Defense, the one most commonly targeted
+ by attacks. For Player Characters, Arm is determined by the type of Armor
  and Shield worn by the character, plus a class-dependent bonus if the
  character is wearing Light Armor. The following formula is used while
  wearing Light Armor:
 ```
-AC = 10 + Armor bonus + Shield bonus + Class Light Armor bonus
+Arm = 10 + Armor bonus + Shield bonus + Class Light Armor bonus
 ```
-A Player Character wearing Heavy Armor uses the following AC formula instead:
+A Player Character wearing Heavy Armor uses the following Arm formula instead:
 ```
-AC = 10 + Armor bonus + Shield bonus
+Arm = 10 + Armor bonus + Shield bonus
 ```
 
-A table stating the AC bonuses for each type of Armor and Shield is provided
+A table stating the Arm bonuses for each type of Armor and Shield is provided
  in the Equipment section of the Character Building chapter. A table with
  the Light Armor bonuses and other class stats is provided in the Class
  section of the Character Building chapter.
 
-For Monsters, AC is determined by monster class. A table with the typical AC
+For Monsters, Arm is determined by monster class. A table with the typical Arm
  values for each class role is provided in the Monster Stats section of the
  Monsters chapter.
 
 The Secondary Defenses are **Fortitude** (For), **Reflex** (Ref) and **Will**
  (Wil). These defenses are used much less frequently than Armor Class: on
  average, all three Secondary Defenses put together are targeted roughly as
- much as AC. For Player Characters, each Secondary defense is determined by
+ much as Arm. For Player Characters, each Secondary defense is determined by
  the character's Ability scores, plus a bonus based on character class: 
  
 ```
@@ -711,7 +711,7 @@ For Monsters, Secondary Defenses are determined by monster class. A table
 <div class="tip">**Tip**:As a general guideline, each defense is targeted
  by the following types of attacks:
 
-- AC: Physical attacks, including most melee attacks, some ranged attacks,
+- Arm: Physical attacks, including most melee attacks, some ranged attacks,
   and a few close and area attacks.
 - Fortitude: Physical, Poison, Shadow and Cold attacks, including some
   melee attacks, and a few ranged, close and area attacks.

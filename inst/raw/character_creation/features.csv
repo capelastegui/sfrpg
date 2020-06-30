@@ -32,7 +32,7 @@ rog_thug_wpn,Thug's Weapon,"You treat the following weapons as Light Weapons: Li
 rog_thug_mth,Meathead,Add double your Strength to your HP.
 rog_thug_wck,Whack in the Head,"When you hit an enemy with a melee attack, that enemy is Dazzled until the end of your next turn.<br>When attacking Dazzled enemies, you can use Sneak Attack as if you attacked with Advantage, and you gain +Strength Crit Range."
 rog_duel_wpn,Duelist's Weapon,You treat Light Blades as Light Weapons.
-rog_duel_cun,Duelist's Cunning,"Add your Intelligence to your Reaction Modifier.<br>While wielding two weapons, you gain a +Intelligence bonus to AC against melee attacks."
+rog_duel_cun,Duelist's Cunning,"Add your Intelligence to your Reaction Modifier.<br>While wielding two weapons, you gain a +Intelligence bonus to Arm against melee attacks."
 rog_duel_duel,Duel,"Gain the Duel power (Minor Action, 1/encounter, Taunt adjacent enemy until end of encounter).<br>When attacking enemies Taunted by you, you can use Sneak Attack as if you attacked with Advantage"
 rog_swash_wpn,Swashbuckler's Weapon,"You treat the following weapons as Light Weapons: Light Blades, Hand Crossbow."
 rog_swash_stp,Swashbuckler's Step,"When you Shift, you can have that movement count as Climbing or as a Long Jump.<br>When you use the Shift Maneuver, you Shift your Charisma (instead of Shift 1)."

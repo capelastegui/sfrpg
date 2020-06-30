@@ -406,7 +406,7 @@ The following weapon keywords are supported in the game:
 - **Off-Hand**: The weapon can be wielded in the off-hand while another weapon
   or object is wielded in the main hand. 
 - **Parry**: A character wielding one or more weapons or shields with Parry
-  gains +1 to AC against Melee and Close attacks. The bonus from multiple
+  gains +1 to Arm against Melee and Close attacks. The bonus from multiple
   instances of this keyword does not stack.
 - **Ranged**: Ranged weapons have the Range keyword, followed by a number
   indicating the Weapon Range. Characters can make Ranged and Area attacks
@@ -527,7 +527,7 @@ Some character classes from older sourcebooks have bonuses associated with
 Each armor in the game is described by the following elements:
 
 - **Name**
-- **AC bonus**: Bonus granted to a character's AC for wearing the armor
+- **Arm bonus**: Bonus granted to a character's Arm for wearing the armor
   with training.
 - **Type**: Whether the armor is Light Armor or Heavy Armor, or a Shield. 
 - **Armor Penalty**: Penalty granted to Ranged and Area attacks and many Skills.
@@ -552,34 +552,34 @@ Each character can wear one suit of Light Armor or Heavy Armor. In addition,
 
 A character's class determines which armors the character is trained to use.
  A character using an armor without training does not benefit from any of the
- armor's properties, including AC bonus and any magic abilities. However, any
+ armor's properties, including Arm bonus and any magic abilities. However, any
  Armor Penalty or Movement Penalty imposed by the armor still applies. All
  characters are considered to be trained in the use of Cloth Armor.
 
 A character using a Shield and wearing Light Armor or Heavy Armor can add the
- AC bonuses from shield and armor.
+ Arm bonuses from shield and armor.
 
-Some character classes gain an additional bonus to AC while wearing Light Armor.
- This is called Light Armor AC Bonus. Some classes also have class features
- that grant a bonus to AC, and these can stack with their Light Armor AC Bonus.
- A table summarizing Light Armor AC Bonus and other stats for all classes
+Some character classes gain an additional bonus to Arm while wearing Light Armor.
+ This is called Light Armor Arm Bonus. Some classes also have class features
+ that grant a bonus to Arm, and these can stack with their Light Armor Arm Bonus.
+ A table summarizing Light Armor Arm Bonus and other stats for all classes
  currently in the game (including classes from older rulebooks) is provided in
  this chapter, in the Origin and Class Selection section. 
 
-To summarize, a character's AC is calculated as follows:
+To summarize, a character's Arm is calculated as follows:
 ```
-AC= 10 + Armor bonus + Shield bonus + Class Light Armor bonus
+Arm= 10 + Armor bonus + Shield bonus + Class Light Armor bonus
 ```
 
-Note that these are the most common types of AC bonus, but other bonuses
+Note that these are the most common types of Arm bonus, but other bonuses
  granted by specific Class Features, Feats, or Powers can still apply.
 
 <div class="compatibility">**Compatibility Note**: Unlike other defenses, a
- character's Abilities provide no bonus to that character's AC. In older
+ character's Abilities provide no bonus to that character's Arm. In older
  rulebooks this was not the case, and it was common to have character classes
- whose Class Features allowed using an Ability as a bonus to AC while wearing
+ whose Class Features allowed using an Ability as a bonus to Arm while wearing
  Light Armor. Ignore these bonuses, and any other mention of an Ability bonus
- to AC. Fixed bonuses to AC that do not depend on a character's Abilities still
+ to Arm. Fixed bonuses to Arm that do not depend on a character's Abilities still
  apply as normal.
  </div>
 

@@ -4,7 +4,7 @@ On implement attacks with the chosen weapon, +1 damage per damage die.
 When making a ranged or area implement attack with the chosen weapon, choose an adjacent enemy; the attack does not provoke Opportunity Attacks from that enemy.";With Implement Weapon, +1 damage per W/die, no opportunity attacks for ranged and area attacks.
 Focus: Parrying Staff;Offense Focus;1;Flexible, Staff;Weapon Training with Staff;"On weapon attacks with a Staff, +1 Miss Damage per W.
 On implement atacks with a Staff, +1 Miss Damage per damage die.
-Your Staff gains Parry (+1 AC vs melee attacks)";With Staff, +1 Miss Damage per W/die, +1 AC vs melee.
+Your Staff gains Parry (+1 Arm vs melee attacks)";With Staff, +1 Miss Damage per W/die, +1 Arm vs melee.
 Focus: Pushing Staff;Offense Focus;1;Flexible, Staff;Implement Training with a Staff;"On weapon attacks with a staff, +1 damage per W.
 On implement attacks with a staff, +1 damage per die.
 When you make an implement attack with a Staff that causes forced movement, choose a targeted enemy. The forced movement for that enemy is increased by 1 square.";With Staff, +1 damage per W/die, +1 forced movement.
@@ -29,7 +29,7 @@ Focus: Ambush Light Blade;Offense Focus;1;Weapon, Light Blade;Weapon Training wi
 Focus: Opportunist Heavy Blade;Offense Focus;1;Weapon, Heavy Blade;Weapon Training with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 damage per W.
 +2 to Opportunity Attack modifier.";With Heavy Blade, +1 damage per W and +2 to Opportunity Attacks.
 Focus: Duelist's Heavy Blade;Offense Focus;1;Weapon, Heavy Blade;Weapon Training with a Heavy Blade;"On weapon attacks with a Heavy Blade, +1 Miss Damage per W.
-Your Heavy Blades gain Parry (+1 AC against melee attacks).";With Heavy Blade, +1 Miss Damage per W, +1 AC vs melee.
+Your Heavy Blades gain Parry (+1 Arm against melee attacks).";With Heavy Blade, +1 Miss Damage per W, +1 Arm vs melee.
 Focus: Critical Axe;Offense Focus;1;Weapon, Axe;Weapon Training with an Axe;"On weapon attacks with an Axe, +1 damage per W.
 On weapon attacks with an Axe, gain High Crit (+5 damage per W on a crit).";With Axe, +1 damage per W, High Crit.
 Focus: Piercing Axe;Offense Focus;1;Weapon, Axe;Weapon Training with an Axe;"On weapon attacks with an Axe, +1 damage per W, +1 Miss damage per W.
@@ -90,27 +90,27 @@ Focus: Opportunist Totem;Offense Focus;1;Implement, Totem;Implement Training wit
 On Reaction attacks other than Opportunity Attacks, +2 hit.";With Totem, +1 damage per die, +2 to Opportunity Attacks.
 Focus: Tough Totem;Offense Focus;1;Implement, Totem;Implement Training with a Totem;"On implement attacks with a Totem , +1 damage per die.
 +2 Hit Points per tier.";With Totem, +1 damage per die, +3 HP per tier.
-Wind Robes;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 AC, and +1 AC vs ranged;With Cloth, +1 AC, and +1 AC vs ranged
+Wind Robes;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 Arm, and +1 Arm vs ranged;With Cloth, +1 Arm, and +1 Arm vs ranged
 Elemental Robes;Defense Focus;1;Armor, Cloth;;"When taking this feat, choose one of the following damage types: Fire, Cold, Lightning, Radiant, Psychic.
-While wearing Cloth Armor, +1 AC,  and Resist (chosen damage type).";With Cloth, +1 AC, Resist a damage type.
-Courtier's Outfit;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 AC, +2 Diplomacy skill, +2 Bluff skill, +2 Intimidate skill.;With Cloth, +1 AC, +2 Diplomacy, +2 Bluff, +2 Intimidate
-Robes of Will;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 AC, +1 Will.;With Cloth, +1 AC, +1 Will.
-Catsuit Leather;Defense Focus;1;Armor, Leather;Leather Armor Training;While wearing Leather Armor, +1 AC, +2 Stealth skill, +2 Acrobatics skill, +2 Thievery skill.;With Leather, +1 AC, +2 Stealth, +2 Acrobatics, +2 Thievery
-Reflexive Leather;Defense Focus;1;Armor, Leather;Leather Armor Training;While wearing Leather Armor, +1 AC, +1 Reflex.;With Leather, +1 AC, +1 Reflex
-Dodging Leather;Defense Focus;1;Armor, Leather;Leather Armor Training;While wearing Leather Armor, +1 AC, and +2 to all defenses against Opportunity attacks.;With Leather, +1 AC, +2 all defenses vs Opportunity Attacks
-Stout Hide;Defense Focus;1;Armor, Hide;Hide Armor Training;While wearing Hide Armor, +1 AC, +1 Fortitude.;With Hide, +1 AC, +1 Fortitude
+While wearing Cloth Armor, +1 Arm,  and Resist (chosen damage type).";With Cloth, +1 Arm, Resist a damage type.
+Courtier's Outfit;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 Arm, +2 Diplomacy skill, +2 Bluff skill, +2 Intimidate skill.;With Cloth, +1 Arm, +2 Diplomacy, +2 Bluff, +2 Intimidate
+Robes of Will;Defense Focus;1;Armor, Cloth;;While wearing Cloth Armor, +1 Arm, +1 Will.;With Cloth, +1 Arm, +1 Will.
+Catsuit Leather;Defense Focus;1;Armor, Leather;Leather Armor Training;While wearing Leather Armor, +1 Arm, +2 Stealth skill, +2 Acrobatics skill, +2 Thievery skill.;With Leather, +1 Arm, +2 Stealth, +2 Acrobatics, +2 Thievery
+Reflexive Leather;Defense Focus;1;Armor, Leather;Leather Armor Training;While wearing Leather Armor, +1 Arm, +1 Reflex.;With Leather, +1 Arm, +1 Reflex
+Dodging Leather;Defense Focus;1;Armor, Leather;Leather Armor Training;While wearing Leather Armor, +1 Arm, and +2 to all defenses against Opportunity attacks.;With Leather, +1 Arm, +2 all defenses vs Opportunity Attacks
+Stout Hide;Defense Focus;1;Armor, Hide;Hide Armor Training;While wearing Hide Armor, +1 Arm, +1 Fortitude.;With Hide, +1 Arm, +1 Fortitude
 Isolating Hide;Defense Focus;1;Armor, Hide;Hide Armor Training;"When taking this feat, choose one of the following damage types: Cold. Fire
-While wearing Hide Armor, +1 AC, and Resist (chosen damage type).";With Hide, +1 AC, +1 Nature, Resist Cold or Fire
-Hiking Hide;Defense Focus;1;Armor, Hide;Hide Armor Training;While wearing Hide Armor, +1 AC, and the first time you enter a square of Difficult Terrain each turn, you treat it as if it wasn't Difficult Terrain.;With Hide, +1 AC, ignore first Difficult Terrain square.
-Caster's Chain;Defense Focus;1;Armor, Chain;Chain Armor Training;While wearing Chain Armor, +1 AC, and +4 to all defenses against Opportunity attacks provoked by attacking.;With Chain, +1 AC, +4 all defenses vs Opportunity Attacks provoked by attack.
-Mobile Scale;Defense Focus;1;Armor, Scale;Scale Armor Training;While wearing Scale Armor, +1 AC, and the Armor Movement Penalty is reduced by 1.;With Scale, +1 AC, reduce movement penalty by 1.
-Juggernaut Plate;Defense Focus;1;Armor, Plate;Plate Armor Training;While wearing Plate Armor, +1 AC, and whenever an enemy attack inflicts forced movement on you, you can Save to reduce the forced movement by 1.;With Plate, +1 AC, save to reduce forced movement by 1.
-Blast Shield;Defense Focus;1;Armor, Shield;Shield Training;While wearing a Shield, +1 AC, and +1 to all Fortitude, Reflex, and Will against Blast and Burst attacks.;With Shield, +1 AC, +1 to Fortitude, Reflex, Will vs blast, burst
-Wind Shield;Defense Focus;1;Armor, Shield;Shield Training;While wearing a Shield, +1 AC, and +1 to Fortitude, Reflex, and Will against Ranged attacks.;With Shield, +1 AC, +1 to Fortitude, Reflex, Will vs ranged
-Bashing Shield;Defense Focus;1;Armor, Shield;Shield Training;While wearing a Shield, +1 AC, and when you push an enemy with a melee or close attack, the forced movement is increased by 1 square unless the enemy makes a save.;With Shield, +1 AC, increase forced movement by 1 on failed save.
-Ambush Armor;Defense Focus;1;Armor;Hide Armor Training or Heavy Shield Training; +1 AC, and your Armor Penalty to Initiative, and skills is reduced by 1.; +1 AC, Armor Penalty to Initiative and skills reduced by 1
-Nimble Armor;Defense Focus;1;Armor;Hide Armor Training or Heavy Shield Training; +1 AC, and your Armor Penalty to skills is reduced by 3.; +1 AC, Armor Penalty to skills reduced by 3
-Initiative Armor;Defense Focus;1;Armor;Hide Armor Training or Heavy Shield Training;+1 AC, and your Armor Penalty to Initiative is reduced by 2.; +1 AC, Armor Penalty to Initiative reduced by 2
+While wearing Hide Armor, +1 Arm, and Resist (chosen damage type).";With Hide, +1 Arm, +1 Nature, Resist Cold or Fire
+Hiking Hide;Defense Focus;1;Armor, Hide;Hide Armor Training;While wearing Hide Armor, +1 Arm, and the first time you enter a square of Difficult Terrain each turn, you treat it as if it wasn't Difficult Terrain.;With Hide, +1 Arm, ignore first Difficult Terrain square.
+Caster's Chain;Defense Focus;1;Armor, Chain;Chain Armor Training;While wearing Chain Armor, +1 Arm, and +4 to all defenses against Opportunity attacks provoked by attacking.;With Chain, +1 Arm, +4 all defenses vs Opportunity Attacks provoked by attack.
+Mobile Scale;Defense Focus;1;Armor, Scale;Scale Armor Training;While wearing Scale Armor, +1 Arm, and the Armor Movement Penalty is reduced by 1.;With Scale, +1 Arm, reduce movement penalty by 1.
+Juggernaut Plate;Defense Focus;1;Armor, Plate;Plate Armor Training;While wearing Plate Armor, +1 Arm, and whenever an enemy attack inflicts forced movement on you, you can Save to reduce the forced movement by 1.;With Plate, +1 Arm, save to reduce forced movement by 1.
+Blast Shield;Defense Focus;1;Armor, Shield;Shield Training;While wearing a Shield, +1 Arm, and +1 to all Fortitude, Reflex, and Will against Blast and Burst attacks.;With Shield, +1 Arm, +1 to Fortitude, Reflex, Will vs blast, burst
+Wind Shield;Defense Focus;1;Armor, Shield;Shield Training;While wearing a Shield, +1 Arm, and +1 to Fortitude, Reflex, and Will against Ranged attacks.;With Shield, +1 Arm, +1 to Fortitude, Reflex, Will vs ranged
+Bashing Shield;Defense Focus;1;Armor, Shield;Shield Training;While wearing a Shield, +1 Arm, and when you push an enemy with a melee or close attack, the forced movement is increased by 1 square unless the enemy makes a save.;With Shield, +1 Arm, increase forced movement by 1 on failed save.
+Ambush Armor;Defense Focus;1;Armor;Hide Armor Training or Heavy Shield Training; +1 Arm, and your Armor Penalty to Initiative, and skills is reduced by 1.; +1 Arm, Armor Penalty to Initiative and skills reduced by 1
+Nimble Armor;Defense Focus;1;Armor;Hide Armor Training or Heavy Shield Training; +1 Arm, and your Armor Penalty to skills is reduced by 3.; +1 Arm, Armor Penalty to skills reduced by 3
+Initiative Armor;Defense Focus;1;Armor;Hide Armor Training or Heavy Shield Training;+1 Arm, and your Armor Penalty to Initiative is reduced by 2.; +1 Arm, Armor Penalty to Initiative reduced by 2
 Toughness;Toughness;1;;; +6 HP per tier.; +6 HP per tier.
 Surging Toughness;Toughness;1;;; +4 HP per tier, and +4 Surge Value per tier.; +4 HP per tier, and +4 Surge Value per tier.
 Die Hard;Toughness;1;;; +4 HP per tier, and +3 to Death Saving Throws.; +4 HP per tier, and +3 to Death Saving Throws.

@@ -89,7 +89,7 @@ Bramble Armor,Armor,Uncommon,3,13,23,"Power (Daily): Minor Action. Until the end
 	- [P]: 9 damage,
 	- [E]: 18 damage ",,,,
 Armor of Luck,Armor,Uncommon,5,15,25,Property: You gain a +3 bonus to your first save each encounter.,,,,
-Reinforcing Armor,Armor,Uncommon,5,15,25,"Property: When you are hit by an attack, you gain a +2 power bonus to AC until the start of your next turn.",,,,
+Reinforcing Armor,Armor,Uncommon,5,15,25,"Property: When you are hit by an attack, you gain a +2 power bonus to Arm until the start of your next turn.",,,,
 Stoneskin Armor,Armor,Uncommon,7,17,27,"Property: When you gain Shield Points, increase the amount:
 - [H]:+1 SP
 - [P]:+3 SP

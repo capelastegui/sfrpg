@@ -1,4 +1,4 @@
-Class,Light Armor Bonus,Expected AC,Role,Armor Type,Notes
+Class,Light Armor Bonus,Expected Arm,Role,Armor Type,Notes
 Cleric,0,13,Leader,Heavy,NA
 Fighter,0,16,Defender,Heavy,NA
 Paladin,0,17,Defender,Heavy,NA

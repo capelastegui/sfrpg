@@ -14,7 +14,7 @@ post  <- featlist$tag$post
 
 Players can choose level 1 feats from the following categories:
 
-- **Defense Focus**: Feats that improve a character's AC while wearing certain armors, and provide a small additional bonus.
+- **Defense Focus**: Feats that improve a character's Arm while wearing certain armors, and provide a small additional bonus.
 - **Offense Focus**: Feats that improve a character's attacks with certain weapons or implements, and provide a small additional bonus.
 - **Toughness**: Feats that improve a character's HP, and provide a small additional bonus.
 
