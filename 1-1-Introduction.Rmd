@@ -466,6 +466,17 @@ Some damage types from legacy rules are no longer supported or have been renamed
 
 Any legacy rules that grant resistance or vulnerability to Force, Thunder or Acid should be ignored (do not convert them into resistance/vulnerability to Physical). Powers that used to have discontinued damage types can have keywords instead: A character can have powers with the Acid keyword, and Feats or Features that affect these powers.</div>
 
+<div class="tip">**Tip**: These are the resistances (R) and vulnerabilities (V) to damage types of most common monster types:
+
+- Poison - R: Construct, Undead, Dwarf; V: Fey, Plant, Swarm
+- Radiant - R: Aberrant, Celestial, Blind; V:Undead, Shadow
+- Psychic - R: Construct, Plant, Eladrin; V: Aberrant
+- Shadow - R: Shadow; V: Celestial
+- Fire - R: Fire, Devil, Tiefling; V: Plant, Cold
+- Cold - R: Cold, V: Fire, Ooze
+- Lightning - R: Earth, V: Construct
+</div>
+
 
 ### Rolling Action Point Checks
 
