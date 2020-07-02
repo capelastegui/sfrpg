@@ -136,6 +136,8 @@ mnv_adv_msc,mnv_rdyrn
 mnv_adv_msc,mnv_pierce
 mnv_adv_msc,mnv_push
 mnv_adv_msc,mnv_grab
+mnv_adv_msc,mnv_drag
+mnv_adv_msc,mnv_mnhndl
 mnv_adv_mov,mnv_climb
 mnv_adv_mov,mnv_swim
 mnv_adv_mov,mnv_crawl

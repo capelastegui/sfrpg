@@ -132,6 +132,8 @@ mnv_rdyrn,Ready Ranged Attack,,,Utility,,,,Standard Action,,,,"Until your next t
 mnv_pierce,Pierce,NA,,Utility,,,,Minor Action,,,,,,,,"Choose an enemy you can see and name a type of resistance. On your attacks against that enemy this turn, that resistance is downgraded. You are Hindered this turn.",,,,Downgrade a resistance against your attacks. Hindered.
 mnv_push,Push,NA,,Attack,,,,Standard Action,,Melee,,H vs For,,Push 1.,,,,,,Push an enemy.
 mnv_grab,Grab,NA,,Attack,,,,Standard Action,,Melee,,H vs Ref,,Grabbed.,,,,,,Grab an enemy.
+mnv_drag,Drag,NA,,Attack,,,,Move Action,,,,"An enemy Grabbed by you, up to one size category larger than you.",,"Shift 1, then Pull 1. The target remains Grabbed",,,,,,Move a Grabbed enemy.
+mnv_mnhndl,Manhandle,NA,,Attack,,,,Move Action,,,,"An enemy Grabbed by you, one or more size categories smaller than you.",,"Move half your speed, then Pull that many squares. This movement does not provoke Opportunity Attacks from the target, and target remains Grabbed",,,,,,Move a smaller Grabbed enemy.
 # Advanced Move Maneuvers,,,,,,,,,,,,,,,,,,,,
 mnv_climb,Climb,,,Utility,,,,Move Action,,,,,,,,Climb 1.,,,,Climb 1.
 mnv_swim,Swim,,,Utility,,,,Move Action,,,,,,,,Swim 1.,,,,Swim 1.
