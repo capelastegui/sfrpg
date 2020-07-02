@@ -55,12 +55,6 @@ The basic steps for creating a character are:
  sample characters, along with suggested level-up options up to level 30, can
  be found in the Classes chapter.</div>
 
-### Reading Powers
-
-Characters can gain powers from their Origin, Class, Feats and Magic Items. Here are some guidelines to understand a power.
-
-(TODO: fill section)
-
 ## Character concept and story
 
 ...

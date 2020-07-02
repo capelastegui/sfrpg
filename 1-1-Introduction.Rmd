@@ -275,7 +275,15 @@ The general method to resolve a check is to roll a **d20**, add the character's
   the Save succeeds, otherwise it is a failure. This process is described in
   more detail in the Combat chapter.
 
-### Rolling Damage Rolls - PCs
+### Damage Rolls
+
+The process of rolling damage varies depending on whether the damage was caused
+by a PC or a monster, as described in the following sections.
+
+After rolling damage, modify the damage by any resistances or vulnerabilities that
+apply, as described below.
+
+#### Rolling Damage Rolls - PCs
 
 Damage rolls use different rules depending on whether they are made by a PC or 
 a monster. We explain the rules for PC damage rolls here, and monster damage
@@ -381,7 +389,7 @@ also increase with level. Damage dice for a Level 30 power are double those of
 a Level 1 power, so we need a damage dice multiplier of x4 at that level in
 order to match the expected total multiplier of x8.</div>
 
-### Rolling Damage Rolls - Monsters
+#### Rolling Damage Rolls - Monsters
 
 Monsters have fixed damage values rather than damage dice, so the rules for
 their damage rolls are much simpler. When a monster hits an enemy with an attack,
@@ -408,6 +416,55 @@ of 3-4, and 10 damage on a roll of 5-6.</div>
 <div class="tip">**Tip:** We recommend GMs to use fixed damage for minion monsters,
 and variable damage for other monsters, to make combat less predictable. That said,
 GMs can choose fixed damage for all monsters when they want to speed up combat.</div>
+
+#### Resistances and Vulnerabilities
+
+TODO: Complete this section
+
+Summary - Resistances and vulnerabilities:
+
+- Immunity: Negate damage
+- Resistance: Reduce damage by 1/2
+- Partial Resistance: Reduce damage by 1/4
+- Partial Vulnerability: Increase damage by 1/4
+- Vulnerability: Increase damage by 1/2
+
+Notes:
+
+- All fractions are rounded down.
+- Resistances can be downgraded as follows: Immunity to Resistance, Resistance to Partial Resistance, Partial Resistance to normal damage
+- Vulnerabilities can be downgraded as follows: Vulnerability to Partial Vulnerability, Partial Vulnerability to normal damage
+- If there are multiple resistances and vulnerabilities, pick the highest Resistance/Immunity, and the highest Vulnerability. Subtract damage from the Resistance, then add damage from the Vulnerability.
+
+TODO:
+- Show examples
+- Explain that Immunity + Vulnerability first subtracts 100% damage, then adds the amount from the Vulnerability.
+
+
+#### Damage Types
+
+An attack can have one or more damage types. There are the following damage types in the game:
+
+- Physical (default)
+- Fire
+- Cold
+- Lightning
+- Radiant
+- Shadow
+- Poison
+- Psychic
+
+Damage types do not have any inherent effect, but there are many character abilities that depend on damage type, such as resistances, vulnerabilities, and damage bonuses. If no damage type is specified, the damage type is Physical.
+
+<div class="compatibility">**Compatibility Note**:
+Some damage types from legacy rules are no longer supported or have been renamed:
+
+- Necrotic: Renamed to Shadow
+- Force: Use Physical instead
+- Thunder: Use Physical instead
+- Acid: Use Physical instead.
+
+Any legacy rules that grant resistance or vulnerability to Force, Thunder or Acid should be ignored (do not convert them into resistance/vulnerability to Physical). Powers that used to have discontinued damage types can have keywords instead: A character can have powers with the Acid keyword, and Feats or Features that affect these powers.</div>
 
 
 ### Rolling Action Point Checks
@@ -667,7 +724,7 @@ A character''s defenses determine how hard the character is to hit with attacks.
  the average defense value is 13, which corresponds to a 60% chance of being
  hit on an attack with the typical hit bonus of +4.</div>
 
-**Armor Class** (**Arm**), is the Primary Defense, the one most commonly targeted
+**Armor** (**Arm**), is the Primary Defense, the one most commonly targeted
  by attacks. For Player Characters, Arm is determined by the type of Armor
  and Shield worn by the character, plus a class-dependent bonus if the
  character is wearing Light Armor. The following formula is used while
@@ -711,7 +768,7 @@ For Monsters, Secondary Defenses are determined by monster class. A table
 <div class="tip">**Tip**:As a general guideline, each defense is targeted
  by the following types of attacks:
 
-- Arm: Physical attacks, including most melee attacks, some ranged attacks,
+- Armor: Physical attacks, including most melee attacks, some ranged attacks,
   and a few close and area attacks.
 - Fortitude: Physical, Poison, Shadow and Cold attacks, including some
   melee attacks, and a few ranged, close and area attacks.
@@ -816,4 +873,58 @@ An in-depth discussion of different modes of movement is provided in the
 
 
 ## Powers
-(TODO)
+
+Player Characters can gain powers from their Origin, Class, Feats and Magic Items. Monsters can also have powers. In this section, we explain how to read a power.
+
+Consider the following example power:
+
+(TODO: ADD EXAMPLE POWER)
+
+We can see the following elements in the power text block:
+
+- Power type: Utility or Attack
+- Power Name
+- Power Level: Used in character creation for PCs
+- Usage Frequency: At-Will, Encounter, Daily or Recharge.
+- Keywords: Descriptive categories, like Weapon, Implement or Fire
+- Action Type: Standard, Move, Minor, Free or Triggered Action, or Reaction
+- Action Trigger: Some powers are only triggered on a specific condition.
+- Range: Melee, Ranged, Close or Area
+- Attack Roll: Describes bonus to hit, targeted defense.
+- Effect on Hit: Describes power effects, including damage, on a successful hit roll.
+- Effect on Miss: Describes power effects, including damage, on a failed hit roll.
+- Effect: Describes fixed effects that happen regardless of hit roll.
+- Sustain: Some powers can persist if the character spends additional actions on subsequent turns.
+- Upgrade: Used in character creation for PCs: Additional effects gained when the power occupies a higher level slot.
+
+Each power element is described in detail in the following sections.
+
+### Power Type
+
+### Power Name
+
+### Power Level
+
+### Usage Frequency
+
+### Power Categories
+
+### Action Type
+
+#### Action Trigger
+
+### Power Range
+
+### Power Attack Roll
+
+### Effect on Hit
+
+### Effect on Miss
+
+### Power Effect
+
+### Sustain Powers
+
+### Power Upgrades
+
+
