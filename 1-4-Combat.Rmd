@@ -172,7 +172,23 @@ Flanking for large creatures
 ### Damage, Incapacitation and Healing
 
 ## Actions
+
 ### Reactions
+
+Types of Reaction:
+- Reaction: Triggered outside of a character's turn.
+- Triggered Action: Triggered by a character's own actions.
+
+Reaction Modifiers:
+- Free Reaction: Does not count toward the 1 Reaction per Round limit. A character can only take a single Free Action or Free Reaction each turn. A character may take a regular Reaction and a Free Reaction in the same turn.
+- Interrupt: The Reaction resolves before the triggering event.
+
+TODO: Discuss timing of Triggered Actions. Most of these modify an attack as it happens.
+
+TODO: Complete this section.
+
+Note: Unless otherwise stated, reactions cannot trigger further reactions. Notably, Taunted characters making Opportunity Attacks will not trigger Reactions from the taunting characters.
+
 
 ## Movement
 
