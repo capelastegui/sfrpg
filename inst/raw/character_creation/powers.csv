@@ -124,7 +124,7 @@ mnv_charge,Charge,NA,,Attack,,,,Standard Action,,,,,,,,You are Hindered. Move yo
 mnv_stnup,Stand Up,NA,,Utility,,,,Move Action,,,,,,,,"You stop being Prone, and you are Hindered this turn. Move 1",,,,"Hindered. No longer Prone, Move 1."
 mnv_run,Run,NA,,Utility,,,,Standard Action,,,,,,,,Move your Speed +4. You are Dazed until the start of your next turn.,,,,"Move Speed+4, and Dazed until next turn."
 # Advanced Miscellaneous Maneuvers,,,,,,,,,,,,,,,,,,,,
-mnv_escpe,Escape,NA,,Utility,,,,Move Action,,,,,,,,Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy.,,,,Roll save to stop being Grabbed by an enemy.
+mnv_escpe,Escape,NA,,Utility,,,,Move Action,,,,,,,,"Use only while Grabbed. Roll a Save to stop being Grabbed by one enemy. If you are larger than the Grabbing enemy, gain a +3 bonus to the save for each size category difference.",,,,Roll save to stop being Grabbed by an enemy.
 mnv_ftaid,First Aid,,,Utility,,,,Standard Action,,Melee,targets a Dying ally,,,,,The target is no longer Dying.,,,,"Melee, targets a Dying ally. No longer Dying."
 mnv_adpot,Administer Potion,,,Utility,,,,Standard Action,,Melee,targets an ally,,,,,The target uses a Potion carried or held by you or the target.,,,,"Melee, targets an ally. Use Potion on target."
 mnv_rdyml,Ready Melee Attack,,,Utility,,,,Standard Action,,,,"Until your next turn, the first time an enemy you can see moves to a square adjacent to you, they provoke an opportunity attack from you.",You can use this attack only if there are no enemies you can see adjacent to you.,,,,,,,Gain Opportunity Attack to next enemy moving into melee range.
