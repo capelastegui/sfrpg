@@ -26,7 +26,7 @@ rog_train,Rogue Training,"Rogue Training: Reduce by 1 the DC of the following Sk
 - Social checks (Authority, Diplomacy, Trickery) and knowledge checks (Perception, Lore) related to crime.
 - Pick locks (Finesse), pick pockets (Trickery)
 - Find traps (Perception) and disable traps (Concentration)"
-rog_scoun_wpn,Scoundrel's Weapon,"You treat the following weapons as Rogue Weapons: Light Blades, Crossbows, Slings.<br>You deal +Cha damage with Rogue Weapons.<br>+1 Hit with Dagger attacks."
+rog_scoun_wpn,Scoundrel's Weapon,"You treat the following weapons as Rogue Weapons: Off-Hand Weapons, Short Bows.<br>You deal +Cha damage with Rogue Weapons.<br>+1 Hit with Dagger attacks."
 rog_scoun_amb,Scoundrel's Ambush,"Gain +Cha Initiative.<br>Gain Advantage when attacking enemies that have not yet acted in the current encounter.<br>Gain Advantage against Slowed, Immobilized or Grabbed enemies."
 rog_thug_wpn,Thug's Weapon,"You treat the following weapons as Light Weapons: Light Blades, Mace, Light Hammer.<br>+1 Hit with Weapon attacks with Off-Hand weapons and Maces."
 rog_thug_mth,Meathead,Add double your Strength to your HP.
