@@ -1,73 +1,42 @@
-#' Title
-#'
-#' @param df_monster_race
-#'
-#' @return
-#' @export
-get_htm_feat <- function(df_feat=NULL){
+#require(rutils)
 
-  if (df_feat %>% is.null()) {
-    df_feat <- read_my_csv('feats')
+#auxiliary functions
+
+applysplit  <- function (df,splitvar)
+{ 
+  df <- refactor(df)
+  split(df,df[[splitvar]])
+}
+
+
+getFullFeatHtm  <- function(featlist)
+{
+  featlist2  <- llply.name(featlist,.fun=function(l,l.name)
+  {
+    s  <- llply.name(l,.fun=function(l,l.name){paste0("<h4 class=\"newPage\">Category - ",l.name,"</h4>",
+                                                      "<div class=\"Feat-table\">",l$table,"</div>",
+                                                      "<div class=\"Feat-List\">", l$htm, "</div>")})
+    l <- mapply(FUN=function(a,b){attr(a,"section") <- b;a},l,s, SIMPLIFY=FALSE)
+    s <- paste0 (s,collapse="<br/>")
+    attr(l,"full") <- paste0 ("<h3>Level ",l.name," feats<h3>",s)
+    l
   }
-  df_tag <-  read_my_csv('feats_tags')
-  tag_pre <- df_tag[1,]
-  tag_post <- df_tag[2,]
-
-  df_feat_clean <- df_feat %>%
-    gsub_colwise("\\n", "<br>")
-
-  build_element_apply(df_feat_clean, tag_pre, tag_post,
-                      df.names=setdiff(names(df_feat), c('Summary')))
+  )
+  attr(featlist2,"full") <- paste0(featlist2,collapse="<br/>\r\n")
+  attr(featlist2,"full") <- paste0(llply(featlist2,.fun=attr,which="full"),collapse="<br/>\r\n")
+  featlist2
 }
 
-#' Title
-#'
-#' @param htm_monster
-#'
-#' @return
-#' @export
-get_feat_list_htm <- function(htm_feat){
-    paste0('<div class="Feat-List">',htm_feat,'</div>')
-}
+#Generate feat table and feat list from a single raw feat table, and pre- and -post tags
 
-#' Title
-#'
-#' @param htm_monster
-#'
-#' @return
-#' @export
-get_feat_table_htm <- function(htm_feat_table){
-    paste0('<div class="Feat-Table">',htm_feat_table,'</div>')
+getFeatSection  <- function(featraw, pre, post)
+{
+  feat.table  <- build_table_apply(featraw,df.names=setdiff(names(featraw),"Text"))
+  feat.htm  <- build_element_apply(featraw,pre,post,df.names=setdiff(names(featraw),"Summary"))
+  paste0 (feat.table,feat.htm,collapse="<br/>\r\n")
 }
 
 
-
-#' Title
-#'
-#' @param htm_monster
-#' @param dir_output
-#' @param file_name
-#'
-#' @return
-#' @export
-write_file_htm_feat <- function(htm_feat, dir_output, file_name){
-    file_css <- system.file("SFRPG.css", package='sfrpg',
-        mustWork=TRUE)
-    css <- readChar(file_css, file.info(file_css)$size)
-
-    htm_full <- paste("<!DOCTYPE html>",
-        "<html>\r\n<head>\r\n<title>Feats</title>",
-        "\r\n<style type=\"text/css\">",
-        css,
-        "</style></head>\r\n<body>",
-        htm_feat %>% get_feat_list_htm(),
-        "</body></html>",
-        sep="\r\n",
-        collapse="<br>")
-    writeChar(htm_full, file.path(dir_output, file_name))
-}
-
-# TODO: Obsolete, update
 getFeatList <- function (dir_base=here::here())
 {
   source(file.path(dir_base,"R","0-00-csv-to-html.R"))
@@ -151,3 +120,48 @@ getFeatList <- function (dir_base=here::here())
 
 
 
+
+
+
+# paste.list.2  <- function (l,collapse=NULL)
+# {
+#   l <- llply(l, .fun=paste, collapse=collapse)
+#   paste(l,collapse=collapse)
+# }
+# 
+# 
+# feat.table.htm <- paste.list.2(feat.list.table,collapse="<br>")
+# feat.lesser.table.htm <- paste.list.2(feat.lesser.list.table,collapse="<br>")
+
+
+
+# #Now unused, generates feat table files, keep for debug
+#
+# write(feat.table.htm,feat.table.htm.file)
+# write(attr(genFeatSection(tmp),"full"),feat.table.htm.file)
+# write(feat.lesser.table.htm,feat.lesser.table.htm.file)
+
+#Build full text descriptions
+
+
+# feat.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
+#                    css,
+#                    "</style></head>\r\n<body>",
+#                    attr(genFeatSection(feat.list$feats),"full"),
+#                    "</body></html>",
+#                    sep="\r\n",
+#                    collapse="")
+# 
+# feat.lesser.full <- paste("<html>\r\n<head>\r\n<title>Feat-test</title>\r\n<style type=\"text/css\">",
+#                    css,
+#                    "</style></head>\r\n<body>",
+#                    attr(genFeatSection(feat.list$lesserfeats),"full"),
+#                    "</body></html>",
+#                    sep="\r\n",
+#                    collapse="")
+# 
+# writeChar(feat.full,feat.htm.file)
+# writeChar(feat.lesser.full,feat.lesser.htm.file)
+
+
+#writeFeatFile()

@@ -4,7 +4,7 @@
 \alias{clean_df_items}
 \title{Write magic items data}
 \usage{
-clean_df_items(df_items_raw = NULL, df_items_tag = NULL)
+clean_df_items(df_items_raw = NULL, df_items_tag = NULL, to_html = TRUE)
 }
 \arguments{
 \item{df_items_tag}{}

@@ -1,0 +1,183 @@
+# Feats
+
+```{r feat_setup, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_feats_raw <- read_my_csv('feats')
+
+# Usage: htm_feats = df_feats_raw %>% dplyr::filter(Category=='my_Category') %>% get_htm_feat()
+```
+## Level 1 Feats
+
+Players can choose level 1 feats from the following categories:
+
+- **Defense Focus**: Feats that improve a character's Arm while wearing certain armors, and provide a small additional bonus.
+- **Offense Focus**: Feats that improve a character's attacks with certain weapons or implements, and provide a small additional bonus.
+- **Toughness**: Feats that improve a character's HP, and provide a small additional bonus.
+
+Note that Offense Focus is the largest feat Category in the game and, due to its size, has been split into three parts for the sake of readability: 
+
+- **Offense Focus (Flexible)**: Feats that boost both weapon and implement attacks.
+- **Offense Focus (Weapon)**: Feats that boost weapon attacks.
+- **Offense Focus (Implement)**: Feats that boost implement attacks.
+
+
+<div class="tip">**Tip**: The Toughness feat (from the Category of the same name) is a good level 1 Feat for starting players who don't want to complicate themselves.</div>
+
+<div class="tip">**Tip**: Feats in the Toughness Category are generally better than Defense Focus feats at providing raw survivability. Feats in the Defense Focus Category are usually better at providing protection against melee attacks, or for characters that are interested in their secondary benefits. When in doubt, take both.</div>
+
+<div class="tip">**Tip**: Offense Focus Feats are the one of the main reasons to choose one Weapon Family over another, or one type of Implement over another. The other reason is the player's aesthetic preference - some people just like axes a lot. Players who carefully study all options to choose the one that best suits their character build will probably gain a small edge in combat, but the Feats are designed to be close in power level, so choosing based on personal taste will be almost as effective.</div>
+
+### Toughness
+```{r feat_toughness, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Toughness') %>% get_htm_feat() %>% cat()
+```
+
+### Category - Defense Focus{.newPage}
+```{r feat_defense, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+#cat(getFeatSection(featlist$feats$"1"$"Defense Focus"$raw,pre,post))
+df_feats_raw %>% dplyr::filter(Category=='Defense Focus') %>% get_htm_feat() %>% cat()
+```
+
+### Category - Offense Focus (Weapon){.newPage}
+```{r feat_offense_weap, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+# cat(getFeatSection(weapon.focus, pre, post))
+df_feats_raw %>% dplyr::filter(Category=='Offense Focus: Weapon') %>% get_htm_feat() %>% cat()
+```
+### Category - Offense Focus (Implement){.newPage}
+```{r feat_offense_impl, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+# cat(getFeatSection(implement.focus, pre, post))
+df_feats_raw %>% dplyr::filter(Category=='Offense Focus: Implement') %>% get_htm_feat() %>% cat()
+
+```
+
+### Category - Offense Focus (Flexible){.newPage}
+```{r feat_offense_flex, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Offense Focus: Flexible') %>% get_htm_feat() %>% cat()
+```
+
+
+
+## Level 1 Optional Feats: Training {.newPage}
+
+With the GM's permission, players can choose level 1 feats that expand their weapon and armor training:
+
+- **Armor Training**: Feats that provide training with new types of armor.
+- **Weapon Training**: Feats that provide training with new types of weapons.
+
+
+<div class="tip">**Tip**: Armor Training is usually not as strong as Defense Focus, but they both stack, and you can take multiple Training feats.</div>
+
+<div class="tip">**Tip**: For characters without training in martial weapons, Weapon Trainer is often superior to an Offense Focus feat.</div>
+
+<div class="tip">**Tip**: There is no Implement Training Feat. If you are really interested in using a different Implement, go Multiclass and take Multiclass Implement or, alternately, convince your GM that you want it for story reasons and not to optimize your character.</div>
+
+<div class="tip">**GM Tip**: If your player is really interested in getting training with a different Implement, allow them to have it for free if they provide a convincing argument. When in doubt, make it conditional on them taking an Offense Focus Feat that is not specific to that implement, such as Dual Focus.</div>
+
+<div class="design">**Designer Note**: GMs should feel free to leave these feats out of the game, particularly for beginning players. From a mechanical standpoint, the feats are redundant with Offense Focus and Defense Focus feats, and slightly imbalanced, as they are often clearly weaker or stronger than the alternatives. We have included them as optional categories because they are a cool tool to customize a character's look and feel, and for many game groups that will be worth the slight tradeoff in game balance.</div>
+
+
+### Category - Armor Training
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Armor Training') %>% get_htm_feat() %>% cat()
+```
+
+### Category - Weapon Training
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Weapon Training') %>% get_htm_feat() %>% cat()
+```
+
+## Level 4 Feats{.newPage}
+
+### Level 4 Defender Role Feats
+#### Category - Defender Grit
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Defender Grit') %>% get_htm_feat() %>% cat()
+```
+
+#### Category - Defender Position
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Defender Position') %>% get_htm_feat() %>% cat()
+```
+### Level 4 Controller Role Feats{.newPage}
+#### Category - Explosive Control
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Explosive Control') %>% get_htm_feat() %>% cat()
+```
+
+#### Category - Ground Control
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Ground Control') %>% get_htm_feat() %>% cat()
+```
+
+### Level 4 Leader Role Feats{.newPage}
+#### Category - Leader Heal
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Leader Heal') %>% get_htm_feat() %>% cat()
+```
+
+#### Category - Leader Maneuver
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Leader Maneuver') %>% get_htm_feat() %>% cat()
+```
+
+### Level 4 Striker Role Feats{.newPage}
+#### Category - Striker Agility
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Striker Agility') %>% get_htm_feat() %>% cat()
+```
+
+#### Category - Striker Deadliness
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Striker Deadliness') %>% get_htm_feat() %>% cat()
+```
+
+## Level 11 Feats{.newPage}
+### Category - Paragon Ability
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Paragon Ability') %>% get_htm_feat() %>% cat()
+```
+
+### Category - Power Source
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Power Source') %>% get_htm_feat() %>% cat()
+```
+
+### Level 11 Role Feats{.newPage}
+#### Category: Defender Taunt
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Defender Taunt') %>% get_htm_feat() %>% cat()
+```
+#### Category: Debilitating Control
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Debilitating Control') %>% get_htm_feat() %>% cat()
+```
+#### Category: Leader Offense{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Leader Offense') %>% get_htm_feat() %>% cat()
+```
+#### Category: Striker Resource
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Role: Striker Resource') %>% get_htm_feat() %>% cat()
+```
+
+## Level 21 Feats{.newPage}
+### Category - Epic Ability
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Epic Ability') %>% get_htm_feat() %>% cat()
+```
+
+### Category - Epic Might
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Epic Might') %>% get_htm_feat() %>% cat()
+```
+
+### Category - Epic Specialization
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Epic Specialization') %>% get_htm_feat() %>% cat()
+```
+
+
+
+
+
+

@@ -4,7 +4,12 @@
 \alias{get_html_sheet}
 \title{Generate dataframe with html text for character sheet}
 \usage{
-get_html_sheet(l_feature_id, l_power_id, character_name = "Character Sheet")
+get_html_sheet(
+  l_feature_id,
+  l_power_id,
+  l_items = NULL,
+  character_name = "Character Sheet"
+)
 }
 \arguments{
 \item{dir_base}{}

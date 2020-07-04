@@ -11,18 +11,19 @@ body {
 .Feat {  
   font-family: Verdana;  
   font-size: 11px;  
-  line-height: normal;  
-  width: 6.3cm;  
-  /*margin-bottom: 25px; */
-  margin-bottom: 0.5cm;
+  line-height: 1.3;
+  width: 240px;
+  /*width: 6.5cm;*/
+  margin-bottom: 25px;
   display: inline-block;
+  vertical-align: top;
 			
 }
 
 .Feat p {  
-  margin-top: 0px;  
-  margin-bottom: 6px;
-
+  /* Using !important because of conflicts with gitbook css */
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
 }
 
 .Feat-List, .Power-List {
