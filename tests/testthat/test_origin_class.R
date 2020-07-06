@@ -28,9 +28,12 @@ test_that("get_df_class works", {
   )
 
   test_class_output <- function(class,build){
+    file_css <- system.file("SFRPG_test.css", package='sfrpg',
+                            mustWork=TRUE)
+    css <- readChar(file_css, file.info(file_css)$size)
     htm_file = get_class_build(
     df_class, class, build)$htm_class_section %>%
-    get_htm_file()
+    get_htm_file(css)
 
     verify_output(
       test_path('output',paste0('test_class_',class,'_',build,'.txt')),

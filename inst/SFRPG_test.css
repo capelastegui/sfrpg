@@ -8,19 +8,19 @@ body {
 }
 
 /*Feat format*/
-.Feat {  
-  font-family: Verdana;  
-  font-size: 11px;  
-  line-height: normal;  
-  width: 6.3cm;  
+.Feat {
+  font-family: Verdana;
+  font-size: 11px;
+  line-height: normal;
+  width: 6.3cm;
   /*margin-bottom: 25px; */
   margin-bottom: 0.5cm;
   display: inline-block;
-			
+
 }
 
-.Feat p {  
-  margin-top: 0px;  
+.Feat p {
+  margin-top: 0px;
   margin-bottom: 6px;
 
 }
@@ -28,7 +28,7 @@ body {
 .Feat-List, .Power-List {
   -moz-column-count: 3;
   -webkit-column-count: 3;
-  column-count: 3;  
+  column-count: 3;
   -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
   column-rule-style: none;
@@ -74,7 +74,8 @@ tr:nth-child(even) {background-color: #ffefbf;}
  .Feature {
   font-family: Verdana;
   font-size: 12px;
-  width: 20cm;
+  /*width: 20cm;*/
+  max-width: 900px;
   line-height: normal;
    margin-bottom: 5px;
   page-break-inside: avoid;
@@ -92,11 +93,13 @@ tr:nth-child(even) {background-color: #ffefbf;}
 
 .darkgray {color:DimGray}
 
-.red {color:darkred}
+.red {color:DarkRed}
 
 .blue{color: MediumBlue;}
 
 .darkblue{color: DarkBlue;}
+
+.gold{color: GoldenRod}
 
 /* Font sizes*/
 .large {font-size: 14px;}
@@ -115,12 +118,14 @@ tr:nth-child(even) {background-color: #ffefbf;}
   /*width: 6.5cm;*/
   margin-bottom: 25px;
   display: inline-block;
+  vertical-align: top;
 
 }
 
 .Power  p {
-  margin-top: 0px;
-  margin-bottom: 3px;
+  /* Using !important because of conflicts with gitbook css */
+  margin-top: 0px !important;
+  margin-bottom: 3px !important;
 }
 
 .Power-Upgrade {
@@ -155,8 +160,14 @@ tr:nth-child(even) {background-color: #ffefbf;}
 
 /* Monster format */
 
+div.monsterList {
+  max-width: 900px;
+  line-height: 1.3;
+  letter-spacing: 0px;
+}
+
 table.monster, table.monster td, table.monster th {
-  border: 1px solid black;
+  border: 1px solid black !important;
   border-collapse: collapse;
   border-color: #003300;
   text-align: center;
@@ -164,7 +175,8 @@ table.monster, table.monster td, table.monster th {
   font-family: Verdana;
   font-size: 9px;
   color: Black;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
 }
 
 table.monster td.title {
@@ -195,34 +207,16 @@ table.monster td.huge {
   font-size: 18px;
 }
 
-
-div.monsterList {
-  -moz-column-count: 2;
-  -webkit-column-count: 2;
-  column-count: 2;
-  -moz-column-rule-style: none;
-  -webkit-column-rule-style: none;
-  column-rule-style: none;
-  column-width: 300px;
-  /*width: 900px;*/
-  /*width: 20cm;*/
-  min-height: 400px;
-
-}
-
 div.monsterClass, div.monsterRace {
   font-family: Verdana;
   font-size: 9px;
   width: 280px;
-  height: 305px;
-
   position: relative;
-  background-color: #dbffdb;
+  /*background-color: #dbffdb;*/
   margin-bottom: 30px;
-  /* Avoids breaking table across columns*/
-    display: inline-block;
-   /* width: 100%;*/
-
+  margin-right: 20px;
+  display: inline-block;
+  vertical-align: top;
 }
 
 table.fullwidth {
@@ -248,12 +242,11 @@ table.monsterName {
 
 }
 
-
 table.monsterMov {
   position: absolute;
   top: 50px;
-  left: 2px;
-  width: 100px;
+  left: 0px;
+  width: 102px;
   height: 36px;
 }
 
@@ -275,8 +268,8 @@ table.tableMonsterHP {
 table.monsterResist {
   position: absolute;
   top: 89px;
-  left: 2px;
-  width: 100px;
+  left: 0px;
+  width: 102px;
   height: 46px;
 }
 
@@ -287,23 +280,19 @@ table.monsterAbilities {
   width: 172px;
 }
 
-div .space1
-{
+div .space1 {
 width: 275px;
 height: 117px;
     float: left;
 }
 
-div .space2
-{
+div .space2 {
 width: 275px;
 height: 28px;
     float: left;
 }
 
-
 table.tableMonsterHP2 {
-
   position: absolute;
   top: 40px;
   width: 57px;
@@ -315,7 +304,6 @@ table.monsterDef {
   left: 60px;
   top: 40px;
   width: 145px;
-
 }
 
 table.monsterMisc {
@@ -323,5 +311,5 @@ table.monsterMisc {
   left: 208px;
   top: 40px;
   width: 69px;
-  height: 46px;
+  height: 44px;
 }
