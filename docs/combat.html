@@ -48,7 +48,6 @@
 
 
 
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 
@@ -162,9 +161,7 @@
 <li class="chapter" data-level="5.4.2" data-path="combat.html"><a href="combat.html#action-points"><i class="fa fa-check"></i><b>5.4.2</b> Action Points</a></li>
 <li class="chapter" data-level="5.4.3" data-path="combat.html"><a href="combat.html#damage-incapacitation-and-healing"><i class="fa fa-check"></i><b>5.4.3</b> Damage, Incapacitation and Healing</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="combat.html"><a href="combat.html#actions"><i class="fa fa-check"></i><b>5.5</b> Actions</a><ul>
-<li class="chapter" data-level="5.5.1" data-path="combat.html"><a href="combat.html#reactions"><i class="fa fa-check"></i><b>5.5.1</b> Reactions</a></li>
-</ul></li>
+<li class="chapter" data-level="5.5" data-path="combat.html"><a href="combat.html#actions"><i class="fa fa-check"></i><b>5.5</b> Actions</a></li>
 <li class="chapter" data-level="5.6" data-path="combat.html"><a href="combat.html#movement"><i class="fa fa-check"></i><b>5.6</b> Movement</a></li>
 <li class="chapter" data-level="5.7" data-path="combat.html"><a href="combat.html#attacking"><i class="fa fa-check"></i><b>5.7</b> Attacking</a><ul>
 <li class="chapter" data-level="5.7.1" data-path="combat.html"><a href="combat.html#range-and-targeting"><i class="fa fa-check"></i><b>5.7.1</b> Range and Targeting</a></li>
@@ -558,17 +555,71 @@ TODO: Line</p>
 </div>
 <div id="actions" class="section level2">
 <h2><span class="header-section-number">5.5</span> Actions</h2>
-<div id="reactions" class="section level3">
-<h3><span class="header-section-number">5.5.1</span> Reactions</h3>
-<p>Types of Reaction:
-- Reaction: Triggered outside of a character’s turn.
-- Triggered Action: Triggered by a character’s own actions.</p>
-<p>Reaction Modifiers:
-- Free Reaction: Does not count toward the 1 Reaction per Round limit. A character can only take a single Free Action or Free Reaction each turn. A character may take a regular Reaction and a Free Reaction in the same turn.
-- Interrupt: The Reaction resolves before the triggering event.</p>
-<p>TODO: Discuss timing of Triggered Actions. Most of these modify an attack as it happens.</p>
-<p>TODO: Complete this section.</p>
-<p>Note: Unless otherwise stated, reactions cannot trigger further reactions. Notably, Taunted characters making Opportunity Attacks will not trigger Reactions from the taunting characters.</p>
+<p>Types of action:</p>
+<ul>
+<li><strong>Move</strong> : Action taken during a character’s turn, usually to change position. A character can take 1 Move Action/turn</li>
+<li><strong>Standard</strong> : Action taken during a character’s turn, usually to make an attack. A character can take 1 Standard Action/turn</li>
+<li><strong>Minor</strong> : Action taken during a character’s turn, usually for something quick like picking up an object. A character can take 1 Minor Action/turn.</li>
+<li><strong>Free</strong> : Action taken during a character’s turn. Can be in response to a trigger.</li>
+<li><strong>Reaction</strong> : Action taken outside a character’s turn, in response to a trigger. A character can take 1 Reaction/Round.</li>
+<li><strong>Free Reaction</strong> : Action taken outside a character’s turn, in response to a trigger. Counts as both a Free Action and a Reaction. Does not count toward the limit of 1 Reaction/Round.</li>
+</ul>
+<p>Reaction Keywords: The following keywords can apply to Reactions, Free Reactions, and to Free Actions with a trigger, to grant them special properties:</p>
+<ul>
+<li><strong>Interrupt</strong> : Reaction resolves before the triggering event completes.</li>
+<li><strong>Automatic</strong> : Can always be taken, even if the character is Unconscious, incapacitated or otherwise unable to take actions at that time.</li>
+</ul>
+<p>Resolving Interrupts:</p>
+<ul>
+<li>An Interrupt action triggering in the middle of another character’s action can stop the triggering action. For example, a character Immobilized by an Interrupt while moving stops their movement immediately.</li>
+<li>An Interrupt action can include Forced Movement. A character whose position changed because of an interrupt may find that some targets for the triggering action are now at a different range, or outside of range altogether. In that case, apply any new range modifiers as appropriate, and remove any out of range characters as valid targets. No new targets can be picked - if the triggering action no longer has enough valid targets, it stops.</li>
+<li>If the interrupted action included movement, and the Interrupt caused Forced Movement, the interrupted character subtracts the distance of the Forced Movement from the remaining movement distance. Then, if they have any movement distance left, they use it to move to a new position. This new position does not need to match the movement as declared before the interrupt.</li>
+</ul>
+<p><strong>Opportunity Attacks</strong> : The most common type of Reaction is the Opportunity Attack, a combat maneuver that all characters can make to attack adjacent enemies moving or making ranged attacks:</p>
+<div class="Power-List">
+<div class="Power">
+<p>
+<span class="green large"><strong>Opportunity Attack - Maneuver</strong></span>
+</p>
+<p>
+Attack
+</p>
+<p>
+<b><i>Unlimited Reaction (Interrupt)</i></b> - <i> (Trigger: An adjacent enemy moves or makes a Ranged or Area attack)</i> -
+</p>
+<p>
+<b>Effect</b>: You make a Melee Basic Attack against the triggering enemy, adding your Opportunity Modifier to the Hit Roll
+</p>
+</div>
+</div>
+<div class="compatibility">
+Compatibility Note: Automatic actions were known as No Action in legacy rules.
+</div>
+<p>Limits to actions:</p>
+<ul>
+<li>During a character’s turn:
+<ul>
+<li>One each of : Minor Action, Move Action, Standard Action.</li>
+<li>One Free Action Attack.</li>
+<li>Any number of non-attack Free Actions, but each power can only be used once per turn this way.</li>
+</ul></li>
+<li>Outside a character’s turn:
+<ul>
+<li>One non-Free Reaction per round.</li>
+<li>One Free Reaction attack per turn.</li>
+<li>Any number of non-attack Free Reactions per turn, but each power can only be used once per turn this way.</li>
+</ul></li>
+<li>An Automatic action can always be taken, at any time, regardless of other action limits.</li>
+</ul>
+<div class="compatibility">
+<p><em>Compatibility Note:</em> Legacy rules have granted actions as Free Actions. They are now Free Reactions.</p>
+Example: “an ally can make a basic attack as a Free Action” becomes "an ally can make a basic attack as a Free Reaction.
+</div>
+<div class="tip">
+<em>Note:</em> Effects that prevent a character from taking Reactions also stop Free Reactions.
+</div>
+<div class="tip">
+<em>Note: </em>Unless otherwise stated, reactions cannot trigger further reactions. Notably, Taunted characters making Opportunity Attacks will not trigger Reactions from the taunting characters.
 </div>
 </div>
 <div id="movement" class="section level2">

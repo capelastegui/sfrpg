@@ -36,7 +36,12 @@
 ###Standard Maneuvers
 ###Improvised Maneuvers
 -->
+
 In this chapter we provide the rules for resolving a combat encounter.
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+```
 
 ## Combat Fundamentals
 
@@ -173,21 +178,58 @@ Flanking for large creatures
 
 ## Actions
 
-### Reactions
+Types of action:
 
-Types of Reaction:
-- Reaction: Triggered outside of a character's turn.
-- Triggered Action: Triggered by a character's own actions.
+- **Move** : Action taken during a character's turn, usually to change position. A character can take 1 Move Action/turn
+- **Standard** : Action taken during a character's turn, usually to make an attack. A character can take 1 Standard Action/turn
+- **Minor** : Action taken during a character's turn, usually for something quick like picking up an object. A character can take 1 Minor Action/turn.
+- **Free** : Action taken during a character's turn. Can be in response to a trigger.
+- **Reaction** : Action taken outside a character's turn, in response to a trigger. A character can take 1 Reaction/Round.
+- **Free Reaction** : Action taken outside a character's turn, in response to a trigger. Counts as both a Free Action and a Reaction. Does not count toward the limit of 1 Reaction/Round.
 
-Reaction Modifiers:
-- Free Reaction: Does not count toward the 1 Reaction per Round limit. A character can only take a single Free Action or Free Reaction each turn. A character may take a regular Reaction and a Free Reaction in the same turn.
-- Interrupt: The Reaction resolves before the triggering event.
+Reaction Keywords: The following keywords can apply to Reactions, Free Reactions, and to Free Actions with a trigger, to grant them special properties:
 
-TODO: Discuss timing of Triggered Actions. Most of these modify an attack as it happens.
+- **Interrupt** : Reaction resolves before the triggering event completes.
+- **Automatic** : Can always be taken, even if the character is Unconscious, incapacitated or otherwise unable to take actions at that time.
 
-TODO: Complete this section.
+Resolving Interrupts:
 
-Note: Unless otherwise stated, reactions cannot trigger further reactions. Notably, Taunted characters making Opportunity Attacks will not trigger Reactions from the taunting characters.
+- An Interrupt action triggering in the middle of another character's action can stop the triggering action. For example, a character Immobilized by an Interrupt while moving stops their movement immediately.
+- An Interrupt action can include Forced Movement. A character whose position changed because of an interrupt may find that some targets for the triggering action are now at a different range, or outside of range altogether. In that case, apply any new range modifiers as appropriate, and remove any out of range characters as valid targets. No new targets can be picked - if the triggering action no longer has enough valid targets, it stops.
+- If the interrupted action included movement, and the Interrupt caused Forced Movement, the interrupted character subtracts the distance of the Forced Movement from the remaining movement distance. Then, if they have any movement distance left, they use it to move to a new position. This new position does not need to match the movement as declared before the interrupt.
+
+**Opportunity Attacks** : The most common type of Reaction is the Opportunity Attack, a combat maneuver that all characters can make to attack adjacent enemies moving or making ranged attacks:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+read_df_power() %>% dplyr::filter(type=='maneuver', Name=='Opportunity Attack') %>%
+      dplyr::select(-type) %>% clean_df_power()  %>% .$htm_power %>% cat()
+
+```
+
+
+
+<div class="compatibility">Compatibility Note: Automatic actions were known as No Action in legacy rules.</div>
+
+Limits to actions:
+
+- During a character's turn:
+  - One each of : Minor Action, Move Action, Standard Action.
+  - One Free Action Attack.
+  - Any number of non-attack Free Actions, but each power can only be used once per turn this way.
+- Outside a character's turn:
+  - One non-Free Reaction per round.
+  - One Free Reaction attack per turn.
+  - Any number of non-attack Free Reactions per turn, but each power can only be used once per turn this way.
+- An Automatic action can always be taken, at any time, regardless of other action limits.
+
+<div class="compatibility">*Compatibility Note:* Legacy rules have granted actions as Free Actions. They are now Free Reactions.
+
+Example: "an ally can make a basic attack as a Free Action" becomes "an ally can make a basic attack as a Free Reaction.</div>
+
+<div class="tip"> *Note:* Effects that prevent a character from taking Reactions also stop Free Reactions.</div>
+
+<div class="tip"> *Note: *Unless otherwise stated, reactions cannot trigger further reactions. Notably, Taunted characters making Opportunity Attacks will not trigger Reactions from the taunting characters. </div>
 
 
 ## Movement
@@ -394,9 +436,9 @@ Slide multiple units, at range (1) and in melee (2)
 ## Combat Maneuvers
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-library(sfrpg)
-df_maneuver = get_df_maneuver()
+df_maneuver <- get_df_maneuver()
 ```
+
 
 ### PC Maneuvers
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
