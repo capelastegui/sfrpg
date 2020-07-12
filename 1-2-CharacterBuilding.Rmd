@@ -282,14 +282,14 @@ Some Origins and Classes provide automatic training with predetermined Skills.
 <div class="tip">**Tip**: When selecting Trained Skills, it is usually a
  good idea to prioritize Skills that match the character's Primary or Secondary
  Abilities. If you end up with training in two or more Skills associated with
- your Tertiary or Weak Abilities, consider taking Unnatural Ability as a Lesser
+ your Tertiary or Weak Abilities, consider taking Unnatural Ability as an Adventure
  Feat when you level up, in order to compensate for the lower Ability scores in
  these Skills.</div>
 
 <div class="tip">**Tip**: As your character levels up, you can expand your
- Trained Skill selection by taking Skill Training as a Lesser Feat.
+ Trained Skill selection by taking Skill Training as an Adventure Feat.
  Alternatively, you can specialize on your best Skills by taking Skill Focus
- as a Lesser Feat.</div>
+ as an Adventure Feat.</div>
 
 ### Armor Penalty to Skill
 
@@ -728,24 +728,26 @@ epic ability
 -->
 
 A Feat is a character customization option that lets player specialize their
- characters beyond their Origin, Class, and Power selection. Each Feat provides
- a significant improvement to the character's combat capabilities. Characters
- start the game with one Feat, and gain additional ones as they level up, to a
- maximum of nine. On top of that, characters may gain bonus feats from other
- sources, such as their Origin or Class. Depending on the specific case, a
- character gaining a bonus Feat may be able of picking any available Feat of a
- certain level or lower, or of picking any feat within a given Feat Category,
- or just gain a predetermined Feat.
+ characters beyond their Origin, Class, and Power selection.
+
+There are two main categories of feats:
+
+- **Combat Feats**: Feats that improve a character's combat abilities.
+- **Adventure Feats**: Feats that improve a character's abilities out of combat.
+
+Player Characters start the game with one Combat Feat and no Adventure Feats, and acquire
+more as they level up, up to a maximum of nine of each at level 30. Bonus feats can also be
+gained from other sources, such as a character's Origin or Class.
 
 Each Feat is composed of the following elements:
 
 - **Name**
+- **Type**: Combat or Adventure.
 - **Level**: The minimum level at which the Feat can be acquired. Also, the
   minimum level of the Feat Slot that can be used to learn the Feat.
 - **Category**: A group of Feats that perform a similar function. A character
-  can only select a single Feat from each Feat Category.
-  Some Feat Categories are labeled as “Unlimited”. A character can select any
-  number of Feats from an Unlimited Category
+  can only select a single Feat from each Feat Category, unless the feats are
+  Unrestricted.
 - **Keywords**: A series of labels that describe the Feat. Feat Keywords are
   purely descriptive and have no associated rules, but are sometimes referenced
   by other Feats.
@@ -757,83 +759,55 @@ Each Feat is composed of the following elements:
   rules, and should only be used as a quick guide for character building
   decisions, not as a rules reference.
 
-In addition to regular Feats, characters can also gain Lesser Feats, which are
- customization options that usually improve a character's adventuring
- capabilities but have little or no impact in their combat performance.
- Through Lesser Feats, characters can expand their knowledge in Skills,
- Rituals, or languages. Characters start the game with no Lesser Feats but
- acquire them as they level up, to a maximum of nine. On top of that,
- characters may gain bonus Lesser Feats from other sources, such as their
- Origin or Class, or other Feats. Depending on the specific case, a character
- gaining a bonus Lesser Feat may be able of picking any available Lesser Feat
- of a certain level or lower, or just gain a predetermined Lesser Feat.
 
-Each Lesser Feat is composed of the following elements:
+Feats can have the following special properties:
+- **Unrestricted**: A character can take multiple Unrestricted feats within the same category.
+- **Repeatable**: A Feat with this property can be taken multiple times. (This also ignores the
+  one feat per category limit).
 
-- **Name**
-- **Level**: The minimum level at which the Lesser Feat can be acquired.
-  Also, the minimum level of the Lesser Feat Slot that can be used to learn
-  the Lesser Feat.
-- **Repeatable**: Whether the Lesser Feat can be taken multiple times.
-- **Keywords**: A series of labels that describe the Feat. Feat Keywords are
-  purely descriptive and have no associated rules, but are sometimes referenced
-  by other Feats.
-- **Requirements**: A series of conditions that a character must meet before
-  taking the Lesser Feat .
-- **Description**: The benefits granted by the Lesser Feat .
-- **Summary**: An abbreviated version of the Lesser Feat Description, used in
-  summary tables. The Summary text does not necessarily provide exact or
-  complete rules, and should only be used as a quick guide for character
-  building decisions, not as a rules reference.
 
-The following table summarizes the acquisition of  Feat Slots and Lesser
- Feat Slots per character level:
+The following table summarizes the acquisition of feat slots per character level:
 
-Level | Slots aquired | Total Feats  | Total Less. Feats  | Feat levels | Lesser Feat levels
+Level | Slots aquired | Total Combat Feats  | Total Adv. Feats  | Combat Feat levels | Adv. Feat levels
 - | ------ |--|-- |---- |---- 
- 1| Gain a Level 1 Feat Slot | 1 | 0 | 1 | 
- 2| Gain a Level 2 Lesser Feat Slot | 1 | 1| 1 | 2
- 4| Gain a Level 4 Feat Slot | 2 | 1| 1,4 | 2
- 6| Gain a Level 6 Lesser Feat Slot | 2 | 2| 1,4 | 2,6
- 8| Gain a Level 8 Feat Slot | 3 | 2| 1,4,8 | 2,6
- 10| Gain a Level 10 Lesser Feat Slot | 3 | 3| 1,4,8 | 2,6,10
- 11| Gain a Level 11 Feat  Slot | 4 | 3|1,4,8,11  | 2,6,10
- 12| Gain a Level 12 Lesser Feat Slot | 4 | 4| 1,4,8,11 | 2,6,10,12
- 14| Gain a Level 14 Feat Slot | 5 | 4| 1,4,8,11,14  | 2,6,10,12
- 16| Gain a Level 16 Lesser Feat Slot | 5 | 5| 1,4,8,11,14 | 2,6,10,12,16
- 18| Gain a Level 18 Feat Slot | 6 | 5| 1,4,8,11,14, 18  | 2,6,10,12,16
- 20| Gain a Level 20 Lesser Feat Slot | 6 | 6| 1,4,8,11,14, 18  | 2,6,10,12,16, 20
- 21| Gain a Level 21 Feat Slot | 7 | 6| 1,4,8,11,14, 18,21  | 2,6,10,12,16, 20
- 22| Gain a Level 22 Lesser Feat Slot | 7 | 7| 1,4,8,11,14, 18,21  | 2,6,10,12,16, 20,22
- 24| Gain a Level 24 Feat  Slot | 8 | 7| 1,4,8,11,14, 18,21,24  | 2,6,10,12,16, 20,22
- 26| Gain a Level 26 Lesser Feat Slot | 8 | 8| 1,4,8,11,14, 18,21,24  | 2,6,10,12,16, 20,22,26
- 28| Gain a Level 28 Feat Slot | 9 | 8| 1,4,8,11,14, 18,21,24,28  | 2,6,10,12,16, 20,22,26
- 30| Gain a Level 30 Lesser Feat Slot | 9 | 9| 1,4,8,11,14, 18,21,24,28  | 2,6,10,12,16, 20,22,26,30
+ 1| Gain a Level 1 Combat Feat | 1 | 0 | 1 |
+ 2| Gain a Level 2 Adventure Feat | 1 | 1| 1 | 2
+ 4| Gain a Level 4 Combat Feat | 2 | 1| 1,4 | 2
+ 6| Gain a Level 6 Adventure Feat | 2 | 2| 1,4 | 2,6
+ 8| Gain a Level 8 Combat Feat | 3 | 2| 1,4,8 | 2,6
+ 10| Gain a Level 10 Adventure Feat | 3 | 3| 1,4,8 | 2,6,10
+ 11| Gain a Level 11 Combat Feat  | 4 | 3|1,4,8,11  | 2,6,10
+ 12| Gain a Level 12 Adventure Feat | 4 | 4| 1,4,8,11 | 2,6,10,12
+ 14| Gain a Level 14 Combat Feat | 5 | 4| 1,4,8,11,14  | 2,6,10,12
+ 16| Gain a Level 16 Adventure Feat | 5 | 5| 1,4,8,11,14 | 2,6,10,12,16
+ 18| Gain a Level 18 Combat Feat | 6 | 5| 1,4,8,11,14, 18  | 2,6,10,12,16
+ 20| Gain a Level 20 Adventure Feat | 6 | 6| 1,4,8,11,14, 18  | 2,6,10,12,16, 20
+ 21| Gain a Level 21 Combat Feat | 7 | 6| 1,4,8,11,14, 18,21  | 2,6,10,12,16, 20
+ 22| Gain a Level 22 Adventure Feat | 7 | 7| 1,4,8,11,14, 18,21  | 2,6,10,12,16, 20,22
+ 24| Gain a Level 24 Combat Feat | 8 | 7| 1,4,8,11,14, 18,21,24  | 2,6,10,12,16, 20,22
+ 26| Gain a Level 26 Adventure Feat | 8 | 8| 1,4,8,11,14, 18,21,24  | 2,6,10,12,16, 20,22,26
+ 28| Gain a Level 28 Combat Feat | 9 | 8| 1,4,8,11,14, 18,21,24,28  | 2,6,10,12,16, 20,22,26
+ 30| Gain a Level 30 Adventure Feat | 9 | 9| 1,4,8,11,14, 18,21,24,28  | 2,6,10,12,16, 20,22,26,30
 
-
-
-Each Feat Slot can be used to gain a Feat with a level equal or lower to that
- of the Feat Slot. Likewise, each Lesser Feat Slot can be used to gain a Lesser
- Feat with a level equal or lower to that of the Lesser Feat Slot. Note that
- Feats and Lesser Feats are not interchangeable: a Feat Slot cannot be used to
- gain Lesser Feats, nor can a Lesser Feat slot be used to gain Feats.
+Each Combat Feat slot can be used to gain a Feat with a level equal or lower to that
+ of the Feat Slot. Likewise, each Adventure Feat slot can be used to gain an Adventure
+ Feat with a level equal or lower to that of the Adventure Feat Slot. Note that
+ Combat Feats and Adventure Feats are not interchangeable: a Combat Feat Slot cannot be used to
+ gain Adventure Feats, nor can an Adventure Feat slot be used to gain Combat Feats.
 
 <div class="tip">**Tip**: Although the power level of Feats tends to grow with
  their level, the differences are sometimes very small. Often, a lower level
  Feat will be just as effective for a given character as the higher level
  alternatives, if not the best option altogether.</div>
 
-
 <div class="tip">**Tip**: At some levels, a Feat Slot can only be filled with
  lower level Feats.</div>
-
 
 <div class="tip">**Tip**: If you are lost, or want to experiment, choosing
  legal Feats at random is still expected to yield competent (if unfocused)
  characters.</div>
 
-
-<div class="compatibility">**Compatibility Note**: Feats from older rulebooks
+<div class="compatibility">**Compatibility Note**: Feats from legacy rulebooks
  are considered obsolete and should not be used. This is not, strictly speaking,
  due to compatibility issues (since the Feats should mostly work under the
  current rules), but as a way to improve the game experience - see the
@@ -857,9 +831,9 @@ Each Feat Slot can be used to gain a Feat with a level equal or lower to that
   and characters that only select non-combat Feats. Furthermore, it is usually
   optimal to ignore either combat or non-combat options (depending on the
   campaign), resulting in roughly half the Feats in the game seeing little
-  to no play. By splitting customization slots between combat options (Feats)
-  and non-combat options (Lesser Feats), we get much more predictable character
-  outcomes, which allow for a better high level game experience. This also
+  to no play. The split between Combat and Adventure Feats allows us to
+  get much more predictable character
+  outcomes, which make for a better high level game experience. This also
   allows players to improve both their combat and non-combat capabilities
   without feeling that they are hurting their character's potential.
 - **Feat categories**: It is a natural thing for players to experiment with
@@ -873,23 +847,19 @@ Each Feat Slot can be used to gain a Feat with a level equal or lower to that
   given character will only be able to have two or three of them at once.
 - **No support for previous Feats**: We wanted every Feat in the game to have
   a purpose, and to be playable for a significant percentage of character
-  builds. However, older rulebooks had thousands of Feats with wildly
+  builds. However, legacy rulebooks had thousands of Feats with wildly
   inconsistent quality and power level. We decided that starting from
   scratch and having a compact set of Feats that could realistically be
   tested and polished was the best option.
 - **No class/Origin requirements**: We wanted the total number of feats to
   be manageable for players, but also to maintain backwards compatibility
-  with previous Origins and Classes. Since older rulebooks have dozens of
+  with previous Origins and Classes. Since legacy rulebooks have dozens of
   Origins and Classes, and including Feats for only a subset of them would
   be considered unfair and introduce balance issues, we chose to remove
   racial feats altogether and replace Class Feats with options based on
   Class Role and Power Source, which fill a similar niche with much less effort
   and complexity. That said, we might reconsider this for future supplements.
  </div>
-
-
-TODO: REWORD RACIAL ABILITIES TO DECOUPLE THEM FROM LESSER FEATS. JUST GRANT SKILLS.
-
 
 
 ## Power selection

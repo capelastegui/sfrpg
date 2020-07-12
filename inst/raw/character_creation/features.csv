@@ -18,7 +18,7 @@ wiz_train,Wizard Training,"Wizard Training: Reduce by 1 the DC of the following 
 - Study and gather information from books (Concentration)"
 wiz_elem_rng,Elemental Range,"Gain +Dex to the range of your Ranged and Area attacks, and to the size of your Line attacks."
 wiz_flex,Wizard Flexibility,Gain an additional At-Will attack power.
-wiz_rit,Master Ritualist,"Gain Ritual Training or Summon Familiar as a bonus Adventuring Feat.<br>You learn an additional Heroic Ritual from each Ritual Training feat.<br>You learn an additional Paragon Ritual from each Paragon Ritual Training feat.<br>You learn an additional Epic Ritual from each Epic ritual Training feat."
+wiz_rit,Master Ritualist,"Gain Ritual Training or Summon Familiar as a bonus Adventure Feat.<br>You learn an additional Heroic Ritual from each Ritual Training feat.<br>You learn an additional Paragon Ritual from each Paragon Ritual Training feat.<br>You learn an additional Epic Ritual from each Epic ritual Training feat."
 wiz_abjur_shi,Abjurer`s Shield,"Add double your CON to your Hit Points.<br>Add your CON to your Reflex"
 wiz_summ_mas,Master Summoner,"You treat Body Cover granted to you by your summons and allies as Superior Cover.<br>Add triple your Charisma to the HP of your Summons."
 rog_sneak,Sneak Attack,"When attacking with Advantage with an Rogue Weapon, deal +1d4 damage per W. (Weapon damage modifiers apply to this damage)"
@@ -43,7 +43,7 @@ pri_train,Priest Training,"Reduce by 1 the DC of the following Skill Checks:
 - Heal the sick or wounded (Nature, Concentration)"
 pri_light_fhl,Faith Healing,"When you use a Healing power, add Cha to the Surge Value of any character spending a Surge.<br>When you heal a character to full health, that character gains CHA Shield Points."
 pri_shi,Shield of the Gods,"You and allies within 5 squares gain Resist (Crit Damage). When you or an ally within 5 squares is critically hit by an enemy, they roll a save - on a success, the attacking enemy is knocked Prone."
-pri_rit,Ritual Training,You gain Ritual Training as a bonus lesser feat.
+pri_rit,Ritual Training,You gain Ritual Training as a bonus Adventure Feat.
 pri_luck_bls,Fortune's Blessing,"At the start of each of your turns, randomly choose an ally that has not benefited from Fortune's Blessing on your previous turn. That ally gains +1 to Hit, Save, and all defenses until your next turn."
 bar_rstrike,Rage Strike,You gain the Rage Strike power.
 bar_train,Barbarian Training,"Reduce by 1 the DC of the following Skill Checks:

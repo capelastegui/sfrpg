@@ -6,9 +6,9 @@ df_feats_raw <- read_my_csv('feats')
 
 # Usage: htm_feats = df_feats_raw %>% dplyr::filter(Category=='my_Category') %>% get_htm_feat()
 ```
-## Level 1 Feats
+## Level 1 Combat Feats
 
-Players can choose level 1 feats from the following categories:
+Players can choose level 1 Combat feats from the following categories:
 
 - **Defense Focus**: Feats that improve a character's Arm while wearing certain armors, and provide a small additional bonus.
 - **Offense Focus**: Feats that improve a character's attacks with certain weapons or implements, and provide a small additional bonus.
@@ -86,7 +86,7 @@ df_feats_raw %>% dplyr::filter(Category=='Armor Training') %>% get_htm_feat() %>
 df_feats_raw %>% dplyr::filter(Category=='Weapon Training') %>% get_htm_feat() %>% cat()
 ```
 
-## Level 4 Feats{.newPage}
+## Level 4 Combat Feats{.newPage}
 
 ### Level 4 Defender Role Feats
 #### Category - Defender Grit
@@ -131,7 +131,7 @@ df_feats_raw %>% dplyr::filter(Category=='Role: Striker Agility') %>% get_htm_fe
 df_feats_raw %>% dplyr::filter(Category=='Role: Striker Deadliness') %>% get_htm_feat() %>% cat()
 ```
 
-## Level 11 Feats{.newPage}
+## Level 11 Combat Feats{.newPage}
 ### Category - Paragon Ability
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_feats_raw %>% dplyr::filter(Category=='Paragon Ability') %>% get_htm_feat() %>% cat()
@@ -160,7 +160,7 @@ df_feats_raw %>% dplyr::filter(Category=='Role: Leader Offense') %>% get_htm_fea
 df_feats_raw %>% dplyr::filter(Category=='Role: Striker Resource') %>% get_htm_feat() %>% cat()
 ```
 
-## Level 21 Feats{.newPage}
+## Level 21 Combat Feats{.newPage}
 ### Category - Epic Ability
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_feats_raw %>% dplyr::filter(Category=='Epic Ability') %>% get_htm_feat() %>% cat()
