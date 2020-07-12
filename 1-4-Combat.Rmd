@@ -386,7 +386,7 @@ Certain powers or effects allow one character to force an enemy to make an attac
 Certain powers or effects allow one character to force an enemy to make a move. Such movements are considered forced movement, and use the following rules:
 - Forced Movement can be caused by Push, Pull and Slide effects. In these cases, the amount of squares of forced movement is indicated in the effect causing the forced movement.
 - If a Push, Pull or Slide effect ends before the full distance is moved because the moved character collides with an obstacle or another character, each character involved in the collision takes 1d4 damage. This damage scales with the tier of the source of the forced movement, to 2d4 for Paragon effects for Paragon sources, and 4d4 for Epic sources.
-- Forced Movement can also be caused by effects that force the character to move in a particular direction. In this case, the amount of squares of forced movement depends on the character's speed unless otherwise stated, and is affected by any status effects or other conditions that restrict movement.
+- Forced Movement can also be caused by effects that force the character to take an action to move in a particular direction. In this case, the amount of squares of forced movement depends on the character's speed unless otherwise stated, and is affected by any status effects or other conditions that restrict movement.
 - Forced movement never triggers opportunity attacks or other character powers that would trigger on movement. Traps and hazardous terrain trigger normally.
 
 ### Push
@@ -431,6 +431,18 @@ Slide a single unit, at range (1) and in melee (2)
 Slide multiple units, at range (1) and in melee (2)
 
 ![Slide](figures/C_4_2_Slide2.png)
+
+### Saving against Forced Movement
+
+Characters can use Forced Movement to get their opponents into a damaging area, or to crash them into a wall. This is considered fair game, and no saves are normally allowed. However, there is an exception to this: whenever forced movement would move a character off a cliff (or equivalent) and cause them to fall, that character is allowed to make a save to avoid the effect. The character takes a penalty to the save equal to the remaining squares of Forced Movement. On a successful save, the Forced Movement stops before the character is moved off the cliff, and the character is knocked prone.
+
+At the GM's discretion, PCs (but not monsters) can also benefit from this rule whenever Forced Movement would put them in a particularly deadly position, such as a pool of lava.
+
+<div class="tip">
+Example 1: A goblin is adjacent to a precipice. A PC uses an attack with Push 1 to try to make the goblin fall: the goblin can attempt a save without penalties to avoid this effect and become Prone instead.
+
+Example 2: A goblin is 1 square away from a precipice.  A PC uses an attack with Push 4 to try to make the goblin fall: the goblin can attempt a save to avoid this effect and become Prone instead. Since there are 4 squares of forced movement and 2 are spent to move the character over the precipice, the excess distance is 2 squares, and the goblin takes a -2 penalty to the save.
+</div>
 
 
 ## Combat Maneuvers
