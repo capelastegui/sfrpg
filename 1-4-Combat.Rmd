@@ -385,7 +385,7 @@ Certain powers or effects allow one character to force an enemy to make an attac
 
 Certain powers or effects allow one character to force an enemy to make a move. Such movements are considered forced movement, and use the following rules:
 - Forced Movement can be caused by Push, Pull and Slide effects. In these cases, the amount of squares of forced movement is indicated in the effect causing the forced movement.
-- If a Push, Pull or Slide effect ends before the full distance is moved because the moved character collides with an obstacle or another character, each character involved in the collision takes 1d4 damage. This damage scales with the tier of the source of the forced movement, to 2d4 for Paragon effects for Paragon sources, and 4d4 for Epic sources.
+- If a Push, Pull or Slide effect ends before the full distance is moved because the moved character collides with an obstacle or another character, each character involved in the collision takes Forced Movement Damage. This damage scales with the tier of the source of the forced movement as follows: 1d4 for Heroic sources,  2d4 for Paragon effects for Paragon sources, and 4d4 for Epic sources.
 - Forced Movement can also be caused by effects that force the character to take an action to move in a particular direction. In this case, the amount of squares of forced movement depends on the character's speed unless otherwise stated, and is affected by any status effects or other conditions that restrict movement.
 - Forced movement never triggers opportunity attacks or other character powers that would trigger on movement. Traps and hazardous terrain trigger normally.
 

@@ -13,6 +13,7 @@ Players can choose level 1 Combat feats from the following categories:
 - **Defense Focus**: Feats that improve a character's Arm while wearing certain armors, and provide a small additional bonus.
 - **Offense Focus**: Feats that improve a character's attacks with certain weapons or implements, and provide a small additional bonus.
 - **Toughness**: Feats that improve a character's HP, and provide a small additional bonus.
+- **Class Focus**: Feats that allow a character to pick a second class or specialize on their current class.
 
 Note that Offense Focus is the largest feat Category in the game and, due to its size, has been split into three parts for the sake of readability: 
 
@@ -55,6 +56,22 @@ df_feats_raw %>% dplyr::filter(Category=='Offense Focus: Implement') %>% get_htm
 df_feats_raw %>% dplyr::filter(Category=='Offense Focus: Flexible') %>% get_htm_feat() %>% cat()
 ```
 
+### Category - Class Focus{.newPage}
+```{r feat_class_focus, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Class Focus') %>% get_htm_feat() %>% cat()
+```
+
+When you pick a Class Focus feat, you gain Multiclass Options or Class Specialization Options. These are not regular feats, and cannot be gained any other way.
+
+### Multiclass Options{.newPage}
+```{r feat_multiclass, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Multiclass Option') %>% get_htm_feat() %>% cat()
+```
+
+### Class Specialization Options{.newPage}
+```{r feat_class_spec, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Class Specialization Option') %>% get_htm_feat() %>% cat()
+```
 
 
 ## Level 1 Optional Feats: Training {.newPage}
@@ -132,9 +149,14 @@ df_feats_raw %>% dplyr::filter(Category=='Role: Striker Deadliness') %>% get_htm
 ```
 
 ## Level 11 Combat Feats{.newPage}
-### Category - Paragon Ability
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_feats_raw %>% dplyr::filter(Category=='Paragon Ability') %>% get_htm_feat() %>% cat()
+### Category - Paragon Defense
+```{r paragon_def, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Paragon Defense') %>% get_htm_feat() %>% cat()
+```
+
+### Category - Paragon Resource
+```{r paragon_res, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Paragon Resource') %>% get_htm_feat() %>% cat()
 ```
 
 ### Category - Power Source
@@ -161,10 +183,6 @@ df_feats_raw %>% dplyr::filter(Category=='Role: Striker Resource') %>% get_htm_f
 ```
 
 ## Level 21 Combat Feats{.newPage}
-### Category - Epic Ability
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_feats_raw %>% dplyr::filter(Category=='Epic Ability') %>% get_htm_feat() %>% cat()
-```
 
 ### Category - Epic Might
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
