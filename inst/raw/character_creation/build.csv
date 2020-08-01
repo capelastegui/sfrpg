@@ -5,6 +5,11 @@ Fighter,Sellsword,class,ftr_sell
 Wizard,Elementalist,class,wiz_elemt
 Wizard,Abjurer,class,wiz_abjur
 Wizard,Summoner,class,wiz_summ
+Ranger,Ranger general rules,rules,rng_rules
+Ranger,Beastmaster,class,rng_bstm
+Ranger,Archer,class,rng_arch
+Ranger,Dual Weapon,class,rng_dual
+Ranger,Skirmisher,class,rng_skrm
 Rogue,Scoundrel,class,rog_scoun
 Rogue,Thug,class,rog_thug
 Rogue,Duelist,class,rog_duel

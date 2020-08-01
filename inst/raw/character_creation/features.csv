@@ -63,6 +63,15 @@ rng_train,Ranger Training,"Reduce by 1 the DC of the following Skill Checks:
 - Social checks (Authority, Diplomacy) and knowledge checks (Nature) related to natural and magical beasts.
 - Track enemies (Perception, Nature) and avoid enemy tracking (Stealth)
 - Hunting (Nature)"
+rng_bstcom,Beast Companion,You gain a Beast Companion that fights alongside you. See the Beast Companion section for detailed rules and companion options.
+rng_bststk,Beast Strike,You gain the Beast Strike power.
+rng_bstrec,Beast Recovery,"Whenever you heal a surge, your companion heals a surge for free. When you take a Short, Long or Extended Rest, your companion heals to full HP."
+rng_ohstk,Off-Hand Strike,You gain the Off-Hand Strike power.
+rng_rngmst,Ranged Master,You gain +Wis damage with Ranged and Area attacks.
+rng_prmsht,Prime Shot,"On ranged attacks against an enemy closest to you, if the target is not adjacent to you, gain +1 Hit, +1 Crit Range."
+rng_skmmst,Master Skirmisher,"You gain +Wis damage with Weapon attacks."
+rng_runmom,Runner's Momentum,"While in combat, at the end of each turn, if you are 3 or more squares away from your initial position, you gain +1 to Hit and Defenses until end of next turn. If this bonus was already active, it increases to +2."
+rng_skmeva,Skirmisher's evasion,"You gain the Skirmisher's Evasion power."
 dru_train,Druid Training,"Reduce by 1 the DC of the following Skill Checks:
 - Social checks (Authority, Diplomacy) and knowledge checks (Nature) related to Plants, Primal powers and spirits"
 pal_train,Paladin Training,"Reduce by 1 the DC of the following Skill Checks:

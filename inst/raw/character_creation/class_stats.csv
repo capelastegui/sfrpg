@@ -2,9 +2,12 @@ Class,Build,Power Source,Role,Power Progression,HP,Stamina,Vitality,Morale,Magic
 Fighter,Guardian,Martial,Defender,Standard,High,6,2,2,1,1,2,0,1,Str,Con,4,1,1,1,,,,,1,1,,,,5,"All Basic, All Melee Martial",-,"Cloth, Leather, Hide, Chain, Scale, Light Shield, Heavy Shield",16
 Priest,Light,Divine,Support,Standard,Medium,7,1,2,1,1,1,0,1,Wis,Cha,4,,1,,1,,,1,,,1,,1,5,"Light Hammer, Mace, Quarterstaff",Symbol,"Cloth, Chain",12
 Priest,Luck,Divine,Support,Standard,Medium,7,1,2,1,1,1,0,1,Wis,Cha,4,,1,,1,,,1,,,1,,1,5,"Light Hammer, Mace, Quarterstaff",Symbol,"Cloth, Chain",12
-Rogue,Scoundrel,Martial,Striker,Standard,Medium,6,1,3,1,1,0,2,0,Dex,Cha,5,1,1,,1,1,1,,,1,,1,1,8,"All Off-Hand, Short Bow",,"Cloth, Leather",13
-Wizard,Elementalist,Arcane,Controller,Standard,Medium,6,1,2,1,0,0,0,1,Int,Dex,4,,,,1,,1,1,1,,,1,,5,"Dagger, Quarterstaff","Staff, Wand, Rod, Orb, Tome",Cloth,11
-Ranger,Archer,Martial,Striker,Standard,Medium,6,1,3,1,0,1,1,0,Dex,Wis,4,1,,1,,1,,,,1,1,,,5,"All Basic, All Ranged Martial, All Off-Hand",,"Cloth, Leather",12
-Barbarian,Rager,Primal,Striker,Standard,High,6,1,2,1,0,2,0,0,Str,Con,4,1,1,1,,,,,,1,1,,,5,"All Basic, All Melee Martial",,"Cloth, Leather, Hide",13
+Rogue,Scoundrel,Martial,Striker,Standard,Medium,6,1,2,1,1,0,2,0,Dex,Cha,5,1,1,,1,1,1,,,1,,1,1,8,"All Off-Hand, Short Bow",,"Cloth, Leather",13
+Wizard,Elementalist,Arcane,Controller,Standard,Medium,6,1,2,2,0,0,0,1,Int,Dex,4,,,,1,,1,1,1,,,1,,5,"Dagger, Quarterstaff","Staff, Wand, Rod, Orb, Tome",Cloth,11
+Ranger,Archer,Martial,Striker,Standard,Medium,6,1,3,1,0,1,1,0,Dex,Wis,4,1,,1,,1,,,,1,1,,,5,"All Basic, All Ranged Martial, All Off-Hand Martial",,"Cloth, Leather",12
+Ranger,Beastmaster,Martial,Striker,Standard,Low,6,2,2,1,0,1,1,0,Dex,Wis or Con,4,1,,1,,1,,,,1,1,,,5,"All Basic, All 1-handed Martial, All Reach Martial, Short Bow, Light Crossbow, Longbow",,"Cloth, Leather",12
+Ranger,Dual Weapon,Martial,Striker,Standard,High,6,1,3,1,0,1,1,0,Dex,Wis,4,1,,1,,1,,,,1,1,,,5,"All Basic, All 1-handed Martial",,"Cloth, Leather, Hide",13
+Ranger,Skirmisher,Martial,Striker,Standard,Medium,6,1,3,1,0,1,1,0,Dex,Wis,4,1,,1,,1,,,,1,1,,,5,"All Basic, All 1-handed Martial, All Reach Martial, Short Bow, Light Crossbow, Longbow",,"Cloth, Leather, Hide",13
+Barbarian,Rager,Primal,Striker,Standard,High,6,1,3,1,0,2,0,0,Str,Con,4,1,1,1,,,,,,1,1,,,5,"All Basic, All Melee Martial",,"Cloth, Leather, Hide",13
 Warlord,Tactician,Martial,Support,Standard,Medium,7,1,2,1,0,1,0,1,Str,Int,4,,1,,,,,,1,1,,1,1,5,"All Basic, All Melee 1-hand, Longspear, Glaive, Halberd, Flail",,"Cloth, Leather, Hide, Chain, Light Shield",13
-Warlock,Shadow,Arcane,Controller,Standard,Medium,6,1,2,1,0,0,0,1,Cha,Dex,4,,,,1,1,1,1,,,,1,,5,All Basic,"Wand, Rod, Weapon Implement","Cloth, Leather",12
+Warlock,Shadow,Arcane,Controller,Standard,Medium,6,1,2,2,0,0,0,1,Cha,Dex,4,,,,1,1,1,1,,,,1,,5,All Basic,"Wand, Rod, Weapon Implement","Cloth, Leather",12

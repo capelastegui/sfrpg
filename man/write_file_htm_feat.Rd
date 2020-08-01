@@ -2,7 +2,7 @@
 % Please edit documentation in R/feat.R
 \name{write_file_htm_feat}
 \alias{write_file_htm_feat}
-\title{Title}
+\title{Write a feat table as an html file}
 \usage{
 write_file_htm_feat(htm_feat, dir_output, file_name)
 }
@@ -13,5 +13,5 @@ write_file_htm_feat(htm_feat, dir_output, file_name)
 
 }
 \description{
-Title
+Write a feat table as an html file
 }

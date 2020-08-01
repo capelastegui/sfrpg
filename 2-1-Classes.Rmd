@@ -64,6 +64,104 @@ df_class_build$htm_feature %>% cat()
 df_class_build$htm_power %>% cat()
 ```
 
+## Ranger{.newPage}
+### Ranger Beastmaster
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Ranger', 'Beastmaster')
+df_class_build$htm_stat   %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Beast Companions 
+
+Beastmaster Rangers have a beast companion that fights alongside them. When creating your character, choose one of the following options as your companion.
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_companions_raw <- read_my_csv('companions')
+df_companions <- df_companions_raw %>% 
+  dplyr::filter(category=='Ranger', subcategory=='Beastmaster') %>% 
+  dplyr::select (-category,-subcategory)
+
+df_companions %>% knitr::kable()
+```
+
+Most stats work the same way as for PCs or monsters - use defense stats and HP when the companion is attacked, and movement when the companion takes a move action. The following stats are unique to beast companions:
+
+- H: Beast hit bonus. Base bonus applied to hit rolls made by the companion.
+- B: Beast damage die. Damage die used in attack rolls made by the companion. An attack may roll multiple of these dice, and can apply additional bonus, e.g. 2B + Wis. 
+
+Whenever a companion trait of Beast attack asks you to use an ability modifier, use the ranger's abilities.
+
+Beast HP depend on the ranger's level, and are determined using the following table:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+get_df_hp_html_beast() %>% cat()
+```
+
+The ranger controls their companion's actions. Companions act in the same initiative turn as the ranger, and don't have their own pool of actions. Instead, they can act when the ranger spends an action, in the following ways:
+
+- When the ranger takes a Move Action, the companion can move its speed for free.
+- When the ranger uses Total Defense, the companion can do the same for free.
+- When the ranger uses an attack power with the Beast keyword, the companion can make attacks as part of that action.
+- The ranger gains the class feature power Beast Strike, which allows them to spend a Free Action to make the companion attack an enemy.
+- The companion has a melee basic attack, shown below. When an enemy provokes an opportunity attack from the companion, the ranger may spend a Free Reaction to have the companion make an opportunity attack. Both the ranger and the companion can make opportunity attacks the same turn.
+
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+l_power_id=c('rng_aw_bstmba','rng_fe_bststk')
+df_power_raw = get_df_power_from_sheet(l_power_id)
+htm_power = (df_power_raw %>% clean_df_power(character_sheet=TRUE))$htm_power
+htm_power %>% cat()
+```
+
+The companion has no Surge Value and no Stamina of its own. It can only Heal a Surge with the Beast Recovery class feature, using the ranger's surge value. 
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
+### Ranger Archer
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Ranger', 'Archer')
+df_class_build$htm_stat   %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
+### Ranger - Dual Weapon
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Ranger', 'Dual Weapon')
+df_class_build$htm_stat   %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
+### Ranger - Skirmisher
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Ranger', 'Skirmisher')
+df_class_build$htm_stat   %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
+
 ## Rogue{.newPage}
 ### Rogue Scoundrel
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}

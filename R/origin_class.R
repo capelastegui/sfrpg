@@ -52,7 +52,7 @@ add_p_action <- function(df_power) {
 
 # -- Data processing functions
 
-#' #' Read class power data from partial .csv tables
+#' Read class power data from partial .csv tables
 #'
 #' @return merged class power table, raw
 #' @export
@@ -70,7 +70,9 @@ read_df_power <- function(is_class=TRUE) {
   df_powers
 }
 
-
+#' clean class feature table
+#'
+#' @return clean class feature table
 #' @export
 clean_df_feature <- function(df_feature_raw, df_feature_tag=NULL) {
 
@@ -326,6 +328,9 @@ read_df_feature <- function(is_class=TRUE){
 }
 
 
+#' Get class feature table from character sheet input
+#'
+#' @return class power table
 #' @export
 get_df_feature_from_sheet <- function(
   l_feature_id, Class='sheet', Build='sheet'){
@@ -339,6 +344,9 @@ get_df_feature_from_sheet <- function(
 
 
 
+#' Get class power table from character sheet input
+#'
+#' @return class power table
 #' @export
 get_df_power_from_sheet <- function(
 l_power_id, Class='sheet', Build='sheet')

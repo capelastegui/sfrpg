@@ -2,16 +2,16 @@
 % Please edit documentation in R/feat.R
 \name{get_htm_feat}
 \alias{get_htm_feat}
-\title{Title}
+\title{convert feat table to html}
 \usage{
-get_htm_feat(df_feats = NULL)
+get_htm_feat(df_feat = NULL)
 }
 \arguments{
-\item{df_monster_race}{}
+\item{df_feat}{}
 }
 \value{
 
 }
 \description{
-Title
+convert feat table to html
 }

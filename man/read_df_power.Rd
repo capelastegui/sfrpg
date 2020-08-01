@@ -2,7 +2,7 @@
 % Please edit documentation in R/origin_class.R
 \name{read_df_power}
 \alias{read_df_power}
-\title{#' Read class power data from partial .csv tables}
+\title{Read class power data from partial .csv tables}
 \usage{
 read_df_power(is_class = TRUE)
 }
@@ -10,5 +10,5 @@ read_df_power(is_class = TRUE)
 merged class power table, raw
 }
 \description{
-#' Read class power data from partial .csv tables
+Read class power data from partial .csv tables
 }

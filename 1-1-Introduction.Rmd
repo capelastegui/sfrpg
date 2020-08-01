@@ -898,7 +898,7 @@ We can see the following elements in the power text block:
 - Power Level: Used in character creation for PCs
 - Usage Frequency: At-Will, Encounter, Daily or Recharge.
 - Keywords: Descriptive categories, like Weapon, Implement or Fire
-- Action Type: Standard, Move, Minor, Free or Triggered Action, or Reaction
+- Action Type: Standard, Move, Minor, Free, Reaction or Free Reaction
 - Action Trigger: Some powers are only triggered on a specific condition.
 - Range: Melee, Ranged, Close or Area
 - Attack Roll: Describes bonus to hit, targeted defense.

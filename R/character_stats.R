@@ -1,6 +1,5 @@
 #' Generate HP table for Player Characters
 #'
-#'
 #' @return DataFrame with HP and Surge Values per level
 #' @export
 get_df_hp <- function() {
@@ -23,7 +22,6 @@ get_df_hp <- function() {
 
 #' Generate HP table for Beast Companions
 #'
-#'
 #' @return DataFrame with HP per level
 #' @export
 get_df_hp_beast <- function() {
@@ -37,7 +35,6 @@ get_df_hp_beast <- function() {
 }
 
 #' Generate html with table for PC HP
-#'
 #'
 #' @return html table
 #' @export
@@ -55,7 +52,6 @@ get_df_hp_html <- function(df_hp=NULL) {
 }
 
 #' Generate html with table for Beast Companion HP
-#'
 #'
 #' @return html table
 #' @export

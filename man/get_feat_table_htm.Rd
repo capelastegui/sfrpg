@@ -2,16 +2,16 @@
 % Please edit documentation in R/feat.R
 \name{get_feat_table_htm}
 \alias{get_feat_table_htm}
-\title{Title}
+\title{add feat table div to feat html}
 \usage{
 get_feat_table_htm(htm_feat_table)
 }
 \arguments{
-\item{htm_monster}{}
+\item{htm_feat_table}{}
 }
 \value{
 
 }
 \description{
-Title
+add feat table div to feat html
 }

@@ -1,0 +1,5 @@
+category,subcategory,Name,Size,Movement,H,B,HP,Arm,For,Ref,Wil,Trait
+Ranger,Beastmaster,Predator,Medium,6,4,1d8,Medium,13,12,14,12,Finishing Move:+Wis damage against Prone targets.
+Ranger,Beastmaster,Raptor,Small,"3, Fly Speed 7",5,1d6,Medium,14,11,14,13,"Raptor’s Guidance: When the companion hits an enemy, you gain +Wis damage on your next attack against the target this turn."
+Ranger,Beastmaster,Bruiser,Medium,5,3,1d8,High,12,14,11,12,"Bruiser’s Opportunity: On Opportunity Attacks, gain +Con to Hit and +Con damage."
+

@@ -1,6 +1,6 @@
-#' Title
+#' convert feat table to html
 #'
-#' @param df_monster_race
+#' @param df_feat
 #'
 #' @return
 #' @export
@@ -20,9 +20,9 @@ get_htm_feat <- function(df_feat=NULL){
                       df.names=setdiff(names(df_feat), c('Summary')))
 }
 
-#' Title
+#' Add feat list div to feat html
 #'
-#' @param htm_monster
+#' @param htm_feat
 #'
 #' @return
 #' @export
@@ -30,9 +30,9 @@ get_feat_list_htm <- function(htm_feat){
     paste0('<div class="Feat-List">',htm_feat,'</div>')
 }
 
-#' Title
+#' add feat table div to feat html
 #'
-#' @param htm_monster
+#' @param htm_feat_table
 #'
 #' @return
 #' @export
@@ -42,9 +42,9 @@ get_feat_table_htm <- function(htm_feat_table){
 
 
 
-#' Title
+#' Write a feat table as an html file
 #'
-#' @param htm_monster
+#' @param htm_feat
 #' @param dir_output
 #' @param file_name
 #'

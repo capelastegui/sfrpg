@@ -25,6 +25,7 @@ Imports:
     magrittr,
     tibble,
     forcats,
+    knitr,
     kableExtra
 Remotes:
     rstudio/bookdown
