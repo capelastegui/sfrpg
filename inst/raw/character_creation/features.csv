@@ -45,7 +45,6 @@ pri_light_fhl,Faith Healing,"When you use a Healing power, add Cha to the Surge 
 pri_shi,Shield of the Gods,"You and allies within 5 squares gain Resist (Crit Damage). When you or an ally within 5 squares is critically hit by an enemy, they roll a save - on a success, the attacking enemy is knocked Prone."
 pri_rit,Ritual Training,You gain Ritual Training as a bonus Adventure Feat.
 pri_luck_bls,Fortune's Blessing,"At the start of each of your turns, randomly choose an ally that has not benefited from Fortune's Blessing on your previous turn. That ally gains +1 to Hit, Save, and all defenses until your next turn."
-bar_rstrike,Rage Strike,You gain the Rage Strike power.
 bar_train,Barbarian Training,"Reduce by 1 the DC of the following Skill Checks:
 - Social checks (Authority, Diplomacy) and knowledge checks (Perception, Lore) related to tribal organization
 - Break doors, chests, objects (Athletics)

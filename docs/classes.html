@@ -408,7 +408,7 @@
 Attack - Encounter - <i>Implement</i>
 </p>
 <p>
-<b><i>Triggered Action</i></b> - <i> (Trigger: you hit with an at-will Implement attack)</i> - targets an enemy hit by the triggering attack -
+<b><i>Free Action (Interrupt)</i></b> - <i> (Trigger: you hit with an at-will Implement attack)</i> - targets an enemy hit by the triggering attack -
 </p>
 <p>
 <b>Effect</b>: Against the target, the triggering attack deals an extra 1d8 and gains Push 2.
@@ -425,7 +425,7 @@ Attack - Encounter - <i>Implement</i>
 Attack - Encounter - <i>Implement, Divine</i>
 </p>
 <p>
-<b><i>Triggered Action</i></b> - <i> (Trigger: you hit with an at-will Divine attack)</i> - targets an enemy hit by the triggering attack -
+<b><i>Free Action (Interrupt)</i></b> - <i> (Trigger: you hit with an at-will Divine attack)</i> - targets an enemy hit by the triggering attack -
 </p>
 <p>
 <b>Effect</b>: Against the target, the triggering attack deals an extra 1d6. You or an ally adjacent to you heal 1d6, or gain 1d6 Shield Points.
@@ -442,7 +442,7 @@ Attack - Encounter - <i>Implement, Divine</i>
 Attack - Encounter - <i>Weapon</i>
 </p>
 <p>
-<b><i>Triggered Action</i></b> - <i> (Trigger: you hit with an at-will Weapon attack)</i> - targets an enemy hit by the triggering attack -
+<b><i>Free Action (Interrupt)</i></b> - <i> (Trigger: you hit with an at-will Weapon attack)</i> - targets an enemy hit by the triggering attack -
 </p>
 <p>
 <b>Effect</b>: Against the target, the triggering attack deals an extra 1W. You shift 2.
@@ -459,7 +459,7 @@ Attack - Encounter - <i>Weapon</i>
 Attack - Encounter - <i>Weapon</i>
 </p>
 <p>
-<b><i>Triggered Action</i></b> - <i> (Trigger: you hit with an at-will Weapon attack)</i> - targets an enemy hit by the triggering attack -
+<b><i>Free Action (Interrupt)</i></b> - <i> (Trigger: you hit with an at-will Weapon attack)</i> - targets an enemy hit by the triggering attack -
 </p>
 <p>
 <b>Effect</b>: Against the target, the triggering attack deals an extra 1W and gains Push 2.
@@ -473,10 +473,10 @@ Attack - Encounter - <i>Weapon</i>
 <span class="red large"><strong>Sliding Spell - Universal 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Arcane</i>
+Attack - Encounter - <i>Arcane, Implement</i>
 </p>
 <p>
-<b><i>Triggered Action</i></b> - <i> (Trigger: you hit with an at-will Arcane attack)</i> - targets an enemy hit by the triggering attack -
+<b><i>Free Action (Interrupt)</i></b> - <i> (Trigger: you hit with an at-will Arcane attack)</i> - targets an enemy hit by the triggering attack -
 </p>
 <p>
 <b>Effect</b>: Against the target, the triggering attack deals an extra 1d6 and gains Slide 2.
@@ -696,44 +696,55 @@ Expected Armor
 </tr>
 </tbody>
 </table>
-<div id="class-powers-1" class="section level4 newPage">
-<h4><span class="header-section-number">8.2.1.1</span> Class Powers</h4>
-<div class="Power-List">
-<div class="Power">
+<div class="Feature">
 <p>
-<span class="red large"><strong>Rage Strike - Barbarian Feature 1</strong></span>
-</p>
-<p>
-Attack - Encounter - <i>Non-Fatiguing</i>
-</p>
-<p>
-<b>Melee</b> - Str vs Arm
-</p>
-<p>
-<b>Hit</b>: 3W+Str.
-</p>
-<p>
-<b>Miss</b>: Half Damage
-</p>
-<p>
-Special: Use only while raging.
-</p>
-<p>
-<span class="Power-Upgrade">Rage Level 15: Increase Hit damage to 5W+Str<br>Rage Level 25: Increase Hit damage to 7W+Str</span>
+<b>Savage Attack</b>: Your attacks deal +Constitution damage.
 </p>
 </div>
+<div class="Feature">
+<p>
+<b>Raging Resilience</b>: You add your Constitution to your Surge Value.
+</p>
+</div>
+<div class="Feature">
+<p>
+<b>Barbarian Charge</b>: You do not become Hindered due to charging.<br>When you charge an enemy within 4 or more squares, you gain Advantage, and you can use a Barbarian melee attack instead of a melee Basic attack.
+</p>
+</div>
+<div class="Feature">
+<p>
+<b>Barbarian Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and knowledge checks (Perception, Lore) related to tribal organization<br>- Break doors, chests, objects (Athletics)<br>- Find food and shelter in the wilderness (Endurance)
+</p>
+</div>
+<div id="rage-strike" class="section level4">
+<h4><span class="header-section-number">8.2.1.1</span> Rage Strike</h4>
+<p>Some Barbarian daily attack powers have the Rage keyword. These powers have an effect that grants
+the barbarian an ability that lasts for the rest of the encounter, and a secondary attack that
+can be used immediately or on a later turn that encounter. This secondary attack is named a
+Rage Strike, is not subject to any cooldown, and can be used by spending a Standard Action.
+While under the effect of a Rage power, the barbarian is Raging. Some powers gain additional
+abilities while raging.</p>
+<p>Note: A character that somehow manages to use two Rage powers in the same encounter (despite the
+daily attack cooldown) benefits from the effects of both powers.</p>
+<p>Example: Grok the Barbarian spends a Free Action on their turn to use Blood Rage. They can then
+spend a Standard Action immediately in order to use that power’s Rage Strike or do so on a later
+turn (for example, after an ally has flanked their target).</p>
+</div>
+<div id="class-powers-1" class="section level4 newPage">
+<h4><span class="header-section-number">8.2.1.2</span> Class Powers</h4>
+<div class="Power-List">
 <div class="Power">
 <p>
 <span class="green large"><strong>Invigorating Strike - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Primal</i>
+Attack - <i>Primal, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: W+Str, and you gain Con Shield Points. If you already had Shield Points, deal +Con extra damage.
+<b>Hit</b>: W+Str, and you gain Con SP. If you are raging, heal HP equal to half the SP gained.
 </p>
 <p>
 <span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
@@ -744,13 +755,36 @@ Attack - <i>Weapon, Primal</i>
 <span class="green large"><strong>Mighty Shove - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Primal</i>
+Attack - <i>Primal, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: W+Str. Push 2, and you move 2 to a square closer to the target.
+<b>Hit</b>: W+Str. Push 2. If you are raging, Shift 2.
+</p>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="green large"><strong>Wild Charge - Barbarian 1</strong></span>
+</p>
+<p>
+Attack - <i>Primal, Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs Arm
+</p>
+<p>
+<b>Effect</b>: When you use this power as part of a charge,gain +2 Movement until end of turn.<br>If you are raging, you also gain Cover and Resist(Reactions) until end of turn.
+</p>
+<p>
+<b>Hit</b>: W+Str.
+</p>
+<p>
+<b>Miss</b>: Con damage.
 </p>
 <p>
 <span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
@@ -761,7 +795,7 @@ Attack - <i>Weapon, Primal</i>
 <span class="red large"><strong>All-In - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Primal</i>
+Attack - Encounter - <i>Primal, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -784,13 +818,19 @@ Attack - Encounter - <i>Weapon, Primal</i>
 <span class="red large"><strong>Blade Whirlwind - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Primal</i>
+Attack - Encounter - <i>Primal, Weapon</i>
 </p>
 <p>
 <b>Close Burst 1</b> - Str vs Ref
 </p>
 <p>
 <b>Hit</b>: W+Con, and Push 1
+</p>
+<p>
+<b>Effect</b>: Dazed until end of turn.
+</p>
+<p>
+Special: You can use this power as part of a charge.
 </p>
 <p>
 <span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W+Con<br>Upgrade 23: Increase Hit damage to 3W+Con</span>
@@ -801,13 +841,13 @@ Attack - Encounter - <i>Weapon, Primal</i>
 <span class="red large"><strong>No Pain - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Primal</i>
+Attack - Encounter - <i>Primal, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: 2W+Str. You may lose a Surge and gain Shield Points equal to your Surge Value.
+<b>Hit</b>: 2W+Str. You may lose 1 Vitality and gain Shield Points equal to your Surge Value.
 </p>
 <p>
 <span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
@@ -818,13 +858,19 @@ Attack - Encounter - <i>Weapon, Primal</i>
 <span class="gray large"><strong>Blood Rage - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Rage</i>
+Attack - Daily - <i>Primal, Rage, Weapon</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Personal</b> -
+<b><i>Free Action</i></b> - <b>Personal</b> -
 </p>
 <p>
-<b>Effect</b>: Until end of the encounter, you gain Lesser Resist All while Bloodied, and Bloodied enemies gain Lesser Vulnerable All against your attacks.
+<b>Effect</b>: Until end of the encounter, you gain Partial Resist (All) while Bloodied, and Bloodied enemies gain Partial Vulnerable (Your attacks).
+</p>
+<p>
+<b>Secondary Attack:</b> Gain the following Rage Strike:<br>Melee Weapon, Str vs Arm<br>Hit:3W+Str. Miss: Half Damage
+</p>
+<p>
+<span class="Power-Upgrade">Level 11: 5W+Str.<br>Level 21: 7W+Str</span>
 </p>
 </div>
 <div class="Power">
@@ -832,13 +878,19 @@ Attack - Daily - <i>Rage</i>
 <span class="gray large"><strong>Crowd Rage - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Rage</i>
+Attack - Daily - <i>Primal, Rage, Weapon</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Personal</b> -
+<b><i>Free Action</i></b> - <b>Personal</b> -
 </p>
 <p>
 <b>Effect</b>: Until end of the encounter, you cannot be flanked and, when you hit an enemy, you can deal Con damage to up to 2 other enemies adjacent to you.
+</p>
+<p>
+<b>Secondary Attack:</b> Gain the following Rage Strike:<br>Close Burst 1, Str vs Ref<br>Hit:2W+Str.
+</p>
+<p>
+<span class="Power-Upgrade">Level 11: 3W+Str.<br>Level 21: 4W+Str</span>
 </p>
 </div>
 <div class="Power">
@@ -846,13 +898,19 @@ Attack - Daily - <i>Rage</i>
 <span class="gray large"><strong>Stubborn Rage - Barbarian 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Rage</i>
+Attack - Daily - <i>Primal, Rage, Weapon</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Personal</b> -
+<b><i>Free Action</i></b> - <b>Personal</b> -
 </p>
 <p>
-<b>Effect</b>: Roll a save to ignore a Condition this turn. Until end of the encounter, at the start of each turn you roll a save to ignore a Condition that turn.
+<b>Effect</b>: Roll a save to downgrade a Status Effect this turn. Until end of the encounter, at the start of each turn you can roll a save to downgrade a Status Effect that turn.
+</p>
+<p>
+<b>Secondary Attack:</b> Gain the following Rage Strike:<br><br>Melee Weapon, Str vs Arm<br>Hit: 3W+Str<br>Miss: Half Damage.
+</p>
+<p>
+<span class="Power-Upgrade">Level 11: 5W+Str.<br>Level 21: 7W+Str</span>
 </p>
 </div>
 <div class="Power">
@@ -860,7 +918,7 @@ Attack - Daily - <i>Rage</i>
 <span class="red large"><strong>Battle Vigor - Barbarian 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Primal</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
@@ -874,13 +932,13 @@ Utility - Encounter
 <span class="red large"><strong>Break Free - Barbarian 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Primal</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
 </p>
 <p>
-<b>Effect</b>: Roll a save to end any of the following Conditions on you: Slowed, Immobilized, Restrained, Grabbed, Prone, Taunted.
+<b>Effect</b>: Roll a save to end any of the following Status Effects on you: Slowed, Immobilized, Restrained, Grabbed, Prone, Taunted.
 </p>
 </div>
 <div class="Power">
@@ -888,7 +946,7 @@ Utility - Encounter
 <span class="red large"><strong>Challenge Accepted - Barbarian 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Primal</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Melee</b> - targets an enemy Taunting you or that has Bloodied you this encounter -
@@ -1124,7 +1182,7 @@ Utility
 <span class="green large"><strong>Cleave - Fighter 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Martial</i>
+Attack - <i>Martial, Weapon, Martial</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -1141,7 +1199,7 @@ Attack - <i>Weapon, Martial</i>
 <span class="green large"><strong>Shield Bash - Fighter 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Shield</i>
+Attack - <i>Martial, Weapon, Shield</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -1158,7 +1216,7 @@ Attack - <i>Weapon, Shield</i>
 <span class="red large"><strong>Hamstring - Fighter 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Martial</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -1175,7 +1233,7 @@ Attack - Encounter - <i>Weapon, Martial</i>
 <span class="red large"><strong>Storm of blades - Fighter 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Martial</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Close Burst 1</b> - Str vs Arm
@@ -1192,7 +1250,7 @@ Attack - Encounter - <i>Weapon, Martial</i>
 <span class="red large"><strong>Stunning Strike - Fighter 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Martial</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs For
@@ -1209,7 +1267,7 @@ Attack - Encounter - <i>Weapon, Martial</i>
 <span class="gray large"><strong>Blade Dance - Fighter 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Stance</i>
+Attack - Daily - <i>Martial, Weapon, Stance</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
@@ -1226,7 +1284,7 @@ Attack - Daily - <i>Weapon, Stance</i>
 <span class="gray large"><strong>Brutal Strike - Fighter 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Reliable</i>
+Attack - Daily - <i>Martial, Weapon, Reliable</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -1243,7 +1301,7 @@ Attack - Daily - <i>Weapon, Reliable</i>
 <span class="gray large"><strong>Comeback Strike - Fighter 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Martial</i>
+Attack - Daily - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -1255,7 +1313,7 @@ Attack - Daily - <i>Weapon, Martial</i>
 <b>Miss</b>: Half Damage
 </p>
 <p>
-<b>Effect</b>: Spend a surge and double the amount healed.
+<b>Effect</b>: Heal a surge and double the amount healed.
 </p>
 <p>
 <span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+Str</span>
@@ -1266,13 +1324,13 @@ Attack - Daily - <i>Weapon, Martial</i>
 <span class="red large"><strong>Find Opening - Fighter 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Melee</b> -
+<i> (Trigger: Minor Action)</i> - Melee -
 </p>
 <p>
-<b>Effect</b>: Until end of your next turn, your attacks against the target gain Advantage and Pierce Resist
+Until end of your next turn, your attacks against the target gain Advantage and Pierce Resist
 </p>
 </div>
 <div class="Power">
@@ -1280,13 +1338,13 @@ Utility - Encounter
 <span class="red large"><strong>Grit - Fighter 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Personal</b> -
+<i> (Trigger: Minor Action)</i> - Personal -
 </p>
 <p>
-<b>Effect</b>: Roll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.
+Roll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.
 </p>
 </div>
 <div class="Power">
@@ -1294,7 +1352,7 @@ Utility - Encounter
 <span class="red large"><strong>Shield Wall - Fighter 2</strong></span>
 </p>
 <p>
-Utility - Encounter - <i>Shield</i>
+Utility - Encounter - <i>Martial, Shield</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
@@ -1516,16 +1574,16 @@ Expected Armor
 <span class="red large"><strong>Healing Word - Priest Feature</strong></span>
 </p>
 <p>
-Utility - Encounter x2 - <i>Healing, Non-Provoking</i>
+Utility - Encounter x2 - <i>Divine, Healing</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Ranged 5</b> - targets an ally -
+<b><i>Minor Action</i></b> - <b>Ranged 5 (safe)</b> - targets an ally -
 </p>
 <p>
-<b>Effect</b>: The target spends a Surge, and heals +1d6
+<b>Effect</b>: The target heals a Surge + 1d6.
 </p>
 <p>
-<span class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</span>
+<span class="Power-Upgrade">Level 11: Surge +2d6<br>Level 21: Surge +3d6</span>
 </p>
 </div>
 <div class="Power">
@@ -1533,7 +1591,7 @@ Utility - Encounter x2 - <i>Healing, Non-Provoking</i>
 <span class="green large"><strong>Guiding Light - Priest 1</strong></span>
 </p>
 <p>
-Attack - <i>Implement, Divine</i>
+Attack - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Ranged 6</b> - Wis vs Ref
@@ -1550,7 +1608,7 @@ Attack - <i>Implement, Divine</i>
 <span class="green large"><strong>Healing Light - Priest 1</strong></span>
 </p>
 <p>
-Attack - <i>Implement, Divine</i>
+Attack - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Ranged 6</b> - Wis vs Ref
@@ -1567,7 +1625,7 @@ Attack - <i>Implement, Divine</i>
 <span class="red large"><strong>Blinding Light - Priest 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Divine</i>
+Attack - Encounter - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Ranged 6</b> - Wis vs Ref
@@ -1584,7 +1642,7 @@ Attack - Encounter - <i>Implement, Divine</i>
 <span class="red large"><strong>Dazzling Burst - Priest 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Divine</i>
+Attack - Encounter - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Area 6 Burst 2</b> - targets enemies - Wis vs Wil
@@ -1601,7 +1659,7 @@ Attack - Encounter - <i>Implement, Divine</i>
 <span class="red large"><strong>Restoring Beam - Priest 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Divine</i>
+Attack - Encounter - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Close Line 8</b> - targets enemies - Wis vs Ref
@@ -1644,7 +1702,7 @@ Sustain Minor: The zone persists until end of your next turn. Make a Secondary A
 <span class="gray large"><strong>Heroism - Priest 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Implement, Divine</i>
+Attack - Daily - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Melee</b> - targets an ally -
@@ -1695,7 +1753,7 @@ Utility - Encounter - <i>Divine</i>
 <span class="red large"><strong>Saving Grace - Priest 2</strong></span>
 </p>
 <p>
-Utility - Encounter - <i>Non-Provoking</i>
+Utility - Encounter - <i>Divine</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Ranged 6 (safe)</b> - targets you or an ally -
@@ -1928,16 +1986,16 @@ Expected Armor
 <span class="red large"><strong>Healing Word - Priest Feature</strong></span>
 </p>
 <p>
-Utility - Encounter x2 - <i>Healing, Non-Provoking</i>
+Utility - Encounter x2 - <i>Divine, Healing</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Ranged 5</b> - targets an ally -
+<b><i>Minor Action</i></b> - <b>Ranged 5 (safe)</b> - targets an ally -
 </p>
 <p>
-<b>Effect</b>: The target spends a Surge, and heals +1d6
+<b>Effect</b>: The target heals a Surge + 1d6.
 </p>
 <p>
-<span class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</span>
+<span class="Power-Upgrade">Level 11: Surge +2d6<br>Level 21: Surge +3d6</span>
 </p>
 </div>
 <div class="Power">
@@ -1982,7 +2040,7 @@ Attack - <i>Implement, Lightning</i>
 <span class="green large"><strong>Shield of Chance - Priest 1</strong></span>
 </p>
 <p>
-Attack - <i>Implement, Divine</i>
+Attack - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Ranged 6</b> - Wis vs Arm
@@ -2002,7 +2060,7 @@ Attack - <i>Implement, Divine</i>
 <span class="red large"><strong>Blinding Light - Priest 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Divine</i>
+Attack - Encounter - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Ranged 6</b> - Wis vs Ref
@@ -2019,7 +2077,7 @@ Attack - Encounter - <i>Implement, Divine</i>
 <span class="red large"><strong>Dazzling Burst - Priest 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Divine</i>
+Attack - Encounter - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Area 6 Burst 2</b> - targets enemies - Wis vs Wil
@@ -2036,7 +2094,7 @@ Attack - Encounter - <i>Implement, Divine</i>
 <span class="red large"><strong>Restoring Beam - Priest 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Divine</i>
+Attack - Encounter - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Close Line 8</b> - targets enemies - Wis vs Ref
@@ -2079,7 +2137,7 @@ Sustain Minor: The zone persists until end of your next turn. Make a Secondary A
 <span class="gray large"><strong>Heroism - Priest 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Implement, Divine</i>
+Attack - Daily - <i>Divine, Implement</i>
 </p>
 <p>
 <b>Melee</b> - targets an ally -
@@ -2130,7 +2188,7 @@ Utility - Encounter - <i>Divine</i>
 <span class="red large"><strong>Saving Grace - Priest 2</strong></span>
 </p>
 <p>
-Utility - Encounter - <i>Non-Provoking</i>
+Utility - Encounter - <i>Divine</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Ranged 6 (safe)</b> - targets you or an ally -
@@ -2781,7 +2839,7 @@ High HP
 <span class="green large"><strong>Beast Strike - Ranger Feature 1</strong></span>
 </p>
 <p>
-Attack - <i>Beast</i>
+Attack - <i>Primal, Beast</i>
 </p>
 <p>
 <b><i>Free Action</i></b> - <b>Melee Beast</b> - H vs Arm.
@@ -2795,7 +2853,7 @@ Attack - <i>Beast</i>
 <span class="green large"><strong>Beast Basic Attack - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Beast</i>
+Attack - <i>Primal, Beast</i>
 </p>
 <p>
 <b>Melee Beast</b> - H vs Arm.
@@ -2815,7 +2873,7 @@ Attack - <i>Beast</i>
 <span class="green large"><strong>Beast Strike - Ranger Feature 1</strong></span>
 </p>
 <p>
-Attack - <i>Beast</i>
+Attack - <i>Primal, Beast</i>
 </p>
 <p>
 <b><i>Free Action</i></b> - <b>Melee Beast</b> - H vs Arm.
@@ -2832,7 +2890,7 @@ Attack - <i>Beast</i>
 <span class="green large"><strong>Bear Assault - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm.
@@ -2852,7 +2910,7 @@ Attack - <i>Weapon</i>
 <span class="green large"><strong>Combined Advance - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm.
@@ -2872,7 +2930,7 @@ Attack - <i>Weapon</i>
 <span class="green large"><strong>Combined Tactics - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs For.
@@ -2892,7 +2950,7 @@ Attack - <i>Weapon</i>
 <span class="green large"><strong>Distracting Strike - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Wil.
@@ -2912,7 +2970,7 @@ Attack - <i>Weapon</i>
 <span class="green large"><strong>Double Taunt - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm.
@@ -2932,7 +2990,7 @@ Attack - <i>Weapon</i>
 <span class="green large"><strong>Wolf Pack Strike - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm.
@@ -2952,7 +3010,7 @@ Attack - <i>Weapon</i>
 <span class="red large"><strong>Escalating Assault - Ranger 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm
@@ -2972,7 +3030,7 @@ Attack - Encounter - <i>Weapon</i>
 <span class="red large"><strong>Fang Burst - Ranger 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Beast</i>
+Attack - Encounter - <i>Primal, Weapon, Beast</i>
 </p>
 <p>
 <b>Close Burst 1</b> - Dex vs Ref
@@ -2992,7 +3050,7 @@ Attack - Encounter - <i>Weapon, Beast</i>
 <span class="red large"><strong>Go for the Eyes! - Ranger 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm
@@ -3012,7 +3070,7 @@ Attack - Encounter - <i>Weapon</i>
 <span class="gray large"><strong>Blade and Fang - Ranger 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Beast</i>
+Attack - Daily - <i>Primal, Weapon, Beast</i>
 </p>
 <p>
 <b>Close Line 6 (enemies in line)</b> - Dex vs Ref
@@ -3035,7 +3093,7 @@ Attack - Daily - <i>Weapon, Beast</i>
 <span class="gray large"><strong>Giant Growth - Ranger 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Beast</i>
+Attack - Daily - <i>Primal, Beast</i>
 </p>
 <p>
 <b>Melee (Beast)</b> - Dex vs Arm
@@ -3058,7 +3116,7 @@ Attack - Daily - <i>Beast</i>
 <span class="gray large"><strong>Protect the Companion - Ranger 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Beast</i>
+Attack - Daily - <i>Primal, Beast</i>
 </p>
 <p>
 <b>Melee (Beast)</b> - Dex vs Arm
@@ -3081,7 +3139,7 @@ Attack - Daily - <i>Beast</i>
 <span class="red large"><strong>Close Formation - Ranger 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
@@ -3095,7 +3153,7 @@ Utility - Encounter
 <span class="red large"><strong>Companion Recovery - Ranger 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Primal</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Melee 1</b> - your companion -
@@ -3109,7 +3167,7 @@ Utility - Encounter
 <span class="red large"><strong>Synchronized Step - Ranger 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
@@ -3317,7 +3375,7 @@ Expected Armor
 <span class="green large"><strong>Combined Tactics - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs For.
@@ -3337,7 +3395,7 @@ Attack - <i>Weapon</i>
 <span class="green large"><strong>Distracting Strike - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Wil.
@@ -3546,7 +3604,7 @@ Expected Armor
 <span class="green large"><strong>Off-Hand Strike - Ranger Feature 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Off-Hand</i>
+Attack - <i>Martial, Weapon, Off-Hand</i>
 </p>
 <p>
 <b><i>Free Action</i></b> - <b>Melee</b> - Dex -2 vs Arm.
@@ -3563,7 +3621,7 @@ Attack - <i>Weapon, Off-Hand</i>
 <span class="green large"><strong>Double Taunt - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm.
@@ -3583,7 +3641,7 @@ Attack - <i>Weapon</i>
 <span class="green large"><strong>Wolf Pack Strike - Ranger 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm.
@@ -3802,7 +3860,7 @@ Expected Armor
 <span class="green large"><strong>Skirmisher’s Evasion - Ranger Feature 1</strong></span>
 </p>
 <p>
-Utility
+Utility - <i>Martial</i>
 </p>
 <p>
 <b><i>Free Reaction</i></b> - <i> (Trigger: An enemy enters an adjacent square.)</i> - <b>Melee Weapon</b> - Targets triggering enemy -
@@ -4018,7 +4076,7 @@ Expected Armor
 <span class="green large"><strong>Piercing Strike - Rogue 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Light Weapon</i>
+Attack - <i>Marital, Weapon, Light Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Ref, +2 if adjacent to the target.
@@ -4035,7 +4093,7 @@ Attack - <i>Weapon, Light Weapon</i>
 <span class="green large"><strong>Setup Strike - Rogue 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Light Weapon</i>
+Attack - <i>Martial, Weapon, Light Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm
@@ -4058,7 +4116,7 @@ Attack - <i>Weapon, Light Weapon</i>
 <span class="red large"><strong>Expose Weakness - Rogue 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Light Weapon</i>
+Attack - Encounter - <i>Martial, Weapon, Rogue Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm
@@ -4078,7 +4136,7 @@ Attack - Encounter - <i>Weapon, Light Weapon</i>
 <span class="red large"><strong>King’s Castle - Rogue 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Light Weapon</i>
+Attack - Encounter - <i>Martial, Weapon, Rogue Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex +2 vs Wil
@@ -4098,7 +4156,7 @@ Attack - Encounter - <i>Weapon, Light Weapon</i>
 <span class="red large"><strong>Stay Down - Rogue 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Light Weapon</i>
+Attack - Encounter - <i>Martial, Weapon, Rogue Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm
@@ -4115,7 +4173,7 @@ Attack - Encounter - <i>Weapon, Light Weapon</i>
 <span class="gray large"><strong>Blinding Trick - Rogue 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Light Weapon</i>
+Attack - Daily - <i>Martial, Weapon, Rogue Weapon</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs For
@@ -4141,7 +4199,7 @@ Attack - Daily - <i>Weapon, Light Weapon</i>
 <span class="gray large"><strong>Open Wounds - Rogue 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Light Weapon, Reliable</i>
+Attack - Daily - <i>Martial, Weapon, Rogue Weapon, Reliable</i>
 </p>
 <p>
 <b>Melee or Ranged</b> - Dex vs Arm
@@ -4158,7 +4216,7 @@ Attack - Daily - <i>Weapon, Light Weapon, Reliable</i>
 <span class="gray large"><strong>Stunning Blow - Rogue 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Light Weapon, Reliable</i>
+Attack - Daily - <i>Martial, Weapon, Rogue Weapon, Reliable</i>
 </p>
 <p>
 <b>Melee</b> - targets an enemy granting Advantage to you - Dex vs For
@@ -4175,7 +4233,7 @@ Attack - Daily - <i>Weapon, Light Weapon, Reliable</i>
 <span class="red large"><strong>I didn’t do it! - Rogue 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Ranged 6 (safe)</b> - targets an enemy you have hit this turn. -
@@ -4189,7 +4247,7 @@ Utility - Encounter
 <span class="red large"><strong>Jump to Cover - Rogue 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
 <b><i>Move Action</i></b> - <b>Personal</b> -
@@ -4203,7 +4261,7 @@ Utility - Encounter
 <span class="red large"><strong>Tumble - Rogue 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
 <b><i>Move Action</i></b> - <b>Personal</b> -
@@ -4403,7 +4461,7 @@ Expected Armor
 <span class="green large"><strong>Unseen Horror - Warlock 1</strong></span>
 </p>
 <p>
-Attack
+Attack - <i>Shadow, Implement</i>
 </p>
 <p>
 <b>Ranged 10</b> - Cha vs Wil
@@ -4420,7 +4478,7 @@ Attack
 <span class="green large"><strong>Veil of Darkness - Warlock 1</strong></span>
 </p>
 <p>
-Attack
+Attack - <i>Shadow, Implement</i>
 </p>
 <p>
 <b>Ranged 10</b> - Cha vs For
@@ -4437,7 +4495,7 @@ Attack
 <span class="red large"><strong>Dark Bolt - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Encounter
+Attack - Encounter - <i>Shadow, Implement</i>
 </p>
 <p>
 <b>Ranged 15</b> - Cha vs For
@@ -4454,7 +4512,7 @@ Attack - Encounter
 <span class="red large"><strong>Howling Agony - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Encounter
+Attack - Encounter - <i>Shadow, Implement</i>
 </p>
 <p>
 <b>Ranged 10</b> - Cha vs Wil
@@ -4471,7 +4529,7 @@ Attack - Encounter
 <span class="red large"><strong>Soul Drain - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Encounter
+Attack - Encounter - <i>Shadow, Implement</i>
 </p>
 <p>
 <b>Ranged 7</b> - Cha vs For
@@ -4491,7 +4549,7 @@ Attack - Encounter
 <span class="gray large"><strong>Black Hole - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Daily
+Attack - Daily - <i>Shadow, Implement</i>
 </p>
 <p>
 <b>Ranged 10</b> - Cha vs Ref
@@ -4508,7 +4566,7 @@ Attack - Daily
 <span class="gray large"><strong>Shadowfiend - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Summon</i>
+Attack - Daily - <i>Shadow, Summon</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> -
@@ -4522,7 +4580,7 @@ Attack - Daily - <i>Summon</i>
 <span class="gray large"><strong>Soul Feed - Warlock 1</strong></span>
 </p>
 <p>
-Attack - Daily
+Attack - Daily - <i>Shadow, Implement</i>
 </p>
 <p>
 <b>Ranged 7</b> - Cha vs For
@@ -4542,7 +4600,7 @@ Attack - Daily
 <span class="red large"><strong>A Curse Upon You - Warlock 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Shadow</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Ranged 5</b> -
@@ -4553,7 +4611,7 @@ Utility - Encounter
 <span class="red large"><strong>Dark Portal - Warlock 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Shadow</i>
 </p>
 <p>
 <b><i>Move Action</i></b> - <b>Personal</b> -
@@ -4567,7 +4625,7 @@ Utility - Encounter
 <span class="red large"><strong>Treacherous Shadows - Warlock 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Shadow</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Ranged 10</b> - targets any number of cursed enemies -
@@ -4783,16 +4841,16 @@ Expected Armor
 <span class="red large"><strong>Invigorating Word - Warlord Feature 1</strong></span>
 </p>
 <p>
-Utility - Encounter x2 - <i>Healing, Non-Provoking</i>
+Utility - Encounter x2 - <i>Martial, Healing</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Ranged 5</b> - targets an ally that can hear you -
+<b><i>Minor Action</i></b> - <b>Ranged 5 (safe)</b> - targets an ally that can hear you -
 </p>
 <p>
-<b>Effect</b>: The target spends a Surge, and heals +1d6
+<b>Effect</b>: The target heals a Surge+1d6
 </p>
 <p>
-<span class="Power-Upgrade">Level 11: heals +2d6<br>Level 21: heals +3d6</span>
+<span class="Power-Upgrade">Level 11: Surge+2d6<br>Level 21: Surge+3d6</span>
 </p>
 </div>
 <div class="Power">
@@ -4800,7 +4858,7 @@ Utility - Encounter x2 - <i>Healing, Non-Provoking</i>
 <span class="green large"><strong>A bit to the left! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Martial</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -4817,7 +4875,7 @@ Attack - <i>Weapon, Martial</i>
 <span class="green large"><strong>Hit right here! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - <i>Weapon, Martial</i>
+Attack - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Ref
@@ -4834,7 +4892,7 @@ Attack - <i>Weapon, Martial</i>
 <span class="red large"><strong>All yours! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Martial</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -4848,7 +4906,7 @@ Attack - Encounter - <i>Weapon, Martial</i>
 <span class="red large"><strong>One-two punch - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Martial</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - targets a flanked enemy - Str vs Arm
@@ -4865,7 +4923,7 @@ Attack - Encounter - <i>Weapon, Martial</i>
 <span class="red large"><strong>Sunder Armor - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Weapon, Martial</i>
+Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -4879,7 +4937,7 @@ Attack - Encounter - <i>Weapon, Martial</i>
 <span class="gray large"><strong>Follow Me! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Martial</i>
+Attack - Daily - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - targets an enemy you can charge. -
@@ -4893,7 +4951,7 @@ Attack - Daily - <i>Weapon, Martial</i>
 <span class="gray large"><strong>Pile On! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Martial</i>
+Attack - Daily - <i>Martial, Weapon</i>
 </p>
 <p>
 <b><i>Reliable</i></b> - <b>Melee</b> - targets a bloodied enemy - Str vs Arm
@@ -4907,7 +4965,7 @@ Attack - Daily - <i>Weapon, Martial</i>
 <span class="gray large"><strong>Time for Action! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Weapon, Martial</i>
+Attack - Daily - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
@@ -4927,10 +4985,10 @@ Attack - Daily - <i>Weapon, Martial</i>
 <span class="red large"><strong>Forget it! - Warlord 2</strong></span>
 </p>
 <p>
-Utility - Encounter - <i>Non-Provoking</i>
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
-<b><i>Minor Action</i></b> - <b>Ranged 5</b> - targets an ally that can hear you and is adjacent to an enemy -
+<b><i>Minor Action</i></b> - <b>Ranged 5 (safe)</b> - targets an ally that can hear you and is adjacent to an enemy -
 </p>
 <p>
 <b>Effect</b>: The target is no longer Taunted, and Shifts 1 away from an adjacent enemy.
@@ -4941,7 +4999,7 @@ Utility - Encounter - <i>Non-Provoking</i>
 <span class="red large"><strong>Incoming! - Warlord 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
 <b><i>Reaction (Interrupt)</i></b> - <i> (Trigger: You and one or more allies are targeted by a close or area attack.)</i> - <b>No Range</b> - targets the targets of the triggering attack -
@@ -4955,10 +5013,10 @@ Utility - Encounter
 <span class="red large"><strong>Move It! - Warlord 2</strong></span>
 </p>
 <p>
-Utility - Encounter - <i>Non-Provoking</i>
+Utility - Encounter - <i>Martial</i>
 </p>
 <p>
-<b><i>Move Action</i></b> - <b>Ranged 5</b> - targets an ally that can hear you -
+<b><i>Move Action</i></b> - <b>Ranged 5 (safe)</b> - targets an ally that can hear you -
 </p>
 <p>
 <b>Effect</b>: The target stands up if prone. The target moves their speed.
@@ -5177,7 +5235,7 @@ Expected Armor
 <span class="green large"><strong>Arcane Missiles - Wizard 1</strong></span>
 </p>
 <p>
-Attack - <i>Implement, Arcane</i>
+Attack - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Ranged 5</b> - targets up to 3 enemies - Int vs Arm
@@ -5194,7 +5252,7 @@ Attack - <i>Implement, Arcane</i>
 <span class="green large"><strong>Frost Bolt - Wizard 1</strong></span>
 </p>
 <p>
-Attack - <i>Implement, Arcane</i>
+Attack - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Ranged 10</b> - Int vs For
@@ -5211,7 +5269,7 @@ Attack - <i>Implement, Arcane</i>
 <span class="green large"><strong>Lesser Fireball - Wizard 1</strong></span>
 </p>
 <p>
-Attack - <i>Implement, Arcane</i>
+Attack - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Area 10 Burst 1</b> - Int vs Ref
@@ -5228,7 +5286,7 @@ Attack - <i>Implement, Arcane</i>
 <span class="red large"><strong>Burning Hands - Wizard 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Arcane</i>
+Attack - Encounter - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Close Blast 5</b> - Int vs Ref
@@ -5248,7 +5306,7 @@ Attack - Encounter - <i>Implement, Arcane</i>
 <span class="red large"><strong>Ice Beam - Wizard 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Arcane</i>
+Attack - Encounter - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Close Line 10</b> - Int vs For
@@ -5268,7 +5326,7 @@ Attack - Encounter - <i>Implement, Arcane</i>
 <span class="red large"><strong>Shock Sphere - Wizard 1</strong></span>
 </p>
 <p>
-Attack - Encounter - <i>Implement, Arcane</i>
+Attack - Encounter - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Area 10 Burst 2</b> - Int vs Ref
@@ -5288,7 +5346,7 @@ Attack - Encounter - <i>Implement, Arcane</i>
 <span class="gray large"><strong>Crushing Fist - Wizard 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Implement, Arcane</i>
+Attack - Daily - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Ranged 20</b> - Int vs Ref
@@ -5308,7 +5366,7 @@ Sustain Minor: Repeat the attack
 <span class="gray large"><strong>Fireball - Wizard 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Implement, Arcane</i>
+Attack - Daily - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Area 20 Burst 3</b> - Int vs Ref
@@ -5328,7 +5386,7 @@ Attack - Daily - <i>Implement, Arcane</i>
 <span class="gray large"><strong>Ice Storm - Wizard 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Implement, Arcane</i>
+Attack - Daily - <i>Arcane, Implement</i>
 </p>
 <p>
 <b>Area 10 Burst 2</b> - Int vs For
@@ -5354,7 +5412,7 @@ Sustain Minor: Int Cold to creatures in the zone. You can move the zone 1 square
 <span class="red large"><strong>Arcane Shield - Wizard 2</strong></span>
 </p>
 <p>
-Utility - Encounter
+Utility - Encounter - <i>Arcane</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
@@ -5368,7 +5426,7 @@ Utility - Encounter
 <span class="gray large"><strong>Levitate - Wizard 2</strong></span>
 </p>
 <p>
-Utility - Daily
+Utility - Daily - <i>Arcane</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Personal</b> -
@@ -5382,7 +5440,7 @@ Utility - Daily
 <span class="gray large"><strong>Wall of Ice - Wizard 2</strong></span>
 </p>
 <p>
-Utility - Daily
+Utility - Daily - <i>Arcane</i>
 </p>
 <p>
 <b><i>Minor Action</i></b> - <b>Area 10 Wall 6</b> -

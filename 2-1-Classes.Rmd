@@ -20,7 +20,25 @@ df_class_build$htm_power %>% cat()
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_class, 'Barbarian', 'Rager')
 df_class_build$htm_stat %>% cat()
+df_class_build$htm_feature %>% cat()
 ```
+
+#### Rage Strike
+Some Barbarian daily attack powers have the Rage keyword. These powers have an effect that grants
+the barbarian an ability that lasts for the rest of the encounter, and a secondary attack that
+can be used immediately or on a later turn that encounter. This secondary attack is named a
+Rage Strike, is not subject to any cooldown, and can be used by spending a Standard Action.
+While under the effect of a Rage power, the barbarian is Raging. Some powers gain additional
+abilities while raging.
+
+Note: A character that somehow manages to use two Rage powers in the same encounter (despite the
+daily attack cooldown) benefits from the effects of both powers.
+
+Example: Grok the Barbarian spends a Free Action on their turn to use Blood Rage. They can then
+spend a Standard Action immediately in order to use that power’s Rage Strike or do so on a later
+turn (for example, after an ally has flanked their target).
+
+
 #### Class Powers{.newPage}
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build$htm_power %>% cat()
@@ -31,7 +49,6 @@ df_class_build$htm_power %>% cat()
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build = get_class_build(df_class, 'Fighter', 'Guardian')
 df_class_build$htm_stat %>% cat()
-
 df_class_build$htm_feature %>% cat()
 ```
 #### Class Powers{.newPage}
