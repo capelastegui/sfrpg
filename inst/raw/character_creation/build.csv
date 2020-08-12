@@ -17,6 +17,7 @@ Rogue,Swashbuckler,class,rog_swash
 Priest,Light,class,pri_light
 Priest,Luck,class,pri_luck
 Barbarian,Rager,class,bar_rager
+Barbarian,Berserker,class,bar_bsk
 Warlord,Tactician,class,wld_tac
 Warlock,Shadow,class,wlk_shadow
 Universal,Universal,class,univ

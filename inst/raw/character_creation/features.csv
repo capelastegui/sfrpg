@@ -52,6 +52,12 @@ bar_train,Barbarian Training,"Reduce by 1 the DC of the following Skill Checks:
 bar_rager_svg,Savage Attack,Your attacks deal +Constitution damage.
 bar_rager_res,Raging Resilience,You add your Constitution to your Surge Value.
 bar_rager_chr,Barbarian Charge,"You do not become Hindered due to charging.<br>When you charge an enemy within 4 or more squares, you gain Advantage, and you can use a Barbarian melee attack instead of a melee Basic attack."
+bar_bsk_inn,Inner Peace,"Inner Peace: While not in Berserker Fury, gain the following bonuses:
++3 Arm, -1 Hit and -1 Crit Range
+You have Defender’s Aura.
+Enemies ignoring your Taunt provoke opportunity attacks from you."
+bar_bsk_fury,Berserker Fury,"When you become Bloodied or use a Barbarian Primal attack power, you enter Berserker Fury until the end of the encounter. You may roll a save to avoid entering this state. While in Berserker Fury, you lose Inner Peace and gain +Con damage bonus on your melee attacks."
+bar_bsk_focus,Berserker Focus,"+1 Hit vs enemies Taunting you. At the start of your turn, if you are in Berserker Fury and not Taunted, you choose a random enemy closest to you. You are Taunted by that enemy until the end of the encounter."
 wld_heal,Inspiring Word,Gain the Inspiring Word power.
 wld_tac_adv,Tactical Advice,Allies that can see or hear you gain+Int Initiative.
 wld_tac_act,Tactical Action,Allies that can see or hear you gain +Int hit with Action Point attacks.

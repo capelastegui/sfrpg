@@ -44,6 +44,23 @@ turn (for example, after an ally has flanked their target).
 df_class_build$htm_power %>% cat()
 ```
 
+### Barbarian Berserker
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Barbarian', 'Berserker')
+df_class_build$htm_stat %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Fury Powers
+
+Some Berserker powers have the Fury keyword.These powers have 2 modes: the Peace mode is used while not in Berserker Fury, and the Fury mode is used while in Berserker Fury. A character without the Berserker Fury feature using a Fury power can only use the Peace mode.
+
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
 ## Fighter{.newPage}
 ### Fighter Guardian
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}

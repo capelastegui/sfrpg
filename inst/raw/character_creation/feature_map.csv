@@ -76,6 +76,10 @@ bar_rager,bar_rager_svg
 bar_rager,bar_rager_res
 bar_rager,bar_rager_chr
 bar_rager,bar_train
+bar_bsk,bar_bsk_inn
+bar_bsk,bar_bsk_fury
+bar_bsk,bar_bsk_focus
+bar_bsk,bar_train
 wld_tac,wld_heal
 wld_tac,wld_tac_adv
 wld_tac,wld_tac_act
