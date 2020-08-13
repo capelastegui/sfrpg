@@ -90,7 +90,7 @@ wld_train,Warlord Training,"Reduce by 1 the DC of the following Skill Checks:
 - Social checks (Authority, Diplomacy) and Lore checks related to the military, teamwork activities.
 - Teach and train others (Concentration)"
 ori_human_act,Human of Action,"When you take a Full Rest, gain an additional Action Point.<br>+1 to Action Point Checks.<br>Gain Advantage on attacks made with an Action Point."
-ori_human_rec,Human Recovery,"When using Second Wind, heal an additional 1d10, and you can roll a save to avoid spending a Vitality point."
+ori_human_rec,Human Recovery,"When using Second Wind, you can roll a save to avoid spending a Vitality point. Gain +3 Surge Value (increase to +6 at level 11, +12 at level 21)."
 ori_human_skl,Human Skill,Gain Skill Training as a bonus feat.
 ori_dwarf_stb,Dwarven Stubbornness,"Reduce enemy Forced Movement against you by 1.<br>When you are knocked Prone, you can roll a save to avoid the Prone condition.<br>Ignore any Armor Speed Penalty."
 ori_dwarf_res,Dwarven Resilience,You can use Second Wind as a Move Action.
@@ -115,7 +115,7 @@ ori_gob_mob,Goblin Mob,Gain Cover while adjacent to a flanked enemy.
 ori_gob_sld,Goblin Pull,Gain the Goblin Slide power
 ori_min_chr,Minotaur Charge,"Not Hindered when charging. After hitting or missing with a Charge attack, the target grants Advantage until enf of your next turn."
 ori_min_red,See Red,Gain the See Red power.
-ori_gol_big,Goliath Size,"You are Large, gain Melee Reach 2 and +2 Range on ranged attacks."
+ori_gol_big,Long Limbs,"Gain Melee Reach 2 and +2 Range on ranged attacks."
 ori_gol_res,Goliath Resistance,Gain the Goliath Resistance Power.
 ori_kbl_mob,Mob Attack,"Gain +1 Hit vs enemies adjacent to an ally, and -1 Hit vs enemies not adjacent to an ally."
 ori_kbl_shf,Shifty,Gain the Shifty Kobold Power.
