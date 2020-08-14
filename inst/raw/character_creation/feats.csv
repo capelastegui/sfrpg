@@ -134,7 +134,7 @@ Focus: Sage's Tome,Offense Focus: Implement,1,"Implement, Tome",Implement Traini
  - [H] +1 damage per damage die.
 	- [P][E] +2 damage per damage die.
 You may Sustain Minor as a Free Action.
-Your summoned creatures deal extra damage:\n[H]:+1 damage\n[P]:+3 damage\n[E]:+6 damage","With tome, +1 damage per die. Free Sustain Minor, Extra damage on summons."
+Your summoned creatures deal extra damage:<br/>- [H]:+1 damage<br/>- [P]:+3 damage<br/>- [E]:+6 damage","With tome, +1 damage per die. Free Sustain Minor, Extra damage on summons."
 Focus: Reliable Tome,Offense Focus: Implement,1,"Implement, Tome",Implement Training with a Tome,"When you miss all targets of an encounter attack power for the first time in an encounter, you do not gain Encounter Cooldown.
 On implement attacks with a Tome , deal extra damage:
  - [H] +1 damage per damage die.
@@ -175,7 +175,7 @@ Focus: Opportunist Totem,Offense Focus: Implement,1,"Implement, Totem",Implement
 On implement attacks with a Totem, deal extra damage:
 	- [H] +1 damage per damage die.
 	- [P][E] +2 damage per damage die.","With Totem, +1 damage per die, +2 Hit to Opportunity Attacks and Reactions."
-Focus: Tough Totem,Offense Focus: Implement,1,"Implement, Totem",Implement Training with a Totem,"Gain extra HP:\n[H]:+2 HP\n[P]:+6 HP\n[E]:+12 HP
+Focus: Tough Totem,Offense Focus: Implement,1,"Implement, Totem",Implement Training with a Totem,"Gain extra HP:<br/>- [H]:+2 HP<br/>- [P]:+6 HP<br/>- [E]:+12 HP
 On implement attacks with a Totem , deal extra damage:
 	- [H] +1 damage per damage die.
 	- [P][E] +2 damage per damage die.","With Totem, +1 damage per die. Gain extra HP."
@@ -202,10 +202,10 @@ Wind Shield,Defense Focus,1,"Armor, Shield",Shield Training,"While wearing a Shi
 Bashing Shield,Defense Focus,1,"Armor, Shield",Shield Training,"While wearing a Shield, +1 Arm, and when you push an enemy with a melee or close attack, the forced movement is increased by 1 square unless the enemy makes a save.","With Shield, +1 Arm, increase forced movement by 1 on failed save."
 Nimble Armor,Defense Focus,1,Armor,Training with any Heavy Armor or Heavy Shield Training," +1 Arm, and you ignore any Armor Penalty to skills."," +1 Arm, ignore Armor Penalty to skills."
 Ranged Armor,Defense Focus,1,Armor,Training with any Heavy Armor or Heavy Shield Training,"+1 Arm, and your Armor Penalty to attack range halved."," +1 Arm, Armor Penalty to range halved."
-Toughness,Toughness,1,NA,NA,"Gain extra HP:\n[H]:+5 HP\n[P]:+15 HP\n[E]:+30 HP","+5 HP, scaling with tier."
-Surging Toughness,Toughness,1,NA,NA,"Increase your Surge Value:\n[H]:+5 Surge Value\n[P]:+15 Surge Value\n[E]:+30 Surge Value","+5 Surge value, scaling with tier"
-Die Hard,Toughness,1,NA,NA,"+4 to Death Saves.\nGain extra HP:\n[H]:+3 HP\n[P]:+9 HP\n[E]:+18 HP","+4 to Death Saves and +3 HP, scaling with tier."
-Toughness in Numbers,Toughness,1,NA,NA,"Increase your Surge Value and the HP of your Animal Companions, Familiars and Summoned creatures:\n[H]:+3 Surge Value, +6 companion HP.\n[P]:+9 Surge Value, +18 companion HP.\n[E]:+18 Surge Value, +36 companion HP.","+3 Surge value and +6 companion HP, scaling with tier."
+Toughness,Toughness,1,NA,NA,"Gain extra HP:<br/>- [H]:+5 HP<br/>- [P]:+15 HP<br/>- [E]:+30 HP","+5 HP, scaling with tier."
+Surging Toughness,Toughness,1,NA,NA,"Increase your Surge Value:<br/>- [H]:+5 Surge Value<br/>- [P]:+15 Surge Value<br/>- [E]:+30 Surge Value","+5 Surge value, scaling with tier"
+Die Hard,Toughness,1,NA,NA,"+4 to Death Saves.\nGain extra HP:<br/>- [H]:+3 HP<br/>- [P]:+9 HP<br/>- [E]:+18 HP","+4 to Death Saves and +3 HP, scaling with tier."
+Toughness in Numbers,Toughness,1,NA,NA,"Increase your Surge Value and the HP of your Animal Companions, Familiars and Summoned creatures:<br/>- [H]:+3 Surge Value, +6 companion HP.<br/>- [P]:+9 Surge Value, +18 companion HP.<br/>- [E]:+18 Surge Value, +36 companion HP.","+3 Surge value and +6 companion HP, scaling with tier."
 Martial Weapon Training,Weapon Training,1,Weapon,NA,Gain Training in all Simple weapons and One-Hand Martial weapons.,Training in Simple and One-Hand Martial weapons.
 Superior Weapon Training,Weapon Training,1,Weapon,Training with a martial weapon,Gain Training in all Two-Hand Martial weapons,Training in Two-Hand Martial weapons
 Leather Armor Training,Armor Training,1,Armor,NA,Gain Training with Leather Armor,Training with Leather
@@ -272,13 +272,12 @@ Rend Foe,Role: Explosive Control,4,"Role, Controller",Controller role,"When hitt
 	- [H] +18 damage.","On single target attack hit, extra damage to adjacent enemy."
 Wind Waker,Role: Ground Control,4,"Role, Controller",Controller role,"Forced Movement you inflict is increased by 1, or by 2 if caused by an attack with Advantage.","Your Forced Movement is increased by 1, or by 2 with Advantage."
 Sustained Assault,Role: Ground Control,4,"Role, Controller",Controller role,"+1 Arm while you have an active Summon, Conjuration or Sustain power.
-Your summoned creatures gain +1 Arm and extra HP:\n[H]:+5 HP\n[P]:+15 HP\n[E]:+30 HP","+1 Arm with Summon. Summons gain +1 Arm and extra HP."
+Your summoned creatures gain +1 Arm and extra HP:<br/>- [H]:+5 HP<br/>- [P]:+15 HP<br/>- [E]:+30 HP","+1 Arm with Summon. Summons gain +1 Arm and extra HP."
 Slow Motion,Role: Ground Control,4,"Role, Controller",Controller role,"When hitting with an attack with a single target, the target is Slowed until the end of your next turn or, if already Slowed, Immobilized, or Restrained, pushed 2.","On single target attack hit, Slowed until end of next turn, or pushed 2 if already Slowed, Immobilized, or Restrained."
 Stable Affliction,Role: Debilitating Control,11,"Role, Controller",Controller role,Enemies gain -3 to Saving Throws against your effects.,-3 to enemy Saving Throws.
 Confusion in the Ranks,Role: Debilitating Control,11,"Role, Controller",Controller role,"The first time you hit a non-Taunted enemy each turn, that enemy is Taunted by an ally of your choice until the end of your next turn.","On first hit each turn, have ally Taunt target."
 Exploit Weakness,Role: Debilitating Control,11,"Role, Controller",Controller role,"You gain Advantage against Slowed, Immobilized, Grabbed, Dazed and Weakened enemies.","Advantage vs Slowed, Immobilized, Grabbed, Dazed and Weakened enemies."
-Master Healer,Role: Leader Heal,4,"Role, Leader",Leader role,"When you use a Healing power, characters spending a Surge due to that power gain a bonus to their Surge Value:
-[H]:+5 Surge Value\n[P]:+15 Surge Value\n[E]:+30 Surge Value.",Healing grants bonus to Surge Value.
+Master Healer,Role: Leader Heal,4,"Role, Leader",Leader role,"When you use a Healing power, characters spending a Surge due to that power gain a bonus to their Surge Value:<br/>- [H]:+5 Surge Value<br/>- [P]:+15 Surge Value<br/>- [E]:+30 Surge Value.",Healing grants bonus to Surge Value.
 Saving Grace,Role: Leader Heal,4,"Role, Leader",Leader role,"When you use a Healing power, characters spending a Surge due to that power can make a Saving Throw to end an effect that a save can end or to downgrade a condition until end of your next turn.",Healing grants free Saving Throw.
 Shield Mate,Role: Leader Heal,4,"Role, Leader",Leader role,"When you grant Temporary Hit Points to an ally, increase the THP by 2 per tier.",Temporary Hit Points granted to allies increased by 2 per tier.
 Word of Caution,Role: Leader Maneuver,4,"Role, Leader",Leader role,"When you use a Healing power, characters spending a Surge due to that power gain +1 to all defenses until the end of your next turn.
@@ -292,9 +291,9 @@ Point Flank,Role: Leader Offense,11,"Role, Leader, Paragon",Leader role,Allies g
 Constructive Criticism,Role: Leader Offense,11,"Role, Leader, Paragon",Leader role,"While you grant a power bonus to hit or damage to an ally, that ally gains +1 Crit Range.","With power bonus to hit or damage, allies gain +1 Crit Range."
 Universal Defense,Paragon Defense,11,NA,NA,"+1 Fortitude, +1 Reflex, +1 Will."," +1 Fortitude, +1 Reflex, +1 Will"
 Martial Prowess,Paragon Defense,11,Martial,Martial power source,"+1 Fortitude, +1 Reflex, +3 Opportunity Attack Modifier"," +1 Fortitude, +1 Reflex, +3 Opportunity Attack Modifier"
-Divine Resolve,Paragon Defense,11,Divine,Divine power source,"+1 Fortitude, +1 Will.\nIncrease your Surge Value:[P]:+9 Surge Value\n[E]:+18 Surge Value"," +1 Fortitude, +1 Will, bonus to Surge Value"
+Divine Resolve,Paragon Defense,11,Divine,Divine power source,"+1 Fortitude, +1 Will.\nIncrease your Surge Value:<br/>- [P]:+9 Surge Value<br/>- [E]:+18 Surge Value"," +1 Fortitude, +1 Will, bonus to Surge Value"
 Arcane Abjuration,Paragon Defense,11,Arcane,Arcane power source,"+1 Will, +1 Reflex, +2 to saves"," +1 Will, +1 Reflex, +2 to saves"
-Primal Endurance,Paragon Defense,11,Primal,Primal power source,"+2 Fortitude.\nGain extra HP:\n[P]:+9 HP\n[E]:+18 HP"," +2 Fortitude, extra HP."
+Primal Endurance,Paragon Defense,11,Primal,Primal power source,"+2 Fortitude.\nGain extra HP:<br/>- [P]:+9 HP<br/>- [E]:+18 HP"," +2 Fortitude, extra HP."
 Psionic Prescience,Paragon Defense,11,Psi,Psi power source," +2 Will, +3 Initiative"," +2 Will, +3 Initiative"
 Shadow Slumber,Paragon Defense,11,Shadow,Shadow power source," +2 Reflex, +6 Death Saves"," +2 Reflex, +6 Death Saves"
 Universal Resource,Paragon Resource,11,NA,NA,+2 Surges.,+2 Surges

@@ -13,11 +13,17 @@ get_htm_feat <- function(df_feat=NULL){
   tag_pre <- df_tag[1,]
   tag_post <- df_tag[2,]
 
-  df_feat_clean <- df_feat %>%
-    gsub_colwise("\\n", "<br>")
-
-  build_element_apply(df_feat_clean, tag_pre, tag_post,
+  htm_feat_raw <- build_element_apply(df_feat, tag_pre, tag_post,
                       df.names=setdiff(names(df_feat), c('Summary')))
+
+  htm_feat <- htm_feat_raw %>%
+    # [H] is converted to link in markdown - need to escape
+    # , also \\[H\\] is converted into something else
+    stringr::str_replace_all("\\n", "<br>") %>%
+    stringr::str_replace_all('\\[', '&#91;') %>%
+    stringr::str_replace_all('\\]', '&#93;')
+
+  htm_feat
 }
 
 #' Add feat list div to feat html
