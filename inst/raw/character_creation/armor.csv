@@ -1,7 +1,7 @@
-Name,Arm bonus,Type,Armor Penalty,Movement Penalty
-Cloth,1,Light Armor,0,0
-Leather,2,Light Armor,0,0
-Hide,3,Heavy Armor,-1,-1
-Chain,3,Heavy Armor,-1,-1
-Scale,4,Heavy Armor,-1,-1
-Plate,5,Heavy Armor,-1,-1
+Name,Arm bonus,Type,Armor Penalty,Movement Penalty,Range Penalty
+Cloth,1,Light Armor,0,0,0
+Leather,2,Light Armor,0,0,0
+Hide,3,Heavy Armor,-1,-1,-2
+Chain,3,Heavy Armor,-1,-1,-2
+Scale,4,Heavy Armor,-1,-1,-2
+Plate,5,Heavy Armor,-1,-1,-2
