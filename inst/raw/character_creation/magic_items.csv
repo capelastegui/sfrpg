@@ -36,7 +36,7 @@ Energy Burst Weapon,Weapon,Rare,5,15,25,"Special: Choose one of the following da
 Vorpal Weapon,Weapon,Rare,7,17,27,"Property: On a Critical Hit, gain a bonus to Crit Damage:
 	- [H]: +4
 	- [P]: +12
-	- [E]: +24 . This bonus is doubled if you rolled a natural 20.","Power (Encounter): Triggered Action (You bloody an enemy with this weapon). Effect: The triggering enemy makes a saving throw. On a failed save, you choose whether to make the enemy Slowed until the end of the encounter or Fatigued until the end of the encounter.",,,
+	- [E]: +24 . This bonus is doubled if you rolled a natural 20.","Power (Encounter): Triggered Action (You bloody an enemy with this weapon). Effect: The triggering enemy makes a saving throw. On a failed save, you choose whether to make the enemy Slowed until the end of the encounter or Partially Weakened until the end of the encounter.",,,
 Magic Implement,Implement,Common,1,11,21,,,,,
 Far Implement,Implement,Common,3,13,23,Property: Ranged and area implement attacks made with this implement gain a +2 bonus to range.,,,,
 Implement of Fear,Implement,Common,3,13,23,"Property: When you hit an enemy with this implement, they treat squares adjacent to you as Difficult Terrain until your next turn.",,,,
@@ -156,7 +156,7 @@ Girdle of Constitution,Waist,Common,1,11,21,"Property: You can use the following
  - [H]: +4
 	- [P]: +6
  - [E]: +8",,,,
-Belt of Resolve,Waist,Common,5,15,25,"[H] Property: When you attack while Weakened or Fatigued, you can roll a save to downgrade the condition for the attack.",[P] Property: You downgrade the Weakened and Fatigued conditions.,[E] Property: You ignore the Weakened and Fatigued conditions.,,
+Belt of Resolve,Waist,Common,5,15,25,"[H] Property: When you attack while Weakened or Partially Weakened, you can roll a save to downgrade the condition for the attack.",[P] Property: You downgrade the Weakened and Partially Weakened conditions.,[E] Property: You ignore the Weakened and Partially Weakened conditions.,,
 Belt of Vigor,Waist,Common,7,17,27,"Property: You gain a bonus to your Surge Value:
 	- [H]: +2
  - [P]: +6

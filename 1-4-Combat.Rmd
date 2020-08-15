@@ -300,8 +300,8 @@ Status | Downgrade | Effects
 | Slowed | No Effect | - For each square moved, must spend an additional square of movement
 | Stunned | Dazed | -Cannot attack  <br />-Cannot move  <br />-Can only take one action per turn  <br />-Cannot use Reactions  <br />-Grants Advantage (+2 to be hit)
 | Unconscious | No Downgrade | - When a character falls unconscious, they are knocked prone.  <br />-When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.  <br />- Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_  <br />- Cannot take actions  <br />- Cannot see.
-| Weakened | Fatigued | - Damage dealt is halved <br />- Healing granted or received is halved <br />- Shield Points granted or received are halved
-| Fatigued |  No Effect | - Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4
+| Weakened | Partially Weakened | - Damage dealt is halved <br />- Healing granted or received is halved <br />- Shield Points granted or received are halved
+| Partially Weakened |  No Effect | - Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4
 
 
 
