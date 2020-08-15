@@ -188,7 +188,7 @@ Text in white boxes is used to define formulas.
  It is typically preceded by **“Tip”** or **“Example”**.</div>
 
 <div class="compatibility">Gold text is used to provide compatibility
- instructions to integrate material from older sourcebooks. It is typically
+ instructions to integrate material from legacy sourcebooks. It is typically
  preceded by **“Compatibility Note”**.</div>
 
 <div class="design">Red text is used to provide insight into the designer's

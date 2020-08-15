@@ -105,7 +105,7 @@ Assign the following scores:
 
 <div class="compatibility">**Compatibility Note**: The only remaining way to 
  increase Ability Scores is through Epic Destinies. However, whenever
- an Epic Destiny from an older rulebook provides a bonus to an Ability score,
+ an Epic Destiny from a legacy rulebook provides a bonus to an Ability score,
  that bonus is halved (typically from +2 to +1).</div>
 
 ### Wide Ability Array (Advanced rule)
@@ -269,7 +269,7 @@ In order to select a Player Character's Skills, the player should look look at
  many Trained Skills. 
 
 <div class="compatibility">**Compatibility Note**: The Racial Skill rule
- replaces racial Skill bonuses from older rulebooks. When a Origin provides
+ replaces racial Skill bonuses from legacy rulebooks. When a Origin provides
  a numeric bonus to one or more Skills, consider instead that these Skills
  are Racial Skills. Any other Skill-related benefit, such as gaining Training
  with a specific Skill, remains unchanged. </div>
@@ -363,7 +363,7 @@ A character's class determines which weapons the character is trained to use.
  one hand to wield, or a Heavy Improvised Weapon if it requires two hands.
  Improvised weapons can be used without training.
 
-<div class="compatibility">**Compatibility Note**: In older rulebooks, weapon
+<div class="compatibility">**Compatibility Note**: In legacy rulebooks, weapon
  training is referred to as weapon proficiency, and weapons can have a
  Proficiency Bonus to hit, if the character is trained with them. This
  Proficiency Bonus no longer exists, and any mentions to it should be
@@ -433,7 +433,7 @@ The following weapon keywords are supported in the game:
   per weapon damage die at level 16.
 - **Very Unwieldy**: Attacks made with this weapon gain a -2 penalty to hit.
 
-<div class="compatibility">**Compatibility Note** In older rulebooks, Throw
+<div class="compatibility">**Compatibility Note** In legacy rulebooks, Throw
  weapons can be classified as Heavy Thrown or Light Thrown. Treat any mention
  to either of these as referring to Throw weapons instead.</div>
 
@@ -496,7 +496,7 @@ extract_equip_table(df_equip, 'Weapons', 'Inner') %>% cat()
 Some character classes use unique weapons not available to other classes. In
  these cases, stats for these weapons should be provided within the class rules.
 
-<div class="compatibility">**Compatibility Note**: Some weapon types from older
+<div class="compatibility">**Compatibility Note**: Some weapon types from legacy
  rulebooks are no longer supported. As a general rule, we recommend treating
  any such weapon as a currently supported weapon of the same Family, Training,
  Type, and Hand requirements, if available. Some cases of particular interest
@@ -513,7 +513,7 @@ Some weapons used to have the same name as their weapon family. To remove
 - **Crossbow** is now Light Crossbow
 - **Flail** is now Light Flail
 
-Some character classes from older sourcebooks have bonuses associated with
+Some character classes from legacy sourcebooks have bonuses associated with
  obsoleted weapon types. We recommend the following replacements for these
  weapons:
 
@@ -565,7 +565,7 @@ Some character classes gain an additional bonus to Arm while wearing Light Armor
  This is called Light Armor Arm Bonus. Some classes also have class features
  that grant a bonus to Arm, and these can stack with their Light Armor Arm Bonus.
  A table summarizing Light Armor Arm Bonus and other stats for all classes
- currently in the game (including classes from older rulebooks) is provided in
+ currently in the game (including classes from legacy rulebooks) is provided in
  this chapter, in the Origin and Class Selection section. 
 
 To summarize, a character's Arm is calculated as follows:
@@ -577,7 +577,7 @@ Note that these are the most common types of Arm bonus, but other bonuses
  granted by specific Class Features, Feats, or Powers can still apply.
 
 <div class="compatibility">**Compatibility Note**: Unlike other defenses, a
- character's Abilities provide no bonus to that character's Arm. In older
+ character's Abilities provide no bonus to that character's Arm. In legacy
  rulebooks this was not the case, and it was common to have character classes
  whose Class Features allowed using an Ability as a bonus to Arm while wearing
  Light Armor. Ignore these bonuses, and any other mention of an Ability bonus
@@ -791,7 +791,7 @@ Each Combat Feat slot can be used to gain a Feat with a level equal or lower to 
  due to compatibility issues (since the Feats should mostly work under the
  current rules), but as a way to improve the game experience - see the
  Designer's Note below for a detailed explanation. That said, Game Masters who
- wish to incorporate older Feats into their campaigns can do so with minimal
+ wish to incorporate legacy Feats into their campaigns can do so with minimal
  translation effort, as long as they are aware that they risk breaking design
  assumptions about combat length and difficulty, and class balance.
  </div>
