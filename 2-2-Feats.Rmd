@@ -143,9 +143,9 @@ df_feats_raw %>% dplyr::filter(Category=='Role: Leader Maneuver') %>% get_htm_fe
 df_feats_raw %>% dplyr::filter(Category=='Role: Striker Agility') %>% get_htm_feat() %>% cat()
 ```
 
-#### Category - Striker Deadliness
+#### Category - Striker Lethality
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_feats_raw %>% dplyr::filter(Category=='Role: Striker Deadliness') %>% get_htm_feat() %>% cat()
+df_feats_raw %>% dplyr::filter(Category=='Role: Striker Lethality') %>% get_htm_feat() %>% cat()
 ```
 
 ## Level 11 Combat Feats{.newPage}
