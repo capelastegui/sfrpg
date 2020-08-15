@@ -41,7 +41,7 @@ pri_heal,Healing Word,Gain the Healing Word power.
 pri_train,Priest Training,"Reduce by 1 the DC of the following Skill Checks:
 - Social checks (Authority, Diplomacy) and knowledge checks (Arcana, Lore) related to Gods, Divine power and the undead.
 - Heal the sick or wounded (Nature, Concentration)"
-pri_light_fhl,Faith Healing,"When you use a Healing power, add Cha to the Surge Value of any character spending a Surge.<br>When you heal a character to full health, that character gains CHA Shield Points."
+pri_light_fhl,Faith Healing,"When you use a Healing power, add Cha to the Surge Value of any character healing a Surge.<br>When you heal a character to full health, that character gains Cha Shield Points."
 pri_shi,Shield of the Gods,"You and allies within 5 squares gain Resist (Crit Damage). When you or an ally within 5 squares is critically hit by an enemy, they roll a save - on a success, the attacking enemy is knocked Prone."
 pri_rit,Ritual Training,You gain Ritual Training as a bonus Adventure Feat.
 pri_luck_bls,Fortune's Blessing,"At the start of each of your turns, randomly choose an ally that has not benefited from Fortune's Blessing on your previous turn. That ally gains +1 to Hit, Save, and all defenses until your next turn."

@@ -150,7 +150,7 @@ The following actions are available to PCs on Skill Encounters:
 There is also a special action that can only be used if all participating PCs
 agree:
 - Fail Forward
-  - The Skill Challenge ends. Each participating PC spends a Surge to have a
+  - The Skill Challenge ends. Each participating PC spends 1 Stamina to have a
     Short Rest
   - At the GM's discretion, the challenge is overcome or a new path presents 
     itself so that the characters can progress. The characters suffer a minor

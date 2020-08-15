@@ -6,7 +6,7 @@ Winged Weapon,Weapon,Common,3,13,23,Property: +1 Hit against flying targets,"Pro
 Healing Weapon,Weapon,Common,5,15,25,"Property: On a hit, you or an ally within 5 squares gain a bonus to Surge Value until end of next turn:
  - [H]:+2
 	- [P]:+6
-	- [E]:+12.","Property: On a Critical Hit, you or an ally within 5 squares can spend a Surge.",,,
+	- [E]:+12.","Property: On a Critical Hit, you or an ally within 5 squares can heal a Surge.",,,
 Energy Weapon,Weapon,Common,5,15,25,"Special: Choose one of the following damage types when the weapon is created: Cold, Fire, Lightning, Shadow, Poison, Psychic or Radiant.","Property: On a Critical Hit, Crit Damage is of the chosen type, and gain a bonus to Crit Damage:
 	- [H]: +2
 	- [P]: +6
@@ -43,7 +43,7 @@ Implement of Fear,Implement,Common,3,13,23,"Property: When you hit an enemy with
 Healing Implement,Implement,Common,5,15,25,"Property: On a hit, you or an ally within 5 squares gain a bonus to Surge Value until end of next turn:
 	- [H]:+2
 	- [P]:+6
-	- [E]:+12.","Property: On a Critical Hit, you or an ally within 5 squares can spend a Surge.",,,
+	- [E]:+12.","Property: On a Critical Hit, you or an ally within 5 squares can heal a Surge.",,,
 Implement of Friendly Fire,Implement,Common,5,15,25,Property Implement attacks made with this implement gain -2 Hit against allies. Allies gain Partial Resist against attacks made with this implement.,,,,
 Overwhelming Implement,Implement,Common,7,17,27,"Property: Gain +1 to the distance of Pulls, Pushes and Slides caused by weapon attacks with this weapon.","Property: On a Critical Hit, Push 1.",,,
 Attuned Implement,Implement,Common,7,17,27,"Special: Choose one of the following damage types when the implement is created: Cold, Fire, Lightning, Shadow, Poison, Psychic or Radiant.","Property: Gain a bonus to Miss Damage with implement attacks of the chosen type using this implement:
@@ -309,7 +309,7 @@ Ring of Death,Ring,Rare,,15,25,"[P] Power (Encounter): Triggered Action (You red
 	[E]: The target gains Shield Points equal to your Surge Value",,,,
 Ring of Life,Ring,Rare,,15,25,"Property: You gain an Aura of Life:
 - [P] Aura 3
-- [E] Aura 5.","Property: Bleeding allies in the Aura of Life gain Resist (All), and can reroll failed Vitality Saves. When an ally in the aura stops being Unconscious, they can stand up from Prone as a free action.",Power (Daily): Free Reaction (You or an ally in the Aura of Life is reduced to 0 HP). The triggering character can spend a Surge.,,
+- [E] Aura 5.","Property: Bleeding allies in the Aura of Life gain Resist (All), and can reroll failed Vitality Saves. When an ally in the aura stops being Unconscious, they can stand up from Prone as a free action.",Power (Daily): Free Reaction (You or an ally in the Aura of Life is reduced to 0 HP). The triggering character can heal a Surge.,,
 Figurine of Wondrous Power,Wondrous Item,Uncommon,9,15,25,"Property: When this item is created, choose the type of animal it conjures, and one of the following traits. Your conjured creature gains the abilities from that trait. 
 - Sentinel: +2 to all defenses, the creature’s attacks Taunt targets on a hit.
 - Harrier: Fly 8, when the creature attacks, it can shift 2 squares before or after the attack.
@@ -334,7 +334,7 @@ Greater Figurine of Wondrous Power,Wondrous Item,Rare,9,15,25,"Property: When th
 - Sneak: Deals double damage while invisible, and as a Standard Action, the creature becomes invisible - until the end of its next turn or until it attacks.
 - Artillery: The creature can use its melee attack as a Ranged 10 attack.
 - Aquatic: Swim 8, the creature is Aquatic (can breathe underwater, +2 to attack rolls against non-aquatic creatures while in aquatic combat), and Slide 1 on a Hit.
-- Elemental: When the item is created, choose one of the following energy types: Fire, Cold, Lightning. The creature gains resist against the chosen type, and its attacks deal damage of the chosen type. Once per encounter, the creature can use its melee attack as a close blast 3.","Property: When you gain a milestone, you can spend a Surge to regain this item’s daily power. ","Power(Daily): Minor Action. Effect: You conjure a Medium mystic animal (See below for stats) in a space adjacent to you. The creature can be attacked, and it remains until it is reduced to 0 or less hit points, you take an extended rest, or until you dismiss it as a free action. Every action it takes costs you a minor action, and the creature cannot exceed the normal allotment of actions (a standard, a move, and a minor action) each turn.","Conjured Creature – Medium natural animate
+- Elemental: When the item is created, choose one of the following energy types: Fire, Cold, Lightning. The creature gains resist against the chosen type, and its attacks deal damage of the chosen type. Once per encounter, the creature can use its melee attack as a close blast 3.","Property: When you gain a milestone, you can spend 1 Stamina to regain this item’s daily power. ","Power(Daily): Minor Action. Effect: You conjure a Medium mystic animal (See below for stats) in a space adjacent to you. The creature can be attacked, and it remains until it is reduced to 0 or less hit points, you take an extended rest, or until you dismiss it as a free action. Every action it takes costs you a minor action, and the creature cannot exceed the normal allotment of actions (a standard, a move, and a minor action) each turn.","Conjured Creature – Medium natural animate
 Level - as conjurer
 HP: [H] 30, [P] 60, [E] 120
 Base Defenses: 12

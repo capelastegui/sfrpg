@@ -633,10 +633,10 @@ get_df_hp_html()
 A character under half of their maximum Hit Points is said to be Bloodied.
  Many game effects check for the Bloodied condition in characters. 
 
-For Player Characters, another stat derived from Hit Points is the 
+For Player Characters, another stat related to Hit Points is the
 **Surge Value**, which determines the amount of HP that is healed when a 
-character spends a Surge to heal. A character's Surge Value is equal to one
- quarter their base Hit Points. Effects that modify a character's
+character heals a Surge. A character's Surge Value is determined in the table above, and is typically roughly equal to one
+ quarter their Hit Points. Effects that modify a character's
  maximum Hit Points do not change Surge Value.
 
 ### Abilities
