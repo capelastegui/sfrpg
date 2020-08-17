@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 A tibble: 30 x 5 | Square Fireballs - Roleplaying Game</title>
+  <meta name="description" content="Chapter 4 A tibble: 30 x 5 | Square Fireballs - Roleplaying Game" />
+  <meta name="generator" content="bookdown 0.20.2 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 A tibble: 30 x 5 | Square Fireballs - Roleplaying Game" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 A tibble: 30 x 5 | Square Fireballs - Roleplaying Game" />
+  
+  
+  
+
+<meta name="author" content="Pedro Capelastegui" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="character-building.html"/>
+<link rel="next" href="adventuring.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="SFRPG.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SFRPG</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Index</a></li>
+<li class="chapter" data-level="2" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>2</b> Introduction</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction.html"><a href="introduction.html#welcome-to-the-game"><i class="fa fa-check"></i><b>2.1</b> Welcome to the game</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="introduction.html"><a href="introduction.html#what-is-a-role-playing-game"><i class="fa fa-check"></i><b>2.1.1</b> What is a Role Playing Game?</a></li>
+<li class="chapter" data-level="2.1.2" data-path="introduction.html"><a href="introduction.html#why-square-fireballs"><i class="fa fa-check"></i><b>2.1.2</b> Why Square Fireballs?</a></li>
+<li class="chapter" data-level="2.1.3" data-path="introduction.html"><a href="introduction.html#why-should-you-play-this-game"><i class="fa fa-check"></i><b>2.1.3</b> Why should you play this game?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="introduction.html"><a href="introduction.html#a-note-on-text-format"><i class="fa fa-check"></i><b>2.2</b> A note on text format</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction.html"><a href="introduction.html#rolling-dice"><i class="fa fa-check"></i><b>2.3</b> Rolling Dice</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="introduction.html"><a href="introduction.html#rolling-checks"><i class="fa fa-check"></i><b>2.3.1</b> Rolling Checks</a></li>
+<li class="chapter" data-level="2.3.2" data-path="introduction.html"><a href="introduction.html#damage-rolls"><i class="fa fa-check"></i><b>2.3.2</b> Damage Rolls</a></li>
+<li class="chapter" data-level="2.3.3" data-path="introduction.html"><a href="introduction.html#rolling-action-point-checks"><i class="fa fa-check"></i><b>2.3.3</b> Rolling Action Point Checks</a></li>
+<li class="chapter" data-level="2.3.4" data-path="introduction.html"><a href="introduction.html#escalation-die"><i class="fa fa-check"></i><b>2.3.4</b> Escalation Die</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="introduction.html"><a href="introduction.html#character-stats"><i class="fa fa-check"></i><b>2.4</b> Character Stats</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="introduction.html"><a href="introduction.html#level"><i class="fa fa-check"></i><b>2.4.1</b> Level</a></li>
+<li class="chapter" data-level="2.4.2" data-path="introduction.html"><a href="introduction.html#level-bonuses-to-hit-and-defenses."><i class="fa fa-check"></i><b>2.4.2</b> Level Bonuses to Hit and Defenses.</a></li>
+<li class="chapter" data-level="2.4.3" data-path="introduction.html"><a href="introduction.html#hit-points"><i class="fa fa-check"></i><b>2.4.3</b> Hit Points</a></li>
+<li class="chapter" data-level="2.4.4" data-path="introduction.html"><a href="introduction.html#abilities"><i class="fa fa-check"></i><b>2.4.4</b> Abilities</a></li>
+<li class="chapter" data-level="2.4.5" data-path="introduction.html"><a href="introduction.html#defenses"><i class="fa fa-check"></i><b>2.4.5</b> Defenses</a></li>
+<li class="chapter" data-level="2.4.6" data-path="introduction.html"><a href="introduction.html#secondary-stats"><i class="fa fa-check"></i><b>2.4.6</b> Secondary Stats</a></li>
+<li class="chapter" data-level="2.4.7" data-path="introduction.html"><a href="introduction.html#movement-speed"><i class="fa fa-check"></i><b>2.4.7</b> Movement Speed</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="introduction.html"><a href="introduction.html#powers"><i class="fa fa-check"></i><b>2.5</b> Powers</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction.html"><a href="introduction.html#power-type"><i class="fa fa-check"></i><b>2.5.1</b> Power Type</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction.html"><a href="introduction.html#power-name"><i class="fa fa-check"></i><b>2.5.2</b> Power Name</a></li>
+<li class="chapter" data-level="2.5.3" data-path="introduction.html"><a href="introduction.html#power-level"><i class="fa fa-check"></i><b>2.5.3</b> Power Level</a></li>
+<li class="chapter" data-level="2.5.4" data-path="introduction.html"><a href="introduction.html#usage-frequency"><i class="fa fa-check"></i><b>2.5.4</b> Usage Frequency</a></li>
+<li class="chapter" data-level="2.5.5" data-path="introduction.html"><a href="introduction.html#power-categories"><i class="fa fa-check"></i><b>2.5.5</b> Power Categories</a></li>
+<li class="chapter" data-level="2.5.6" data-path="introduction.html"><a href="introduction.html#action-type"><i class="fa fa-check"></i><b>2.5.6</b> Action Type</a></li>
+<li class="chapter" data-level="2.5.7" data-path="introduction.html"><a href="introduction.html#power-range"><i class="fa fa-check"></i><b>2.5.7</b> Power Range</a></li>
+<li class="chapter" data-level="2.5.8" data-path="introduction.html"><a href="introduction.html#power-attack-roll"><i class="fa fa-check"></i><b>2.5.8</b> Power Attack Roll</a></li>
+<li class="chapter" data-level="2.5.9" data-path="introduction.html"><a href="introduction.html#effect-on-hit"><i class="fa fa-check"></i><b>2.5.9</b> Effect on Hit</a></li>
+<li class="chapter" data-level="2.5.10" data-path="introduction.html"><a href="introduction.html#effect-on-miss"><i class="fa fa-check"></i><b>2.5.10</b> Effect on Miss</a></li>
+<li class="chapter" data-level="2.5.11" data-path="introduction.html"><a href="introduction.html#power-effect"><i class="fa fa-check"></i><b>2.5.11</b> Power Effect</a></li>
+<li class="chapter" data-level="2.5.12" data-path="introduction.html"><a href="introduction.html#sustain-powers"><i class="fa fa-check"></i><b>2.5.12</b> Sustain Powers</a></li>
+<li class="chapter" data-level="2.5.13" data-path="introduction.html"><a href="introduction.html#power-upgrades"><i class="fa fa-check"></i><b>2.5.13</b> Power Upgrades</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="character-building.html"><a href="character-building.html"><i class="fa fa-check"></i><b>3</b> Character Building</a><ul>
+<li class="chapter" data-level="3.1" data-path="character-building.html"><a href="character-building.html#character-creation-overview"><i class="fa fa-check"></i><b>3.1</b> Character Creation Overview</a></li>
+<li class="chapter" data-level="3.2" data-path="character-building.html"><a href="character-building.html#character-concept-and-story"><i class="fa fa-check"></i><b>3.2</b> Character concept and story</a></li>
+<li class="chapter" data-level="3.3" data-path="character-building.html"><a href="character-building.html#origin"><i class="fa fa-check"></i><b>3.3</b> Origin</a></li>
+<li class="chapter" data-level="3.4" data-path="character-building.html"><a href="character-building.html#class-selection"><i class="fa fa-check"></i><b>3.4</b> Class selection</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="character-building.html"><a href="character-building.html#power-source"><i class="fa fa-check"></i><b>3.4.1</b> Power Source</a></li>
+<li class="chapter" data-level="3.4.2" data-path="character-building.html"><a href="character-building.html#role"><i class="fa fa-check"></i><b>3.4.2</b> Role</a></li>
+<li class="chapter" data-level="3.4.3" data-path="character-building.html"><a href="character-building.html#class-build"><i class="fa fa-check"></i><b>3.4.3</b> Class Build</a></li>
+<li class="chapter" data-level="3.4.4" data-path="character-building.html"><a href="character-building.html#class-powers"><i class="fa fa-check"></i><b>3.4.4</b> Class Powers</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="character-building.html"><a href="character-building.html#ability-generation"><i class="fa fa-check"></i><b>3.5</b> Ability generation</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="character-building.html"><a href="character-building.html#wide-ability-array-advanced-rule"><i class="fa fa-check"></i><b>3.5.1</b> Wide Ability Array (Advanced rule)</a></li>
+<li class="chapter" data-level="3.5.2" data-path="character-building.html"><a href="character-building.html#tertiary-ability-and-weak-ability-optional"><i class="fa fa-check"></i><b>3.5.2</b> Tertiary Ability and Weak Ability (Optional)</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="character-building.html"><a href="character-building.html#skill-bonuses"><i class="fa fa-check"></i><b>3.6</b> Skill Bonuses</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="character-building.html"><a href="character-building.html#ability-skill-bonus"><i class="fa fa-check"></i><b>3.6.1</b> Ability Skill Bonus</a></li>
+<li class="chapter" data-level="3.6.2" data-path="character-building.html"><a href="character-building.html#skill-training"><i class="fa fa-check"></i><b>3.6.2</b> Skill Training</a></li>
+<li class="chapter" data-level="3.6.3" data-path="character-building.html"><a href="character-building.html#armor-penalty-to-skill"><i class="fa fa-check"></i><b>3.6.3</b> Armor Penalty to Skill</a></li>
+<li class="chapter" data-level="3.6.4" data-path="character-building.html"><a href="character-building.html#other-skill-bonuses"><i class="fa fa-check"></i><b>3.6.4</b> Other Skill Bonuses</a></li>
+</ul></li>
+<li class="chapter" data-level="3.7" data-path="character-building.html"><a href="character-building.html#equipment-selection"><i class="fa fa-check"></i><b>3.7</b> Equipment selection</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="character-building.html"><a href="character-building.html#weapons"><i class="fa fa-check"></i><b>3.7.1</b> Weapons</a></li>
+<li class="chapter" data-level="3.7.2" data-path="character-building.html"><a href="character-building.html#armor"><i class="fa fa-check"></i><b>3.7.2</b> Armor</a></li>
+<li class="chapter" data-level="3.7.3" data-path="character-building.html"><a href="character-building.html#implements"><i class="fa fa-check"></i><b>3.7.3</b> Implements</a></li>
+</ul></li>
+<li class="chapter" data-level="3.8" data-path="character-building.html"><a href="character-building.html#feats"><i class="fa fa-check"></i><b>3.8</b> Feats</a></li>
+<li class="chapter" data-level="3.9" data-path="character-building.html"><a href="character-building.html#power-selection"><i class="fa fa-check"></i><b>3.9</b> Power selection</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="a-tibble-30-x-5.html"><a href="a-tibble-30-x-5.html"><i class="fa fa-check"></i><b>4</b> A tibble: 30 x 5</a><ul>
+<li class="chapter" data-level="4.1" data-path="a-tibble-30-x-5.html"><a href="a-tibble-30-x-5.html#stat-generation"><i class="fa fa-check"></i><b>4.1</b> Stat generation</a></li>
+<li class="chapter" data-level="4.2" data-path="a-tibble-30-x-5.html"><a href="a-tibble-30-x-5.html#levelling"><i class="fa fa-check"></i><b>4.2</b> Levelling</a></li>
+<li class="chapter" data-level="4.3" data-path="a-tibble-30-x-5.html"><a href="a-tibble-30-x-5.html#magic-items"><i class="fa fa-check"></i><b>4.3</b> Magic Items</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="adventuring.html"><a href="adventuring.html"><i class="fa fa-check"></i><b>5</b> Adventuring</a><ul>
+<li class="chapter" data-level="5.1" data-path="adventuring.html"><a href="adventuring.html#resource-management"><i class="fa fa-check"></i><b>5.1</b> Resource management</a></li>
+<li class="chapter" data-level="5.2" data-path="adventuring.html"><a href="adventuring.html#resting"><i class="fa fa-check"></i><b>5.2</b> Resting</a></li>
+<li class="chapter" data-level="5.3" data-path="adventuring.html"><a href="adventuring.html#resources-and-resting-summary"><i class="fa fa-check"></i><b>5.3</b> Resources and Resting Summary</a></li>
+<li class="chapter" data-level="5.4" data-path="adventuring.html"><a href="adventuring.html#dying"><i class="fa fa-check"></i><b>5.4</b> Dying</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="combat.html"><a href="combat.html"><i class="fa fa-check"></i><b>6</b> Combat</a><ul>
+<li class="chapter" data-level="6.1" data-path="combat.html"><a href="combat.html#combat-fundamentals"><i class="fa fa-check"></i><b>6.1</b> Combat Fundamentals</a></li>
+<li class="chapter" data-level="6.2" data-path="combat.html"><a href="combat.html#the-combat-map"><i class="fa fa-check"></i><b>6.2</b> The Combat Map</a><ul>
+<li class="chapter" data-level="6.2.1" data-path="combat.html"><a href="combat.html#distances"><i class="fa fa-check"></i><b>6.2.1</b> Distances</a></li>
+<li class="chapter" data-level="6.2.2" data-path="combat.html"><a href="combat.html#lines-bursts-blasts"><i class="fa fa-check"></i><b>6.2.2</b> Lines, Bursts, Blasts</a></li>
+<li class="chapter" data-level="6.2.3" data-path="combat.html"><a href="combat.html#line-of-sight-and-cover"><i class="fa fa-check"></i><b>6.2.3</b> Line of Sight and Cover</a></li>
+<li class="chapter" data-level="6.2.4" data-path="combat.html"><a href="combat.html#light-and-concealment"><i class="fa fa-check"></i><b>6.2.4</b> Light and Concealment</a></li>
+<li class="chapter" data-level="6.2.5" data-path="combat.html"><a href="combat.html#flanking"><i class="fa fa-check"></i><b>6.2.5</b> Flanking</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="combat.html"><a href="combat.html#combat-sequence"><i class="fa fa-check"></i><b>6.3</b> Combat Sequence</a><ul>
+<li class="chapter" data-level="6.3.1" data-path="combat.html"><a href="combat.html#rolling-initiative"><i class="fa fa-check"></i><b>6.3.1</b> Rolling Initiative</a></li>
+<li class="chapter" data-level="6.3.2" data-path="combat.html"><a href="combat.html#escalation"><i class="fa fa-check"></i><b>6.3.2</b> Escalation</a></li>
+</ul></li>
+<li class="chapter" data-level="6.4" data-path="combat.html"><a href="combat.html#resource-management-1"><i class="fa fa-check"></i><b>6.4</b> Resource Management</a><ul>
+<li class="chapter" data-level="6.4.1" data-path="combat.html"><a href="combat.html#at-will-encounter-and-daily-powers"><i class="fa fa-check"></i><b>6.4.1</b> At-Will, Encounter and Daily powers</a></li>
+<li class="chapter" data-level="6.4.2" data-path="combat.html"><a href="combat.html#action-points"><i class="fa fa-check"></i><b>6.4.2</b> Action Points</a></li>
+<li class="chapter" data-level="6.4.3" data-path="combat.html"><a href="combat.html#damage-incapacitation-and-healing"><i class="fa fa-check"></i><b>6.4.3</b> Damage, Incapacitation and Healing</a></li>
+</ul></li>
+<li class="chapter" data-level="6.5" data-path="combat.html"><a href="combat.html#actions"><i class="fa fa-check"></i><b>6.5</b> Actions</a><ul>
+<li class="chapter" data-level="6.5.1" data-path="combat.html"><a href="combat.html#reactions"><i class="fa fa-check"></i><b>6.5.1</b> Reactions</a></li>
+</ul></li>
+<li class="chapter" data-level="6.6" data-path="combat.html"><a href="combat.html#movement"><i class="fa fa-check"></i><b>6.6</b> Movement</a></li>
+<li class="chapter" data-level="6.7" data-path="combat.html"><a href="combat.html#attacking"><i class="fa fa-check"></i><b>6.7</b> Attacking</a><ul>
+<li class="chapter" data-level="6.7.1" data-path="combat.html"><a href="combat.html#range-and-targeting"><i class="fa fa-check"></i><b>6.7.1</b> Range and Targeting</a></li>
+<li class="chapter" data-level="6.7.2" data-path="combat.html"><a href="combat.html#hit-roll"><i class="fa fa-check"></i><b>6.7.2</b> Hit Roll</a></li>
+<li class="chapter" data-level="6.7.3" data-path="combat.html"><a href="combat.html#hit-modifiers"><i class="fa fa-check"></i><b>6.7.3</b> Hit Modifiers</a></li>
+<li class="chapter" data-level="6.7.4" data-path="combat.html"><a href="combat.html#damage-roll"><i class="fa fa-check"></i><b>6.7.4</b> Damage Roll</a></li>
+<li class="chapter" data-level="6.7.5" data-path="combat.html"><a href="combat.html#combat-conditions"><i class="fa fa-check"></i><b>6.7.5</b> Combat Conditions</a></li>
+<li class="chapter" data-level="6.7.6" data-path="combat.html"><a href="combat.html#forced-movement"><i class="fa fa-check"></i><b>6.7.6</b> Forced Movement</a></li>
+</ul></li>
+<li class="chapter" data-level="6.8" data-path="combat.html"><a href="combat.html#combat-maneuvers"><i class="fa fa-check"></i><b>6.8</b> Combat Maneuvers</a></li>
+<li class="chapter" data-level="6.9" data-path="combat.html"><a href="combat.html#combat-fundamentals-1"><i class="fa fa-check"></i><b>6.9</b> Combat Fundamentals</a></li>
+<li class="chapter" data-level="6.10" data-path="combat.html"><a href="combat.html#the-combat-map-1"><i class="fa fa-check"></i><b>6.10</b> The Combat Map</a><ul>
+<li class="chapter" data-level="6.10.1" data-path="combat.html"><a href="combat.html#distances-1"><i class="fa fa-check"></i><b>6.10.1</b> Distances</a></li>
+<li class="chapter" data-level="6.10.2" data-path="combat.html"><a href="combat.html#lines"><i class="fa fa-check"></i><b>6.10.2</b> Lines</a></li>
+<li class="chapter" data-level="6.10.3" data-path="combat.html"><a href="combat.html#close-and-area-powers-burst-blast-line"><i class="fa fa-check"></i><b>6.10.3</b> Close and Area powers: Burst, Blast, Line</a></li>
+<li class="chapter" data-level="6.10.4" data-path="combat.html"><a href="combat.html#line-of-sight-and-cover-1"><i class="fa fa-check"></i><b>6.10.4</b> Line of Sight and Cover</a></li>
+<li class="chapter" data-level="6.10.5" data-path="combat.html"><a href="combat.html#light-and-concealment-1"><i class="fa fa-check"></i><b>6.10.5</b> Light and Concealment</a></li>
+<li class="chapter" data-level="6.10.6" data-path="combat.html"><a href="combat.html#flanking-1"><i class="fa fa-check"></i><b>6.10.6</b> Flanking</a></li>
+</ul></li>
+<li class="chapter" data-level="6.11" data-path="combat.html"><a href="combat.html#combat-sequence-1"><i class="fa fa-check"></i><b>6.11</b> Combat Sequence</a><ul>
+<li class="chapter" data-level="6.11.1" data-path="combat.html"><a href="combat.html#grouping-monsters"><i class="fa fa-check"></i><b>6.11.1</b> Grouping monsters</a></li>
+<li class="chapter" data-level="6.11.2" data-path="combat.html"><a href="combat.html#defending-at-the-start-of-combat"><i class="fa fa-check"></i><b>6.11.2</b> Defending at the start of combat</a></li>
+<li class="chapter" data-level="6.11.3" data-path="combat.html"><a href="combat.html#rolling-initiative-1"><i class="fa fa-check"></i><b>6.11.3</b> Rolling Initiative</a></li>
+<li class="chapter" data-level="6.11.4" data-path="combat.html"><a href="combat.html#combat-escalation"><i class="fa fa-check"></i><b>6.11.4</b> Combat Escalation</a></li>
+<li class="chapter" data-level="6.11.5" data-path="combat.html"><a href="combat.html#rolling-initiative-mid-combat"><i class="fa fa-check"></i><b>6.11.5</b> Rolling Initiative mid-combat</a></li>
+</ul></li>
+<li class="chapter" data-level="6.12" data-path="combat.html"><a href="combat.html#resource-management-2"><i class="fa fa-check"></i><b>6.12</b> Resource Management</a><ul>
+<li class="chapter" data-level="6.12.1" data-path="combat.html"><a href="combat.html#at-will-encounter-and-daily-powers-1"><i class="fa fa-check"></i><b>6.12.1</b> At-Will, Encounter and Daily powers</a></li>
+<li class="chapter" data-level="6.12.2" data-path="combat.html"><a href="combat.html#action-points-1"><i class="fa fa-check"></i><b>6.12.2</b> Action Points</a></li>
+<li class="chapter" data-level="6.12.3" data-path="combat.html"><a href="combat.html#damage-incapacitation-and-healing-1"><i class="fa fa-check"></i><b>6.12.3</b> Damage, Incapacitation and Healing</a></li>
+</ul></li>
+<li class="chapter" data-level="6.13" data-path="combat.html"><a href="combat.html#actions-1"><i class="fa fa-check"></i><b>6.13</b> Actions</a></li>
+<li class="chapter" data-level="6.14" data-path="combat.html"><a href="combat.html#movement-1"><i class="fa fa-check"></i><b>6.14</b> Movement</a></li>
+<li class="chapter" data-level="6.15" data-path="combat.html"><a href="combat.html#attacking-1"><i class="fa fa-check"></i><b>6.15</b> Attacking</a><ul>
+<li class="chapter" data-level="6.15.1" data-path="combat.html"><a href="combat.html#range-and-targeting-1"><i class="fa fa-check"></i><b>6.15.1</b> Range and Targeting</a></li>
+<li class="chapter" data-level="6.15.2" data-path="combat.html"><a href="combat.html#hit-roll-1"><i class="fa fa-check"></i><b>6.15.2</b> Hit Roll</a></li>
+<li class="chapter" data-level="6.15.3" data-path="combat.html"><a href="combat.html#damage-roll-1"><i class="fa fa-check"></i><b>6.15.3</b> Damage Roll</a></li>
+</ul></li>
+<li class="chapter" data-level="6.16" data-path="combat.html"><a href="combat.html#status-effects"><i class="fa fa-check"></i><b>6.16</b> Status Effects</a><ul>
+<li class="chapter" data-level="6.16.1" data-path="combat.html"><a href="combat.html#downgrading-status-effects"><i class="fa fa-check"></i><b>6.16.1</b> Downgrading status effects</a></li>
+<li class="chapter" data-level="6.16.2" data-path="combat.html"><a href="combat.html#standard-status-effects"><i class="fa fa-check"></i><b>6.16.2</b> Standard Status Effects</a></li>
+<li class="chapter" data-level="6.16.3" data-path="combat.html"><a href="combat.html#stealth-status-effects"><i class="fa fa-check"></i><b>6.16.3</b> Stealth status effects</a></li>
+<li class="chapter" data-level="6.16.4" data-path="combat.html"><a href="combat.html#special-status-effects"><i class="fa fa-check"></i><b>6.16.4</b> Special Status Effects</a></li>
+<li class="chapter" data-level="6.16.5" data-path="combat.html"><a href="combat.html#legacy-status-effects"><i class="fa fa-check"></i><b>6.16.5</b> Legacy status effects</a></li>
+<li class="chapter" data-level="6.16.6" data-path="combat.html"><a href="combat.html#forced-attacks"><i class="fa fa-check"></i><b>6.16.6</b> Forced Attacks</a></li>
+</ul></li>
+<li class="chapter" data-level="6.17" data-path="combat.html"><a href="combat.html#forced-movement-1"><i class="fa fa-check"></i><b>6.17</b> Forced Movement</a><ul>
+<li class="chapter" data-level="6.17.1" data-path="combat.html"><a href="combat.html#push"><i class="fa fa-check"></i><b>6.17.1</b> Push</a></li>
+<li class="chapter" data-level="6.17.2" data-path="combat.html"><a href="combat.html#saving-against-forced-movement"><i class="fa fa-check"></i><b>6.17.2</b> Saving against Forced Movement</a></li>
+</ul></li>
+<li class="chapter" data-level="6.18" data-path="combat.html"><a href="combat.html#combat-maneuvers-1"><i class="fa fa-check"></i><b>6.18</b> Combat Maneuvers</a><ul>
+<li class="chapter" data-level="6.18.1" data-path="combat.html"><a href="combat.html#pc-maneuvers"><i class="fa fa-check"></i><b>6.18.1</b> PC Maneuvers</a></li>
+<li class="chapter" data-level="6.18.2" data-path="combat.html"><a href="combat.html#core-maneuvers"><i class="fa fa-check"></i><b>6.18.2</b> Core Maneuvers</a></li>
+<li class="chapter" data-level="6.18.3" data-path="combat.html"><a href="combat.html#miscellaneous-maneuvers"><i class="fa fa-check"></i><b>6.18.3</b> Miscellaneous Maneuvers</a></li>
+<li class="chapter" data-level="6.18.4" data-path="combat.html"><a href="combat.html#move-maneuvers"><i class="fa fa-check"></i><b>6.18.4</b> Move Maneuvers</a></li>
+<li class="chapter" data-level="6.18.5" data-path="combat.html"><a href="combat.html#stealth-maneuvers"><i class="fa fa-check"></i><b>6.18.5</b> Stealth Maneuvers</a></li>
+<li class="chapter" data-level="6.18.6" data-path="combat.html"><a href="combat.html#advanced-miscellaneous-maneuvers"><i class="fa fa-check"></i><b>6.18.6</b> Advanced Miscellaneous Maneuvers</a></li>
+<li class="chapter" data-level="6.18.7" data-path="combat.html"><a href="combat.html#advanced-move-maneuvers"><i class="fa fa-check"></i><b>6.18.7</b> Advanced Move Maneuvers</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="skills.html"><a href="skills.html"><i class="fa fa-check"></i><b>7</b> Skills</a><ul>
+<li class="chapter" data-level="7.1" data-path="skills.html"><a href="skills.html#skill-check-modifiers"><i class="fa fa-check"></i><b>7.1</b> Skill Check Modifiers</a></li>
+<li class="chapter" data-level="7.2" data-path="skills.html"><a href="skills.html#skill-actions"><i class="fa fa-check"></i><b>7.2</b> Skill Actions</a></li>
+<li class="chapter" data-level="7.3" data-path="skills.html"><a href="skills.html#skill-challenges"><i class="fa fa-check"></i><b>7.3</b> Skill Challenges</a></li>
+<li class="chapter" data-level="7.4" data-path="skills.html"><a href="skills.html#roleplaying-die-roll"><i class="fa fa-check"></i><b>7.4</b> Roleplaying die roll</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="origins.html"><a href="origins.html"><i class="fa fa-check"></i><b>8</b> Origins</a><ul>
+<li class="chapter" data-level="8.1" data-path="origins.html"><a href="origins.html#human"><i class="fa fa-check"></i><b>8.1</b> Human</a><ul>
+<li class="chapter" data-level="8.1.1" data-path="origins.html"><a href="origins.html#origin-stats"><i class="fa fa-check"></i><b>8.1.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.1.2" data-path="origins.html"><a href="origins.html#origin-features"><i class="fa fa-check"></i><b>8.1.2</b> Origin Features</a></li>
+</ul></li>
+<li class="chapter" data-level="8.2" data-path="origins.html"><a href="origins.html#elf"><i class="fa fa-check"></i><b>8.2</b> Elf</a><ul>
+<li class="chapter" data-level="8.2.1" data-path="origins.html"><a href="origins.html#origin-stats-1"><i class="fa fa-check"></i><b>8.2.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.2.2" data-path="origins.html"><a href="origins.html#origin-features-1"><i class="fa fa-check"></i><b>8.2.2</b> Origin Features</a></li>
+<li class="chapter" data-level="8.2.3" data-path="origins.html"><a href="origins.html#origin-powers"><i class="fa fa-check"></i><b>8.2.3</b> Origin Powers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.3" data-path="origins.html"><a href="origins.html#high-elf"><i class="fa fa-check"></i><b>8.3</b> High Elf</a><ul>
+<li class="chapter" data-level="8.3.1" data-path="origins.html"><a href="origins.html#origin-stats-2"><i class="fa fa-check"></i><b>8.3.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.3.2" data-path="origins.html"><a href="origins.html#origin-features-2"><i class="fa fa-check"></i><b>8.3.2</b> Origin Features</a></li>
+<li class="chapter" data-level="8.3.3" data-path="origins.html"><a href="origins.html#origin-powers-1"><i class="fa fa-check"></i><b>8.3.3</b> Origin Powers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.4" data-path="origins.html"><a href="origins.html#halfling"><i class="fa fa-check"></i><b>8.4</b> Halfling</a><ul>
+<li class="chapter" data-level="8.4.1" data-path="origins.html"><a href="origins.html#origin-stats-3"><i class="fa fa-check"></i><b>8.4.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.4.2" data-path="origins.html"><a href="origins.html#origin-features-3"><i class="fa fa-check"></i><b>8.4.2</b> Origin Features</a></li>
+<li class="chapter" data-level="8.4.3" data-path="origins.html"><a href="origins.html#origin-powers-2"><i class="fa fa-check"></i><b>8.4.3</b> Origin Powers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.5" data-path="origins.html"><a href="origins.html#dwarf"><i class="fa fa-check"></i><b>8.5</b> Dwarf</a><ul>
+<li class="chapter" data-level="8.5.1" data-path="origins.html"><a href="origins.html#origin-stats-4"><i class="fa fa-check"></i><b>8.5.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.5.2" data-path="origins.html"><a href="origins.html#origin-features-4"><i class="fa fa-check"></i><b>8.5.2</b> Origin Features</a></li>
+</ul></li>
+<li class="chapter" data-level="8.6" data-path="origins.html"><a href="origins.html#goliath"><i class="fa fa-check"></i><b>8.6</b> Goliath</a><ul>
+<li class="chapter" data-level="8.6.1" data-path="origins.html"><a href="origins.html#origin-stats-5"><i class="fa fa-check"></i><b>8.6.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.6.2" data-path="origins.html"><a href="origins.html#origin-features-5"><i class="fa fa-check"></i><b>8.6.2</b> Origin Features</a></li>
+<li class="chapter" data-level="8.6.3" data-path="origins.html"><a href="origins.html#origin-powers-3"><i class="fa fa-check"></i><b>8.6.3</b> Origin Powers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.7" data-path="origins.html"><a href="origins.html#orc"><i class="fa fa-check"></i><b>8.7</b> Orc</a><ul>
+<li class="chapter" data-level="8.7.1" data-path="origins.html"><a href="origins.html#origin-stats-6"><i class="fa fa-check"></i><b>8.7.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.7.2" data-path="origins.html"><a href="origins.html#origin-features-6"><i class="fa fa-check"></i><b>8.7.2</b> Origin Features</a></li>
+<li class="chapter" data-level="8.7.3" data-path="origins.html"><a href="origins.html#origin-powers-4"><i class="fa fa-check"></i><b>8.7.3</b> Origin Powers</a></li>
+</ul></li>
+<li class="chapter" data-level="8.8" data-path="origins.html"><a href="origins.html#dragonfolk"><i class="fa fa-check"></i><b>8.8</b> Dragonfolk</a><ul>
+<li class="chapter" data-level="8.8.1" data-path="origins.html"><a href="origins.html#origin-stats-7"><i class="fa fa-check"></i><b>8.8.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="8.8.2" data-path="origins.html"><a href="origins.html#origin-features-7"><i class="fa fa-check"></i><b>8.8.2</b> Origin Features</a></li>
+<li class="chapter" data-level="8.8.3" data-path="origins.html"><a href="origins.html#origin-powers-5"><i class="fa fa-check"></i><b>8.8.3</b> Origin Powers</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="classes.html"><a href="classes.html"><i class="fa fa-check"></i><b>9</b> Classes</a><ul>
+<li class="chapter" data-level="9.1" data-path="classes.html"><a href="classes.html#universal-powers"><i class="fa fa-check"></i><b>9.1</b> Universal Powers</a></li>
+<li class="chapter" data-level="9.2" data-path="classes.html"><a href="classes.html#barbarian"><i class="fa fa-check"></i><b>9.2</b> Barbarian</a><ul>
+<li class="chapter" data-level="9.2.1" data-path="classes.html"><a href="classes.html#barbarian-rager"><i class="fa fa-check"></i><b>9.2.1</b> Barbarian Rager</a></li>
+<li class="chapter" data-level="9.2.2" data-path="classes.html"><a href="classes.html#barbarian-berserker"><i class="fa fa-check"></i><b>9.2.2</b> Barbarian Berserker</a></li>
+</ul></li>
+<li class="chapter" data-level="9.3" data-path="classes.html"><a href="classes.html#fighter"><i class="fa fa-check"></i><b>9.3</b> Fighter</a><ul>
+<li class="chapter" data-level="9.3.1" data-path="classes.html"><a href="classes.html#fighter-guardian"><i class="fa fa-check"></i><b>9.3.1</b> Fighter Guardian</a></li>
+</ul></li>
+<li class="chapter" data-level="9.4" data-path="classes.html"><a href="classes.html#priest"><i class="fa fa-check"></i><b>9.4</b> Priest</a><ul>
+<li class="chapter" data-level="9.4.1" data-path="classes.html"><a href="classes.html#priest-of-light"><i class="fa fa-check"></i><b>9.4.1</b> Priest of Light</a></li>
+<li class="chapter" data-level="9.4.2" data-path="classes.html"><a href="classes.html#priest-of-luck"><i class="fa fa-check"></i><b>9.4.2</b> Priest of Luck</a></li>
+</ul></li>
+<li class="chapter" data-level="9.5" data-path="classes.html"><a href="classes.html#ranger"><i class="fa fa-check"></i><b>9.5</b> Ranger</a><ul>
+<li class="chapter" data-level="9.5.1" data-path="classes.html"><a href="classes.html#ranger-beastmaster"><i class="fa fa-check"></i><b>9.5.1</b> Ranger Beastmaster</a></li>
+<li class="chapter" data-level="9.5.2" data-path="classes.html"><a href="classes.html#ranger-archer"><i class="fa fa-check"></i><b>9.5.2</b> Ranger Archer</a></li>
+<li class="chapter" data-level="9.5.3" data-path="classes.html"><a href="classes.html#ranger---dual-weapon"><i class="fa fa-check"></i><b>9.5.3</b> Ranger - Dual Weapon</a></li>
+<li class="chapter" data-level="9.5.4" data-path="classes.html"><a href="classes.html#ranger---skirmisher"><i class="fa fa-check"></i><b>9.5.4</b> Ranger - Skirmisher</a></li>
+</ul></li>
+<li class="chapter" data-level="9.6" data-path="classes.html"><a href="classes.html#rogue"><i class="fa fa-check"></i><b>9.6</b> Rogue</a><ul>
+<li class="chapter" data-level="9.6.1" data-path="classes.html"><a href="classes.html#rogue-scoundrel"><i class="fa fa-check"></i><b>9.6.1</b> Rogue Scoundrel</a></li>
+</ul></li>
+<li class="chapter" data-level="9.7" data-path="classes.html"><a href="classes.html#warlock"><i class="fa fa-check"></i><b>9.7</b> Warlock</a><ul>
+<li class="chapter" data-level="9.7.1" data-path="classes.html"><a href="classes.html#shadow-warlock"><i class="fa fa-check"></i><b>9.7.1</b> Shadow Warlock</a></li>
+</ul></li>
+<li class="chapter" data-level="9.8" data-path="classes.html"><a href="classes.html#warlord"><i class="fa fa-check"></i><b>9.8</b> Warlord</a><ul>
+<li class="chapter" data-level="9.8.1" data-path="classes.html"><a href="classes.html#warlord-tactician"><i class="fa fa-check"></i><b>9.8.1</b> Warlord Tactician</a></li>
+</ul></li>
+<li class="chapter" data-level="9.9" data-path="classes.html"><a href="classes.html#wizard"><i class="fa fa-check"></i><b>9.9</b> Wizard</a><ul>
+<li class="chapter" data-level="9.9.1" data-path="classes.html"><a href="classes.html#wizard-elementalist"><i class="fa fa-check"></i><b>9.9.1</b> Wizard Elementalist</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="feats-1.html"><a href="feats-1.html"><i class="fa fa-check"></i><b>10</b> Feats</a><ul>
+<li class="chapter" data-level="10.1" data-path="feats-1.html"><a href="feats-1.html#level-1-combat-feats"><i class="fa fa-check"></i><b>10.1</b> Level 1 Combat Feats</a><ul>
+<li class="chapter" data-level="10.1.1" data-path="feats-1.html"><a href="feats-1.html#toughness"><i class="fa fa-check"></i><b>10.1.1</b> Toughness</a></li>
+<li class="chapter" data-level="10.1.2" data-path="feats-1.html"><a href="feats-1.html#category---defense-focus"><i class="fa fa-check"></i><b>10.1.2</b> Category - Defense Focus</a></li>
+<li class="chapter" data-level="10.1.3" data-path="feats-1.html"><a href="feats-1.html#category---offense-focus-weapon"><i class="fa fa-check"></i><b>10.1.3</b> Category - Offense Focus (Weapon)</a></li>
+<li class="chapter" data-level="10.1.4" data-path="feats-1.html"><a href="feats-1.html#category---offense-focus-implement"><i class="fa fa-check"></i><b>10.1.4</b> Category - Offense Focus (Implement)</a></li>
+<li class="chapter" data-level="10.1.5" data-path="feats-1.html"><a href="feats-1.html#category---offense-focus-flexible"><i class="fa fa-check"></i><b>10.1.5</b> Category - Offense Focus (Flexible)</a></li>
+<li class="chapter" data-level="10.1.6" data-path="feats-1.html"><a href="feats-1.html#category---class-focus"><i class="fa fa-check"></i><b>10.1.6</b> Category - Class Focus</a></li>
+<li class="chapter" data-level="10.1.7" data-path="feats-1.html"><a href="feats-1.html#multiclass-options"><i class="fa fa-check"></i><b>10.1.7</b> Multiclass Options</a></li>
+<li class="chapter" data-level="10.1.8" data-path="feats-1.html"><a href="feats-1.html#class-specialization-options"><i class="fa fa-check"></i><b>10.1.8</b> Class Specialization Options</a></li>
+</ul></li>
+<li class="chapter" data-level="10.2" data-path="feats-1.html"><a href="feats-1.html#level-1-optional-feats-training"><i class="fa fa-check"></i><b>10.2</b> Level 1 Optional Feats: Training</a><ul>
+<li class="chapter" data-level="10.2.1" data-path="feats-1.html"><a href="feats-1.html#category---armor-training"><i class="fa fa-check"></i><b>10.2.1</b> Category - Armor Training</a></li>
+<li class="chapter" data-level="10.2.2" data-path="feats-1.html"><a href="feats-1.html#category---weapon-training"><i class="fa fa-check"></i><b>10.2.2</b> Category - Weapon Training</a></li>
+</ul></li>
+<li class="chapter" data-level="10.3" data-path="feats-1.html"><a href="feats-1.html#level-4-combat-feats"><i class="fa fa-check"></i><b>10.3</b> Level 4 Combat Feats</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="feats-1.html"><a href="feats-1.html#level-4-defender-role-feats"><i class="fa fa-check"></i><b>10.3.1</b> Level 4 Defender Role Feats</a></li>
+<li class="chapter" data-level="10.3.2" data-path="feats-1.html"><a href="feats-1.html#level-4-controller-role-feats"><i class="fa fa-check"></i><b>10.3.2</b> Level 4 Controller Role Feats</a></li>
+<li class="chapter" data-level="10.3.3" data-path="feats-1.html"><a href="feats-1.html#level-4-leader-role-feats"><i class="fa fa-check"></i><b>10.3.3</b> Level 4 Leader Role Feats</a></li>
+<li class="chapter" data-level="10.3.4" data-path="feats-1.html"><a href="feats-1.html#level-4-striker-role-feats"><i class="fa fa-check"></i><b>10.3.4</b> Level 4 Striker Role Feats</a></li>
+</ul></li>
+<li class="chapter" data-level="10.4" data-path="feats-1.html"><a href="feats-1.html#level-11-combat-feats"><i class="fa fa-check"></i><b>10.4</b> Level 11 Combat Feats</a><ul>
+<li class="chapter" data-level="10.4.1" data-path="feats-1.html"><a href="feats-1.html#category---paragon-defense"><i class="fa fa-check"></i><b>10.4.1</b> Category - Paragon Defense</a></li>
+<li class="chapter" data-level="10.4.2" data-path="feats-1.html"><a href="feats-1.html#category---paragon-resource"><i class="fa fa-check"></i><b>10.4.2</b> Category - Paragon Resource</a></li>
+<li class="chapter" data-level="10.4.3" data-path="feats-1.html"><a href="feats-1.html#category---power-source"><i class="fa fa-check"></i><b>10.4.3</b> Category - Power Source</a></li>
+<li class="chapter" data-level="10.4.4" data-path="feats-1.html"><a href="feats-1.html#level-11-role-feats"><i class="fa fa-check"></i><b>10.4.4</b> Level 11 Role Feats</a></li>
+</ul></li>
+<li class="chapter" data-level="10.5" data-path="feats-1.html"><a href="feats-1.html#level-21-combat-feats"><i class="fa fa-check"></i><b>10.5</b> Level 21 Combat Feats</a><ul>
+<li class="chapter" data-level="10.5.1" data-path="feats-1.html"><a href="feats-1.html#category---epic-might"><i class="fa fa-check"></i><b>10.5.1</b> Category - Epic Might</a></li>
+<li class="chapter" data-level="10.5.2" data-path="feats-1.html"><a href="feats-1.html#category---epic-specialization"><i class="fa fa-check"></i><b>10.5.2</b> Category - Epic Specialization</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="magic-items-1.html"><a href="magic-items-1.html"><i class="fa fa-check"></i><b>11</b> Magic Items</a><ul>
+<li class="chapter" data-level="11.1" data-path="magic-items-1.html"><a href="magic-items-1.html#magic-weapons"><i class="fa fa-check"></i><b>11.1</b> Magic Weapons</a></li>
+<li class="chapter" data-level="11.2" data-path="magic-items-1.html"><a href="magic-items-1.html#magic-implements"><i class="fa fa-check"></i><b>11.2</b> Magic Implements</a></li>
+<li class="chapter" data-level="11.3" data-path="magic-items-1.html"><a href="magic-items-1.html#magic-armor"><i class="fa fa-check"></i><b>11.3</b> Magic Armor</a></li>
+<li class="chapter" data-level="11.4" data-path="magic-items-1.html"><a href="magic-items-1.html#neck-items"><i class="fa fa-check"></i><b>11.4</b> Neck Items</a></li>
+<li class="chapter" data-level="11.5" data-path="magic-items-1.html"><a href="magic-items-1.html#feet-items"><i class="fa fa-check"></i><b>11.5</b> Feet Items</a></li>
+<li class="chapter" data-level="11.6" data-path="magic-items-1.html"><a href="magic-items-1.html#waist-items"><i class="fa fa-check"></i><b>11.6</b> Waist Items</a></li>
+<li class="chapter" data-level="11.7" data-path="magic-items-1.html"><a href="magic-items-1.html#head-items"><i class="fa fa-check"></i><b>11.7</b> Head Items</a></li>
+<li class="chapter" data-level="11.8" data-path="magic-items-1.html"><a href="magic-items-1.html#arms-items"><i class="fa fa-check"></i><b>11.8</b> Arms Items</a></li>
+<li class="chapter" data-level="11.9" data-path="magic-items-1.html"><a href="magic-items-1.html#hands-items"><i class="fa fa-check"></i><b>11.9</b> Hands Items</a></li>
+<li class="chapter" data-level="11.10" data-path="magic-items-1.html"><a href="magic-items-1.html#magic-rings"><i class="fa fa-check"></i><b>11.10</b> Magic Rings</a></li>
+<li class="chapter" data-level="11.11" data-path="magic-items-1.html"><a href="magic-items-1.html#wondrous-items"><i class="fa fa-check"></i><b>11.11</b> Wondrous Items</a></li>
+<li class="chapter" data-level="11.12" data-path="magic-items-1.html"><a href="magic-items-1.html#consumable-items"><i class="fa fa-check"></i><b>11.12</b> Consumable Items</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="monsters.html"><a href="monsters.html"><i class="fa fa-check"></i><b>12</b> Monsters</a><ul>
+<li class="chapter" data-level="12.1" data-path="monsters.html"><a href="monsters.html#standard-monsters"><i class="fa fa-check"></i><b>12.1</b> Standard Monsters</a><ul>
+<li class="chapter" data-level="12.1.1" data-path="monsters.html"><a href="monsters.html#monster-races---heroic-humanoid"><i class="fa fa-check"></i><b>12.1.1</b> Monster Races - Heroic, Humanoid</a></li>
+<li class="chapter" data-level="12.1.2" data-path="monsters.html"><a href="monsters.html#monster-races---heroic-undead"><i class="fa fa-check"></i><b>12.1.2</b> Monster Races - Heroic, Undead</a></li>
+<li class="chapter" data-level="12.1.3" data-path="monsters.html"><a href="monsters.html#monster-races---heroic-beast"><i class="fa fa-check"></i><b>12.1.3</b> Monster Races - Heroic, Beast</a></li>
+<li class="chapter" data-level="12.1.4" data-path="monsters.html"><a href="monsters.html#monster-races---heroic-other"><i class="fa fa-check"></i><b>12.1.4</b> Monster Races - Heroic, Other</a></li>
+<li class="chapter" data-level="12.1.5" data-path="monsters.html"><a href="monsters.html#monster-classes---mundane"><i class="fa fa-check"></i><b>12.1.5</b> Monster Classes - Mundane</a></li>
+<li class="chapter" data-level="12.1.6" data-path="monsters.html"><a href="monsters.html#monster-classes---humanoid"><i class="fa fa-check"></i><b>12.1.6</b> Monster Classes - Humanoid</a></li>
+<li class="chapter" data-level="12.1.7" data-path="monsters.html"><a href="monsters.html#monster-classes---elemental"><i class="fa fa-check"></i><b>12.1.7</b> Monster Classes - Elemental</a></li>
+</ul></li>
+<li class="chapter" data-level="12.2" data-path="monsters.html"><a href="monsters.html#minion-monsters"><i class="fa fa-check"></i><b>12.2</b> Minion Monsters</a><ul>
+<li class="chapter" data-level="12.2.1" data-path="monsters.html"><a href="monsters.html#minion-races-heroic-humanoid"><i class="fa fa-check"></i><b>12.2.1</b> Minion Races, Heroic Humanoid</a></li>
+<li class="chapter" data-level="12.2.2" data-path="monsters.html"><a href="monsters.html#minion-races-heroic-undead"><i class="fa fa-check"></i><b>12.2.2</b> Minion Races, Heroic Undead</a></li>
+<li class="chapter" data-level="12.2.3" data-path="monsters.html"><a href="monsters.html#minion-races-heroic-beast"><i class="fa fa-check"></i><b>12.2.3</b> Minion Races, Heroic Beast</a></li>
+<li class="chapter" data-level="12.2.4" data-path="monsters.html"><a href="monsters.html#minion-races-heroic-other"><i class="fa fa-check"></i><b>12.2.4</b> Minion Races, Heroic Other</a></li>
+<li class="chapter" data-level="12.2.5" data-path="monsters.html"><a href="monsters.html#minion-classes"><i class="fa fa-check"></i><b>12.2.5</b> Minion Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="12.3" data-path="monsters.html"><a href="monsters.html#elite-monsters"><i class="fa fa-check"></i><b>12.3</b> Elite Monsters</a><ul>
+<li class="chapter" data-level="12.3.1" data-path="monsters.html"><a href="monsters.html#elite-monster-templates"><i class="fa fa-check"></i><b>12.3.1</b> Elite Monster Templates:</a></li>
+<li class="chapter" data-level="12.3.2" data-path="monsters.html"><a href="monsters.html#elite-monster-classes"><i class="fa fa-check"></i><b>12.3.2</b> Elite Monster Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="12.4" data-path="monsters.html"><a href="monsters.html#solo-monsters"><i class="fa fa-check"></i><b>12.4</b> Solo Monsters</a><ul>
+<li class="chapter" data-level="12.4.1" data-path="monsters.html"><a href="monsters.html#solo-monster-races---dragon"><i class="fa fa-check"></i><b>12.4.1</b> Solo Monster Races - Dragon</a></li>
+<li class="chapter" data-level="12.4.2" data-path="monsters.html"><a href="monsters.html#solo-monster-classes"><i class="fa fa-check"></i><b>12.4.2</b> Solo Monster Classes</a></li>
+</ul></li>
+<li class="chapter" data-level="12.5" data-path="monsters.html"><a href="monsters.html#other-templates"><i class="fa fa-check"></i><b>12.5</b> Other Templates</a></li>
+<li class="chapter" data-level="12.6" data-path="monsters.html"><a href="monsters.html#base-stats"><i class="fa fa-check"></i><b>12.6</b> Base Stats</a><ul>
+<li class="chapter" data-level="12.6.1" data-path="monsters.html"><a href="monsters.html#race---heroic"><i class="fa fa-check"></i><b>12.6.1</b> Race - Heroic</a></li>
+<li class="chapter" data-level="12.6.2" data-path="monsters.html"><a href="monsters.html#class"><i class="fa fa-check"></i><b>12.6.2</b> Class</a></li>
+<li class="chapter" data-level="12.6.3" data-path="monsters.html"><a href="monsters.html#minion-race---heroic"><i class="fa fa-check"></i><b>12.6.3</b> Minion Race - Heroic</a></li>
+<li class="chapter" data-level="12.6.4" data-path="monsters.html"><a href="monsters.html#minion-class"><i class="fa fa-check"></i><b>12.6.4</b> Minion Class</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="reference-tables.html"><a href="reference-tables.html"><i class="fa fa-check"></i><b>13</b> Reference Tables</a><ul>
+<li class="chapter" data-level="13.1" data-path="reference-tables.html"><a href="reference-tables.html#reference---skills"><i class="fa fa-check"></i><b>13.1</b> Reference - Skills</a></li>
+<li class="chapter" data-level="13.2" data-path="reference-tables.html"><a href="reference-tables.html#reference---combat"><i class="fa fa-check"></i><b>13.2</b> Reference - Combat</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Square Fireballs - Roleplaying Game</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="a-tibble-30-x-5" class="section level1">
+<h1><span class="header-section-number">Chapter 4</span> A tibble: 30 x 5</h1>
+<p>Level <code>Powers Acquired</code> <code>Encounter Atta~</code>Daily Attacks` Utilities
+<chr> <chr> <chr> <chr> <chr><br />
+1 1 Gain 2 At-Will attacks.&lt;br/~ 1 1 <NA><br />
+2 2 Gain Level 2 Utility. 1 1 2<br />
+3 3 Gain Level 3 Encounter Atta~ 1, 3 1 2<br />
+4 4 <NA> 1, 3 1 2<br />
+5 5 Gain Level 5 Daily Attack. 1, 3 1, 5 2<br />
+6 6 Gain Level 6 Utility. 1, 3 1, 5 2, 6<br />
+7 7 Gain Level 7 Encounter Atta~ 1, 3, 7 1, 5 2, 6<br />
+8 8 <NA> 1, 3, 7 1, 5 2, 6<br />
+9 9 Gain Level 9 Daily Attack. 1, 3, 7 1, 5, 9 2, 6<br />
+10 10 Gain Level 10 Utility. 1, 3, 7 1, 5, 9 2, 6, 10
+# … with 20 more rows</p>
+<div id="stat-generation" class="section level2">
+<h2><span class="header-section-number">4.1</span> Stat generation</h2>
+</div>
+<div id="levelling" class="section level2">
+<h2><span class="header-section-number">4.2</span> Levelling</h2>
+</div>
+<div id="magic-items" class="section level2">
+<h2><span class="header-section-number">4.3</span> Magic Items</h2>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="character-building.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="adventuring.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/capelastegui/sfrpg/edit/master/1-2-CharacterBuilding.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

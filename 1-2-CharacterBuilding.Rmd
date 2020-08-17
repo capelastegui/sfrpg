@@ -740,6 +740,7 @@ Each Feat is composed of the following elements:
 
 
 Feats can have the following special properties:
+
 - **Unrestricted**: A character can take multiple Unrestricted feats within the same category.
 - **Repeatable**: A Feat with this property can be taken multiple times. (This also ignores the
   one feat per category limit).
@@ -842,6 +843,17 @@ Each Combat Feat slot can be used to gain a Feat with a level equal or lower to 
 
 
 ## Power selection
+
+The following table summarizes the acquisition of power slots per character level, for classes with standard levelling progression. Note that there are classes with non-standard progressions - the powers gained per level for these classes are listed as part of the class description.
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_power_progression <- read_my_csv('progression_powers')
+df_power_progression %>% build_table_apply() %>% cat()
+
+```
+
+
 ## Stat generation
 ## Levelling 
 ## Magic Items

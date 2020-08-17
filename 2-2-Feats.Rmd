@@ -182,6 +182,12 @@ df_feats_raw %>% dplyr::filter(Category=='Role: Leader Offense') %>% get_htm_fea
 df_feats_raw %>% dplyr::filter(Category=='Role: Striker Resource') %>% get_htm_feat() %>% cat()
 ```
 
+## Level 18 Combat Feats{.newPage}
+### Category - Paragon Utility
+```{r paragon_uti, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Paragon Utility') %>% get_htm_feat() %>% cat()
+```
+
 ## Level 21 Combat Feats{.newPage}
 
 ### Category - Epic Might
@@ -194,7 +200,11 @@ df_feats_raw %>% dplyr::filter(Category=='Epic Might') %>% get_htm_feat() %>% ca
 df_feats_raw %>% dplyr::filter(Category=='Epic Specialization') %>% get_htm_feat() %>% cat()
 ```
 
-
+## Level 28 Combat Feats{.newPage}
+### Category - Epic Utility
+```{r epic_uti, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_feats_raw %>% dplyr::filter(Category=='Epic Utility') %>% get_htm_feat() %>% cat()
+```
 
 
 

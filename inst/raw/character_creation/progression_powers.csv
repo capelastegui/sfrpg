@@ -1,0 +1,31 @@
+Level,Powers Acquired,Encounter Attacks,Daily Attacks,Utilities
+1,Gain 2 At-Will attacks.<br/>Gain Level 1 Encounter attack.<br/>Gain Level 1 Daily attack.,1,1,NA
+2,Gain Level 2 Utility.,1,1,2
+3,Gain Level 3 Encounter Attack.,"1, 3",1,2
+4,,"1, 3",1,2
+5,Gain Level 5 Daily Attack.,"1, 3","1, 5",2
+6,Gain Level 6 Utility.,"1, 3","1, 5","2, 6"
+7,Gain Level 7 Encounter Attack.,"1, 3, 7","1, 5","2, 6"
+8,,"1, 3, 7","1, 5","2, 6"
+9,Gain Level 9 Daily Attack.,"1, 3, 7","1, 5, 9","2, 6"
+10,Gain Level 10 Utility.,"1, 3, 7","1, 5, 9","2, 6, 10"
+11,Gain Paragon Path Encounter Attack.,"1, 3, 7, pp11","1, 5, 9","2, 6, 10"
+12,Gain Paragon Path Utility.,"1, 3, 7, pp11","1, 5, 9","2, 6, 10, pp12"
+13,Upgrade - Level 13 Encounter Attack.,"3, 7, 13, pp11","1, 5, 9","2, 6, 10, pp12"
+14,,"3, 7, 13, pp11","1, 5, 9","2, 6, 10, pp12"
+15,Upgrade: Level 15 Daily Attack.,"3, 7, 13, pp11","5, 9, 15","2, 6, 10, pp12"
+16,Upgrade: Level 16 Utility.,"3, 7, 13, pp11","5, 9, 15","6, 10, 16, pp12"
+17,Upgrade: Level 17 Encounter Attack.,"7, 13, 17, pp11","5, 9, 15","6, 10, 16, pp12"
+18,,"7, 13, 17, pp11","5, 9, 15","6, 10, 16, pp12"
+19,Upgrade: Level 19 Daily Attack.,"7, 13, 17, pp11","9, 15, 19","6, 10, 16, pp12"
+20,Gain Paragon Path Daily Attack.,"7, 13, 17, pp11","9, 15, 19, pp20","6, 10, 16, pp12"
+21,,"7, 13, 17, pp11","9, 15, 19, pp20","6, 10, 16, pp12"
+22,Upgrade: Level 22 Utility.,"7, 13, 17, pp11","9, 15, 19, pp20","10, 16, 22, pp12"
+23,Upgrade: Level 23 Encounter Attack.,"13, 17, 23, pp11","9, 15, 19, pp20","10, 16, 22, pp12"
+24,,"13, 17, 23, pp11","9, 15, 19, pp20","10, 16, 22, pp12"
+25,Upgrade: Level 25 Daily Attack.,"13, 17, 23, pp11","15, 19, 25, pp20","10, 16, 22, pp12"
+26,Gain Epic Destiny Utility,"13, 17, 23, pp11","15, 19, 25, pp20","10, 16, 22, pp12, ed26"
+27,Upgrade: Level 27 Encounter Attack.,"17, 23, 27, pp11","15, 19, 25, pp20","10, 16, 22, pp12, ed26"
+28,,"17, 23, 27, pp11","15, 19, 25, pp20","10, 16, 22, pp12, ed26"
+29,Upgrade: Level 29 Daily Attack.,"17, 23, 27, pp11","19, 25, 29, pp20","10, 16, 22, pp12, ed26"
+30,,"17, 23, 27, pp11","19, 25, 29, pp20","10, 16, 22, pp12, ed26"

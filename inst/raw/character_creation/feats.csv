@@ -305,6 +305,7 @@ Psionic Versatility,Paragon Resource,11,Psi,Psi power source,"When using a psion
 You gain an additional Level 1 At-will attack power.","On first use of psionic At-Will attack power+1 hit with that power.
 You gain an additional Level 1 At-will attack power."
 Shadow Ghost,Paragon Resource,11,Shadow,Shadow power source,"When using Total Defense or Second Wind, gain Insubstantial until the start of next turn.","On Total Defense or Second Wind, gain Insubstantial."
+Paragon Utility,Paragon Utility,18,Epic,NA,"Gain a Level 10 Utility Power.","Gain a Level 10 Utility"
 Epic Specialization,Epic Specialization,21,Epic,NA,"Choose a Feat Category of any feat that you have. You gain an additional feat from that category.",Gain additional feat from a category you already have.
 Larger than life,Epic Might,21,Epic,NA,"In combat, you occupy space as a Large creature (2x2 squares).
 Your reach with all melee and touch attacks is increased by 1.
@@ -320,6 +321,7 @@ Epic Explosion,Epic Might,21,Epic,NA,"Once per encounter, you may spend a Minor 
 Epic Cleave,Epic Might,21,Epic,NA,"During your turn, your melee and ranged attacks that target at least 1 Minion can target an additional enemy.
 You ignore all resistances from Swarm monsters.","Your attacks target minions for free, ignore Swarm resistances."
 Epic Chase,Epic Might,21,Epic,NA,"While Charging, until end of turn you gain Fly Speed equal to your Speed +4, are immune to fall damage, and downgrade Slowed and Immobilised.","While charging, Fly, gain Speed, and downgrade conditions"
+Epic Utility,Epic Utility,28,Epic,NA,"Gain a Level 16 Utility Power.","Gain a Level 16 Utility"
 Multiclass,Class Focus,1,Multiclass,NA,"Choose a class build other than yours, provided you have an ability score of 1 or higher in its primary ability. That class becomes your multiclass. You count as having the class, power source and role of your multiclass, in addition to those of your main class.
 - Add all Class Skills from your multiclass to your Class Skill List.
 - Gain all Implement Training from the chosen class, and all Weapon Training in basic weapons (but not martial weapons) from that class.

@@ -1,0 +1,67 @@
+Level,Summary,Features,Encounter Attacks,Daily Attacks,Utilities,Combat Feat,Adventure Feat,Ability Damage Modifier,Damage Die Increase,Damage Die Multiplier,HP-Low,HP-Medium,HP-High
+1,"Choose Race
+Gain Race Features
+Gain Race Power
+Choose Class
+Gain Class Features
+Gain 2 Level 1 At-Will Attacks
+Gain Level 1 Encounter Attack
+Gain Level 1 Daily Attack
+Gain Level 1 Combat Feat",Class Features,1,1,NA,1,NA,x1,Normal die,x1,22,27,33
+2,"Gain Level 2 Utility
+Gain Level 2 Adventure Feat",NA,1,1,2,1,2,NA,Normal die,x1,24,30,36
+3,"Gain Level 3 Encounter Attack
+Upgrade Ability Damage Modifier: x1 to x1.5",NA,"1, 3",1,2,1,2,x1.5,Normal die,x1,26,32,39
+4,Gain Level 4 Combat Feat,NA,"1, 3",1,2,"1, 4",2,NA,Normal die,x1,28,35,42
+5,Gain Level 5 Daily Attack,NA,"1, 3","1, 5",2,"1, 4",2,NA,Normal die,x1,30,37,45
+6,"Gain Level 6 Utility
+Gain Level 6 Adventure Feat
+Upgrade Damage die: Increased die",NA,"1, 3","1, 5","2, 6","1, 4","2, 6",NA,Increased die,x1,32,40,48
+7,Gain Level 7 Encounter Attack,NA,"1, 3, 7","1, 5","2, 6","1, 4","2, 6",NA,Increased die,x1,34,42,51
+8,Gain Level 8 Combat Feat,NA,"1, 3, 7","1, 5","2, 6","1, 4, 8","2, 6",NA,Increased die,x1,36,45,54
+9,"Gain Level 9 Daily Attack
+Upgrade Ability Damage Modifier: x1.5 to x2",NA,"1, 3, 7","1, 5, 9","2, 6","1, 4, 8","2, 6",x2,Increased die,x1,38,47,57
+10,"Gain Level 10 Utility
+Gain Level 10 Adventure Feat",NA,"1, 3, 7","1, 5, 9","2, 6, 10","1, 4, 8","2, 6, 10",NA,Increased die,x1,40,50,60
+11,"Choose Paragon Path
+Gain Paragon Path Level 11 Features
+Gain Paragon Path Level 11 Encounter Attack
+Gain Level 11 Combat Feat
+Upgrade Ability Damage Modifier: x2 to x2.5",Paragon Path Features 11,"1, 3, 7, pp11","1, 5, 9","2, 6, 10","1, 4, 8, 11","2, 6, 10",x2.5,Increased die,x1,44,55,66
+12,"Gain Paragon Path Level 12 Utility
+Gain Level 12 Adventure Feat",NA,"1, 3, 7, pp11","1, 5, 9","2, 6, 10, pp12","1, 4, 8, 11","2, 6, 10, 12",NA,Increased die,x1,48,60,72
+13,Upgrade: Level 1 Encounter Attack to Level 13,NA,"3, 7, 13, pp11","1, 5, 9","2, 6, 10, pp12","1, 4, 8, 11","2, 6, 10, 12",NA,Increased die,x1,52,65,78
+14,"Gain Level 14 Combat Feat
+Upgrade Ability Damage Modifier: x2.5 to x3",NA,"3, 7, 13, pp11","1, 5, 9","2, 6, 10, pp12","1, 4, 8, 11, 14","2, 6, 10, 12",x3,Increased die,x1,56,70,84
+15,Upgrade: Level 1 Daily Attack to Level 15,NA,"3, 7, 13, pp11","5, 9, 15","2, 6, 10, pp12","1, 4, 8, 11, 14","2, 6, 10, 12",NA,Increased die,x1,60,75,90
+16,"Gain Paragon Path Level 16 Feature
+Gain Level 16 Utility
+Gain Level 16 Adventure Feat
+Damage die: Normal die, x2 damage (from Increased die, x1 damage)",Paragon Path Feature 16,"3, 7, 13, pp11","5, 9, 15","6, 10, 16, pp12","1, 4, 8, 11, 14","2, 6, 10, 12, 16",NA,Normal die,x2,64,80,96
+17,Upgrade: Level 3 Encounter Attack to Level 17,NA,"7, 13, 17, pp11","5, 9, 15","6, 10, 16, pp12","1, 4, 8, 11, 14","2, 6, 10, 12, 16",x3.5,Normal die,x2,68,85,102
+18,Gain Level 18 Combat Feat,NA,"7, 13, 17, pp11","5, 9, 15","6, 10, 16, pp12","1, 4, 8, 11, 14, 18","2, 6, 10, 12, 16",NA,Normal die,x2,72,90,108
+19,"Upgrade: Level 5 Daily Attack to Level 19
+Upgrade Ability Damage Modifier: x3.5 to x4",NA,"7, 13, 17, pp11","9, 15, 19","6, 10, 16, pp12","1, 4, 8, 11, 14, 18","2, 6, 10, 12, 16",x4,Normal die,x2,76,95,114
+20,"Gain Paragon Path Level 20 Daily Attack
+Gain Level 20 Adventure Feat",NA,"7, 13, 17, pp11","9, 15, 19, pp20","6, 10, 16, pp12","1, 4, 8, 11, 14, 18","2, 6, 10, 12, 16, 20",NA,Normal die,x2,80,100,120
+21,"Choose Epic Destiny
+Gain Epic Destiny Level 21 Feature
+Gain Level 21 Combat Feat
+Upgrade Ability Damage Modifier: x4 to x4.5",Epic Destiny Feature 21,"7, 13, 17, pp11","9, 15, 19, pp20","6, 10, 16, pp12","1, 4, 8, 11, 14, 18, 21","2, 6, 10, 12, 16, 20",x4.5,Normal die,x2,88,110,132
+22,"Gain Level 22 Utility
+Gain Level 22 Adventure Feat",NA,"7, 13, 17, pp11","9, 15, 19, pp20","10, 16, 22, pp12","1, 4, 8, 11, 14, 18, 21","2, 6, 10, 12, 16, 20, 22",NA,Normal die,x2,96,120,144
+23,Upgrade: Level 7 Encounter Attack to Level 23,NA,"13, 17, 23, pp11","9, 15, 19, pp20","10, 16, 22, pp12","1, 4, 8, 11, 14, 18, 21","2, 6, 10, 12, 16, 20, 22",NA,Normal die,x2,104,130,156
+24,"Gain Epic Destiny Level 24 Feature 
+Gain Level 24 Combat Feat
+Upgrade Ability Damage Modifier: x4.5 to x5",Epic Destiny Feature 24,"13, 17, 23, pp11","9, 15, 19, pp20","10, 16, 22, pp12","1, 4, 8, 11, 14, 18, 21, 24","2, 6, 10, 12, 16, 20, 22",x5,Normal die,x2,112,140,168
+25,Upgrade: Level 9 Daily Attack to Level 25,NA,"13, 17, 23, pp11","15, 19, 25, pp20","10, 16, 22, pp12","1, 4, 8, 11, 14, 18, 21, 24","2, 6, 10, 12, 16, 20, 22",NA,Normal die,x2,120,150,180
+26,"Gain Epic Destiny Level 26 Utility 
+Gain Level 26 Adventure Feat
+Upgrade Damage die: Increased die, x2 damage (from Normal die, x2 damage)",NA,"13, 17, 23, pp11","15, 19, 25, pp20","10, 16, 22, pp12, ed26","1, 4, 8, 11, 14, 18, 21, 24","2, 6, 10, 12, 16, 20, 22, 26",NA,Increased die,x2,128,160,192
+27,"Upgrade: Level 13 Encounter Attack to Level 27
+Upgrade Ability Damage Modifier: x5 to x5.5",NA,"17, 23, 27, pp11","15, 19, 25, pp20","10, 16, 22, pp12, ed26","1, 4, 8, 11, 14, 18, 21, 24","2, 6, 10, 12, 16, 20, 22, 26",x5.5,Increased die,x2,136,170,204
+28,Gain Level 28 Combat Feat,NA,"17, 23, 27, pp11","15, 19, 25, pp20","10, 16, 22, pp12, ed26","1, 4, 8, 11, 14, 18, 21, 24, 28","2, 6, 10, 12, 16, 20, 22, 26",NA,Increased die,x2,144,180,216
+29,"Upgrade: Level 15 Daily Attack to Level 29
+Upgrade Ability Damage Modifier: x5.5 to x6",NA,"17, 23, 27, pp11","19, 25, 29, pp20","10, 16, 22, pp12, ed26","1, 4, 8, 11, 14, 18, 21, 24, 28","2, 6, 10, 12, 16, 20, 22, 26",x6,Increased die,x2,152,190,228
+30,"Gain Epic Destiny Level 30 Feature
+Gain Level 30 Adventure Feat",Epic Destiny Feature 30,"17, 23, 27, pp11","19, 25, 29, pp20","10, 16, 22, pp12, ed26","1, 4, 8, 11, 14, 18, 21, 24, 28","2, 6, 10, 12, 16, 20, 22, 26, 30",NA,Increased die,x2,160,200,240
