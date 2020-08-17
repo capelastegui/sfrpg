@@ -98,9 +98,9 @@ test_that('gsub_colwise works',{
 test_that('refactor works',{
   df_in = tibble::tibble(x=c('hello','world'),y=c('a', 'o')) %>% 
     dplyr::mutate(x=x %>% factor)
-  df_result = df_in %>% head(1) %>% refactor
+  df_result = df_in %>% head(1) %>% refactor()
   df_expected = tibble::tibble(x=c('hello'),y=c('a')) %>% 
-    dplyr::mutate(x=x %>% factor) %>% as.data.frame()
+    dplyr::mutate(x=x %>% factor) 
   expect_equal(df_result, df_expected)
   
 })
