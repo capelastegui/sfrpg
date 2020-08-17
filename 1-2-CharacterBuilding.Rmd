@@ -853,6 +853,9 @@ df_power_progression %>% build_table_apply() %>% cat()
 
 ```
 
+<div class="compatibility">**Compatibility Note**: This is mostly the same progression used in legacy rules, except
+that utility power slots at levels 16, 26 used to be additional slots and are now upgrade slots. Characters have the
+option of taking feats (Paragon Utility, Epic Utility) to gain back these power slots.</div>
 
 ## Stat generation
 ## Levelling 
