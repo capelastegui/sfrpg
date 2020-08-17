@@ -162,6 +162,7 @@ mnv_core,mnv_shift
 mnv_bas_msc,mnv_draw
 mnv_bas_msc,mnv_qdraw
 mnv_bas_msc,mnv_blank
+mnv_bas_msc,mnv_alarm
 mnv_bas_mov,mnv_charge
 mnv_bas_mov,mnv_stnup
 mnv_bas_mov,mnv_run

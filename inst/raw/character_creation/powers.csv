@@ -154,6 +154,7 @@ mnv_shift,Shift,NA,,Utility,,,,Move Action,,,,,,,,"Shift 1. If you move away fro
 mnv_draw,Draw,NA,,Utility,,,,Move Action,,,,,,,,"Move 1. Sheathe or store any number of items from your hands. Draw, or pick up from the ground, up to one item per hand.",,,,"Move 1. Sheathe items, then draw items."
 mnv_qdraw,Quick Draw,NA,,Utility,,,,Minor Action,,,,,,,,Drop any number of items from your hands. Draw up to one item per hand. You are Hindered this turn.<br>,,,,"Drop Items, then draw items. Hindered."
 mnv_blank,Point Blank Shot,NA,,Utility,,,,Minor Action,,,,,,,,"Until end of turn, you are Hindered, and making Ranged or Area attacks targeting adjacent enemies does not provoke opportunity attacks",,,,"Hindered, and can use Ranged attack in melee."
+mnv_alarm,Raise the Alarm,NA,,Utility,,,,Minor Action,,Close Burst 5,allies in burst,,,,,Each Surprised target can Roll a Save against the Surprised condition.,,,,"Warn Surprised allies."
 # Basic Move Maneuvers,,,,,,,,,,,,,,,,,,,,
 mnv_charge,Charge,NA,,Attack,,,,Standard Action,,,,,,,,You are Hindered. Move your Speed and make a Melee Basic Attack. You can't move this turn,,,,Hindered and Dazed. Move Speed and make Melee Basic Attack.
 mnv_stnup,Stand Up,NA,,Utility,,,,Move Action,,,,,,,,"You stop being Prone, and you are Hindered this turn. Move 1",,,,"Hindered. No longer Prone, Move 1."

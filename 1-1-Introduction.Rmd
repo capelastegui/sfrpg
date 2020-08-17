@@ -520,8 +520,8 @@ Note that, in addition to Player Characters, some special monsters such as
 
 ### Escalation Die
  
-For each encounter, the GM keeps track of how many turns have passed 
-since the encounter started. At the start of the third turn, the GM
+For each encounter, the GM keeps track of how many rounds have passed
+since the encounter started. At the start of the third round, the GM
 takes a special d4 called the Escalation Die and sets it to 1. This value
 increases on each turn thereafter, as shown in the table below:
 

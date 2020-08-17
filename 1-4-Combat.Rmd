@@ -2,6 +2,7 @@
 
 <!---
 ## Combat Fundamentals
+
 ## The Combat Map
 ### Distances
 ### Lines, Bursts, Blasts
@@ -10,6 +11,7 @@
 ### Flanking
 
 ## Combat Sequence
+### Rolling Initiative
 ### Escalation
 
 ## Resource Management
@@ -169,7 +171,94 @@ Flanking for large creatures
 ![Flanking for large creatures](figures/C_1_2_FlankLarge.png)
 
 ## Combat Sequence
-### Escalation
+
+The combat sequence can be summarized as follows:
+
+- Before the start of combat, determine the location of all characters in the combat map.
+- The GM arranges all monsters in the encounter into monster groups.
+- All characters start combat in Total Defense.
+- At the start of combat, all characters roll initiative to determine the order in which they act.
+- Each round, all characters take turns in order of initiative.
+- Combat ends when either all PCs or all monsters are knocked out or have run away.
+
+Definitions:
+
+- Initiative Value: Value used to determine acting order in combat. Characters with higher initiative act first.
+- Group of monsters: Several monsters that share the same Initiative Value
+- Combat turn: Turn of action for a single PC or group of monsters. A character can usually take a Minor Action, a Move Action, and a Standard Action per turn.
+- Combat round: Sequence of turns for all characters in an encounter. Once all characters have acted, a new round begins.
+
+### Grouping monsters
+
+Unlike PCs, who roll for initiative individually, monsters are often grouped together to speed up the flow of combat. GMs have freedom to arrange monster groups as they see fit, but they should apply the following guidelines:
+
+- Each monster group should be composed of identical monsters, or monsters with the same Initiative  modifier.
+- Each combat should have between 2 and 4 monster groups, if possible.
+
+### Defending at the start of combat
+
+At the start of combat, and before any character takes an action, all characters use Total Defense as a Free Reaction, unless they are Surprised (see [Ambushes] below):
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_total_defense <- read_df_power() %>% dplyr::filter(Name=='Total Defense') %>% clean_df_power()
+df_total_defense$htm_power %>% cat()
+```
+
+<div class="tip">**Tip**: This rule is meant to compensate for the advantages of going first in combat. Characters that haven't acted yet will be much harder to hit. Remember, if your character is acting early in combat and you can find no favorable attacks, there is no shame in moving and using Total Defense yourself!</div>
+
+#### Ambushes
+
+By default, at the start of a combat encounter all combatants are ready and aware of their opponents. However, it is possible for a group of characters to sneak on their enemies and catch them totally or partially by surprise - we call this an Ambush. There are two types of Ambush, depending on their degree of success:
+
+- Total Ambush: All enemies start combat Surprised.
+- Partial Ambush: Some enemies start combat Surprised.
+
+Status | Downgrade | Effects
+| - | - | --------
+| Surprised | No Downgrade | - Cannot use Full Defense at the start of combat. <br />- Condition ends when attacked. <br />- When this character would take the turn, they use Full Defense, end the turn, and are no longer considered Surprised.
+
+A character that is not surprised can warn Surprised allies with the Raise the Alarm maneuver:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_alarm <- read_df_power() %>% dplyr::filter(Name=='Raise the Alarm') %>% clean_df_power()
+df_alarm$htm_power %>% cat()
+```
+
+Use the rules in the [Skills] chapter to determine whether the PCs can successfully ambush their enemies... or are ambushed by them.
+
+<div class="tip">**Tip**: Characters carrying out an ambush have a significant advantage, but this is not quite the same as getting a free turn. Try to focus your fire on a few targets, and be aware that an enemy raising the alarm may ruin your plans.</div>
+
+<div class="tip">**GM Tip**: Ambushes should be relatively rare. Unless the PCs are unusually stealthy, or the monsters are extraordinarily oblivious, assume that an ambush is a hard task that will fail most of the time.</div>
+
+
+### Rolling Initiative
+
+At the start of combat, each PC or group of monsters Rolls Initiative as follows:
+
+```
+Initiative Value = 1d20 + Initiative Modifier
+```
+
+After rolling initiative, put all PCs and groups of monsters in a list, ordered by Initiative Value (higher values first). This list will be used as reference to determine the order of actions for this combat encounter. In case of a tie, sort the characters tied in initiative as follows:
+
+- Try to alternate PCs and monsters: If PCs and monsters are tied for the same initiative value, and the character acting right before that initiative value is PC, the monsters win the tie. If the character acting right before that initiative value is a monster, the PCs win the tie.
+- Choose randomly. If there are multiple characters tied for the same initiative value, have them roll a die and sort them from highest roll to lowest.
+
+
+### Combat Escalation
+
+See [Escalation Die] in the [Introduction] chapter. To summarize: each combat round starting with the third, add 1 to the Escalation Die. All characters gain a bonus to Hit Rolls equal to the Escalation Die.
+
+### Rolling Initiative mid-combat
+
+If new combatants enter an encounter, the GM can use one of the following options:
+
+- Start Over: Add the new characters to the combat map. All characters use Total Defense as a Free Reaction (unless they are Surprised), then Roll Initiative again. Set the Escalation Die to 0.
+- Keep Initiative: Add the new characters to the combat map. The new characters use Total Defense as a Free Reaction (unless they are Surprised), then Roll Initiative. Update the list of initiative values and resolve initiative value ties as usual. Reduce the Escalation die by 1, to a minimum of 0.
+
+Regardless of the method used, any active powers, cooldowns or status effects remain unaffected.
+
+The GM can choose a solution for rolling initiative mid-combat as they see fit. We recommend using the Start Over option only when many new characters enter combat - the equivalent of 2 Standard monsters or more.
 
 ## Resource Management
 ### At-Will, Encounter and Daily powers
@@ -302,6 +391,7 @@ Status | Downgrade | Effects
 | Unconscious | No Downgrade | - When a character falls unconscious, they are knocked prone.  <br />-When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.  <br />- Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_  <br />- Cannot take actions  <br />- Cannot see.
 | Weakened | Partially Weakened | - Damage dealt is halved <br />- Healing granted or received is halved <br />- Shield Points granted or received are halved
 | Partially Weakened |  No Effect | - Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4
+| Surprised | No Downgrade | - Cannot use Full Defense at the start of combat. <br />- Condition ends when attacked. <br />- When this character would take the turn, they use Full Defense, end the turn, and are no longer considered Surprised.
 
 
 

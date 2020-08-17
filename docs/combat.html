@@ -48,7 +48,6 @@
 
 
 
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
 
 
 
@@ -155,7 +154,11 @@
 <li class="chapter" data-level="5.2.6" data-path="combat.html"><a href="combat.html#flanking"><i class="fa fa-check"></i><b>5.2.6</b> Flanking</a></li>
 </ul></li>
 <li class="chapter" data-level="5.3" data-path="combat.html"><a href="combat.html#combat-sequence"><i class="fa fa-check"></i><b>5.3</b> Combat Sequence</a><ul>
-<li class="chapter" data-level="5.3.1" data-path="combat.html"><a href="combat.html#escalation"><i class="fa fa-check"></i><b>5.3.1</b> Escalation</a></li>
+<li class="chapter" data-level="5.3.1" data-path="combat.html"><a href="combat.html#grouping-monsters"><i class="fa fa-check"></i><b>5.3.1</b> Grouping monsters</a></li>
+<li class="chapter" data-level="5.3.2" data-path="combat.html"><a href="combat.html#defending-at-the-start-of-combat"><i class="fa fa-check"></i><b>5.3.2</b> Defending at the start of combat</a></li>
+<li class="chapter" data-level="5.3.3" data-path="combat.html"><a href="combat.html#rolling-initiative"><i class="fa fa-check"></i><b>5.3.3</b> Rolling Initiative</a></li>
+<li class="chapter" data-level="5.3.4" data-path="combat.html"><a href="combat.html#combat-escalation"><i class="fa fa-check"></i><b>5.3.4</b> Combat Escalation</a></li>
+<li class="chapter" data-level="5.3.5" data-path="combat.html"><a href="combat.html#rolling-initiative-mid-combat"><i class="fa fa-check"></i><b>5.3.5</b> Rolling Initiative mid-combat</a></li>
 </ul></li>
 <li class="chapter" data-level="5.4" data-path="combat.html"><a href="combat.html#resource-management-1"><i class="fa fa-check"></i><b>5.4</b> Resource Management</a><ul>
 <li class="chapter" data-level="5.4.1" data-path="combat.html"><a href="combat.html#at-will-encounter-and-daily-powers"><i class="fa fa-check"></i><b>5.4.1</b> At-Will, Encounter and Daily powers</a></li>
@@ -221,15 +224,20 @@
 <li class="chapter" data-level="7.5.1" data-path="origins.html"><a href="origins.html#origin-stats-4"><i class="fa fa-check"></i><b>7.5.1</b> Origin Stats</a></li>
 <li class="chapter" data-level="7.5.2" data-path="origins.html"><a href="origins.html#origin-features-4"><i class="fa fa-check"></i><b>7.5.2</b> Origin Features</a></li>
 </ul></li>
-<li class="chapter" data-level="7.6" data-path="origins.html"><a href="origins.html#orc"><i class="fa fa-check"></i><b>7.6</b> Orc</a><ul>
+<li class="chapter" data-level="7.6" data-path="origins.html"><a href="origins.html#goliath"><i class="fa fa-check"></i><b>7.6</b> Goliath</a><ul>
 <li class="chapter" data-level="7.6.1" data-path="origins.html"><a href="origins.html#origin-stats-5"><i class="fa fa-check"></i><b>7.6.1</b> Origin Stats</a></li>
 <li class="chapter" data-level="7.6.2" data-path="origins.html"><a href="origins.html#origin-features-5"><i class="fa fa-check"></i><b>7.6.2</b> Origin Features</a></li>
 <li class="chapter" data-level="7.6.3" data-path="origins.html"><a href="origins.html#origin-powers-3"><i class="fa fa-check"></i><b>7.6.3</b> Origin Powers</a></li>
 </ul></li>
-<li class="chapter" data-level="7.7" data-path="origins.html"><a href="origins.html#dragonfolk"><i class="fa fa-check"></i><b>7.7</b> Dragonfolk</a><ul>
+<li class="chapter" data-level="7.7" data-path="origins.html"><a href="origins.html#orc"><i class="fa fa-check"></i><b>7.7</b> Orc</a><ul>
 <li class="chapter" data-level="7.7.1" data-path="origins.html"><a href="origins.html#origin-stats-6"><i class="fa fa-check"></i><b>7.7.1</b> Origin Stats</a></li>
 <li class="chapter" data-level="7.7.2" data-path="origins.html"><a href="origins.html#origin-features-6"><i class="fa fa-check"></i><b>7.7.2</b> Origin Features</a></li>
 <li class="chapter" data-level="7.7.3" data-path="origins.html"><a href="origins.html#origin-powers-4"><i class="fa fa-check"></i><b>7.7.3</b> Origin Powers</a></li>
+</ul></li>
+<li class="chapter" data-level="7.8" data-path="origins.html"><a href="origins.html#dragonfolk"><i class="fa fa-check"></i><b>7.8</b> Dragonfolk</a><ul>
+<li class="chapter" data-level="7.8.1" data-path="origins.html"><a href="origins.html#origin-stats-7"><i class="fa fa-check"></i><b>7.8.1</b> Origin Stats</a></li>
+<li class="chapter" data-level="7.8.2" data-path="origins.html"><a href="origins.html#origin-features-7"><i class="fa fa-check"></i><b>7.8.2</b> Origin Features</a></li>
+<li class="chapter" data-level="7.8.3" data-path="origins.html"><a href="origins.html#origin-powers-5"><i class="fa fa-check"></i><b>7.8.3</b> Origin Powers</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="classes.html"><a href="classes.html"><i class="fa fa-check"></i><b>8</b> Classes</a><ul>
@@ -371,6 +379,7 @@
 <h1><span class="header-section-number">Chapter 5</span> Combat</h1>
 <!---
 ## Combat Fundamentals
+
 ## The Combat Map
 ### Distances
 ### Lines, Bursts, Blasts
@@ -379,6 +388,7 @@
 ### Flanking
 
 ## Combat Sequence
+### Rolling Initiative
 ### Escalation
 
 ## Resource Management
@@ -549,8 +559,129 @@ TODO: Line</p>
 </div>
 <div id="combat-sequence" class="section level2">
 <h2><span class="header-section-number">5.3</span> Combat Sequence</h2>
-<div id="escalation" class="section level3">
-<h3><span class="header-section-number">5.3.1</span> Escalation</h3>
+<p>The combat sequence can be summarized as follows:</p>
+<ul>
+<li>Before the start of combat, determine the location of all characters in the combat map.</li>
+<li>The GM arranges all monsters in the encounter into monster groups.</li>
+<li>All characters start combat in Total Defense.</li>
+<li>At the start of combat, all characters roll initiative to determine the order in which they act.</li>
+<li>Each round, all characters take turns in order of initiative.</li>
+<li>Combat ends when either all PCs or all monsters are knocked out or have run away.</li>
+</ul>
+<p>Definitions:</p>
+<ul>
+<li>Initiative Value: Value used to determine acting order in combat. Characters with higher initiative act first.</li>
+<li>Group of monsters: Several monsters that share the same Initiative Value</li>
+<li>Combat turn: Turn of action for a single PC or group of monsters. A character can usually take a Minor Action, a Move Action, and a Standard Action per turn.</li>
+<li>Combat round: Sequence of turns for all characters in an encounter. Once all characters have acted, a new round begins.</li>
+</ul>
+<div id="grouping-monsters" class="section level3">
+<h3><span class="header-section-number">5.3.1</span> Grouping monsters</h3>
+<p>Unlike PCs, who roll for initiative individually, monsters are often grouped together to speed up the flow of combat. GMs have freedom to arrange monster groups as they see fit, but they should apply the following guidelines:</p>
+<ul>
+<li>Each monster group should be composed of identical monsters, or monsters with the same Initiative modifier.</li>
+<li>Each combat should have between 2 and 4 monster groups, if possible.</li>
+</ul>
+</div>
+<div id="defending-at-the-start-of-combat" class="section level3">
+<h3><span class="header-section-number">5.3.2</span> Defending at the start of combat</h3>
+<p>At the start of combat, and before any character takes an action, all characters use Total Defense as a Free Reaction, unless they are Surprised (see <a href="combat.html#ambushes">Ambushes</a> below):</p>
+<div class="Power-List">
+<div class="Power">
+<p>
+<span class="green large"><strong>Total Defense - Maneuver</strong></span>
+</p>
+<p>
+Utility
+</p>
+<p>
+<b><i>Standard Action</i></b> -
+</p>
+<p>
+<b>Effect</b>: Gain +4 to all defenses until your next turn.
+</p>
+</div>
+</div>
+<div class="tip">
+<strong>Tip</strong>: This rule is meant to compensate for the advantages of going first in combat. Characters that haven’t acted yet will be much harder to hit. Remember, if your character is acting early in combat and you can find no favorable attacks, there is no shame in moving and using Total Defense yourself!
+</div>
+<div id="ambushes" class="section level4">
+<h4><span class="header-section-number">5.3.2.1</span> Ambushes</h4>
+<p>By default, at the start of a combat encounter all combatants are ready and aware of their opponents. However, it is possible for a group of characters to sneak on their enemies and catch them totally or partially by surprise - we call this an Ambush. There are two types of Ambush, depending on their degree of success:</p>
+<ul>
+<li>Total Ambush: All enemies start combat Surprised.</li>
+<li>Partial Ambush: Some enemies start combat Surprised.</li>
+</ul>
+<table>
+<colgroup>
+<col width="10%" />
+<col width="10%" />
+<col width="80%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Status</th>
+<th>Downgrade</th>
+<th>Effects</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Surprised</td>
+<td>No Downgrade</td>
+<td>- Cannot use Full Defense at the start of combat. <br />- Condition ends when attacked. <br />- When this character would take the turn, they use Full Defense, end the turn, and are no longer considered Surprised.</td>
+</tr>
+</tbody>
+</table>
+<p>A character that is not surprised can warn Surprised allies with the Raise the Alarm maneuver:</p>
+<div class="Power-List">
+<div class="Power">
+<p>
+<span class="green large"><strong>Raise the Alarm - Maneuver</strong></span>
+</p>
+<p>
+Utility
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Close Burst 5</b> - allies in burst -
+</p>
+<p>
+<b>Effect</b>: Each Surprised target can Roll a Save against the Surprised condition.
+</p>
+</div>
+</div>
+<p>Use the rules in the <a href="skills.html#skills">Skills</a> chapter to determine whether the PCs can successfully ambush their enemies… or are ambushed by them.</p>
+<div class="tip">
+<strong>Tip</strong>: Characters carrying out an ambush have a significant advantage, but this is not quite the same as getting a free turn. Try to focus your fire on a few targets, and be aware that an enemy raising the alarm may ruin your plans.
+</div>
+<div class="tip">
+<strong>GM Tip</strong>: Ambushes should be relatively rare. Unless the PCs are unusually stealthy, or the monsters are extraordinarily oblivious, assume that an ambush is a hard task that will fail most of the time.
+</div>
+</div>
+</div>
+<div id="rolling-initiative" class="section level3">
+<h3><span class="header-section-number">5.3.3</span> Rolling Initiative</h3>
+<p>At the start of combat, each PC or group of monsters Rolls Initiative as follows:</p>
+<pre><code>Initiative Value = 1d20 + Initiative Modifier</code></pre>
+<p>After rolling initiative, put all PCs and groups of monsters in a list, ordered by Initiative Value (higher values first). This list will be used as reference to determine the order of actions for this combat encounter. In case of a tie, sort the characters tied in initiative as follows:</p>
+<ul>
+<li>Try to alternate PCs and monsters: If PCs and monsters are tied for the same initiative value, and the character acting right before that initiative value is PC, the monsters win the tie. If the character acting right before that initiative value is a monster, the PCs win the tie.</li>
+<li>Choose randomly. If there are multiple characters tied for the same initiative value, have them roll a die and sort them from highest roll to lowest.</li>
+</ul>
+</div>
+<div id="combat-escalation" class="section level3">
+<h3><span class="header-section-number">5.3.4</span> Combat Escalation</h3>
+<p>See <a href="introduction.html#escalation-die">Escalation Die</a> in the <a href="introduction.html#introduction">Introduction</a> chapter. To summarize: each combat round starting with the third, add 1 to the Escalation Die. All characters gain a bonus to Hit Rolls equal to the Escalation Die.</p>
+</div>
+<div id="rolling-initiative-mid-combat" class="section level3">
+<h3><span class="header-section-number">5.3.5</span> Rolling Initiative mid-combat</h3>
+<p>If new combatants enter an encounter, the GM can use one of the following options:</p>
+<ul>
+<li>Start Over: Add the new characters to the combat map. All characters use Total Defense as a Free Reaction (unless they are Surprised), then Roll Initiative again. Set the Escalation Die to 0.</li>
+<li>Keep Initiative: Add the new characters to the combat map. The new characters use Total Defense as a Free Reaction (unless they are Surprised), then Roll Initiative. Update the list of initiative values and resolve initiative value ties as usual. Reduce the Escalation die by 1, to a minimum of 0.</li>
+</ul>
+<p>Regardless of the method used, any active powers, cooldowns or status effects remain unaffected.</p>
+<p>The GM can choose a solution for rolling initiative mid-combat as they see fit. We recommend using the Start Over option only when many new characters enter combat - the equivalent of 2 Standard monsters or more.</p>
 </div>
 </div>
 <div id="resource-management-1" class="section level2">
@@ -826,6 +957,11 @@ them have a total modifier of -5.</p>
 <td>Partially Weakened</td>
 <td>No Effect</td>
 <td>- Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4</td>
+</tr>
+<tr class="even">
+<td>Surprised</td>
+<td>No Downgrade</td>
+<td>- Cannot use Full Defense at the start of combat. <br />- Condition ends when attacked. <br />- When this character would take the turn, they use Full Defense, end the turn, and are no longer considered Surprised.</td>
 </tr>
 </tbody>
 </table>
@@ -1202,6 +1338,20 @@ Utility
 </p>
 <p>
 <b>Effect</b>: Drop any number of items from your hands. Draw up to one item per hand. You are Hindered this turn.<br>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="green large"><strong>Raise the Alarm - Maneuver</strong></span>
+</p>
+<p>
+Utility
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Close Burst 5</b> - allies in burst -
+</p>
+<p>
+<b>Effect</b>: Each Surprised target can Roll a Save against the Surprised condition.
 </p>
 </div>
 </div>
