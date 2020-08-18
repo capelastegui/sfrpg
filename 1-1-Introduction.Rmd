@@ -912,9 +912,22 @@ Each power element is described in detail in the following sections.
 
 ### Power Type
 
+Powers can be of 2 types:
+- Attack: A power used to hurt an enemy.
+- Utility: A power that is not an attack. Utilities can help characters move, heal or defend, among other effects.
+
+
 ### Power Name
 
+Powers have a name that identifies them.
+
+<div class="compatibility">**Compatibility Note**: Power Names should be unique within the context of this game edition. That said, legacy rules include thousands of powers, and some of them may share names with current powers. If you need to disambiguate, use "Power Name (current)" to refer to the power in the current edition, and "Power Name (legacy)" to refer to the one from legacy rules.</div>
+
 ### Power Level
+
+Powers often have a level. Characters gain power slots as they level up, and these slots can only be filled with powers of the same level or lower.
+
+Powers without a level are typically granted by class or origin features. It is not possible to take a power without a level on a levelled power slot.
 
 ### Usage Frequency
 
@@ -940,7 +953,22 @@ Some powers have the *No Cooldown* keyword. These powers do not cause the charac
 
 Some powers have the *Reliable* keyword, which prevents the powers from being spent on a missed attack. A power that remains unspent due to Reliable does not cause the character to enter a cooldown.
 
-### Power Categories
+### Power Keywords
+
+List of keywords with rules:
+- Weapon
+- Implement
+
+List of damage type keywords:
+- Fire
+- Cold
+- Lightning
+- Radiant
+- Shadow
+- Poison
+- Psychic
+
+
 
 ### Action Type
 
