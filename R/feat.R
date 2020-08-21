@@ -7,8 +7,9 @@
 get_htm_feat <- function(df_feat=NULL){
 
   if (df_feat %>% is.null()) {
-    df_feat <- read_my_csv('feats') %>% gsub_colwise("\\r\\n", "<br>")
+    df_feat <- read_my_csv('feats')
   }
+  df_feat <- df_feat %>% gsub_colwise("\\r\\n", "<br>")
   df_tag <-  read_my_csv('feats_tags')
   tag_pre <- df_tag[1,]
   tag_post <- df_tag[2,]
