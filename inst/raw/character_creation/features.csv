@@ -51,7 +51,7 @@ bar_train,Barbarian Training,"Reduce by 1 the DC of the following Skill Checks:
 - Find food and shelter in the wilderness (Endurance)"
 bar_rager_svg,Savage Attack,Your melee attacks deal +Constitution damage.
 bar_rager_res,Raging Resilience,You add your Constitution to your Surge Value.
-bar_rager_chr,Barbarian Charge,"You do not become Hindered due to charging.<br>You can use Barbarian melee attack powers as part of a charge.<br/>When you charge an enemy within 4 or more squares, you gain Advantage."
+bar_rager_chr,Barbarian Charge,"You do not become Hindered due to charging.<br>You can use Barbarian melee attack powers as part of a charge.<br/>When you charge an enemy, if the enemy is within 3 or more squares from your starting position that turn, you gain Advantage."
 bar_bsk_inn,Inner Peace,"Inner Peace: While not in Berserker Fury, gain the following bonuses:
 +3 Arm, -1 Hit and -1 Crit Range
 You have Defender’s Aura.
