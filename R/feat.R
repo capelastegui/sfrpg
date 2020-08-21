@@ -7,7 +7,7 @@
 get_htm_feat <- function(df_feat=NULL){
 
   if (df_feat %>% is.null()) {
-    df_feat <- read_my_csv('feats')
+    df_feat <- read_my_csv('feats') %>% gsub_colwise("\\r\\n", "<br>")
   }
   df_tag <-  read_my_csv('feats_tags')
   tag_pre <- df_tag[1,]
@@ -19,7 +19,7 @@ get_htm_feat <- function(df_feat=NULL){
   htm_feat <- htm_feat_raw %>%
     # [H] is converted to link in markdown - need to escape
     # , also \\[H\\] is converted into something else
-    stringr::str_replace_all("\\n", "<br>") %>%
+    #stringr::str_replace_all("\\r\\n", "<br>") %>%
     stringr::str_replace_all('\\[', '&#91;') %>%
     stringr::str_replace_all('\\]', '&#93;')
 

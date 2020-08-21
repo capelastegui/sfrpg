@@ -30,7 +30,7 @@ Note that Offense Focus is the largest feat Category in the game and, due to its
 
 ### Toughness
 ```{r feat_toughness, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_feats_raw %>% dplyr::filter(Category=='Toughness') %>% get_htm_feat() %>% cat()
+df_feats_raw %>% dplyr::filter(Category=='Toughness') %>% get_htm_feat() %>% get_feat_list_htm() %>% cat()
 ```
 
 ### Category - Defense Focus{.newPage}
