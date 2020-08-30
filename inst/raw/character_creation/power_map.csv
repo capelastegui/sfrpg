@@ -32,7 +32,7 @@ wiz_elemt,wiz_ut_wllice
 wiz_elemt,wiz_ut_levita
 rog_scoun,rog_aw_prcstk
 rog_scoun,rog_aw_stpstk
-rog_scoun,rog_en_kngcsl
+rog_scoun,rog_en_swcroo
 rog_scoun,rog_en_expwkn
 rog_scoun,rog_en_stydwn
 rog_scoun,rog_da_blitrk
@@ -127,6 +127,10 @@ wld_tac,wld_da_tmfrac
 wld_tac,wld_ut_moveit
 wld_tac,wld_ut_incomn
 wld_tac,wld_ut_frgtit
+wld_ins,wld_fe_heal
+wld_ins,wld_aw_inscrd
+wld_ins,wld_aw_bdycvr
+wld_ins,wld_en_kngcst
 wlk_shadow,wlk_aw_vlodrk
 wlk_shadow,wlk_aw_unshrr
 wlk_shadow,wlk_en_drkblt
@@ -139,6 +143,8 @@ wlk_shadow,wlk_ut_drkptl
 wlk_shadow,wlk_ut_crsyou
 wlk_shadow,wlk_ut_trcsdw
 ori_elf,ori_elf_accur
+ori_elf_custom_cloud,ori_elf_flight
+ori_elf_custom_welf,ori_elf_wlfbit
 ori_elf_hi,ori_elf_charm
 ori_gnome,
 ori_orc,ori_orc_smash

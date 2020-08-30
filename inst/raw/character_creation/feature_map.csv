@@ -81,9 +81,13 @@ bar_bsk,bar_bsk_fury
 bar_bsk,bar_bsk_focus
 bar_bsk,bar_train
 wld_tac,wld_heal
-wld_tac,wld_tac_adv
+wld_tac,wld_adv
 wld_tac,wld_tac_act
 wld_tac,wld_train
+wld_ins,wld_heal
+wld_ins,wld_adv
+wld_ins,wld_ins_act
+wld_ins,wld_train
 wlk_shadow_,wlk_contr
 wlk_shadow_,wlk_shadow_crs
 wlk_shadow_,wlk_shadow_pct

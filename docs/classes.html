@@ -726,7 +726,7 @@ Expected Armor
 </div>
 <div class="Feature">
 <p>
-<b>Barbarian Charge</b>: You do not become Hindered due to charging.<br>You can use Barbarian melee attack powers as part of a charge.<br/>When you charge an enemy within 4 or more squares, you gain Advantage.
+<b>Barbarian Charge</b>: You do not become Hindered due to charging.<br>You can use Barbarian melee attack powers as part of a charge.<br/>When you charge an enemy, if the enemy is within 3 or more squares from your starting position that turn, you gain Advantage.
 </p>
 </div>
 <div class="Feature">
@@ -1685,7 +1685,7 @@ Attack - Encounter - <i>Martial, Weapon</i>
 <b>Hit</b>: 2W + Str, and Slowed (save ends). Until end of your next turn, the target has -Con to save while adjacent to you.
 </p>
 <p>
-<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str<br></span>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
 </p>
 </div>
 <div class="Power">
@@ -4606,26 +4606,6 @@ Attack - Encounter - <i>Martial, Weapon, Rogue Weapon</i>
 </div>
 <div class="Power">
 <p>
-<span class="red large"><strong>King’s Castle - Rogue 1</strong></span>
-</p>
-<p>
-Attack - Encounter - <i>Martial, Weapon, Rogue Weapon</i>
-</p>
-<p>
-<b>Melee or Ranged</b> - Dex +2 vs Wil
-</p>
-<p>
-<b>Effect</b>: Before or after the attack, choose an adjacent creature. You and that creature Slide to switch places.
-</p>
-<p>
-<b>Hit</b>: 2W+Dex
-</p>
-<p>
-<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</span>
-</p>
-</div>
-<div class="Power">
-<p>
 <span class="red large"><strong>Stay Down - Rogue 1</strong></span>
 </p>
 <p>
@@ -4636,6 +4616,26 @@ Attack - Encounter - <i>Martial, Weapon, Rogue Weapon</i>
 </p>
 <p>
 <b>Hit</b>: 2W+Dex, and Prone. If you have Advantage, provokes Opportunity Attacks when standing up next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Switcheroo - Rogue 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Martial, Weapon, Rogue Weapon</i>
+</p>
+<p>
+<b>Melee or Ranged</b> - Dex +2 vs Wil
+</p>
+<p>
+<b>Effect</b>: Before or after the attack, choose an adjacent character. You and that creature Slide to switch places.
+</p>
+<p>
+<b>Hit</b>: 2W+Dex
 </p>
 <p>
 <span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Dex<br>Upgrade 23: Increase Hit damage to 4W+Dex</span>
@@ -5258,7 +5258,7 @@ Total class skills
 Weapon Training
 </td>
 <td>
-All Basic, All Melee 1-hand, Longspear, Glaive, Halberd, Flail
+All Basic, All Melee 1-hand, Longspear, Glaive, Halberd, Whip
 </td>
 </tr>
 <tr>
@@ -5293,12 +5293,12 @@ Expected Armor
 </div>
 <div class="Feature">
 <p>
-<b>Tactical Advice</b>: Allies that can see or hear you gain+Int Initiative.
+<b>Warlord’s Advice</b>: Allies that can see or hear you gain +2 Initiative.
 </p>
 </div>
 <div class="Feature">
 <p>
-<b>Tactical Action</b>: Allies that can see or hear you gain +Int hit with Action Point attacks.
+<b>Tactical Action</b>: The first time one of your allies uses an Action Point each encounter, they gain +Int to Hit and Arm until their next turn.
 </p>
 </div>
 <div class="Feature">
@@ -5340,7 +5340,7 @@ Attack - <i>Martial, Weapon</i>
 <b>Effect</b>: Before or after the attack, an ally within 2 squares of the target shifts 1.
 </p>
 <p>
-<b>Hit</b>: W+Str
+<b>Hit</b>: 1W+Str
 </p>
 </div>
 <div class="Power">
@@ -5354,10 +5354,10 @@ Attack - <i>Martial, Weapon</i>
 <b>Melee</b> - Str vs Ref
 </p>
 <p>
-<b>Hit</b>: Int
+<b>Hit</b>: -Int to defenses this turn.
 </p>
 <p>
-<b>Effect</b>: An ally adjacent to the target makes a melee basic attack against it.
+<b>Effect</b>: An ally adjacent to you or the target makes a basic attack against the target as a Free Reaction.
 </p>
 </div>
 <div class="Power">
@@ -5371,7 +5371,10 @@ Attack - Encounter - <i>Martial, Weapon</i>
 <b>Melee</b> - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: 2W+Str, Push 1. Choose an ally adjacent to the target. Until end of your next turn, the target is Taunted by that ally, and the target provokes an attack of opportunity from that ally if it shifts or violates a Taunt.
+<b>Hit</b>: 2W+Str, Slide 1. Choose an ally adjacent to the target. The target is Taunted by that ally (save ends) and, while the effect lasts, the target provokes an attack of opportunity from that ally if it shifts or ignores a Taunt.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
 </p>
 </div>
 <div class="Power">
@@ -5382,13 +5385,16 @@ Attack - Encounter - <i>Martial, Weapon</i>
 Attack - Encounter - <i>Martial, Weapon</i>
 </p>
 <p>
-<b>Melee</b> - targets a flanked enemy - Str vs Arm
+<b>Melee</b> - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: W
+<b>Hit</b>: 1W, and Partially Vulnerable (your allies) this turn.
 </p>
 <p>
-<b>Effect</b>: An ally flanking the target makes a melee basic attack againt it with +Int Crit Range
+<b>Effect</b>: An ally adjacent to the target makes a basic attack against it as a Free Reaction.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W 23: Increase Hit damage to 3W</span>
 </p>
 </div>
 <div class="Power">
@@ -5404,6 +5410,9 @@ Attack - Encounter - <i>Martial, Weapon</i>
 <p>
 <b>Hit</b>: 2W+Str, and -Int Arm until end of your next turn
 </p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
+</p>
 </div>
 <div class="Power">
 <p>
@@ -5416,41 +5425,44 @@ Attack - Daily - <i>Martial, Weapon</i>
 <b>Melee</b> - targets an enemy you can charge. -
 </p>
 <p>
-<b>Effect</b>: Charge the target. Up to two allies that can see and hear you charge the target, ignoring opportunity attacks for the charge, and dealing half damage with the charge attack.
+<b>Effect</b>: Charge the target. Up to two allies that can see and hear you become Weakened this turn and charge the target as a Free Reaction, ignoring opportunity attacks for the charge
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Your charging allies deal half damage on a miss.<br>Upgrade 25: Your charging allies become Partially Weakened instead.</span>
 </p>
 </div>
 <div class="Power">
 <p>
-<span class="gray large"><strong>Pile On! - Warlord 1</strong></span>
+<span class="Daily (Reliable) large"><strong>Pile On! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Martial, Weapon</i>
+Attack - Daily (Reliable) - <i>Martial, Weapon</i>
 </p>
 <p>
-<b><i>Reliable</i></b> - <b>Melee</b> - targets a bloodied enemy - Str vs Arm
+<b>Melee</b> - targets a bloodied enemy - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: W+Str, and up to two allies adjacent to the target make a melee basic attack against it.
+<b>Hit</b>: 1W+Str, and up to two allies adjacent to the target make a melee basic attack against it.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 2W+Str<br>Upgrade 25: Increase Hit damage to 3W+Str</span>
 </p>
 </div>
 <div class="Power">
 <p>
-<span class="gray large"><strong>Time for Action! - Warlord 1</strong></span>
+<span class="Daily (Reliable) large"><strong>Time for Action! - Warlord 1</strong></span>
 </p>
 <p>
-Attack - Daily - <i>Martial, Weapon</i>
+Attack - Daily (Reliable) - <i>Martial, Weapon</i>
 </p>
 <p>
 <b>Melee</b> - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: 2W+Str
+<b>Hit</b>: 3W+Str. Until your next turn, your allies can reroll failed Action Point Rolls. The first time an ally makes an attack with an Action Point before your next turn, that ally gains +Int Crit Range and +Int Damage for the attack.
 </p>
 <p>
-<b>Miss</b>: Half Damage
-</p>
-<p>
-<b>Effect</b>: Until your next turn, your allies can reroll failed Action Point Rolls. The first time an ally makes an attack with an Action Point before your next turn, that ally gains +Int Crit Range and +Int Damage for the attack.
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 5W+Str<br>Upgrade 25: Increase Hit damage to 7W+Str</span>
 </p>
 </div>
 <div class="Power">
@@ -5464,7 +5476,7 @@ Utility - Encounter - <i>Martial</i>
 <b><i>Minor Action</i></b> - <b>Ranged 5 (safe)</b> - targets an ally that can hear you and is adjacent to an enemy -
 </p>
 <p>
-<b>Effect</b>: The target is no longer Taunted, and Shifts 1 away from an adjacent enemy.
+<b>Effect</b>: The target is no longer Taunted, and Shifts 1 away from an adjacent enemy as a Free Reaction.
 </p>
 </div>
 <div class="Power">
@@ -5475,7 +5487,7 @@ Utility - Encounter - <i>Martial</i>
 Utility - Encounter - <i>Martial</i>
 </p>
 <p>
-<b><i>Reaction (Interrupt)</i></b> - <i> (Trigger: You and one or more allies are targeted by a close or area attack.)</i> - <b>No Range</b> - targets the targets of the triggering attack -
+<b><i>Reaction (Interrupt)</i></b> - <i> (Trigger: You or an ally are targeted by a close or area attack.)</i> - <b>No Range</b> - targets all characters targeted by the triggering attack -
 </p>
 <p>
 <b>Effect</b>: Knocked Prone, and gain Resist against the triggering attack.
@@ -5492,7 +5504,7 @@ Utility - Encounter - <i>Martial</i>
 <b><i>Move Action</i></b> - <b>Ranged 5 (safe)</b> - targets an ally that can hear you -
 </p>
 <p>
-<b>Effect</b>: The target stands up if prone. The target moves their speed.
+<b>Effect</b>: As a Free Reaction, the target stands up if prone, and moves their speed.
 </p>
 </div>
 </div>

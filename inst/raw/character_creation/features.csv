@@ -60,8 +60,9 @@ Enemies in your Defender Aura that shift become Taunted by you until end of turn
 bar_bsk_fury,Berserker Fury,"When you become Bloodied or use a Barbarian Primal attack power, you enter Berserker Fury until the end of the encounter. You may roll a save to avoid entering this state. While in Berserker Fury, you lose Inner Peace and gain +Con damage bonus on your melee attacks."
 bar_bsk_focus,Berserker Focus,"+1 Hit vs enemies Taunting you. At the start of your turn, if you are in Berserker Fury and not Taunted, you choose a random enemy closest to you. You are Taunted by that enemy until the end of the encounter."
 wld_heal,Inspiring Word,Gain the Inspiring Word power.
-wld_tac_adv,Tactical Advice,Allies that can see or hear you gain+Int Initiative.
-wld_tac_act,Tactical Action,Allies that can see or hear you gain +Int hit with Action Point attacks.
+wld_adv,Warlord's Advice,Allies that can see or hear you gain +2 Initiative.
+wld_tac_act,Tactical Action,"The first time one of your allies uses an Action Point each encounter, they gain +Int to Hit and Arm until their next turn."
+wld_ins_act,Inspired Action,"The first time one of your allies uses an Action Point each encounter, they gain SP equal to double your Cha, and +Cha to damage until their next turn."
 wlk_contr,Controller Power,"Gain an additional Warlock Daily Attack power, of a level equal to the level of your lowest Warlock Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Warlock daily powers."
 wlk_shadow_crs,Shadow Curse,"Once per turn, when you target an enemy with an attack, the enemy is afflicted with your Shadow Curse until the end of the encounter. Enemies under the Shadow Curse treat you as having Concealment or, if you already have Concealment, as having Total Concealment."
 wlk_shadow_pct,Shadow Pact,"Once per round, when an enemy under your Shadow Curse is reduced to 0 HP, the enemy's space becomes a zone of Difficult Terrain for your enemies until the end of the encounter. Enemies ending their turns in the zone or adjacent to it take Dex Shadow damage."
