@@ -4,18 +4,20 @@
 #'
 #' @return
 #' @export
-get_htm_feat <- function(df_feat=NULL){
+get_htm_feat <- function(df_feat=NULL, df_tag=NULL){
 
   if (df_feat %>% is.null()) {
     df_feat <- read_my_csv('feats')
   }
   df_feat <- df_feat %>% gsub_colwise("\\r\\n", "<br>")
-  df_tag <-  read_my_csv('feats_tags')
+  if (df_tag %>% is.null()) {
+    df_tag <-  read_my_csv('feats_tags')
+  }
   tag_pre <- df_tag[1,]
   tag_post <- df_tag[2,]
 
   htm_feat_raw <- build_element_apply(df_feat, tag_pre, tag_post,
-                      df.names=setdiff(names(df_feat), c('Summary')))
+                      df.names=setdiff(names(df_tag), c('Summary','Body')))
 
   htm_feat <- htm_feat_raw %>%
     # [H] is converted to link in markdown - need to escape
@@ -26,6 +28,17 @@ get_htm_feat <- function(df_feat=NULL){
 
   htm_feat
 }
+
+#' Surround a html chunk with a div with class div_class
+#'
+#' @param htm_feat
+#'
+#' @return
+#' @export
+htm_add_div <- function(str_htm, div_class){
+    paste0('<div class="',div_class,'">',str_htm,'</div>')
+}
+
 
 #' Add feat list div to feat html
 #'

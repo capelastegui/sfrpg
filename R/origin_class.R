@@ -515,7 +515,7 @@ get_df_origin <- function (
 #' @return df_class table (Class, Build,
 #'         htm_stat,htm_feature,htm_power_summary,htm_power)
 #' @export
-get_html_sheet <- function (l_feature_id, l_power_id, l_items=NULL,
+get_html_sheet <- function (l_feature_id, l_power_id, l_items=NULL, l_feats=NULL,
 character_name='Character Sheet') {
   df_power_raw = get_df_power_from_sheet(l_power_id)
 
@@ -532,10 +532,20 @@ character_name='Character Sheet') {
     htm_items = read_my_csv('magic_items') %>%
       dplyr::filter (name %in% l_items) %>% clean_df_items()
 
-    htm_items = paste0( "<p>",
-    htm_items,
-    "</p>\r\n")
+    htm_items = paste0( "<p><h3>Magic Items</h3></p>\r\n",
+                        htm_items, "\r\n")
   } else {htm_items = '' }
+
+    if(!is.null(l_feats)) {
+      df_tag <- read_my_csv('feats_short_tags')
+      htm_feats = read_my_csv('feats') %>%
+        dplyr::filter (Name %in% l_feats) %>% get_htm_feat(df_tag = df_tag) %>%
+        htm_add_div('Feat-List')
+
+    htm_feats = paste0( "<p><h3>Feats</h3></p>\r\n<p>",
+    htm_feats,
+    "</p>\r\n")
+  } else {htm_feats = '' }
 
   htm_sheet = paste0(
     "<p><h3>",
@@ -543,8 +553,9 @@ character_name='Character Sheet') {
     "</h3></p>\r\n",
     "<p><h3>Class features</h3></p>\r\n",
     "<p>",
-    htm_feature,
+    htm_feature %>% htm_add_div('Feat-List'),
     "</p>\r\n",
+    htm_feats,
     "<p><h3>Class Powers</h3></p>\r\n",
     "<p>",
     htm_power,
@@ -588,13 +599,14 @@ write_class_file <- function(df_class, char_class, char_build, dir_output) {
   writeLines(htm_file, path)
 }
 
-write_html_sheet <- function(l_feature_id, l_power_id, l_items,
+write_html_sheet <- function(l_feature_id, l_power_id, l_items, l_feats,
                              dir_output, character_name) {
-  htm_file = get_html_sheet(l_feature_id, l_power_id, l_items, character_name) %>%
-      get_htm_file()
+  htm_sheet = get_html_sheet(l_feature_id, l_power_id, l_items, l_feats, character_name)
+  htm_file = htm_sheet %>% get_htm_file()
     path = file.path(dir_output,
       paste0('sheet_',character_name,'.html'))
   writeLines(htm_file, path)
+  htm_sheet
 }
 
 

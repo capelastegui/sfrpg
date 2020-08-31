@@ -4,7 +4,7 @@
 \alias{get_htm_feat}
 \title{convert feat table to html}
 \usage{
-get_htm_feat(df_feat = NULL)
+get_htm_feat(df_feat = NULL, df_tag = NULL)
 }
 \arguments{
 \item{df_feat}{}

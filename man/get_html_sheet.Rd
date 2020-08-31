@@ -8,6 +8,7 @@ get_html_sheet(
   l_feature_id,
   l_power_id,
   l_items = NULL,
+  l_feats = NULL,
   character_name = "Character Sheet"
 )
 }

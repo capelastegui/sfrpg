@@ -84,9 +84,9 @@ With the GM's permission, players can choose level 1 feats that expand their wea
 
 <div class="tip">**Tip**: Armor Training is usually not as strong as Defense Focus, but they both stack, and you can take multiple Training feats.</div>
 
-<div class="tip">**Tip**: For characters without training in martial weapons, Weapon Trainer is often superior to an Offense Focus feat.</div>
+<div class="tip">**Tip**: For characters without training in martial weapons, Weapon Training is often superior to an Offense Focus feat.</div>
 
-<div class="tip">**Tip**: There is no Implement Training Feat. If you are really interested in using a different Implement, go Multiclass and take Multiclass Implement or, alternately, convince your GM that you want it for story reasons and not to optimize your character.</div>
+<div class="tip">**Tip**: There is no Implement Training Feat. If you are really interested in using a different Implement, go Multiclass and take Multiclass Implement or, alternatively, convince your GM that you want it for story reasons and not to optimize your character.</div>
 
 <div class="tip">**GM Tip**: If your player is really interested in getting training with a different Implement, allow them to have it for free if they provide a convincing argument. When in doubt, make it conditional on them taking an Offense Focus Feat that is not specific to that implement, such as Dual Focus.</div>
 
