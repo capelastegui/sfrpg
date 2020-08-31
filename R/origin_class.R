@@ -540,7 +540,7 @@ character_name='Character Sheet') {
       df_tag <- read_my_csv('feats_short_tags')
       htm_feats = read_my_csv('feats') %>%
         dplyr::filter (Name %in% l_feats) %>% get_htm_feat(df_tag = df_tag) %>%
-        htm_add_div('Feat-List')
+        htm_add_div('Feature-List')
 
     htm_feats = paste0( "<p><h3>Feats</h3></p>\r\n<p>",
     htm_feats,
@@ -553,7 +553,7 @@ character_name='Character Sheet') {
     "</h3></p>\r\n",
     "<p><h3>Class features</h3></p>\r\n",
     "<p>",
-    htm_feature %>% htm_add_div('Feat-List'),
+    htm_feature %>% htm_add_div('Feature-List'),
     "</p>\r\n",
     htm_feats,
     "<p><h3>Class Powers</h3></p>\r\n",

@@ -37,6 +37,18 @@ body {
   /*width: 900px;*/
   /*width: 20cm;*/
 }
+
+.Feature-List {
+  -moz-column-count: 3;
+  -webkit-column-count: 3;
+  column-count: 3;
+  -moz-column-rule-style: none;
+  -webkit-column-rule-style: none;
+  column-rule-style: none;
+  column-width: 320px;
+  /*width: 900px;*/
+  /*width: 20cm;*/
+}
 /* Table formats*/
 
 table {
