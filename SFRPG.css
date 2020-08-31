@@ -33,10 +33,9 @@ body {
   -moz-column-rule-style: none;
   -webkit-column-rule-style: none;
   column-rule-style: none;
-  column-width: 400px;
+  column-width: 4000px;
   /*width: 900px;*/
   /*width: 20cm;*/
-
 }
 /* Table formats*/
 
@@ -67,10 +66,6 @@ tr:nth-child(even) {background-color: #ffefbf;}
 .narrow, .Class-table {width: 12cm;}
 
 .medium-width, .General-table {width: 16cm;}
-      
-
-
-
 
  .Feature {  
   font-family: Verdana;  
@@ -85,27 +80,18 @@ tr:nth-child(even) {background-color: #ffefbf;}
                break-inside: avoid;
 }
 
-
-
 /* Color classes */
 .green {color:green}
-      
 .gray {color:Gray}
-
 .darkgray {color:DimGray}
-  
 .red {color:DarkRed}
-
-.blue{color: MediumBlue;} 
-
+.blue{color: MediumBlue;}
 .darkblue{color: DarkBlue;}
-
 .gold{color: GoldenRod}
 
 /* Font sizes*/
 .large {font-size: 14px;}
- 
- .huge {font-size: 18px;}
+.huge {font-size: 18px;}
  
  
 
