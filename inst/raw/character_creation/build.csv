@@ -44,3 +44,5 @@ Maneuver,Move Maneuvers,maneuver,mnv_bas_mov
 Maneuver,Advanced Miscellaneous Maneuvers,maneuver,mnv_adv_msc
 Maneuver,Advanced Move Maneuvers,maneuver,mnv_adv_mov
 Maneuver,Advanced Stealth Maneuvers,maneuver,mnv_adv_stl
+Paladin,Placeholder Category,placeholder,placeholder_pal
+Battlemage,Placeholder Category,placeholder,placeholder_btm
