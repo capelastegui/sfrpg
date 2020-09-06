@@ -544,9 +544,15 @@ Each character can wear one suit of Light Armor or Heavy Armor. In addition,
  (typically -1). This penalty applies to Hit rolls of Ranged and Area attacks,
  as well as Skill Checks for Athletics, Endurance, Finesse, and Stealth.
 
- **Range Penalty**: Some types of armor have a Range Penalty value (typically -2). This penalty reduces the range of Ranged and Area powers, and is applied before doubling the range for Long Range attacks.
+ **Range Penalty**: Some types of armor have a Range Penalty value (typically -2).
+ This penalty reduces the range of Ranged and Area powers, and is applied before
+  doubling the range for Long Range attacks.
 
- <div class="tip">**Examle**: A character wearing a Chainmail (Range Penalty -2) that makes a Ranged attack with a base range of 5 will have the normal range reduced to 3, and the Long Range will be double the normal range, for a total of 6. That same character making an Area attack with a base range of 10 would have the range for that attack reduced to 8.</div>
+ <div class="tip">**Example**: A character wearing a Chainmail (Range Penalty -2)
+  that makes a Ranged attack with a base range of 5 will have the normal range
+   reduced to 3, and the Long Range will be double the normal range, for a total
+   of 6. That same character making an Area attack with a base range of 10 would have
+    the range for that attack reduced to 8.</div>
 
 <div class="tip">**Tip**: Characters focused on Ranged and Area attacks should
  consider carefully whether the added protection of Heavy Armor is worth taking

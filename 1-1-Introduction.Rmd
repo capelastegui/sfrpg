@@ -976,6 +976,63 @@ List of damage type keywords:
 
 ### Power Range
 
+The following types of power range are supported:
+
+- Melee: target adjacent characters
+- Ranged: target characters that are far away
+- Close: target characters in an area originating from you
+- Area: target characters in an area originating from a point far away
+
+#### Range - Melee
+
+Melee powers can be used against characters adjacent to you. In some scenarios, described below, they can be used to target characters further away.
+
+**Melee Reach** : Most characters have a Melee Reach of 1. Some character abilities or weapons may grant additional Reach. Characters using a melee power can choose targets within a number of squares up to their Reach.
+
+<div class="tip">**Example - Melee Reach**: A typical character with Reach 1 can only use melee powers against adjacent characters. A character with Reach 2 can target characters that are 1 or 2 squares away, and so on.</div>
+
+**Melee powers with a fixed range** : Some melee powers may state their range as `Melee 2`, or a different number. In that case, use that number as the melee reach for the attack.
+
+<div class="tip">**Clarification - Melee Reach vs Ranged Attacks**: Melee attacks with a reach greater than 1 are similar to Ranged attacks, but there are important differences. Characters using ranged powers while enemies are adjacent are often penalized for it. In addition, characters making ranged attacks have the option of extending the attack range to Long Range, while characters making melee attacks don't.</div>
+
+
+#### Range - Ranged
+
+Ranged powers can be used against characters within a certain distance from you. However,  using ranged powers while enemies are adjacent to you can be dangerous.
+
+**Maximum Range** : The range for a power is usually stated as `Ranged N`, where `N` is the maximum range for the power. For example, a `Ranged 10` power can target characters up to a distance of 10 squares. Some powers have a range of `Ranged Weapon`. In this case, the maximum range depends on the weapon used for the power - for example, a Shortbow has a range of 8 squares.
+
+**Long Range Attacks** : When using a Ranged Attack (but not a Ranged Utility power), you can choose a target that is at a distance between the attack range and double the attack range. This attack is considered a Long Range attack, and suffers a -2 penalty to hit.
+
+ **Armor Range Penalty**: Some types of armor have a Range Penalty value (typically -2).
+ This penalty reduces the range of Ranged and Area powers, and is applied before
+  doubling the range for Long Range attacks.
+
+**Provoking opportunity attacks** : When a character uses a ranged power while an enemy is adjacent to them, they provoke an Opportunity Attack from that enemy:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+read_df_power() %>% dplyr::filter(type=='maneuver', Name=='Opportunity Attack') %>%
+      dplyr::select(-type) %>% clean_df_power()  %>% .$htm_power %>% cat()
+```
+
+**Safe Ranged powers** : Some Ranged powers have the Safe keyword. Using these powers does not provoke opportunity attacks due to using a Ranged power while adjacent to an enemy. Note that it is still possible that using the power will provoke an opportunity attack for other reasons, such as special abilities from an enemy.
+
+**Avoiding opportunity attacks** : It is possible to avoid opportunity attacks from using a ranged power in melee range with the Point Blank Shot maneuver:
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+read_df_power() %>% dplyr::filter(type=='maneuver', Name=='Point Blank Shot') %>%
+      dplyr::select(-type) %>% clean_df_power()  %>% .$htm_power %>% cat()
+```
+
+
+#### Range - Close
+
+#### Range - Area
+
+
+
 ### Power Attack Roll
 
 ### Effect on Hit

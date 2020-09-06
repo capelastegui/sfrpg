@@ -81,7 +81,7 @@ tr:nth-child(even) {background-color: #ffefbf;}
 
  .Feature {  
   font-family: Verdana;  
-  font-size: 12px;  
+  font-size: 11px;
   /*width: 20cm;*/
   max-width: 900px;
   line-height: normal;  
