@@ -189,8 +189,9 @@ mnv_adv_mov,mnv_lnjmp
 mnv_adv_mov,mnv_hijmp
 mnv_adv_mov,mnv_drop
 mnv_adv_stl,mnv_hide
-mnv_adv_stl,mnv_vansh
+mnv_adv_stl,mnv_enshr
 mnv_adv_stl,mnv_sneak
+mnv_adv_stl,mnv_spot
 mnv_adv_stl,mnv_serch
 placeholder_pal,pal_en_rghsmt
 placeholder_btm,btm_aw_ltnbrt
