@@ -49,7 +49,7 @@ htm_monster_race %>% cat()
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_race <- read_csv_monster("monster_races") %>%
-  dplyr::filter(Level %>% as.numeric()<11, category=='Standard', subcategory %in% c('Aberration', 'Plant'))
+  dplyr::filter(Level %>% as.numeric()<11, category=='Standard', subcategory %in% c('Aberration', 'Plant', 'Ooze'))
 htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
     get_monster_list_htm()
 htm_monster_race %>% cat()
@@ -135,7 +135,7 @@ htm_monster_race %>% cat()
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_race <- read_csv_monster("monster_races") %>%
-  dplyr::filter(Level %>% as.numeric()<11, category=='Minion', subcategory %in% c('Plant'))
+  dplyr::filter(Level %>% as.numeric()<11, category=='Minion', subcategory %in% c('Plant', 'Ooze'))
 htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
     get_monster_list_htm()
 htm_monster_race %>% cat()
@@ -172,6 +172,19 @@ Basic Elite Monster:
 - Trait: Elite Attack: Melee and Ranged attacks can target 1 additional enemy in range.
   Area and Close attacks have Burst size increased by 1. Damaging attacks that target a
   single enemy deal +D/2 damage.
+  
+### Elite Monster Races
+
+Monsters with the following classes gain the Elite monster special
+rules, double XP and double HP (already included in stats).
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11, category=='Elite')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
 
 ### Elite Monster Classes
 
