@@ -132,7 +132,27 @@ Standard,Example,6,Level 6 Monster,,,6,3,6,13,3,48,40,32,NA,0,0,0,0,0,0,Race Pow
 Standard,Example,7,Level 7 Monster,,,6,3,7,14,3,51,42,34,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 2 Skills
 Standard,Example,8,Level 8 Monster,,,6,4,7,15,3,54,45,36,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 2 Skills
 Standard,Example,9,Level 9 Monster,,,6,4,8,16,4,57,47,38,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 2 Skills
-Standard,Example,10,Level 10 Monster,,,6,5,8,17,4,60,50,40,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 2 Skills
+Standard,Example,10,Level 10 Monster,,,6,5,8,17,4,60,50,40,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,11,Level 11 Monster,,,6,0,4,20,5,66,55,44,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,12,Level 12 Monster,,,6,1,4,22,5,72,60,48,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,13,Level 13 Monster,,,6,1,5,24,6,78,65,52,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,14,Level 14 Monster,,,6,2,5,26,6,84,70,56,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,15,Level 15 Monster,,,6,2,6,28,7,90,75,60,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,16,Level 16 Monster,,,6,3,6,30,7,96,80,64,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,17,Level 17 Monster,,,6,3,7,32,8,102,85,68,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,18,Level 18 Monster,,,6,4,7,34,8,108,90,72,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,19,Level 19 Monster,,,6,4,8,36,9,114,95,76,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,20,Level 20 Monster,,,6,5,8,38,9,120,100,80,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,21,Level 21 Monster,,,6,0,4,44,5,132,110,88,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,22,Level 22 Monster,,,6,1,4,48,5,144,120,96,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,23,Level 23 Monster,,,6,1,5,52,6,156,130,104,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,24,Level 24 Monster,,,6,2,5,56,6,168,140,112,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,25,Level 25 Monster,,,6,2,6,60,7,180,150,120,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,26,Level 26 Monster,,,6,3,6,64,7,192,160,128,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,27,Level 27 Monster,,,6,3,7,68,8,204,170,136,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,28,Level 28 Monster,,,6,4,7,72,8,216,180,144,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,29,Level 29 Monster,,,6,4,8,76,9,228,190,152,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
+Standard,Example,30,Level 30 Monster,,,6,5,8,80,9,240,200,160,NA,0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 3 Skills
 Minion,Example,1,Level 1 Minion,,,6,0,4,4,1,7,6,5,"Partial Vuln. (Melee, Ranged)",0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 2 Skills
 Minion,Example,2,Level 2 Minion,,,6,1,4,4,1,8,7,6,"Partial Vuln. (Melee, Ranged)",0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 2 Skills
 Minion,Example,3,Level 3 Minion,,,6,1,5,5,1,9,7,6,"Partial Vuln. (Melee, Ranged)",0,0,0,0,0,0,Race Power,<br><br>,,,,,Race Trait,<br><br>,,,,Up to 2 Skills
@@ -157,4 +177,11 @@ Minion,Example,20,Level 20 Minion,,,6,10,13,16,4,28,24,20,"Partial Vuln. (Melee,
 Elite,Ooze,2,Large Slime,Large,"Ooze",6,1,4,9,2,36,30,24,Vulnerable Cold,-1,0,2,0,1,0,Split,"Reaction, Automatic (reduced to 0 HP)<br>Effect: Create 2 Medium Slimes within 1 square. They have HP equal to their Bloodied value.",Acid Burst,"Minor Action attack, Close Burst 1<br>H vs For<br>Ongoing D (save ends).",Shed Slime,"Reaction, Automatic (is Dazed, Stunned or Immobilized).<br>Effect: Create 1 Slime Minion within 2 squares.",Blob,"Low HP (already included in stats)<br>Cannot be Flanked or knocked Prone.",,,,"Stealth"
 # Solo Monsters
 Solo,Ooze,4,Huge Slime,Huge,"Ooze",6,2,5,11,2,84,70,56,Vulnerable Cold,-1,0,2,0,1,0,Split,"Reaction, Automatic (reduced to 0 HP)<br>Effect: Create 2 Large Slimes within 1 square. They have HP equal to their Bloodied value.",Acid Explosion,"Minor Action attack, Close Burst 2<br>H vs For<br>Ongoing D (save ends) and Prone.",Shed Slime,"Free Reaction, Automatic (is Hit).<br>Effect: Create 1 Slime Minion within 2 squares.",Blob,"Low HP (already included in stats)<br>Cannot be Flanked or knocked Prone.<br>Ignore penalties for squeezing.",,,,"Stealth"
+Solo,Dragon,1,Dragon Wyrmling,Medium,Dragon,"6, Fly 8",1,5,10,2,156,128,104,NA,2,2,0,1,0,0,Double Claw,Make 2 Claw attacks.,Bloodied Breath,"Free Reaction (become Bloodied): Recharge Dragon Breath, and use it.",Dragonfear,"Reaction (an enemy misses the dragon)<br>Ranged 2 (safe, targets triggering enemy)<br>H vs Will<br>Hit: D/2 Psychic, Push 1 and Dazed (save ends).",,,,,1,"Athletics, Endurance"
 Solo,Dragon,3,Young Dragon,Large,Dragon,"6, Fly 8",1,5,10,2,156,128,104,NA,2,2,0,1,0,0,Double Claw,Make 2 Claw attacks.,Bloodied Breath,"Free Reaction (become Bloodied): Recharge Dragon Breath, and use it.",Dragonfear,"Reaction (an enemy misses the dragon)<br>Ranged 3 (safe, targets triggering enemy)<br>H vs Will<br>Hit: D/2 Psychic, Push 2 and Dazed (save ends).",,,,,2,"Athletics, Endurance"
+Solo,Dragon,7,Young Adult Dragon,Large,Dragon,"6, Fly 8",1,5,10,2,156,128,104,NA,2,2,0,1,0,0,Double Claw,Make 2 Claw attacks.,Bloodied Breath,"Free Reaction (become Bloodied): Recharge Dragon Breath, and use it.",Dragonfear,"Reaction (an enemy misses the dragon)<br>Ranged 3 (safe, targets triggering enemy)<br>H vs Will<br>Hit: D/2 Psychic, Push 2 and Dazed (save ends).",,,,,2,"Athletics, Endurance"
+Solo,Dragon,13,Adult Dragon,Huge,Dragon,"6, Fly 8",1,5,10,2,156,128,104,NA,2,2,0,1,0,0,Double Claw,Make 2 Claw attacks.,Bloodied Breath,"Free Reaction (become Bloodied): Recharge Dragon Breath, and use it.",Dragonfear,"Reaction (an enemy misses the dragon)<br>Ranged 5 (safe, targets triggering enemy)<br>H vs Will<br>Hit: D/2 Psychic, Push 4 and Dazed (save ends).",,,,,3,"Athletics, Endurance"
+Solo,Dragon,17,Mature Dragon,Huge,Dragon,"6, Fly 8",1,5,10,2,156,128,104,NA,2,2,0,1,0,0,Double Claw,Make 2 Claw attacks.,Bloodied Breath,"Free Reaction (become Bloodied): Recharge Dragon Breath, and use it.",Dragonfear,"Reaction (an enemy misses the dragon)<br>Ranged 5 (safe, targets triggering enemy)<br>H vs Will<br>Hit: D/2 Psychic, Push 4 and Dazed (save ends).",,,,,3,"Athletics, Endurance"
+Solo,Dragon,23,Elder Dragon,Gargantuan,Dragon,"6, Fly 8",1,5,10,2,156,128,104,NA,2,2,0,1,0,0,Double Claw,Make 2 Claw attacks.,Bloodied Breath,"Free Reaction (become Bloodied): Recharge Dragon Breath, and use it.",Dragonfear,"Reaction (an enemy misses the dragon)<br>Ranged 10 (safe, targets triggering enemy)<br>H vs Will<br>Hit: D/2 Psychic, Push 4 and Stunned (save ends).",,,Epic Might,"+1 to Recharge rolls and Action Point checks.<br>+2 saves.",4,"Athletics, Endurance"
+Solo,Dragon,27,Great Wyrm,Gargantuan,Dragon,"6, Fly 8",1,5,10,2,156,128,104,NA,2,2,0,1,0,0,Double Claw,Make 2 Claw attacks.,Bloodied Breath,"Free Reaction (become Bloodied): Recharge Dragon Breath, and use it.",Dragonfear,"Reaction (an enemy misses the dragon)<br>Ranged 10 (safe, targets triggering enemy)<br>H vs Will<br>Hit: D/2 Psychic, Push 4 and Stunned (save ends).",,,Epic Might,"+1 to Recharge rolls and Action Point checks.<br>+2 saves.",4,"Athletics, Endurance"
+
