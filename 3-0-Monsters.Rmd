@@ -213,13 +213,13 @@ All Solo Monsters gain the following rules:
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_race <- read_csv_monster("monster_races") %>%
-  dplyr::filter(Level %>% as.numeric()<11, category=='Solo', subcategory=='Dragon')
+  dplyr::filter(category=='Solo', subcategory=='Dragon')
 htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
     get_monster_list_htm()
 htm_monster_race %>% cat()
 ```
 
-### Solo Monster Classes
+### Solo Monster Classes - Dragon
 
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
@@ -232,7 +232,7 @@ htm_monster_class %>% cat()
 
 ## Other Templates
 
-Lieutenant:
+Fat:
 - +50% XP value
 - Double HP
 
@@ -252,6 +252,24 @@ as reference when designing custom monsters.
 df_monster_race <- read_csv_monster("monster_races") %>%
   dplyr::filter(Level %>% as.numeric()<11, category=='Standard', subcategory=='Example')
 htm_monster_race <- get_htm_monster_race(df_monster_race)  %>% 
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+### Race - Paragon
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()>=11, Level %>% as.numeric()<21, category=='Standard', subcategory=='Example')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+### Race - Epic
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()>=21, category=='Standard', subcategory=='Example')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
     get_monster_list_htm()
 htm_monster_race %>% cat()
 ```
@@ -283,4 +301,31 @@ df_monster_class <- read_csv_monster("monster_classes") %>%
 htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( )
 htm_monster_class %>% cat()
+```
+
+### Solo Race - Heroic
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()<11, category=='Solo', subcategory=='Example')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+### Solo Race - Paragon
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()>=11, Level %>% as.numeric()<21, category=='Solo', subcategory=='Example')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+### Solo Race - Epic
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(Level %>% as.numeric()>=21, category=='Solo', subcategory=='Example')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
 ```
