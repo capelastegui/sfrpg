@@ -9,3 +9,5 @@ output:  bookdown::gitbook
 # Index
 
 Square Fireballs - A role playing game of tactical fantasy
+
+v0.1.0

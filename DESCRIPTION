@@ -1,7 +1,7 @@
 Package: sfrpg
 Type: Package
 Title: Square Fireballs RPG
-Version: 0.0.1.001
+Version: 0.1.0
 Authors@R:
     person(given = "Pedro",
            family = "Capelastegui",
