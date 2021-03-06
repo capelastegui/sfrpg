@@ -62,12 +62,13 @@ Campaign resources are:
   
 Other player stats that are related to encounter and campaign resources are:
 
-- **Healing Surge**: How many Hit Points the character recovers  when healing. 
-  Many powers refer to using a Healing Surge - this means spending
-  1 Vitality to recover HP equal to their Healing Surge value. In addition, 
+- **Surge Value**: How many Hit Points the character recovers  when healing.
+  Many powers allow you to Heal a Surge (or, in legacy rules, Spend a Healing Surge) -
+  this means spending
+  1 Vitality to recover HP equal to their Surge Value. In addition,
   whenever a character below 1 HP is healed back above 0 HP, if this would leave
-  them at a HP value lower than their Healing Surge, their HP becomes equal 
-  to their Healing Surge value instead.
+  them at a HP value lower than their Surge Value, their HP becomes equal
+  to their Surge Value instead.
 - **Exhaustion**: A stat tracking a negative condition related to running out
   of Stamina. Characters gain -1 to attack rolls and skill checks for each point
   of Exhaustion. Exhaustion is gained by losing Stamina while at 0 Stamina, 
@@ -107,7 +108,7 @@ last as long as possible.
 **Sidebar: Stat Values**
 A typical character has Stamina 6, Vitality 1, and Morale 2.
 Stamina, Vitality and Morale are based on a character’s class.
-Healing Surge Value is equal to a quarter of a character’s base Hit Points, 
+Surge Value is equal to a quarter of a character’s base Hit Points,
 plus their Constitution / Charisma modifier.
 
 ## Resting
@@ -149,22 +150,21 @@ The following table summarizes how resources are spent and recovered:
 
 - Hit Points:
   - Recover all HP when taking a Short Rest, Long Rest or Full Rest.
-  - Recover HP equal to your Healing Surge value whenever you use a Healing
-   Surge.
+  - Recover HP equal to your Surge Value whenever you Heal a Surge.
   - Whenever you take damage, lose that many HP.
   - You are Unconscious while below 1 HP.
   - When knocked below 1 HP, you are Bleeding until stabilised.
   - While Bleeding, if you pass a Vitality Saving Throw, you can make a Saving
     Throw to stabilize and stop being Bleeding.
   - When you take damage while below 1 HP and stabilised, you become Bleeding.
-  - When healing from below 1 HP to an amount between 1 HP and your Healing
-    Surge value, your HP becomes your Healing Surge value instead.
+  - When healing from below 1 HP to an amount between 1 HP and your
+    Surge Value, your HP becomes your Surge Value instead.
 - Vitality: 
   - Recover all Vitality when taking a Short Rest, Long Rest or Full Rest.
   - Lose 1 Vitality when dropping below 1 HP for the first time in an encounter.
   - Lose 1 Vitality when failing a Vitality Saving Throw. You make a Vitality
     Saving Throw at the end of your turn while Bleeding.
-  - Lose 1 Vitality when you use a healing surge.
+  - Lose 1 Vitality when you Heal a Surge.
   - If at any point a character would spend or lose Vitality but has no Vitality
    left, they lose 1 Stamina instead. 
 - Morale:

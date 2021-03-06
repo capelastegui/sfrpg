@@ -44,7 +44,7 @@ get_df_hp_html <- function(df_hp=NULL) {
 
   df_hp_html <- df_hp %>%
     knitr::kable(format='html',
-                 col.names=c('Level',rep(c('HP','Surge'),3))) %>%
+                 col.names=c('Level',rep(c('HP','Base Surge Value'),3))) %>%
     kableExtra::add_header_above(
       c(" ", "Low HP"=2, "Medium HP"=2, "High HP"=2))
 

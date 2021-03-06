@@ -172,7 +172,7 @@ a summary of what they are used for. For a detailed description of Skills and
 Athletics | Strength | Sprinting, Climbing, Swimming
 Authority | Strength | Intimidation, Leadership, Military
 Concentration | Constitution | Study, Craftsmanship, Art
-Endurance | Constitution | Stamina, Wakefulness, Survival
+Endurance | Constitution | Resilience, Wakefulness, Survival
 Finesse | Dexterity | Balance, Tumbling, Lockpicking
 Stealth | Dexterity | Hiding, Secrets, Ciphers
 Perception | Wisdom | Observation, Empathy, Memory

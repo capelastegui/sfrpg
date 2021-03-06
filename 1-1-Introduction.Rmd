@@ -304,7 +304,7 @@ Ability Damage Modifier = Ability Bonus * Ability Multiplier
 ```
 The level progression for the Dice Multiplier and the Ability Multiplier are
  shown below for convenience. A more detailed description of these stats is
- provided on [later](#abilitymult) [sections](#abilitymult) of this chapter
+ provided on [later sections](#abilitymult) of this chapter
 
 <div class="very-narrow">
 Level  | Dice Multiplier
@@ -633,11 +633,45 @@ get_df_hp_html()
 A character under half of their maximum Hit Points is said to be Bloodied.
  Many game effects check for the Bloodied condition in characters. 
 
+#### Surge Value
+
 For Player Characters, another stat related to Hit Points is the
-**Surge Value**, which determines the amount of HP that is healed when a 
-character heals a Surge. A character's Surge Value is determined in the table above, and is typically roughly equal to one
- quarter their Hit Points. Effects that modify a character's
- maximum Hit Points do not change Surge Value.
+**Surge Value**, which determines the amount of HP that is healed when a
+character Heals a Surge. A character's Surge Value is determined as follows:
+
+```
+Surge Value = Base Surge Value + Surge Modifier + other Surge bonuses
+```
+
+**Base Surge Value** is shown in the table above,
+ and is typically roughly equal to one quarter their Hit Points.
+ Effects that modify a character's maximum Hit Points do not affect
+ their Base Surge Value.
+
+**Surge Modifier** is a bonus to a character's Surge Value
+ (the base amount of HP recovered when Healing a Surge) based
+ on the Constitution or Charisma score. It is calculated as follows:
+
+```
+Surge Modifier = (highest of Con and Cha) * Ability Multiplier
+```
+
+<div class="very-narrow">
+Level  | Ability Multiplier
+------------- | -------------
+1   | x1
+4	| x1.5
+9	| x2
+11 	| x2.5
+14	| x3
+17 	| x3.5
+19	| x4
+21 	| x5
+24	| x6
+27 	| x7
+29	| x8
+</div>
+
 
 ### Abilities
 
@@ -662,15 +696,15 @@ Each Ability is a value, typically ranging between -1 and 5, which is applied
 
 For Player Characters, some stats that are derived from Abilities. 
 These are the Secondary Defenses (Fortitude, Reflex, Will) and Secondary Stats
- (Reaction, Surges, and Initiative). These are the stats that correspond
+ (Opportunity Modifier, Surge Modifier, and Initiative Modifier). These are the stats that correspond
  to each Ability:
 
-- **Strength**: Fortitude, Reaction
-- **Constitution**: Fortitude, Surges
-- **Dexterity**: Reflex, Initiative
-- **Wisdom**: Reflex, Reaction
-- **Charisma**: Will, Surges
-- **Intelligence**: Will, Initiative
+- **Strength**: Fortitude, Opportunity Modifier
+- **Constitution**: Fortitude, Surge Modifier
+- **Dexterity**: Reflex, Initiative Modifier
+- **Wisdom**: Reflex, Opportunity Modifier
+- **Charisma**: Will, Surge Modifier
+- **Intelligence**: Will, Initiative Modifier
 
 The process for generating a Player Character's Abilities is described in the 
 Stat Generation section, in the Character Building chapter.
@@ -715,7 +749,7 @@ An Ability Damage Modifier is applied instead of a regular
 - Damage penalty
 - Shield Points (also known as Temporary Hit Points)
 - Bonus to HP
-- Bonus to Surge Value
+- Surge Bonus
 - Healing or extra healing
 - Regeneration
 
@@ -794,29 +828,61 @@ For Monsters, Secondary Defenses are determined by monster class. A table
 In addition to their direct application as modifiers to Powers and Skill Checks,
  a Player Character's Ability scores are used to generate six important stats:
  the three Secondary Defenses and three **Secondary Stats**. The Secondary Stats
- are **Reaction Modifier**, **Surge Number**, and **Initiative Modifier**.
+ are **Opportunity Modifier**, **Surge Modifier**, and **Initiative Modifier**.
 
-**Reaction Modifier** is a hit modifier that applies to a character's
- Spontaneous Reaction attacks. The most common type of Spontaneous Reaction
- attack is the Opportunity Attack, which is triggered by moving or making
- Ranged or Area attacks while adjacent to an enemy. Typical values for a
- Reaction Modifier range between -5 and +0. For Player Characters,
- a Reaction Modifier is determined as follows:
+#### Opportunity Modifier
+
+**Opportunity Modifier** is a hit modifier that applies to a character's opportunity attacks.
+ An Opportunity Attack is a Reaction attack that a character can make when an enemy, moves
+ or makes a Ranged or Area attack while adjacent to them.
+
+ ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+read_df_power() %>% dplyr::filter(type=='maneuver', Name=='Opportunity Attack') %>%
+      dplyr::select(-type) %>% clean_df_power()  %>% .$htm_power %>% cat()
+```
+
+ Typical values for a Opportunity Modifier range between -5 and +0. For Player Characters,
+ a Opportunity Modifier is determined as follows:
  
 ```
-Reaction Modifier = (highest of Str and Wis) - 4
+Opportunity Modifier = (highest of Str and Wis) - 4
 ```
 
-**Surge Number** is the maximum number of Surges that a Player Character
- can have. Characters can spend surges during an encounter to heal HP,
- and outside of encounters to have a Short Rest and recover all HP and
- Encounter powers. Characters regain all of their Surges after a Full Rest.
- Typical Surge Numbers range between 6 and 14. Each character class has a
- base value for Surge Number, which is modified by the character's abilities:
- 
+
+For a detailed discussion Opportunity Attacks, see Reactions in
+ the Combat chapter.
+
+#### Surge Modifier
+
+**Surge Modifier** is a bonus to a character's Surge Value
+ (the base amount of HP recovered when Healing a Surge) based
+ on the Constitution or Charisma score. It is calculated as follows:
+
 ```
-Surge Number = Character Surges + (highest of Con and Cha)
+Surge Modifier = (highest of Con and Cha) * Ability Multiplier
 ```
+
+<div class="very-narrow">
+Level  | Ability Multiplier
+------------- | -------------
+1   | x1
+4	| x1.5
+9	| x2
+11 	| x2.5
+14	| x3
+17 	| x3.5
+19	| x4
+21 	| x5
+24	| x6
+27 	| x7
+29	| x8
+</div>
+
+For a detailed description of Surge Values, check the [Hit Points][Surge Value] section earlier in this chapter. For more information about Surge usage and recovery, see Healing in the [Combat] chapter, and [Resting] in the [Adventuring] chapter.
+
+#### Initiative Modifier
+
 **Initiative Modifier** is a value that is added to a character's Initiative
  Roll at the start of an encounter, to determine the order in which character
  turns are taken. Typical values for an Initiative Modifier range between
@@ -826,21 +892,19 @@ Surge Number = Character Surges + (highest of Con and Cha)
 ```
 Initiative Modifier = (highest of Dex and Int) - Armor Penalty
 ```
-Monster characters also have a Reaction Modifier and Initiative Modifier
- though, lacking Surges, they have no Surge Number. These stats are
- determined by monster class; a table with typical stat values for each class
- role is provided in the Monster Stats section of the Monsters chapter.
 
-For a detailed discussion of Reactions, including the use of Spontaneous
- Reactions and application of Reaction Modifiers, see Reactions in
- the Combat chapter.
-
-For more information about Surge usage and recovery, see Healing in the
- Combat chapter, and Resting in the Adventuring chapter.
-
-For a description of Initiative Rolls, see Combat Sequence in the Combat
+For a description of Initiative Rolls, see [Rolling Initiative] in the Combat
  chapter, and for a list of the different types of armor and their associated
- Armor Penalty, see Equipment in the Character Building chapter.
+ Armor Penalty, see [Armor] in the [Character Building] chapter.
+
+#### Secondary Stats in monsters
+
+Monster characters also have a Opportunity Modifier and Initiative Modifier
+ though, with no way to heal a surge, they have no Surge Value. These stats are
+ determined by monster class; a table with typical stat values for each class
+ role is provided in the [Base Stats] section of the [Monsters] chapter.
+
+
 
 ### Movement Speed
 

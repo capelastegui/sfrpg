@@ -7,7 +7,7 @@ ftr_guard_aur,Guardian's Aura,"You gain the Defender Aura power.<br>Enemies Taun
 ftr_guard_shi,Guardian's Shield,"When an ally in your Defender Aura is damaged by an attack, or an ally is damaged by an attack made by an enemy in your Defender Aura, reduce the damage by your CON."
 ftr_armor_spc,Heavy Armor Specialist,Ignore your Skill Armor Penalty.
 ftr_watch_chl,Watchman's Challenge,"When you target an enemy with an attack, that enemy is Taunted until end of your next turn.<br>Enemies Taunted by you trigger Opportunity Attacks from you when Shifting or ignoring your Taunt."
-ftr_watch_eye,Watchman's Eye,"Add your Wisdom to your Reaction Modifier.<br>Add your Wisdom to the Crit Range of your Reaction attacks."
+ftr_watch_eye,Watchman's Eye,"Add your Wisdom to your Opportunity Modifier.<br>Add your Wisdom to the Crit Range of your Reaction attacks."
 ftr_watch_vig,Watchman's Vigilance, +Wis to your Perception and Authority Skills.
 ftr_sell_rth,Sellsword's Ruthlessness,Add your Intelligence to the damage of your Melee and Close attacks.
 ftr_sell_val,Sellsword's Valor,"When you attack an enemy,that enemy subtracts double your Intelligence to the damage of their Reaction attacks that turn."
@@ -32,7 +32,7 @@ rog_thug_wpn,Thug's Weapon,"You treat the following weapons as Light Weapons: Li
 rog_thug_mth,Meathead,Add double your Strength to your HP.
 rog_thug_wck,Whack in the Head,"When you hit an enemy with a melee attack, that enemy is Dazzled until the end of your next turn.<br>When attacking Dazzled enemies, you can use Sneak Attack as if you attacked with Advantage, and you gain +Strength Crit Range."
 rog_duel_wpn,Duelist's Weapon,You treat Light Blades as Light Weapons.
-rog_duel_cun,Duelist's Cunning,"Add your Intelligence to your Reaction Modifier.<br>While wielding two weapons, you gain a +Intelligence bonus to Arm against melee attacks."
+rog_duel_cun,Duelist's Cunning,"Add your Intelligence to your Opportunity Modifier.<br>While wielding two weapons, you gain a +Intelligence bonus to Arm against melee attacks."
 rog_duel_duel,Duel,"Gain the Duel power (Minor Action, 1/encounter, Taunt adjacent enemy until end of encounter).<br>When attacking enemies Taunted by you, you can use Sneak Attack as if you attacked with Advantage"
 rog_swash_wpn,Swashbuckler's Weapon,"You treat the following weapons as Light Weapons: Light Blades, Hand Crossbow."
 rog_swash_stp,Swashbuckler's Step,"When you Shift, you can have that movement count as Climbing or as a Long Jump.<br>When you use the Shift Maneuver, you Shift your Charisma (instead of Shift 1)."
