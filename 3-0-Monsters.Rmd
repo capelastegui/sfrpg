@@ -209,7 +209,7 @@ All Solo Monsters gain the following rules:
   Condition afflicting them, and make a Saving Throw with a +5 bonus. On a successful save, the condition
   is downgraded until their next turn, and they take 2(E) damage.
 
-### Solo Monster Races - Dragon
+### Solo - Dragon - Monster Races
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_race <- read_csv_monster("monster_races") %>%
@@ -219,12 +219,33 @@ htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
 htm_monster_race %>% cat()
 ```
 
-### Solo Monster Classes - Dragon
+### Solo - Dragon Monster Classes
 
 
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_monster_class <- read_csv_monster("monster_classes") %>%
-  dplyr::filter(category=='Solo')
+  dplyr::filter(category=='Solo', subcategory=='Dragon')
+htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
+   get_monster_list_htm( )
+htm_monster_class %>% cat()
+```
+
+### Solo - Eye - Monster Races
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_race <- read_csv_monster("monster_races") %>%
+  dplyr::filter(category=='Solo', subcategory=='Eye')
+htm_monster_race <- get_htm_monster_race(df_monster_race)  %>%
+    get_monster_list_htm()
+htm_monster_race %>% cat()
+```
+
+### Solo - Eye Monster Classes
+
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_monster_class <- read_csv_monster("monster_classes") %>%
+  dplyr::filter(category=='Solo', subcategory=='Eye')
 htm_monster_class <- get_htm_monster_class(df_monster_class)  %>%
    get_monster_list_htm( )
 htm_monster_class %>% cat()
