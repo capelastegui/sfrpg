@@ -92,12 +92,10 @@ Unlike most characters, minions do not have a HP value - do not keep track of da
 the following:
 
 - Minions have a damage threshold value. Whenever a minion receives damage equal or greater than their damage threshold,
-  they are automatically incapacitated. If a character damages a minion multiple times in the same turn (e.g. with
-  several weak attacks) and the total damage that turn exceeds the minion’s damage threshold, the minion is also
-  automatically incapacitated.
-- A minion that takes damage below their damage threshold is knocked prone instead.
-- Prone minions that are targeted by an attack or take any damage are automatically incapacitated. A minion that starts
-  their turn Prone must make a saving throw - on a failed save, they can take no actions that turn.
+  they are automatically incapacitated.
+- A minion that takes damag equal or greater than half their damage threshold is knocked prone.
+- The damage threshold of Prone minions is halved. A minion that starts
+  their turn Prone must make a saving throw - on a failed save, they can take no actions other than standing up that turn.
 
 In addition, most minions have Partial Vulnerability (Melee or Ranged), included in their stats.
 
