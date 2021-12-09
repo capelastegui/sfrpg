@@ -102,18 +102,6 @@ The following actions are available to PCs on Skill Encounters:
   - Special: This can be attempted multiple times per encounter, and the same 
     Skill may be reused, but each attempt needs to focus on a different part
     of the problem
-- Double Skill Check:
-  - Action: This requires 2 Standard actions. A single PC may spend these 
-    actions across 2 turns, or 2 PCs may spend them together.
-  - Check: Choose 2 relevant Skills , and make a single check using the Base DC
-    for the challenge minus 1. If the check is done by a single character, use 
-    the lowest of the 2 Skill Bonuses for the check. If the check is done by 2 
-    characters, each character chooses a Skill, then you take each character's
-    Skill Bonus for their chosen skill, and use the lowest of the 2. The check
-    is made once both actions have been spent.
-  - Success: Gain +1 Progress for this challenge
-  - Failure: This counts as a single failed Skill Check for each participating 
-    PC
 - Skill Assist
   - Standard Action
   - Check: Choose a Skill Check that a character will make this encounter, and 

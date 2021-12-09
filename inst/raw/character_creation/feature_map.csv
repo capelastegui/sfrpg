@@ -1,9 +1,14 @@
 build_id,feature_id
-ftr_guard,ftr_weapn_mas
+ftr_guard,ftr_shiel_mas
 ftr_guard,ftr_guard_aur
 ftr_guard,ftr_guard_shi
 ftr_guard,ftr_armor_spc
 ftr_guard,ftr_train
+ftr_sentn,ftr_weapn_mas
+ftr_sentn,ftr_sentn_aur
+ftr_sentn,ftr_sentn_alt
+ftr_sentn,ftr_armor_mob
+ftr_sentn,ftr_train
 ftr_watch,ftr_weapn_mas
 ftr_watch,ftr_watch_chl
 ftr_watch,ftr_watch_eye

@@ -279,6 +279,7 @@
 </ul></li>
 <li class="chapter" data-level="8.3" data-path="classes.html"><a href="classes.html#fighter"><i class="fa fa-check"></i><b>8.3</b> Fighter</a><ul>
 <li class="chapter" data-level="8.3.1" data-path="classes.html"><a href="classes.html#fighter-guardian"><i class="fa fa-check"></i><b>8.3.1</b> Fighter Guardian</a></li>
+<li class="chapter" data-level="8.3.2" data-path="classes.html"><a href="classes.html#fighter-sentinel"><i class="fa fa-check"></i><b>8.3.2</b> Fighter Sentinel</a></li>
 </ul></li>
 <li class="chapter" data-level="8.4" data-path="classes.html"><a href="classes.html#priest"><i class="fa fa-check"></i><b>8.4</b> Priest</a><ul>
 <li class="chapter" data-level="8.4.1" data-path="classes.html"><a href="classes.html#priest-of-light"><i class="fa fa-check"></i><b>8.4.1</b> Priest of Light</a></li>
@@ -378,8 +379,10 @@
 <li class="chapter" data-level="11.3.3" data-path="monsters.html"><a href="monsters.html#elite-monster-classes"><i class="fa fa-check"></i><b>11.3.3</b> Elite Monster Classes</a></li>
 </ul></li>
 <li class="chapter" data-level="11.4" data-path="monsters.html"><a href="monsters.html#solo-monsters"><i class="fa fa-check"></i><b>11.4</b> Solo Monsters</a><ul>
-<li class="chapter" data-level="11.4.1" data-path="monsters.html"><a href="monsters.html#solo-monster-races---dragon"><i class="fa fa-check"></i><b>11.4.1</b> Solo Monster Races - Dragon</a></li>
-<li class="chapter" data-level="11.4.2" data-path="monsters.html"><a href="monsters.html#solo-monster-classes---dragon"><i class="fa fa-check"></i><b>11.4.2</b> Solo Monster Classes - Dragon</a></li>
+<li class="chapter" data-level="11.4.1" data-path="monsters.html"><a href="monsters.html#solo---dragon---monster-races"><i class="fa fa-check"></i><b>11.4.1</b> Solo - Dragon - Monster Races</a></li>
+<li class="chapter" data-level="11.4.2" data-path="monsters.html"><a href="monsters.html#solo---dragon-monster-classes"><i class="fa fa-check"></i><b>11.4.2</b> Solo - Dragon Monster Classes</a></li>
+<li class="chapter" data-level="11.4.3" data-path="monsters.html"><a href="monsters.html#solo---eye---monster-races"><i class="fa fa-check"></i><b>11.4.3</b> Solo - Eye - Monster Races</a></li>
+<li class="chapter" data-level="11.4.4" data-path="monsters.html"><a href="monsters.html#solo---eye-monster-classes"><i class="fa fa-check"></i><b>11.4.4</b> Solo - Eye Monster Classes</a></li>
 </ul></li>
 <li class="chapter" data-level="11.5" data-path="monsters.html"><a href="monsters.html#other-templates"><i class="fa fa-check"></i><b>11.5</b> Other Templates</a></li>
 <li class="chapter" data-level="11.6" data-path="monsters.html"><a href="monsters.html#base-stats"><i class="fa fa-check"></i><b>11.6</b> Base Stats</a><ul>
@@ -1569,7 +1572,7 @@ Total class skills
 Weapon Training
 </td>
 <td>
-All Basic, All Melee Martial
+All Basic, All One-Handed Melee Martial
 </td>
 </tr>
 <tr>
@@ -1600,7 +1603,7 @@ Expected Armor
 </table>
 <div class="Feature">
 <p>
-<b>Weapon Mastery</b>: +1 Hit with weapon attacks
+<b>Shield Mastery</b>: Ignore the Heavy Shield penalty to Hit.
 </p>
 </div>
 <div class="Feature">
@@ -1610,7 +1613,7 @@ Expected Armor
 </div>
 <div class="Feature">
 <p>
-<b>Guardian’s Shield</b>: When an ally in your Defender Aura is damaged by an attack, or an ally is damaged by an attack made by an enemy in your Defender Aura, reduce the damage by your CON.
+<b>Guardian’s Shield</b>: When an ally in your Defender Aura is damaged by an attack, or an ally is damaged by an attack made by an enemy in your Defender Aura, reduce the damage by your Con.
 </p>
 </div>
 <div class="Feature">
@@ -1638,6 +1641,23 @@ Utility
 </p>
 <p>
 <b>Effect</b>: Gain Aura 1: You Taunt enemies in the aura. This effect lasts until you dismiss it as a Minor Action, or you become Unconscious.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="green large"><strong>Cautious Assault - Fighter 1</strong></span>
+</p>
+<p>
+Attack - <i>Martial, Weapon, Martial</i>
+</p>
+<p>
+<b>Melee</b> - Str vs Arm
+</p>
+<p>
+<b>Hit</b>: 1W+Con, and gain Str SP
+</p>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
 </p>
 </div>
 <div class="Power">
@@ -1708,7 +1728,7 @@ Attack - Encounter - <i>Martial, Weapon</i>
 <b>Hit</b>: Hit: 1W+Str, and Slide 1.
 </p>
 <p>
-<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</span>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W+Str<br>Upgrade 23: Increase Hit damage to 3W+Str</span>
 </p>
 </div>
 <div class="Power">
@@ -1722,27 +1742,10 @@ Attack - Encounter - <i>Martial, Weapon</i>
 <b>Melee</b> - Str vs For
 </p>
 <p>
-<b>Hit</b>: Hit: 1W, and Stunned until your next turn.
+<b>Hit</b>: Hit: 1W+Con. If you have Advantage, Stunned until end of your next turn. Otherwise, Dazed until end of your next turn.
 </p>
 <p>
 <span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 2W<br>Upgrade 23: Increase Hit damage to 3W</span>
-</p>
-</div>
-<div class="Power">
-<p>
-<span class="gray large"><strong>Blade Dance - Fighter 1</strong></span>
-</p>
-<p>
-Attack - Daily - <i>Martial, Weapon, Stance</i>
-</p>
-<p>
-<b><i>Minor Action</i></b> - <b>Personal</b> -
-</p>
-<p>
-<b>Effect</b>: Stance: At the start of your turn, choose an adjacent enemy. You Slide 1 that enemy and deal 1W damage to them.
-</p>
-<p>
-<span class="Power-Upgrade">Upgrade 15: Effect Deal 1W and Slide 1 to each adjacent enemy.<br>Upgrade 25: Deal 2W and Slide 1 to each adjacent enemy.</span>
 </p>
 </div>
 <div class="Power">
@@ -1764,25 +1767,39 @@ Attack - Daily - <i>Martial, Weapon, Reliable</i>
 </div>
 <div class="Power">
 <p>
-<span class="gray large"><strong>Comeback Strike - Fighter 1</strong></span>
+<span class="gray large"><strong>Come And Get It! - Fighter 1</strong></span>
 </p>
 <p>
 Attack - Daily - <i>Martial, Weapon</i>
 </p>
 <p>
+<b>Close Burst 3</b> - enemies in burst - Str vs Wil
+</p>
+<p>
+<b>Hit</b>: Hit: Pull 2 and Taunted (save ends). Then, if you are adjacent to the target, 1W.
+</p>
+<p>
+<b>Miss</b>: Pull 1 and Taunted (save ends).
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 2W<br>Upgrade 25: Increase Hit damage to 4W</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Retaliatory Strike - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Daily - <i>Martial, Weapon, Reliable, Stance</i>
+</p>
+<p>
 <b>Melee</b> - Str vs Arm
 </p>
 <p>
-<b>Hit</b>: 2W+Str.
+<b>Hit</b>: 2W+Str, and you enter Stance: Enemies in your Defender Aura take Con damage when they damage you or an ally.
 </p>
 <p>
-<b>Miss</b>: Half Damage
-</p>
-<p>
-<b>Effect</b>: Heal a surge and double the amount healed.
-</p>
-<p>
-<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 4W+Str</span>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 5W+Str<br></span>
 </p>
 </div>
 <div class="Power">
@@ -1825,6 +1842,447 @@ Utility - Encounter - <i>Martial, Shield</i>
 </p>
 <p>
 <b>Effect</b>: Until your next turn, you gain Cover against enemy attacks and cannot be flanked.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="fighter-sentinel" class="section level3 newPage">
+<h3><span class="header-section-number">8.3.2</span> Fighter Sentinel</h3>
+<table class="Class-table">
+<tbody>
+<tr>
+<td>
+Power Source
+</td>
+<td>
+Martial
+</td>
+</tr>
+<tr>
+<td>
+Role
+</td>
+<td>
+Defender
+</td>
+</tr>
+<tr>
+<td>
+Power Progression
+</td>
+<td>
+Standard
+</td>
+</tr>
+<tr>
+<td>
+HP
+</td>
+<td>
+High
+</td>
+</tr>
+<tr>
+<td>
+Stamina
+</td>
+<td>
+6
+</td>
+</tr>
+<tr>
+<td>
+Vitality
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+Morale
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+Magic
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+Light Armor Bonus
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+Fortitude
+</td>
+<td>
+2
+</td>
+</tr>
+<tr>
+<td>
+Reflex
+</td>
+<td>
+0
+</td>
+</tr>
+<tr>
+<td>
+Will
+</td>
+<td>
+1
+</td>
+</tr>
+<tr>
+<td>
+Primary Ability
+</td>
+<td>
+Str
+</td>
+</tr>
+<tr>
+<td>
+Secondary Ability
+</td>
+<td>
+Wis
+</td>
+</tr>
+<tr>
+<td>
+Trained Skills
+</td>
+<td>
+4
+</td>
+</tr>
+<tr>
+<td>
+Skills
+</td>
+<td>
+Athletics, Authority, Endurance, Concentration, Perception
+</td>
+</tr>
+<tr>
+<td>
+Total class skills
+</td>
+<td>
+5
+</td>
+</tr>
+<tr>
+<td>
+Weapon Training
+</td>
+<td>
+All Basic, All One-Handed Melee Martial, Longspear, Glaive, Halberd and Whip.
+</td>
+</tr>
+<tr>
+<td>
+Implement Training
+</td>
+<td>
+-
+</td>
+</tr>
+<tr>
+<td>
+Armor Training
+</td>
+<td>
+Cloth, Leather, Hide, Chain, Scale, Light Shield
+</td>
+</tr>
+<tr>
+<td>
+Expected Armor
+</td>
+<td>
+14
+</td>
+</tr>
+</tbody>
+</table>
+<div class="Feature">
+<p>
+<b>Weapon Mastery</b>: +1 Hit with weapon attacks.
+</p>
+</div>
+<div class="Feature">
+<p>
+<b>Sentinel’s Aura</b>: You gain the Defender Aura power.<br>Enemies Taunted by you trigger Opportunity Attacks from you when ignoring your Taunt or shifting out of your Defender Aura<br/>Enemies within Melee Reach trigger Opportunity Attacks from you when they Bloody or knock unconscious an ally, even if they are not adjacent to you.
+</p>
+</div>
+<div class="Feature">
+<p>
+<b>Sentinel’s Alertness</b>: +Wis to Init.<br/>When you roll Initiative, or when you are Bloodied for the first time each encounter, gain Wis SP.
+</p>
+</div>
+<div class="Feature">
+<p>
+<b>Heavy Armor Mobility</b>: Ignore your Movement Penalty from Armor.
+</p>
+</div>
+<div class="Feature">
+<p>
+<b>Fighter Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and knowledge checks related to weapons, armor and fighting styles (Perception, Lore)<br>- Keep watch (Perception, Endurance)
+</p>
+</div>
+<div id="class-powers-4" class="section level4 newPage">
+<h4><span class="header-section-number">8.3.2.1</span> Class Powers</h4>
+<div class="Power-List">
+<div class="Power">
+<p>
+<span class="green large"><strong>Defender Aura - Fighter Feature 1</strong></span>
+</p>
+<p>
+Utility
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Gain Aura 1: You Taunt enemies in the aura. This effect lasts until you dismiss it as a Minor Action, or you become Unconscious.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="green large"><strong>Fancy Footwork - Fighter 1</strong></span>
+</p>
+<p>
+Attack - <i>Martial, Weapon, Martial</i>
+</p>
+<p>
+<b>Melee</b> - Str vs Arm
+</p>
+<p>
+<b>Hit</b>: 1W+Str
+</p>
+<p>
+<b>Effect</b>: Shift 1, then, if you hit with this attack, Pull 1.
+</p>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="green large"><strong>Knock Down - Fighter 1</strong></span>
+</p>
+<p>
+Attack - <i>Martial, Weapon, Martial</i>
+</p>
+<p>
+<b>Melee</b> - Str vs Arm
+</p>
+<p>
+<b>Hit</b>: 1W+Str. If you have Advantage, knock Prone. Otherwise, you gain Advantage against the target until end of your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="green large"><strong>Sure Strike - Fighter 1</strong></span>
+</p>
+<p>
+Attack - <i>Martial, Weapon, Martial</i>
+</p>
+<p>
+<b>Melee</b> - Str+1 vs Arm
+</p>
+<p>
+<b>Hit</b>: 1W+Str.
+</p>
+<p>
+<b>Miss</b>: Wis damage
+</p>
+<p>
+<span class="Power-Upgrade">Level 21: Increase Hit damage to 2W+Str.</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Disarm - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Martial, Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs Ref
+</p>
+<p>
+<b>Hit</b>: 2W + Wis. If you have Advantage, Weakened until end of your next turn. Otherwise, Partially Weakened until end of your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Halt! - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Martial, Weapon</i>
+</p>
+<p>
+<b>Melee Weapon +1</b> - Str vs Wil
+</p>
+<p>
+<b>Hit</b>: 2W + Str, Pull 1 and Slowed until end of your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Skewer - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Encounter - <i>Martial, Weapon</i>
+</p>
+<p>
+<b>Line (Melee Weapon +1)</b> - enemies in line - Str vs Arm
+</p>
+<p>
+<b>Hit</b>: Hit: 2W+Str.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 13: Increase Hit damage to 3W+Str<br>Upgrade 23: Increase Hit damage to 4W+Str</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Blade Dance - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Daily - <i>Martial, Weapon, Stance</i>
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Melee</b> - Str vs Arm
+</p>
+<p>
+<b>Hit</b>: 1W, and Slide 1.
+</p>
+<p>
+<b>Effect</b>: Stance: At the start of your turn, you can make the secondary attack as a Free Action.
+</p>
+<p>
+<b>Secondary Attack:</b> Melee, Str vs Arm. Hit: 1W and Slide 1.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Primary and secondary attacks gain ‘target 1 or 2 enemies’<br>Upgrade 25: As level 15, and increase Hit damage for primary and secondary attack to 2W.</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Comeback Strike - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Daily - <i>Martial, Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs Arm
+</p>
+<p>
+<b>Hit</b>: 2W+Str.
+</p>
+<p>
+<b>Miss</b>: Half Damage
+</p>
+<p>
+<b>Effect</b>: Heal a surge and double the amount healed.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 3W+Str<br>Upgrade 25: Increase Hit damage to 5W+Str</span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="gray large"><strong>Deadly Chase - Fighter 1</strong></span>
+</p>
+<p>
+Attack - Daily - <i>Martial, Weapon</i>
+</p>
+<p>
+<b>Melee</b> - Str vs Arm
+</p>
+<p>
+<b>Effect</b>: Shift your Speed in a line.
+</p>
+<p>
+<b>Hit</b>: 3W+Str, and Immobilized until end of your next turn.
+</p>
+<p>
+<b>Miss</b>: Half Damage, and Slowed until end of your next turn.
+</p>
+<p>
+<span class="Power-Upgrade">Upgrade 15: Increase Hit damage to 5W+Str<br>Upgrade 25: Increase Hit damage to 7W+Str<br></span>
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Find Opening - Fighter 2</strong></span>
+</p>
+<p>
+Utility - Encounter - <i>Martial</i>
+</p>
+<p>
+<i> (Trigger: Minor Action)</i> - <b>Melee</b> -
+</p>
+<p>
+<b>Effect</b>: Until end of your next turn, your attacks against the target gain Advantage and Pierce Resist
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Grit - Fighter 2</strong></span>
+</p>
+<p>
+Utility - Encounter - <i>Martial</i>
+</p>
+<p>
+<i> (Trigger: Minor Action)</i> - <b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Roll a save to ignore one Combat Condition this turn. On a failed save, lose 1 Surge.
+</p>
+</div>
+<div class="Power">
+<p>
+<span class="red large"><strong>Watchful Eye - Fighter 2</strong></span>
+</p>
+<p>
+Utility - Encounter - <i>Martial</i>
+</p>
+<p>
+<b><i>Minor Action</i></b> - <b>Personal</b> -
+</p>
+<p>
+<b>Effect</b>: Until your next turn, your Defender Aura becomes Aura 2, and you gain Advantage on Reaction attacks.
+</p>
+<p>
+Special: Requires the Defender Aura power.
 </p>
 </div>
 </div>
@@ -2032,7 +2490,7 @@ Expected Armor
 <b>Priest Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and knowledge checks (Arcana, Lore) related to Gods, Divine power and the undead.<br>- Heal the sick or wounded (Nature, Concentration)
 </p>
 </div>
-<div id="class-powers-4" class="section level4 newPage">
+<div id="class-powers-5" class="section level4 newPage">
 <h4><span class="header-section-number">8.4.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -2444,7 +2902,7 @@ Expected Armor
 <b>Priest Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and knowledge checks (Arcana, Lore) related to Gods, Divine power and the undead.<br>- Heal the sick or wounded (Nature, Concentration)
 </p>
 </div>
-<div id="class-powers-5" class="section level4 newPage">
+<div id="class-powers-6" class="section level4 newPage">
 <h4><span class="header-section-number">8.4.2.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -3344,7 +3802,7 @@ Attack - <i>Primal, Beast</i>
 </div>
 <p>The companion has no Surge Value and no Stamina of its own. It can only Heal a Surge with the Beast Recovery class feature, using the ranger’s surge value.</p>
 </div>
-<div id="class-powers-6" class="section level4 newPage">
+<div id="class-powers-7" class="section level4 newPage">
 <h4><span class="header-section-number">8.5.1.2</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -3846,7 +4304,7 @@ Expected Armor
 <b>Ranger Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and knowledge checks (Nature) related to natural and magical beasts.<br>- Track enemies (Perception, Nature) and avoid enemy tracking (Stealth)<br>- Hunting (Nature)
 </p>
 </div>
-<div id="class-powers-7" class="section level4 newPage">
+<div id="class-powers-8" class="section level4 newPage">
 <h4><span class="header-section-number">8.5.2.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -4075,7 +4533,7 @@ Expected Armor
 <b>Ranger Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and knowledge checks (Nature) related to natural and magical beasts.<br>- Track enemies (Perception, Nature) and avoid enemy tracking (Stealth)<br>- Hunting (Nature)
 </p>
 </div>
-<div id="class-powers-8" class="section level4 newPage">
+<div id="class-powers-9" class="section level4 newPage">
 <h4><span class="header-section-number">8.5.3.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -4331,7 +4789,7 @@ Expected Armor
 <b>Ranger Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and knowledge checks (Nature) related to natural and magical beasts.<br>- Track enemies (Perception, Nature) and avoid enemy tracking (Stealth)<br>- Hunting (Nature)
 </p>
 </div>
-<div id="class-powers-9" class="section level4 newPage">
+<div id="class-powers-10" class="section level4 newPage">
 <h4><span class="header-section-number">8.5.4.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -4547,7 +5005,7 @@ Expected Armor
 <b>Rogue Training</b>: Rogue Training: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy, Trickery) and knowledge checks (Perception, Lore) related to crime.<br>- Pick locks (Finesse), pick pockets (Trickery)<br>- Find traps (Perception) and disable traps (Concentration)
 </p>
 </div>
-<div id="class-powers-10" class="section level4 newPage">
+<div id="class-powers-11" class="section level4 newPage">
 <h4><span class="header-section-number">8.6.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -4932,7 +5390,7 @@ Expected Armor
 </tr>
 </tbody>
 </table>
-<div id="class-powers-11" class="section level4 newPage">
+<div id="class-powers-12" class="section level4 newPage">
 <h4><span class="header-section-number">8.7.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -5312,7 +5770,7 @@ Expected Armor
 <b>Warlord Training</b>: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy) and Lore checks related to the military, teamwork activities.<br>- Teach and train others (Concentration)
 </p>
 </div>
-<div id="class-powers-12" class="section level4 newPage">
+<div id="class-powers-13" class="section level4 newPage">
 <h4><span class="header-section-number">8.8.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">
@@ -5721,7 +6179,7 @@ Expected Armor
 <b>Wizard Training</b>: Wizard Training: Reduce by 1 the DC of the following Skill Checks:<br>- Social checks (Authority, Diplomacy, Trickery) and knowledge checks (Arcana, Lore) related to Arcane magic.<br>- Study and gather information from books (Concentration)
 </p>
 </div>
-<div id="class-powers-13" class="section level4 newPage">
+<div id="class-powers-14" class="section level4 newPage">
 <h4><span class="header-section-number">8.9.1.1</span> Class Powers</h4>
 <div class="Power-List">
 <div class="Power">

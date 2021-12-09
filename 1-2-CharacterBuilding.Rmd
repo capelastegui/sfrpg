@@ -541,8 +541,7 @@ Each character can wear one suit of Light Armor or Heavy Armor. In addition,
  carry objects with their shield hand.
 
 **Armor Penalty**: Some types of armor have an Armor Penalty value
- (typically -1). This penalty applies to Hit rolls of Ranged and Area attacks,
- as well as Skill Checks for Athletics, Endurance, Finesse, and Stealth.
+ (typically -1). This penalty applies to Skill Checks for Athletics, Endurance, Finesse, and Stealth.
 
  **Range Penalty**: Some types of armor have a Range Penalty value (typically -2).
  This penalty reduces the range of Ranged and Area powers, and is applied before

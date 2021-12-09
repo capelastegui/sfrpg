@@ -1,5 +1,6 @@
 Class,Build,type,build_id
 Fighter,Guardian,class,ftr_guard
+Fighter,Sentinel,class,ftr_sentn
 Fighter,Watchman,class,ftr_watch
 Fighter,Sellsword,class,ftr_sell
 Wizard,Elementalist,class,wiz_elemt

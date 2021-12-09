@@ -1,11 +1,15 @@
 feature_id,Name,Description
-ftr_weapn_mas,Weapon Mastery, +1 Hit with weapon attacks
+ftr_weapn_mas,Weapon Mastery,+1 Hit with weapon attacks.
+ftr_shiel_mas,Shield Mastery,Ignore the Heavy Shield penalty to Hit.
 ftr_train,Fighter Training,"Reduce by 1 the DC of the following Skill Checks:
 -  Social checks (Authority, Diplomacy) and knowledge checks related to weapons, armor and fighting styles (Perception, Lore)
 - Keep watch (Perception, Endurance)"
 ftr_guard_aur,Guardian's Aura,"You gain the Defender Aura power.<br>Enemies Taunted by you trigger Opportunity Attacks from you when ignoring your Taunt or shifting out of your Defender Aura.<br/>Enemies hit by your Opportunity Attacks are Taunted until end of turn."
-ftr_guard_shi,Guardian's Shield,"When an ally in your Defender Aura is damaged by an attack, or an ally is damaged by an attack made by an enemy in your Defender Aura, reduce the damage by your CON."
+ftr_guard_shi,Guardian's Shield,"When an ally in your Defender Aura is damaged by an attack, or an ally is damaged by an attack made by an enemy in your Defender Aura, reduce the damage by your Con."
 ftr_armor_spc,Heavy Armor Specialist,Ignore your Skill Armor Penalty.
+ftr_sentn_aur,Sentinel's Aura,"You gain the Defender Aura power.<br>Enemies Taunted by you trigger Opportunity Attacks from you when ignoring your Taunt or shifting out of your Defender Aura<br/>Enemies within Melee Reach trigger Opportunity Attacks from you when they Bloody or knock unconscious an ally, even if they are not adjacent to you."
+ftr_sentn_alt,Sentinel's Alertness,"+Wis to Init.<br/>When you roll Initiative, or when you are Bloodied for the first time each encounter, gain Wis SP."
+ftr_armor_mob,Heavy Armor Mobility,Ignore your Movement Penalty from Armor.
 ftr_watch_chl,Watchman's Challenge,"When you target an enemy with an attack, that enemy is Taunted until end of your next turn.<br>Enemies Taunted by you trigger Opportunity Attacks from you when Shifting or ignoring your Taunt."
 ftr_watch_eye,Watchman's Eye,"Add your Wisdom to your Opportunity Modifier.<br>Add your Wisdom to the Crit Range of your Reaction attacks."
 ftr_watch_vig,Watchman's Vigilance, +Wis to your Perception and Authority Skills.
