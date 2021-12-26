@@ -6,6 +6,8 @@ Fighter,Sellsword,class,ftr_sell
 Wizard,Elementalist,class,wiz_elemt
 Wizard,Abjurer,class,wiz_abjur
 Wizard,Summoner,class,wiz_summ
+Shaman,Predator,class,shm_pred
+Shaman,Vitality,class,shm_vita
 Ranger,Ranger general rules,rules,rng_rules
 Ranger,Beastmaster,class,rng_bstm
 Ranger,Archer,class,rng_arch

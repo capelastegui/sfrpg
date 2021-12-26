@@ -1020,19 +1020,34 @@ Some powers have the *Reliable* keyword, which prevents the powers from being sp
 ### Power Keywords
 
 List of keywords with rules:
-- Weapon
-- Implement
+* Weapon
+* Implement
+* Conjuration
+* Spirit
 
 List of damage type keywords:
-- Fire
-- Cold
-- Lightning
-- Radiant
-- Shadow
-- Poison
-- Psychic
+* Fire
+* Cold
+* Lightning
+* Radiant
+* Shadow
+* Poison
+* Psychic
 
+#### Conjuration
 
+Powers with the Conjuration keyword create new objects on the battlefield, called *conjurations*. Conjurations occupy space, based on their size, which is Medium unless otherwise stated. They do not count as characters, do not have HP and cannot take actions. They cannot be attacked unless the power description says otherwise - in that case, they have the same defenses as their creator (unless otherwise stated), and the effect of attacking them is explained in the power block.
+
+Conjurations are unaffected by status effects, but may be affected by forced movement.
+
+Some powers allow their users to move a conjuration. Unless otherwise stated, conjuration movement follows the same rules as a character walking: Must stay in ground spaces, are affected by Difficult Terrain or blocking terrain. This is the case even if the conjuration is described as floating. Conjurations do not trigger opportunity attacks. A conjuration may fall, for example if moving over a pit, but does not suffer fall damage and cannot be knocked prone. Unless otherwise stated, the conjuration user needs to have line of sight to the destination space of a conjuration's movement.
+
+#### Spirit
+
+Some powers of the [Shaman class](#shaman) have the **Spirit** keyword. The following rules apply to a power with this keyword.
+* A character may only choose to learn the power if they have the **Spirit Companion** power.
+* A character may only use the power while they have an active Spirit Companion.
+* Range for the power is determined from the Spirit Companion's space.
 
 ### Action Type
 
@@ -1042,10 +1057,10 @@ List of damage type keywords:
 
 The following types of power range are supported:
 
-- Melee: target adjacent characters
-- Ranged: target characters that are far away
-- Close: target characters in an area originating from you
-- Area: target characters in an area originating from a point far away
+* Melee: target adjacent characters
+* Ranged: target characters that are far away
+* Close: target characters in an area originating from you
+* Area: target characters in an area originating from a point far away
 
 #### Range - Melee
 
