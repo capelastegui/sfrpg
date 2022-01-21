@@ -1049,6 +1049,19 @@ Some powers of the [Shaman class](#shaman) have the **Spirit** keyword. The foll
 * A character may only use the power while they have an active Spirit Companion.
 * Range for the power is determined from the Spirit Companion's space.
 
+#### Zone
+
+Powers with the Zone keyword create areas with special properties in the battlefield, called *zones*. The shape of a zone depends on the power that creates it: usually, a Close or Area power will define a zone in its blast or burst. It is also possible to have a zone composed of a single square, or a square and all adjacent spaces.
+
+Depending on the power creating them, zones may last for a turn or a full encounter. Some zones have the Sustain keyword, allowing the creator to extend their duration.
+
+Zones typically cover a fixed area, but some powers allow the zone creator to move a zone.
+
+Some zones have the Zone Damage property. Characters in a zone with Zone Damage take damage when they enter the zone or end their turn in the zone. This damage can only trigger once per turn, for each zone.
+
+#### Summon
+
+
 ### Action Type
 
 #### Action Trigger
@@ -1120,8 +1133,36 @@ read_df_power() %>% dplyr::filter(type=='maneuver', Name=='Point Blank Shot') %>
 
 ### Power Effect
 
-### Sustain Powers
+
 
 ### Power Upgrades
+
+#### Special power effects
+
+Some powers have special effects, as described below
+
+### Sustain Powers
+
+Sustain: The character creating an effect may extend its duration by spending an action during their next turns:
+
+* Sustain Minor: Spend a Minor Action to extend the effect until the end of the character's next turn.
+* Sustain Standard: Spend a Standard Action to extend the effect until the end of the character's next turn.
+
+Once a power's effect ends, it can no longer be Sustained.
+
+
+Some character abilities may grant a Free Sustain:
+
+* Free Sustain Minor: The character may Sustain a power with Sustain Minor without spending an action.
+* Free Sustain: The character may Sustain a power with Sustain Minor or Sustain Standard without spending an action.
+
+### Aftereffect
+
+Some powers have a Aftereffect, which is an effect that takes place after another effect ends.
+
+Example:
+
+* The target is Immobilized until end of your next turn. Aftereffect: The target is Slowed until the end of your next turn.
+* In this case, the target will be Immobilized for a turn, then Slowed for another turn.
 
 

@@ -10,4 +10,4 @@ output:  bookdown::gitbook
 
 Square Fireballs - A role playing game of tactical fantasy
 
-v0.1.0
+v0.1.1

@@ -61,70 +61,6 @@ Some Berserker powers have the Fury keyword.These powers have 2 modes: the Peace
 df_class_build$htm_power %>% cat()
 ```
 
-## Shaman{.newPage}
-
-### Shaman Special rules
-
-#### Spirit Powers
-
-Some Shaman powers have the Spirit keyword. The following rules apply to a power with this keyword.
-
-* A character may only choose to learn the power if they have the **Spirit Companion** power.
-* A character may only use the power while they have an active Spirit Companion.
-* Range for the power is determined from the Spirit Companion's space.
-
-#### Spirit Companion
-
-Shamans can conjure a Spirit Companion that assist them in combat. As Conjurations, companions are not characters and do not have HP, but they may be attacked. The following rules apply when a spirit companion is attacked:
-
-* The Companion uses the Shaman's defenses.
-* The Companion has Resist (Close and Area attacks).
-* When the Companion is damaged,the Shaman takes half that much damage.
-* The Companion has a Damage Threshold based on the Shaman's level (see table below). When the Companion takes damage equal or greater than this threshold, it is destroyed (shaman save negates).
-
-Companions are unaffected by damaging effects other than direct attacks, such as damage from zone effects or auras.
-
-<div class="very-narrow">
-Level | Threshold | Level | Threshold | Level | Threshold
--- | -- | -- | -- | -- | --
-1 | 8 | 11 | 20 | 21 | 44
-2 | 9 | 12 | 22 | 22 | 48
-3 | 10 | 13 | 24 | 23 | 52
-4 | 11 | 14 | 26 | 24 | 56
-5 | 12 | 15 | 28 | 25 | 60
-6 | 13 | 16 | 30 | 26 | 64
-7 | 14 | 17 | 32 | 27 | 68
-8 | 15 | 18 | 34 | 28 | 72
-9 | 16 | 19 | 36 | 29 | 76
-10 | 17 | 20 | 38 | 30 | 80
-</div>
-
-### Predator Shaman {.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_class_build = get_class_build(df_class, 'Shaman', 'Predator')
-df_class_build$htm_stat %>% cat()
-df_class_build$htm_feature %>% cat()
-```
-
-#### Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_class_build$htm_power %>% cat()
-```
-
-
-### Vitality Shaman {.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_class_build = get_class_build(df_class, 'Shaman', 'Vitality')
-df_class_build$htm_stat %>% cat()
-df_class_build$htm_feature %>% cat()
-```
-
-#### Class Powers{.newPage}
-```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
-df_class_build$htm_power %>% cat()
-```
-
-
 
 ## Fighter{.newPage}
 ### Fighter Guardian
@@ -283,6 +219,71 @@ df_class_build$htm_feature %>% cat()
 ```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
 df_class_build$htm_power %>% cat()
 ```
+
+## Shaman{.newPage}
+
+### Shaman Special rules
+
+#### Spirit Powers
+
+Some Shaman powers have the Spirit keyword. The following rules apply to a power with this keyword.
+
+* A character may only choose to learn the power if they have the **Spirit Companion** power.
+* A character may only use the power while they have an active Spirit Companion.
+* Range for the power is determined from the Spirit Companion's space.
+
+#### Spirit Companion
+
+Shamans can conjure a Spirit Companion that assist them in combat. As Conjurations, companions are not characters and do not have HP, but they may be attacked. The following rules apply when a spirit companion is attacked:
+
+* The Companion uses the Shaman's defenses.
+* The Companion has Resist (Close and Area attacks).
+* When the Companion is damaged,the Shaman takes half that much damage.
+* The Companion has a Damage Threshold based on the Shaman's level (see table below). When the Companion takes damage equal or greater than this threshold, it is destroyed (shaman save negates).
+
+Companions are unaffected by damaging effects other than direct attacks, such as damage from zone effects or auras.
+
+<div class="very-narrow">
+Level | Threshold | Level | Threshold | Level | Threshold
+-- | -- | -- | -- | -- | --
+1 | 8 | 11 | 20 | 21 | 44
+2 | 9 | 12 | 22 | 22 | 48
+3 | 10 | 13 | 24 | 23 | 52
+4 | 11 | 14 | 26 | 24 | 56
+5 | 12 | 15 | 28 | 25 | 60
+6 | 13 | 16 | 30 | 26 | 64
+7 | 14 | 17 | 32 | 27 | 68
+8 | 15 | 18 | 34 | 28 | 72
+9 | 16 | 19 | 36 | 29 | 76
+10 | 17 | 20 | 38 | 30 | 80
+</div>
+
+### Predator Shaman {.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Shaman', 'Predator')
+df_class_build$htm_stat %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
+
+### Vitality Shaman {.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_class, 'Shaman', 'Vitality')
+df_class_build$htm_stat %>% cat()
+df_class_build$htm_feature %>% cat()
+```
+
+#### Class Powers{.newPage}
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
+
 
 ## Warlock{.newPage}
 ### Shadow Warlock

@@ -103,10 +103,10 @@ wld_ins,wld_heal
 wld_ins,wld_adv
 wld_ins,wld_ins_act
 wld_ins,wld_train
-wlk_shadow_,wlk_contr
-wlk_shadow_,wlk_shadow_crs
-wlk_shadow_,wlk_shadow_pct
-wlk_shadow_,wlk_train
+wlk_shadow,wlk_contr
+wlk_shadow,wlk_shadow_crs
+wlk_shadow,wlk_shadow_pct
+wlk_shadow,wlk_train
 univ,univ
 ori_human,ori_human_act
 ori_human,ori_human_rec
