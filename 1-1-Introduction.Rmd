@@ -1024,6 +1024,8 @@ List of keywords with rules:
 * Implement
 * Conjuration
 * Spirit
+* Summon
+* Control
 
 List of damage type keywords:
 * Fire
@@ -1061,6 +1063,30 @@ Some zones have the Zone Damage property. Characters in a zone with Zone Damage 
 
 #### Summon
 
+Powers with the Summon keyword create creatures that act as allies to the caster in the battlefield, called *Summons*. A Summon is medium-sized unless otherwise stated.  The following rules apply to Summons:
+- Summon powers can create a Summon in a non-occupied space within the power's range. If the power is a ranged attack power, the summon can be created at Long Range, but in that case the summon is Hindered until end of turn.
+- Can be attacked and damaged like a normal character. When reduced to 0 HP, a Summon is destroyed.
+- Unless otherwise stated, a Summon has the same defenses as its caster.
+- Last until the end of the encounter unless otherwise stated.
+- Summons do not act independently of their caster. During their turn, the caster can spend their own actions to grant the Summon an action of that type. Some Summons can act automatically at the end of their caster's turns. Some Summons can use Reactions, such as Opportunity Attacks, by spending the caster's actions of that type for the turn.
+- When a Summon attacks, the caster applies bonuses from feats, class features, equipment and other modifiers as if they were making the attack.
+
+<div class="tip">Normally, only Daily Summon powers last until the end of an encounter. At-Will and Encounter Summon powers usually last one turn or have Sustain Minor.</div>
+
+#### Control
+
+Powers with the Control keyword are stronger than normal attacks, wielded by characters with the Controller role. A character may only take a Control power if they have the Controller Power class feature.
+
+<div class="tip">**Tip**: A character taking the Multiclass feat to multiclass into a Controller class can take a few Control powers.</div>
+
+<div class="tip">**Tip**: A non-Controller character can access Control powers from their same class by taking the Class Specialization feat.</div>
+
+<div class="design">**Designer's Note**: The reasoning behind this description is to allow the design of classes where some builds have the Controller role and others don't. Since Controller attacks are stronger than normal attacks, non-controller powers would become obsolete for some builds, otherwise.</div>
+
+<div class="compatibility">**Compatibility Note**: The Control keyword does not exist in legacy rulebooks. When using legacy options, assume that any attack (but not Utility) power from a Controller build has it. Likewise, assume that any class build with the Controller role has the following class feature:
+
+Controller Power: This character can take attack powers with the Control keyword.
+</div>
 
 ### Action Type
 

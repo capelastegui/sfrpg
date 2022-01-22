@@ -1,4 +1,5 @@
 feature_id,Name,Description
+ctr_power,Controller Power,This character can take attack powers with the Control keyword.
 ftr_weapn_mas,Weapon Mastery,+1 Hit with weapon attacks.
 ftr_shiel_mas,Shield Mastery,Ignore the Heavy Shield penalty to Hit.
 ftr_train,Fighter Training,"Reduce by 1 the DC of the following Skill Checks:
@@ -16,7 +17,7 @@ ftr_watch_vig,Watchman's Vigilance, +Wis to your Perception and Authority Skills
 ftr_sell_rth,Sellsword's Ruthlessness,Add your Intelligence to the damage of your Melee and Close attacks.
 ftr_sell_val,Sellsword's Valor,"When you attack an enemy,that enemy subtracts double your Intelligence to the damage of their Reaction attacks that turn."
 ftr_sell_bar,Sellsword's Bargaining, +Intelligence to your Authority and Bluff Skills.
-wiz_contr_pow,Controller Power,"Gain an additional Wizard Daily Attack power, of a level equal to the level of your lowest Wizard Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Wizard daily powers."
+wiz_contr_pow,Wizard Power,"Gain an additional Wizard Daily Attack power, of a level equal to the level of your lowest Wizard Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Wizard daily powers."
 wiz_train,Wizard Training,"Wizard Training: Reduce by 1 the DC of the following Skill Checks:
 - Social checks (Authority, Diplomacy, Trickery) and knowledge checks (Arcana, Lore) related to Arcane magic.
 - Study and gather information from books (Concentration)"
@@ -67,7 +68,7 @@ wld_heal,Inspiring Word,Gain the Inspiring Word power.
 wld_adv,Warlord's Advice,Allies that can see or hear you gain +2 Initiative.
 wld_tac_act,Tactical Action,"The first time one of your allies uses an Action Point each encounter, they gain +Int to Hit and Arm until their next turn."
 wld_ins_act,Inspired Action,"The first time one of your allies uses an Action Point each encounter, they gain SP equal to double your Cha, and +Cha to damage until their next turn."
-wlk_contr,Controller Power,"Gain an additional Warlock Daily Attack power, of a level equal to the level of your lowest Warlock Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Warlock daily powers."
+wlk_contr,Warlock Power,"Gain an additional Warlock Daily Attack power, of a level equal to the level of your lowest Warlock Daily Attack power slot.<br>You can use an additional Daily Attack power per encounter (but no more than one per turn). +1 to Recharge rolls for your Warlock daily powers."
 wlk_shadow_crs,Shadow Curse,"Once per turn, when you hit an enemy with an attack, the enemy is afflicted with your Shadow Curse until the end of the encounter. Enemies under the Shadow Curse treat you as having Concealment or, if you already have Concealment, as having Total Concealment.<br>Some Warlock powers refer to your Warlock Curse. You can have these effects apply to this class feature. "
 wlk_shadow_pct,Shadow Pact,"Once per round, when an enemy under your Shadow Curse is reduced to 0 HP, the enemy's space becomes a Zone of Difficult Terrain for your enemies until the end of the encounter. The Zone has Zone Damage: Dex Shadow (enemies only). "
 rng_train,Ranger Training,"Reduce by 1 the DC of the following Skill Checks:

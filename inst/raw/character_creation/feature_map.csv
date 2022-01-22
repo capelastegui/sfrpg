@@ -19,16 +19,19 @@ ftr_sell,ftr_sell_rth
 ftr_sell,ftr_sell_val
 ftr_sell,ftr_sell_bar
 ftr_sell,ftr_train
+wiz_elemt,ctr_power
 wiz_elemt,wiz_contr_pow
 wiz_elemt,wiz_elem_rng
 wiz_elemt,wiz_flex
 wiz_elemt,wiz_rit
 wiz_elemt,wiz_train
+wiz_abjur,ctr_power
 wiz_abjur,wiz_contr_pow
 wiz_abjur,wiz_abjur_shi
 wiz_abjur,wiz_flex
 wiz_abjur,wiz_rit
 wiz_abjur,wiz_train
+wiz_summ,wiz_contr_pow
 wiz_summ,wiz_contr_pow
 wiz_summ,wiz_summ_mas
 wiz_summ,wiz_flex
@@ -103,6 +106,7 @@ wld_ins,wld_heal
 wld_ins,wld_adv
 wld_ins,wld_ins_act
 wld_ins,wld_train
+wlk_shadow,ctr_power
 wlk_shadow,wlk_contr
 wlk_shadow,wlk_shadow_crs
 wlk_shadow,wlk_shadow_pct
