@@ -78,6 +78,8 @@ Tier characters.</div>
 The following table shows the Skill Check target value (also known as DC, or Difficulty Class)
 associated with each difficulty level:
 
+For a detailed description of the [Ability Skill Bonus], see the Character
+ Building chapter
 
 Abreviation | Check level | DC | Req. Training | Morale cost
 -- | -- | -- | -- | --
@@ -335,6 +337,41 @@ Any negative consequences due to Fail Forward should be mitigated
 if partial success is reached.
 
 
+## Roleplaying die roll
+
+With the GM's consent, players participating in a Skill Check that involves
+interaction with other characters, or where planning is important may replace
+the usual method of resolving Skill Checks with a Roleplaying Die Roll.
+
+In a Roleplaying Die Roll, instead of rolling a D20, have the players describe
+in detail the actions the carry out to solve the problem. The GM then judges 
+their performance based on the quality of the solution, and modifies the result
+based on roleplaying considerations.
+
+```
+Roleplaying Die Roll = Solution Score + Roleplaying Modifier
+```
+
+Solution Score: Use the following values instead of the check d20, based on the GM's judgement:
+
+- Terrible: The described solution fails to address the challenge: Automatic failure
+- Below Average: The described solution only addresses the challenge partially, or under specific conditions: 6+1d4
+- Good: The described solution fully addresses the challenge: 11+1d4
+- Excellent: The described solution fully addresses the challenge, in a particularly imaginative or effective way: 16+1d4
+
+Roleplaying Modifier: Apply the following modifiers based on the GM's judgement of the role playing:
+
+- The described solution is out of place for the character, given their background and personality: Automatic failure
+- The described solution slightly conflicts with the character’s background or personality: -2
+- The described solution matches the character’s background and personality: +0
+- The described solution provides new and relevant insight about the character’s background and personality: +2
+
+Once the Roleplaying Die Roll is resolved, add the Skill Bonus and compare with
+the target difficulty as usual:
+
+```
+Skill Check (with Roleplaying Die) = Roleplaying Die Roll + Skill Bonus 
+```                                                                                                                                  
 
 
     
