@@ -325,7 +325,7 @@ Example: "an ally can make a basic attack as a Free Action" becomes "an ally can
 
 ## Attacking
 ### Range and Targeting
-### Hit Roll
+### Hit Roll{#attack-roll}
 #### Hit Modifiers
 
 Condition | Modifier

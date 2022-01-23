@@ -1,5 +1,10 @@
 # Skills
 
+**Skills** are the system used to resolve game interactions that are not
+directly related to combat. From climbing a steep cliff, to sneaking past
+the guards or negotiating a treaty with a foreign representative, there is
+a wide variety of actions that are handled with skills.
+
 There are 12 Skills in the game. Each skill has an associated ability modifier
 
 Skill | Ability | Summary
@@ -17,18 +22,45 @@ Trickery | Charisma | Lying, Gossip, Forgery
 Arcana | Intelligence | Magic, Science, Cosmology
 Lore | Intelligence | History, Geography, Law
 
-Using Skills
+## Using a Skill
+
+Using a skill in the game takes the following steps:
+- During the game, the GM describes a challenge that the PCs need to overcome,
+  or a PC states an action that they want to take.
+- The GM can decide that the problem is trivial for the PCs. In this case,
+  they automatically succeed without need for a Skill Check.
+- Otherwise, the GM sets a base Skill Check Difficulty for this task.
+- PCs explain how they plan to handle the task, and negotiate with the GM which Skills
+  they will use and whether this will take one or more checks. Depending of the
+  proposed solutions, the GM may choose to adjust the Skill Check Difficulty
+- A PC rolls a Skill Check. See the [Skill Checks] section below for details on
+  how to resolve this, and how to manage successes and failures.
+
+<div class="tip">**Tip:** Even when a situation does not call for a skill check,
+you can still have fun with it. Players are encouraged to narrate and roleplay
+their PCs handling routine tasks, if they wish.</div>
+
+<div class="tip">**GM Tip:** GMs should be flexible and open to innovative ideas.
+The purpose of the Skill system is not to have players guess the GM's preferred
+solution to a given problem, but to generate interesting situations for the
+characters and provide some uncertainty and excitement about outcomes.
+GMs should encourage and reward players who come up with unexpected solutions,
+as long as they make sense. That said, if a player proposes something that
+clearly won't work, it is fine to raise the difficulty or tell them that they
+can't succeed this way.</div>
+
+## Skill Training
 
 Some actions are only available to characters with an appropriate level of
- training in a skill. These are the levels of training that a character can 
+ training in a skill. These are the levels of training that a character can
  have in a skill:
 
-- Untrained. This the level that most characters have with a skill. 
-  Untrained characters have not received any formal training with a skill, 
+- Untrained. This the level that most characters have with a skill.
+  Untrained characters have not received any formal training with a skill,
   but they can still attempt basic tasks associated with it, and succeed with
   a bit of luck and natural talent.
-- Trained. Characters Trained with a skill have spent significant time 
-  practicing it, and can be considered experts in the area. Trained characters 
+- Trained. Characters Trained with a skill have spent significant time
+  practicing it, and can be considered experts in the area. Trained characters
   rarely make errors on mundane tasks related to their skill of choice,
   and with effort and luck, they can even succeed on advanced actions out of
   the reach of amateurs.
@@ -37,6 +69,52 @@ Some actions are only available to characters with an appropriate level of
 - Grandmaster. Very few mortals ever reach this level of proficiency. The
   feats that Grandmasters can achieve are the stuff of legends.
 
+<div class="tip">**Tip:** Typically, the Master category is only available for
+characters of Paragon Tier or higher, and the Grandmaster category for Epic
+Tier characters.</div>
+
+## Skill Check Difficulty
+
+The following table shows the Skill Check target value (also known as DC, or Difficulty Class)
+associated with each difficulty level:
+
+
+Abreviation | Check level | DC | Req. Training | Morale cost
+-- | -- | -- | -- | --
+R | Routine | - |   |  
+E | Easy | 8 |   | 1 on Failure
+M | Medium | 13 |   | 1 on Failure
+H | Hard | 18 |   | 1 on Failure
+VH | Very Hard | 23 | Trained | 1 on Failure
+I | Legendary | 28 | Master | 2 on Failure
+I | Impossible | 33 | Grandmaster | 2 on Failure
+
+The Req. Training column shows the  minimum Skill Training level required to attempt
+a check at that difficulty.
+
+The Morale Cost column shows the amount of Morale that is lost on a failed check.
+
+The Skill Difficulty levels are described as follows:
+- Easy - Anyone can do it, but an untrained character may sometimes fail
+  this or require extra time or help
+- Medium - Non-trivial effort for untrained characters, trained characters
+  will handle it most of the time.
+- Hard - This is the most an individual without special training can achieve,
+ with luck. Requires effort even from experts.
+- Very Hard - Experts can sometimes accomplish this, with luck.
+- Legendary - Something only the best in the world could do, on a good day.
+- Impossible - Normally considered out of reach for mortals.
+
+<div class="tip">**Tip:** Typically, Skill Difficulty
+goes up to Very Hard for Heroic Tier characters, up to Legendary for
+Paragon Tier characters, and up to Impossible for Epic Tier characters.</div>
+
+## Skill Checks
+
+To resolve a Skill Check is to roll a **d20**, add the character's
+ **bonus** to that check (if any) and any **modifiers** that apply, and compare
+ the result with a target number. If the result is equal or greater than the
+ target number, the check is a success, otherwise, the check is a failure.
 
 For each skill, the associated Skill Bonus is generated
 as follows: 
@@ -48,30 +126,16 @@ Skill Bonus = Ability Skill Bonus + Skill Training Bonus + Armor Penalty + Other
 For a detailed description of the [Ability Skill Bonus], see the Character
  Building chapter
 
-Skill Check Difficulty table
+**Armor Penalty**: Some types of armor have an Armor Penalty value
+ (typically -1). This penalty applies to Skill Checks for Athletics, Endurance,
+  Finesse, and Stealth. See the [Armor] section in the [Character Building] chapter
+  for details on the Armor Penalty associated with each type of armor.
 
-Abreviation | Check level | DC | Req. Level | Morale cost
--- | -- | -- | -- | --
-R | Routine | - |   |  
-E | Easy | 8 |   | 1 on Failure
-M | Medium | 13 |   | 1 on Failure
-H | Hard | 18 |   | 1 on Failure
-VH | Very Hard | 23 | Trained | 1 on Failure
-I | Legendary | 28 | Master | 2 on Failure
-I | Impossible | 33 | Grandmaster | 2 on Failure
+The d20 roll may be replaced with a [roleplaying die roll], as explained below.
 
-Difficulty guide
-- Easy - Anyone can do it, but an untrained character may sometimes fail
-  this or require extra time or help
-- Medium - Non-trivial effort for untrained characters, trained characters
-  will handle it most of the time.
-- Hard - This is the most an individual without special training can achieve, 
- with luck. Requires effort even from experts.
-- Very Hard - Experts can sometimes accomplish this, with luck.
-- Legendary - Something only the best in the world could do, on a good day.
-- Impossible - Normally considered out of reach for mortals.
+### Skill Check Modifiers
 
-## Skill Check Modifiers
+The following modifiers apply to a Skill Check
 
 Description | Modifier
 --- | --
@@ -79,8 +143,90 @@ Character previously failed same check | +1 DC
 Allies previously failed same check twice | +1 DC
 Advantage | +2
 Demoralized | -2
+Escalation Die | -Die Value
 
 A character is Demoralized when reduced to 0 Morale.
+
+### Escalation Die in Skill Checks
+
+Even in a non-combat encounter, the GM should keep track of player actions. When all
+PCs have taken an action (or decided not to), a new round starts.
+ At the start of the third round, the GM takes a special d4 called the
+ Escalation Die and sets it to 1. This value increases on each turn thereafter. When
+ taking a Skill Check, apply a penalty equal to the value of the Escalation Die. This
+ represents increased pressure on the characters due to urgency or weariness.
+
+See [Escalation Die] in the [Introduction] chapter for more details.
+
+### Skill Check failure
+
+The main outcome of a failed Skill Check is that the character fails to achieve
+whatever they were trying to do. Depending on the situation, they may try again with
+some penalty or by trying a different approach, or that path may be closed to them
+altogether. When a party has exhausted other options, they may use the [Fail Forward]
+action (explained below) to move on from a failed challenge, at a cost
+
+Another consequence of failing a Skill Check is the loss of Morale. Morale is a limited
+resource that PCs have, related to the use of skills, that is replenished by resting.
+Characters running out of Morale suffer penalties and may lose Stamina if they fail further
+Skill Checks. See the [Adventuring] chapter for more details.
+
+- Morale rules summary:
+  - Recover all Morale when taking a Short Rest, Long Rest or Full Rest.
+  - Characters with 0 Morale gain a -2 penalty to
+    Skill Checks
+  - Lose 1 Morale when failing a Skill Check.
+  - Spend 1 or more Morale when performing a Ritual.
+  - Some types of Skill Check have an additional Morale cost.
+    See skill description for more details.
+  - If at any point a character would spend or lose Morale but has no Morale
+    left, they take a Morale Saving Throw for each point of Morale lost.
+    For each failure, they lose 1 Stamina.
+
+### Roleplaying die roll
+
+With the GM's consent, players participating in a Skill Check that involves
+interaction with other characters, or where planning is important may replace
+the usual method of resolving Skill Checks with a Roleplaying Die Roll.
+
+In a Roleplaying Die Roll, instead of rolling a D20, have the players describe
+in detail the actions the carry out to solve the problem. The GM then judges
+their performance based on the quality of the solution, and modifies the result
+based on roleplaying considerations.
+
+```
+Roleplaying Die Roll = Solution Score + Roleplaying Modifier
+```
+
+Solution Score: Use the following values instead of the check d20, based on the GM's judgement:
+
+- Terrible: The described solution fails to address the challenge: Automatic failure
+- Below Average: The described solution only addresses the challenge partially, or under specific conditions: 6+1d4
+- Good: The described solution fully addresses the challenge: 11+1d4
+- Excellent: The described solution fully addresses the challenge, in a particularly imaginative or effective way: 16+1d4
+
+Roleplaying Modifier: Apply the following modifiers based on the GM's judgement of the role playing:
+
+- The described solution is out of place for the character, given their background and personality: Automatic failure
+- The described solution slightly conflicts with the character’s background or personality: -2
+- The described solution matches the character’s background and personality: +0
+- The described solution provides new and relevant insight about the character’s background and personality: +2
+
+Once the Roleplaying Die Roll is resolved, add the Skill Bonus and compare with
+the target difficulty as usual:
+
+```
+Skill Check (with Roleplaying Die) = Roleplaying Die Roll + Skill Bonus
+```
+<div class="tip">**Tip:** Roleplaying Die Rolls are completely optional - use them if
+your group enjoys them, and ignore them otherwise. All skill checks involve describing the
+characters' actions to some degree, so in the end, it is up to the GM to decide when to allow
+this method. That said, we recommend the following guidelines:
+- Default to d20 rolls, and use roleplaying die rolls only at a players' request.
+- Roleplaying die rolls are best suited for social interactions, but can be used in other
+  situations when the GM agrees that they make sense.
+- If the GM perceives that a particular player makes excessive use of this system,
+  it is fine to limit its use per game session.</div>
 
 ## Skill Actions
 
@@ -134,6 +280,7 @@ The following actions are available to PCs on Skill Encounters:
     problem.
   - Option: This may be taken as a Minor Action by increasing its DC by 1.
 
+### Fail Forward
 
 There is also a special action that can only be used if all participating PCs
 agree:
@@ -151,7 +298,18 @@ exhausted, or once all characters become Demoralized.
 
 ## Skill Challenges
 
-Level | Challenge Tier | Required progress | DC
+Some times, a GM may present PCs with a complex non-combat scenario that requires
+several skill checks to succeed - we call this a **Skill Challenge**.
+The GM describes the situation and explains one or more problems that need solving,
+ and the PCs attempt Skill Checks. To succeed in a Skill Challenge, a party needs to
+ reach a certain amount of Progress points: an encounter starts at 0 Progress, the party
+ increases their progress by succeeding at Skill Checks, and the encounter ends when
+ the party reaches a set amount or progress, or gives up.
+
+The table below shows appropriate encounters
+by party level:
+
+Level | Challenge Tier | Required progress | Skill Difficulty
 - | -- | - | --
 1 | Basic | 3 | Normal
 3 | Basic, Long | 5 | Normal
@@ -173,45 +331,10 @@ Adjustments by party size:
 
 Partial success: If the players achieve more than half the required Progress
 for the encounter, they should achieve partial success (determined by the GM).
-Likewise, any negative consequences due to Fail Forward should be mitigated 
+Any negative consequences due to Fail Forward should be mitigated
 if partial success is reached.
 
 
-## Roleplaying die roll
-
-With the GM's consent, players participating in a Skill Check that involves
-interaction with other characters, or where planning is important may replace
-the usual method of resolving Skill Checks with a Roleplaying Die Roll.
-
-In a Roleplaying Die Roll, instead of rolling a D20, have the players describe
-in detail the actions the carry out to solve the problem. The GM then judges 
-their performance based on the quality of the solution, and modifies the result
-based on roleplaying considerations.
-
-```
-Roleplaying Die Roll = Solution Score + Roleplaying Modifier
-```
-
-Solution Score: Use the following values instead of the check d20, based on the GM's judgement:
-
-- Terrible: The described solution fails to address the challenge: Automatic failure
-- Below Average: The described solution only addresses the challenge partially, or under specific conditions: 6+1d4
-- Good: The described solution fully addresses the challenge: 11+1d4
-- Excellent: The described solution fully addresses the challenge, in a particularly imaginative or effective way: 16+1d4
-
-Roleplaying Modifier: Apply the following modifiers based on the GM's judgement of the role playing:
-
-- The described solution is out of place for the character, given their background and personality: Automatic failure
-- The described solution slightly conflicts with the character’s background or personality: -2
-- The described solution matches the character’s background and personality: +0
-- The described solution provides new and relevant insight about the character’s background and personality: +2
-
-Once the Roleplaying Die Roll is resolved, add the Skill Bonus and compare with
-the target difficulty as usual:
-
-```
-Skill Check (with Roleplaying Die) = Roleplaying Die Roll + Skill Bonus 
-```                                                                                                                                  
 
 
     

@@ -165,7 +165,7 @@ Each of these modifiers is explained in a separate section below.
 
 The following table shows all 12 Skills with their corresponding Abilities and
 a summary of what they are used for. For a detailed description of Skills and
- how they work, see the Skills chapter.
+ how they work, see the [Skills] chapter.
  
  Skill | Ability | Summary
 -- | -- | --- 
@@ -254,7 +254,7 @@ Players are restricted in the abilities they can choose to increase their
  </div>
 
 
-### Skill Training
+### Choosing Skill Training
 
 Depending on their class, Player Characters can choose a number of Skills to
  become Trained in them. Characters gain a +3 bonus to Skill Checks with
@@ -291,11 +291,11 @@ Some Origins and Classes provide automatic training with predetermined Skills.
  Alternatively, you can specialize on your best Skills by taking Skill Focus
  as an Adventure Feat.</div>
 
-### Armor Penalty to Skill
+### Apply Armor Penalty to Skill
 
 Some types of armor have an Armor Penalty value
  (typically -1). This penalty applies to Skill Checks for Athletics, Endurance,
- Finesse, and Stealth. See Armor in the equipment section of this chapter
+ Finesse, and Stealth. See [Armor] in the [equipment] section of this chapter
  for more information.
 
 ### Other Skill Bonuses
