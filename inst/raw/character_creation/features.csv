@@ -133,3 +133,7 @@ ori_gol_big,Long Limbs,"Gain Melee Reach 2 and +2 Range on ranged attacks."
 ori_gol_res,Goliath Resistance,Gain the Goliath Resistance Power.
 ori_kbl_mob,Mob Attack,"Gain +1 Hit vs enemies adjacent to an ally, and -1 Hit vs enemies not adjacent to an ally."
 ori_kbl_shf,Shifty,Gain the Shifty Kobold Power.
+ori_shift_kns,Keen Senses,+2 Initiative.
+ori_shift_bss,Bestial Speed,Gain the Bestial Speed Power.
+ori_shift_wlr,Wild Resilience,+1 to Saves.
+ori_shift_bsr,Bestial Recovery,Gain the Bestial Recovery Power.

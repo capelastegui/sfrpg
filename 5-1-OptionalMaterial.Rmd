@@ -1,0 +1,58 @@
+# Optional Material
+
+Character options in this section can be used with the GM's consent.
+
+## Origins
+
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+library(sfrpg)
+df_origin = get_df_origin()
+```
+
+
+### Shifter - Agile
+
+Shifters have the ability to partially change their shape, gaining animal traits.
+Agile Shifters often take the form of wolves, panthers or other beasts that favor
+speed and cunning over brute force.
+
+#### Origin Stats
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_origin, 'Shifter', 'Agile')
+df_class_build$htm_stat %>% cat()
+```
+
+
+#### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_feature %>% cat()
+```
+
+#### Origin Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```
+
+
+### Shifter - Brute
+
+Shifters have the ability to partially change their shape, gaining animal traits.
+Brute Shifters often take the form of bears, boars or other beasts that favor
+brute force over speed and cunning.
+
+#### Origin Stats
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build = get_class_build(df_origin, 'Shifter', 'Brute')
+df_class_build$htm_stat %>% cat()
+```
+
+
+#### Origin Features
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_feature %>% cat()
+```
+
+#### Origin Powers
+```{r, echo=FALSE, results='asis', message=FALSE, warning=FALSE, prompt=FALSE}
+df_class_build$htm_power %>% cat()
+```

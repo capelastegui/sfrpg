@@ -31,6 +31,8 @@ Elf,Elf,origin,ori_elf
 Elf,High Elf,origin,ori_elf_hi
 Elf,Cloud Elf,origin,ori_elf_custom_cloud
 Elf,Welf,origin,ori_elf_custom_welf
+Shifter,Agile,origin,ori_shift_agi
+Shifter,Brute,origin,ori_shift_fie
 Gnome,Gnome,origin,ori_gnome
 Orc,Orc,origin,ori_orc
 Halfling,Halfling,origin,ori_halfl

@@ -177,7 +177,9 @@ ori_gob_sld,Goblin Slide,,1,Utility,Encounter,NA,,Minor Action,,Melee 1,targets 
 ori_dvl_fshld,Diabolic Shield,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Until end of next turn, gain Cover, and enemies attacking you take Fire damage equal to your primary ability.",,,,
 ori_min_red,See Red,,1,Utility,Encounter,,,Minor Action,,Personal,,,,,,"Until end of the Encounter, gain -1 to all Defenses, and when attacking Bloodied enemies gain +1 Hit and +1 Crit Range.",,,,
 ori_gol_res,Goliath Resistance,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Until end of next turn, gain Resist (All)",,,,
-ori_kbl_shf,Shifty Kobold,,1,Utility,Encounter,,,Minor Action,,,,,,,,Shift 1,,,,
+ori_kbl_shf,Shifty Kobold,,1,Utility,Encounter,,,Minor Action,,,,,,,,Shift 1,"Special: Recharge this power when you spend an Action Point, and when you become Bloodied for the first time in an encounter.",,,
+ori_shift_bss,Bestial Speed,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Shift 3. Gain +2 Speed and +1 Arm until end of next turn. If you are Bloodied, the bonuses last until the end of the encounter instead.",,,,
+ori_shift_bsr,Bestial Recovery,,1,Utility,Encounter,,,Minor Action,,,,,,,,"Gain 5 SP. Gain +1 Crit Range until end of next turn. If you are Bloodied, the bonus lasts until the end of the encounter instead.",,,Level 11: Gain 10 SP.<br>Level 21: Gain 20 SP.,
 #power_id,Name,isFeature,Level,Type,UsageLimit,UsageNumber,Keywords,Action,Trigger,Range,Target,AttackRoll,EffectPre,Hit,Miss,EffectPost,Misc,SecondaryAttack,Upgrades,Summary
 # Basic Attacks,,,,,,,,,,,,,,,,,,,,
 mnv_mbawp,Melee Basic Attack (Weapon),NA,,Attack,NA,NA,Weapon,NA,NA,Melee,NA,Primary Ability vs Arm,NA,1W+Primary Ability.,NA,NA,NA,NA,Level 21: Increase Hit damage to 2W+Primary Ability.,Attack with a weapon in melee
