@@ -24,6 +24,11 @@ Barbarian,Berserker,class,bar_bsk
 Warlord,Tactician,class,wld_tac
 Warlord,Inspiring,class,wld_ins
 Warlock,Shadow,class,wlk_shadow
+Monk,Earth,class,mnk_earth
+Monk,Air,class,mnk_air
+Monk,Fire,class,mnk_fire
+Monk,Water,class,mnk_water
+Monk,Void,class,mnk_void
 Universal,Universal,class,univ
 Human,Human,origin,ori_human
 Dwarf,Dwarf,origin,ori_dwarf

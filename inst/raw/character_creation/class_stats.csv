@@ -4,7 +4,7 @@ Fighter,Sentinel,Martial,Defender,Standard,High,6,2,2,1,1,2,0,1,Str,Wis,4,1,1,1,
 "
 Priest,Light,Divine,Support,Standard,Medium,7,1,2,1,1,1,0,1,Wis,Cha,4,,1,,1,,,1,,,1,,1,5,"Light Hammer, Mace, Quarterstaff","Symbol, Staff","Cloth, Chain",12
 Priest,Luck,Divine,Support,Standard,Medium,7,1,2,1,1,1,0,1,Wis,Cha,4,,1,,1,,,1,,,1,,1,5,"Light Hammer, Mace, Quarterstaff","Symbol, Staff","Cloth, Chain",12
-Rogue,Scoundrel,Martial,Striker,Standard,Medium,6,1,2,1,1,0,2,0,Dex,Cha,5,1,1,,1,1,1,,,1,,1,1,8,"All Off-Hand, Short Bow",,"Cloth, Leather",13
+Rogue,Scoundrel,Martial,Striker,Standard,Medium,6,1,3,1,1,0,2,0,Dex,Cha,5,1,1,,1,1,1,,,1,,1,1,8,"All Off-Hand, Short Bow",,"Cloth, Leather",13
 Wizard,Elementalist,Arcane,Controller,Standard,Medium,6,1,2,2,0,0,0,1,Int,Dex,4,,,,1,,1,1,1,,,1,,5,"Dagger, Quarterstaff","Staff, Wand, Rod, Orb, Tome",Cloth,11
 Ranger,Archer,Martial,Striker,Standard,Medium,6,1,3,1,0,1,1,0,Dex,Wis,4,1,,1,,1,,,,1,1,,,5,"All Basic, All Ranged Martial, All Off-Hand Martial",,"Cloth, Leather",12
 Ranger,Beastmaster,Martial,Striker,Standard,Low,6,2,2,1,0,1,1,0,Dex,Wis or Con,4,1,,1,,1,,,,1,1,,,5,"All Basic, All 1-handed Martial, All Reach Martial, Short Bow, Light Crossbow, Longbow",,"Cloth, Leather",12
@@ -16,5 +16,9 @@ Warlord,Tactician,Martial,Support,Standard,Medium,7,1,2,1,0,1,0,1,Str,Int,4,,1,,
 Warlock,Shadow,Arcane,Controller,Standard,Medium,6,1,2,2,0,0,0,1,Cha,Dex,4,,,,1,1,1,1,,,,1,,5,All Basic,"Wand, Rod, Weapon Implement","Cloth, Leather",12
 Shaman,Predator,Primal,Support,Standard,Medium,7,1,2,1,1,1,0,1,Wis,"Int
 ",4,,,,1,,,1,1,1,1,,1,5,Basic Weapons,"Totem, Staff","Cloth, Leather",12
-Shaman,Vitality,Primal,Support,Standard,Medium,7,1,2,1,1,1,0,1,Wis,"Con
-",4,,,1,1,,,,1,1,1,,1,5,Basic Weapons,"Totem, Staff","Cloth, Leather",12
+Shaman,Vitality,Primal,Support,Standard,Medium,7,1,2,1,1,1,0,1,Wis,Con,4,,,1,1,,,,1,1,1,,1,5,Basic Weapons,"Totem, Staff","Cloth, Leather",12
+Monk,Earth,Inner,Striker,Standard,Medium,6,1,2,1,2,0,1,1,Dex,Str,4,1,,1,1,,,1,,1,,,,5,"Dagger, Light Hammer, Quarterstaff, Halfspear, Nunchaku",,Cloth,13
+Monk,Air,Inner,Striker,Standard,Medium,6,1,2,1,2,0,1,1,Dex,Wis,4,1,,,1,,1,1,,1,,,,5,"Dagger, Light Hammer, Quarterstaff, Halfspear, Nunchaku",,Cloth,13
+Monk,Fire,Inner,Striker,Standard,Medium,6,1,2,1,2,0,1,1,Dex,Cha,4,1,,,1,,1,1,,1,,,,5,"Dagger, Light Hammer, Quarterstaff, Halfspear, Nunchaku",,Cloth,13
+Monk,Water,Inner,Striker,Standard,Medium,6,1,2,1,2,0,1,1,Dex,Str,4,1,,1,1,,,1,,1,,,,5,"Dagger, Light Hammer, Quarterstaff, Halfspear, Nunchaku",,Cloth,13
+Monk,Void,Inner,Striker,Standard,Medium,6,1,2,1,2,0,1,1,Dex,Wis,4,1,,,1,,1,1,,1,,,,5,"Dagger, Light Hammer, Quarterstaff, Halfspear, Nunchaku",,Cloth,13
