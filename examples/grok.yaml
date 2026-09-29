@@ -1,0 +1,16 @@
+# Example character sheet: `uv run sfrpg sheet examples/grok.yaml`
+# Ids come from data/character_creation/features.csv and powers.csv;
+# feats and items are matched by name.
+name: Grok the Beastmaster
+features:
+  - rng_bstcom
+  - rng_bststk
+  - rng_bstrec
+powers:
+  - rng_aw_bstmba
+  - rng_fe_bststk
+feats:
+  - Toughness
+items:
+  - Magic Weapon
+  - Far Weapon

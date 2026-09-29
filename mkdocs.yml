@@ -1,0 +1,56 @@
+site_name: Square Fireballs RPG
+site_description: A role playing game of tactical fantasy
+site_author: Pedro Capelastegui
+repo_url: https://github.com/capelastegui/sfrpg
+edit_uri: edit/master/book/
+copyright: Licensed under CC BY-NC 4.0
+
+docs_dir: book
+site_dir: site
+
+# Expands the data macros ({{ build_powers(...) }} etc.) in every chapter.
+hooks:
+  - src/sfrpg/mkdocs_hook.py
+
+nav:
+  - Home: index.md
+  - Rules:
+      - introduction.md
+      - character-building.md
+      - adventuring.md
+      - combat.md
+      - skills.md
+  - Characters:
+      - origins.md
+      - classes.md
+      - feats.md
+      - items.md
+  - Game Master:
+      - monsters.md
+  - Reference:
+      - reference.md
+      - optional-material.md
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - search.highlight
+    - toc.follow
+  palette:
+    - scheme: default
+      primary: brown
+      accent: deep orange
+
+extra_css:
+  - css/sfrpg.css
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - tables
+  - admonition
+  - toc:
+      permalink: true
