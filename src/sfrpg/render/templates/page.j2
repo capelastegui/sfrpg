@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ title }}</title>
+{% if base_href %}<base href="{{ base_href }}">
+{% endif %}
+<style>
+{{ css }}
+body { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 14px; max-width: 1000px; margin: 1em auto; padding: 0 1em; }
+{{ extra_css or "" }}
+</style>
+</head>
+<body>
+{{ body }}
+</body>
+</html>

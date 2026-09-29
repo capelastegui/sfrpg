@@ -1,0 +1,739 @@
+# Skills
+
+**Skills** are the system used to resolve game interactions that are not
+directly related to combat. From climbing a steep cliff, to sneaking past
+the guards or negotiating a treaty with a foreign representative, there is
+a wide variety of actions that are handled with skills.
+
+There are 12 Skills in the game. Each skill has an associated ability modifier
+
+Skill | Ability | Summary
+-- | -- | --- 
+Athletics | Strength | Sprinting, Climbing, Swimming
+Authority | Strength | Intimidation, Leadership, Military
+Concentration | Constitution | Study, Craftsmanship, Art
+Endurance | Constitution | Stamina, Wakefulness, Survival
+Finesse | Dexterity | Balance, Tumbling, Lockpicking
+Stealth | Dexterity | Hiding, Secrets, Ciphers
+Perception | Wisdom | Observation, Empathy, Memory
+Nature | Wisdom | Flora, Fauna, Environment, Healing
+Diplomacy | Charisma | Rethoric, Etiquette, Politics
+Trickery | Charisma | Lying, Gossip, Forgery
+Arcana | Intelligence | Magic, Science, Cosmology
+Lore | Intelligence | History, Geography, Law
+
+## Using a Skill
+
+Using a skill in the game takes the following steps:
+- During the game, the GM describes a challenge that the PCs need to overcome,
+  or a PC states an action that they want to take.
+- The GM can decide that the problem is trivial for the PCs. In this case,
+  they automatically succeed without need for a Skill Check.
+- Otherwise, the GM sets a base Skill Check Difficulty for this task.
+- PCs explain how they plan to handle the task, and negotiate with the GM which Skills
+  they will use and whether this will take one or more checks. Depending of the
+  proposed solutions, the GM may choose to adjust the Skill Check Difficulty
+- A PC rolls a Skill Check. See the [Skill Checks] section below for details on
+  how to resolve this, and how to manage successes and failures.
+
+<div class="tip" markdown>**Tip:** Even when a situation does not call for a skill check,
+you can still have fun with it. Players are encouraged to narrate and roleplay
+their PCs handling routine tasks, if they wish.</div>
+
+<div class="tip" markdown>**GM Tip:** GMs should be flexible and open to innovative ideas.
+The purpose of the Skill system is not to have players guess the GM's preferred
+solution to a given problem, but to generate interesting situations for the
+characters and provide some uncertainty and excitement about outcomes.
+GMs should encourage and reward players who come up with unexpected solutions,
+as long as they make sense. That said, if a player proposes something that
+clearly won't work, it is fine to raise the difficulty or tell them that they
+can't succeed this way.</div>
+
+## Skill Training
+
+Some actions are only available to characters with an appropriate level of
+ training in a skill. These are the levels of training that a character can
+ have in a skill:
+
+- Untrained. This the level that most characters have with a skill.
+  Untrained characters have not received any formal training with a skill,
+  but they can still attempt basic tasks associated with it, and succeed with
+  a bit of luck and natural talent.
+- Trained. Characters Trained with a skill have spent significant time
+  practicing it, and can be considered experts in the area. Trained characters
+  rarely make errors on mundane tasks related to their skill of choice,
+  and with effort and luck, they can even succeed on advanced actions out of
+  the reach of amateurs.
+- Master. Skill Masters are individuals of extraordinary talent who have
+  become famous for their prowess with a particular skill.
+- Grandmaster. Very few mortals ever reach this level of proficiency. The
+  feats that Grandmasters can achieve are the stuff of legends.
+
+<div class="tip" markdown>**Tip:** Typically, the Master category is only available for
+characters of Paragon Tier or higher, and the Grandmaster category for Epic
+Tier characters.</div>
+
+## Skill Check Difficulty
+
+The following table shows the Skill Check target value (also known as DC, or Difficulty Class)
+associated with each difficulty level:
+
+For a detailed description of the [Ability Skill Bonus], see the Character
+ Building chapter
+
+Abreviation | Check level | DC | Req. Training | Morale cost
+-- | -- | -- | -- | --
+R | Routine | - |   |  
+E | Easy | 8 |   | 1 on Failure
+M | Medium | 13 |   | 1 on Failure
+H | Hard | 18 |   | 1 on Failure
+VH | Very Hard | 23 | Trained | 1 on Failure
+I | Legendary | 28 | Master | 2 on Failure
+I | Impossible | 33 | Grandmaster | 2 on Failure
+
+The Req. Training column shows the  minimum Skill Training level required to attempt
+a check at that difficulty.
+
+The Morale Cost column shows the amount of Morale that is lost on a failed check.
+
+The Skill Difficulty levels are described as follows:
+- Easy - Anyone can do it, but an untrained character may sometimes fail
+  this or require extra time or help
+- Medium - Non-trivial effort for untrained characters, trained characters
+  will handle it most of the time.
+- Hard - This is the most an individual without special training can achieve,
+ with luck. Requires effort even from experts.
+- Very Hard - Experts can sometimes accomplish this, with luck.
+- Legendary - Something only the best in the world could do, on a good day.
+- Impossible - Normally considered out of reach for mortals.
+
+<div class="tip" markdown>**Tip:** Typically, Skill Difficulty
+goes up to Very Hard for Heroic Tier characters, up to Legendary for
+Paragon Tier characters, and up to Impossible for Epic Tier characters.</div>
+
+## Skill Checks
+
+To resolve a Skill Check is to roll a **d20**, add the character's
+ **bonus** to that check (if any) and any **modifiers** that apply, and compare
+ the result with a target number. If the result is equal or greater than the
+ target number, the check is a success, otherwise, the check is a failure.
+
+For each skill, the associated Skill Bonus is generated
+as follows: 
+
+```
+Skill Bonus = Ability Skill Bonus + Skill Training Bonus + Armor Penalty + Other Modifiers
+```
+
+For a detailed description of the [Ability Skill Bonus], see the Character
+ Building chapter
+
+**Armor Penalty**: Some types of armor have an Armor Penalty value
+ (typically -1). This penalty applies to Skill Checks for Athletics, Endurance,
+  Finesse, and Stealth. See the [Armor] section in the [Character Building] chapter
+  for details on the Armor Penalty associated with each type of armor.
+
+The d20 roll may be replaced with a [roleplaying die roll], as explained below.
+
+### Skill Check Modifiers
+
+The following modifiers apply to a Skill Check
+
+Description | Modifier
+--- | --
+Character previously failed same check | +1 DC
+Allies previously failed same check twice | +1 DC
+Advantage | +2
+Demoralized | -2
+Escalation Die | -Die Value
+
+A character is Demoralized when reduced to 0 Morale.
+
+### Escalation Die in Skill Checks
+
+Even in a non-combat encounter, the GM should keep track of player actions. When all
+PCs have taken an action (or decided not to), a new round starts.
+ At the start of the third round, the GM takes a special d4 called the
+ Escalation Die and sets it to 1. This value increases on each turn thereafter. When
+ taking a Skill Check, apply a penalty equal to the value of the Escalation Die. This
+ represents increased pressure on the characters due to urgency or weariness.
+
+See [Escalation Die] in the [Introduction] chapter for more details.
+
+### Skill Check failure
+
+The main outcome of a failed Skill Check is that the character fails to achieve
+whatever they were trying to do. Depending on the situation, they may try again with
+some penalty or by trying a different approach, or that path may be closed to them
+altogether. When a party has exhausted other options, they may use the [Fail Forward]
+action (explained below) to move on from a failed challenge, at a cost
+
+Another consequence of failing a Skill Check is the loss of Morale. Morale is a limited
+resource that PCs have, related to the use of skills, that is replenished by resting.
+Characters running out of Morale suffer penalties and may lose Stamina if they fail further
+Skill Checks. See the [Adventuring] chapter for more details.
+
+- Morale rules summary:
+  - Recover all Morale when taking a Short Rest, Long Rest or Full Rest.
+  - Characters with 0 Morale gain a -2 penalty to
+    Skill Checks
+  - Lose 1 Morale when failing a Skill Check.
+  - Spend 1 or more Morale when performing a Ritual.
+  - Some types of Skill Check have an additional Morale cost.
+    See skill description for more details.
+  - If at any point a character would spend or lose Morale but has no Morale
+    left, they take a Morale Saving Throw for each point of Morale lost.
+    For each failure, they lose 1 Stamina.
+
+### Roleplaying die roll
+
+With the GM's consent, players participating in a Skill Check that involves
+interaction with other characters, or where planning is important may replace
+the usual method of resolving Skill Checks with a Roleplaying Die Roll.
+
+In a Roleplaying Die Roll, instead of rolling a D20, have the players describe
+in detail the actions the carry out to solve the problem. The GM then judges
+their performance based on the quality of the solution, and modifies the result
+based on roleplaying considerations.
+
+```
+Roleplaying Die Roll = Solution Score + Roleplaying Modifier
+```
+
+Solution Score: Use the following values instead of the check d20, based on the GM's judgement:
+
+- Terrible: The described solution fails to address the challenge: Automatic failure
+- Below Average: The described solution only addresses the challenge partially, or under specific conditions: 6+1d4
+- Good: The described solution fully addresses the challenge: 11+1d4
+- Excellent: The described solution fully addresses the challenge, in a particularly imaginative or effective way: 16+1d4
+
+Roleplaying Modifier: Apply the following modifiers based on the GM's judgement of the role playing:
+
+- The described solution is out of place for the character, given their background and personality: Automatic failure
+- The described solution slightly conflicts with the character’s background or personality: -2
+- The described solution matches the character’s background and personality: +0
+- The described solution provides new and relevant insight about the character’s background and personality: +2
+
+Once the Roleplaying Die Roll is resolved, add the Skill Bonus and compare with
+the target difficulty as usual:
+
+```
+Skill Check (with Roleplaying Die) = Roleplaying Die Roll + Skill Bonus
+```
+<div class="tip" markdown>**Tip:** Roleplaying Die Rolls are completely optional - use them if
+your group enjoys them, and ignore them otherwise. All skill checks involve describing the
+characters' actions to some degree, so in the end, it is up to the GM to decide when to allow
+this method. That said, we recommend the following guidelines:
+- Default to d20 rolls, and use roleplaying die rolls only at a players' request.
+- Roleplaying die rolls are best suited for social interactions, but can be used in other
+  situations when the GM agrees that they make sense.
+- If the GM perceives that a particular player makes excessive use of this system,
+  it is fine to limit its use per game session.</div>
+
+## Skill Actions
+
+The following actions are available to PCs on Skill Encounters:
+
+- Simple Skill Check
+  - Standard Action
+  - Check: Choose a relevant Skill, and make a check using the Base DC for the 
+    challenge.
+  - Success: Gain +1 Progress for this challenge
+  - Option: With the GM's approval, the PC may increase DC by 1 to gain an 
+    additional +1 Progress on a successful check.
+- Partial Skill Check
+  - Standard Action
+  - Check: Choose a relevant Skill, and make a check using the Base DC for the 
+    challenge minus 1.
+  - Success: For each 3 successes in a Partial Skill Check, gain +1 Progress 
+    for this challenge.
+  - Special: This can be attempted multiple times per encounter, and the same 
+    Skill may be reused, but each attempt needs to focus on a different part
+    of the problem
+- Skill Assist
+  - Standard Action
+  - Check: Choose a Skill Check that a character will make this encounter, and 
+    a relevant Skill different that the one that will be used for that check. 
+    Make a check using the Base DC for the challenge minus 1.
+  - Success: The next character to make the chosen Skill Check gains Advantage 
+    (+2 to the Skill Check).
+- Skill Recovery
+  - Standard Action
+  - Check: After an ally has failed a Skill Check, choose a relevant Skill not 
+    used on that check, and make a check using the Base DC for the challenge 
+    minus 1.
+  - Success: Choose one of the following:
+    - Choose one of the characters that made the failed check. If that character
+      lost Morale in that check, they recover 1 Morale.
+    - Ignore the failed check for the purposes of determining check penalties 
+      the next time a character attempts that check this encounter.
+- Gain time
+  - Standard Action
+  - Check:  Choose a relevant Skill, and make a check using the Base DC for the 
+    challenge minus 1.
+  - Success: Prevent any increases of the Escalation Die next turn.
+  - Special: This can be attempted multiple times per encounter, but a different
+    Skill must be used each time
+- Gather Information
+  - Standard Action
+  - Check: Choose a relevant Skill, and make a check using the Base DC for the
+    challenge minus 2.
+  - Success: Gain clues for challenge, or find out about new options to solve
+    problem.
+  - Option: This may be taken as a Minor Action by increasing its DC by 1.
+
+### Fail Forward
+
+There is also a special action that can only be used if all participating PCs
+agree:
+- Fail Forward
+  - The Skill Challenge ends. Each participating PC spends 1 Stamina to have a
+    Short Rest
+  - At the GM's discretion, the challenge is overcome or a new path presents 
+    itself so that the characters can progress. The characters suffer a minor
+    loss in the context of the story.
+  - Minor loss examples: Wasted time, lost equipment, displeased NPCs, 
+    embarrassment, inconveniences.
+    
+Players are encouraged to use Fail Forward once other options have been 
+exhausted, or once all characters become Demoralized.
+
+## Skill Challenges
+
+Some times, a GM may present PCs with a complex non-combat scenario that requires
+several skill checks to succeed - we call this a **Skill Challenge**.
+The GM describes the situation and explains one or more problems that need solving,
+ and the PCs attempt Skill Checks. To succeed in a Skill Challenge, a party needs to
+ reach a certain amount of Progress points: an encounter starts at 0 Progress, the party
+ increases their progress by succeeding at Skill Checks, and the encounter ends when
+ the party reaches a set amount or progress, or gives up.
+
+The table below shows appropriate encounters
+by party level:
+
+Level | Challenge Tier | Required progress | Skill Difficulty
+- | -- | - | --
+1 | Basic | 3 | Normal
+3 | Basic, Long | 5 | Normal
+6 | Heroic | 3 | Hard
+11 | Heroic, Long | 5 | Hard
+16 | Paragon | 3 | Very Hard
+21 | Paragon, Long | 5 | Very Hard
+26 | Epic | 3 | Legendary
+31 | Epic, Long | 5 | Legendary
+36 | Impossible | 3 | Impossible
+
+Adjustments by party size:
+
+- Assumption: Default party size is 4 to 6
+- 1 PC: Required Progress of 3 becomes 1, and 5 becomes 2.
+- 2-3 PCs: -1 Required Progress
+- 7-8 PCs: +1 Required Progress
+
+Partial success: If the players achieve more than half the required Progress
+for the encounter, they should achieve partial success (determined by the GM).
+Any negative consequences due to Fail Forward should be mitigated
+if partial success is reached.
+
+## Roleplaying die roll
+
+With the GM's consent, players participating in a Skill Check that involves
+interaction with other characters, or where planning is important may replace
+the usual method of resolving Skill Checks with a Roleplaying Die Roll.
+
+In a Roleplaying Die Roll, instead of rolling a D20, have the players describe
+in detail the actions the carry out to solve the problem. The GM then judges 
+their performance based on the quality of the solution, and modifies the result
+based on roleplaying considerations.
+
+```
+Roleplaying Die Roll = Solution Score + Roleplaying Modifier
+```
+
+Solution Score: Use the following values instead of the check d20, based on the GM's judgement:
+
+- Terrible: The described solution fails to address the challenge: Automatic failure
+- Below Average: The described solution only addresses the challenge partially, or under specific conditions: 6+1d4
+- Good: The described solution fully addresses the challenge: 11+1d4
+- Excellent: The described solution fully addresses the challenge, in a particularly imaginative or effective way: 16+1d4
+
+Roleplaying Modifier: Apply the following modifiers based on the GM's judgement of the role playing:
+
+- The described solution is out of place for the character, given their background and personality: Automatic failure
+- The described solution slightly conflicts with the character’s background or personality: -2
+- The described solution matches the character’s background and personality: +0
+- The described solution provides new and relevant insight about the character’s background and personality: +2
+
+Once the Roleplaying Die Roll is resolved, add the Skill Bonus and compare with
+the target difficulty as usual:
+
+```
+Skill Check (with Roleplaying Die) = Roleplaying Die Roll + Skill Bonus 
+```                                                                                                                                  
+
+    
+      
+
+<!---
+TODO: All the examples below need reviewing, may be obsolete
+
+Athletics
+Lift or Drag Load
+N: Lift Heavy Load
+VH: Lift Very Heavy Load
+I: Lift Impossible Load
+Throw
+N: Throw Moderate Load
+H: Throw Heavy Load
+I: Throw Very Heavy Load
+Walk with load
+H: Walk with Heavy Load
+I: Walk with Very Heavy Load
+Climb
+E: Climb ladder, or wall with prepared rope 
+N: Climb rope
+H: Climb wall with handholds
+I: Climb smooth wall
+-1 with Climbing Gear
+- 1 with Moderate Load
+- 2 with Heavy Load
+Swim
+E: Swim In calm water
+N: Swim in Running water
+H: Swim in Rough water or against current
+-1 if just floating
++1 for Heavy Armor
++1 for Heavy Load
++1 if underwater
+Sprint
+E: Outrun a slower character
+N: Outrun a similar speed character
+H: Outrun a faster character
++1 if opponent Trained in Athletics
++1 if opponent Focused in Athletics
++1 Moderate Load
++2 Heavy Load
+Break
+H: Break a regular door
+VH: Break a reinforced door, or a rope binding you
+I: Break a portcullis,  or a chain or manacle binding you
+Misc
+N: Row a boat
+
+Authority
+Demoralize opponents or raise allies’ morale
+H: Demoralize or raise morale
++1 if opponents stronger
+- 1 if opponents weaker
++1 if opponents badly damaged
+- 1 if allies badly damaged
++1 if opponents Trained in Authority
++1 if opponents Focused in Authority 
+
+Command
+N: Command your subordinate
+H: Command a lower status character
++2: Unreasonable request
+
+Interrogate
+H: Interrogate prisoner
+-1: Use violence
+
+Lead
+H: Direct team in coordinated task
+-1: Trained team
++1: Stressful scenario
+Other (TODO)
+Strategy/Tactics
+Interrogation
+
+Endurance:
+M: Defeat a same-size opponent in an eating or drinking contest
++1 per size different if opponent is larger
+- 1 per size different if opponent is smaller
++1 if opponent Trained in Endurance
++1 if opponent Focused in Endurance
+
+M: Sprint or similar level of effort for 2 consecutive turns
++1 per consecutive turn after that
+
+M: Run for 10 minutes (or equivalent sustained effort)
+H: Run for 1 hour
+VH: Run for 4 hours
+
+M: Hold Breath for 2 minutes
++1 per 2 extra minutes
++1 if exerting
+
+M: Take painful maneuver for a turn (e.g. touch flame, walk on glass shards)
+H: Take painful maneuver for a minute
+VH: Take painful maneuver for 10 minutes
+
+E: Take night watch for 2 hours
++1 per extra 2 hours
++1 if not well rested (e.g. watch in consecutive nights)
+
+M: First Aid
++1 On oneself
++1 Serious Injury
+
+M: In a conversation, resist provocation or other verbal attack from a character untrained in the relevant skill.
+H: opponent Trained in relevant skill
+VH: opponent Focused in relevant skill
+
+Concentration
+E: Study or craft for 10 minutes
+M: Study or craft for 2 hours
+H study or craft for 8 hours
+VH: study or craft for 24 hours
+Note: Often use in multi-skill checks
+
+M: In a conversation with an opponent untrained in Trickery, point out a contradiction, or prevent a change of topic, or remain alert after a long digression.
+H: opponent Trained in Trickery
+VH: opponent Focused in Trickery
+
+M: Perform a complex task while in a stressful situation
++1 in combat
+
+M: Remember a detail observed in the recent past
++1: Minor detail seen or heard without paying attention
++1: Distant past
+
+- M: Navigate through an unfamiliar urban environment while travelling slowly
+- -2 Familiar environment
++1: Gain a general understanding of the kinds of people inhabiting the area and how to avoid casual encounters with them.
+- +1 Harsh weather or poor visibility
+- +1: Travelling at regular speed
+- +2 Travelling fast
+
+Note: Urban environments include civilized settlements such as cities or villages, as well as buildings, ruins, dungeons...
+
+Stealth
+M: Infiltrate an area watched by sentinels Untrained in Perception, in the dark
++1 If sentinels are Trained in Perception
++1 If sentinels are Focused in Perception
++1 In daylight.
+
+M: Generate a code secure against characters Untrained in Stealth
++1 against characters Trained in Stealth
++1 against characters Focused in Stealth
+
+H: Break a code generated by a character Untrained in Stealth
++1 by a character Trained in Stealth
++1 by a character Focused in Stealth
+
+M: Communicate simple message by signs. Observers Untrained in Perception do not notice this.
++1: Complex message
++1: Observers Trained in Perception do not notice this.
++1: Observers Focused in Perception do not notice this.
+Note: This can also be applied to other means of communication
+
+M: Hide characters or objects against searchers Untrained in Perception
++1 Against searchers Trained in Perception
++1 Against searchers Focused in Perception
++1 Hidden in particularly easy to find place
+-1 Hidden in particularly difficult to find place
+
+M: In conversation, conceal reaction or feelings about a subject from opponents untrained in Perception
++1 opponent Trained in Perception
++1 opponent Focused in Perception
++1 if particularly taken by surprise by subject of conversation
+- 1 if particularly prepared for subject of conversation
+
+Acrobatics
+E: While moving slowly, traverse an  obstacle 1 size smaller than you
++1: Obstacle same size as you
++2: Obstacle 1 size larger than you
++1: Moving at normal speed
++2: Running
+
+E: With a running start, jump over a short pit or similar obstacle
++1 long pit
++2 very long pit
++1 No running start
++1 Jump over obstacle, or landing at a higher point.
+
+E: Move slowly over a narrow or slippery surface
++1 Move over a rope or cable
++1 surface is tilted
++1 Move at normal speed
++2 Run
++1 In combat.
+
+M: Land safely and prone from a short fall
++1: fall from medium height
++2: fall from great height
++1: do not become prone
+
+M: In a few hours, break free from soft bindings such as ropes
++1: hard bindings such as manacles or chains
++1: Reduce time to a few minutes
++2: Reduce time to a few seconds
+Note: This check is likely to be noticed if watched. Concealing the attempt requires using Stealth in addition to Acrobatics.
+
+Perception
+M: Keep watch over an area in the dark, locating any infiltrators Untrained in Stealth
++1 also locate infiltrators Trained in Stealth
++1 also locate infiltrators Focused in Stealth
+-1 In daylight
+
+M: Locate nearby characters or objects hidden by characters Untrained in Stealth
++1 also locate if hidden by characters Trained in Stealth
++1 also locate if hidden by characters Focused in Stealth
+-1 if Hidden in particularly easy to find place
++1 if Hidden in particularly difficult to find place
+
+M: In conversation, detect reaction or feelings concealed by opponent untrained in Stealth
++1 opponent Trained in Stealth
++1 opponent Focused in Stealth
+-1 if particularly taken by surprise by subject of conversation
++ 1 if particularly prepared for subject of conversation
+
+M: See through illusion or disguise performed by an opponent Untrained in Trickery
++ opponent Trained in Trickery
++ opponent Focused in Trickery
+
+Nature
+
+- M: Navigate through an unfamiliar natural environment while travelling slowly
+- -2 Familiar environment
++1: Gain a general understanding of the creatures inhabiting the area and how to avoid casual encounters with them.
+- +1 Harsh weather or poor visibility
+- +1: Travelling at regular speed
+- +2 Travelling fast
+
+Note: Natural environments include non-urban locations within the natural plane such as forests, caves, deserts...
+
+- M: Recognize unknown species of natural creature. You gain a basic idea of that species’ behaviour and racial traits.
+- +1: You gain a deep understanding of that species’ behaviour and racial traits.
+- +1 Rare species
+- +1 Species of non-natural creature originated in the Fey plane
+
+Note: Natural creatures include most common animals and plants, as well as humanoids, magical beasts, and oozes. The following are excluded:
+Creatures originated in planes other than the natural plane
+Creatures created artificially through magical, divine, scientific or other means
+Dragons and creatures related to dragons
+
+- H: Diagnose and treat common disease
+- +1: Rare disease
+
+- M: Follow tracks while travelling slowly
+- -1: Tracks on mud, snow, or similarly easy to follow terrain
+- +1: Tracks on river or similarly hard to follow terrain.
+- +1: Travelling at regular speed
+- +2 Travelling fast
+- +1: Poor visibility
+- Note: If the pursued character are hiding the tracks, [add your perception vs their stealth]. If they are setting false tracks, [add your perception vs their trickery]
+
+- H: Basic communication with Beast: feelings, nearby objects
+- +1 with Plant
+
+TODO: Be aware of types of creatures living in an area.
+
+Diplomacy
+M: While speaking in public, get the attention of an audience during a short speech
++1: Long speech
++1: Hostile audience
+
+M: In a discussion, offer more convincing arguments than an opponent Untrained in Diplomacy
++1: Opponent Trained in Diplomacy
++1: Opponent Focused in Diplomacy
+
+H: When dealing with a different culture, correctly understand and follow their protocols and rituals
+-1: Have previously studied, observed, or been advised about that culture
++1: No shared language
+
+M: When negotiating a deal with an opponent Untrained in Diplomacy, get a general idea of what the opponent is willing to accept.
++1: Find out what is the most you can get from the opponent.
++1: Opponent Trained in Diplomacy.
++1: Opponent Focused in Diplomacy.
+
+M: Predict, in general terms, how a party will react to a certain event or scenario that affects it directly.
++1: Predict reaction about event or scenario that affects the party indirectly.
+- 1: You are particularly familiar with that party.
++1: You have limited knowledge about that party.
+
+Note: When talking about specific areas of knowledge, additional skills may be required for the check.
+
+Trickery
+Deception, Gossip, Sleigh of Hand
+
+M: In a conversation with an opponent Untrained in Concentration, conceal a contradiction, or force a change of topic, or distract with a long digression.
++1: opponent Trained in Concentration
++1: opponent Focused in Concentration
+
+M: Fool an opponent Untrained in Trickery with a plausible bluff or lie
++1: opponent Trained in Trickery
++1: opponent Focused in Trickery
+-1: opponent wants to believe the lie
++1: bluff or lie is far-fetched, exaggerated, or unlikely
++2: outrageous bluff or lie
+
+M: Gather information about commonly known gossip or rumors
+-1: You provide similarly valuable information in exchange, or otherwise offer something of comparable value
++1: little known gossip or rumors
++2: Closely held secrets, sensitive information
+
+M: In presence of opponents untrained in Perception and Trickery, perform an act of sleight of hand, or pick a pocket.
++1: opponent Trained in  Perception or Trickery
++1: opponent Focused in Perception or Trickery
+
+H: Pick a simple lock
++1: Complex lock
+
+Arcana
+M: Recognize unknown species of non-natural creature. You gain a basic idea of that species’ behaviour and racial traits.
+-1: The creature is related to the character’s background (e.g. their power source, Origin or plane of birth)
++1: You gain a deep understanding of that species’ behaviour and racial traits.
++1 Rare species
+
+Note: Non-natural creatures include:
+Creatures originated in planes other than the natural plane
+Creatures created through magical, divine, scientific or other non-conventional means
+Dragons and creatures related to dragons
+
+M: After an hour of observation, gain a basic understanding of an object, enchantment, mechanism, etc. created through magical, divine, scientific or other non-conventional means.
++1: A minute of observation
++2: A round of observation
+-1: Target is related to the character’s background (e.g. their power source, Origin, or plane of birth)
+
+M: Navigate through an unfamiliar supernatural environment while travelling slowly
+-2 Familiar environment
++1: Gain a general understanding of the creatures inhabiting the area and how to avoid casual encounters with them.
++1 Harsh weather or poor visibility
++1: Travelling at regular speed
++2 Travelling fast
+
+Note: Supernatural environments include exotic environments in foreign planes or created through magical, divine, scientific or other non-conventional means: Levitating islands, enchanted forests, mirror galleries, dream landscapes...
+
+Lore
+
+M: Recall a well known legend, song or piece of history from a familiar culture
++1 Obscure legend, song or piece of history
++1 Foreign culture
+
+M: Understand a non-obvious aspect of law, customs, politics from a familiar culture.
++1: Obscure aspect of law, customs, politics
++1: Foreign culture
++1: Knowledge of these issues in past ages
+
+M: Identify the top members of the nobility, church and similarly important organizations in a familiar culture
++1: Also be aware of members occupying secondary roles, as well as the different factions within the organization and the relationships between them
++1: Foreign culture
++1: In past times
++1: Knowledge of these issues in past ages
+
+M: Recognize origin of unknown humanoids from familiar culture. You gain a basic idea of that culture’s typical behaviour and racial traits.
+-1: Your own culture
++1: Foreign culture
++1: You gain a deep understanding of that culture’s typical behaviour and racial traits.
++1 Rare culture
+
+M: Be aware of the main settlements (e.g. larger towns, cities) and landmarks (e.g. main rivers, lakes, mountain ranges, islands…) from a familiar region, and have a general idea of their location.
++1: Also know lesser settlements and landmarks, and have a fairly accurate idea of the distances between them, and of the peoples that inhabit them.
++1: Unfamiliar region
+
+map
+
+humanoid species/culture trait
+--->

@@ -1,0 +1,234 @@
+{#- HTML blocks for game data. Class names match css/sfrpg.css. -#}
+
+{%- macro _join(parts, sep=" - ") -%}
+{{ parts | select | join(sep) }}
+{%- endmacro -%}
+
+{#- Powers ----------------------------------------------------------------- -#}
+
+{%- macro power(p, class_name="", upgrades=True) -%}
+<div class="Power">
+<p><span class="{{ p.colour }} large"><strong>{{ p.name }}{% if class_name %} - {{ class_name }}{% endif %}{% if p.is_feature %} Feature{% endif %}{% if p.level %} {{ p.level }}{% endif %}</strong></span></p>
+<p>{{ _join([p.type, (p.usage_limit ~ " " ~ p.usage_number) | trim, p.keywords and "<i>" ~ p.keywords ~ "</i>"]) }}</p>
+{%- set action = _join([
+    p.action and "<b><i>" ~ p.action ~ "</i></b>",
+    p.trigger and "<i>(Trigger: " ~ p.trigger ~ ")</i>",
+    p.range and "<b>" ~ p.range ~ "</b>",
+    p.target,
+    p.attack_roll]) %}
+{% if action %}<p>{{ action | nl2br }}</p>{% endif %}
+{% if p.effect_pre %}<p><b>Effect</b>: {{ p.effect_pre | nl2br }}</p>{% endif %}
+{% if p.hit %}<p><b>Hit</b>: {{ p.hit | nl2br }}</p>{% endif %}
+{% if p.miss %}<p><b>Miss</b>: {{ p.miss | nl2br }}</p>{% endif %}
+{% if p.effect_post %}<p><b>Effect</b>: {{ p.effect_post | nl2br }}</p>{% endif %}
+{% if p.misc %}<p>{{ p.misc | nl2br }}</p>{% endif %}
+{% if p.secondary_attack %}<p><b>Secondary Attack:</b> {{ p.secondary_attack | nl2br }}</p>{% endif %}
+{% if upgrades and p.upgrades %}<p><span class="Power-Upgrade">{{ p.upgrades | nl2br }}</span></p>{% endif %}
+</div>
+{%- endmacro -%}
+
+{%- macro power_list(powers, class_name="", upgrades=True) -%}
+<div class="Power-List">
+{% for p in powers %}{{ power(p, class_name(p) if class_name is callable else class_name, upgrades) }}
+{% endfor -%}
+</div>
+{%- endmacro -%}
+
+{#- Features and stats --------------------------------------------------------- -#}
+
+{%- macro feature(f) -%}
+<div class="Feature"><p><b>{{ f.name }}</b>: {{ f.description | nl2br }}</p></div>
+{%- endmacro -%}
+
+{%- macro feature_list(features, wrap=False) -%}
+{% if wrap %}<div class="Feature-List">
+{% endif %}
+{%- for f in features %}{{ feature(f) }}
+{% endfor -%}
+{% if wrap %}</div>{% endif %}
+{%- endmacro -%}
+
+{%- macro stat_table(rows) -%}
+<table class="Class-table">
+<tbody>
+{% for key, value in rows %}<tr><td>{{ key }}</td><td>{{ value | nl2br }}</td></tr>
+{% endfor -%}
+</tbody>
+</table>
+{%- endmacro -%}
+
+{#- Generic tables ---------------------------------------------------------------- -#}
+
+{%- macro table(rows, css_class="General-table", columns=None) -%}
+{%- set columns = columns or (rows[0].keys() | list if rows else []) -%}
+<table class="{{ css_class }}">
+<thead><tr>{% for c in columns %}<th>{{ c }}</th>{% endfor %}</tr></thead>
+<tbody>
+{% for r in rows %}<tr>{% for c in columns %}<td>{{ r[c] | nl2br }}</td>{% endfor %}</tr>
+{% endfor -%}
+</tbody>
+</table>
+{%- endmacro -%}
+
+{%- macro grouped_table(rows, columns, groups, css_class="General-table") -%}
+{#- groups: list of (label, span) for a header row above the column names -#}
+<table class="{{ css_class }}">
+<thead>
+<tr>{% for label, span in groups %}<th colspan="{{ span }}">{{ label }}</th>{% endfor %}</tr>
+<tr>{% for c in columns %}<th>{{ c }}</th>{% endfor %}</tr>
+</thead>
+<tbody>
+{% for r in rows %}<tr>{% for v in r %}<td>{{ v }}</td>{% endfor %}</tr>
+{% endfor -%}
+</tbody>
+</table>
+{%- endmacro -%}
+
+{#- Feats ----------------------------------------------------------------------------- -#}
+
+{%- macro feat(f) -%}
+<div class="Feat">
+<p class="blue large"><strong>{{ f.name }}</strong></p>
+<p class="darkgray"><strong>{{ _join([f.category, f.level and "Level " ~ f.level]) }}</strong></p>
+{% if f.keywords %}<p class="darkgray">Keywords: <em>{{ f.keywords }}</em></p>
+{% endif %}
+{%- if f.requirements %}<p class="gray"><em>Requires: {{ f.requirements }}</em></p>
+{% endif -%}
+<p>{{ f.text | nl2br }}</p>
+</div>
+{%- endmacro -%}
+
+{%- macro feat_short(f) -%}
+<div class="Feature"><strong>{{ f.name }}: </strong>{{ f.text | nl2br }}</div>
+{%- endmacro -%}
+
+{%- macro feat_list(feats, wrap=False, short=False) -%}
+{% if wrap %}<div class="{{ 'Feature-List' if short else 'Feat-List' }}">
+{% endif %}
+{%- for f in feats %}{{ feat_short(f) if short else feat(f) }}
+{% endfor -%}
+{% if wrap %}</div>{% endif %}
+{%- endmacro -%}
+
+{#- Magic items ------------------------------------------------------------------------- -#}
+
+{%- macro item(i) -%}
+<div class="Power">
+<p><span class="{{ i.colour }} large"><strong>{{ i.name }}</strong></span><br><span class="{{ i.colour }}"><strong>{{ i.rarity }} {{ i.type }} - {{ [i.level_h, i.level_p, i.level_e] | join("/") }}</strong></span></p>
+{% for prop in i.properties %}<p>{{ prop | nl2br | item_labels }}</p>
+{% endfor -%}
+</div>
+{%- endmacro -%}
+
+{%- macro item_list(items) -%}
+<div class="Power-List">
+{% for i in items %}{{ item(i) }}
+{% endfor -%}
+</div>
+{%- endmacro -%}
+
+{#- Monsters ------------------------------------------------------------------------------ -#}
+
+{%- macro _monster_text(title, name, text) -%}
+{%- if name or text -%}
+<table class="monster fullwidth"><tbody>
+{% if title %}<tr><td class="title" colspan="2">{{ title }}</td></tr>
+{% endif -%}
+{% if name %}<tr><td class="subtitle">{{ name }}</td></tr>
+{% endif -%}
+{% if text %}<tr><td class="attackText">{{ text | nl2br }}</td></tr>
+{% endif -%}
+</tbody></table>
+{% endif -%}
+{%- endmacro -%}
+
+{%- macro monster_race(m) -%}
+<div class="monsterRace">
+<table class="monster monsterLevel"><tbody>
+<tr><td class="title large" colspan="2">Level</td></tr>
+<tr><td class="subtitle huge">{{ m.Level }}</td></tr>
+</tbody></table>
+<table class="monster monsterName namewidth"><tbody>
+<tr><td class="title large" colspan="2">{{ m.Name }}</td></tr>
+<tr><td class="subtitle">{{ _join([m.Size, m.Type]) }}</td></tr>
+</tbody></table>
+<table class="monster monsterMov"><tbody>
+<tr><td class="subtitle">Movement</td></tr>
+<tr><td>{{ m.Movement }}</td></tr>
+</tbody></table>
+<table class="monster tableMonsterAttack"><tbody>
+<tr><td class="title" colspan="4">Base Stats</td></tr>
+<tr><td class="subtitle">Def</td><td class="subtitle">H</td><td class="subtitle">D</td><td class="subtitle">E</td></tr>
+<tr><td>{{ m.Def }}</td><td>{{ m.H }}</td><td>{{ m.D }}</td><td>{{ m.E }}</td></tr>
+</tbody></table>
+<table class="monster tableMonsterHP"><tbody>
+<tr><td class="title" rowspan="3">HP</td><td class="subtitle">Hi</td><td>{{ m.HPHi }}</td></tr>
+<tr><td class="subtitle">Mid</td><td>{{ m.HPMid }}</td></tr>
+<tr><td class="subtitle">Low</td><td>{{ m.HPLow }}</td></tr>
+</tbody></table>
+{% if m.Resistances %}<table class="monster monsterResist"><tbody>
+<tr><td class="subtitle">Resistances</td></tr>
+<tr><td class="attackText">{{ m.Resistances | nl2br }}</td></tr>
+</tbody></table>
+{% endif -%}
+<table class="monster monsterAbilities"><tbody>
+<tr><td class="title" colspan="6">Abilities</td></tr>
+<tr><td class="subtitle">Str</td><td class="subtitle">For</td><td class="subtitle">Dex</td><td class="subtitle">Wis</td><td class="subtitle">Cha</td><td class="subtitle">Int</td></tr>
+<tr><td>{{ m.Str }}</td><td>{{ m.Con }}</td><td>{{ m.Dex }}</td><td>{{ m.Wis }}</td><td>{{ m.Cha }}</td><td>{{ m.Int }}</td></tr>
+</tbody></table>
+<p><br></p>
+<div class="space1"></div>
+{{ _monster_text("Race Power", m.RacePowerName, m.RacePower) -}}
+{{ _monster_text("", m.RacePowerName2, m.RacePower2) -}}
+{{ _monster_text("", m.RacePowerName3, m.RacePower3) -}}
+{{ _monster_text("Race Trait", m.RaceTraitName, m.RaceTrait) -}}
+{{ _monster_text("", m.RaceTraitName2, m.RaceTrait2) -}}
+{{ _monster_text("", "", m.Reach and "Melee reach: " ~ m.Reach) -}}
+{{ _monster_text("", m.RaceSkills and "Race Skills", m.RaceSkills) -}}
+</div>
+{%- endmacro -%}
+
+{%- macro monster_class(m) -%}
+<div class="monsterClass"><br><br>
+<table class="monster monsterName fullwidth"><tbody>
+<tr><td class="title large" colspan="2">{{ m.Name }}</td></tr>
+<tr><td class="subtitle">{{ m.Role }}</td></tr>
+</tbody></table>
+<table class="monster tableMonsterHP2"><tbody>
+<tr><td class="title">HP</td></tr>
+<tr><td class="subtitle">{{ m.HP }}</td></tr>
+</tbody></table>
+<p> </p>
+<table class="monster monsterDef"><tbody>
+<tr><td class="title" colspan="4">Defense Stats</td></tr>
+<tr><td class="subtitle">Ar</td><td class="subtitle">For</td><td class="subtitle">Ref</td><td class="subtitle">Will</td></tr>
+<tr><td>{{ m.Ar }}</td><td>{{ m.For }}</td><td>{{ m.Ref }}</td><td>{{ m.Will }}</td></tr>
+</tbody></table>
+<table class="monster monsterMisc"><tbody>
+<tr><td class="title" colspan="3">Misc. Stats</td></tr>
+<tr><td class="subtitle">OA</td><td class="subtitle">Init</td><td class="subtitle">Mov</td></tr>
+<tr><td>{{ m.OA }}</td><td>{{ m.Init }}</td><td>{{ m.Mov }}</td></tr>
+</tbody></table>
+<div class="space2"></div>
+<div class="space2"></div>
+<table class="monster fullwidth"><tbody>
+<tr><td class="title" colspan="2">Class Attacks</td></tr>
+<tr><td class="subtitle">Melee Basic</td><td class="subtitle">Standard Attack</td></tr>
+<tr><td class="attackText">{{ m.BasicAttack | nl2br }}</td><td class="attackText">{{ m.StandardAttack | nl2br }}</td></tr>
+</tbody></table>
+{{ _monster_text("Class Power", m.ClassPowerName, m.ClassPower) -}}
+{{ _monster_text("", m.ClassPowerName2, m.ClassPower2) -}}
+{{ _monster_text("", m.ClassPowerName3, m.ClassPower3) -}}
+{{ _monster_text("Class Trait", m.ClassTraitName, m.ClassTrait) -}}
+{{ _monster_text("", m.ClassTraitName2, m.ClassTrait2) -}}
+{{ _monster_text("", m.ClassTraitName3, m.ClassTrait3) -}}
+{{ _monster_text("", m.ClassSkills and "Class Skills", m.ClassSkills) -}}
+</div>
+{%- endmacro -%}
+
+{%- macro monster_list(monsters, kind) -%}
+<div class="monsterList">
+{% for m in monsters %}{{ monster_race(m) if kind == "race" else monster_class(m) }}
+{% endfor -%}
+</div>
+{%- endmacro -%}
