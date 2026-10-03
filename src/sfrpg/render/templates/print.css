@@ -23,7 +23,7 @@ h1, h2, h3, h4 { break-after: avoid; }
 /* Screen widths are in px and assume a wide browser; let blocks fill print columns. */
 .Power-List, .Feat-List { column-count: 3; column-width: auto; column-gap: 5mm; }
 .Power, .Feat { display: block; width: auto; break-inside: avoid; }
-.monsterRace, .monsterClass { break-inside: avoid; }
+.mc, .monster-pair { break-inside: avoid; }
 table { break-inside: avoid; }
 img { max-width: 100%; }
 

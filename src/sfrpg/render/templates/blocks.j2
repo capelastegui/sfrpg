@@ -127,102 +127,57 @@
 </div>
 {%- endmacro -%}
 
-{#- Monsters ------------------------------------------------------------------------------ -#}
+{#- Monsters ------------------------------------------------------------------------------
+    Race and class cards share a fixed-height name band and stats band, so when a race card
+    sits left of a class card, the class's HP pointer lines up with the race's HP row. -#}
 
-{%- macro _monster_text(title, name, text) -%}
-{%- if name or text -%}
-<table class="monster fullwidth"><tbody>
-{% if title %}<tr><td class="title" colspan="2">{{ title }}</td></tr>
-{% endif -%}
-{% if name %}<tr><td class="subtitle">{{ name }}</td></tr>
-{% endif -%}
-{% if text %}<tr><td class="attackText">{{ text | nl2br }}</td></tr>
-{% endif -%}
-</tbody></table>
-{% endif -%}
+{%- macro _monster_items(title, pairs) -%}
+{%- set pairs = pairs | selectattr(0) | list -%}
+{%- if pairs %}
+<div class="mc-sec">{{ title }}</div>
+{% for name, text in pairs %}<div class="mc-item"><b>{{ name }}</b>{% if text %}<br>{{ text | nl2br }}{% endif %}</div>
+{% endfor %}
+{%- endif -%}
+{%- endmacro -%}
+
+{%- macro _stat_grid(m, keys, css) -%}
+<div class="mc-grid {{ css }}">{% for k in keys %}<div><small>{{ k | upper }}</small>{{ m[k] }}</div>{% endfor %}</div>
 {%- endmacro -%}
 
 {%- macro monster_race(m) -%}
-<div class="monsterRace">
-<table class="monster monsterLevel"><tbody>
-<tr><td class="title large" colspan="2">Level</td></tr>
-<tr><td class="subtitle huge">{{ m.Level }}</td></tr>
-</tbody></table>
-<table class="monster monsterName namewidth"><tbody>
-<tr><td class="title large" colspan="2">{{ m.Name }}</td></tr>
-<tr><td class="subtitle">{{ _join([m.Size, m.Type]) }}</td></tr>
-</tbody></table>
-<table class="monster monsterMov"><tbody>
-<tr><td class="subtitle">Movement</td></tr>
-<tr><td>{{ m.Movement }}</td></tr>
-</tbody></table>
-<table class="monster tableMonsterAttack"><tbody>
-<tr><td class="title" colspan="4">Base Stats</td></tr>
-<tr><td class="subtitle">Def</td><td class="subtitle">H</td><td class="subtitle">D</td><td class="subtitle">E</td></tr>
-<tr><td>{{ m.Def }}</td><td>{{ m.H }}</td><td>{{ m.D }}</td><td>{{ m.E }}</td></tr>
-</tbody></table>
-<table class="monster tableMonsterHP"><tbody>
-<tr><td class="title" rowspan="3">HP</td><td class="subtitle">Hi</td><td>{{ m.HPHi }}</td></tr>
-<tr><td class="subtitle">Mid</td><td>{{ m.HPMid }}</td></tr>
-<tr><td class="subtitle">Low</td><td>{{ m.HPLow }}</td></tr>
-</tbody></table>
-{% if m.Resistances %}<table class="monster monsterResist"><tbody>
-<tr><td class="subtitle">Resistances</td></tr>
-<tr><td class="attackText">{{ m.Resistances | nl2br }}</td></tr>
-</tbody></table>
-{% endif -%}
-<table class="monster monsterAbilities"><tbody>
-<tr><td class="title" colspan="6">Abilities</td></tr>
-<tr><td class="subtitle">Str</td><td class="subtitle">For</td><td class="subtitle">Dex</td><td class="subtitle">Wis</td><td class="subtitle">Cha</td><td class="subtitle">Int</td></tr>
-<tr><td>{{ m.Str }}</td><td>{{ m.Con }}</td><td>{{ m.Dex }}</td><td>{{ m.Wis }}</td><td>{{ m.Cha }}</td><td>{{ m.Int }}</td></tr>
-</tbody></table>
-<p><br></p>
-<div class="space1"></div>
-{{ _monster_text("Race Power", m.RacePowerName, m.RacePower) -}}
-{{ _monster_text("", m.RacePowerName2, m.RacePower2) -}}
-{{ _monster_text("", m.RacePowerName3, m.RacePower3) -}}
-{{ _monster_text("Race Trait", m.RaceTraitName, m.RaceTrait) -}}
-{{ _monster_text("", m.RaceTraitName2, m.RaceTrait2) -}}
-{{ _monster_text("", "", m.Reach and "Melee reach: " ~ m.Reach) -}}
-{{ _monster_text("", m.RaceSkills and "Race Skills", m.RaceSkills) -}}
+<div class="mc monster-race">
+<div class="mc-head"><div><div class="mc-name">{{ m.Name }}</div><div class="mc-sub">{{ _join([m.Size, m.Type], " ") }}</div></div>
+<div class="mc-badge"><small>LEVEL</small>{{ m.Level }}</div></div>
+<div class="mc-band race">
+{{ _stat_grid(m, ["Def", "H", "D", "E"], "g4") }}
+<div class="mc-hp">{% for label, key in [("Hi", "HPHi"), ("Mid", "HPMid"), ("Low", "HPLow")] %}<div><span>{{ label }}</span><b>{{ m[key] }}</b></div>{% endfor %}</div>
+</div>
+<div class="mc-line"><b>Move</b> {{ m.Movement | replace("<br>", " &middot; ") | nl2br }}{% if m.Reach %} &middot; <b>Reach</b> {{ m.Reach }}{% endif %}</div>
+{{ _stat_grid(m, ["Str", "Con", "Dex", "Wis", "Cha", "Int"], "g6") }}
+{% if m.Resistances %}<div class="mc-line"><b>Resistances</b> {{ m.Resistances | nl2br }}</div>
+{% endif %}
+{{ _monster_items("Race Powers", [(m.RacePowerName, m.RacePower), (m.RacePowerName2, m.RacePower2), (m.RacePowerName3, m.RacePower3)]) }}
+{{ _monster_items("Race Traits", [(m.RaceTraitName, m.RaceTrait), (m.RaceTraitName2, m.RaceTrait2)]) }}
+{% if m.RaceSkills %}<div class="mc-foot"><b>Skills</b> {{ m.RaceSkills }}</div>
+{% endif %}
 </div>
 {%- endmacro -%}
 
 {%- macro monster_class(m) -%}
-<div class="monsterClass"><br><br>
-<table class="monster monsterName fullwidth"><tbody>
-<tr><td class="title large" colspan="2">{{ m.Name }}</td></tr>
-<tr><td class="subtitle">{{ m.Role }}</td></tr>
-</tbody></table>
-<table class="monster tableMonsterHP2"><tbody>
-<tr><td class="title">HP</td></tr>
-<tr><td class="subtitle">{{ m.HP }}</td></tr>
-</tbody></table>
-<p> </p>
-<table class="monster monsterDef"><tbody>
-<tr><td class="title" colspan="4">Defense Stats</td></tr>
-<tr><td class="subtitle">Ar</td><td class="subtitle">For</td><td class="subtitle">Ref</td><td class="subtitle">Will</td></tr>
-<tr><td>{{ m.Ar }}</td><td>{{ m.For }}</td><td>{{ m.Ref }}</td><td>{{ m.Will }}</td></tr>
-</tbody></table>
-<table class="monster monsterMisc"><tbody>
-<tr><td class="title" colspan="3">Misc. Stats</td></tr>
-<tr><td class="subtitle">OA</td><td class="subtitle">Init</td><td class="subtitle">Mov</td></tr>
-<tr><td>{{ m.OA }}</td><td>{{ m.Init }}</td><td>{{ m.Mov }}</td></tr>
-</tbody></table>
-<div class="space2"></div>
-<div class="space2"></div>
-<table class="monster fullwidth"><tbody>
-<tr><td class="title" colspan="2">Class Attacks</td></tr>
-<tr><td class="subtitle">Melee Basic</td><td class="subtitle">Standard Attack</td></tr>
-<tr><td class="attackText">{{ m.BasicAttack | nl2br }}</td><td class="attackText">{{ m.StandardAttack | nl2br }}</td></tr>
-</tbody></table>
-{{ _monster_text("Class Power", m.ClassPowerName, m.ClassPower) -}}
-{{ _monster_text("", m.ClassPowerName2, m.ClassPower2) -}}
-{{ _monster_text("", m.ClassPowerName3, m.ClassPower3) -}}
-{{ _monster_text("Class Trait", m.ClassTraitName, m.ClassTrait) -}}
-{{ _monster_text("", m.ClassTraitName2, m.ClassTrait2) -}}
-{{ _monster_text("", m.ClassTraitName3, m.ClassTrait3) -}}
-{{ _monster_text("", m.ClassSkills and "Class Skills", m.ClassSkills) -}}
+{%- set hp = m.HP.split() -%}
+<div class="mc monster-class">
+<div class="mc-head"><div><div class="mc-name">{{ m.Name }}</div><div class="mc-sub">{{ m.Role }}</div></div></div>
+<div class="mc-band class">
+<div class="mc-hp pointer">{% for label in ["Hi", "Mid", "Low"] %}<div class="{{ 'on' if label == hp[0] else 'off' }}"><span>{{ '&#9664;' if label == hp[0] }}</span><b>{{ label }}{% if label == hp[0] and hp | length > 1 %} {{ hp[1] }}{% endif %}</b></div>{% endfor %}</div>
+{{ _stat_grid(m, ["Ar", "For", "Ref", "Will", "OA", "Init", "Mov"], "g7") }}
+</div>
+<div class="mc-sec">Attacks</div>
+<div class="mc-item"><b>Melee Basic</b><br>{{ m.BasicAttack | nl2br }}</div>
+<div class="mc-item"><b>Standard Attack</b><br>{{ m.StandardAttack | nl2br }}</div>
+{{ _monster_items("Class Powers", [(m.ClassPowerName, m.ClassPower), (m.ClassPowerName2, m.ClassPower2), (m.ClassPowerName3, m.ClassPower3)]) }}
+{{ _monster_items("Class Traits", [(m.ClassTraitName, m.ClassTrait), (m.ClassTraitName2, m.ClassTrait2), (m.ClassTraitName3, m.ClassTrait3)]) }}
+{% if m.ClassSkills %}<div class="mc-foot"><b>Skills</b> {{ m.ClassSkills }}</div>
+{% endif %}
 </div>
 {%- endmacro -%}
 
@@ -230,5 +185,12 @@
 <div class="monsterList">
 {% for m in monsters %}{{ monster_race(m) if kind == "race" else monster_class(m) }}
 {% endfor -%}
+</div>
+{%- endmacro -%}
+
+{%- macro monster_pair(race, cls) -%}
+<div class="monster-pair">
+{{ monster_race(race) }}
+{{ monster_class(cls) }}
 </div>
 {%- endmacro -%}

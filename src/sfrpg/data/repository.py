@@ -214,6 +214,22 @@ def monster_classes(category: str, subcategory: str | Iterable[str] | None = Non
     ]  # fmt: skip
 
 
+def _monster_by_name(csv_name: str, name: str) -> Row:
+    found = [r for r in read_monster_csv(csv_name) if r["Name"] == name]
+    if len(found) != 1:
+        problem = "No" if not found else f"{len(found)} rows for"
+        raise DataError(f"{problem} monster {name!r} in {csv_name}.csv")
+    return found[0]
+
+
+def monster_race(name: str) -> Row:
+    return _monster_by_name("monster_races", name)
+
+
+def monster_class(name: str) -> Row:
+    return _monster_by_name("monster_classes", name)
+
+
 # -- Validation -----------------------------------------------------------------------
 
 

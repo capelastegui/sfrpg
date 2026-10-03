@@ -86,6 +86,11 @@ def monster_classes(category: str, subcategory: str | Iterable[str] | None = Non
     return blocks().monster_list(repo.monster_classes(category, subcategory), "class")
 
 
+def monster_pair(race: str, cls: str) -> str:
+    """A race card and a class card side by side; the class HP row points at the race's."""
+    return blocks().monster_pair(repo.monster_race(race), repo.monster_class(cls))
+
+
 MACROS = {
     "build_stats": build_stats,
     "build_features": build_features,
@@ -100,4 +105,5 @@ MACROS = {
     "beast_hp_table": beast_hp_table_html,
     "monster_races": monster_races,
     "monster_classes": monster_classes,
+    "monster_pair": monster_pair,
 }
