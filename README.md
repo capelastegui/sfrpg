@@ -49,7 +49,7 @@ uv run pytest
 
 ## Publishing
 
-`.github/workflows/site.yml` does the following on every push to `master`:
+`.github/workflows/site.yml` does the following on every push to `main`:
 
 1. Runs lint and tests.
 2. Builds the site, the PDF (`site/sfrpg.pdf`), the standalone pages (`site/pages/`) and the example sheet.

@@ -2,7 +2,7 @@ site_name: Square Fireballs RPG
 site_description: A role playing game of tactical fantasy
 site_author: Pedro Capelastegui
 repo_url: https://github.com/capelastegui/sfrpg
-edit_uri: edit/master/book/
+edit_uri: edit/main/book/
 copyright: Licensed under CC BY-NC 4.0
 
 docs_dir: book
