@@ -45,7 +45,7 @@ In this chapter we provide the rules for resolving a combat encounter.
 
 In Square Fireballs, a combat encounter represents a short, violent conflict between an adventuring party of Player Characters and a group of Monsters controlled by the Game Master. 
 
-<div class="tip" markdown>**Tip**:Note that we use **Monsters** as shorthand for "bad guys", and it is perfectly possible to have a Monster team composed of non-monstruous mundane characters like human bandits or wolves. Or they can also be, you know, many-eyed tentacled abominations.</div>
+<div class="tip" markdown>**Tip**: Note that we use **Monsters** as shorthand for "bad guys", and it is perfectly possible to have a Monster team composed of non-monstruous mundane characters like human bandits or wolves. Or they can also be, you know, many-eyed tentacled abominations.</div>
 
 In combat, each character (whether a Player Character or a Monster) takes **turns** to carry out **actions** such as moving, attacking enemies, or healing or assisting allies. Some actions succeed automatically, whereas others require the character to make a successful die roll. For example, movement through normal terrain is resolved automatically, with the player stating the character's movement path and changing the character's position accordingly. On the other hand, attacking requires the character to roll against the enemy's defense to determine if the attack hits, and then rolling again to determine the damage dealt by the attack.
 

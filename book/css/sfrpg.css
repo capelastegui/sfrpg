@@ -178,30 +178,30 @@ table:not(.monster) tbody tr:nth-child(even),
   color:gray
 }
 
-.compatibility {  
-  color: DarkGoldenrod;  
-  background-color: BlanchedAlmond;
-        border: 1px solid DarkGoldenrod;
-		 margin: 10px;
-		 display: inline-block;
+/* Note boxes: tip (blue), compatibility (gold), design (red).
+   Tinted background, coloured stripe on the left, narrower than the text column. */
+.tip, .compatibility, .design {
+  display: block;
+  max-width: 36rem;
+  margin: 1.2em 0;
+  padding: .7em 1em;
+  border: none;
+  border-left: 4px solid;
+  border-radius: 0 4px 4px 0;
 }
 
-.tip {  
-  color: darkblue;  
-  background-color: #DDDDFF;
-  border: 1px solid darkblue;
-  margin: 10px;
-  display: inline-block;
-}
+.tip p, .compatibility p, .design p {margin: .4em 0;}
+.tip p:first-child, .compatibility p:first-child, .design p:first-child {margin-top: 0;}
+.tip p:last-child, .compatibility p:last-child, .design p:last-child {margin-bottom: 0;}
 
-.design {  
-  color: #B20000; 
-  /*background-color: #ffcccc;*/
-  background-color: #ffdddd;
-        border: 1px solid darkred;
-		margin: 10px;
-		display: inline-block;
-}
+/* Keep list bullets inside the box */
+.tip ul, .compatibility ul, .design ul,
+.tip ol, .compatibility ol, .design ol {margin-left: 0; padding-left: 1.4em;}
+.tip li, .compatibility li, .design li {margin-left: 0;}
+
+.tip {color: #133d5d; background-color: #e3ebf2; border-left-color: #133d5d;}
+.compatibility {color: #6e5410; background-color: #f6efd9; border-left-color: #a8780b;}
+.design {color: #951233; background-color: #f7e4e8; border-left-color: #951233;}
 
 /* Monster format */
 
