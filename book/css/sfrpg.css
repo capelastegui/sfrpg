@@ -259,23 +259,37 @@ div.monsterList {
 .mc-badge small {display: block; font-size: 7px; letter-spacing: .08em;}
 
 .mc-band {display: grid; height: 48px;}
-.mc-band.race {grid-template-columns: 1fr 64px;}
-.mc-band.class {grid-template-columns: 64px 1fr;}
+.mc-band.race {grid-template-columns: 1fr 72px;}
+.mc-band.class {grid-template-columns: 62px 1fr;}
 .mc-band .mc-grid {align-content: center;}
 
-.mc-hp {display: grid; grid-template-rows: repeat(3, 16px);}
-.mc-hp div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 6px;
-  border-bottom: 1px solid transparent;
+/* HP boxes: a dark "HP" bar on the outer edge; three 15px rows with 1px gaps.
+   Race: [HP | label | value]. Class: [arrow | label | HP], its own row highlighted. */
+.mc-hp {
+  display: grid;
+  grid-template-rows: repeat(3, 15px);
+  gap: 1px;
+  align-self: center;
+  font-weight: bold;
+  text-align: center;
+  line-height: 15px;
 }
-.mc-band.race .mc-hp div {background-color: #3f7a4f; color: #fff; border-bottom-color: #eef4ef;}
-.mc-band.race .mc-hp span {font-size: 8px; letter-spacing: .05em;}
-.mc-hp.pointer div.on {background-color: #1f4d2b; color: #fff;}
-.mc-hp.pointer div.off {color: #9aa89d;}
-.mc-hp.pointer span {font-size: 11px;}
+.mc-hp.race {grid-template-columns: 18px 1fr 1fr;}
+.mc-hp.pointer {grid-template-columns: 12px 1fr 18px;}
+.mc-hp-title {
+  grid-row: 1 / span 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1f4d2b;
+  color: #fff;
+}
+.mc-hp.race .mc-hp-title {grid-column: 1;}
+.mc-hp.pointer .mc-hp-title {grid-column: 3;}
+.mc-hp.race .mc-hp-label {background-color: #3f7a4f; color: #fff;}
+.mc-hp-label.on {background-color: #1f4d2b; color: #fff;}
+.mc-hp-label.off {color: #9aa89d;}
+.mc-hp-arrow {color: #1f4d2b; font-size: 11px;}
 
 .mc-grid {display: grid; text-align: center;}
 .mc-grid.g4 {grid-template-columns: repeat(4, 1fr);}

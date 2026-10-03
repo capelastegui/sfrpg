@@ -66,15 +66,15 @@ def test_chapter_expands(chapter):
 @pytest.mark.parametrize("cls, row", [("Bowman", "Mid"), ("Hugger", "Hi"), ("Ambusher", "Low")])
 def test_class_hp_pointer_marks_its_row(cls, row):
     html = macros.monster_pair("Kobold", cls)
-    assert html.count('<div class="on">') == 1
-    assert f'<div class="on"><span>&#9664;</span><b>{row}</b></div>' in html
+    assert html.count('mc-hp-label on') == 1
+    assert f'<div class="mc-hp-arrow">&#9664;</div><div class="mc-hp-label on">{row}</div>' in html
     # The race card comes first, so its HP rows sit left of the pointer.
     assert html.index("monster-race") < html.index("monster-class")
 
 
 def test_class_hp_multiplier_shown_on_pointer():
     m = next(r for r in read_monster_csv("monster_classes") if r["HP"] == "Hi x2")
-    assert "<b>Hi x2</b>" in blocks().monster_class(m)
+    assert '<div class="mc-hp-label on">Hi x2</div>' in blocks().monster_class(m)
 
 
 def test_unknown_monster_raises():
