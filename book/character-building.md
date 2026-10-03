@@ -187,6 +187,7 @@ Ability Skill Bonus = Ability + Origin Ability Modifier + Ability Skill Points +
 ```
 
 An explanation for each :
+
 - **Ability**: Ability Score
 - **Origin Ability Modifier**: Modifier to that Ability Skill Bonus from the
   character's Origin. Typically, Origins add +1 to 2 fixed Ability Skill Bonuses

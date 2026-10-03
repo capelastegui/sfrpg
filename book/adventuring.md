@@ -137,6 +137,7 @@ encounters may count as multiple regular encounters or a fraction of an
 encounter, depending on their difficulty.
 
 After each milestone, Daily Powers can be recovered as follows:
+
 - For each spent Daily Power, the character rolls a D6: On a 6+, the power is
   recovered.
 - If the character has no spent Daily Powers and are below their maximum 

@@ -12,7 +12,7 @@ EXAMPLES = Path(__file__).resolve().parents[1] / "examples"
 
 def test_power_block():
     html = macros.powers("univ_en_powatk")
-    assert '<span class="red large"><strong>Power Attack - Universal 1</strong></span>' in html
+    assert '<p class="Power-Title bar-red"><strong>Power Attack - Universal 1</strong></p>' in html
     assert "<p>Attack - Encounter - <i>Weapon</i></p>" in html
     assert "<b><i>Free Action (Interrupt)</i></b> - <i>(Trigger: you hit with" in html
     assert '<span class="Power-Upgrade">Upgrade 13: Increase extra damage to 2W<br>' in html

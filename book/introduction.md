@@ -421,6 +421,7 @@ Notes:
 - If there are multiple resistances and vulnerabilities, pick the highest Resistance/Immunity, and the highest Vulnerability. Subtract damage from the Resistance, then add damage from the Vulnerability.
 
 TODO:
+
 - Show examples
 - Explain that Immunity + Vulnerability first subtracts 100% damage, then adds the amount from the Vulnerability.
 
@@ -516,6 +517,7 @@ Turn | Escalation Die
 6+ | 4
 
 The Escalation Die value is used as follows:
+
 - **Add** the Escalation Die to every Hit Roll (both for PCs and monsters)
 - **Subtract** the Escalation Die from every Skill Check
 
@@ -950,6 +952,7 @@ Each power element is described in detail in the following sections.
 ### Power Type
 
 Powers can be of 2 types:
+
 - Attack: A power used to hurt an enemy.
 - Utility: A power that is not an attack. Utilities can help characters move, heal or defend, among other effects.
 
@@ -968,6 +971,7 @@ Powers without a level are typically granted by class or origin features. It is 
 ### Usage Frequency
 
 Depending on their usage frequency, powers can be:
+
 - At-Will: Can be used without limit.
 - Encounter: Can be used once per encounter. Recharged when the character takes an [Short, Long or Full Rest][Resting].
 - Daily: Can be used once per day. Recharged when the character takes a Full Rest.
@@ -980,6 +984,7 @@ Note: There are some ways other than a Full Rest that a character may recharge a
 #### Attack Cooldown
 
 For attack powers with limited usage frequency, an additional restriction applies. When using such a power, the character enters a state of *Attack Cooldown*, and cannot use other powers with the same usage frequency until the cooldown ends:
+
 - Encounter Attack powers: The character enters Encounter Attack Cooldown until the end of their next turn.
 - Daily Attack powers: the character enters Daily Attack Cooldown until the end of the encounter.
 
@@ -992,6 +997,7 @@ Some powers have the *Reliable* keyword, which prevents the powers from being sp
 ### Power Keywords
 
 List of keywords with rules:
+
 * Weapon
 * Implement
 * Conjuration
@@ -1000,6 +1006,7 @@ List of keywords with rules:
 * Control
 
 List of damage type keywords:
+
 * Fire
 * Cold
 * Lightning
@@ -1019,6 +1026,7 @@ Some powers allow their users to move a conjuration. Unless otherwise stated, co
 #### Spirit
 
 Some powers of the [Shaman class](classes.md#shaman) have the **Spirit** keyword. The following rules apply to a power with this keyword.
+
 * A character may only choose to learn the power if they have the **Spirit Companion** power.
 * A character may only use the power while they have an active Spirit Companion.
 * Range for the power is determined from the Spirit Companion's space.
@@ -1036,6 +1044,7 @@ Some zones have the Zone Damage property. Characters in a zone with Zone Damage 
 #### Summon
 
 Powers with the Summon keyword create creatures that act as allies to the caster in the battlefield, called *Summons*. A Summon is medium-sized unless otherwise stated.  The following rules apply to Summons:
+
 - Summon powers can create a Summon in a non-occupied space within the power's range. If the power is a ranged attack power, the summon can be created at Long Range, but in that case the summon is Hindered until end of turn.
 - Can be attacked and damaged like a normal character. When reduced to 0 HP, a Summon is destroyed.
 - Unless otherwise stated, a Summon has the same defenses as its caster.

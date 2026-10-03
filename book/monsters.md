@@ -3,6 +3,7 @@
 To generate a standard monster, pick a monster race and a monster class.
 
 Note - Recharging attacks:
+
 - Some monsters have attacks with (recharge n+). These attacks are spent on use, and cannot be used again
   until recharged.
 - At the end of a monster's turn, roll 1d6 for each spent recharge attack that wasn't used this turn. If
@@ -89,6 +90,7 @@ All Elite Monsters gain the following rules:
 Apply to Standard monsters to convert them to Elite
 
 Basic Elite Monster:
+
 - Double XP value
 - Double HP
 - Trait: Elite Attack: Melee and Ranged attacks can target 1 additional enemy in range.
@@ -138,10 +140,12 @@ All Solo Monsters gain the following rules:
 ## Other Templates
 
 Fat:
+
 - +50% XP value
 - Double HP
 
 Veteran:
+
 - +25% XP value
 - +6/12/24 HP, depending on tier
 - +2/4/8 D, depending on tier
