@@ -5,9 +5,9 @@ body {
 
 /* Header bar colour (mkdocs.yml sets `primary: custom`) */
 :root {
-  --md-primary-fg-color: #133d5d;
-  --md-primary-fg-color--light: #2b5a80;
-  --md-primary-fg-color--dark: #0b2a42;
+  --md-primary-fg-color: #003366;
+  --md-primary-fg-color--light: #1f4f80;
+  --md-primary-fg-color--dark: #002244;
 }
 
 .newPage {
@@ -65,7 +65,7 @@ table:not(.monster),
   font-size: 11px;
   font-family: Verdana;
   color: #1d1a1a;
-  background-color: #f4f3ec;
+  background-color: #f8f7f1;
   margin-bottom: 30px;
   border: none;
   border-collapse: collapse;
@@ -77,7 +77,7 @@ table:not(.monster),
 
 table:not(.monster) th,
 .md-typeset table:not(.monster) th {
-  background-color: #133d5d;
+  background-color: #003366;
   color: #fff;
   font-weight: bold;
   text-align: left !important;
@@ -92,9 +92,9 @@ table:not(.monster) td,
 }
 
 table:not(.monster) tbody tr:nth-child(odd),
-.md-typeset table:not(.monster) tbody tr:nth-child(odd) {background-color: #d2d0ba;}
+.md-typeset table:not(.monster) tbody tr:nth-child(odd) {background-color: #ecebe0;}
 table:not(.monster) tbody tr:nth-child(even),
-.md-typeset table:not(.monster) tbody tr:nth-child(even) {background-color: #f4f3ec;}
+.md-typeset table:not(.monster) tbody tr:nth-child(even) {background-color: #f8f7f1;}
 
 /* Key/value tables without a header row: bold keys */
 .Class-table td:first-child {font-weight: bold;}
@@ -156,7 +156,7 @@ table:not(.monster) tbody tr:nth-child(even),
   padding: 2px 5px;
 }
 
-.Power p:nth-child(even) {background-color: #ecece4;}
+.Power p:nth-child(even) {background-color: #f1f0e8;}
 
 .Power-Title {
   color: #fff;
@@ -166,11 +166,11 @@ table:not(.monster) tbody tr:nth-child(even),
 .Power-Title strong {font-size: 14px;}
 
 /* Title bar colour: usage for powers, rarity for magic items */
-.bar-green {background-color: #3d6b2f;}
-.bar-red {background-color: #951233;}
-.bar-gray {background-color: #4d4d4e;}
+.bar-green {background-color: #008000;}
+.bar-red {background-color: #8b0000;}
+.bar-gray {background-color: #808080;}
 .bar-black {background-color: #4d4d4e;}
-.bar-darkgray {background-color: #3d6b2f;}
+.bar-darkgray {background-color: #008000;}
 .bar-gold {background-color: #a8780b;}
 
 .Power-Upgrade {  
@@ -199,9 +199,9 @@ table:not(.monster) tbody tr:nth-child(even),
 .tip ol, .compatibility ol, .design ol {margin-left: 0; padding-left: 1.4em;}
 .tip li, .compatibility li, .design li {margin-left: 0;}
 
-.tip {color: #133d5d; background-color: #e3ebf2; border-left-color: #133d5d;}
+.tip {color: #003366; background-color: #e3eaf3; border-left-color: #003366;}
 .compatibility {color: #6e5410; background-color: #f6efd9; border-left-color: #a8780b;}
-.design {color: #951233; background-color: #f7e4e8; border-left-color: #951233;}
+.design {color: #8b0000; background-color: #f8e5e5; border-left-color: #8b0000;}
 
 /* Monster format */
 
@@ -215,7 +215,7 @@ table.monster, table.monster td, table.monster th {
   border: none !important;
   border-collapse: collapse;
   text-align: center;
-  background-color: #e6e6d6;
+  background-color: #eef4ef;
   font-family: Verdana;
   font-size: 9px;
   color: #1d1a1a;
@@ -225,19 +225,20 @@ table.monster, table.monster td, table.monster th {
 
 table.monster td.title {
   font-weight: bold;
-  background-color: #4d5b2d;
+  background-color: #1f4d2b;
   color: white;
 }
 
-/* Section titles ("Race Power", "Class Trait"), not monster names */
+/* Section titles ("Race Power", "Class Trait") in capitals, not monster names */
 table.monster td.title:not(.large) {
-  font-variant: small-caps;
-  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  font-size: 8.5px;
   white-space: nowrap;
 }
 
 table.monster td.subtitle {
-  background-color: #70794c;
+  background-color: #3f7a4f;
   color: white;
   font-weight: bold;
   height: 12px;
@@ -245,8 +246,8 @@ table.monster td.subtitle {
 
 /* The big level number sits on the body colour */
 table.monster td.subtitle.huge {
-  background-color: #e6e6d6;
-  color: #4d5b2d;
+  background-color: #eef4ef;
+  color: #1f4d2b;
 }
 
 
