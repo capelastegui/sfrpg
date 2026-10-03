@@ -203,171 +203,97 @@ table:not(.monster) tbody tr:nth-child(even),
 .compatibility {color: #6e5410; background-color: #f6efd9; border-left-color: #a8780b;}
 .design {color: #8b0000; background-color: #f8e5e5; border-left-color: #8b0000;}
 
-/* Monster format */
+/* Monster cards.
+   Race and class cards share a fixed-height name band (.mc-head) and stats band
+   (.mc-band) with three 16px HP rows, so a class card placed right of a race card
+   points (.mc-hp.pointer) at the matching race HP value. Keep these heights in sync. */
 
 div.monsterList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
   max-width: 900px;
-  line-height: 1.3;
-  letter-spacing: 0px;
 }
 
-table.monster, table.monster td, table.monster th {
-  border: none !important;
-  border-collapse: collapse;
-  text-align: center;
-  background-color: #eef4ef;
-  font-family: Verdana;
-  font-size: 9px;
-  color: #1d1a1a;
-  margin-bottom: 0px !important;
-  margin-top: 0px !important;
+.monster-pair {
+  display: flex;
+  gap: 6px;
+  align-items: flex-start;
 }
 
-table.monster td.title {
-  font-weight: bold;
-  background-color: #1f4d2b;
-  color: white;
-}
-
-/* Section titles ("Race Power", "Class Trait") in capitals, not monster names */
-table.monster td.title:not(.large) {
-  text-transform: uppercase;
-  letter-spacing: .04em;
-  font-size: 8.5px;
-  white-space: nowrap;
-}
-
-table.monster td.subtitle {
-  background-color: #3f7a4f;
-  color: white;
-  font-weight: bold;
-  height: 12px;
-}
-
-/* The big level number sits on the body colour */
-table.monster td.subtitle.huge {
-  background-color: #eef4ef;
-  color: #1f4d2b;
-}
-
-
-table.monster td.attackText {
-  text-align: left;
-  vertical-align: 0px;
-}
-
-
-table.monster td.large {
-  font-size: 14px;
- }
-
-table.monster td.huge {
-  font-size: 18px;
-}
-
-div.monsterClass, div.monsterRace {
-  font-family: Verdana;
-  font-size: 9px;
+.mc {
   width: 280px;
-  position: relative;
-  /*background-color: #dbffdb;*/
-  margin-bottom: 30px;
-  margin-right: 20px;
-  display: inline-block;
-  vertical-align: top;
+  font: 10px/1.35 Verdana, sans-serif;
+  color: #1d1a1a;
+  background-color: #eef4ef;
+  break-inside: avoid;
 }
 
-table.fullwidth {
-width: 277px;
-    float: left;
+.mc-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 8px;
+  background-color: #1f4d2b;
+  color: #fff;
 }
 
-table.namewidth {
-width: 230px;
-  left: 47px;
+.mc-name {font-size: 15px; font-weight: bold; white-space: nowrap;}
+.mc-sub {font-size: 10px; opacity: .9; white-space: nowrap;}
+
+.mc-badge {
+  background-color: #fff;
+  color: #1f4d2b;
+  border-radius: 4px;
+  min-width: 38px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 1px 4px 2px;
+  line-height: 1.1;
 }
 
-table.monsterLevel {
-  position: absolute;
-  left: 0px;
-  top: 0px;
-  width: 40px;
+.mc-badge small {display: block; font-size: 7px; letter-spacing: .08em;}
+
+.mc-band {display: grid; height: 48px;}
+.mc-band.race {grid-template-columns: 1fr 64px;}
+.mc-band.class {grid-template-columns: 64px 1fr;}
+.mc-band .mc-grid {align-content: center;}
+
+.mc-hp {display: grid; grid-template-rows: repeat(3, 16px);}
+.mc-hp div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 6px;
+  border-bottom: 1px solid transparent;
 }
+.mc-band.race .mc-hp div {background-color: #3f7a4f; color: #fff; border-bottom-color: #eef4ef;}
+.mc-band.race .mc-hp span {font-size: 8px; letter-spacing: .05em;}
+.mc-hp.pointer div.on {background-color: #1f4d2b; color: #fff;}
+.mc-hp.pointer div.off {color: #9aa89d;}
+.mc-hp.pointer span {font-size: 11px;}
 
-table.monsterName {
-  position: absolute;
-  top: 0px;
+.mc-grid {display: grid; text-align: center;}
+.mc-grid.g4 {grid-template-columns: repeat(4, 1fr);}
+.mc-grid.g6 {grid-template-columns: repeat(6, 1fr);}
+.mc-grid.g7 {grid-template-columns: repeat(7, 1fr);}
+.mc-grid > div {padding: 3px 1px; font-weight: bold;}
+.mc-grid > div:nth-child(odd) {background-color: #e1ebe3;}
+.mc-grid small {display: block; font-size: 8px; font-weight: normal; letter-spacing: .05em; opacity: .8;}
 
-}
+.mc-line, .mc-item, .mc-foot {padding: 3px 8px;}
+.mc-foot {border-top: 1px solid rgba(0, 0, 0, .12);}
 
-table.monsterMov {
-  position: absolute;
-  top: 50px;
-  left: 0px;
-  width: 102px;
-  height: 36px;
-}
-
-table.tableMonsterAttack {
-  position: absolute;
-  left: 105px;
-  top: 40px;
-  width: 99px;
-}
-
-
-table.tableMonsterHP {
-  position: absolute;
-  top: 40px;
-  left: 207px;
-  width: 70px;
-}
-
-table.monsterResist {
-  position: absolute;
-  top: 89px;
-  left: 0px;
-  width: 102px;
-  height: 46px;
-}
-
-table.monsterAbilities {
-  position: absolute;
-  top: 89px;
-  left: 105px;
-  width: 172px;
-}
-
-div .space1 {
-width: 275px;
-height: 117px;
-    float: left;
-}
-
-div .space2 {
-width: 275px;
-height: 28px;
-    float: left;
-}
-
-table.tableMonsterHP2 {
-  position: absolute;
-  top: 40px;
-  width: 57px;
-  height: 44px;
-}
-
-table.monsterDef {
-  position: absolute;
-  left: 60px;
-  top: 40px;
-  width: 145px;
-}
-
-table.monsterMisc {
-  position: absolute;
-  left: 208px;
-  top: 40px;
-  width: 69px;
-  height: 44px;
+.mc-sec {
+  background-color: #3f7a4f;
+  color: #fff;
+  font-weight: bold;
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 2px 8px;
 }

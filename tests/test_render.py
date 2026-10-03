@@ -5,6 +5,8 @@ import pytest
 from sfrpg import macros, outputs
 from sfrpg.book import BOOK_DIR, expand
 from sfrpg.data import repository as repo
+from sfrpg.data.loader import read_monster_csv
+from sfrpg.render.env import blocks
 from sfrpg.rules import beast_hp_table, pc_hp_table
 
 EXAMPLES = Path(__file__).resolve().parents[1] / "examples"
@@ -49,7 +51,7 @@ R_SITE_COUNTS = {
     "combat.md": {'<div class="Power">': 40},
     "feats.md": {'<div class="Feat">': 146},
     "items.md": {'<div class="Power">': 126},
-    "monsters.md": {'<div class="monsterRace">': 174, '<div class="monsterClass">': 83},
+    "monsters.md": {'<div class="mc monster-race">': 174, '<div class="mc monster-class">': 83},
 }  # fmt: skip
 
 
@@ -59,6 +61,25 @@ def test_chapter_expands(chapter):
     assert "{{" not in html
     for block, count in R_SITE_COUNTS.get(chapter, {}).items():
         assert html.count(block) == count, block
+
+
+@pytest.mark.parametrize("cls, row", [("Bowman", "Mid"), ("Hugger", "Hi"), ("Ambusher", "Low")])
+def test_class_hp_pointer_marks_its_row(cls, row):
+    html = macros.monster_pair("Kobold", cls)
+    assert html.count('<div class="on">') == 1
+    assert f'<div class="on"><span>&#9664;</span><b>{row}</b></div>' in html
+    # The race card comes first, so its HP rows sit left of the pointer.
+    assert html.index("monster-race") < html.index("monster-class")
+
+
+def test_class_hp_multiplier_shown_on_pointer():
+    m = next(r for r in read_monster_csv("monster_classes") if r["HP"] == "Hi x2")
+    assert "<b>Hi x2</b>" in blocks().monster_class(m)
+
+
+def test_unknown_monster_raises():
+    with pytest.raises(repo.DataError):
+        macros.monster_pair("Kobold", "Not a class")
 
 
 def test_hp_tables_match_r_formula():
