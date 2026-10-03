@@ -150,7 +150,7 @@
 <div class="mc-badge"><small>LEVEL</small>{{ m.Level }}</div></div>
 <div class="mc-band race">
 {{ _stat_grid(m, ["Def", "H", "D", "E"], "g4") }}
-<div class="mc-hp">{% for label, key in [("Hi", "HPHi"), ("Mid", "HPMid"), ("Low", "HPLow")] %}<div><span>{{ label }}</span><b>{{ m[key] }}</b></div>{% endfor %}</div>
+<div class="mc-hp race"><div class="mc-hp-title">HP</div>{% for label, key in [("Hi", "HPHi"), ("Mid", "HPMid"), ("Low", "HPLow")] %}<div class="mc-hp-label">{{ label }}</div><div class="mc-hp-value">{{ m[key] }}</div>{% endfor %}</div>
 </div>
 <div class="mc-line"><b>Move</b> {{ m.Movement | replace("<br>", " &middot; ") | nl2br }}{% if m.Reach %} &middot; <b>Reach</b> {{ m.Reach }}{% endif %}</div>
 {{ _stat_grid(m, ["Str", "Con", "Dex", "Wis", "Cha", "Int"], "g6") }}
@@ -168,7 +168,7 @@
 <div class="mc monster-class">
 <div class="mc-head"><div><div class="mc-name">{{ m.Name }}</div><div class="mc-sub">{{ m.Role }}</div></div></div>
 <div class="mc-band class">
-<div class="mc-hp pointer">{% for label in ["Hi", "Mid", "Low"] %}<div class="{{ 'on' if label == hp[0] else 'off' }}"><span>{{ '&#9664;' if label == hp[0] }}</span><b>{{ label }}{% if label == hp[0] and hp | length > 1 %} {{ hp[1] }}{% endif %}</b></div>{% endfor %}</div>
+<div class="mc-hp pointer"><div class="mc-hp-title">HP</div>{% for label in ["Hi", "Mid", "Low"] %}{% set on = label == hp[0] %}<div class="mc-hp-arrow">{{ '&#9664;' if on }}</div><div class="mc-hp-label {{ 'on' if on else 'off' }}">{{ label }}{% if on and hp | length > 1 %} {{ hp[1] }}{% endif %}</div>{% endfor %}</div>
 {{ _stat_grid(m, ["Ar", "For", "Ref", "Will", "OA", "Init", "Mov"], "g7") }}
 </div>
 <div class="mc-sec">Attacks</div>
