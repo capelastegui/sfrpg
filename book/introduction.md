@@ -368,7 +368,7 @@ a level 30 character will have HP and damage values 8 times as high as those
 of a level 1 character. 
 </div>
 
-<div class="design" markdown>**Designer's Note** : The reason for different multipliers
+<div class="design" markdown>**Designer's Note**: The reason for different multipliers
 for damage dice and ability bonuses is the fact that damage dice for powers
 also increase with level. Damage dice for a Level 30 power are double those of
 a Level 1 power, so we need a damage dice multiplier of x4 at that level in
@@ -792,7 +792,7 @@ For Monsters, Secondary Defenses are determined by monster class. A table
  with the typical defense values for each class role is provided in the
  Monster Stats section of the Monsters chapter.
 
-<div class="tip" markdown>**Tip**:As a general guideline, each defense is targeted
+<div class="tip" markdown>**Tip**: As a general guideline, each defense is targeted
  by the following types of attacks:
 
 - Armor: Physical attacks, including most melee attacks, some ranged attacks,
