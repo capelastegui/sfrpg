@@ -25,6 +25,7 @@ Lore | Intelligence | History, Geography, Law
 ## Using a Skill
 
 Using a skill in the game takes the following steps:
+
 - During the game, the GM describes a challenge that the PCs need to overcome,
   or a PC states an action that they want to take.
 - The GM can decide that the problem is trivial for the PCs. In this case,
@@ -97,6 +98,7 @@ a check at that difficulty.
 The Morale Cost column shows the amount of Morale that is lost on a failed check.
 
 The Skill Difficulty levels are described as follows:
+
 - Easy - Anyone can do it, but an untrained character may sometimes fail
   this or require extra time or help
 - Medium - Non-trivial effort for untrained characters, trained characters
@@ -224,6 +226,7 @@ Skill Check (with Roleplaying Die) = Roleplaying Die Roll + Skill Bonus
 your group enjoys them, and ignore them otherwise. All skill checks involve describing the
 characters' actions to some degree, so in the end, it is up to the GM to decide when to allow
 this method. That said, we recommend the following guidelines:
+
 - Default to d20 rolls, and use roleplaying die rolls only at a players' request.
 - Roleplaying die rolls are best suited for social interactions, but can be used in other
   situations when the GM agrees that they make sense.
@@ -286,6 +289,7 @@ The following actions are available to PCs on Skill Encounters:
 
 There is also a special action that can only be used if all participating PCs
 agree:
+
 - Fail Forward
   - The Skill Challenge ends. Each participating PC spends 1 Stamina to have a
     Short Rest

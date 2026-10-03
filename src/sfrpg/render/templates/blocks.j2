@@ -8,7 +8,7 @@
 
 {%- macro power(p, class_name="", upgrades=True) -%}
 <div class="Power">
-<p><span class="{{ p.colour }} large"><strong>{{ p.name }}{% if class_name %} - {{ class_name }}{% endif %}{% if p.is_feature %} Feature{% endif %}{% if p.level %} {{ p.level }}{% endif %}</strong></span></p>
+<p class="Power-Title bar-{{ p.colour }}"><strong>{{ p.name }}{% if class_name %} - {{ class_name }}{% endif %}{% if p.is_feature %} Feature{% endif %}{% if p.level %} {{ p.level }}{% endif %}</strong></p>
 <p>{{ _join([p.type, (p.usage_limit ~ " " ~ p.usage_number) | trim, p.keywords and "<i>" ~ p.keywords ~ "</i>"]) }}</p>
 {%- set action = _join([
     p.action and "<b><i>" ~ p.action ~ "</i></b>",
@@ -114,7 +114,7 @@
 
 {%- macro item(i) -%}
 <div class="Power">
-<p><span class="{{ i.colour }} large"><strong>{{ i.name }}</strong></span><br><span class="{{ i.colour }}"><strong>{{ i.rarity }} {{ i.type }} - {{ [i.level_h, i.level_p, i.level_e] | join("/") }}</strong></span></p>
+<p class="Power-Title bar-{{ i.colour }}"><strong>{{ i.name }}</strong><br>{{ i.rarity }} {{ i.type }} - {{ [i.level_h, i.level_p, i.level_e] | join("/") }}</p>
 {% for prop in i.properties %}<p>{{ prop | nl2br | item_labels }}</p>
 {% endfor -%}
 </div>

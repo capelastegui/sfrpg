@@ -3,6 +3,13 @@ body {
   font-size: 14px;
   }
 
+/* Header bar colour (mkdocs.yml sets `primary: custom`) */
+:root {
+  --md-primary-fg-color: #133d5d;
+  --md-primary-fg-color--light: #2b5a80;
+  --md-primary-fg-color--dark: #0b2a42;
+}
+
 .newPage {
 /*page-break-before: always;*/
 }
@@ -51,25 +58,46 @@ body {
 }
 /* Table formats*/
 
-table {
-  font-size: 11px;  
-  font-family: Verdana;  
-  padding-top: 0px;  
-  padding-right: 0px;  
-  padding-bottom: 0px;  
-  padding-left: 0px;  
-  color: #663300;  
-  background-color: #ffcc99;
+/* Each rule is repeated with a .md-typeset prefix so it also beats Material's
+   own table styles on the website; standalone pages and the PDF have no Material. */
+table:not(.monster),
+.md-typeset table:not(.monster) {
+  font-size: 11px;
+  font-family: Verdana;
+  color: #1d1a1a;
+  background-color: #f4f3ec;
   margin-bottom: 30px;
-  border-collapse: separate;
-  border-spacing: 2px;
-    page-break-inside: avoid;
-    -webkit-column-break-inside: avoid; 
-          page-break-inside: avoid; 
-               break-inside: avoid;
-  }
-  
-tr:nth-child(even) {background-color: #ffefbf;} 
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  break-inside: avoid;
+}
+
+table:not(.monster) th,
+.md-typeset table:not(.monster) th {
+  background-color: #133d5d;
+  color: #fff;
+  font-weight: bold;
+  text-align: left !important;
+  padding: 3px 8px;
+  min-width: 0;
+}
+
+table:not(.monster) td,
+.md-typeset table:not(.monster) td {
+  border: none;
+  padding: 2px 8px;
+}
+
+table:not(.monster) tbody tr:nth-child(odd),
+.md-typeset table:not(.monster) tbody tr:nth-child(odd) {background-color: #d2d0ba;}
+table:not(.monster) tbody tr:nth-child(even),
+.md-typeset table:not(.monster) tbody tr:nth-child(even) {background-color: #f4f3ec;}
+
+/* Key/value tables without a header row: bold keys */
+.Class-table td:first-child {font-weight: bold;}
 
 .wide , .Feat-table table, .Power-table {width: 20cm;}
 
@@ -121,11 +149,29 @@ tr:nth-child(even) {background-color: #ffefbf;}
 
 }
   
-.Power  p {
-  /* Using !important because of conflicts with gitbook css */
-  margin-top: 0px !important;
-  margin-bottom: 3px !important;
+/* Rows alternate light tone / white below a solid title bar */
+.Power p {
+  /* !important: Material sets paragraph margins with higher specificity */
+  margin: 0 !important;
+  padding: 2px 5px;
 }
+
+.Power p:nth-child(even) {background-color: #ecece4;}
+
+.Power-Title {
+  color: #fff;
+  padding: 3px 5px !important;
+}
+
+.Power-Title strong {font-size: 14px;}
+
+/* Title bar colour: usage for powers, rarity for magic items */
+.bar-green {background-color: #3d6b2f;}
+.bar-red {background-color: #951233;}
+.bar-gray {background-color: #4d4d4e;}
+.bar-black {background-color: #4d4d4e;}
+.bar-darkgray {background-color: #3d6b2f;}
+.bar-gold {background-color: #a8780b;}
 
 .Power-Upgrade {  
   font-style: italic;  
@@ -166,29 +212,41 @@ div.monsterList {
 }
 
 table.monster, table.monster td, table.monster th {
-  border: 1px solid black !important;
+  border: none !important;
   border-collapse: collapse;
-  border-color: #003300;
   text-align: center;
-  background-color: #dbffdb;
+  background-color: #e6e6d6;
   font-family: Verdana;
   font-size: 9px;
-  color: Black;
+  color: #1d1a1a;
   margin-bottom: 0px !important;
   margin-top: 0px !important;
 }
 
 table.monster td.title {
   font-weight: bold;
-  background-color: #003300;
+  background-color: #4d5b2d;
   color: white;
+}
 
+/* Section titles ("Race Power", "Class Trait"), not monster names */
+table.monster td.title:not(.large) {
+  font-variant: small-caps;
+  font-size: 10px;
+  white-space: nowrap;
 }
 
 table.monster td.subtitle {
-  background-color: #73c173;
+  background-color: #70794c;
+  color: white;
   font-weight: bold;
-height: 12px;
+  height: 12px;
+}
+
+/* The big level number sits on the body colour */
+table.monster td.subtitle.huge {
+  background-color: #e6e6d6;
+  color: #4d5b2d;
 }
 
 
