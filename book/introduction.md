@@ -454,9 +454,9 @@ Any legacy rules that grant resistance or vulnerability to Force, Thunder or Aci
 
 - Poison - R: Construct, Undead, Dwarf; V: Fey, Plant, Swarm
 - Radiant - R: Aberrant, Celestial, Blind; V:Undead, Shadow
-- Psychic - R: Construct, Plant, Eladrin; V: Aberrant
+- Psychic - R: Construct, Plant, High Elf; V: Aberrant
 - Shadow - R: Shadow; V: Celestial
-- Fire - R: Fire, Devil, Tiefling; V: Plant, Cold
+- Fire - R: Fire, Devil, Devilfolk; V: Plant, Cold
 - Cold - R: Cold, V: Fire, Ooze
 - Lightning - R: Earth, V: Construct
 </div>
