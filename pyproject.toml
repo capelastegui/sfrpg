@@ -3,7 +3,8 @@ name = "sfrpg"
 version = "0.2.0"
 description = "Source data and build tooling for the Square Fireballs RPG rulebook"
 authors = [{ name = "Pedro Capelastegui" }]
-license = "CC-BY-NC-4.0"
+license = "MIT"
+license-files = ["LICENSE"]
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [

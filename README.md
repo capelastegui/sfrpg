@@ -63,4 +63,7 @@ Until 2023 the book was built with R and bookdown. That version is preserved und
 
 ## License
 
-[CC BY-NC 4.0](LICENSE.md)
+- **Book, game data and images** (`book/`, `data/`, `examples/`): [CC BY-NC-SA 4.0](LICENSE-CONTENT.txt). You may share and adapt them for non-commercial purposes, with credit, under the same licence.
+- **Code** (`src/`, `tests/`, `.github/`): [MIT](LICENSE).
+
+Square Fireballs is an independent, non-commercial fan project. It is not affiliated with, endorsed or sponsored by any publisher of the games that inspired it.

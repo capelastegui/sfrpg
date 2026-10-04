@@ -28,7 +28,7 @@ The book refers to the original game only as "legacy rules/sourcebooks". Keep it
 
 ## Licensing
 
-Code (`src/`, `tests/`, `.github/`) is MIT (`LICENSE`); content (`book/`, `data/`, `examples/`, images) is CC BY-NC-SA 4.0 (`LICENSE-CONTENT.md`). Don't add third-party content whose licence isn't compatible with that.
+Code (`src/`, `tests/`, `.github/`) is MIT (`LICENSE`); content (`book/`, `data/`, `examples/`, images) is CC BY-NC-SA 4.0 (`LICENSE-CONTENT.txt`). Don't add third-party content whose licence isn't compatible with that.
 
 ## Git
 
