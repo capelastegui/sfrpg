@@ -175,6 +175,7 @@ wld_tac,wld_ut_incomn
 wld_tac,wld_ut_frgtit
 wld_ins,wld_fe_heal
 wld_ins,wld_aw_inscrd
+wld_ins,wld_aw_insrec
 wld_ins,wld_aw_bdycvr
 wld_ins,wld_en_kngcst
 wlk_shadow,wlk_aw_vlodrk
@@ -226,7 +227,7 @@ ori_halfl,ori_hlf_dodge
 ori_dragf,ori_drf_breth
 ori_devlf,ori_dvl_fshld
 ori_gnome,ori_gnm_trk
-ori_goblin,ori_gob_sld
+ori_gobln,ori_gob_sld
 ori_minot,ori_min_red
 ori_gliat,ori_gol_res
 ori_kbold,ori_kbl_shf

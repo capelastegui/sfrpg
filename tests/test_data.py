@@ -7,21 +7,15 @@ from sfrpg.data import repository as repo
 # silently dropped these). Fixing one means removing it from this list; a new
 # problem makes the test fail.
 KNOWN_ISSUES = {
-    "feature_map.csv: unknown feature 'ori_dwarf_gut' (ori_dwarf)",
-    "feature_map.csv: unknown feature 'ori_gnm_cau' (ori_gnome)",
-    "feature_map.csv: unknown feature 'ori_gnm_trk' (ori_gnome)",
-    "feature_map.csv: unknown feature 'ori_gnome_abs' (ori_gnome)",
-    "feature_map.csv: unknown feature 'ori_gnome_ing' (ori_gnome)",
-    "feature_map.csv: unknown feature 'ori_gob_pll' (ori_gobln)",
-    "feature_map.csv: unknown feature 'rog_scon_eva' (rog_scoun)",
-    "feature_map.csv: unknown feature 'univ' (univ)",
-    "feature_map.csv: unknown feature 'wlk_train' (wlk_shadow)",
-    "features.csv: duplicate feature_id 'ori_dwarf_res'",
-    "power_map.csv: unknown build_id 'ori_goblin'",
-    "power_map.csv: unknown power 'bar_fe_ragstk' (bar_rager)",
-    "power_map.csv: unknown power 'wld_aw_bdycvr' (wld_ins)",
-    "powers.csv: duplicate power_id 'ori_dvl_fshld'",
-    "powers.csv: duplicate power_id 'wld_aw_inscrd'",
+    # Waiting on the author: references to content that was never written.
+    # Each needs the missing entry written, or the reference dropped.
+    "feature_map.csv: unknown feature 'ori_gnome_abs' (ori_gnome)",  # Gnome feature
+    "feature_map.csv: unknown feature 'ori_gnome_ing' (ori_gnome)",  # Gnome feature
+    "feature_map.csv: unknown feature 'rog_scon_eva' (rog_scoun)",  # Scoundrel Evasion?
+    "feature_map.csv: unknown feature 'univ' (univ)",  # likely a placeholder
+    "feature_map.csv: unknown feature 'wlk_train' (wlk_shadow)",  # Warlock skill training
+    "power_map.csv: unknown power 'bar_fe_ragstk' (bar_rager)",  # Rage Strike feature power
+    "power_map.csv: unknown power 'wld_aw_bdycvr' (wld_ins)",  # Warlord Inspiring at-will
 }
 
 

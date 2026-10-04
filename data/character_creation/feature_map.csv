@@ -149,10 +149,10 @@ ori_dragf,ori_dragf_brh
 ori_devlf,ori_dvl_bldbd
 ori_devlf,ori_dvl_resis
 ori_devlf,ori_dvl_fshld
-ori_gnome,ori_gnm_cau
-ori_gnome,ori_gnm_trk
+ori_gnome,ori_gnome_cau
+ori_gnome,ori_gnome_trk
 ori_gobln,ori_gob_mob
-ori_gobln,ori_gob_pll
+ori_gobln,ori_gob_sld
 ori_minot,ori_min_chr
 ori_minot,ori_min_red
 ori_gliat,ori_gol_big
