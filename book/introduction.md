@@ -319,7 +319,7 @@ Level  | Ability Multiplier
 29	| x8
 </div>
 
-**Note - Fraction Bonus ** : On some levels, the Dice Multiplier should have
+**Note - Fraction Bonus**: On some levels, the Dice Multiplier should have
 fractional values (e.g. x1.5 at Level 6) in order to reach the expected values.
 Since we don't want players making excessively complex operations in the middle
 of the game, we instead add a fixed value that approximates the required number.
