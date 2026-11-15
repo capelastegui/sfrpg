@@ -19,7 +19,9 @@ from .data import repository as repo
 from .render.env import TEMPLATE_DIR, blocks, env
 
 ROOT = BOOK_DIR.parent
-MD_EXTENSIONS = ["attr_list", "md_in_html", "tables", "admonition", "toc"]
+MD_EXTENSIONS = [
+    "attr_list", "md_in_html", "tables", "admonition", "pymdownx.superfences", "toc"
+]
 
 
 def _css() -> str:

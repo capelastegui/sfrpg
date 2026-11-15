@@ -36,15 +36,16 @@ The basic steps for creating a character are:
 1. Power selection
 1. (Levelling)
 
-<div class="tip" markdown>**Tip**: Although beginning players are encouraged to follow
- the character creation steps in order as listed above, it is quite possible to
- go back and forth between steps, as each decision provides new inspiration and
- ideas to improve on previous choices. Furthermore, since the number of
- available options may get overwhelming for inexperienced (and not so
- inexperienced) players, we provide pre-built sample characters that can be
- played as-is, or used as basic templates to be customized to taste. These
- sample characters, along with suggested level-up options up to level 30, can
- be found in the Classes chapter.</div>
+!!! tip "Tip"
+    Although beginning players are encouraged to follow
+    the character creation steps in order as listed above, it is quite possible to
+    go back and forth between steps, as each decision provides new inspiration and
+    ideas to improve on previous choices. Furthermore, since the number of
+    available options may get overwhelming for inexperienced (and not so
+    inexperienced) players, we provide pre-built sample characters that can be
+    played as-is, or used as basic templates to be customized to taste. These
+    sample characters, along with suggested level-up options up to level 30, can
+    be found in the Classes chapter.
 
 ## Character concept and story
 
@@ -87,15 +88,17 @@ Assign the following scores:
 - +3 to Secondary Ability
 - +0 to to other Abilities
 
-<div class="compatibility" markdown>**Compatibility Note**: Under legacy rules, 
- PCs used to get Ability increases from their Origin (then called Race), 
- as well as from levelling up. This is no longer the case, but see the
- Ability Skill Bonus section below.</div>
+!!! compatibility "Compatibility Note"
+    Under legacy rules,
+    PCs used to get Ability increases from their Origin (then called Race),
+    as well as from levelling up. This is no longer the case, but see the
+    Ability Skill Bonus section below.
 
-<div class="compatibility" markdown>**Compatibility Note**: The only remaining way to 
- increase Ability Scores is through Epic Destinies. However, whenever
- an Epic Destiny from a legacy rulebook provides a bonus to an Ability score,
- that bonus is halved (typically from +2 to +1).</div>
+!!! compatibility "Compatibility Note"
+    The only remaining way to
+    increase Ability Scores is through Epic Destinies. However, whenever
+    an Epic Destiny from a legacy rulebook provides a bonus to an Ability score,
+    that bonus is halved (typically from +2 to +1).
 
 ### Wide Ability Array (Advanced rule)
 
@@ -112,10 +115,11 @@ The set of Ability scores described above is known as the
 - +3 to Secondary Ability
 - +0 to to other Abilities
 
-<div class="tip" markdown>**Tip**: We recommend new players to ignore the 
- **Wide Ability Array**. Even experienced players should stay away from this
- most of the time - it's just offered as a patch from some old classes that
- would otherwise be very difficult to play. </div>
+!!! tip "Tip"
+    We recommend new players to ignore the
+    **Wide Ability Array**. Even experienced players should stay away from this
+    most of the time - it's just offered as a patch from some old classes that
+    would otherwise be very difficult to play.
 
 ### Tertiary Ability and Weak Ability (Optional)
 
@@ -132,13 +136,13 @@ Assign the following scores:
 - +1 to Tertiary Ability
 - -1 to Weak Ability
 
-<div class="tip" markdown>**Tip**: Having a Tertiary and Weak abilities very slightly
- increases a PC's effectiveness, but it's not really a required step in 
- character generation. New players are encouraged to skip this step until they 
- have a good grasp of the rules of the game and the impact of changing these 
- ability scores. We recommend GMs to allow selection of Tertiary and Weak
- abilities at a later point in the game, such as after reaching Level 2.
-</div>
+!!! tip "Tip"
+    Having a Tertiary and Weak abilities very slightly
+    increases a PC's effectiveness, but it's not really a required step in
+    character generation. New players are encouraged to skip this step until they
+    have a good grasp of the rules of the game and the impact of changing these
+    ability scores. We recommend GMs to allow selection of Tertiary and Weak
+    abilities at a later point in the game, such as after reaching Level 2.
 
 ## Skill Bonuses  
 
@@ -216,32 +220,29 @@ Players are restricted in the abilities they can choose to increase their
  the Origin Ability Modifier, are not counted towards the Score Limit.
 
  
-<div class="tip" markdown>
- Example - Ability Skill Bonus for a Level 1 PC.
- Gimli is a Level 1 Dwarf Warrior with +4 Str, +3 Con, and +0 to other 
- abilities. Origin Ability Modifiers for a Dwarf are +1 Con, +1 Wis. This
- character will have the following Ability Skill Bonuses:
- 
- - Str: +4 (Ability)
- - Con: +3 (Ability) +1 (Origin) ; Total: +4
- - Dex: +0 (Ability)
- - Wis: +0 (Ability) +1 (Origin) ; Total: +1 
- - Int: +0 (Ability) 
- - Cha: +0 (Ability)
-</div>
+!!! tip "Example - Ability Skill Bonus for a Level 1 PC"
+    Gimli is a Level 1 Dwarf Warrior with +4 Str, +3 Con, and +0 to other
+    abilities. Origin Ability Modifiers for a Dwarf are +1 Con, +1 Wis. This
+    character will have the following Ability Skill Bonuses:
 
-<div class="tip" markdown>Example - Ability Skill Points.
- The character from the previous example levels up. When he reaches level 4, he
- can gain an Ability Skill Point on any ability other than Str and Con. 
- He chooses to add a point to Wis. Ability Skill Bonus for Wis at Level 4:
- 
- - Wis: +0 (Ability) +1 (Origin) +1 (Points); Total: +2 
- 
- At level 8, he can add an Ability Skill point on any ability other than Str.
- He chooses Con this time.  Ability Skill Bonus for Con at Level 8:
- 
- - Con: +3 (Ability) +1 (Origin) +1 (Points); Total: +5 
- </div>
+    - Str: +4 (Ability)
+    - Con: +3 (Ability) +1 (Origin) ; Total: +4
+    - Dex: +0 (Ability)
+    - Wis: +0 (Ability) +1 (Origin) ; Total: +1
+    - Int: +0 (Ability)
+    - Cha: +0 (Ability)
+
+!!! tip "Example - Ability Skill Points"
+    The character from the previous example levels up. When he reaches level 4, he
+    can gain an Ability Skill Point on any ability other than Str and Con.
+    He chooses to add a point to Wis. Ability Skill Bonus for Wis at Level 4:
+
+    - Wis: +0 (Ability) +1 (Origin) +1 (Points); Total: +2
+
+    At level 8, he can add an Ability Skill point on any ability other than Str.
+    He chooses Con this time.  Ability Skill Bonus for Con at Level 8:
+
+    - Con: +3 (Ability) +1 (Origin) +1 (Points); Total: +5
 
 ### Choosing Skill Training
 
@@ -257,27 +258,30 @@ In order to select a Player Character's Skills, the player should look look at
  number of Trained Skills allowed by the character's class, and selects that
  many Trained Skills. 
 
-<div class="compatibility" markdown>**Compatibility Note**: The Racial Skill rule
- replaces racial Skill bonuses from legacy rulebooks. When a Origin provides
- a numeric bonus to one or more Skills, consider instead that these Skills
- are Racial Skills. Any other Skill-related benefit, such as gaining Training
- with a specific Skill, remains unchanged. </div>
+!!! compatibility "Compatibility Note"
+    The Racial Skill rule
+    replaces racial Skill bonuses from legacy rulebooks. When a Origin provides
+    a numeric bonus to one or more Skills, consider instead that these Skills
+    are Racial Skills. Any other Skill-related benefit, such as gaining Training
+    with a specific Skill, remains unchanged.
 
 Some Origins and Classes provide automatic training with predetermined Skills.
  In that case, the character first gains training with these skills, and then
  the player selects Trained Skills as usual.
 
-<div class="tip" markdown>**Tip**: When selecting Trained Skills, it is usually a
- good idea to prioritize Skills that match the character's Primary or Secondary
- Abilities. If you end up with training in two or more Skills associated with
- your Tertiary or Weak Abilities, consider taking Unnatural Ability as an Adventure
- Feat when you level up, in order to compensate for the lower Ability scores in
- these Skills.</div>
+!!! tip "Tip"
+    When selecting Trained Skills, it is usually a
+    good idea to prioritize Skills that match the character's Primary or Secondary
+    Abilities. If you end up with training in two or more Skills associated with
+    your Tertiary or Weak Abilities, consider taking Unnatural Ability as an Adventure
+    Feat when you level up, in order to compensate for the lower Ability scores in
+    these Skills.
 
-<div class="tip" markdown>**Tip**: As your character levels up, you can expand your
- Trained Skill selection by taking Skill Training as an Adventure Feat.
- Alternatively, you can specialize on your best Skills by taking Skill Focus
- as an Adventure Feat.</div>
+!!! tip "Tip"
+    As your character levels up, you can expand your
+    Trained Skill selection by taking Skill Training as an Adventure Feat.
+    Alternatively, you can specialize on your best Skills by taking Skill Focus
+    as an Adventure Feat.
 
 ### Apply Armor Penalty to Skill
 
@@ -312,20 +316,21 @@ In addition, starting characters get mundane equipment that has no impact on
  cost is needed, we recommend the Game Master to assume that a character is
  carrying it, provided that the player can come up with a convincing explanation.
 
-<div class="design" markdown>**Designer Note**: Some games aim to provide a detailed
- simulation of economy in a fantasy world. This is not such a game. We believe
- that keeping track of the specific contents of a player's backpack or the
- balance of each economic transaction are not critical to the game experience.
- Instead, we recommend players and Game Masters to keep inventories vague and
- flexible, outside of player rewards like Magic Items, or items of special
- importance to the game plot.
+!!! design "Designer's Note"
+    Some games aim to provide a detailed
+     simulation of economy in a fantasy world. This is not such a game. We believe
+     that keeping track of the specific contents of a player's backpack or the
+     balance of each economic transaction are not critical to the game experience.
+     Instead, we recommend players and Game Masters to keep inventories vague and
+     flexible, outside of player rewards like Magic Items, or items of special
+     importance to the game plot.
 
-That said, if you favor more detailed rules for economy, there are tables
- with recommended item costs and weights from other game systems, such as
- D20SRD  (http://www.d20srd.org/indexes/equipment.htm ) and 13AGESRD 
- (http://www.13thagesrd.com/equipment ), which are freely available online.
- You can use these tables as a reference for setting item prices in your
- campaign.</div>
+    That said, if you favor more detailed rules for economy, there are tables
+     with recommended item costs and weights from other game systems, such as
+     D20SRD  (http://www.d20srd.org/indexes/equipment.htm ) and 13AGESRD
+     (http://www.13thagesrd.com/equipment ), which are freely available online.
+     You can use these tables as a reference for setting item prices in your
+     campaign.
 
 In the rest of this section, we list the weapons, armor and implement available
  in the game, along with a description of their rules.
@@ -351,11 +356,12 @@ A character's class determines which weapons the character is trained to use.
  one hand to wield, or a Heavy Improvised Weapon if it requires two hands.
  Improvised weapons can be used without training.
 
-<div class="compatibility" markdown>**Compatibility Note**: In legacy rulebooks, weapon
- training is referred to as weapon proficiency, and weapons can have a
- Proficiency Bonus to hit, if the character is trained with them. This
- Proficiency Bonus no longer exists, and any mentions to it should be
- ignored. </div>
+!!! compatibility "Compatibility Note"
+    In legacy rulebooks, weapon
+    training is referred to as weapon proficiency, and weapons can have a
+    Proficiency Bonus to hit, if the character is trained with them. This
+    Proficiency Bonus no longer exists, and any mentions to it should be
+    ignored.
 
 #### Weapon Families
 
@@ -379,13 +385,14 @@ The following weapon families are supported in the game:
 - **Staff**: Melee weapon consisting of a long wooden shaft.
 - **Unarmed**: A character's own body used as a melee weapon.
 
-<div class="tip" markdown>**Tip**: Weapon Family is of special relevance in relation to
- the Weapon Focus category of Feats, as these Feats often give bonuses when
- wielding any weapon of a specific family. Advanced players are encouraged to
- study the different Feat bonuses when considering their weapon of choice. For
- beginning players, we suggest instead to choose based on aesthetic preferences
- - you can always use the Retraining rule to rethink your choice at a later
- point.</div>
+!!! tip "Tip"
+    Weapon Family is of special relevance in relation to
+    the Weapon Focus category of Feats, as these Feats often give bonuses when
+    wielding any weapon of a specific family. Advanced players are encouraged to
+    study the different Feat bonuses when considering their weapon of choice. For
+    beginning players, we suggest instead to choose based on aesthetic preferences
+    - you can always use the Retraining rule to rethink your choice at a later
+    point.
 
 #### Weapon Keywords
 
@@ -421,9 +428,10 @@ The following weapon keywords are supported in the game:
   per weapon damage die at level 16.
 - **Very Unwieldy**: Attacks made with this weapon gain a -2 penalty to hit.
 
-<div class="compatibility" markdown>**Compatibility Note** In legacy rulebooks, Throw
- weapons can be classified as Heavy Thrown or Light Thrown. Treat any mention
- to either of these as referring to Throw weapons instead.</div>
+!!! compatibility "Compatibility Note"
+    In legacy rulebooks, Throw
+    weapons can be classified as Heavy Thrown or Light Thrown. Treat any mention
+    to either of these as referring to Throw weapons instead.
 
 #### Weapon Hands
 
@@ -446,14 +454,15 @@ The hand requirements to use a weapon are as follows:
  Damage Multiplier). When they do, that weapon counts as Two-Handed for the
  purpose of powers or abilities that care about weapon types.
 
-<div class="tip" markdown>**Tip**: It is usually better to use two-handed weapons, or
- One-handed weapons with a free hand or a Light Shield, if you want your
- character to focus on the offense, and a one-handed weapon with a Heavy
- Shield if you prefer focusing on defense. Wielding a weapon in each hand
- offers you extra flexibility, but otherwise it does not grant additional
- attacks or any other inherent benefits, so it is usually not a good idea,
- unless you have class Powers or Features that require dual wielding or
- otherwise reward you for it.</div>
+!!! tip "Tip"
+    It is usually better to use two-handed weapons, or
+    One-handed weapons with a free hand or a Light Shield, if you want your
+    character to focus on the offense, and a one-handed weapon with a Heavy
+    Shield if you prefer focusing on defense. Wielding a weapon in each hand
+    offers you extra flexibility, but otherwise it does not grant additional
+    attacks or any other inherent benefits, so it is usually not a good idea,
+    unless you have class Powers or Features that require dual wielding or
+    otherwise reward you for it.
 
 #### Weapon Tables
 
@@ -480,31 +489,31 @@ The tables below provide stats for all weapons in the game, classified by the
 Some character classes use unique weapons not available to other classes. In
  these cases, stats for these weapons should be provided within the class rules.
 
-<div class="compatibility" markdown>**Compatibility Note**: Some weapon types from legacy
- rulebooks are no longer supported. As a general rule, we recommend treating
- any such weapon as a currently supported weapon of the same Family, Training,
- Type, and Hand requirements, if available. Some cases of particular interest
- are:
- 
-Two previously existing weapon families, Picks and Maces, 
- have been discontinued. We recommend replacing Picks with Axes of similar
- properties, and replacing Maces with Hammers of similar properties. 
+!!! compatibility "Compatibility Note"
+    Some weapon types from legacy
+     rulebooks are no longer supported. As a general rule, we recommend treating
+     any such weapon as a currently supported weapon of the same Family, Training,
+     Type, and Hand requirements, if available. Some cases of particular interest
+     are:
 
-Some weapons used to have the same name as their weapon family. To remove
- this ambiguity, they have been renamed:
+    Two previously existing weapon families, Picks and Maces,
+     have been discontinued. We recommend replacing Picks with Axes of similar
+     properties, and replacing Maces with Hammers of similar properties.
 
-- **Spear** is now Halfspear
-- **Crossbow** is now Light Crossbow
-- **Flail** is now Light Flail
+    Some weapons used to have the same name as their weapon family. To remove
+     this ambiguity, they have been renamed:
 
-Some character classes from legacy sourcebooks have bonuses associated with
- obsoleted weapon types. We recommend the following replacements for these
- weapons:
+    - **Spear** is now Halfspear
+    - **Crossbow** is now Light Crossbow
+    - **Flail** is now Light Flail
 
-- **Sickle**: replace with Dagger
-- **Scimitar**: replace with Short Sword
-- **Club**: replace with Mace
-</div>
+    Some character classes from legacy sourcebooks have bonuses associated with
+     obsoleted weapon types. We recommend the following replacements for these
+     weapons:
+
+    - **Sickle**: replace with Dagger
+    - **Scimitar**: replace with Short Sword
+    - **Club**: replace with Mace
 
 ### Armor
 
@@ -531,15 +540,17 @@ Each character can wear one suit of Light Armor or Heavy Armor. In addition,
  This penalty reduces the range of Ranged and Area powers, and is applied before
   doubling the range for Long Range attacks.
 
- <div class="tip" markdown>**Example**: A character wearing a Chainmail (Range Penalty -2)
-  that makes a Ranged attack with a base range of 5 will have the normal range
-   reduced to 3, and the Long Range will be double the normal range, for a total
-   of 6. That same character making an Area attack with a base range of 10 would have
-    the range for that attack reduced to 8.</div>
+!!! tip "Example"
+    A character wearing a Chainmail (Range Penalty -2)
+    that makes a Ranged attack with a base range of 5 will have the normal range
+     reduced to 3, and the Long Range will be double the normal range, for a total
+     of 6. That same character making an Area attack with a base range of 10 would have
+      the range for that attack reduced to 8.
 
-<div class="tip" markdown>**Tip**: Characters focused on Ranged and Area attacks should
- consider carefully whether the added protection of Heavy Armor is worth taking
- the Range Penalty</div>
+!!! tip "Tip"
+    Characters focused on Ranged and Area attacks should
+    consider carefully whether the added protection of Heavy Armor is worth taking
+    the Range Penalty
 
 A character's class determines which armors the character is trained to use.
  A character using an armor without training does not benefit from any of the
@@ -565,14 +576,14 @@ Arm= 10 + Armor bonus + Shield bonus + Class Light Armor bonus
 Note that these are the most common types of Arm bonus, but other bonuses
  granted by specific Class Features, Feats, or Powers can still apply.
 
-<div class="compatibility" markdown>**Compatibility Note**: Unlike other defenses, a
- character's Abilities provide no bonus to that character's Arm. In legacy
- rulebooks this was not the case, and it was common to have character classes
- whose Class Features allowed using an Ability as a bonus to Arm while wearing
- Light Armor. Ignore these bonuses, and any other mention of an Ability bonus
- to Arm. Fixed bonuses to Arm that do not depend on a character's Abilities still
- apply as normal.
- </div>
+!!! compatibility "Compatibility Note"
+    Unlike other defenses, a
+    character's Abilities provide no bonus to that character's Arm. In legacy
+    rulebooks this was not the case, and it was common to have character classes
+    whose Class Features allowed using an Ability as a bonus to Arm while wearing
+    Light Armor. Ignore these bonuses, and any other mention of an Ability bonus
+    to Arm. Fixed bonuses to Arm that do not depend on a character's Abilities still
+    apply as normal.
 
 #### Armor Types
 
@@ -757,70 +768,73 @@ Each Combat Feat slot can be used to gain a Feat with a level equal or lower to 
  Combat Feats and Adventure Feats are not interchangeable: a Combat Feat Slot cannot be used to
  gain Adventure Feats, nor can an Adventure Feat slot be used to gain Combat Feats.
 
-<div class="tip" markdown>**Tip**: Although the power level of Feats tends to grow with
- their level, the differences are sometimes very small. Often, a lower level
- Feat will be just as effective for a given character as the higher level
- alternatives, if not the best option altogether.</div>
+!!! tip "Tip"
+    Although the power level of Feats tends to grow with
+    their level, the differences are sometimes very small. Often, a lower level
+    Feat will be just as effective for a given character as the higher level
+    alternatives, if not the best option altogether.
 
-<div class="tip" markdown>**Tip**: At some levels, a Feat Slot can only be filled with
- lower level Feats.</div>
+!!! tip "Tip"
+    At some levels, a Feat Slot can only be filled with
+    lower level Feats.
 
-<div class="tip" markdown>**Tip**: If you are lost, or want to experiment, choosing
- legal Feats at random is still expected to yield competent (if unfocused)
- characters.</div>
+!!! tip "Tip"
+    If you are lost, or want to experiment, choosing
+    legal Feats at random is still expected to yield competent (if unfocused)
+    characters.
 
-<div class="compatibility" markdown>**Compatibility Note**: Feats from legacy rulebooks
- are considered obsolete and should not be used. This is not, strictly speaking,
- due to compatibility issues (since the Feats should mostly work under the
- current rules), but as a way to improve the game experience - see the
- Designer's Note below for a detailed explanation. That said, Game Masters who
- wish to incorporate legacy Feats into their campaigns can do so with minimal
- translation effort, as long as they are aware that they risk breaking design
- assumptions about combat length and difficulty, and class balance.
- </div>
+!!! compatibility "Compatibility Note"
+    Feats from legacy rulebooks
+    are considered obsolete and should not be used. This is not, strictly speaking,
+    due to compatibility issues (since the Feats should mostly work under the
+    current rules), but as a way to improve the game experience - see the
+    Designer's Note below for a detailed explanation. That said, Game Masters who
+    wish to incorporate legacy Feats into their campaigns can do so with minimal
+    translation effort, as long as they are aware that they risk breaking design
+    assumptions about combat length and difficulty, and class balance.
 
-<div class="design" markdown>**Designer Note**: Experienced players may find this
- Feat system too restrictive compared to those of previous games. However,
- these restrictions serve an important purpose. Here is the reasoning behind
- them:
+!!! design "Designer's Note"
+    Experienced players may find this
+     Feat system too restrictive compared to those of previous games. However,
+     these restrictions serve an important purpose. Here is the reasoning behind
+     them:
 
-- **Separation between combat options and adventuring options**: Allowing
-  characters to freely choose between combat and non-combat Feats results in
-  excessive performance variability, to the point that it's virtually
-  impossible to design high level content that will be moderately difficult
-  and enjoyable to both characters that are completely specialized on combat
-  and characters that only select non-combat Feats. Furthermore, it is usually
-  optimal to ignore either combat or non-combat options (depending on the
-  campaign), resulting in roughly half the Feats in the game seeing little
-  to no play. The split between Combat and Adventure Feats allows us to
-  get much more predictable character
-  outcomes, which make for a better high level game experience. This also
-  allows players to improve both their combat and non-combat capabilities
-  without feeling that they are hurting their character's potential.
-- **Feat categories**: It is a natural thing for players to experiment with
-  spending all of their customization resources in improving a single dimension
-  of their character, such as damage, or defenses, or even mobility. Again,
-  this leads to excessive variability between high level character builds
-  and, as a consequence, high variability in game difficulty, combat length,
-  and overall game experience. By classifying Feats into functional Categories,
-  and restricting players to one Feat per Category, we can, for example,
-  provide dozens of options to increase attack damage while ensuring that a
-  given character will only be able to have two or three of them at once.
-- **No support for previous Feats**: We wanted every Feat in the game to have
-  a purpose, and to be playable for a significant percentage of character
-  builds. However, legacy rulebooks had thousands of Feats with wildly
-  inconsistent quality and power level. We decided that starting from
-  scratch and having a compact set of Feats that could realistically be
-  tested and polished was the best option.
-- **No class/Origin requirements**: We wanted the total number of feats to
-  be manageable for players, but also to maintain backwards compatibility
-  with previous Origins and Classes. Since legacy rulebooks have dozens of
-  Origins and Classes, and including Feats for only a subset of them would
-  be considered unfair and introduce balance issues, we chose to remove
-  racial feats altogether and replace Class Feats with options based on
-  Class Role and Power Source, which fill a similar niche with much less effort
-  and complexity. That said, we might reconsider this for future supplements.
- </div>
+    - **Separation between combat options and adventuring options**: Allowing
+      characters to freely choose between combat and non-combat Feats results in
+      excessive performance variability, to the point that it's virtually
+      impossible to design high level content that will be moderately difficult
+      and enjoyable to both characters that are completely specialized on combat
+      and characters that only select non-combat Feats. Furthermore, it is usually
+      optimal to ignore either combat or non-combat options (depending on the
+      campaign), resulting in roughly half the Feats in the game seeing little
+      to no play. The split between Combat and Adventure Feats allows us to
+      get much more predictable character
+      outcomes, which make for a better high level game experience. This also
+      allows players to improve both their combat and non-combat capabilities
+      without feeling that they are hurting their character's potential.
+    - **Feat categories**: It is a natural thing for players to experiment with
+      spending all of their customization resources in improving a single dimension
+      of their character, such as damage, or defenses, or even mobility. Again,
+      this leads to excessive variability between high level character builds
+      and, as a consequence, high variability in game difficulty, combat length,
+      and overall game experience. By classifying Feats into functional Categories,
+      and restricting players to one Feat per Category, we can, for example,
+      provide dozens of options to increase attack damage while ensuring that a
+      given character will only be able to have two or three of them at once.
+    - **No support for previous Feats**: We wanted every Feat in the game to have
+      a purpose, and to be playable for a significant percentage of character
+      builds. However, legacy rulebooks had thousands of Feats with wildly
+      inconsistent quality and power level. We decided that starting from
+      scratch and having a compact set of Feats that could realistically be
+      tested and polished was the best option.
+    - **No class/Origin requirements**: We wanted the total number of feats to
+      be manageable for players, but also to maintain backwards compatibility
+      with previous Origins and Classes. Since legacy rulebooks have dozens of
+      Origins and Classes, and including Feats for only a subset of them would
+      be considered unfair and introduce balance issues, we chose to remove
+      racial feats altogether and replace Class Feats with options based on
+      Class Role and Power Source, which fill a similar niche with much less effort
+      and complexity. That said, we might reconsider this for future supplements.
 
 ## Power selection
 
@@ -828,9 +842,10 @@ The following table summarizes the acquisition of power slots per character leve
 
 {{ csv_table("progression_powers") }}
 
-<div class="compatibility" markdown>**Compatibility Note**: This is mostly the same progression used in legacy rules, except
-that utility power slots at levels 16, 26 used to be additional slots and are now upgrade slots. Characters have the
-option of taking feats (Paragon Utility, Epic Utility) to gain back these power slots.</div>
+!!! compatibility "Compatibility Note"
+    This is mostly the same progression used in legacy rules, except
+    that utility power slots at levels 16, 26 used to be additional slots and are now upgrade slots. Characters have the
+    option of taking feats (Paragon Utility, Epic Utility) to gain back these power slots.
 
 ## Stat generation
 ## Levelling 

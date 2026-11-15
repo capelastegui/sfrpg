@@ -37,18 +37,20 @@ Using a skill in the game takes the following steps:
 - A PC rolls a Skill Check. See the [Skill Checks] section below for details on
   how to resolve this, and how to manage successes and failures.
 
-<div class="tip" markdown>**Tip:** Even when a situation does not call for a skill check,
-you can still have fun with it. Players are encouraged to narrate and roleplay
-their PCs handling routine tasks, if they wish.</div>
+!!! tip "Tip"
+    Even when a situation does not call for a skill check,
+    you can still have fun with it. Players are encouraged to narrate and roleplay
+    their PCs handling routine tasks, if they wish.
 
-<div class="tip" markdown>**GM Tip:** GMs should be flexible and open to innovative ideas.
-The purpose of the Skill system is not to have players guess the GM's preferred
-solution to a given problem, but to generate interesting situations for the
-characters and provide some uncertainty and excitement about outcomes.
-GMs should encourage and reward players who come up with unexpected solutions,
-as long as they make sense. That said, if a player proposes something that
-clearly won't work, it is fine to raise the difficulty or tell them that they
-can't succeed this way.</div>
+!!! tip "GM Tip"
+    GMs should be flexible and open to innovative ideas.
+    The purpose of the Skill system is not to have players guess the GM's preferred
+    solution to a given problem, but to generate interesting situations for the
+    characters and provide some uncertainty and excitement about outcomes.
+    GMs should encourage and reward players who come up with unexpected solutions,
+    as long as they make sense. That said, if a player proposes something that
+    clearly won't work, it is fine to raise the difficulty or tell them that they
+    can't succeed this way.
 
 ## Skill Training
 
@@ -70,9 +72,10 @@ Some actions are only available to characters with an appropriate level of
 - Grandmaster. Very few mortals ever reach this level of proficiency. The
   feats that Grandmasters can achieve are the stuff of legends.
 
-<div class="tip" markdown>**Tip:** Typically, the Master category is only available for
-characters of Paragon Tier or higher, and the Grandmaster category for Epic
-Tier characters.</div>
+!!! tip "Tip"
+    Typically, the Master category is only available for
+    characters of Paragon Tier or higher, and the Grandmaster category for Epic
+    Tier characters.
 
 ## Skill Check Difficulty
 
@@ -109,9 +112,10 @@ The Skill Difficulty levels are described as follows:
 - Legendary - Something only the best in the world could do, on a good day.
 - Impossible - Normally considered out of reach for mortals.
 
-<div class="tip" markdown>**Tip:** Typically, Skill Difficulty
-goes up to Very Hard for Heroic Tier characters, up to Legendary for
-Paragon Tier characters, and up to Impossible for Epic Tier characters.</div>
+!!! tip "Tip"
+    Typically, Skill Difficulty
+    goes up to Very Hard for Heroic Tier characters, up to Legendary for
+    Paragon Tier characters, and up to Impossible for Epic Tier characters.
 
 ## Skill Checks
 
@@ -222,16 +226,18 @@ the target difficulty as usual:
 ```
 Skill Check (with Roleplaying Die) = Roleplaying Die Roll + Skill Bonus
 ```
-<div class="tip" markdown>**Tip:** Roleplaying Die Rolls are completely optional - use them if
-your group enjoys them, and ignore them otherwise. All skill checks involve describing the
-characters' actions to some degree, so in the end, it is up to the GM to decide when to allow
-this method. That said, we recommend the following guidelines:
 
-- Default to d20 rolls, and use roleplaying die rolls only at a players' request.
-- Roleplaying die rolls are best suited for social interactions, but can be used in other
-  situations when the GM agrees that they make sense.
-- If the GM perceives that a particular player makes excessive use of this system,
-  it is fine to limit its use per game session.</div>
+!!! tip "Tip"
+    Roleplaying Die Rolls are completely optional - use them if
+    your group enjoys them, and ignore them otherwise. All skill checks involve describing the
+    characters' actions to some degree, so in the end, it is up to the GM to decide when to allow
+    this method. That said, we recommend the following guidelines:
+
+    - Default to d20 rolls, and use roleplaying die rolls only at a players' request.
+    - Roleplaying die rolls are best suited for social interactions, but can be used in other
+      situations when the GM agrees that they make sense.
+    - If the GM perceives that a particular player makes excessive use of this system,
+      it is fine to limit its use per game session.
 
 ## Skill Actions
 
