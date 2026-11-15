@@ -178,30 +178,49 @@ table:not(.monster) tbody tr:nth-child(even),
   color:gray
 }
 
-/* Note boxes: tip (blue), compatibility (gold), design (red).
-   Tinted background, coloured stripe on the left, narrower than the text column. */
-.tip, .compatibility, .design {
+/* Note boxes: admonitions (!!! tip "Title") of type tip (blue), compatibility (gold)
+   and design (red). Tinted background, coloured stripe on the left, narrower than the
+   text column; the title is a bold line in the box colour, without an icon.
+   The .md-typeset selectors override Material's admonition style on the website; the
+   plain ones style the PDF and standalone pages, which don't load Material. */
+.admonition, .md-typeset .admonition {
   display: block;
   max-width: 36rem;
   margin: 1.2em 0;
   padding: .7em 1em;
+  font-size: inherit;
   border: none;
   border-left: 4px solid;
   border-radius: 0 4px 4px 0;
+  box-shadow: none;
 }
 
-.tip p, .compatibility p, .design p {margin: .4em 0;}
-.tip p:first-child, .compatibility p:first-child, .design p:first-child {margin-top: 0;}
-.tip p:last-child, .compatibility p:last-child, .design p:last-child {margin-bottom: 0;}
+.admonition > .admonition-title, .md-typeset .admonition > .admonition-title {
+  margin: 0 0 .3em;
+  padding: 0;
+  font-weight: 700;
+  color: inherit;
+  background: none;
+  border: none;
+}
+.md-typeset .admonition > .admonition-title::before {display: none;}
+
+.admonition p, .md-typeset .admonition p {margin: .4em 0;}
+.admonition > :first-child, .md-typeset .admonition > :first-child,
+.admonition-title + p, .md-typeset .admonition-title + p {margin-top: 0;}
+.admonition > :last-child, .md-typeset .admonition > :last-child {margin-bottom: 0;}
 
 /* Keep list bullets inside the box */
-.tip ul, .compatibility ul, .design ul,
-.tip ol, .compatibility ol, .design ol {margin-left: 0; padding-left: 1.4em;}
-.tip li, .compatibility li, .design li {margin-left: 0;}
+.admonition ul, .admonition ol,
+.md-typeset .admonition ul, .md-typeset .admonition ol {margin-left: 0; padding-left: 1.4em;}
+.admonition li, .md-typeset .admonition li {margin-left: 0;}
 
-.tip {color: #003366; background-color: #e3eaf3; border-left-color: #003366;}
-.compatibility {color: #6e5410; background-color: #f6efd9; border-left-color: #a8780b;}
-.design {color: #8b0000; background-color: #f8e5e5; border-left-color: #8b0000;}
+.admonition.tip, .md-typeset .admonition.tip
+  {color: #003366; background-color: #e3eaf3; border-left-color: #003366;}
+.admonition.compatibility, .md-typeset .admonition.compatibility
+  {color: #6e5410; background-color: #f6efd9; border-left-color: #a8780b;}
+.admonition.design, .md-typeset .admonition.design
+  {color: #8b0000; background-color: #f8e5e5; border-left-color: #8b0000;}
 
 /* Monster cards.
    Race and class cards share a fixed-height name band (.mc-head) and stats band

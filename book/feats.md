@@ -15,11 +15,14 @@ Note that Offense Focus is the largest feat Category in the game and, due to its
 - **Offense Focus (Weapon)**: Feats that boost weapon attacks.
 - **Offense Focus (Implement)**: Feats that boost implement attacks.
 
-<div class="tip" markdown>**Tip**: The Toughness feat (from the Category of the same name) is a good level 1 Feat for starting players who don't want to complicate themselves.</div>
+!!! tip "Tip"
+    The Toughness feat (from the Category of the same name) is a good level 1 Feat for starting players who don't want to complicate themselves.
 
-<div class="tip" markdown>**Tip**: Feats in the Toughness Category are generally better than Defense Focus feats at providing raw survivability. Feats in the Defense Focus Category are usually better at providing protection against melee attacks, or for characters that are interested in their secondary benefits. When in doubt, take both.</div>
+!!! tip "Tip"
+    Feats in the Toughness Category are generally better than Defense Focus feats at providing raw survivability. Feats in the Defense Focus Category are usually better at providing protection against melee attacks, or for characters that are interested in their secondary benefits. When in doubt, take both.
 
-<div class="tip" markdown>**Tip**: Offense Focus Feats are the one of the main reasons to choose one Weapon Family over another, or one type of Implement over another. The other reason is the player's aesthetic preference - some people just like axes a lot. Players who carefully study all options to choose the one that best suits their character build will probably gain a small edge in combat, but the Feats are designed to be close in power level, so choosing based on personal taste will be almost as effective.</div>
+!!! tip "Tip"
+    Offense Focus Feats are the one of the main reasons to choose one Weapon Family over another, or one type of Implement over another. The other reason is the player's aesthetic preference - some people just like axes a lot. Players who carefully study all options to choose the one that best suits their character build will probably gain a small edge in combat, but the Feats are designed to be close in power level, so choosing based on personal taste will be almost as effective.
 
 ### Toughness
 
@@ -62,15 +65,20 @@ With the GM's permission, players can choose level 1 feats that expand their wea
 - **Armor Training**: Feats that provide training with new types of armor.
 - **Weapon Training**: Feats that provide training with new types of weapons.
 
-<div class="tip" markdown>**Tip**: Armor Training is usually not as strong as Defense Focus, but they both stack, and you can take multiple Training feats.</div>
+!!! tip "Tip"
+    Armor Training is usually not as strong as Defense Focus, but they both stack, and you can take multiple Training feats.
 
-<div class="tip" markdown>**Tip**: For characters without training in martial weapons, Weapon Training is often superior to an Offense Focus feat.</div>
+!!! tip "Tip"
+    For characters without training in martial weapons, Weapon Training is often superior to an Offense Focus feat.
 
-<div class="tip" markdown>**Tip**: There is no Implement Training Feat. If you are really interested in using a different Implement, go Multiclass and take Multiclass Implement or, alternatively, convince your GM that you want it for story reasons and not to optimize your character.</div>
+!!! tip "Tip"
+    There is no Implement Training Feat. If you are really interested in using a different Implement, go Multiclass and take Multiclass Implement or, alternatively, convince your GM that you want it for story reasons and not to optimize your character.
 
-<div class="tip" markdown>**GM Tip**: If your player is really interested in getting training with a different Implement, allow them to have it for free if they provide a convincing argument. When in doubt, make it conditional on them taking an Offense Focus Feat that is not specific to that implement, such as Dual Focus.</div>
+!!! tip "GM Tip"
+    If your player is really interested in getting training with a different Implement, allow them to have it for free if they provide a convincing argument. When in doubt, make it conditional on them taking an Offense Focus Feat that is not specific to that implement, such as Dual Focus.
 
-<div class="design" markdown>**Designer Note**: GMs should feel free to leave these feats out of the game, particularly for beginning players. From a mechanical standpoint, the feats are redundant with Offense Focus and Defense Focus feats, and slightly imbalanced, as they are often clearly weaker or stronger than the alternatives. We have included them as optional categories because they are a cool tool to customize a character's look and feel, and for many game groups that will be worth the slight tradeoff in game balance.</div>
+!!! design "Designer's Note"
+    GMs should feel free to leave these feats out of the game, particularly for beginning players. From a mechanical standpoint, the feats are redundant with Offense Focus and Defense Focus feats, and slightly imbalanced, as they are often clearly weaker or stronger than the alternatives. We have included them as optional categories because they are a cool tool to customize a character's look and feel, and for many game groups that will be worth the slight tradeoff in game balance.
 
 ### Category - Armor Training
 

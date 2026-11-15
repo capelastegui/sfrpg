@@ -45,11 +45,13 @@ In this chapter we provide the rules for resolving a combat encounter.
 
 In Square Fireballs, a combat encounter represents a short, violent conflict between an adventuring party of Player Characters and a group of Monsters controlled by the Game Master. 
 
-<div class="tip" markdown>**Tip**: Note that we use **Monsters** as shorthand for "bad guys", and it is perfectly possible to have a Monster team composed of non-monstruous mundane characters like human bandits or wolves. Or they can also be, you know, many-eyed tentacled abominations.</div>
+!!! tip "Tip"
+    Note that we use **Monsters** as shorthand for "bad guys", and it is perfectly possible to have a Monster team composed of non-monstruous mundane characters like human bandits or wolves. Or they can also be, you know, many-eyed tentacled abominations.
 
 In combat, each character (whether a Player Character or a Monster) takes **turns** to carry out **actions** such as moving, attacking enemies, or healing or assisting allies. Some actions succeed automatically, whereas others require the character to make a successful die roll. For example, movement through normal terrain is resolved automatically, with the player stating the character's movement path and changing the character's position accordingly. On the other hand, attacking requires the character to roll against the enemy's defense to determine if the attack hits, and then rolling again to determine the damage dealt by the attack.
 
-<div class="tip" markdown>**Tip**: Generally, to make a die roll in the game a player rolls a 20-sided die (aka. d20), adds the appropriate bonus from their Character Sheet, plus any modifiers that apply, and tries to beat a target number, like a Check Difficulty or an enemy defense stat. Another common type of die roll is the damage roll, which is made after hitting with an attack. In a damage roll, the player rolls several dice of a type determined by the attack, adds a damage bonus and uses the total as the amount of inflicted damage.</div>
+!!! tip "Tip"
+    Generally, to make a die roll in the game a player rolls a 20-sided die (aka. d20), adds the appropriate bonus from their Character Sheet, plus any modifiers that apply, and tries to beat a target number, like a Check Difficulty or an enemy defense stat. Another common type of die roll is the damage roll, which is made after hitting with an attack. In a damage roll, the player rolls several dice of a type determined by the attack, adds a damage bonus and uses the total as the amount of inflicted damage.
 
 The goal of a combat encounter is incapacitate all enemy characters, typically by inflicting enough damage to reduce them below 0 Hit Points. A combat can also end when either the monsters or the Player Characters decide to flee.
 
@@ -188,7 +190,8 @@ At the start of combat, and before any character takes an action, all characters
 
 {{ powers("mnv_defns") }}
 
-<div class="tip" markdown>**Tip**: This rule is meant to compensate for the advantages of going first in combat. Characters that haven't acted yet will be much harder to hit. Remember, if your character is acting early in combat and you can find no favorable attacks, there is no shame in moving and using Total Defense yourself!</div>
+!!! tip "Tip"
+    This rule is meant to compensate for the advantages of going first in combat. Characters that haven't acted yet will be much harder to hit. Remember, if your character is acting early in combat and you can find no favorable attacks, there is no shame in moving and using Total Defense yourself!
 
 #### Ambushes
 
@@ -207,9 +210,11 @@ A character that is not surprised can warn Surprised allies with the Raise the A
 
 Use the rules in the [Skills] chapter to determine whether the PCs can successfully ambush their enemies... or are ambushed by them.
 
-<div class="tip" markdown>**Tip**: Characters carrying out an ambush have a significant advantage, but this is not quite the same as getting a free turn. Try to focus your fire on a few targets, and be aware that an enemy raising the alarm may ruin your plans.</div>
+!!! tip "Tip"
+    Characters carrying out an ambush have a significant advantage, but this is not quite the same as getting a free turn. Try to focus your fire on a few targets, and be aware that an enemy raising the alarm may ruin your plans.
 
-<div class="tip" markdown>**GM Tip**: Ambushes should be relatively rare. Unless the PCs are unusually stealthy, or the monsters are extraordinarily oblivious, assume that an ambush is a hard task that will fail most of the time.</div>
+!!! tip "GM Tip"
+    Ambushes should be relatively rare. Unless the PCs are unusually stealthy, or the monsters are extraordinarily oblivious, assume that an ambush is a hard task that will fail most of the time.
 
 ### Rolling Initiative
 
@@ -270,7 +275,8 @@ Resolving Interrupts:
 
 {{ powers("mnv_opatk") }}
 
-<div class="compatibility" markdown>Compatibility Note: Automatic actions were known as No Action in legacy rules.</div>
+!!! compatibility "Compatibility Note"
+    Automatic actions were known as No Action in legacy rules.
 
 Limits to actions:
 
@@ -284,13 +290,16 @@ Limits to actions:
   - Any number of non-attack Free Reactions per turn, but each power can only be used once per turn this way.
 - An Automatic action can always be taken, at any time, regardless of other action limits.
 
-<div class="compatibility" markdown>*Compatibility Note:* Legacy rules have granted actions as Free Actions. They are now Free Reactions.
+!!! compatibility "Compatibility Note"
+    Legacy rules have granted actions as Free Actions. They are now Free Reactions.
 
-Example: "an ally can make a basic attack as a Free Action" becomes "an ally can make a basic attack as a Free Reaction.</div>
+    Example: "an ally can make a basic attack as a Free Action" becomes "an ally can make a basic attack as a Free Reaction.
 
-<div class="tip" markdown> *Note:* Effects that prevent a character from taking Reactions also stop Free Reactions.</div>
+!!! tip "Note"
+    Effects that prevent a character from taking Reactions also stop Free Reactions.
 
-<div class="tip" markdown> *Note: *Unless otherwise stated, reactions cannot trigger further reactions. Notably, Taunted characters making Opportunity Attacks will not trigger Reactions from the taunting characters. </div>
+!!! tip "Note"
+    Unless otherwise stated, reactions cannot trigger further reactions. Notably, Taunted characters making Opportunity Attacks will not trigger Reactions from the taunting characters.
 
 ## Movement
 
@@ -359,37 +368,33 @@ Status | Downgrade | Effects
 | Shocked | No Effect | - Cannot Flank<br />- Cannot use Opportunity or Immediate Actions<br />
 | Slowed | No Effect | - For each square moved, must spend an additional square of movement
 | Stunned | Dazed | -Cannot attack  <br />-Cannot move  <br />-Can only take one action per turn  <br />- Cannot Flank<br />-Cannot use Reactions  <br />-Grants Advantage (+2 to be hit)
-| Unconscious | No Downgrade | - When a character falls unconscious, they are knocked prone.  <br />-When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.  <br />- Helpless _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_  <br />- Cannot take actions  <br />- Cannot see.
+| Unconscious | No Downgrade | - When a character falls unconscious, they are knocked prone.  <br />-When damaged, if the character has 1 or more remaining hit points after receiving the damage, the condition ends.  <br />- Helplfess _(+2 to be hit, enemy melee attacks gain +10 Crit Range)_  <br />- Cannot take actions  <br />- Cannot see.
 | Weakened | Partially Weakened | - Damage dealt is halved <br />- Healing granted or received is halved <br />- Shield Points granted or received are halved
 | Partially Weakened |  No Effect | - Damage dealt is reduced by 1/4 <br />- Healing granted or received is reduced by 1/4 <br />- Shield Points granted or received are reduced by 1/4
 | Surprised | No Downgrade | - Cannot use Full Defense at the start of combat. <br />- Condition ends when attacked. <br />- When this character would take a turn, they use Full Defense, end the turn, and are no longer considered Surprised.
 
-<div class="tip" markdown>
-Tip - Hindered: Many types of action can cause a character to be Hindered for a turn. These include combat maneuvers like Shift, Charge, Stand Up, Quick Draw,
-</div>
+!!! tip "Tip - Hindered"
+    Many types of action can cause a character to be Hindered for a turn. These include combat maneuvers like Shift, Charge, Stand Up, and Quick Draw.
 
-<div class="tip" markdown>
-Sidebar: ignoring Taunts
+!!! tip "Sidebar - Ignoring Taunts"
+    An attack by a Taunted character ignores a Taunt if it targets an enemy not taunting the character. The following exceptions apply:
 
-An attack by a Taunted character ignores a Taunt if it targets an enemy not taunting the character. The following exceptions apply:
+    - If the attack targets multiple characters, and all enemies taunting the character are already targeted, any additional targets do not ignore the Taunt.
+    - If multiple attacks are made in sequence as part of the same attack power _(e.g. primary and secondary attacks)_, once all enemies Taunting the character have been targeted at least once, any additional targets do not ignore the Taunt.
+    - If an attack originally does not ignore the Taunt, and the attack targets are somehow changed by an enemy action or other effect, this does not cause the attack to ignore the Taunt.
+    - If an attack originally does not ignore the Taunt, and the attacker becomes Taunted during the attack _(e.g. by an enemy reaction)_, this does not cause the attack to ignore the mark.
 
-- If the attack targets multiple characters, and all enemies taunting the character are already targeted, any additional targets do not ignore the Taunt.
-- If multiple attacks are made in sequence as part of the same attack power _(e.g. primary and secondary attacks)_, once all enemies Taunting the character have been targeted at least once, any additional targets do not ignore the Taunt.
-- If an attack originally does not ignore the Taunt, and the attack targets are somehow changed by an enemy action or other effect, this does not cause the attack to ignore the Taunt.
-- If an attack originally does not ignore the Taunt, and the attacker becomes Taunted during the attack _(e.g. by an enemy reaction)_, this does not cause the attack to ignore the mark.
-</div>
+!!! compatibility "Compatibility Note"
+    Defender Aura
 
-<div class="compatibility" markdown>**Compatibility Note**: Defender Aura
+    Some characters in compatible books have the Defender Aura power. The effect of this power should be replaced with the following:
 
-Some characters in compatible books have the Defender Aura power. The effect of this power should be replaced with the following:
+    “Enemies in the aura are Taunted by you.”
 
-“Enemies in the aura are Taunted by you.”
-</div>
+!!! compatibility "Compatibility Note"
+    ignoring Taunts
 
-<div class="compatibility" markdown>**Compatibility Note**: ignoring Taunts
-
-Any reference from compatible books to effects that trigger when a Taunted character 'makes an attack that does not include the Taunting character as a target' should use the rules for ignoring Taunts described above.
-</div>
+    Any reference from compatible books to effects that trigger when a Taunted character 'makes an attack that does not include the Taunting character as a target' should use the rules for ignoring Taunts described above.
 
 ### Stealth status effects
 
@@ -400,13 +405,11 @@ Status | Effects | Ends
 | Shrouded | Cannot be targeted by Ranged attacks, or Reaction attacks <br />-Cannot be Charged <br />-Cannot make Reaction attacks |Condition is lost: <br />-After attacking <br />-After moving <br />- If, at the end of a character’s action, the Shrouded character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 | Hidden | Cannot make Reaction attacks <br />-Gains Advantage when attacking <br />-Cannot be targeted by Melee or Ranged powers <br />-Cannot be targeted by a Close or Area power unless it targets a non-Hidden character. <br />-Location unknown to other characters <br /> | Condition is lost: <br />- After attacking <br />- After moving <br />- If, at the end of a character’s action, the Hidden character doesn’t have Cover (other than Body Cover) or Concealment against all enemies.
 
-<div class="tip" markdown>
-Tip: Although a Hidden character´s current location is unknown, other characters can guess it based on context: where the Hidden character was last seen, what suitable hiding locations are in the area, etc.
-</div>
+!!! tip "Tip"
+    Although a Hidden character's current location is unknown, other characters can guess it based on context: where the Hidden character was last seen, what suitable hiding locations are in the area, etc.
 
-<div class="tip" markdown>
-Clarification: Actions that grant the Shrouded or Hidden condition do not cause the loss of that condition if they include attacks or movement.
-</div>
+!!! tip "Clarification"
+    Actions that grant the Shrouded or Hidden condition do not cause the loss of that condition if they include attacks or movement.
 
 ### Special Status Effects
 
@@ -492,11 +495,10 @@ Characters can use Forced Movement to get their opponents into a damaging area, 
 
 At the GM's discretion, PCs (but not monsters) can also benefit from this rule whenever Forced Movement would put them in a particularly deadly position, such as a pool of lava.
 
-<div class="tip" markdown>
-Example 1: A goblin is adjacent to a precipice. A PC uses an attack with Push 1 to try to make the goblin fall: the goblin can attempt a save without penalties to avoid this effect and become Prone instead.
+!!! tip "Examples"
+    **Example 1**: A goblin is adjacent to a precipice. A PC uses an attack with Push 1 to try to make the goblin fall: the goblin can attempt a save without penalties to avoid this effect and become Prone instead.
 
-Example 2: A goblin is 1 square away from a precipice.  A PC uses an attack with Push 4 to try to make the goblin fall: the goblin can attempt a save to avoid this effect and become Prone instead. Since there are 4 squares of forced movement and 2 are spent to move the character over the precipice, the excess distance is 2 squares, and the goblin takes a -2 penalty to the save.
-</div>
+    **Example 2**: A goblin is 1 square away from a precipice.  A PC uses an attack with Push 4 to try to make the goblin fall: the goblin can attempt a save to avoid this effect and become Prone instead. Since there are 4 squares of forced movement and 2 are spent to move the character over the precipice, the excess distance is 2 squares, and the goblin takes a -2 penalty to the save.
 
 ## Combat Maneuvers
 

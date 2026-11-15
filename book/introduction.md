@@ -170,16 +170,19 @@ Normally formatted, black text is used to describe game rules.
 Text in white boxes is used to define formulas.
 ```
 
-<div class="tip" markdown>Blue text is used to provide advice on how to play the game.
- It is typically preceded by **“Tip”** or **“Example”**.</div>
+!!! tip ""
+    Blue text is used to provide advice on how to play the game.
+    It typically has a title like **“Tip”** or **“Example”**.
 
-<div class="compatibility" markdown>Gold text is used to provide compatibility
- instructions to integrate material from legacy sourcebooks. It is typically
- preceded by **“Compatibility Note”**.</div>
+!!! compatibility ""
+    Gold text is used to provide compatibility
+    instructions to integrate material from legacy sourcebooks. It typically
+    has a title like **“Compatibility Note”**.
 
-<div class="design" markdown>Red text is used to provide insight into the designer's
- ideas regarding a game element. It is typically preceded by 
- **"Designer's Note"**.</div>
+!!! design ""
+    Red text is used to provide insight into the designer's
+    ideas regarding a game element. It typically has a title like
+    **“Designer's Note”**.
 
 ## Rolling Dice
 
@@ -337,42 +340,38 @@ d12 | +3
 The Fraction Bonus is added to the value of each die, after applying any
  multiplier. 
  
- <div class="tip" markdown>**Example - Dice Multiplier**: Gimli makes an attack 
- with a damage dice of 1d8, and rolls a 5. If Gimli is level 16, the total
- damage for that die will be 5x2=10. If Gimli is level 21, a Fraction Bonus
- would apply, so total damage would be 5x2 + 2 = 12.
- 
- If Gimli uses a different attack with damage dice of 2d8, and rolls a 5 and a
-  7 (total of 12 before modifiers) , at Level 21 the total damage would be 
-  12*2 + 2*2 = 28. 
-  
- If you write down the damage for each power on your character sheet, we 
- recommend to include any multipliers and damage bonuses that apply. A 2d8 
- damage power at Level 21 could be written down as:
- 
- ```
- 2d8 (x2) + 4
- ```
- , meaning that you would need to roll 2d8, multiply the result by 2, and add 4
- to the total due to the Fraction Bonus.
-</div>
+!!! tip "Example - Dice Multiplier"
+    Gimli makes an attack
+    with a damage dice of 1d8, and rolls a 5. If Gimli is level 16, the total
+    damage for that die will be 5x2=10. If Gimli is level 21, a Fraction Bonus
+    would apply, so total damage would be 5x2 + 2 = 12.
 
-<div class="tip" markdown>**Optional Rule** If you prefer it, and with the GM's approval,
- you can multiply the number of dice rolled instead of the final values. We 
- don't recommend this because rolling too many dice can be unwieldy and time 
- consuming, but some players find it fun.
-</div>
+    If Gimli uses a different attack with damage dice of 2d8, and rolls a 5 and a
+     7 (total of 12 before modifiers) , at Level 21 the total damage would be
+     12\*2 + 2\*2 = 28.
 
-<div class="tip" markdown>**Tip**: Character HP and damage doubles every 10 levels, so 
-a level 30 character will have HP and damage values 8 times as high as those 
-of a level 1 character. 
-</div>
+    If you write down the damage for each power on your character sheet, we
+    recommend to include any multipliers and damage bonuses that apply. A 2d8
+    damage power at Level 21 could be written down as `2d8 (x2) + 4`, meaning that you would need to roll 2d8, multiply the result by 2, and add 4
+    to the total due to the Fraction Bonus.
 
-<div class="design" markdown>**Designer's Note**: The reason for different multipliers
-for damage dice and ability bonuses is the fact that damage dice for powers
-also increase with level. Damage dice for a Level 30 power are double those of
-a Level 1 power, so we need a damage dice multiplier of x4 at that level in
-order to match the expected total multiplier of x8.</div>
+!!! tip "Optional Rule"
+    If you prefer it, and with the GM's approval,
+    you can multiply the number of dice rolled instead of the final values. We
+    don't recommend this because rolling too many dice can be unwieldy and time
+    consuming, but some players find it fun.
+
+!!! tip "Tip"
+    Character HP and damage doubles every 10 levels, so
+    a level 30 character will have HP and damage values 8 times as high as those
+    of a level 1 character.
+
+!!! design "Designer's Note"
+    The reason for different multipliers
+    for damage dice and ability bonuses is the fact that damage dice for powers
+    also increase with level. Damage dice for a Level 30 power are double those of
+    a Level 1 power, so we need a damage dice multiplier of x4 at that level in
+    order to match the expected total multiplier of x8.
 
 #### Rolling Damage Rolls - Monsters
 
@@ -391,15 +390,17 @@ When using variable damage, roll 1d6 and calculate total damage based on the rol
 
 , where (E) is the monster's extra damage stat, as listed in the monster stat block.
 
-<div class="tip" markdown>**Example:** A goblin hits a PC with an attack that deals 8 damage.
-If the GM chooses to use fixed damage, the attack deals 8 damage. If they choose
-variable damage instead, they will roll 1d6 and use the goblin's (E) stat value of 2
-to modify the damage, for a total of 6 damage on a roll of 1-2, 8 damage on a roll
-of 3-4, and 10 damage on a roll of 5-6.</div>
+!!! tip "Example"
+    A goblin hits a PC with an attack that deals 8 damage.
+    If the GM chooses to use fixed damage, the attack deals 8 damage. If they choose
+    variable damage instead, they will roll 1d6 and use the goblin's (E) stat value of 2
+    to modify the damage, for a total of 6 damage on a roll of 1-2, 8 damage on a roll
+    of 3-4, and 10 damage on a roll of 5-6.
 
-<div class="tip" markdown>**Tip:** We recommend GMs to use fixed damage for minion monsters,
-and variable damage for other monsters, to make combat less predictable. That said,
-GMs can choose fixed damage for all monsters when they want to speed up combat.</div>
+!!! tip "Tip"
+    We recommend GMs to use fixed damage for minion monsters,
+    and variable damage for other monsters, to make combat less predictable. That said,
+    GMs can choose fixed damage for all monsters when they want to speed up combat.
 
 #### Resistances and Vulnerabilities
 
@@ -440,26 +441,26 @@ An attack can have one or more damage types. There are the following damage type
 
 Damage types do not have any inherent effect, but there are many character abilities that depend on damage type, such as resistances, vulnerabilities, and damage bonuses. If no damage type is specified, the damage type is Physical.
 
-<div class="compatibility" markdown>**Compatibility Note**:
-Some damage types from legacy rules are no longer supported or have been renamed:
+!!! compatibility "Compatibility Note"
+    Some damage types from legacy rules are no longer supported or have been renamed:
 
-- Necrotic: Renamed to Shadow
-- Force: Use Physical instead
-- Thunder: Use Physical instead
-- Acid: Use Physical instead.
+    - Necrotic: Renamed to Shadow
+    - Force: Use Physical instead
+    - Thunder: Use Physical instead
+    - Acid: Use Physical instead.
 
-Any legacy rules that grant resistance or vulnerability to Force, Thunder or Acid should be ignored (do not convert them into resistance/vulnerability to Physical). Powers that used to have discontinued damage types can have keywords instead: A character can have powers with the Acid keyword, and Feats or Features that affect these powers.</div>
+    Any legacy rules that grant resistance or vulnerability to Force, Thunder or Acid should be ignored (do not convert them into resistance/vulnerability to Physical). Powers that used to have discontinued damage types can have keywords instead: A character can have powers with the Acid keyword, and Feats or Features that affect these powers.
 
-<div class="tip" markdown>**Tip**: These are the resistances (R) and vulnerabilities (V) to damage types of most common monster types:
+!!! tip "Tip"
+    These are the resistances (R) and vulnerabilities (V) to damage types of most common monster types:
 
-- Poison - R: Construct, Undead, Dwarf; V: Fey, Plant, Swarm
-- Radiant - R: Aberrant, Celestial, Blind; V:Undead, Shadow
-- Psychic - R: Construct, Plant, High Elf; V: Aberrant
-- Shadow - R: Shadow; V: Celestial
-- Fire - R: Fire, Devil, Devilfolk; V: Plant, Cold
-- Cold - R: Cold, V: Fire, Ooze
-- Lightning - R: Earth, V: Construct
-</div>
+    - Poison - R: Construct, Undead, Dwarf; V: Fey, Plant, Swarm
+    - Radiant - R: Aberrant, Celestial, Blind; V:Undead, Shadow
+    - Psychic - R: Construct, Plant, High Elf; V: Aberrant
+    - Shadow - R: Shadow; V: Celestial
+    - Fire - R: Fire, Devil, Devilfolk; V: Plant, Cold
+    - Cold - R: Cold, V: Fire, Ooze
+    - Lightning - R: Earth, V: Construct
 
 ### Rolling Saves
 
@@ -521,10 +522,11 @@ The Escalation Die value is used as follows:
 - **Add** the Escalation Die to every Hit Roll (both for PCs and monsters)
 - **Subtract** the Escalation Die from every Skill Check
 
-<div class="tip" markdown>**Tip**: The purpose of the Escalation Die is to ensure that 
- combat encounters do not last too long (by making attacks more lethal
- as time progresses), and to give PCs a sense of urgency on skill encounters
- (by making checks harder with time).</div>
+!!! tip "Tip"
+    The purpose of the Escalation Die is to ensure that
+    combat encounters do not last too long (by making attacks more lethal
+    as time progresses), and to give PCs a sense of urgency on skill encounters
+    (by making checks harder with time).
 
 ## Character Stats
 In this section, we describe the main stats that affect the performance of
@@ -735,21 +737,22 @@ An Ability Damage Modifier is applied instead of a regular
 - Healing or extra healing
 - Regeneration
 
-<div class="compatibility" markdown>**Compatibility Note**: 
-Some old powers use Ability Modifiers in combination with Resistances or
- Vulnerabilities. This is no longer supported - to see how this is
- translated to the current rules, see Resistances and Vulnerabilities
- in the [Combat] chapter.</div>
+!!! compatibility "Compatibility Note"
+    Some old powers use Ability Modifiers in combination with Resistances or
+     Vulnerabilities. This is no longer supported - to see how this is
+     translated to the current rules, see Resistances and Vulnerabilities
+     in the [Combat] chapter.
 
 ### Defenses
 
 A character''s defenses determine how hard the character is to hit with attacks.
  Characters have one Primary Defense and three Secondary Defenses.
 
-<div class="tip" markdown>**Tip**: Defense values typically range between 11 and 17 for
- Player Characters, and between 11 and 15 for monsters. For all characters,
- the average defense value is 13, which corresponds to a 60% chance of being
- hit on an attack with the typical hit bonus of +4.</div>
+!!! tip "Tip"
+    Defense values typically range between 11 and 17 for
+    Player Characters, and between 11 and 15 for monsters. For all characters,
+    the average defense value is 13, which corresponds to a 60% chance of being
+    hit on an attack with the typical hit bonus of +4.
 
 **Armor** (**Arm**), is the Primary Defense, the one most commonly targeted
  by attacks. For Player Characters, Arm is determined by the type of Armor
@@ -792,18 +795,18 @@ For Monsters, Secondary Defenses are determined by monster class. A table
  with the typical defense values for each class role is provided in the
  Monster Stats section of the Monsters chapter.
 
-<div class="tip" markdown>**Tip**: As a general guideline, each defense is targeted
- by the following types of attacks:
+!!! tip "Tip"
+    As a general guideline, each defense is targeted
+     by the following types of attacks:
 
-- Armor: Physical attacks, including most melee attacks, some ranged attacks,
-  and a few close and area attacks.
-- Fortitude: Physical, Poison, Shadow and Cold attacks, including some
-  melee attacks, and a few ranged, close and area attacks.
-- Reflex: Physical, Fire, Lightning, Radiant and Cold attacks, including
-  most close and area attacks, and a few melee and ranged attacks.
-- Will: Physical, Psychic, Radiant and Poison attacks, including some
-  ranged attacks, and a few melee, close, and area attacks.
-</div>
+    - Armor: Physical attacks, including most melee attacks, some ranged attacks,
+      and a few close and area attacks.
+    - Fortitude: Physical, Poison, Shadow and Cold attacks, including some
+      melee attacks, and a few ranged, close and area attacks.
+    - Reflex: Physical, Fire, Lightning, Radiant and Cold attacks, including
+      most close and area attacks, and a few melee and ranged attacks.
+    - Will: Physical, Psychic, Radiant and Poison attacks, including some
+      ranged attacks, and a few melee, close, and area attacks.
 
 ### Secondary Stats
 
@@ -960,7 +963,8 @@ Powers can be of 2 types:
 
 Powers have a name that identifies them.
 
-<div class="compatibility" markdown>**Compatibility Note**: Power Names should be unique within the context of this game edition. That said, legacy rules include thousands of powers, and some of them may share names with current powers. If you need to disambiguate, use "Power Name (current)" to refer to the power in the current edition, and "Power Name (legacy)" to refer to the one from legacy rules.</div>
+!!! compatibility "Compatibility Note"
+    Power Names should be unique within the context of this game edition. That said, legacy rules include thousands of powers, and some of them may share names with current powers. If you need to disambiguate, use "Power Name (current)" to refer to the power in the current edition, and "Power Name (legacy)" to refer to the one from legacy rules.
 
 ### Power Level
 
@@ -1052,22 +1056,26 @@ Powers with the Summon keyword create creatures that act as allies to the caster
 - Summons do not act independently of their caster. During their turn, the caster can spend their own actions to grant the Summon an action of that type. Some Summons can act automatically at the end of their caster's turns. Some Summons can use Reactions, such as Opportunity Attacks, by spending the caster's actions of that type for the turn.
 - When a Summon attacks, the caster applies bonuses from feats, class features, equipment and other modifiers as if they were making the attack.
 
-<div class="tip" markdown>Normally, only Daily Summon powers last until the end of an encounter. At-Will and Encounter Summon powers usually last one turn or have Sustain Minor.</div>
+!!! tip ""
+    Normally, only Daily Summon powers last until the end of an encounter. At-Will and Encounter Summon powers usually last one turn or have Sustain Minor.
 
 #### Control
 
 Powers with the Control keyword are stronger than normal attacks, wielded by characters with the Controller role. A character may only take a Control power if they have the Controller Power class feature.
 
-<div class="tip" markdown>**Tip**: A character taking the Multiclass feat to multiclass into a Controller class can take a few Control powers.</div>
+!!! tip "Tip"
+    A character taking the Multiclass feat to multiclass into a Controller class can take a few Control powers.
 
-<div class="tip" markdown>**Tip**: A non-Controller character can access Control powers from their same class by taking the Class Specialization feat.</div>
+!!! tip "Tip"
+    A non-Controller character can access Control powers from their same class by taking the Class Specialization feat.
 
-<div class="design" markdown>**Designer's Note**: The reasoning behind this description is to allow the design of classes where some builds have the Controller role and others don't. Since Controller attacks are stronger than normal attacks, non-controller powers would become obsolete for some builds, otherwise.</div>
+!!! design "Designer's Note"
+    The reasoning behind this description is to allow the design of classes where some builds have the Controller role and others don't. Since Controller attacks are stronger than normal attacks, non-controller powers would become obsolete for some builds, otherwise.
 
-<div class="compatibility" markdown>**Compatibility Note**: The Control keyword does not exist in legacy rulebooks. When using legacy options, assume that any attack (but not Utility) power from a Controller build has it. Likewise, assume that any class build with the Controller role has the following class feature:
+!!! compatibility "Compatibility Note"
+    The Control keyword does not exist in legacy rulebooks. When using legacy options, assume that any attack (but not Utility) power from a Controller build has it. Likewise, assume that any class build with the Controller role has the following class feature:
 
-Controller Power: This character can take attack powers with the Control keyword.
-</div>
+    Controller Power: This character can take attack powers with the Control keyword.
 
 ### Action Type
 
@@ -1088,11 +1096,13 @@ Melee powers can be used against characters adjacent to you. In some scenarios, 
 
 **Melee Reach** : Most characters have a Melee Reach of 1. Some character abilities or weapons may grant additional Reach. Characters using a melee power can choose targets within a number of squares up to their Reach.
 
-<div class="tip" markdown>**Example - Melee Reach**: A typical character with Reach 1 can only use melee powers against adjacent characters. A character with Reach 2 can target characters that are 1 or 2 squares away, and so on.</div>
+!!! tip "Example - Melee Reach"
+    A typical character with Reach 1 can only use melee powers against adjacent characters. A character with Reach 2 can target characters that are 1 or 2 squares away, and so on.
 
 **Melee powers with a fixed range** : Some melee powers may state their range as `Melee 2`, or a different number. In that case, use that number as the melee reach for the attack.
 
-<div class="tip" markdown>**Clarification - Melee Reach vs Ranged Attacks**: Melee attacks with a reach greater than 1 are similar to Ranged attacks, but there are important differences. Characters using ranged powers while enemies are adjacent are often penalized for it. In addition, characters making ranged attacks have the option of extending the attack range to Long Range, while characters making melee attacks don't.</div>
+!!! tip "Clarification - Melee Reach vs Ranged Attacks"
+    Melee attacks with a reach greater than 1 are similar to Ranged attacks, but there are important differences. Characters using ranged powers while enemies are adjacent are often penalized for it. In addition, characters making ranged attacks have the option of extending the attack range to Long Range, while characters making melee attacks don't.
 
 #### Range - Ranged
 
