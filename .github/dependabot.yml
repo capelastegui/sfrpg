@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Dependencies are build tooling only, so one combined PR a month is enough.
+  - package-ecosystem: uv
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      uv-updates:
+        applies-to: version-updates
+        patterns: ["*"]
+      uv-security:
+        applies-to: security-updates
+        patterns: ["*"]
